@@ -6,7 +6,7 @@
 #include <iostream>
 #include <string>
 
-#include "definitions"
+#include "definitions.hpp"
 
 namespace ChipChipArray {
 
@@ -21,7 +21,7 @@ namespace ChipChipArray {
 	 * new directory, a log file will be created. Images may later be stored in
 	 * this directory with names based on the order in which they were saved.
 	 */
-	public class Log {
+	class Log {
 		public:
 			/**
 			 * Initializes the Log.
@@ -38,9 +38,11 @@ namespace ChipChipArray {
 			 *
 			 * @param mode the LogMode
 			 */
-			Log(std::string dir, LogMode mode = LogMode::Text);
+			Log(auto dir, LogMode mode = LogMode::Text);
 
-			/** Destroys the Log and closes the logfile. */
+			/**
+			 * Destroys the Log and closes the logfile.
+			 */
 			~Log();
 
 			/**
@@ -114,7 +116,7 @@ namespace ChipChipArray {
 			 * The (maximum) length of the filename character
 			 * array.
 			 */
-			const uint8 LEN = 256;
+			static const uint8 LEN = 255;
 
 
 			// OTHER VARIABLES
@@ -123,12 +125,12 @@ namespace ChipChipArray {
 			 * The log file directory, including the directory
 			 * created with LogMode::Multi.
 			 */
-			char[128] dir;
+			const char * dir;
 
 			/**
 			 * The log file filename.
 			 */
-			char[LEN] filename;
+			const char * filename;
 
 			/**
 			 * The number of images saved in the image directory.
@@ -157,11 +159,11 @@ namespace ChipChipArray {
 			 * @param f the failure object caught
 			 */
 			void LogError(auto mesg, std::ofstream::failure f);
-	}
+	};
 
-	void Log::Log(char * dir, LogMode mode) {
+	Log::Log(auto dir, LogMode mode) {
 		// format date and time
-		char[32] date;
+		char date[32];
 		time_t sec = time(nullptr);
 		struct tm * loctime = localtime(&sec);
 		strftime(date, 32, "%m-%e_%H-%M-%S", loctime);
@@ -177,13 +179,12 @@ namespace ChipChipArray {
 		if(mode == LogMode::Multi) dirstr += datestr + PATH_SEP;
 
 		// set log filename
-		dir = dirstr.c_str();
+		this->dir = dirstr.c_str();
 		dirstr += datestr + ".log";
 		filename = dirstr.c_str();
 
-		// set class mode and dir
-		this.mode = mode;
-		this.dir = dir;
+		// set class mode
+		this->mode = mode;
 
 		// Initializing file
 		file.exceptions(std::ofstream::eofbit | std::ofstream::failbit
@@ -193,24 +194,24 @@ namespace ChipChipArray {
 			file.open(filename, std::ofstream::out
 					| std::ofstream::app);
 		} catch(std::ofstream::failure ex) {
-			LogError("Oh, no! An error has occurred opening the \
-					log file.", ex);
+			LogError("Oh, no! An error has occurred opening the "
+					"log file.", ex);
 		}
 	}
 
-	void Log::~Log() {
+	Log::~Log() {
 		try {
 			file.flush();
 			file.close();
 		} catch (std::ofstream::failure f) {
-			LogError("Gosh dang it! A fatal error has occured \
-					closing the logfile.", f);
+			LogError("Gosh dang it! A fatal error has occured " 
+					"closing the logfile.", f);
 		}
 	}
 
 	void Log::Debug(auto mesg) {
 		try {
-			file << "DEBUG: " << mesg << endl;
+			file << "DEBUG: " << mesg << std::endl;
 			file.flush();
 		} catch(std::ofstream::failure f) {
 			LogError("Debug() write error", f);
@@ -219,7 +220,7 @@ namespace ChipChipArray {
 
 	void Log::Error(auto mesg) {
 		try {
-			file << "ERROR: " << mesg << endl;
+			file << "ERROR: " << mesg << std::endl;
 			file.flush();
 		} catch(std::ofstream::failure f) {
 			LogError("Error() write error", f);
@@ -228,16 +229,16 @@ namespace ChipChipArray {
 
 	//	void Log::Image(...) {}
 
-	void Log::LogError(auto mesg, failure f) {
-		std::cerr << mesg << endl;
-		std::cerr << "ERROR CODE: " << ex.code() << endl;
-		std::cerr << "MESSAGE: " << ex.what() << endl;
+	void Log::LogError(auto mesg, std::ofstream::failure f) {
+		std::cerr << mesg << std::endl;
+		//std::cerr << "ERROR CODE: " << f.code() << std::endl;
+		std::cerr << "MESSAGE: " << f.what() << std::endl;
 		exit(ERROR);
 	}
 
 	void Log::Status(auto mesg) {
 		try {
-			file << "STATUS: " << mesg << endl;
+			file << "STATUS: " << mesg << std::endl;
 			file.flush();
 		} catch (std::ofstream::failure f) {
 			LogError("Status() write error", f);
@@ -246,7 +247,8 @@ namespace ChipChipArray {
 
 	void Log::Variable(auto name, auto value) {
 		try {
-			file << "VARIABLE: " << name << " = " << value << endl;
+			file << "VARIABLE: " << name << " = " << value
+				<< std::endl;
 			file.flush();
 		} catch(std::ofstream::failure f) {
 			LogError("Variable() write error", f);
@@ -255,7 +257,7 @@ namespace ChipChipArray {
 
 	void Log::Verbose(auto mesg) {
 		try {
-			file << "VERBOSE: " << mesg << endl;
+			file << "VERBOSE: " << mesg << std::endl;
 			file.flush();
 		} catch(std::ofstream::failure f) {
 			LogError("Verbose() write error", f);
