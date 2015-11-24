@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['text',['Text',['../definitions_8cpp.html#aa7380b6d694cab49f07aed6a7af592d9a9dffbf69ffba8bc38bc4e01abf4b1675',1,'definitions.cpp']]],
-  ['two_5fhalves',['Two_Halves',['../definitions_8cpp.html#ab84ebabb02540c4a7ec341a213abf1dca5b00716e5e6f2e2dc1b10ffed2e0ef6d',1,'definitions.cpp']]]
+  ['variable',['Variable',['../classChipChipArray_1_1Log.html#a8849569720c26e335e7ef4dcb912170b',1,'ChipChipArray::Log']]],
+  ['verbose',['Verbose',['../classChipChipArray_1_1Log.html#a154a5f38d9c7a767693b242684a3d4d9',1,'ChipChipArray::Log']]]
 ];

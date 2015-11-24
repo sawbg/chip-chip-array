@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['yo',['yo',['../log__test_8cpp.html#ac651b80a20159c027f4e36047a735ded',1,'log_test.cpp']]]
+  ['_7elog',['~Log',['../classChipChipArray_1_1Log.html#a647df4da22b29d9d5a5ea32af3a1ed83',1,'ChipChipArray::Log']]]
 ];

@@ -7,15 +7,15 @@
 
 var indexSectionsWithContent =
 {
-  0: "abcdefgilmnprstvyz~",
+  0: "abcdefglmnrstuvyz~",
   1: "l",
   2: "c",
   3: "dl",
-  4: "delmsvy~",
-  5: "dfilmp",
+  4: "delmsv~",
+  5: "bfsu",
   6: "bclrsz",
   7: "abcfglmnrsty",
-  8: "del"
+  8: "e"
 };
 
 var indexSectionNames =
@@ -25,7 +25,7 @@ var indexSectionNames =
   2: "namespaces",
   3: "files",
   4: "functions",
-  5: "variables",
+  5: "typedefs",
   6: "enums",
   7: "enumvalues",
   8: "defines"

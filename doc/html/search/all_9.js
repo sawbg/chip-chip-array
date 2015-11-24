@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['main',['main',['../log__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'log_test.cpp']]],
-  ['mode',['mode',['../Log_8cpp.html#ac6a3823967a539a600b1d12c93c207f4',1,'Log.cpp']]],
-  ['multi',['Multi',['../definitions_8cpp.html#aa7380b6d694cab49f07aed6a7af592d9ace7898536dd0e928d1640ee2ad531cc8',1,'definitions.cpp']]]
+  ['no_5fblocks',['No_Blocks',['../definitions_8hpp.html#ab84ebabb02540c4a7ec341a213abf1dca32075034997ab91e886dbcad47ed902d',1,'definitions.hpp']]],
+  ['no_5fhalves',['No_Halves',['../definitions_8hpp.html#ab84ebabb02540c4a7ec341a213abf1dcabdf267b7c95f2ffd040b32d8b005e9a0',1,'definitions.hpp']]]
 ];
