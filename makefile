@@ -2,6 +2,9 @@ GCC = g++-4.9
 CPPFLAGS = -g -std=gnu++14
 CVFLAGS = $(shell pkg-config --cflags --libs opencv)
 
+configure:
+	apt-get install -y libopencv-dev libzbar-dev
+
 cv-test:
 	$(GCC) src/cv_test.cpp -o bin/cvtest $(CVFLAGS) $(CPPFLAGS)
 
@@ -10,9 +13,6 @@ log-test:
 
 qr-test:
 	$(GCC) src/qr_test.cpp -o bin/qrtest $(CPPFLAGS)
-
-log-viewer:
-	$(GCC) src/log_viewer.cpp -o bin/lv $(CPPFLAGS)
 
 docs:
 	rm -r doc/
