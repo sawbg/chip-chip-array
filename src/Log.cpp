@@ -32,88 +32,131 @@ namespace ChipChipArray {
 			 * directory is created, and a log file with a name
 			 * based on the current date and time is created inside
 			 * it.
+			 *
+			 * @param dir the directory for the newly created
+			 * logfile/folder
+			 *
+			 * @param mode the LogMode
 			 */
-			Log(std::string dir, LogMode mode = Logmode::Text);
-			
+			Log(std::string dir, LogMode mode = LogMode::Text);
+
 			/** Destroys the Log and closes the logfile. */
 			~Log();
-			
-			//@{
+
 			/**
 			 * Writes "DEBUG: " to the log file along with the
 			 * message passed. Should be used for generic debugging
 			 * information. If recording the value of a variable in
 			 * the Log is desired, use the function Variable()
 			 * instead.
-			*/
-			void Debug(const char * mesg);
-			void Debug(std::string mesg);
-			void Debug(std::stringstream mesg);
-			//@}
+			 *
+			 * @param mesg the message to record in the logfile
+			 */
+			void Debug(auto mesg);
 
-			//@{
 			/**
 			 * Writes "ERROR: " to the log file. Should only be use
 			 * when an exception is thrown.
+			 *
+			 * @param mesg the message to record in the log
 			 */
-			void Error(const char * mesg);
-			void Error(std::string mesg);
-			void Error(std::stringstream mesg);
-			//@}
-			
+			void Error(auto mesg);
+
 			/**
 			 * Creates a bitmap image in the subdirectory created by
 			 * the Log during initialization. Does nothing if
 			 * LogMode::Text was passed in the constructor.
+			 *
+			 * @param image the image to save
 			 */
 			//void Image(byte* image);
-			
-			//@{
+
 			/**
 			 * Writes "STATUS: " to the log file. Should be used
 			 * when recording the status or state of the program. It
 			 * should not be used to record microalgorithmic
 			 * changes. Use Verbose() for these instead.
+			 *
+			 * @param mesg the message to record in the logfile
 			 */
-			void Status(const char * mesg);
-			void Status(std::string mesg);
-			void Status(std::stringstream mesg);
-			//@}
+			void Status(auto mesg);
 
-			//@{
 			/**
 			 * Writes "VARIABLE: " to the log file. Should be used
 			 * whenever recording the value of a variable is
 			 * desired.
+			 *
+			 * @param name the variable name to record
+			 * @param value the variable value to record
 			 */
-			void Variable(const char * name, auto value);
-			void Variable(std::string name, auto value);
-			void Variable(std::stringstream name, auto value);
-			//@}
+			void Variable(auto name, auto value);
 
-			//@{
 			/**
 			 * Writes "VERBOSE: " to the log file. Should only be
 			 * used for recording small, specific portions of code.
 			 * To record a change in the more general state of the
 			 * program, use Status() instead.
+			 *
+			 * @param mesg the message to record in the logfile
 			 */
-			void Verbose(const char * mesg);
-			void Verbose(std::string mesg);
-			void Verbose(std::stringstream mesg);
-			//@}
+			void Verbose(auto mesg);
 
 		private:
-			// Constants
+			// CONSTANTS
+
+			/**
+			 * The path sepearator. Can be changed if code adapted
+			 * for Windows.
+			 */
 			const char PATH_SEP = '/';
-			const ubyte LEN = 256;
-			
-			// Other variables
+
+			/**
+			 * The (maximum) length of the filename character
+			 * array.
+			 */
+			const uint8 LEN = 256;
+
+
+			// OTHER VARIABLES
+
+			/**
+			 * The log file directory, including the directory
+			 * created with LogMode::Multi.
+			 */
 			char[128] dir;
+
+			/**
+			 * The log file filename.
+			 */
 			char[LEN] filename;
+
+			/**
+			 * The number of images saved in the image directory.
+			 * Used in naming the images in LogMode::Multi.
+			 */
 			uint8 imgCount = 0;
+
+			/**
+			 * The LogMode.
+			 */
 			LogMode mode;
+
+			/**
+			 * The logfile.
+			 */
 			std::ofstream file;
+
+
+			// FUNCTIONS
+
+			/**
+			 * Prints an error message and exits the application.
+			 * Used when errors occur within this class ONLY.
+			 *
+			 * @param mesg the error message to print
+			 * @param f the failure object caught
+			 */
+			void LogError(auto mesg, std::ofstream::failure f);
 	}
 
 	void Log::Log(char * dir, LogMode mode) {
@@ -122,14 +165,14 @@ namespace ChipChipArray {
 		time_t sec = time(nullptr);
 		struct tm * loctime = localtime(&sec);
 		strftime(date, 32, "%m-%e_%H-%M-%S", loctime);
-		
+
 		// create temperary strings
 		std::string dirstr = std::string(dir);
 		std::string datestr = std::string(date);
-	
+
 		// add path separator if necessary
 		if(dirstr[dirstr.length() - 1] != PATH_SEP) dirstr += PATH_SEP;
-		
+
 		// add directory for log and images if necessary
 		if(mode == LogMode::Multi) dirstr += datestr + PATH_SEP;
 
@@ -145,60 +188,78 @@ namespace ChipChipArray {
 		// Initializing file
 		file.exceptions(std::ofstream::eofbit | std::ofstream::failbit
 				| std::ofstream::badbit);
-		
+
 		try {
 			file.open(filename, std::ofstream::out
 					| std::ofstream::app);
 		} catch(std::ofstream::failure ex) {
-			std::cerr << "Oh, no! An error has occurred opening \
-				the log file.";
-			std::cerr << "ERROR CODE: " << ex.code();
-			std::cerr << "MESSAGE: " << ex.what();
-			exit(ERROR);
+			LogError("Oh, no! An error has occurred opening the \
+					log file.", ex);
 		}
 	}
 
 	void Log::~Log() {
-		file.flush();
-		file.close();
+		try {
+			file.flush();
+			file.close();
+		} catch (std::ofstream::failure f) {
+			LogError("Gosh dang it! A fatal error has occured \
+					closing the logfile.", f);
+		}
 	}
 
-	void Log::Debug(const char * mesg) {
-		file << mesg;
-		file.flush();
+	void Log::Debug(auto mesg) {
+		try {
+			file << "DEBUG: " << mesg << endl;
+			file.flush();
+		} catch(std::ofstream::failure f) {
+			LogError("Debug() write error", f);
+		}
 	}
 
-	void Log::Debug(std::string mesg) {
-		Debug(mesg.c_str());
+	void Log::Error(auto mesg) {
+		try {
+			file << "ERROR: " << mesg << endl;
+			file.flush();
+		} catch(std::ofstream::failure f) {
+			LogError("Error() write error", f);
+		}
 	}
 
-	void Log::Debug(std::stringstream mesg) {
-		string temp = mesg.str();  // required
-		Debug(mesg.str());
+	//	void Log::Image(...) {}
+
+	void Log::LogError(auto mesg, failure f) {
+		std::cerr << mesg << endl;
+		std::cerr << "ERROR CODE: " << ex.code() << endl;
+		std::cerr << "MESSAGE: " << ex.what() << endl;
+		exit(ERROR);
 	}
 
-	void Log::Error(const char * mesg) {
-		file << mesg;
-		file.flush();
+	void Log::Status(auto mesg) {
+		try {
+			file << "STATUS: " << mesg << endl;
+			file.flush();
+		} catch (std::ofstream::failure f) {
+			LogError("Status() write error", f);
+		}
 	}
 
-	void Log::Error(std::string mesg) {
-		
+	void Log::Variable(auto name, auto value) {
+		try {
+			file << "VARIABLE: " << name << " = " << value << endl;
+			file.flush();
+		} catch(std::ofstream::failure f) {
+			LogError("Variable() write error", f);
+		}
 	}
 
-//	void Log::Image(...) {}
-
-	void Log::Status {
-
+	void Log::Verbose(auto mesg) {
+		try {
+			file << "VERBOSE: " << mesg << endl;
+			file.flush();
+		} catch(std::ofstream::failure f) {
+			LogError("Verbose() write error", f);
+		}
 	}
-
-	void Log::Variable(string name, auto value) {
-
-	}
-
-	void Log::Verbose(string mesg) {
-
-	}
-
 }
 #endif
