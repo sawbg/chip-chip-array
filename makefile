@@ -1,5 +1,9 @@
 GCC = g++-4.9
 CPPFLAGS = -g -std=gnu++14
+CVFLAGS = $(shell pkg-config --cflags --libs opencv)
+
+cv-test:
+	$(GCC) src/cv_test.cpp -o bin/cvtest $(CVFLAGS) $(CPPFLAGS)
 
 log-test:
 	$(GCC) src/log_test.cpp -o bin/logtest $(CPPFLAGS)
@@ -7,11 +11,8 @@ log-test:
 qr-test:
 	$(GCC) src/qr_test.cpp -o bin/qrtest $(CPPFLAGS)
 
-#piag:
-#	$(GCC) src/main.cpp -o bin/piag -lwiringPi -lwiringPiDev -lpthread $(CPPFLAGS)
-	
-#test:
-#	$(GCC) src/test.cpp -o bin/test $(CPPFLAGS)
+log-viewer:
+	$(GCC) src/log_viewer.cpp -o bin/lv $(CPPFLAGS)
 
 docs:
 	rm -r doc/
@@ -22,4 +23,4 @@ docs:
 	git push
 
 count:
-	wc -l src/*  # works assuming there's no subdirectories
+	find src/ -name '*' | xargs wc -l  # works assuming there's no subdirectories
