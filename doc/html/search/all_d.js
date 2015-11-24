@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['text',['Text',['../definitions_8cpp.html#aa7380b6d694cab49f07aed6a7af592d9a9dffbf69ffba8bc38bc4e01abf4b1675',1,'definitions.cpp']]],
-  ['two_5fhalves',['Two_Halves',['../definitions_8cpp.html#ab84ebabb02540c4a7ec341a213abf1dca5b00716e5e6f2e2dc1b10ffed2e0ef6d',1,'definitions.cpp']]]
+  ['short',['Short',['../definitions_8cpp.html#a9809446fd16a744b6df9808293f14153a30bb747c98bccdd11b3f89e644c4d0ad',1,'definitions.cpp']]],
+  ['side',['Side',['../definitions_8cpp.html#a03325a8a9d4f105db5e37dd587128142',1,'definitions.cpp']]],
+  ['size',['Size',['../definitions_8cpp.html#a9809446fd16a744b6df9808293f14153',1,'definitions.cpp']]],
+  ['status',['Status',['../classChipChipArray_1_1Log.html#a66575b6e94c6112e4cefa5736cb996e0',1,'ChipChipArray::Log::Status()'],['../Log_8cpp.html#a9f47d3391119e6a7fd5ae84ea87636f7',1,'Status():&#160;Log.cpp']]]
 ];
