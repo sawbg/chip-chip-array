@@ -2,6 +2,7 @@
 #define definitions_H
 
 #define ENUM byte
+#define ERROR -1
 
 typedef unsigned char byte
 typedef unsigned char uint8
