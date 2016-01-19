@@ -10,6 +10,7 @@ configure:
 	git clone https://github.com/cedricve/raspicam
 	cd raspicam; mkdir build; cd build; cmake ..; make; sudo make install; sudo ldconfig;
 	sudo rm -r raspicam
+	mkdir docs
 
 cv-test:
 	$(GCC) src/cv_test.cpp -o bin/cvtest $(CVFLAGS) $(CPPFLAGS) $(DEBUG)
