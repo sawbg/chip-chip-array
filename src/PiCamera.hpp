@@ -28,9 +28,9 @@ namespace ChipChipArray {
 			PiCamera(bool useColor);
 			
 			/**
-			 * Releases Raspicam and other resources.
+			 * Closes connection to camera.
 			 */
-			~PiCamera();
+			void Close();
 
 			/**
 			 * Makes picture.
@@ -48,11 +48,11 @@ namespace ChipChipArray {
 	};
 
 	PiCamera::PiCamera(bool useColor) {
-		cam.set(CV_CAP_PROP_FORMAT, useColor ? CV_16UC3 : CV_16UC1);
+		cam.set(CV_CAP_PROP_FORMAT, (useColor ? CV_16UC3 : CV_16UC1));
 		cam.open();
 	}
 
-	PiCamera::~PiCamera() {
+	void PiCamera::Close() {
 		cam.release();
 	}
 
