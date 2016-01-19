@@ -33,7 +33,7 @@ int main(int argc, char* argv[])
 		int height = frame.rows;  
 		uchar *raw = (uchar *)grey.data;  
 		// wrap image data  
-		Image image(width, height, "Y800", raw, width * height);  
+		zbar::Image image(width, height, "Y800", raw, width * height);  
 		// scan the image for barcodes  
 		int n = scanner.scan(image);  
 		// extract results  
