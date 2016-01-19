@@ -4,7 +4,7 @@
 #include <string>
 #include <opencv2/highgui/highgui.hpp>
 #include <opencv2/imgproc/imgproc.hpp>
-#include <zbar>
+#include <zbar.h>
 
 #include "definitions.hpp"
 #include "PiCamera.hpp"
@@ -22,30 +22,34 @@ namespace ChipChipArray {
 	 * (https://github.com/ayoungprogrammer/WebcamCodeScanner).
 	 */
 	Color ScanQR() {
-		bool cont = true;
+		// 0. Initialize variables
 		Color color;
-		cv::Mat canvas;
 		PiCamera cam(false);
-		zbar::Image image;
-		zbar::ImageScanner scanner;
 #ifdef DEBUG
 		std::string window = "Searching...";
-		namedWindow(window, WINDOW_NORMAL);
+		cv::namedWindow(window, CV_WINDOW_AUTOSIZE);
 #endif
-		scanner.set_config(ZBAR_NONE, ZBAR_CFG_ENABLE, 1);
 
 		// 1. Position arm
 
 		// 2. Scan images from camera
-		while(std::time(nullptr) - start < duration && cont) {
-			canvas = cam.Snap();
+		while(true) {
+			cv::Mat frame = cam.Snap();
+			cv::Mat canvas;
+			cv::cvtColor(frame, canvas, CV_BGR2GRAY); 
 #ifdef DEBUG
-			imshow(window, canvas);
-#endif
-			image = new Image(canvas.cols, canvas.rows, "Y800",
-					(ubyte*)canvas.data,
-					canvas.cols * canvas.rows);
+			cv::imshow(window, canvas);
 
+			 // has to be called right after imshow()
+			cv::waitKey(10);
+#endif
+			uint32 width = canvas.cols;
+			uint32 height = canvas.rows;
+			zbar::Image image(width, height, "Y800",
+					(uchar*)canvas.data, width * height);
+
+			zbar::ImageScanner scanner;
+			scanner.set_config(zbar::ZBAR_NONE, zbar::ZBAR_CFG_ENABLE, 1);
 			scanner.scan(image);
 			zbar::Image::SymbolIterator symbol = image.symbol_begin();
 
@@ -68,15 +72,16 @@ namespace ChipChipArray {
 						break;
 				}
 
-				cont = false;
+				break;
 
 #ifdef DEBUG
-				destroyWindow(window);
+				cv::destroyWindow(window);
 #endif
 			}
 		}
 
-		delete *cam;  // must be deleted!
+		// 3. Retract arm
+		
 		return color;
 	}
 }
