@@ -4,13 +4,15 @@ digraph "src/definitions.hpp"
   node [fontname="Helvetica",fontsize="10",shape=record];
   Node1 [label="src/definitions.hpp",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
   Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2 [label="src/Log.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$Log_8hpp.html"];
-  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node3 [label="src/log_test.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$log__test_8cpp.html"];
+  Node2 [label="src/Grabber.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$Grabber_8hpp.html"];
   Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="src/Log.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$Log_8hpp.html"];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="src/log_test.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$log__test_8cpp.html"];
   Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node4 [label="src/qr_test.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$qr__test_8cpp.html"];
   Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node5 [label="src/ScanQR.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ScanQR_8hpp.html"];
-  Node5 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="src/qr_test.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$qr__test_8cpp.html"];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="src/ScanQR.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ScanQR_8hpp.html"];
+  Node6 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
 }

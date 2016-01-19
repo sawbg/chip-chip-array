@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['picamera',['PiCamera',['../classChipChipArray_1_1PiCamera.html#a5910a3284877677decb6529d88e43487',1,'ChipChipArray::PiCamera::PiCamera()'],['../classChipChipArray_1_1PiCamera.html#a0a4480e9e7475ae7af9a7523239caf8d',1,'ChipChipArray::PiCamera::PiCamera(bool useColor)']]]
+  ['load',['Load',['../classChipChipArray_1_1Grabber.html#a56639f8f9ba9468bce4b6d69ceb2eb54',1,'ChipChipArray::Grabber']]],
+  ['log',['Log',['../classChipChipArray_1_1Log.html#a4cd28a821789b39e936a6e346329d65b',1,'ChipChipArray::Log']]]
 ];

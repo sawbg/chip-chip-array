@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['scanqr',['ScanQR',['../namespaceChipChipArray.html#a6c7465049b5d408e1a238b6d8ffa887d',1,'ChipChipArray']]],
-  ['snap',['Snap',['../classChipChipArray_1_1PiCamera.html#a58fb0de02570dce9a9cb60a1a04fb84f',1,'ChipChipArray::PiCamera']]],
-  ['status',['Status',['../classChipChipArray_1_1Log.html#a66575b6e94c6112e4cefa5736cb996e0',1,'ChipChipArray::Log']]]
+  ['main',['main',['../cv__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;cv_test.cpp'],['../log__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;log_test.cpp'],['../net__qr__test_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;net_qr_test.cpp'],['../new_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;new.cpp'],['../old__cv__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;old_cv_test.cpp'],['../qr__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;qr_test.cpp']]]
 ];
