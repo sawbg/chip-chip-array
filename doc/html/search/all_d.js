@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['uint16',['uint16',['../definitions_8hpp.html#a05f6b0ae8f6a6e135b0e290c25fe0e4e',1,'definitions.hpp']]],
-  ['uint32',['uint32',['../definitions_8hpp.html#a1134b580f8da4de94ca6b1de4d37975e',1,'definitions.hpp']]],
-  ['uint64',['uint64',['../definitions_8hpp.html#a29940ae63ec06c9998bba873e25407ad',1,'definitions.hpp']]],
-  ['uint8',['uint8',['../definitions_8hpp.html#adde6aaee8457bee49c2a92621fe22b79',1,'definitions.hpp']]]
+  ['red',['Red',['../definitions_8hpp.html#abc05a0f46084a3477cf5d5c939ff1436aee38e4d5dd68c4e440825018d549cb47',1,'definitions.hpp']]],
+  ['result',['Result',['../definitions_8hpp.html#ab84ebabb02540c4a7ec341a213abf1dc',1,'definitions.hpp']]],
+  ['right',['Right',['../definitions_8hpp.html#a03325a8a9d4f105db5e37dd587128142a92b09c7c48c520c3c55e497875da437c',1,'definitions.hpp']]]
 ];

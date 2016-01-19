@@ -1,0 +1,14 @@
+digraph "src/PiCamera.hpp"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="src/PiCamera.hpp",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="src/cv_test.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$cv__test_8cpp.html"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="src/net_qr_test.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$net__qr__test_8cpp.html"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="src/new.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$new_8cpp.html"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="src/ScanQR.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ScanQR_8hpp.html"];
+}
