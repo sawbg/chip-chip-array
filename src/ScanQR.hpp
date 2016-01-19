@@ -1,7 +1,6 @@
 #ifndef ScanQR_H
 #define ScanQR_H
 
-#include <ctime>
 #include <string>
 #include <opencv2/highgui/highgui.hpp>
 #include <opencv2/imgproc/imgproc.hpp>
@@ -24,21 +23,15 @@ namespace ChipChipArray {
 	 */
 	Color ScanQR() {
 		bool cont = true;
-		const uint8 duration = 10;
-		std::time_t start = std::times(nullptr);
-
 		Color color;
 		cv::Mat canvas;
 		PiCamera cam(false);
 		zbar::Image image;
 		zbar::ImageScanner scanner;
-
 #ifdef DEBUG
 		std::string window = "Searching...";
-
 		namedWindow(window, WINDOW_NORMAL);
 #endif
-
 		scanner.set_config(ZBAR_NONE, ZBAR_CFG_ENABLE, 1);
 
 		// 1. Position arm
@@ -46,11 +39,9 @@ namespace ChipChipArray {
 		// 2. Scan images from camera
 		while(std::time(nullptr) - start < duration && cont) {
 			canvas = cam.Snap();
-
 #ifdef DEBUG
 			imshow(window, canvas);
 #endif
-
 			image = new Image(canvas.cols, canvas.rows, "Y800",
 					(ubyte*)canvas.data,
 					canvas.cols * canvas.rows);
@@ -79,13 +70,11 @@ namespace ChipChipArray {
 
 				cont = false;
 
-
 #ifdef DEBUG
 				destroyWindow(window);
 #endif
 			}
 		}
-
 
 		delete *cam;  // must be deleted!
 		return color;
