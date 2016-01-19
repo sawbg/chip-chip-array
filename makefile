@@ -1,6 +1,6 @@
 GCC = g++-4.9
 CPPFLAGS = -g -std=gnu++14
-CVFLAGS = -lraspicam -lraspicam_cv -lmmal -lmmal_core -lmmal_util -lzbar -lopencv_core -lopencv_highgui
+CVFLAGS = -lraspicam -lraspicam_cv -lmmal -lmmal_core -lmmal_util -lzbar -lopencv_core -lopencv_highgui -lopencv_imgproc
 DEBUG = -DDEBUG
 
 export LIBRARY_PATH=/opt/vc/lib:/usr/lib/arm-linux-gnueabihf
