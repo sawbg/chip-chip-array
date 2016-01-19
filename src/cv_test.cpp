@@ -1,10 +1,16 @@
-#include <highgui.h>
-#include <iostream>
+#include "PiCamera.hpp"
+
+using namespace ChipChipArray;
+using namespace cv;
 
 int main() {
-	cv::VideoCapture capture(0);
-	std::cout << capture.isOpened() << std::endl;
-	cv::Mat image;
-	capture.read(image);
-	cv::imshow("Webcam", image);
+	namedWindow("Test", CV_WINDOW_AUTOSIZE);
+	PiCamera cam;
+
+	while(true) {
+		imshow("Test", cam.Snap());
+		waitKey(500);
+	}
+	
+	delete &cam;
 }
