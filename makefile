@@ -6,7 +6,7 @@ DEBUG = -DDEBUG
 export LIBRARY_PATH=/opt/vc/lib:/usr/lib/arm-linux-gnueabihf
 
 configure:
-	sudo apt-get install -y libopencv-dev libzbar-dev cmake
+	sudo apt-get install -y libopencv-dev libzbar-dev cmake doxygen
 	git clone https://github.com/cedricve/raspicam
 	cd raspicam; mkdir build; cd build; cmake ..; make; sudo make install; sudo ldconfig;
 	sudo rm -r raspicam
