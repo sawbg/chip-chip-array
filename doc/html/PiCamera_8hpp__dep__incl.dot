@@ -10,5 +10,8 @@ digraph "src/PiCamera.hpp"
   Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node4 [label="src/new.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$new_8cpp.html"];
   Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node5 [label="src/ScanQR.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ScanQR_8hpp.html"];
+  Node5 [label="src/qr_test.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$qr__test_8cpp.html"];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="src/ScanQR.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ScanQR_8hpp.html"];
+  Node6 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
 }

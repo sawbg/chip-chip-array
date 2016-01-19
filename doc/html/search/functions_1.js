@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['error',['Error',['../classChipChipArray_1_1Log.html#aba7b7b0555f49f4dcf15f4b9fd3e6b34',1,'ChipChipArray::Log']]]
+  ['debug',['Debug',['../classChipChipArray_1_1Log.html#ac32b435af1577e4ebc67af2bdfea8eff',1,'ChipChipArray::Log']]]
 ];

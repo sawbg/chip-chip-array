@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['debug',['Debug',['../classChipChipArray_1_1Log.html#ac32b435af1577e4ebc67af2bdfea8eff',1,'ChipChipArray::Log']]]
+  ['close',['Close',['../classChipChipArray_1_1PiCamera.html#a38f8205921d6deec5a2c360ea7d24cc5',1,'ChipChipArray::PiCamera']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['picamera',['PiCamera',['../classChipChipArray_1_1PiCamera.html#a5910a3284877677decb6529d88e43487',1,'ChipChipArray::PiCamera::PiCamera()'],['../classChipChipArray_1_1PiCamera.html#a0a4480e9e7475ae7af9a7523239caf8d',1,'ChipChipArray::PiCamera::PiCamera(bool useColor)']]]
+  ['main',['main',['../cv__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;cv_test.cpp'],['../log__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;log_test.cpp'],['../net__qr__test_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;net_qr_test.cpp'],['../new_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;new.cpp'],['../old__cv__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;old_cv_test.cpp'],['../qr__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;qr_test.cpp']]]
 ];

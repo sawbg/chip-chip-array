@@ -118,7 +118,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordtype">int</span> height = frame.rows;  </div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        uchar *raw = (uchar *)grey.data;  </div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="comment">// wrap image data  </span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        Image image(width, height, <span class="stringliteral">&quot;Y800&quot;</span>, raw, width * height);  </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        zbar::Image image(width, height, <span class="stringliteral">&quot;Y800&quot;</span>, raw, width * height);  </div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="comment">// scan the image for barcodes  </span></div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keywordtype">int</span> n = scanner.scan(image);  </div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="comment">// extract results  </span></div>
@@ -162,7 +162,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jan 19 2016 04:30:57 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jan 19 2016 13:15:37 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
