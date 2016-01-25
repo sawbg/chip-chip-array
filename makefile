@@ -5,6 +5,9 @@ DEBUG = -DDEBUG
 
 export LIBRARY_PATH=/opt/vc/lib:/usr/lib/arm-linux-gnueabihf
 
+block-test:
+	$(GCC) src/cv_shape.cpp -o bin/cvshape $(CVFLAGS) $(CPPFLAGS)
+
 configure:
 	sudo apt-get install -y libopencv-dev libzbar-dev cmake doxygen
 	git clone https://github.com/cedricve/raspicam
@@ -18,8 +21,11 @@ cv-test:
 log-test:
 	$(GCC) src/log_test.cpp -o bin/logtest $(CPPFLAGS)
 
+net-cv-hue-test:
+	$(GCC) src/cv_hue.cpp -o bin/cvhue $(CPPFLAGS) $(CVFLAGS)
+
 net-qr-test:
-	$(GCC) src/net_qr_test.cpp -o bin/netqrtest $(CPPFLAGS) $(CVFLAGS) -lopencv_imgproc
+	$(GCC) src/net_qr_test.cpp -o bin/netqrtest $(CPPFLAGS) $(CVFLAGS)
 
 qr-test:
 	$(GCC) src/qr_test.cpp -o bin/qrtest $(CPPFLAGS) $(CVFLAGS) $(DEBUG)
