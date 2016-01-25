@@ -4,5 +4,7 @@ var searchData=
   ['chipchiparray',['ChipChipArray',['../namespaceChipChipArray.html',1,'']]],
   ['close',['Close',['../classChipChipArray_1_1PiCamera.html#a38f8205921d6deec5a2c360ea7d24cc5',1,'ChipChipArray::PiCamera']]],
   ['color',['Color',['../definitions_8hpp.html#abc05a0f46084a3477cf5d5c939ff1436',1,'definitions.hpp']]],
+  ['cv_5fhue_2ecpp',['cv_hue.cpp',['../cv__hue_8cpp.html',1,'']]],
+  ['cv_5fshape_2ecpp',['cv_shape.cpp',['../cv__shape_8cpp.html',1,'']]],
   ['cv_5ftest_2ecpp',['cv_test.cpp',['../cv__test_8cpp.html',1,'']]]
 ];
