@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['net_5fqr_5ftest_2ecpp',['net_qr_test.cpp',['../net__qr__test_8cpp.html',1,'']]]
+  ['log_2ehpp',['Log.hpp',['../Log_8hpp.html',1,'']]],
+  ['log_5ftest_2ecpp',['log_test.cpp',['../log__test_8cpp.html',1,'']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['scanqr_2ehpp',['ScanQR.hpp',['../ScanQR_8hpp.html',1,'']]]
+  ['qr_5ftest_2ecpp',['qr_test.cpp',['../qr__test_8cpp.html',1,'']]]
 ];
