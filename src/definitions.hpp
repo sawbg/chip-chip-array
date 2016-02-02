@@ -68,9 +68,104 @@ enum class Size : ENUM {
 
 /** Zone A, B, or C */
 enum class Zone : ENUM {
-	A,
-	B,
-	C
+	A = 'A',
+	B = 'B',
+	C = 'C'
 };
+
+namespace std {
+	/**
+	 * Converts a BlockPosition to a string.
+	 */
+	string to_string(BlockPosition pos) {
+		if(pos == BlockPosition::Front) return string("Front");
+		else return string("Back");
+	}
+
+	/**
+	 * Converts a Color to a string.
+	 */
+	string to_string(Color color) {
+		string ret;
+
+		switch((ENUM)color) {
+			case 0:
+				ret = "Red";
+				break;
+
+			case 1:
+				ret = "Yellow";
+				break;
+
+			case 2:
+				ret = "Green";
+				break;
+
+			case 3:
+				ret = "Blue";
+				break;
+		}
+
+		return ret;
+	}
+
+	/**
+	 * Converts a LogMode to a string.
+	 */
+	string to_string(LogMode mode) {
+		if(mode == LogMode::Multi) return string("Text");
+		else return string("Multi");
+	}
+
+	/**
+	 * Converts a Result to a string.
+	 */
+	string to_string(Result res) {
+		string ret;
+
+		switch((ENUM)res) {
+			case -1:
+				ret = "No Blocks";
+				break;
+
+			case 0:
+				ret = "Two whole, no halves";
+				break;
+
+			case 2:
+				ret = "Two whole, two halves";
+				break;
+
+			case 4:
+				ret = "No whole, four halves";
+				break;
+		}
+
+		return ret;
+	}
+
+	/**
+	 * Converts a Side to a string.
+	 */
+	string to_string(Side side) {
+		if(side == Side::Left) return string("Left");
+		else return string("Right");
+	}
+
+	/**
+	 * Converts a Size to a string.
+	 */
+	string to_string(Size size) {
+		if(size == Size::Long) return string("Long");
+		else return string("Short");
+	}
+
+	/**
+	 * Converts a Zone to a string.
+	 */
+	string to_string(Zone zone) {
+		return string(1, (char)zone);
+	}
+}
 
 #endif
