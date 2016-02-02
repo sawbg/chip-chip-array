@@ -1,0 +1,12 @@
+VERBOSE: Initializing Grabber
+VERBOSE: Zone: A
+VERBOSE: Side: Right
+VERBOSE: Setting HSV threshold values
+VERBOSE: Locating block
+STATUS: Searching: Red
+STATUS: Searching: Yellow
+STATUS: Searching: Green
+DEBUG: Green block detected with area 458397
+STATUS: Searching: Blue
+STATUS: 1 blocks found
+STATUS: Green block is located
