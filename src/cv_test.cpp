@@ -1,20 +1,18 @@
-#include "PiCamera.hpp"
+#include <iostream>
+
+#include "definitions.hpp"
+#include "Block.hpp"
+#include "Grabber.hpp"
 
 using namespace ChipChipArray;
-using namespace cv;
 
 /**
  * This program was used solely to test the PiCamera wrapper class and its
  * compatibility with the raspicam wrapper and ultimately OpenCV.
  */
 int main() {
-	namedWindow("Test", CV_WINDOW_AUTOSIZE);
-	PiCamera cam;
+	Grabber g(Zone::A, Side::Right);
+	Block block = g.LocateBlock();
 
-	while(true) {
-		imshow("Test", cam.Snap());
-		waitKey(500);
-	}
-	
-	delete &cam;
+	std::cout << std::to_string(block.color) << std::endl;
 }
