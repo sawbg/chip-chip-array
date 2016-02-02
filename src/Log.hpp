@@ -4,7 +4,9 @@
 #include <ctime>
 #include <fstream>
 #include <iostream>
+#include <opencv2/highgui/highgui.hpp>
 #include <string>
+#include <sys/stat.h>
 
 #include "definitions.hpp"
 
@@ -20,9 +22,18 @@ namespace ChipChipArray {
 	 * a subdirectory in the given directory with a name based on time. In this
 	 * new directory, a log file will be created. Images may later be stored in
 	 * this directory with names based on the order in which they were saved.
+	 *
+	 * This class DOES NOT WORK without compiling without a "LOG"
+	 * definition (#define LOG or -DLOG).
 	 */
 	class Log {
 		public:
+			/**
+			 * Initializes Log object but does not open log. Open()
+			 * must be called.
+			 */
+			Log() {};
+
 			/**
 			 * Initializes the Log.
 			 *
@@ -70,8 +81,14 @@ namespace ChipChipArray {
 			 * LogMode::Text was passed in the constructor.
 			 *
 			 * @param image the image to save
+			 * @param filename the filename for the saved image
 			 */
-			//void Image(byte* image);
+			void Image(cv::Mat image, auto filename);
+
+			/**
+			 *
+			 */
+			void Open(auto dir, LogMode mode = LogMode::Text);
 
 			/**
 			 * Writes "STATUS: " to the log file. Should be used
@@ -125,12 +142,12 @@ namespace ChipChipArray {
 			 * The log file directory, including the directory
 			 * created with LogMode::Multi.
 			 */
-			const char * dir;
+			std::string dir;
 
 			/**
 			 * The log file filename.
 			 */
-			const char * filename;
+			std::string filename;
 
 			/**
 			 * The number of images saved in the image directory.
@@ -162,32 +179,96 @@ namespace ChipChipArray {
 	};
 
 	Log::Log(auto dir, LogMode mode) {
+#ifdef LOG
+		Open(dir, mode);
+#endif
+	}
+
+	Log::~Log() {
+#ifdef LOG
+		try {
+			file.flush();
+			file.close();
+		} catch (std::ofstream::failure f) {
+			LogError("Gosh dang it! A fatal error has occured " 
+					"closing the logfile.", f);
+		}
+#endif
+	}
+
+	void Log::Debug(auto mesg) {
+#ifdef LOG
+		try {
+			file << "DEBUG: " << mesg << std::endl;
+			file.flush();
+		} catch(std::ofstream::failure f) {
+			LogError("Debug() write error", f);
+		}
+#endif
+	}
+
+	void Log::Error(auto mesg) {
+#ifdef LOG
+		try {
+			file << "ERROR: " << mesg << std::endl;
+			file.flush();
+		} catch(std::ofstream::failure f) {
+			LogError("Error() write error", f);
+		}
+#endif
+	}
+
+	void Log::Image(cv::Mat image, auto filename) {
+#ifdef LOG
+		try {
+			cv::imwrite(dir + std::string(filename), image);
+		} catch(std::ofstream::failure f) {
+			LogError("Image() write error", f);
+		} catch(std::exception ex) {
+			Error("Error writing image " + std::string(filename));
+		}
+#endif
+	}
+
+	void Log::LogError(auto mesg, std::ofstream::failure f) {
+#ifdef LOG
+		std::cerr << mesg << std::endl;
+		std::cerr << "MESSAGE: " << f.what() << std::endl;
+		exit(ERROR);
+#endif
+	}
+
+	void Log::Open(auto dir, LogMode mode) {
+#ifdef LOG
 		// format date and time
 		char date[32];
 		time_t sec = time(nullptr);
 		struct tm * loctime = localtime(&sec);
-		strftime(date, 32, "%m-%e_%H-%M-%S", loctime);
+		strftime(date, 32, "%m-%d_%H-%M-%S", loctime);
 
 		// create temperary strings
-		std::string dirstr = std::string(dir);
+		this->dir = std::string(dir);
 		std::string datestr = std::string(date);
 
 		// add path separator if necessary
-		if(dirstr[dirstr.length() - 1] != PATH_SEP) dirstr += PATH_SEP;
+		if(this->dir[this->dir.length() - 1] != PATH_SEP) {
+			this->dir += PATH_SEP;
+		}
 
 		// add directory for log and images if necessary
-		if(mode == LogMode::Multi) dirstr += datestr + PATH_SEP;
+		if(mode == LogMode::Multi) this->dir += datestr + PATH_SEP;
 
-		// set log filename
-		this->dir = dirstr.c_str();
-		dirstr += datestr + ".log";
-		filename = dirstr.c_str();
+		int ret = mkdir(this->dir.c_str(), S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP
+				| S_IROTH | S_IWOTH | S_IXUSR | S_IXGRP
+				| S_IXOTH);
+
+		filename = this->dir + datestr + ".log";
 
 		// set class mode
 		this->mode = mode;
 
 		// Initializing file
-		file.exceptions(std::ofstream::eofbit | std::ofstream::failbit
+		file.exceptions(std::ofstream::failbit
 				| std::ofstream::badbit);
 
 		try {
@@ -197,55 +278,22 @@ namespace ChipChipArray {
 			LogError("Oh, no! An error has occurred opening the "
 					"log file.", ex);
 		}
-	}
-
-	Log::~Log() {
-		try {
-			file.flush();
-			file.close();
-		} catch (std::ofstream::failure f) {
-			LogError("Gosh dang it! A fatal error has occured " 
-					"closing the logfile.", f);
-		}
-	}
-
-	void Log::Debug(auto mesg) {
-		try {
-			file << "DEBUG: " << mesg << std::endl;
-			file.flush();
-		} catch(std::ofstream::failure f) {
-			LogError("Debug() write error", f);
-		}
-	}
-
-	void Log::Error(auto mesg) {
-		try {
-			file << "ERROR: " << mesg << std::endl;
-			file.flush();
-		} catch(std::ofstream::failure f) {
-			LogError("Error() write error", f);
-		}
-	}
-
-	//	void Log::Image(...) {}
-
-	void Log::LogError(auto mesg, std::ofstream::failure f) {
-		std::cerr << mesg << std::endl;
-		//std::cerr << "ERROR CODE: " << f.code() << std::endl;
-		std::cerr << "MESSAGE: " << f.what() << std::endl;
-		exit(ERROR);
+#endif
 	}
 
 	void Log::Status(auto mesg) {
+#ifdef LOG
 		try {
 			file << "STATUS: " << mesg << std::endl;
 			file.flush();
 		} catch (std::ofstream::failure f) {
 			LogError("Status() write error", f);
 		}
+#endif
 	}
 
 	void Log::Variable(auto name, auto value) {
+#ifdef LOG
 		try {
 			file << "VARIABLE: " << name << " = " << value
 				<< std::endl;
@@ -253,15 +301,18 @@ namespace ChipChipArray {
 		} catch(std::ofstream::failure f) {
 			LogError("Variable() write error", f);
 		}
+#endif
 	}
 
 	void Log::Verbose(auto mesg) {
+#ifdef LOG
 		try {
 			file << "VERBOSE: " << mesg << std::endl;
 			file.flush();
 		} catch(std::ofstream::failure f) {
 			LogError("Verbose() write error", f);
 		}
+#endif
 	}
 }
 #endif
