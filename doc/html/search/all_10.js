@@ -2,8 +2,9 @@ var searchData=
 [
   ['scanqr',['ScanQR',['../namespaceChipChipArray.html#a6c7465049b5d408e1a238b6d8ffa887d',1,'ChipChipArray']]],
   ['scanqr_2ehpp',['ScanQR.hpp',['../ScanQR_8hpp.html',1,'']]],
+  ['scanqrlog',['scanQrLog',['../namespaceChipChipArray.html#ab5c6290951637c25a5422707020fb3a8',1,'ChipChipArray']]],
   ['short',['Short',['../definitions_8hpp.html#a9809446fd16a744b6df9808293f14153a30bb747c98bccdd11b3f89e644c4d0ad',1,'definitions.hpp']]],
-  ['side',['Side',['../definitions_8hpp.html#a03325a8a9d4f105db5e37dd587128142',1,'definitions.hpp']]],
+  ['side',['side',['../classChipChipArray_1_1Grabber.html#a8afbaefae7c767c862fd1bf13968539b',1,'ChipChipArray::Grabber::side()'],['../definitions_8hpp.html#a03325a8a9d4f105db5e37dd587128142',1,'Side():&#160;definitions.hpp']]],
   ['sint16',['sint16',['../definitions_8hpp.html#a74df79fde3c518e55b29ce6360a9c76e',1,'definitions.hpp']]],
   ['sint32',['sint32',['../definitions_8hpp.html#a0573de65958b4fda3a0460ed417dafb8',1,'definitions.hpp']]],
   ['sint64',['sint64',['../definitions_8hpp.html#ad91d7e42d1c1abce1d9eeacd54cc0497',1,'definitions.hpp']]],
