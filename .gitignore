@@ -1,2 +1,3 @@
 bin/*
-etc/logs
+!bin/lv
+etc
