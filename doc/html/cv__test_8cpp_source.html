@@ -69,7 +69,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -88,32 +88,36 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">cv_test.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="cv__test_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="PiCamera_8hpp.html">PiCamera.hpp</a>&quot;</span></div>
+<a href="cv__test_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespaceChipChipArray.html">ChipChipArray</a>;</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacecv.html">cv</a>;</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
-<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="cv__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">   10</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="namespaceChipChipArray.html#a7fc3d1edffca11531cd09fdab7c8b88d">main</a>() {</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    namedWindow(<span class="stringliteral">&quot;Test&quot;</span>, CV_WINDOW_AUTOSIZE);</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="classChipChipArray_1_1PiCamera.html">PiCamera</a> cam;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordflow">while</span>(<span class="keyword">true</span>) {</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        imshow(<span class="stringliteral">&quot;Test&quot;</span>, cam.<a class="code" href="classChipChipArray_1_1PiCamera.html#a58fb0de02570dce9a9cb60a1a04fb84f">Snap</a>());</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        waitKey(500);</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    }</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">delete</span> &amp;cam;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;}</div>
-<div class="ttc" id="PiCamera_8hpp_html"><div class="ttname"><a href="PiCamera_8hpp.html">PiCamera.hpp</a></div></div>
-<div class="ttc" id="namespacecv_html"><div class="ttname"><a href="namespacecv.html">cv</a></div></div>
-<div class="ttc" id="namespaceChipChipArray_html"><div class="ttname"><a href="namespaceChipChipArray.html">ChipChipArray</a></div><div class="ttdef"><b>Definition:</b> <a href="cv__hue_8cpp_source.html#l00011">cv_hue.cpp:11</a></div></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="definitions_8hpp.html">definitions.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Block_8hpp.html">Block.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Grabber_8hpp.html">Grabber.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespaceChipChipArray.html">ChipChipArray</a>;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="cv__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">   13</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="namespaceChipChipArray.html#a7fc3d1edffca11531cd09fdab7c8b88d">main</a>() {</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="classChipChipArray_1_1Grabber.html">Grabber</a> g(<a class="code" href="definitions_8hpp.html#adbd1e7a33d3e1751c7b2aa2562d0ecb9a7fc56270e7a70fa81a5935b72eacbe29">Zone::A</a>, <a class="code" href="definitions_8hpp.html#a03325a8a9d4f105db5e37dd587128142a92b09c7c48c520c3c55e497875da437c">Side::Right</a>);</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="classChipChipArray_1_1Block.html">Block</a> block = g.<a class="code" href="classChipChipArray_1_1Grabber.html#a86bc18ecf71c7ff4e324df0467af124a">LocateBlock</a>();</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    std::cout &lt;&lt; <a class="code" href="namespacestd.html#aa5ddf582a1c96ffe258c997be9a294a3">std::to_string</a>(block.<a class="code" href="classChipChipArray_1_1Block.html#a262210a9a04028f3f2670c9ae38ef3d7">color</a>) &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}</div>
+<div class="ttc" id="classChipChipArray_1_1Block_html"><div class="ttname"><a href="classChipChipArray_1_1Block.html">ChipChipArray::Block</a></div><div class="ttdef"><b>Definition:</b> <a href="Block_8hpp_source.html#l00009">Block.hpp:9</a></div></div>
+<div class="ttc" id="definitions_8hpp_html"><div class="ttname"><a href="definitions_8hpp.html">definitions.hpp</a></div></div>
+<div class="ttc" id="classChipChipArray_1_1Grabber_html_a86bc18ecf71c7ff4e324df0467af124a"><div class="ttname"><a href="classChipChipArray_1_1Grabber.html#a86bc18ecf71c7ff4e324df0467af124a">ChipChipArray::Grabber::LocateBlock</a></div><div class="ttdeci">Block LocateBlock()</div><div class="ttdef"><b>Definition:</b> <a href="Grabber_8hpp_source.html#l00211">Grabber.hpp:211</a></div></div>
+<div class="ttc" id="namespaceChipChipArray_html"><div class="ttname"><a href="namespaceChipChipArray.html">ChipChipArray</a></div><div class="ttdef"><b>Definition:</b> <a href="Block_8hpp_source.html#l00005">Block.hpp:5</a></div></div>
+<div class="ttc" id="namespacestd_html_aa5ddf582a1c96ffe258c997be9a294a3"><div class="ttname"><a href="namespacestd.html#aa5ddf582a1c96ffe258c997be9a294a3">std::to_string</a></div><div class="ttdeci">string to_string(BlockPosition pos)</div><div class="ttdef"><b>Definition:</b> <a href="definitions_8hpp_source.html#l00080">definitions.hpp:80</a></div></div>
+<div class="ttc" id="classChipChipArray_1_1Block_html_a262210a9a04028f3f2670c9ae38ef3d7"><div class="ttname"><a href="classChipChipArray_1_1Block.html#a262210a9a04028f3f2670c9ae38ef3d7">ChipChipArray::Block::color</a></div><div class="ttdeci">Color color</div><div class="ttdef"><b>Definition:</b> <a href="Block_8hpp_source.html#l00049">Block.hpp:49</a></div></div>
+<div class="ttc" id="definitions_8hpp_html_adbd1e7a33d3e1751c7b2aa2562d0ecb9a7fc56270e7a70fa81a5935b72eacbe29"><div class="ttname"><a href="definitions_8hpp.html#adbd1e7a33d3e1751c7b2aa2562d0ecb9a7fc56270e7a70fa81a5935b72eacbe29">Zone::A</a></div></div>
 <div class="ttc" id="namespaceChipChipArray_html_a7fc3d1edffca11531cd09fdab7c8b88d"><div class="ttname"><a href="namespaceChipChipArray.html#a7fc3d1edffca11531cd09fdab7c8b88d">ChipChipArray::main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="cv__hue_8cpp_source.html#l00020">cv_hue.cpp:20</a></div></div>
-<div class="ttc" id="classChipChipArray_1_1PiCamera_html"><div class="ttname"><a href="classChipChipArray_1_1PiCamera.html">ChipChipArray::PiCamera</a></div><div class="ttdef"><b>Definition:</b> <a href="PiCamera_8hpp_source.html#l00015">PiCamera.hpp:15</a></div></div>
-<div class="ttc" id="classChipChipArray_1_1PiCamera_html_a58fb0de02570dce9a9cb60a1a04fb84f"><div class="ttname"><a href="classChipChipArray_1_1PiCamera.html#a58fb0de02570dce9a9cb60a1a04fb84f">ChipChipArray::PiCamera::Snap</a></div><div class="ttdeci">cv::Mat Snap()</div><div class="ttdef"><b>Definition:</b> <a href="PiCamera_8hpp_source.html#l00059">PiCamera.hpp:59</a></div></div>
+<div class="ttc" id="Grabber_8hpp_html"><div class="ttname"><a href="Grabber_8hpp.html">Grabber.hpp</a></div></div>
+<div class="ttc" id="classChipChipArray_1_1Grabber_html"><div class="ttname"><a href="classChipChipArray_1_1Grabber.html">ChipChipArray::Grabber</a></div><div class="ttdef"><b>Definition:</b> <a href="Grabber_8hpp_source.html#l00019">Grabber.hpp:19</a></div></div>
+<div class="ttc" id="Block_8hpp_html"><div class="ttname"><a href="Block_8hpp.html">Block.hpp</a></div></div>
+<div class="ttc" id="definitions_8hpp_html_a03325a8a9d4f105db5e37dd587128142a92b09c7c48c520c3c55e497875da437c"><div class="ttname"><a href="definitions_8hpp.html#a03325a8a9d4f105db5e37dd587128142a92b09c7c48c520c3c55e497875da437c">Side::Right</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 25 2016 11:25:56 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Feb 2 2016 16:39:35 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

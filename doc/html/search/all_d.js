@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['red',['Red',['../definitions_8hpp.html#abc05a0f46084a3477cf5d5c939ff1436aee38e4d5dd68c4e440825018d549cb47',1,'definitions.hpp']]],
-  ['result',['Result',['../definitions_8hpp.html#ab84ebabb02540c4a7ec341a213abf1dc',1,'definitions.hpp']]],
-  ['right',['Right',['../definitions_8hpp.html#a03325a8a9d4f105db5e37dd587128142a92b09c7c48c520c3c55e497875da437c',1,'definitions.hpp']]]
+  ['picamera',['PiCamera',['../classChipChipArray_1_1PiCamera.html',1,'ChipChipArray']]],
+  ['picamera',['PiCamera',['../classChipChipArray_1_1PiCamera.html#a5910a3284877677decb6529d88e43487',1,'ChipChipArray::PiCamera::PiCamera()'],['../classChipChipArray_1_1PiCamera.html#a0a4480e9e7475ae7af9a7523239caf8d',1,'ChipChipArray::PiCamera::PiCamera(bool useColor)']]],
+  ['picamera_2ehpp',['PiCamera.hpp',['../PiCamera_8hpp.html',1,'']]],
+  ['place',['Place',['../classChipChipArray_1_1Grabber.html#a2833eebf4e57078c0d677379babfd2d4',1,'ChipChipArray::Grabber::Place(Color color)'],['../classChipChipArray_1_1Grabber.html#a817de2b1ac4208fcbe983e919cede265',1,'ChipChipArray::Grabber::Place(Color color, BlockPosition pos)']]]
 ];

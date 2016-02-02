@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['text',['Text',['../definitions_8hpp.html#aa7380b6d694cab49f07aed6a7af592d9a9dffbf69ffba8bc38bc4e01abf4b1675',1,'definitions.hpp']]],
-  ['two_5fhalves',['Two_Halves',['../definitions_8hpp.html#ab84ebabb02540c4a7ec341a213abf1dca5b00716e5e6f2e2dc1b10ffed2e0ef6d',1,'definitions.hpp']]]
+  ['red',['Red',['../definitions_8hpp.html#abc05a0f46084a3477cf5d5c939ff1436aee38e4d5dd68c4e440825018d549cb47',1,'definitions.hpp']]],
+  ['result',['Result',['../definitions_8hpp.html#ab84ebabb02540c4a7ec341a213abf1dc',1,'definitions.hpp']]],
+  ['right',['Right',['../definitions_8hpp.html#a03325a8a9d4f105db5e37dd587128142a92b09c7c48c520c3c55e497875da437c',1,'definitions.hpp']]]
 ];

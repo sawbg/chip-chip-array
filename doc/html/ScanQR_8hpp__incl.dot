@@ -20,4 +20,6 @@ digraph "src/ScanQR.hpp"
   Node7 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node7 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node9 [label="raspicam/raspicam_cv.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node7 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="unistd.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
 }

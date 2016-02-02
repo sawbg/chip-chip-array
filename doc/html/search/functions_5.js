@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['load',['Load',['../classChipChipArray_1_1Grabber.html#a56639f8f9ba9468bce4b6d69ceb2eb54',1,'ChipChipArray::Grabber']]],
-  ['log',['Log',['../classChipChipArray_1_1Log.html#a4cd28a821789b39e936a6e346329d65b',1,'ChipChipArray::Log']]]
+  ['grab',['Grab',['../classChipChipArray_1_1Grabber.html#a0a8a57e44f291581ab2862272134a592',1,'ChipChipArray::Grabber']]],
+  ['grabber',['Grabber',['../classChipChipArray_1_1Grabber.html#a7333f40c135fbe92d59651f75032b4e7',1,'ChipChipArray::Grabber']]]
 ];

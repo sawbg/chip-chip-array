@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['findblock',['FindBlock',['../classChipChipArray_1_1Grabber.html#ae52cf94210d8a5f468c08e59737518c4',1,'ChipChipArray::Grabber']]],
-  ['findcolor',['FindColor',['../classChipChipArray_1_1Grabber.html#a8ddc7def90b874885b2745034b5677df',1,'ChipChipArray::Grabber']]],
-  ['findsize',['FindSize',['../classChipChipArray_1_1Grabber.html#a7262ce7fd6d4cc2f0210fcc9cafdd840',1,'ChipChipArray::Grabber']]]
+  ['error',['Error',['../classChipChipArray_1_1Log.html#aba7b7b0555f49f4dcf15f4b9fd3e6b34',1,'ChipChipArray::Log']]],
+  ['extend',['Extend',['../classChipChipArray_1_1Grabber.html#abecb4047b4f7d5a7e691b7fb581b5a39',1,'ChipChipArray::Grabber']]]
 ];
