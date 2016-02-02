@@ -2,6 +2,7 @@ GCC = g++-4.9
 CPPFLAGS = -g -std=gnu++14
 CVFLAGS = -lraspicam -lraspicam_cv -lmmal -lmmal_core -lmmal_util -lzbar -lopencv_core -lopencv_highgui -lopencv_imgproc
 DEBUG = -DDEBUG
+LOG = -DLOG
 
 export LIBRARY_PATH=/opt/vc/lib:/usr/lib/arm-linux-gnueabihf
 
@@ -16,10 +17,10 @@ configure:
 	mkdir docs
 
 cv-test:
-	$(GCC) src/cv_test.cpp -o bin/cvtest $(CVFLAGS) $(CPPFLAGS) $(DEBUG)
+	$(GCC) src/cv_test.cpp -o bin/cvtest $(CVFLAGS) $(CPPFLAGS) $(LOG)
 
 log-test:
-	$(GCC) src/log_test.cpp -o bin/logtest $(CPPFLAGS)
+	$(GCC) src/log_test.cpp -o bin/logtest $(CPPFLAGS) $(LOG)
 
 net-cv-hue-test:
 	$(GCC) src/cv_hue.cpp -o bin/cvhue $(CPPFLAGS) $(CVFLAGS)
