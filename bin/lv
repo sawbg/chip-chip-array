@@ -1,0 +1,20 @@
+#!/bin/bash
+
+logdir=~/chip-chip-array/logs
+recentdir=$(ls -t $logdir/$2 | head -1)
+pat=""
+
+case "$1" in
+	s) pat="STATUS|ERROR"
+		;;
+	e) pat=ERROR
+		;;
+	v) pat="ERROR|STATUS|VERBOSE"
+		;;
+	d) pat="ERROR|STATUS|VERBOSE|DEBUG"
+		;;
+	var) pat="ERROR|STATUS|VERBOSE|DEBUG|VARIABLE"
+		;;
+esac
+
+cat $logdir/$2/$recentdir/$recentdir.log | grep -E $pat 
