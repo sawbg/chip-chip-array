@@ -88,6 +88,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="classChipChipArray_1_1Grabber-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">ChipChipArray::Grabber Class Reference</div>  </div>
@@ -95,6 +97,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="Grabber_8hpp_source.html">Grabber.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for ChipChipArray::Grabber:</div>
+<div class="dyncontent">
+<div class="center"><img src="classChipChipArray_1_1Grabber__coll__graph.png" border="0" usemap="#ChipChipArray_1_1Grabber_coll__map" alt="Collaboration graph"/></div>
+<map name="ChipChipArray_1_1Grabber_coll__map" id="ChipChipArray_1_1Grabber_coll__map">
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -127,6 +136,23 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:a2833eebf4e57078c0d677379babfd2d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a817de2b1ac4208fcbe983e919cede265"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classChipChipArray_1_1Grabber.html#a817de2b1ac4208fcbe983e919cede265">Place</a> (<a class="el" href="definitions_8hpp.html#abc05a0f46084a3477cf5d5c939ff1436">Color</a> color, <a class="el" href="definitions_8hpp.html#ac8e1b1f4bbac5914204c97f66f97d01f">BlockPosition</a> pos)</td></tr>
 <tr class="separator:a817de2b1ac4208fcbe983e919cede265"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a1ffe733fd5d42a38d25de80e9c082e52"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="definitions_8hpp.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classChipChipArray_1_1Grabber.html#a1ffe733fd5d42a38d25de80e9c082e52">MIN_HALF_BLOCK_SIZE</a> = 200000</td></tr>
+<tr class="separator:a1ffe733fd5d42a38d25de80e9c082e52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab536282f995668397901ba012ea6ad69"><td class="memItemLeft" align="right" valign="top"><a class="el" href="definitions_8hpp.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classChipChipArray_1_1Grabber.html#ab536282f995668397901ba012ea6ad69">invokeCount</a> = 0</td></tr>
+<tr class="separator:ab536282f995668397901ba012ea6ad69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85869d4051efcf346286f404b00d0f1d"><td class="memItemLeft" align="right" valign="top">std::map&lt; <a class="el" href="definitions_8hpp.html#abc05a0f46084a3477cf5d5c939ff1436">Color</a>, std::array<br class="typebreak" />
+&lt; cv::Scalar, 2 &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classChipChipArray_1_1Grabber.html#a85869d4051efcf346286f404b00d0f1d">rangeVals</a></td></tr>
+<tr class="separator:a85869d4051efcf346286f404b00d0f1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a726bcc2367a719cb84de92a981947622"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classChipChipArray_1_1PiCamera.html">PiCamera</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classChipChipArray_1_1Grabber.html#a726bcc2367a719cb84de92a981947622">cam</a></td></tr>
+<tr class="separator:a726bcc2367a719cb84de92a981947622"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:a7a64f2b3fad315a181c2fa375a0119b7"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classChipChipArray_1_1Log.html">Log</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classChipChipArray_1_1Grabber.html#a7a64f2b3fad315a181c2fa375a0119b7">log</a></td></tr>
+<tr class="separator:a7a64f2b3fad315a181c2fa375a0119b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This class finds blocks, identifies them, and sorts them according to color, size, and zone. </p>
@@ -480,13 +506,125 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a726bcc2367a719cb84de92a981947622"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classChipChipArray_1_1PiCamera.html">PiCamera</a> ChipChipArray::Grabber::cam</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="Grabber_8hpp_source.html#l00146">146</a> of file <a class="el" href="Grabber_8hpp_source.html">Grabber.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab536282f995668397901ba012ea6ad69"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="definitions_8hpp.html#adde6aaee8457bee49c2a92621fe22b79">uint8</a> ChipChipArray::Grabber::invokeCount = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="Grabber_8hpp_source.html#l00131">131</a> of file <a class="el" href="Grabber_8hpp_source.html">Grabber.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7a64f2b3fad315a181c2fa375a0119b7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classChipChipArray_1_1Log.html">Log</a> ChipChipArray::Grabber::log</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>need this to prevent linker errors </p>
+
+<p>Definition at line <a class="el" href="Grabber_8hpp_source.html#l00136">136</a> of file <a class="el" href="Grabber_8hpp_source.html">Grabber.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1ffe733fd5d42a38d25de80e9c082e52"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="definitions_8hpp.html#a1134b580f8da4de94ca6b1de4d37975e">uint32</a> ChipChipArray::Grabber::MIN_HALF_BLOCK_SIZE = 200000</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="Grabber_8hpp_source.html#l00126">126</a> of file <a class="el" href="Grabber_8hpp_source.html">Grabber.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a85869d4051efcf346286f404b00d0f1d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt;<a class="el" href="definitions_8hpp.html#abc05a0f46084a3477cf5d5c939ff1436">Color</a>, std::array&lt;cv::Scalar, 2&gt; &gt; ChipChipArray::Grabber::rangeVals</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="Grabber_8hpp_source.html#l00141">141</a> of file <a class="el" href="Grabber_8hpp_source.html">Grabber.hpp</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>src/<a class="el" href="Grabber_8hpp_source.html">Grabber.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Feb 2 2016 16:40:12 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Feb 2 2016 16:44:46 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

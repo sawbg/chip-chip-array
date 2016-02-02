@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['width',['width',['../classChipChipArray_1_1Block.html#ac3f815e8aa9060c4ad20d4e1b2649e35',1,'ChipChipArray::Block']]]
+  ['imgcount',['imgCount',['../classChipChipArray_1_1Log.html#a1fce11d8c939ade5a42a9fa2770b7402',1,'ChipChipArray::Log']]],
+  ['invokecount',['invokeCount',['../classChipChipArray_1_1Grabber.html#ab536282f995668397901ba012ea6ad69',1,'ChipChipArray::Grabber']]]
 ];
