@@ -4,6 +4,7 @@
 #include <opencv2/core/core.hpp>
 #include <opencv2/highgui/highgui.hpp>
 #include <raspicam/raspicam_cv.h>
+#include <unistd.h>
 
 namespace ChipChipArray {
 
@@ -50,6 +51,7 @@ namespace ChipChipArray {
 	PiCamera::PiCamera(bool useColor) {
 		cam.set(CV_CAP_PROP_FORMAT, (useColor ? CV_16UC3 : CV_16UC1));
 		cam.open();
+		usleep(500000);  // required to allow camera time to adjust!
 	}
 
 	void PiCamera::Close() {
