@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['scanqr_2ehpp',['ScanQR.hpp',['../ScanQR_8hpp.html',1,'']]]
+  ['picamera_2ehpp',['PiCamera.hpp',['../PiCamera_8hpp.html',1,'']]]
 ];

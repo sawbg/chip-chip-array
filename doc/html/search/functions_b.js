@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['to_5fstring',['to_string',['../namespacestd.html#aa5ddf582a1c96ffe258c997be9a294a3',1,'std::to_string(BlockPosition pos)'],['../namespacestd.html#a6a0c3c323562edbd2f57da3d2bb74326',1,'std::to_string(Color color)'],['../namespacestd.html#adb24d6df94a83c325573f7710df84953',1,'std::to_string(LogMode mode)'],['../namespacestd.html#a7fb649b1361ca7d95cc74045c0dadcdd',1,'std::to_string(Result res)'],['../namespacestd.html#aae21fd95009e4cc9fa25e1ad3830980b',1,'std::to_string(Side side)'],['../namespacestd.html#a6bfcd2c3377165652c64085d7acb5c64',1,'std::to_string(Size size)'],['../namespacestd.html#ac50951e195256b4c2311f90189f64ba8',1,'std::to_string(Zone zone)']]]
+  ['picamera',['PiCamera',['../classChipChipArray_1_1PiCamera.html#a5910a3284877677decb6529d88e43487',1,'ChipChipArray::PiCamera::PiCamera()'],['../classChipChipArray_1_1PiCamera.html#a0a4480e9e7475ae7af9a7523239caf8d',1,'ChipChipArray::PiCamera::PiCamera(bool useColor)']]],
+  ['place',['Place',['../classChipChipArray_1_1Grabber.html#a2833eebf4e57078c0d677379babfd2d4',1,'ChipChipArray::Grabber::Place(Color color)'],['../classChipChipArray_1_1Grabber.html#a817de2b1ac4208fcbe983e919cede265',1,'ChipChipArray::Grabber::Place(Color color, BlockPosition pos)']]]
 ];
