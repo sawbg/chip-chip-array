@@ -37,6 +37,13 @@ namespace ChipChipArray {
 			~Grabber();
 
 			/**
+			 * Closes the Grabber. Retracts the arm and closes the
+			 * camera.
+			 */
+			void Close();
+
+
+			/**
 			 * Loads a block(s) (if possible) at the robot's current
 			 * position.
 			 *
@@ -44,12 +51,33 @@ namespace ChipChipArray {
 			 */
 			Result Load();
 
-			void Close();
-
+			/**
+			 * Finds the block to pick up. Color and block size are
+			 * contained in this class.
+			 *
+			 * @eturn the block to pick up based on the Side given
+			 */
 			Block LocateBlock();
 
 
 		protected:
+			/**
+			 * The Raspicam
+			 */
+			PiCamera cam;
+
+			/**
+			 * The side from which the robot is coming (i.e., the
+			 * side where the higher priority blocks are to be
+			 * picked up.
+			 */
+			Side side;
+
+			/**
+			 * The boat zone
+			 */
+			Zone zone;
+
 			/**
 			 * Takes block currently in the arm's pinchers and
 			 * places to side of robot opposite the loading zone.
@@ -61,31 +89,6 @@ namespace ChipChipArray {
 			 * stack of blocks.
 			 */
 			void Extend();
-
-			/**
-			 * Whether there is little doubt that a block is within
-			 * reach based on the image from the camera.
-			 *
-			 * @return if a block is within reach
-			 */
-			bool FindBlock();
-
-			/**
-			 * Examines block in pinchers for a definite color and
-			 * returns most likely Color. For Zones B and C only.
-			 *
-			 * @return the Color of the current block
-			 */
-			Color FindColor();
-
-
-			/**
-			 * Determines if block is short or long. It is assumed
-			 * to be long if there is uncertainty. Zone B only.
-			 *
-			 * @return the Size of the current block
-			 */
-			Size FindSize();
 
 			/**
 			 * Picks up block by ezaming how much it fills up the
@@ -119,31 +122,31 @@ namespace ChipChipArray {
 			 */
 			void Place(Color color, BlockPosition pos);
 
+
+
 		private:
 			/**
-			 *
+			 * The minimum area in pixels to be considered a block
 			 */
-			const uint32 MIN_HALF_BLOCK_SIZE = 200000;
+			static const uint32 MIN_HALF_BLOCK_SIZE = 100000;
 
 			/**
-			 *
-			 */
-			uint8 invokeCount = 0;
-
-			/**
-			 *
+			 * The log object to be shared among the Grabber
+			 * objects
 			 */
 			static Log log;
 
 			/**
-			 *
+			 * The number of times the method has been called in
+			 * this instance of the Grabber.
 			 */
-			std::map<Color, std::array<cv::Scalar, 2>> rangeVals;
+			uint8 invokeCount = 0;
 
 			/**
-			 *
+			 * Contains the HSV threshold values for each color of
+			 * block
 			 */
-			PiCamera cam;
+			std::map<Color, std::array<cv::Scalar, 2>> rangeVals;
 	};
 
 	/**
@@ -158,9 +161,13 @@ namespace ChipChipArray {
 
 		invokeCount++;
 
+		this->zone = zone;
+		this->side = side;
+
 		log.Verbose("Setting HSV threshold values");
-		rangeVals[Color::Red] = { cv::Scalar(0, 165, 0),
-			cv::Scalar(10, 255, 100) };
+
+		rangeVals[Color::Red] = { cv::Scalar(0, 0, 0),
+			cv::Scalar(12, 255, 255) };
 		rangeVals[Color::Yellow] = { cv::Scalar(25, 224, 114),
 			cv::Scalar(36, 225, 183) };
 		rangeVals[Color::Green] = { cv::Scalar(44, 128, 0),
@@ -176,7 +183,6 @@ namespace ChipChipArray {
 
 	void Grabber::Close() {
 		log.Status("Closing Grabber");
-		cv::destroyAllWindows();
 		cam.Close();
 	}
 
@@ -185,18 +191,6 @@ namespace ChipChipArray {
 	}
 
 	void Grabber::Extend() {
-
-	}
-
-	bool Grabber::FindBlock() {
-
-	}
-
-	Color Grabber::FindColor() {
-
-	}
-
-	Size Grabber::FindSize() {
 
 	}
 
@@ -211,7 +205,9 @@ namespace ChipChipArray {
 	Block Grabber::LocateBlock() {
 		log.Verbose("Locating block");
 
-		cv::Mat imgOrig = cam.Snap();
+		cv::Mat imgOrig;
+		cv::transpose(cam.Snap(), imgOrig);
+
 		cv::Mat imgHSV;
 		cv::Mat imgThresh;
 		std::vector<cv::Rect> blocks;
@@ -221,33 +217,29 @@ namespace ChipChipArray {
 			// bc c++ can be just weird sometimes
 			Color color;
 
-			switch(i) {
-				case 0:
-					color = Color::Red;
-					break;
+			if(zone == Zone::A) color = Color::Blue;
+			else {
+				switch(i) {
+					case 0:
+						color = Color::Red;
+						break;
 
-				case 1:
-					color = Color::Yellow;
-					break;
+					case 1:
+						color = Color::Yellow;
+						break;
 
-				case 2:
-					color = Color::Green;
-					break;
+					case 2:
+						color = Color::Green;
+						break;
 
-				case 3:
-					color = Color::Blue;
-					break;
-
-				default:
-					color = Color::Red;  // for funzies
-					break;
+					case 3:
+						color = Color::Blue;
+						break;
+				}
 			}
 
-			log.Status("Searching: " + std::to_string(color));
+			log.Verbose("Searching: " + std::to_string(color));
 			cv::cvtColor(imgOrig, imgHSV, cv::COLOR_BGR2HSV);
-
-			cv::Scalar low[2] = rangeVals[color][0];
-			cv::Scalar high[2] = rangeVals[color][1];
 
 			cv::inRange(imgHSV, rangeVals[color][0],
 					rangeVals[color][1], imgThresh);
@@ -274,7 +266,8 @@ namespace ChipChipArray {
 						cv::Size(5, 5)));
 
 			log.Image(imgThresh, "thresh_" + std::to_string(color)
-					+ "_" + std::to_string(invokeCount)
+					+ "_" + std::to_string(zone)
+					+ std::to_string(invokeCount)
 					+ ".bmp");
 
 			// calculate contours
@@ -295,6 +288,7 @@ namespace ChipChipArray {
 						cv::Mat(contours_poly[i]));
 				uint32 area = rect.width * rect.height;
 
+				// determine if block and add to blocks vector
 				if(area > MIN_HALF_BLOCK_SIZE) {
 					log.Debug(std::to_string(color)
 							+ " block detected "
@@ -306,6 +300,7 @@ namespace ChipChipArray {
 				}
 			}
 
+			if(zone == Zone::A) break;
 		}
 
 		if(blocks.size() == 0) {
@@ -320,7 +315,11 @@ namespace ChipChipArray {
 
 		if(blocks.size() > 1) {
 			for(int i = 1; i < blocks.size(); i++) { 
-				if(blocks[i].x > block.topLeft.x) {
+				if((side == Side::Right && blocks[i].x 
+							> block.topLeft.x)
+						|| (side == Side::Left
+							&& blocks[i].x
+							< block.topLeft.x)) {
 					block = Block(blocks[i], colors[i]);
 				}
 			}
@@ -334,7 +333,8 @@ namespace ChipChipArray {
 		 */
 		cv::rectangle(imgOrig, block.topLeft , block.bottomRight,
 				cv::Scalar(255, 0, 0), 4, 8);
-		log.Image(imgOrig, "original_" + std::to_string(invokeCount)
+		log.Image(imgOrig, "original_" + std::to_string(zone)
+				+ std::to_string(invokeCount)
 				+ ".bmp");
 
 		return block;
