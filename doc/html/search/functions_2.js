@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['debug',['Debug',['../classChipChipArray_1_1Log.html#ac32b435af1577e4ebc67af2bdfea8eff',1,'ChipChipArray::Log']]],
-  ['discard',['Discard',['../classChipChipArray_1_1Grabber.html#a09f89b79e745db18009a022e9bfacd3a',1,'ChipChipArray::Grabber']]]
+  ['close',['Close',['../classChipChipArray_1_1Grabber.html#aacf089ceb4aa5b263c2cc702fb3daf74',1,'ChipChipArray::Grabber::Close()'],['../classChipChipArray_1_1PiCamera.html#a38f8205921d6deec5a2c360ea7d24cc5',1,'ChipChipArray::PiCamera::Close()']]]
 ];

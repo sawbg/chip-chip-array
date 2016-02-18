@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['grabber',['Grabber',['../classChipChipArray_1_1Grabber.html',1,'ChipChipArray']]]
+  ['block',['Block',['../classChipChipArray_1_1Block.html',1,'ChipChipArray']]]
 ];

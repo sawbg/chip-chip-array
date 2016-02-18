@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['dir',['dir',['../classChipChipArray_1_1Log.html#ab43e996ee338d077268e9d7fa2191e05',1,'ChipChipArray::Log']]]
+  ['height',['height',['../classChipChipArray_1_1Block.html#aed94802c166c9b4553764eb637717a2a',1,'ChipChipArray::Block']]]
 ];

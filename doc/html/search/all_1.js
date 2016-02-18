@@ -2,6 +2,9 @@ var searchData=
 [
   ['b',['B',['../definitions_8hpp.html#adbd1e7a33d3e1751c7b2aa2562d0ecb9a9d5ed678fe57bcca610140957afab571',1,'definitions.hpp']]],
   ['back',['Back',['../definitions_8hpp.html#ac8e1b1f4bbac5914204c97f66f97d01fa0557fa923dcee4d0f86b1409f5c2167f',1,'definitions.hpp']]],
+  ['base_5ftilt',['BASE_TILT',['../Servo__Position__Shell_8h.html#af629c4ae98db77091b130c7fbc31cab2a793d7330231df1a295a841e5b2bb9a8c',1,'Servo_Position_Shell.h']]],
+  ['base_5fturn',['BASE_TURN',['../Servo__Position__Shell_8h.html#af629c4ae98db77091b130c7fbc31cab2a87afce59ad3a309ba92f43778dde0edf',1,'Servo_Position_Shell.h']]],
+  ['begin',['begin',['../classAdafruit__PWMServoDriver.html#aef401eaad3c34222ac916eb7bd936bc2',1,'Adafruit_PWMServoDriver']]],
   ['block',['Block',['../classChipChipArray_1_1Block.html#a7eb2456e5c95c8a91844c9522eed0578',1,'ChipChipArray::Block']]],
   ['block',['Block',['../classChipChipArray_1_1Block.html',1,'ChipChipArray']]],
   ['block_2ehpp',['Block.hpp',['../Block_8hpp.html',1,'']]],

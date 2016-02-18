@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['green',['Green',['../definitions_8hpp.html#abc05a0f46084a3477cf5d5c939ff1436ad382816a3cbeed082c9e216e7392eed1',1,'definitions.hpp']]]
+  ['four_5fhalves',['Four_Halves',['../definitions_8hpp.html#ab84ebabb02540c4a7ec341a213abf1dca01f87e08f72dd8784d0665346a006fa3',1,'definitions.hpp']]],
+  ['front',['Front',['../definitions_8hpp.html#ac8e1b1f4bbac5914204c97f66f97d01fa5835bab1ade0060909e31a06af2e2cde',1,'definitions.hpp']]]
 ];
