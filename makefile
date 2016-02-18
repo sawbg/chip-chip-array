@@ -9,6 +9,9 @@ export LIBRARY_PATH=/opt/vc/lib:/usr/lib/arm-linux-gnueabihf
 block-test:
 	$(GCC) src/cv_shape.cpp -o bin/cvshape $(CVFLAGS) $(CPPFLAGS)
 
+comp:
+	$(GCC) src/main.cpp -o bin/main $(CVFLAGS) $(CPPFLAGS) $(LOG)
+
 configure:
 	sudo apt-get install -y libopencv-dev libzbar-dev cmake doxygen
 	git clone https://github.com/cedricve/raspicam
