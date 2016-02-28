@@ -1,3 +1,8 @@
+/**
+ * @author Samuel Andrew Wisner, awisner94@gmail.com
+ * @brief contains a program to aid in determining HSV ranges
+ */
+
 #include <iostream>
 #include <opencv2/highgui/highgui.hpp>
 #include <opencv2/imgproc/imgproc.hpp>
@@ -62,6 +67,8 @@ int main() {
 		Mat imgOrig = cam.Snap();  // real iage
 		Mat imgHSV;  // RGB image converted to HSV space
 		Mat imgThresh;  // binary threshold image
+		cvtColor(imgOrig, imgHSV, CV_BGR2YUV);
+		cvtColor(imgHSV, imgOrig, CV_HSV2BGR);
 		cvtColor(imgOrig, imgHSV, COLOR_BGR2HSV);
 
 		// create binary image
