@@ -1,3 +1,4 @@
 bin/*
 !bin/lv
 logs/*
+logs/Grabber/*
