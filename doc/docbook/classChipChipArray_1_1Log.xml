@@ -1,0 +1,491 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="classChipChipArray_1_1Log">
+<title>ChipChipArray::Log class Reference</title>
+<para>
+    <programlisting>#include <link linkend="Log_8hpp">&lt;Log.hpp&gt;</link></programlisting>
+</para>
+<para>Inheritance diagram for ChipChipArray::Log</para>
+<para>
+    <figure>
+        <title>Inheritance graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="classChipChipArray_1_1Log__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Collaboration diagram for ChipChipArray::Log</para>
+<para>
+    <figure>
+        <title>Collaboration graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="classChipChipArray_1_1Log__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <simplesect>
+            <title>Private Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const char PATH_SEP</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::string dir</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::string filename</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>uint8 imgCount</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>LogMode mode</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::ofstream file</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static const uint8 LEN</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="classChipChipArray_1_1Log_1a2bd48afdb832567e94545e6dc2f6f4d5">Log</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="classChipChipArray_1_1Log_1a4cd28a821789b39e936a6e346329d65b">Log</link> (
+auto dir, <link linkend="definitions_8hpp_1aa7380b6d694cab49f07aed6a7af592d9">LogMode</link> mode)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="classChipChipArray_1_1Log_1a647df4da22b29d9d5a5ea32af3a1ed83">~Log</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classChipChipArray_1_1Log_1ac32b435af1577e4ebc67af2bdfea8eff">Debug</link> (
+auto mesg)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classChipChipArray_1_1Log_1aba7b7b0555f49f4dcf15f4b9fd3e6b34">Error</link> (
+auto mesg)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classChipChipArray_1_1Log_1a65bbab057c8b1453f9e4efcfee7522c4">Image</link> (
+cv::Mat image, auto filename)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classChipChipArray_1_1Log_1ad27a06a4561f2f59159bd8a7fc2fed3b">Open</link> (
+auto dir, <link linkend="definitions_8hpp_1aa7380b6d694cab49f07aed6a7af592d9">LogMode</link> mode)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classChipChipArray_1_1Log_1a66575b6e94c6112e4cefa5736cb996e0">Status</link> (
+auto mesg)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classChipChipArray_1_1Log_1a8849569720c26e335e7ef4dcb912170b">Variable</link> (
+auto name, auto value)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classChipChipArray_1_1Log_1a154a5f38d9c7a767693b242684a3d4d9">Verbose</link> (
+auto mesg)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classChipChipArray_1_1Log_1a42b8933f00d22d08f87af5d86248de5e">LogError</link> (
+auto mesg, std::ofstream::failure f)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title>Detailed Description</title>
+
+<para>This class logs the text and images passed to it to specificed directory.</para>
+
+<para>A &quot;container&quot; directory to which the class can write is passed in the constructor. When the <link linkend="classChipChipArray_1_1Log">Log</link> is initialized with <link linkend="definitions_8hpp_1aa7380b6d694cab49f07aed6a7af592d9a9dffbf69ffba8bc38bc4e01abf4b1675">LogMode::Text</link>, a new log file is created with a filename based on the time of initialization in the given directory. When initialized in <link linkend="definitions_8hpp_1aa7380b6d694cab49f07aed6a7af592d9ace7898536dd0e928d1640ee2ad531cc8">LogMode::Multi</link>, it will create a subdirectory in the given directory with a name based on time. In this new directory, a log file will be created. Images may later be stored in this directory with names based on the order in which they were saved.</para>
+
+<para>This class DOES NOT WORK without compiling without a &quot;LOG&quot; definition (#define LOG or -DLOG). </para>
+                <para>Definition at line 29 of file Log.hpp</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>Log.hpp</para></listitem></itemizedlist></para>
+        </simplesect>
+        <simplesect>
+            <title>Member Documentation</title>
+            <simplesect>
+                <title>const char ChipChipArray::Log::PATH_SEP</title>                
+<para>The path sepearator. Can be changed if code adapted for Windows. </para>
+
+                <para>Definition at line 130 of file Log.hpp</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>Log.hpp</para></listitem></itemizedlist></para>
+            </simplesect>
+            <simplesect>
+                <title>std::string ChipChipArray::Log::dir</title>                
+<para>The log file directory, including the directory created with <link linkend="definitions_8hpp_1aa7380b6d694cab49f07aed6a7af592d9ace7898536dd0e928d1640ee2ad531cc8">LogMode::Multi</link>. </para>
+
+                <para>Definition at line 145 of file Log.hpp</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>Log.hpp</para></listitem></itemizedlist></para>
+            </simplesect>
+            <simplesect>
+                <title>std::string ChipChipArray::Log::filename</title>                
+<para>The log file filename. </para>
+
+                <para>Definition at line 150 of file Log.hpp</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>Log.hpp</para></listitem></itemizedlist></para>
+            </simplesect>
+            <simplesect>
+                <title>uint8 ChipChipArray::Log::imgCount</title>                
+<para>The number of images saved in the image directory. Used in naming the images in <link linkend="definitions_8hpp_1aa7380b6d694cab49f07aed6a7af592d9ace7898536dd0e928d1640ee2ad531cc8">LogMode::Multi</link>. </para>
+
+                <para>Definition at line 156 of file Log.hpp</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>Log.hpp</para></listitem></itemizedlist></para>
+            </simplesect>
+            <simplesect>
+                <title>LogMode ChipChipArray::Log::mode</title>                
+<para>The LogMode. </para>
+
+                <para>Definition at line 161 of file Log.hpp</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>Log.hpp</para></listitem></itemizedlist></para>
+            </simplesect>
+            <simplesect>
+                <title>std::ofstream ChipChipArray::Log::file</title>                
+<para>The logfile. </para>
+
+                <para>Definition at line 166 of file Log.hpp</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>Log.hpp</para></listitem></itemizedlist></para>
+            </simplesect>
+        </simplesect>
+            <simplesect>
+                <title>const uint8 ChipChipArray::Log::LEN</title>                
+<para>The (maximum) length of the filename character array. </para>
+
+                <para>Definition at line 136 of file Log.hpp</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>Log.hpp</para></listitem></itemizedlist></para>
+            </simplesect>
+            <section xml:id="classChipChipArray_1_1Log_1a2bd48afdb832567e94545e6dc2f6f4d5">
+                <title>ChipChipArray::Log::Log ()</title> <emphasis></emphasis>
+                
+<para>Initializes <link linkend="classChipChipArray_1_1Log">Log</link> object but does not open log. <link linkend="classChipChipArray_1_1Log_1ad27a06a4561f2f59159bd8a7fc2fed3b">Open()</link> must be called. </para>
+
+            </section>
+            <section xml:id="classChipChipArray_1_1Log_1a4cd28a821789b39e936a6e346329d65b">
+                <title>ChipChipArray::Log::Log (auto dir, LogMode mode=LogMode::Text)</title> <emphasis></emphasis>
+                
+<para>Initializes the <link linkend="classChipChipArray_1_1Log">Log</link>.</para>
+
+<para>A new log file is created in dir if <link linkend="definitions_8hpp_1aa7380b6d694cab49f07aed6a7af592d9a9dffbf69ffba8bc38bc4e01abf4b1675">LogMode::Text</link> is given. The file will have a name based on the current date and time. If <link linkend="definitions_8hpp_1aa7380b6d694cab49f07aed6a7af592d9ace7898536dd0e928d1640ee2ad531cc8">LogMode::Multi</link> is given, a new directory is created, and a log file with a name based on the current date and time is created inside it.</para>
+
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>dir</entry>
+                                <entry>
+<para>the directory for the newly created logfile/folder</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>mode</entry>
+                                <entry>
+<para>the LogMode </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="classChipChipArray_1_1Log_1a647df4da22b29d9d5a5ea32af3a1ed83">
+                <title>ChipChipArray::Log::~Log ()</title> <emphasis></emphasis>
+                
+<para>Destroys the <link linkend="classChipChipArray_1_1Log">Log</link> and closes the logfile. </para>
+
+            </section>
+            <section xml:id="classChipChipArray_1_1Log_1ac32b435af1577e4ebc67af2bdfea8eff">
+                <title>void ChipChipArray::Log::Debug (auto mesg)</title> <emphasis></emphasis>
+                
+<para>Writes &quot;DEBUG: &quot; to the log file along with the message passed. Should be used for generic debugging information. If recording the value of a variable in the <link linkend="classChipChipArray_1_1Log">Log</link> is desired, use the function <link linkend="classChipChipArray_1_1Log_1a8849569720c26e335e7ef4dcb912170b">Variable()</link> instead.</para>
+
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>mesg</entry>
+                                <entry>
+<para>the message to record in the logfile </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="classChipChipArray_1_1Log_1aba7b7b0555f49f4dcf15f4b9fd3e6b34">
+                <title>void ChipChipArray::Log::Error (auto mesg)</title> <emphasis></emphasis>
+                
+<para>Writes &quot;ERROR: &quot; to the log file. Should only be use when an exception is thrown.</para>
+
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>mesg</entry>
+                                <entry>
+<para>the message to record in the log </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="classChipChipArray_1_1Log_1a65bbab057c8b1453f9e4efcfee7522c4">
+                <title>void ChipChipArray::Log::Image (cv::Mat image, auto filename)</title> <emphasis></emphasis>
+                
+<para>Creates a bitmap image in the subdirectory created by the <link linkend="classChipChipArray_1_1Log">Log</link> during initialization. Does nothing if <link linkend="definitions_8hpp_1aa7380b6d694cab49f07aed6a7af592d9a9dffbf69ffba8bc38bc4e01abf4b1675">LogMode::Text</link> was passed in the constructor.</para>
+
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>image</entry>
+                                <entry>
+<para>the image to save </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>filename</entry>
+                                <entry>
+<para>the filename for the saved image </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="classChipChipArray_1_1Log_1ad27a06a4561f2f59159bd8a7fc2fed3b">
+                <title>void ChipChipArray::Log::Open (auto dir, LogMode mode=LogMode::Text)</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classChipChipArray_1_1Log_1a66575b6e94c6112e4cefa5736cb996e0">
+                <title>void ChipChipArray::Log::Status (auto mesg)</title> <emphasis></emphasis>
+                
+<para>Writes &quot;STATUS: &quot; to the log file. Should be used when recording the status or state of the program. It should not be used to record microalgorithmic changes. Use <link linkend="classChipChipArray_1_1Log_1a154a5f38d9c7a767693b242684a3d4d9">Verbose()</link> for these instead.</para>
+
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>mesg</entry>
+                                <entry>
+<para>the message to record in the logfile </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="classChipChipArray_1_1Log_1a8849569720c26e335e7ef4dcb912170b">
+                <title>void ChipChipArray::Log::Variable (auto name, auto value)</title> <emphasis></emphasis>
+                
+<para>Writes &quot;VARIABLE: &quot; to the log file. Should be used whenever recording the value of a variable is desired.</para>
+
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>name</entry>
+                                <entry>
+<para>the variable name to record </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>value</entry>
+                                <entry>
+<para>the variable value to record </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="classChipChipArray_1_1Log_1a154a5f38d9c7a767693b242684a3d4d9">
+                <title>void ChipChipArray::Log::Verbose (auto mesg)</title> <emphasis></emphasis>
+                
+<para>Writes &quot;VERBOSE: &quot; to the log file. Should only be used for recording small, specific portions of code. To record a change in the more general state of the program, use <link linkend="classChipChipArray_1_1Log_1a66575b6e94c6112e4cefa5736cb996e0">Status()</link> instead.</para>
+
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>mesg</entry>
+                                <entry>
+<para>the message to record in the logfile </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="classChipChipArray_1_1Log_1a42b8933f00d22d08f87af5d86248de5e">
+                <title>void ChipChipArray::Log::LogError (auto mesg, std::ofstream::failure f)</title> <emphasis></emphasis>
+                
+<para>Prints an error message and exits the application. Used when errors occur within this class ONLY.</para>
+
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>mesg</entry>
+                                <entry>
+<para>the error message to print </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>f</entry>
+                                <entry>
+<para>the failure object caught </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+</section>

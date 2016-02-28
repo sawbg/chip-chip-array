@@ -1,0 +1,142 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="classChipChipArray_1_1PiCamera">
+<title>ChipChipArray::PiCamera class Reference</title>
+<para>
+    <programlisting>#include <link linkend="PiCamera_8hpp">&lt;PiCamera.hpp&gt;</link></programlisting>
+</para>
+<para>Inheritance diagram for ChipChipArray::PiCamera</para>
+<para>
+    <figure>
+        <title>Inheritance graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="classChipChipArray_1_1PiCamera__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Collaboration diagram for ChipChipArray::PiCamera</para>
+<para>
+    <figure>
+        <title>Collaboration graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="classChipChipArray_1_1PiCamera__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <simplesect>
+            <title>Private Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>raspicam::RaspiCam_Cv cam</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="classChipChipArray_1_1PiCamera_1a5910a3284877677decb6529d88e43487">PiCamera</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="classChipChipArray_1_1PiCamera_1a0a4480e9e7475ae7af9a7523239caf8d">PiCamera</link> (
+bool useColor)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classChipChipArray_1_1PiCamera_1a38f8205921d6deec5a2c360ea7d24cc5">Close</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>cv::Mat <link linkend="classChipChipArray_1_1PiCamera_1a58fb0de02570dce9a9cb60a1a04fb84f">Snap</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title>Detailed Description</title>
+
+<para>This class is a basic wrapper to allow the Raspicam to interface with OpenCV. It uses another wrapper class, Raspicam, provided by Cédric Verstraeten (<link xlink:href="https://github.com/cedricve/raspicam">https://github.com/cedricve/raspicam</link>). </para>
+                <para>Definition at line 16 of file PiCamera.hpp</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>PiCamera.hpp</para></listitem></itemizedlist></para>
+        </simplesect>
+        <simplesect>
+            <title>Member Documentation</title>
+            <simplesect>
+                <title>raspicam::RaspiCam_Cv ChipChipArray::PiCamera::cam</title>                
+<para>the Raspicam object provided by raspicam_cv.h </para>
+
+                <para>Definition at line 48 of file PiCamera.hpp</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>PiCamera.hpp</para></listitem></itemizedlist></para>
+            </simplesect>
+        </simplesect>
+            <section xml:id="classChipChipArray_1_1PiCamera_1a5910a3284877677decb6529d88e43487">
+                <title>ChipChipArray::PiCamera::PiCamera ()</title> <emphasis></emphasis>
+                
+<para>Opens the camera and configures it for color images. </para>
+
+            </section>
+            <section xml:id="classChipChipArray_1_1PiCamera_1a0a4480e9e7475ae7af9a7523239caf8d">
+                <title>ChipChipArray::PiCamera::PiCamera (bool useColor)</title> <emphasis></emphasis>
+                
+<para>Opens the camera.</para>
+
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>useColor</entry>
+                                <entry>
+<para>Specifices whether camera should make color images. TRUE = color, FALSE = grayscale. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="classChipChipArray_1_1PiCamera_1a38f8205921d6deec5a2c360ea7d24cc5">
+                <title>void ChipChipArray::PiCamera::Close ()</title> <emphasis></emphasis>
+                
+<para>Closes connection to camera. </para>
+
+            </section>
+            <section xml:id="classChipChipArray_1_1PiCamera_1a58fb0de02570dce9a9cb60a1a04fb84f">
+                <title>cv::Mat ChipChipArray::PiCamera::Snap ()</title> <emphasis></emphasis>
+                
+<para>Makes picture.</para>
+
+<para><formalpara><title>Returns: </title>
+
+<para>OpenCV Mat object (i.e., an image) from the camera </para>
+</formalpara>
+</para>
+
+            </section>
+</section>

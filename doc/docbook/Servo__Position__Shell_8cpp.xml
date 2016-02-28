@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="Servo__Position__Shell_8cpp">
+    <title>Servo_Position_Shell.cpp File Reference</title>
+    <programlisting>#include &lt;wiringPi.h&gt;</programlisting>
+    <programlisting>#include &quot;Adafruit_PWMServoDriver.h&quot;</programlisting>
+    <programlisting>#include &lt;iostream&gt;</programlisting>
+    <programlisting>#include &quot;Servo_Position_Shell.h&quot;</programlisting>
+<para>Include dependency diagram for Servo_Position_Shell.cpp</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="Servo__Position__Shell_8cpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for Servo_Position_Shell.cpp</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="Servo__Position__Shell_8cpp__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <simplesect>
+            <title>Defines</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="Servo__Position__Shell_8cpp_1a65ff49a6e78be84de6e478345b32b508">SERVOMIN</link> 150</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="Servo__Position__Shell_8cpp_1a357a7e9fa4e4d8ed2f5ef82f37143836">SERVOMAX</link> 600</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title>Variables</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="classAdafruit__PWMServoDriver">Adafruit_PWMServoDriver</link> <link linkend="Servo__Position__Shell_8cpp_1a2c06cc8f85429bb0f7cb91917164dc54">pwm</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="Servo__Position__Shell_8h_1ab077fa1127453be2bd9d4c3c8a768fa7">uint8_t</link> <link linkend="Servo__Position__Shell_8cpp_1ac3fe65cfcd6744437ab3133c702ade33">servo_num</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="Servo__Position__Shell_8cpp_1a4fc01d736fe50cf5b977f755b675f11d">setup</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="Servo__Position__Shell_8cpp_1a7f07c548295f3696f8881f0c9de708b1">setServoPulse</link> (
+<link linkend="Servo__Position__Shell_8h_1ab077fa1127453be2bd9d4c3c8a768fa7">uint8_t</link> n, double pulse)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="Servo__Position__Shell_8cpp_1abd2cd3c2e36d42a2178a6f2fd12af905">setServoPosition</link> (
+<link linkend="Servo__Position__Shell_8h_1af629c4ae98db77091b130c7fbc31cab2">Servo</link> whichservo, int position)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file /home/pi/chip-chip-array/src/Servo_Position_Shell.cpp</para>
+    </simplesect>
+</section>

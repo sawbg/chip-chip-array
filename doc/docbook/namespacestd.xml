@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="namespacestd">
+<title>std</title>
+        <simplesect>
+            <title>Functions</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>string <link linkend="namespacestd_1aa5ddf582a1c96ffe258c997be9a294a3">to_string</link> (
+<link linkend="definitions_8hpp_1ac8e1b1f4bbac5914204c97f66f97d01f">BlockPosition</link> pos)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>string <link linkend="namespacestd_1a6a0c3c323562edbd2f57da3d2bb74326">to_string</link> (
+<link linkend="definitions_8hpp_1abc05a0f46084a3477cf5d5c939ff1436">Color</link> color)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>string <link linkend="namespacestd_1adb24d6df94a83c325573f7710df84953">to_string</link> (
+<link linkend="definitions_8hpp_1aa7380b6d694cab49f07aed6a7af592d9">LogMode</link> mode)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>string <link linkend="namespacestd_1a7fb649b1361ca7d95cc74045c0dadcdd">to_string</link> (
+<link linkend="definitions_8hpp_1ab84ebabb02540c4a7ec341a213abf1dc">Result</link> res)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>string <link linkend="namespacestd_1aae21fd95009e4cc9fa25e1ad3830980b">to_string</link> (
+<link linkend="definitions_8hpp_1a03325a8a9d4f105db5e37dd587128142">Side</link> side)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>string <link linkend="namespacestd_1a6bfcd2c3377165652c64085d7acb5c64">to_string</link> (
+<link linkend="definitions_8hpp_1a9809446fd16a744b6df9808293f14153">Size</link> size)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>string <link linkend="namespacestd_1ac50951e195256b4c2311f90189f64ba8">to_string</link> (
+<link linkend="definitions_8hpp_1adbd1e7a33d3e1751c7b2aa2562d0ecb9">Zone</link> zone)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+</section>

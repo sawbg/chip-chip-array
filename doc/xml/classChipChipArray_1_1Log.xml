@@ -1,0 +1,440 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="classChipChipArray_1_1Log" kind="class" prot="public">
+    <compoundname>ChipChipArray::Log</compoundname>
+    <includes refid="Log_8hpp" local="no">Log.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classChipChipArray_1_1Log_1a27b99be3da1579b0fb237cffcf5dbe8a" prot="private" static="no" mutable="no">
+        <type>const char</type>
+        <definition>const char ChipChipArray::Log::PATH_SEP</definition>
+        <argsstring></argsstring>
+        <name>PATH_SEP</name>
+        <initializer>= &apos;/&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The path sepearator. Can be changed if code adapted for Windows. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pi/chip-chip-array/src/Log.hpp" line="130" column="1" bodyfile="/home/pi/chip-chip-array/src/Log.hpp" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classChipChipArray_1_1Log_1ab43e996ee338d077268e9d7fa2191e05" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string ChipChipArray::Log::dir</definition>
+        <argsstring></argsstring>
+        <name>dir</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The log file directory, including the directory created with <ref refid="definitions_8hpp_1aa7380b6d694cab49f07aed6a7af592d9ace7898536dd0e928d1640ee2ad531cc8" kindref="member">LogMode::Multi</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pi/chip-chip-array/src/Log.hpp" line="145" column="1" bodyfile="/home/pi/chip-chip-array/src/Log.hpp" bodystart="145" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classChipChipArray_1_1Log_1aeb08bb5eb2fd85f172e4f82963893ce0" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string ChipChipArray::Log::filename</definition>
+        <argsstring></argsstring>
+        <name>filename</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The log file filename. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pi/chip-chip-array/src/Log.hpp" line="150" column="1" bodyfile="/home/pi/chip-chip-array/src/Log.hpp" bodystart="150" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classChipChipArray_1_1Log_1a1fce11d8c939ade5a42a9fa2770b7402" prot="private" static="no" mutable="no">
+        <type><ref refid="definitions_8hpp_1adde6aaee8457bee49c2a92621fe22b79" kindref="member">uint8</ref></type>
+        <definition>uint8 ChipChipArray::Log::imgCount</definition>
+        <argsstring></argsstring>
+        <name>imgCount</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The number of images saved in the image directory. Used in naming the images in <ref refid="definitions_8hpp_1aa7380b6d694cab49f07aed6a7af592d9ace7898536dd0e928d1640ee2ad531cc8" kindref="member">LogMode::Multi</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pi/chip-chip-array/src/Log.hpp" line="156" column="1" bodyfile="/home/pi/chip-chip-array/src/Log.hpp" bodystart="156" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classChipChipArray_1_1Log_1a0238555b6eaa29c25390349635dcb272" prot="private" static="no" mutable="no">
+        <type><ref refid="definitions_8hpp_1aa7380b6d694cab49f07aed6a7af592d9" kindref="member">LogMode</ref></type>
+        <definition>LogMode ChipChipArray::Log::mode</definition>
+        <argsstring></argsstring>
+        <name>mode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The LogMode. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pi/chip-chip-array/src/Log.hpp" line="161" column="1" bodyfile="/home/pi/chip-chip-array/src/Log.hpp" bodystart="161" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classChipChipArray_1_1Log_1a2a057989526162b4b9058ee8f2596da5" prot="private" static="no" mutable="no">
+        <type>std::ofstream</type>
+        <definition>std::ofstream ChipChipArray::Log::file</definition>
+        <argsstring></argsstring>
+        <name>file</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The logfile. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pi/chip-chip-array/src/Log.hpp" line="166" column="1" bodyfile="/home/pi/chip-chip-array/src/Log.hpp" bodystart="166" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classChipChipArray_1_1Log_1a8dd78bdbe11d9dedb7673eee488c954f" prot="private" static="yes" mutable="no">
+        <type>const <ref refid="definitions_8hpp_1adde6aaee8457bee49c2a92621fe22b79" kindref="member">uint8</ref></type>
+        <definition>const uint8 ChipChipArray::Log::LEN</definition>
+        <argsstring></argsstring>
+        <name>LEN</name>
+        <initializer>= 255</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The (maximum) length of the filename character array. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pi/chip-chip-array/src/Log.hpp" line="136" column="1" bodyfile="/home/pi/chip-chip-array/src/Log.hpp" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classChipChipArray_1_1Log_1a2bd48afdb832567e94545e6dc2f6f4d5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ChipChipArray::Log::Log</definition>
+        <argsstring>()</argsstring>
+        <name>Log</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Initializes <ref refid="classChipChipArray_1_1Log" kindref="compound">Log</ref> object but does not open log. <ref refid="classChipChipArray_1_1Log_1ad27a06a4561f2f59159bd8a7fc2fed3b" kindref="member">Open()</ref> must be called. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pi/chip-chip-array/src/Log.hpp" line="35" column="1" bodyfile="/home/pi/chip-chip-array/src/Log.hpp" bodystart="35" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="classChipChipArray_1_1Log_1a4cd28a821789b39e936a6e346329d65b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ChipChipArray::Log::Log</definition>
+        <argsstring>(auto dir, LogMode mode=LogMode::Text)</argsstring>
+        <name>Log</name>
+        <param>
+          <type>auto</type>
+          <declname>dir</declname>
+        </param>
+        <param>
+          <type><ref refid="definitions_8hpp_1aa7380b6d694cab49f07aed6a7af592d9" kindref="member">LogMode</ref></type>
+          <declname>mode</declname>
+          <defval><ref refid="definitions_8hpp_1aa7380b6d694cab49f07aed6a7af592d9a9dffbf69ffba8bc38bc4e01abf4b1675" kindref="member">LogMode::Text</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Initializes the <ref refid="classChipChipArray_1_1Log" kindref="compound">Log</ref>.</para><para>A new log file is created in dir if <ref refid="definitions_8hpp_1aa7380b6d694cab49f07aed6a7af592d9a9dffbf69ffba8bc38bc4e01abf4b1675" kindref="member">LogMode::Text</ref> is given. The file will have a name based on the current date and time. If <ref refid="definitions_8hpp_1aa7380b6d694cab49f07aed6a7af592d9ace7898536dd0e928d1640ee2ad531cc8" kindref="member">LogMode::Multi</ref> is given, a new directory is created, and a log file with a name based on the current date and time is created inside it.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dir</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the directory for the newly created logfile/folder</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the LogMode </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pi/chip-chip-array/src/Log.hpp" line="52" column="1" bodyfile="/home/pi/chip-chip-array/src/Log.hpp" bodystart="181" bodyend="185"/>
+        <references refid="classChipChipArray_1_1Log_1ad27a06a4561f2f59159bd8a7fc2fed3b" compoundref="Log_8hpp" startline="241" endline="282">Open</references>
+      </memberdef>
+      <memberdef kind="function" id="classChipChipArray_1_1Log_1a647df4da22b29d9d5a5ea32af3a1ed83" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ChipChipArray::Log::~Log</definition>
+        <argsstring>()</argsstring>
+        <name>~Log</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destroys the <ref refid="classChipChipArray_1_1Log" kindref="compound">Log</ref> and closes the logfile. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pi/chip-chip-array/src/Log.hpp" line="57" column="1" bodyfile="/home/pi/chip-chip-array/src/Log.hpp" bodystart="187" bodyend="197"/>
+      </memberdef>
+      <memberdef kind="function" id="classChipChipArray_1_1Log_1ac32b435af1577e4ebc67af2bdfea8eff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ChipChipArray::Log::Debug</definition>
+        <argsstring>(auto mesg)</argsstring>
+        <name>Debug</name>
+        <param>
+          <type>auto</type>
+          <declname>mesg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Writes &quot;DEBUG: &quot; to the log file along with the message passed. Should be used for generic debugging information. If recording the value of a variable in the <ref refid="classChipChipArray_1_1Log" kindref="compound">Log</ref> is desired, use the function <ref refid="classChipChipArray_1_1Log_1a8849569720c26e335e7ef4dcb912170b" kindref="member">Variable()</ref> instead.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mesg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the message to record in the logfile </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pi/chip-chip-array/src/Log.hpp" line="68" column="1" bodyfile="/home/pi/chip-chip-array/src/Log.hpp" bodystart="199" bodyend="208"/>
+        <referencedby refid="classChipChipArray_1_1Grabber_1a86bc18ecf71c7ff4e324df0467af124a" compoundref="Grabber_8hpp" startline="211" endline="341">ChipChipArray::Grabber::LocateBlock</referencedby>
+        <referencedby refid="log__test_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="log__test_8cpp" startline="12" endline="16">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classChipChipArray_1_1Log_1aba7b7b0555f49f4dcf15f4b9fd3e6b34" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ChipChipArray::Log::Error</definition>
+        <argsstring>(auto mesg)</argsstring>
+        <name>Error</name>
+        <param>
+          <type>auto</type>
+          <declname>mesg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Writes &quot;ERROR: &quot; to the log file. Should only be use when an exception is thrown.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mesg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the message to record in the log </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pi/chip-chip-array/src/Log.hpp" line="76" column="1" bodyfile="/home/pi/chip-chip-array/src/Log.hpp" bodystart="210" bodyend="219"/>
+        <referencedby refid="classChipChipArray_1_1Log_1a65bbab057c8b1453f9e4efcfee7522c4" compoundref="Log_8hpp" startline="221" endline="231">Image</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classChipChipArray_1_1Log_1a65bbab057c8b1453f9e4efcfee7522c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ChipChipArray::Log::Image</definition>
+        <argsstring>(cv::Mat image, auto filename)</argsstring>
+        <name>Image</name>
+        <param>
+          <type>cv::Mat</type>
+          <declname>image</declname>
+        </param>
+        <param>
+          <type>auto</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates a bitmap image in the subdirectory created by the <ref refid="classChipChipArray_1_1Log" kindref="compound">Log</ref> during initialization. Does nothing if <ref refid="definitions_8hpp_1aa7380b6d694cab49f07aed6a7af592d9a9dffbf69ffba8bc38bc4e01abf4b1675" kindref="member">LogMode::Text</ref> was passed in the constructor.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>image</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the image to save </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the filename for the saved image </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pi/chip-chip-array/src/Log.hpp" line="86" column="1" bodyfile="/home/pi/chip-chip-array/src/Log.hpp" bodystart="221" bodyend="231"/>
+        <references refid="classChipChipArray_1_1Log_1aba7b7b0555f49f4dcf15f4b9fd3e6b34" compoundref="Log_8hpp" startline="210" endline="219">Error</references>
+        <referencedby refid="classChipChipArray_1_1Grabber_1a86bc18ecf71c7ff4e324df0467af124a" compoundref="Grabber_8hpp" startline="211" endline="341">ChipChipArray::Grabber::LocateBlock</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classChipChipArray_1_1Log_1ad27a06a4561f2f59159bd8a7fc2fed3b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ChipChipArray::Log::Open</definition>
+        <argsstring>(auto dir, LogMode mode=LogMode::Text)</argsstring>
+        <name>Open</name>
+        <param>
+          <type>auto</type>
+          <declname>dir</declname>
+        </param>
+        <param>
+          <type><ref refid="definitions_8hpp_1aa7380b6d694cab49f07aed6a7af592d9" kindref="member">LogMode</ref></type>
+          <declname>mode</declname>
+          <defval><ref refid="definitions_8hpp_1aa7380b6d694cab49f07aed6a7af592d9a9dffbf69ffba8bc38bc4e01abf4b1675" kindref="member">LogMode::Text</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pi/chip-chip-array/src/Log.hpp" line="91" column="1" bodyfile="/home/pi/chip-chip-array/src/Log.hpp" bodystart="241" bodyend="282"/>
+        <references refid="definitions_8hpp_1aa7380b6d694cab49f07aed6a7af592d9ace7898536dd0e928d1640ee2ad531cc8">Multi</references>
+        <referencedby refid="classChipChipArray_1_1Log_1a4cd28a821789b39e936a6e346329d65b" compoundref="Log_8hpp" startline="181" endline="185">Log</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classChipChipArray_1_1Log_1a66575b6e94c6112e4cefa5736cb996e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ChipChipArray::Log::Status</definition>
+        <argsstring>(auto mesg)</argsstring>
+        <name>Status</name>
+        <param>
+          <type>auto</type>
+          <declname>mesg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Writes &quot;STATUS: &quot; to the log file. Should be used when recording the status or state of the program. It should not be used to record microalgorithmic changes. Use <ref refid="classChipChipArray_1_1Log_1a154a5f38d9c7a767693b242684a3d4d9" kindref="member">Verbose()</ref> for these instead.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mesg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the message to record in the logfile </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pi/chip-chip-array/src/Log.hpp" line="101" column="1" bodyfile="/home/pi/chip-chip-array/src/Log.hpp" bodystart="284" bodyend="293"/>
+        <referencedby refid="classChipChipArray_1_1Grabber_1aacf089ceb4aa5b263c2cc702fb3daf74" compoundref="Grabber_8hpp" startline="177" endline="181">ChipChipArray::Grabber::Close</referencedby>
+        <referencedby refid="classChipChipArray_1_1Grabber_1a86bc18ecf71c7ff4e324df0467af124a" compoundref="Grabber_8hpp" startline="211" endline="341">ChipChipArray::Grabber::LocateBlock</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classChipChipArray_1_1Log_1a8849569720c26e335e7ef4dcb912170b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ChipChipArray::Log::Variable</definition>
+        <argsstring>(auto name, auto value)</argsstring>
+        <name>Variable</name>
+        <param>
+          <type>auto</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>auto</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Writes &quot;VARIABLE: &quot; to the log file. Should be used whenever recording the value of a variable is desired.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the variable name to record </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the variable value to record </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pi/chip-chip-array/src/Log.hpp" line="111" column="1" bodyfile="/home/pi/chip-chip-array/src/Log.hpp" bodystart="295" bodyend="305"/>
+        <referencedby refid="log__test_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="log__test_8cpp" startline="12" endline="16">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classChipChipArray_1_1Log_1a154a5f38d9c7a767693b242684a3d4d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ChipChipArray::Log::Verbose</definition>
+        <argsstring>(auto mesg)</argsstring>
+        <name>Verbose</name>
+        <param>
+          <type>auto</type>
+          <declname>mesg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Writes &quot;VERBOSE: &quot; to the log file. Should only be used for recording small, specific portions of code. To record a change in the more general state of the program, use <ref refid="classChipChipArray_1_1Log_1a66575b6e94c6112e4cefa5736cb996e0" kindref="member">Status()</ref> instead.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mesg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the message to record in the logfile </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pi/chip-chip-array/src/Log.hpp" line="121" column="1" bodyfile="/home/pi/chip-chip-array/src/Log.hpp" bodystart="307" bodyend="316"/>
+        <referencedby refid="classChipChipArray_1_1Grabber_1a7333f40c135fbe92d59651f75032b4e7" compoundref="Grabber_8hpp" startline="154" endline="171">ChipChipArray::Grabber::Grabber</referencedby>
+        <referencedby refid="classChipChipArray_1_1Grabber_1a86bc18ecf71c7ff4e324df0467af124a" compoundref="Grabber_8hpp" startline="211" endline="341">ChipChipArray::Grabber::LocateBlock</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classChipChipArray_1_1Log_1a42b8933f00d22d08f87af5d86248de5e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ChipChipArray::Log::LogError</definition>
+        <argsstring>(auto mesg, std::ofstream::failure f)</argsstring>
+        <name>LogError</name>
+        <param>
+          <type>auto</type>
+          <declname>mesg</declname>
+        </param>
+        <param>
+          <type>std::ofstream::failure</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Prints an error message and exits the application. Used when errors occur within this class ONLY.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mesg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the error message to print </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>f</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the failure object caught </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pi/chip-chip-array/src/Log.hpp" line="178" column="1" bodyfile="/home/pi/chip-chip-array/src/Log.hpp" bodystart="233" bodyend="239"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class logs the text and images passed to it to specificed directory.</para><para>A &quot;container&quot; directory to which the class can write is passed in the constructor. When the <ref refid="classChipChipArray_1_1Log" kindref="compound">Log</ref> is initialized with <ref refid="definitions_8hpp_1aa7380b6d694cab49f07aed6a7af592d9a9dffbf69ffba8bc38bc4e01abf4b1675" kindref="member">LogMode::Text</ref>, a new log file is created with a filename based on the time of initialization in the given directory. When initialized in <ref refid="definitions_8hpp_1aa7380b6d694cab49f07aed6a7af592d9ace7898536dd0e928d1640ee2ad531cc8" kindref="member">LogMode::Multi</ref>, it will create a subdirectory in the given directory with a name based on time. In this new directory, a log file will be created. Images may later be stored in this directory with names based on the order in which they were saved.</para><para>This class DOES NOT WORK without compiling without a &quot;LOG&quot; definition (#define LOG or -DLOG). </para>    </detaileddescription>
+    <location file="/home/pi/chip-chip-array/src/Log.hpp" line="29" column="1" bodyfile="/home/pi/chip-chip-array/src/Log.hpp" bodystart="29" bodyend="179"/>
+    <listofallmembers>
+      <member refid="classChipChipArray_1_1Log_1ac32b435af1577e4ebc67af2bdfea8eff" prot="public" virt="non-virtual"><scope>ChipChipArray::Log</scope><name>Debug</name></member>
+      <member refid="classChipChipArray_1_1Log_1ab43e996ee338d077268e9d7fa2191e05" prot="private" virt="non-virtual"><scope>ChipChipArray::Log</scope><name>dir</name></member>
+      <member refid="classChipChipArray_1_1Log_1aba7b7b0555f49f4dcf15f4b9fd3e6b34" prot="public" virt="non-virtual"><scope>ChipChipArray::Log</scope><name>Error</name></member>
+      <member refid="classChipChipArray_1_1Log_1a2a057989526162b4b9058ee8f2596da5" prot="private" virt="non-virtual"><scope>ChipChipArray::Log</scope><name>file</name></member>
+      <member refid="classChipChipArray_1_1Log_1aeb08bb5eb2fd85f172e4f82963893ce0" prot="private" virt="non-virtual"><scope>ChipChipArray::Log</scope><name>filename</name></member>
+      <member refid="classChipChipArray_1_1Log_1a65bbab057c8b1453f9e4efcfee7522c4" prot="public" virt="non-virtual"><scope>ChipChipArray::Log</scope><name>Image</name></member>
+      <member refid="classChipChipArray_1_1Log_1a1fce11d8c939ade5a42a9fa2770b7402" prot="private" virt="non-virtual"><scope>ChipChipArray::Log</scope><name>imgCount</name></member>
+      <member refid="classChipChipArray_1_1Log_1a8dd78bdbe11d9dedb7673eee488c954f" prot="private" virt="non-virtual"><scope>ChipChipArray::Log</scope><name>LEN</name></member>
+      <member refid="classChipChipArray_1_1Log_1a2bd48afdb832567e94545e6dc2f6f4d5" prot="public" virt="non-virtual"><scope>ChipChipArray::Log</scope><name>Log</name></member>
+      <member refid="classChipChipArray_1_1Log_1a4cd28a821789b39e936a6e346329d65b" prot="public" virt="non-virtual"><scope>ChipChipArray::Log</scope><name>Log</name></member>
+      <member refid="classChipChipArray_1_1Log_1a42b8933f00d22d08f87af5d86248de5e" prot="private" virt="non-virtual"><scope>ChipChipArray::Log</scope><name>LogError</name></member>
+      <member refid="classChipChipArray_1_1Log_1a0238555b6eaa29c25390349635dcb272" prot="private" virt="non-virtual"><scope>ChipChipArray::Log</scope><name>mode</name></member>
+      <member refid="classChipChipArray_1_1Log_1ad27a06a4561f2f59159bd8a7fc2fed3b" prot="public" virt="non-virtual"><scope>ChipChipArray::Log</scope><name>Open</name></member>
+      <member refid="classChipChipArray_1_1Log_1a27b99be3da1579b0fb237cffcf5dbe8a" prot="private" virt="non-virtual"><scope>ChipChipArray::Log</scope><name>PATH_SEP</name></member>
+      <member refid="classChipChipArray_1_1Log_1a66575b6e94c6112e4cefa5736cb996e0" prot="public" virt="non-virtual"><scope>ChipChipArray::Log</scope><name>Status</name></member>
+      <member refid="classChipChipArray_1_1Log_1a8849569720c26e335e7ef4dcb912170b" prot="public" virt="non-virtual"><scope>ChipChipArray::Log</scope><name>Variable</name></member>
+      <member refid="classChipChipArray_1_1Log_1a154a5f38d9c7a767693b242684a3d4d9" prot="public" virt="non-virtual"><scope>ChipChipArray::Log</scope><name>Verbose</name></member>
+      <member refid="classChipChipArray_1_1Log_1a647df4da22b29d9d5a5ea32af3a1ed83" prot="public" virt="non-virtual"><scope>ChipChipArray::Log</scope><name>~Log</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

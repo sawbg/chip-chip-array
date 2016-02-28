@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="PiCamera_8hpp">
+    <title>PiCamera.hpp File Reference</title>
+    <programlisting>#include &lt;opencv2/core/core.hpp&gt;</programlisting>
+    <programlisting>#include &lt;opencv2/highgui/highgui.hpp&gt;</programlisting>
+    <programlisting>#include &lt;raspicam/raspicam_cv.h&gt;</programlisting>
+    <programlisting>#include &lt;unistd.h&gt;</programlisting>
+<para>Include dependency diagram for PiCamera.hpp</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="PiCamera_8hpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for PiCamera.hpp</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="PiCamera_8hpp__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <simplesect>
+            <title> Classes </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="classChipChipArray_1_1PiCamera">ChipChipArray::PiCamera</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title> Namespaces </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="namespaceChipChipArray">ChipChipArray</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file /home/pi/chip-chip-array/src/PiCamera.hpp</para>
+    </simplesect>
+</section>

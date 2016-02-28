@@ -1,0 +1,161 @@
+\hypertarget{Adafruit__PWMServoDriver_8h}{\section{src/\+Adafruit\+\_\+\+P\+W\+M\+Servo\+Driver.h File Reference}
+\label{Adafruit__PWMServoDriver_8h}\index{src/\+Adafruit\+\_\+\+P\+W\+M\+Servo\+Driver.\+h@{src/\+Adafruit\+\_\+\+P\+W\+M\+Servo\+Driver.\+h}}
+}
+{\ttfamily \#include $<$wiring\+Pi.\+h$>$}\\*
+{\ttfamily \#include $<$ctype.\+h$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$cstdlib$>$}\\*
+{\ttfamily \#include $<$unistd.\+h$>$}\\*
+{\ttfamily \#include $<$wiring\+Pi\+I2\+C.\+h$>$}\\*
+{\ttfamily \#include $<$cmath$>$}\\*
+{\ttfamily \#include $<$errno.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+Include dependency graph for Adafruit\+\_\+\+P\+W\+M\+Servo\+Driver.\+h\+:
+This graph shows which files directly or indirectly include this file\+:
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classAdafruit__PWMServoDriver}{Adafruit\+\_\+\+P\+W\+M\+Servo\+Driver}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{Adafruit__PWMServoDriver_8h_ad58a880e68f5aa69092c658a86641a8e}{P\+C\+A9685\+\_\+\+S\+U\+B\+A\+D\+R1}~0x2
+\item 
+\#define \hyperlink{Adafruit__PWMServoDriver_8h_a845ec28ef89ed81642ea5f41691d4b51}{P\+C\+A9685\+\_\+\+S\+U\+B\+A\+D\+R2}~0x3
+\item 
+\#define \hyperlink{Adafruit__PWMServoDriver_8h_a7f60829a2cf850c02403f5c7193b0f00}{P\+C\+A9685\+\_\+\+S\+U\+B\+A\+D\+R3}~0x4
+\item 
+\#define \hyperlink{Adafruit__PWMServoDriver_8h_aec642e3f25e7f83072d68acb14ae4e74}{P\+C\+A9685\+\_\+\+M\+O\+D\+E1}~0x0
+\item 
+\#define \hyperlink{Adafruit__PWMServoDriver_8h_a7175106bbec978d9acc85dc7485235a3}{P\+C\+A9685\+\_\+\+P\+R\+E\+S\+C\+A\+L\+E}~0x\+F\+E
+\item 
+\#define \hyperlink{Adafruit__PWMServoDriver_8h_a62f7dbcbb1fcf1084804f19a5b42248f}{L\+E\+D0\+\_\+\+O\+N\+\_\+\+L}~0x6
+\item 
+\#define \hyperlink{Adafruit__PWMServoDriver_8h_a03deab303c78b50c629847b9e0de106b}{L\+E\+D0\+\_\+\+O\+N\+\_\+\+H}~0x7
+\item 
+\#define \hyperlink{Adafruit__PWMServoDriver_8h_a00e3f4b43121817be365b2f22e8bad84}{L\+E\+D0\+\_\+\+O\+F\+F\+\_\+\+L}~0x8
+\item 
+\#define \hyperlink{Adafruit__PWMServoDriver_8h_a6d8ff6441f8d2a4fb7b4afd36b8fd329}{L\+E\+D0\+\_\+\+O\+F\+F\+\_\+\+H}~0x9
+\item 
+\#define \hyperlink{Adafruit__PWMServoDriver_8h_acc163ea7453bc87b5934e8b2bc838556}{A\+L\+L\+L\+E\+D\+\_\+\+O\+N\+\_\+\+L}~0x\+F\+A
+\item 
+\#define \hyperlink{Adafruit__PWMServoDriver_8h_a470526d36c4db534d04ec1452ddde736}{A\+L\+L\+L\+E\+D\+\_\+\+O\+N\+\_\+\+H}~0x\+F\+B
+\item 
+\#define \hyperlink{Adafruit__PWMServoDriver_8h_a6dc494d4156968e9cd24f7ac07bf2ee3}{A\+L\+L\+L\+E\+D\+\_\+\+O\+F\+F\+\_\+\+L}~0x\+F\+C
+\item 
+\#define \hyperlink{Adafruit__PWMServoDriver_8h_a11632001b28c990e5f6dee015e945b1d}{A\+L\+L\+L\+E\+D\+\_\+\+O\+F\+F\+\_\+\+H}~0x\+F\+D
+\item 
+\#define \hyperlink{Adafruit__PWMServoDriver_8h_ab077fa1127453be2bd9d4c3c8a768fa7}{uint8\+\_\+t}~unsigned char
+\item 
+\#define \hyperlink{Adafruit__PWMServoDriver_8h_a395b3b2bf5cb4674ab41b6bda68c15bb}{uint16\+\_\+t}~unsigned short int
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{Adafruit__PWMServoDriver_8h_a11632001b28c990e5f6dee015e945b1d}{\index{Adafruit\+\_\+\+P\+W\+M\+Servo\+Driver.\+h@{Adafruit\+\_\+\+P\+W\+M\+Servo\+Driver.\+h}!A\+L\+L\+L\+E\+D\+\_\+\+O\+F\+F\+\_\+\+H@{A\+L\+L\+L\+E\+D\+\_\+\+O\+F\+F\+\_\+\+H}}
+\index{A\+L\+L\+L\+E\+D\+\_\+\+O\+F\+F\+\_\+\+H@{A\+L\+L\+L\+E\+D\+\_\+\+O\+F\+F\+\_\+\+H}!Adafruit\+\_\+\+P\+W\+M\+Servo\+Driver.\+h@{Adafruit\+\_\+\+P\+W\+M\+Servo\+Driver.\+h}}
+\subsubsection[{A\+L\+L\+L\+E\+D\+\_\+\+O\+F\+F\+\_\+\+H}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+L\+L\+L\+E\+D\+\_\+\+O\+F\+F\+\_\+\+H~0x\+F\+D}}\label{Adafruit__PWMServoDriver_8h_a11632001b28c990e5f6dee015e945b1d}
+
+
+Definition at line 54 of file Adafruit\+\_\+\+P\+W\+M\+Servo\+Driver.\+h.
+
+\hypertarget{Adafruit__PWMServoDriver_8h_a6dc494d4156968e9cd24f7ac07bf2ee3}{\index{Adafruit\+\_\+\+P\+W\+M\+Servo\+Driver.\+h@{Adafruit\+\_\+\+P\+W\+M\+Servo\+Driver.\+h}!A\+L\+L\+L\+E\+D\+\_\+\+O\+F\+F\+\_\+\+L@{A\+L\+L\+L\+E\+D\+\_\+\+O\+F\+F\+\_\+\+L}}
+\index{A\+L\+L\+L\+E\+D\+\_\+\+O\+F\+F\+\_\+\+L@{A\+L\+L\+L\+E\+D\+\_\+\+O\+F\+F\+\_\+\+L}!Adafruit\+\_\+\+P\+W\+M\+Servo\+Driver.\+h@{Adafruit\+\_\+\+P\+W\+M\+Servo\+Driver.\+h}}
+\subsubsection[{A\+L\+L\+L\+E\+D\+\_\+\+O\+F\+F\+\_\+\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+L\+L\+L\+E\+D\+\_\+\+O\+F\+F\+\_\+\+L~0x\+F\+C}}\label{Adafruit__PWMServoDriver_8h_a6dc494d4156968e9cd24f7ac07bf2ee3}
+
+
+Definition at line 53 of file Adafruit\+\_\+\+P\+W\+M\+Servo\+Driver.\+h.
+
+\hypertarget{Adafruit__PWMServoDriver_8h_a470526d36c4db534d04ec1452ddde736}{\index{Adafruit\+\_\+\+P\+W\+M\+Servo\+Driver.\+h@{Adafruit\+\_\+\+P\+W\+M\+Servo\+Driver.\+h}!A\+L\+L\+L\+E\+D\+\_\+\+O\+N\+\_\+\+H@{A\+L\+L\+L\+E\+D\+\_\+\+O\+N\+\_\+\+H}}
+\index{A\+L\+L\+L\+E\+D\+\_\+\+O\+N\+\_\+\+H@{A\+L\+L\+L\+E\+D\+\_\+\+O\+N\+\_\+\+H}!Adafruit\+\_\+\+P\+W\+M\+Servo\+Driver.\+h@{Adafruit\+\_\+\+P\+W\+M\+Servo\+Driver.\+h}}
+\subsubsection[{A\+L\+L\+L\+E\+D\+\_\+\+O\+N\+\_\+\+H}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+L\+L\+L\+E\+D\+\_\+\+O\+N\+\_\+\+H~0x\+F\+B}}\label{Adafruit__PWMServoDriver_8h_a470526d36c4db534d04ec1452ddde736}
+
+
+Definition at line 52 of file Adafruit\+\_\+\+P\+W\+M\+Servo\+Driver.\+h.
+
+\hypertarget{Adafruit__PWMServoDriver_8h_acc163ea7453bc87b5934e8b2bc838556}{\index{Adafruit\+\_\+\+P\+W\+M\+Servo\+Driver.\+h@{Adafruit\+\_\+\+P\+W\+M\+Servo\+Driver.\+h}!A\+L\+L\+L\+E\+D\+\_\+\+O\+N\+\_\+\+L@{A\+L\+L\+L\+E\+D\+\_\+\+O\+N\+\_\+\+L}}
+\index{A\+L\+L\+L\+E\+D\+\_\+\+O\+N\+\_\+\+L@{A\+L\+L\+L\+E\+D\+\_\+\+O\+N\+\_\+\+L}!Adafruit\+\_\+\+P\+W\+M\+Servo\+Driver.\+h@{Adafruit\+\_\+\+P\+W\+M\+Servo\+Driver.\+h}}
+\subsubsection[{A\+L\+L\+L\+E\+D\+\_\+\+O\+N\+\_\+\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+L\+L\+L\+E\+D\+\_\+\+O\+N\+\_\+\+L~0x\+F\+A}}\label{Adafruit__PWMServoDriver_8h_acc163ea7453bc87b5934e8b2bc838556}
+
+
+Definition at line 51 of file Adafruit\+\_\+\+P\+W\+M\+Servo\+Driver.\+h.
+
+\hypertarget{Adafruit__PWMServoDriver_8h_a6d8ff6441f8d2a4fb7b4afd36b8fd329}{\index{Adafruit\+\_\+\+P\+W\+M\+Servo\+Driver.\+h@{Adafruit\+\_\+\+P\+W\+M\+Servo\+Driver.\+h}!L\+E\+D0\+\_\+\+O\+F\+F\+\_\+\+H@{L\+E\+D0\+\_\+\+O\+F\+F\+\_\+\+H}}
+\index{L\+E\+D0\+\_\+\+O\+F\+F\+\_\+\+H@{L\+E\+D0\+\_\+\+O\+F\+F\+\_\+\+H}!Adafruit\+\_\+\+P\+W\+M\+Servo\+Driver.\+h@{Adafruit\+\_\+\+P\+W\+M\+Servo\+Driver.\+h}}
+\subsubsection[{L\+E\+D0\+\_\+\+O\+F\+F\+\_\+\+H}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+E\+D0\+\_\+\+O\+F\+F\+\_\+\+H~0x9}}\label{Adafruit__PWMServoDriver_8h_a6d8ff6441f8d2a4fb7b4afd36b8fd329}
+
+
+Definition at line 49 of file Adafruit\+\_\+\+P\+W\+M\+Servo\+Driver.\+h.
+
+\hypertarget{Adafruit__PWMServoDriver_8h_a00e3f4b43121817be365b2f22e8bad84}{\index{Adafruit\+\_\+\+P\+W\+M\+Servo\+Driver.\+h@{Adafruit\+\_\+\+P\+W\+M\+Servo\+Driver.\+h}!L\+E\+D0\+\_\+\+O\+F\+F\+\_\+\+L@{L\+E\+D0\+\_\+\+O\+F\+F\+\_\+\+L}}
+\index{L\+E\+D0\+\_\+\+O\+F\+F\+\_\+\+L@{L\+E\+D0\+\_\+\+O\+F\+F\+\_\+\+L}!Adafruit\+\_\+\+P\+W\+M\+Servo\+Driver.\+h@{Adafruit\+\_\+\+P\+W\+M\+Servo\+Driver.\+h}}
+\subsubsection[{L\+E\+D0\+\_\+\+O\+F\+F\+\_\+\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+E\+D0\+\_\+\+O\+F\+F\+\_\+\+L~0x8}}\label{Adafruit__PWMServoDriver_8h_a00e3f4b43121817be365b2f22e8bad84}
+
+
+Definition at line 48 of file Adafruit\+\_\+\+P\+W\+M\+Servo\+Driver.\+h.
+
+\hypertarget{Adafruit__PWMServoDriver_8h_a03deab303c78b50c629847b9e0de106b}{\index{Adafruit\+\_\+\+P\+W\+M\+Servo\+Driver.\+h@{Adafruit\+\_\+\+P\+W\+M\+Servo\+Driver.\+h}!L\+E\+D0\+\_\+\+O\+N\+\_\+\+H@{L\+E\+D0\+\_\+\+O\+N\+\_\+\+H}}
+\index{L\+E\+D0\+\_\+\+O\+N\+\_\+\+H@{L\+E\+D0\+\_\+\+O\+N\+\_\+\+H}!Adafruit\+\_\+\+P\+W\+M\+Servo\+Driver.\+h@{Adafruit\+\_\+\+P\+W\+M\+Servo\+Driver.\+h}}
+\subsubsection[{L\+E\+D0\+\_\+\+O\+N\+\_\+\+H}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+E\+D0\+\_\+\+O\+N\+\_\+\+H~0x7}}\label{Adafruit__PWMServoDriver_8h_a03deab303c78b50c629847b9e0de106b}
+
+
+Definition at line 47 of file Adafruit\+\_\+\+P\+W\+M\+Servo\+Driver.\+h.
+
+\hypertarget{Adafruit__PWMServoDriver_8h_a62f7dbcbb1fcf1084804f19a5b42248f}{\index{Adafruit\+\_\+\+P\+W\+M\+Servo\+Driver.\+h@{Adafruit\+\_\+\+P\+W\+M\+Servo\+Driver.\+h}!L\+E\+D0\+\_\+\+O\+N\+\_\+\+L@{L\+E\+D0\+\_\+\+O\+N\+\_\+\+L}}
+\index{L\+E\+D0\+\_\+\+O\+N\+\_\+\+L@{L\+E\+D0\+\_\+\+O\+N\+\_\+\+L}!Adafruit\+\_\+\+P\+W\+M\+Servo\+Driver.\+h@{Adafruit\+\_\+\+P\+W\+M\+Servo\+Driver.\+h}}
+\subsubsection[{L\+E\+D0\+\_\+\+O\+N\+\_\+\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+E\+D0\+\_\+\+O\+N\+\_\+\+L~0x6}}\label{Adafruit__PWMServoDriver_8h_a62f7dbcbb1fcf1084804f19a5b42248f}
+
+
+Definition at line 46 of file Adafruit\+\_\+\+P\+W\+M\+Servo\+Driver.\+h.
+
+\hypertarget{Adafruit__PWMServoDriver_8h_aec642e3f25e7f83072d68acb14ae4e74}{\index{Adafruit\+\_\+\+P\+W\+M\+Servo\+Driver.\+h@{Adafruit\+\_\+\+P\+W\+M\+Servo\+Driver.\+h}!P\+C\+A9685\+\_\+\+M\+O\+D\+E1@{P\+C\+A9685\+\_\+\+M\+O\+D\+E1}}
+\index{P\+C\+A9685\+\_\+\+M\+O\+D\+E1@{P\+C\+A9685\+\_\+\+M\+O\+D\+E1}!Adafruit\+\_\+\+P\+W\+M\+Servo\+Driver.\+h@{Adafruit\+\_\+\+P\+W\+M\+Servo\+Driver.\+h}}
+\subsubsection[{P\+C\+A9685\+\_\+\+M\+O\+D\+E1}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+C\+A9685\+\_\+\+M\+O\+D\+E1~0x0}}\label{Adafruit__PWMServoDriver_8h_aec642e3f25e7f83072d68acb14ae4e74}
+
+
+Definition at line 43 of file Adafruit\+\_\+\+P\+W\+M\+Servo\+Driver.\+h.
+
+\hypertarget{Adafruit__PWMServoDriver_8h_a7175106bbec978d9acc85dc7485235a3}{\index{Adafruit\+\_\+\+P\+W\+M\+Servo\+Driver.\+h@{Adafruit\+\_\+\+P\+W\+M\+Servo\+Driver.\+h}!P\+C\+A9685\+\_\+\+P\+R\+E\+S\+C\+A\+L\+E@{P\+C\+A9685\+\_\+\+P\+R\+E\+S\+C\+A\+L\+E}}
+\index{P\+C\+A9685\+\_\+\+P\+R\+E\+S\+C\+A\+L\+E@{P\+C\+A9685\+\_\+\+P\+R\+E\+S\+C\+A\+L\+E}!Adafruit\+\_\+\+P\+W\+M\+Servo\+Driver.\+h@{Adafruit\+\_\+\+P\+W\+M\+Servo\+Driver.\+h}}
+\subsubsection[{P\+C\+A9685\+\_\+\+P\+R\+E\+S\+C\+A\+L\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+C\+A9685\+\_\+\+P\+R\+E\+S\+C\+A\+L\+E~0x\+F\+E}}\label{Adafruit__PWMServoDriver_8h_a7175106bbec978d9acc85dc7485235a3}
+
+
+Definition at line 44 of file Adafruit\+\_\+\+P\+W\+M\+Servo\+Driver.\+h.
+
+\hypertarget{Adafruit__PWMServoDriver_8h_ad58a880e68f5aa69092c658a86641a8e}{\index{Adafruit\+\_\+\+P\+W\+M\+Servo\+Driver.\+h@{Adafruit\+\_\+\+P\+W\+M\+Servo\+Driver.\+h}!P\+C\+A9685\+\_\+\+S\+U\+B\+A\+D\+R1@{P\+C\+A9685\+\_\+\+S\+U\+B\+A\+D\+R1}}
+\index{P\+C\+A9685\+\_\+\+S\+U\+B\+A\+D\+R1@{P\+C\+A9685\+\_\+\+S\+U\+B\+A\+D\+R1}!Adafruit\+\_\+\+P\+W\+M\+Servo\+Driver.\+h@{Adafruit\+\_\+\+P\+W\+M\+Servo\+Driver.\+h}}
+\subsubsection[{P\+C\+A9685\+\_\+\+S\+U\+B\+A\+D\+R1}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+C\+A9685\+\_\+\+S\+U\+B\+A\+D\+R1~0x2}}\label{Adafruit__PWMServoDriver_8h_ad58a880e68f5aa69092c658a86641a8e}
+
+
+Definition at line 39 of file Adafruit\+\_\+\+P\+W\+M\+Servo\+Driver.\+h.
+
+\hypertarget{Adafruit__PWMServoDriver_8h_a845ec28ef89ed81642ea5f41691d4b51}{\index{Adafruit\+\_\+\+P\+W\+M\+Servo\+Driver.\+h@{Adafruit\+\_\+\+P\+W\+M\+Servo\+Driver.\+h}!P\+C\+A9685\+\_\+\+S\+U\+B\+A\+D\+R2@{P\+C\+A9685\+\_\+\+S\+U\+B\+A\+D\+R2}}
+\index{P\+C\+A9685\+\_\+\+S\+U\+B\+A\+D\+R2@{P\+C\+A9685\+\_\+\+S\+U\+B\+A\+D\+R2}!Adafruit\+\_\+\+P\+W\+M\+Servo\+Driver.\+h@{Adafruit\+\_\+\+P\+W\+M\+Servo\+Driver.\+h}}
+\subsubsection[{P\+C\+A9685\+\_\+\+S\+U\+B\+A\+D\+R2}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+C\+A9685\+\_\+\+S\+U\+B\+A\+D\+R2~0x3}}\label{Adafruit__PWMServoDriver_8h_a845ec28ef89ed81642ea5f41691d4b51}
+
+
+Definition at line 40 of file Adafruit\+\_\+\+P\+W\+M\+Servo\+Driver.\+h.
+
+\hypertarget{Adafruit__PWMServoDriver_8h_a7f60829a2cf850c02403f5c7193b0f00}{\index{Adafruit\+\_\+\+P\+W\+M\+Servo\+Driver.\+h@{Adafruit\+\_\+\+P\+W\+M\+Servo\+Driver.\+h}!P\+C\+A9685\+\_\+\+S\+U\+B\+A\+D\+R3@{P\+C\+A9685\+\_\+\+S\+U\+B\+A\+D\+R3}}
+\index{P\+C\+A9685\+\_\+\+S\+U\+B\+A\+D\+R3@{P\+C\+A9685\+\_\+\+S\+U\+B\+A\+D\+R3}!Adafruit\+\_\+\+P\+W\+M\+Servo\+Driver.\+h@{Adafruit\+\_\+\+P\+W\+M\+Servo\+Driver.\+h}}
+\subsubsection[{P\+C\+A9685\+\_\+\+S\+U\+B\+A\+D\+R3}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+C\+A9685\+\_\+\+S\+U\+B\+A\+D\+R3~0x4}}\label{Adafruit__PWMServoDriver_8h_a7f60829a2cf850c02403f5c7193b0f00}
+
+
+Definition at line 41 of file Adafruit\+\_\+\+P\+W\+M\+Servo\+Driver.\+h.
+
+\hypertarget{Adafruit__PWMServoDriver_8h_a395b3b2bf5cb4674ab41b6bda68c15bb}{\index{Adafruit\+\_\+\+P\+W\+M\+Servo\+Driver.\+h@{Adafruit\+\_\+\+P\+W\+M\+Servo\+Driver.\+h}!uint16\+\_\+t@{uint16\+\_\+t}}
+\index{uint16\+\_\+t@{uint16\+\_\+t}!Adafruit\+\_\+\+P\+W\+M\+Servo\+Driver.\+h@{Adafruit\+\_\+\+P\+W\+M\+Servo\+Driver.\+h}}
+\subsubsection[{uint16\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}\#define uint16\+\_\+t~unsigned short int}}\label{Adafruit__PWMServoDriver_8h_a395b3b2bf5cb4674ab41b6bda68c15bb}
+
+
+Definition at line 61 of file Adafruit\+\_\+\+P\+W\+M\+Servo\+Driver.\+h.
+
+\hypertarget{Adafruit__PWMServoDriver_8h_ab077fa1127453be2bd9d4c3c8a768fa7}{\index{Adafruit\+\_\+\+P\+W\+M\+Servo\+Driver.\+h@{Adafruit\+\_\+\+P\+W\+M\+Servo\+Driver.\+h}!uint8\+\_\+t@{uint8\+\_\+t}}
+\index{uint8\+\_\+t@{uint8\+\_\+t}!Adafruit\+\_\+\+P\+W\+M\+Servo\+Driver.\+h@{Adafruit\+\_\+\+P\+W\+M\+Servo\+Driver.\+h}}
+\subsubsection[{uint8\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}\#define uint8\+\_\+t~unsigned char}}\label{Adafruit__PWMServoDriver_8h_ab077fa1127453be2bd9d4c3c8a768fa7}
+
+
+Definition at line 57 of file Adafruit\+\_\+\+P\+W\+M\+Servo\+Driver.\+h.
+

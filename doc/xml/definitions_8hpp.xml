@@ -1,0 +1,605 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="definitions_8hpp" kind="file">
+    <compoundname>definitions.hpp</compoundname>
+    <includedby refid="Block_8hpp" local="yes">src/Block.hpp</includedby>
+    <includedby refid="cv__shape_8cpp" local="yes">src/cv_shape.cpp</includedby>
+    <includedby refid="cv__test_8cpp" local="yes">src/cv_test.cpp</includedby>
+    <includedby refid="Grabber_8hpp" local="yes">src/Grabber.hpp</includedby>
+    <includedby refid="Log_8hpp" local="yes">src/Log.hpp</includedby>
+    <includedby refid="log__test_8cpp" local="yes">src/log_test.cpp</includedby>
+    <includedby refid="qr__test_8cpp" local="yes">src/qr_test.cpp</includedby>
+    <includedby refid="ScanQR_8hpp" local="yes">src/ScanQR.hpp</includedby>
+    <invincdepgraph>
+      <node id="280">
+        <label>src/definitions.hpp</label>
+        <link refid="definitions.hpp"/>
+        <childnode refid="281" relation="include">
+        </childnode>
+        <childnode refid="283" relation="include">
+        </childnode>
+        <childnode refid="282" relation="include">
+        </childnode>
+        <childnode refid="284" relation="include">
+        </childnode>
+        <childnode refid="285" relation="include">
+        </childnode>
+        <childnode refid="286" relation="include">
+        </childnode>
+        <childnode refid="287" relation="include">
+        </childnode>
+        <childnode refid="288" relation="include">
+        </childnode>
+      </node>
+      <node id="282">
+        <label>src/cv_test.cpp</label>
+        <link refid="cv__test_8cpp"/>
+      </node>
+      <node id="286">
+        <label>src/log_test.cpp</label>
+        <link refid="log__test_8cpp"/>
+      </node>
+      <node id="285">
+        <label>src/Log.hpp</label>
+        <link refid="Log_8hpp"/>
+        <childnode refid="284" relation="include">
+        </childnode>
+        <childnode refid="286" relation="include">
+        </childnode>
+      </node>
+      <node id="287">
+        <label>src/qr_test.cpp</label>
+        <link refid="qr__test_8cpp"/>
+      </node>
+      <node id="284">
+        <label>src/Grabber.hpp</label>
+        <link refid="Grabber_8hpp"/>
+        <childnode refid="282" relation="include">
+        </childnode>
+      </node>
+      <node id="281">
+        <label>src/Block.hpp</label>
+        <link refid="Block_8hpp"/>
+        <childnode refid="282" relation="include">
+        </childnode>
+      </node>
+      <node id="283">
+        <label>src/cv_shape.cpp</label>
+        <link refid="cv__shape_8cpp"/>
+      </node>
+      <node id="288">
+        <label>src/ScanQR.hpp</label>
+        <link refid="ScanQR_8hpp"/>
+        <childnode refid="287" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="namespacestd">std</innernamespace>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="definitions_8hpp_1a378181c29a641d58f55d647b5a9599f2" prot="public" static="no">
+        <name>ENUM</name>
+        <initializer>signed char</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pi/chip-chip-array/src/definitions.hpp" line="4" column="9" bodyfile="/home/pi/chip-chip-array/src/definitions.hpp" bodystart="4" bodyend="-1"/>
+        <referencedby refid="namespacestd_1a6a0c3c323562edbd2f57da3d2bb74326" compoundref="definitions_8hpp" startline="88" endline="110">std::to_string</referencedby>
+      </memberdef>
+      <memberdef kind="define" id="definitions_8hpp_1a8fe83ac76edc595f6b98cd4a4127aed5" prot="public" static="no">
+        <name>ERROR</name>
+        <initializer>-1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pi/chip-chip-array/src/definitions.hpp" line="5" column="9" bodyfile="/home/pi/chip-chip-array/src/definitions.hpp" bodystart="5" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="definitions_8hpp_1ac8e1b1f4bbac5914204c97f66f97d01f" prot="public" static="no">
+        <name>BlockPosition</name>
+        <enumvalue id="definitions_8hpp_1ac8e1b1f4bbac5914204c97f66f97d01fa5835bab1ade0060909e31a06af2e2cde" prot="public">
+          <name>Front</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="definitions_8hpp_1ac8e1b1f4bbac5914204c97f66f97d01fa0557fa923dcee4d0f86b1409f5c2167f" prot="public">
+          <name>Back</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The position of the block relative to the arm. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pi/chip-chip-array/src/definitions.hpp" line="24" column="1" bodyfile="/home/pi/chip-chip-array/src/definitions.hpp" bodystart="24" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="enum" id="definitions_8hpp_1abc05a0f46084a3477cf5d5c939ff1436" prot="public" static="no">
+        <name>Color</name>
+        <enumvalue id="definitions_8hpp_1abc05a0f46084a3477cf5d5c939ff1436aee38e4d5dd68c4e440825018d549cb47" prot="public">
+          <name>Red</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="definitions_8hpp_1abc05a0f46084a3477cf5d5c939ff1436a51e6cd92b6c45f9affdc158ecca2b8b8" prot="public">
+          <name>Yellow</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="definitions_8hpp_1abc05a0f46084a3477cf5d5c939ff1436ad382816a3cbeed082c9e216e7392eed1" prot="public">
+          <name>Green</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="definitions_8hpp_1abc05a0f46084a3477cf5d5c939ff1436a9594eec95be70e7b1710f730fdda33d9" prot="public">
+          <name>Blue</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The color of a block or train car. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pi/chip-chip-array/src/definitions.hpp" line="30" column="1" bodyfile="/home/pi/chip-chip-array/src/definitions.hpp" bodystart="30" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="enum" id="definitions_8hpp_1aa7380b6d694cab49f07aed6a7af592d9" prot="public" static="no">
+        <name>LogMode</name>
+        <enumvalue id="definitions_8hpp_1aa7380b6d694cab49f07aed6a7af592d9a9dffbf69ffba8bc38bc4e01abf4b1675" prot="public">
+          <name>Text</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="definitions_8hpp_1aa7380b6d694cab49f07aed6a7af592d9ace7898536dd0e928d1640ee2ad531cc8" prot="public">
+          <name>Multi</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The mode in which the Log should prepare (i.e., text only or text and images). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pi/chip-chip-array/src/definitions.hpp" line="41" column="1" bodyfile="/home/pi/chip-chip-array/src/definitions.hpp" bodystart="41" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="enum" id="definitions_8hpp_1ab84ebabb02540c4a7ec341a213abf1dc" prot="public" static="no">
+        <name>Result</name>
+        <enumvalue id="definitions_8hpp_1ab84ebabb02540c4a7ec341a213abf1dca32075034997ab91e886dbcad47ed902d" prot="public">
+          <name>No_Blocks</name>
+          <initializer>= -1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="definitions_8hpp_1ab84ebabb02540c4a7ec341a213abf1dcabdf267b7c95f2ffd040b32d8b005e9a0" prot="public">
+          <name>No_Halves</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="definitions_8hpp_1ab84ebabb02540c4a7ec341a213abf1dca5b00716e5e6f2e2dc1b10ffed2e0ef6d" prot="public">
+          <name>Two_Halves</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="definitions_8hpp_1ab84ebabb02540c4a7ec341a213abf1dca01f87e08f72dd8784d0665346a006fa3" prot="public">
+          <name>Four_Halves</name>
+          <initializer>= 4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The number of half blocks picked up in a stack. The integer value of the </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pi/chip-chip-array/src/definitions.hpp" line="50" column="1" bodyfile="/home/pi/chip-chip-array/src/definitions.hpp" bodystart="50" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="enum" id="definitions_8hpp_1a03325a8a9d4f105db5e37dd587128142" prot="public" static="no">
+        <name>Side</name>
+        <enumvalue id="definitions_8hpp_1a03325a8a9d4f105db5e37dd587128142a945d5e233cf7d6240f6b783b36a374ff" prot="public">
+          <name>Left</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="definitions_8hpp_1a03325a8a9d4f105db5e37dd587128142a92b09c7c48c520c3c55e497875da437c" prot="public">
+          <name>Right</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Represents which block to pick up when multiple blocks are visible. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pi/chip-chip-array/src/definitions.hpp" line="58" column="1" bodyfile="/home/pi/chip-chip-array/src/definitions.hpp" bodystart="58" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="enum" id="definitions_8hpp_1a9809446fd16a744b6df9808293f14153" prot="public" static="no">
+        <name>Size</name>
+        <enumvalue id="definitions_8hpp_1a9809446fd16a744b6df9808293f14153a30bb747c98bccdd11b3f89e644c4d0ad" prot="public">
+          <name>Short</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="definitions_8hpp_1a9809446fd16a744b6df9808293f14153a8394f0347c184cf156ac5924dccb773b" prot="public">
+          <name>Long</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The block size, either 2.5&quot; or 5&quot;. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pi/chip-chip-array/src/definitions.hpp" line="64" column="1" bodyfile="/home/pi/chip-chip-array/src/definitions.hpp" bodystart="64" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="enum" id="definitions_8hpp_1adbd1e7a33d3e1751c7b2aa2562d0ecb9" prot="public" static="no">
+        <name>Zone</name>
+        <enumvalue id="definitions_8hpp_1adbd1e7a33d3e1751c7b2aa2562d0ecb9a7fc56270e7a70fa81a5935b72eacbe29" prot="public">
+          <name>A</name>
+          <initializer>= &apos;A&apos;</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="definitions_8hpp_1adbd1e7a33d3e1751c7b2aa2562d0ecb9a9d5ed678fe57bcca610140957afab571" prot="public">
+          <name>B</name>
+          <initializer>= &apos;B&apos;</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="definitions_8hpp_1adbd1e7a33d3e1751c7b2aa2562d0ecb9a0d61f8370cad1d412f80b84d143e1257" prot="public">
+          <name>C</name>
+          <initializer>= &apos;C&apos;</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Zone A, B, or C </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pi/chip-chip-array/src/definitions.hpp" line="70" column="1" bodyfile="/home/pi/chip-chip-array/src/definitions.hpp" bodystart="70" bodyend="74"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="definitions_8hpp_1a0c8186d9b9b7880309c27230bbb5e69d" prot="public" static="no">
+        <type>unsigned char</type>
+        <definition>typedef unsigned char byte</definition>
+        <argsstring></argsstring>
+        <name>byte</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pi/chip-chip-array/src/definitions.hpp" line="7" column="1" bodyfile="/home/pi/chip-chip-array/src/definitions.hpp" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="definitions_8hpp_1adde6aaee8457bee49c2a92621fe22b79" prot="public" static="no">
+        <type>unsigned char</type>
+        <definition>typedef unsigned char uint8</definition>
+        <argsstring></argsstring>
+        <name>uint8</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pi/chip-chip-array/src/definitions.hpp" line="8" column="1" bodyfile="/home/pi/chip-chip-array/src/definitions.hpp" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="definitions_8hpp_1a1a6408291ee3cfd0760a61ac64084154" prot="public" static="no">
+        <type>signed char</type>
+        <definition>typedef signed char sint8</definition>
+        <argsstring></argsstring>
+        <name>sint8</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pi/chip-chip-array/src/definitions.hpp" line="9" column="1" bodyfile="/home/pi/chip-chip-array/src/definitions.hpp" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="definitions_8hpp_1a05f6b0ae8f6a6e135b0e290c25fe0e4e" prot="public" static="no">
+        <type>unsigned short</type>
+        <definition>typedef unsigned short uint16</definition>
+        <argsstring></argsstring>
+        <name>uint16</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pi/chip-chip-array/src/definitions.hpp" line="11" column="1" bodyfile="/home/pi/chip-chip-array/src/definitions.hpp" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="definitions_8hpp_1a74df79fde3c518e55b29ce6360a9c76e" prot="public" static="no">
+        <type>signed short</type>
+        <definition>typedef signed short sint16</definition>
+        <argsstring></argsstring>
+        <name>sint16</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pi/chip-chip-array/src/definitions.hpp" line="12" column="1" bodyfile="/home/pi/chip-chip-array/src/definitions.hpp" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="definitions_8hpp_1a1134b580f8da4de94ca6b1de4d37975e" prot="public" static="no">
+        <type>unsigned int</type>
+        <definition>typedef unsigned int uint32</definition>
+        <argsstring></argsstring>
+        <name>uint32</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pi/chip-chip-array/src/definitions.hpp" line="14" column="1" bodyfile="/home/pi/chip-chip-array/src/definitions.hpp" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="definitions_8hpp_1a0573de65958b4fda3a0460ed417dafb8" prot="public" static="no">
+        <type>signed int</type>
+        <definition>typedef signed int sint32</definition>
+        <argsstring></argsstring>
+        <name>sint32</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pi/chip-chip-array/src/definitions.hpp" line="15" column="1" bodyfile="/home/pi/chip-chip-array/src/definitions.hpp" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="definitions_8hpp_1a29940ae63ec06c9998bba873e25407ad" prot="public" static="no">
+        <type>unsigned long long</type>
+        <definition>typedef unsigned long long uint64</definition>
+        <argsstring></argsstring>
+        <name>uint64</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pi/chip-chip-array/src/definitions.hpp" line="17" column="1" bodyfile="/home/pi/chip-chip-array/src/definitions.hpp" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="definitions_8hpp_1ad91d7e42d1c1abce1d9eeacd54cc0497" prot="public" static="no">
+        <type>signed long long</type>
+        <definition>typedef signed long long sint64</definition>
+        <argsstring></argsstring>
+        <name>sint64</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pi/chip-chip-array/src/definitions.hpp" line="18" column="1" bodyfile="/home/pi/chip-chip-array/src/definitions.hpp" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="definitions_8hpp_1aacdc525d6f7bddb3ae95d5c311bd06a1" prot="public" static="no">
+        <type>float</type>
+        <definition>typedef float float32</definition>
+        <argsstring></argsstring>
+        <name>float32</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pi/chip-chip-array/src/definitions.hpp" line="20" column="1" bodyfile="/home/pi/chip-chip-array/src/definitions.hpp" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="definitions_8hpp_1a232fad1b0d6dcc7c16aabde98b2e2a80" prot="public" static="no">
+        <type>double</type>
+        <definition>typedef double float64</definition>
+        <argsstring></argsstring>
+        <name>float64</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pi/chip-chip-array/src/definitions.hpp" line="21" column="1" bodyfile="/home/pi/chip-chip-array/src/definitions.hpp" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>definitions_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>definitions_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4" refid="definitions_8hpp_1a378181c29a641d58f55d647b5a9599f2" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ENUM<sp/>signed<sp/>char</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="definitions_8hpp_1a8fe83ac76edc595f6b98cd4a4127aed5" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ERROR<sp/>-1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7" refid="definitions_8hpp_1a0c8186d9b9b7880309c27230bbb5e69d" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="definitions_8hpp_1a0c8186d9b9b7880309c27230bbb5e69d" kindref="member">byte</ref>;</highlight></codeline>
+<codeline lineno="8" refid="definitions_8hpp_1adde6aaee8457bee49c2a92621fe22b79" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="definitions_8hpp_1adde6aaee8457bee49c2a92621fe22b79" kindref="member">uint8</ref>;</highlight></codeline>
+<codeline lineno="9" refid="definitions_8hpp_1a1a6408291ee3cfd0760a61ac64084154" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">signed</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="definitions_8hpp_1a1a6408291ee3cfd0760a61ac64084154" kindref="member">sint8</ref>;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="definitions_8hpp_1a05f6b0ae8f6a6e135b0e290c25fe0e4e" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><ref refid="definitions_8hpp_1a05f6b0ae8f6a6e135b0e290c25fe0e4e" kindref="member">uint16</ref>;</highlight></codeline>
+<codeline lineno="12" refid="definitions_8hpp_1a74df79fde3c518e55b29ce6360a9c76e" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">signed</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/><ref refid="definitions_8hpp_1a74df79fde3c518e55b29ce6360a9c76e" kindref="member">sint16</ref>;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="definitions_8hpp_1a1134b580f8da4de94ca6b1de4d37975e" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="definitions_8hpp_1a1134b580f8da4de94ca6b1de4d37975e" kindref="member">uint32</ref>;</highlight></codeline>
+<codeline lineno="15" refid="definitions_8hpp_1a0573de65958b4fda3a0460ed417dafb8" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">signed</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="definitions_8hpp_1a0573de65958b4fda3a0460ed417dafb8" kindref="member">sint32</ref>;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="definitions_8hpp_1a29940ae63ec06c9998bba873e25407ad" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="definitions_8hpp_1a29940ae63ec06c9998bba873e25407ad" kindref="member">uint64</ref>;</highlight></codeline>
+<codeline lineno="18" refid="definitions_8hpp_1ad91d7e42d1c1abce1d9eeacd54cc0497" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">signed</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="definitions_8hpp_1ad91d7e42d1c1abce1d9eeacd54cc0497" kindref="member">sint64</ref>;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="definitions_8hpp_1aacdc525d6f7bddb3ae95d5c311bd06a1" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="definitions_8hpp_1aacdc525d6f7bddb3ae95d5c311bd06a1" kindref="member">float32</ref>;</highlight></codeline>
+<codeline lineno="21" refid="definitions_8hpp_1a232fad1b0d6dcc7c16aabde98b2e2a80" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="definitions_8hpp_1a232fad1b0d6dcc7c16aabde98b2e2a80" kindref="member">float64</ref>;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="definitions_8hpp_1ac8e1b1f4bbac5914204c97f66f97d01f" refkind="member"><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/><ref refid="definitions_8hpp_1ac8e1b1f4bbac5914204c97f66f97d01f" kindref="member">BlockPosition</ref><sp/>:<sp/><ref refid="definitions_8hpp_1a378181c29a641d58f55d647b5a9599f2" kindref="member">ENUM</ref><sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8hpp_1ac8e1b1f4bbac5914204c97f66f97d01fa5835bab1ade0060909e31a06af2e2cde" kindref="member">Front</ref>,</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8hpp_1ac8e1b1f4bbac5914204c97f66f97d01fa0557fa923dcee4d0f86b1409f5c2167f" kindref="member">Back</ref></highlight></codeline>
+<codeline lineno="27"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="definitions_8hpp_1abc05a0f46084a3477cf5d5c939ff1436" refkind="member"><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/><ref refid="definitions_8hpp_1abc05a0f46084a3477cf5d5c939ff1436" kindref="member">Color</ref><sp/>:<sp/><ref refid="definitions_8hpp_1a378181c29a641d58f55d647b5a9599f2" kindref="member">ENUM</ref><sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8hpp_1abc05a0f46084a3477cf5d5c939ff1436aee38e4d5dd68c4e440825018d549cb47" kindref="member">Red</ref>,</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8hpp_1abc05a0f46084a3477cf5d5c939ff1436a51e6cd92b6c45f9affdc158ecca2b8b8" kindref="member">Yellow</ref>,</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8hpp_1abc05a0f46084a3477cf5d5c939ff1436ad382816a3cbeed082c9e216e7392eed1" kindref="member">Green</ref>,</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8hpp_1abc05a0f46084a3477cf5d5c939ff1436a9594eec95be70e7b1710f730fdda33d9" kindref="member">Blue</ref></highlight></codeline>
+<codeline lineno="35"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="definitions_8hpp_1aa7380b6d694cab49f07aed6a7af592d9" refkind="member"><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/><ref refid="definitions_8hpp_1aa7380b6d694cab49f07aed6a7af592d9" kindref="member">LogMode</ref><sp/>:<sp/><ref refid="definitions_8hpp_1a378181c29a641d58f55d647b5a9599f2" kindref="member">ENUM</ref><sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8hpp_1aa7380b6d694cab49f07aed6a7af592d9a9dffbf69ffba8bc38bc4e01abf4b1675" kindref="member">Text</ref>,</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8hpp_1aa7380b6d694cab49f07aed6a7af592d9ace7898536dd0e928d1640ee2ad531cc8" kindref="member">Multi</ref></highlight></codeline>
+<codeline lineno="44"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="definitions_8hpp_1ab84ebabb02540c4a7ec341a213abf1dc" refkind="member"><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/><ref refid="definitions_8hpp_1ab84ebabb02540c4a7ec341a213abf1dc" kindref="member">Result</ref><sp/>:<sp/><ref refid="definitions_8hpp_1a378181c29a641d58f55d647b5a9599f2" kindref="member">ENUM</ref><sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8hpp_1ab84ebabb02540c4a7ec341a213abf1dca32075034997ab91e886dbcad47ed902d" kindref="member">No_Blocks</ref><sp/>=<sp/>-1,</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8hpp_1ab84ebabb02540c4a7ec341a213abf1dcabdf267b7c95f2ffd040b32d8b005e9a0" kindref="member">No_Halves</ref><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8hpp_1ab84ebabb02540c4a7ec341a213abf1dca5b00716e5e6f2e2dc1b10ffed2e0ef6d" kindref="member">Two_Halves</ref><sp/>=<sp/>2,</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8hpp_1ab84ebabb02540c4a7ec341a213abf1dca01f87e08f72dd8784d0665346a006fa3" kindref="member">Four_Halves</ref><sp/>=<sp/>4</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="definitions_8hpp_1a03325a8a9d4f105db5e37dd587128142" refkind="member"><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/><ref refid="definitions_8hpp_1a03325a8a9d4f105db5e37dd587128142" kindref="member">Side</ref><sp/>:<sp/><ref refid="definitions_8hpp_1a378181c29a641d58f55d647b5a9599f2" kindref="member">ENUM</ref><sp/>{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8hpp_1a03325a8a9d4f105db5e37dd587128142a945d5e233cf7d6240f6b783b36a374ff" kindref="member">Left</ref>,</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8hpp_1a03325a8a9d4f105db5e37dd587128142a92b09c7c48c520c3c55e497875da437c" kindref="member">Right</ref></highlight></codeline>
+<codeline lineno="61"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="definitions_8hpp_1a9809446fd16a744b6df9808293f14153" refkind="member"><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/><ref refid="definitions_8hpp_1a9809446fd16a744b6df9808293f14153" kindref="member">Size</ref><sp/>:<sp/><ref refid="definitions_8hpp_1a378181c29a641d58f55d647b5a9599f2" kindref="member">ENUM</ref><sp/>{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8hpp_1a9809446fd16a744b6df9808293f14153a30bb747c98bccdd11b3f89e644c4d0ad" kindref="member">Short</ref>,</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8hpp_1a9809446fd16a744b6df9808293f14153a8394f0347c184cf156ac5924dccb773b" kindref="member">Long</ref></highlight></codeline>
+<codeline lineno="67"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70" refid="definitions_8hpp_1adbd1e7a33d3e1751c7b2aa2562d0ecb9" refkind="member"><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/><ref refid="definitions_8hpp_1adbd1e7a33d3e1751c7b2aa2562d0ecb9" kindref="member">Zone</ref><sp/>:<sp/><ref refid="definitions_8hpp_1a378181c29a641d58f55d647b5a9599f2" kindref="member">ENUM</ref><sp/>{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8hpp_1adbd1e7a33d3e1751c7b2aa2562d0ecb9a7fc56270e7a70fa81a5935b72eacbe29" kindref="member">A</ref><sp/>=<sp/></highlight><highlight class="charliteral">&apos;A&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8hpp_1adbd1e7a33d3e1751c7b2aa2562d0ecb9a9d5ed678fe57bcca610140957afab571" kindref="member">B</ref><sp/>=<sp/></highlight><highlight class="charliteral">&apos;B&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8hpp_1adbd1e7a33d3e1751c7b2aa2562d0ecb9a0d61f8370cad1d412f80b84d143e1257" kindref="member">C</ref><sp/>=<sp/></highlight><highlight class="charliteral">&apos;C&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76" refid="namespacestd" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacestd" kindref="compound">std</ref><sp/>{</highlight></codeline>
+<codeline lineno="80" refid="namespacestd_1aa5ddf582a1c96ffe258c997be9a294a3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="namespacestd_1aa5ddf582a1c96ffe258c997be9a294a3" kindref="member">to_string</ref>(<ref refid="definitions_8hpp_1ac8e1b1f4bbac5914204c97f66f97d01f" kindref="member">BlockPosition</ref><sp/>pos)<sp/>{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(pos<sp/>==<sp/><ref refid="definitions_8hpp_1ac8e1b1f4bbac5914204c97f66f97d01fa5835bab1ade0060909e31a06af2e2cde" kindref="member">BlockPosition::Front</ref>)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>string(</highlight><highlight class="stringliteral">&quot;Front&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>string(</highlight><highlight class="stringliteral">&quot;Back&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88" refid="namespacestd_1a6a0c3c323562edbd2f57da3d2bb74326" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="namespacestd_1aa5ddf582a1c96ffe258c997be9a294a3" kindref="member">to_string</ref>(<ref refid="definitions_8hpp_1abc05a0f46084a3477cf5d5c939ff1436" kindref="member">Color</ref><sp/>color)<sp/>{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal">((<ref refid="definitions_8hpp_1a378181c29a641d58f55d647b5a9599f2" kindref="member">ENUM</ref>)color)<sp/>{</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>0:</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ret<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Red&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>1:</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ret<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Yellow&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>2:</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ret<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Green&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>3:</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ret<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Blue&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115" refid="namespacestd_1adb24d6df94a83c325573f7710df84953" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="namespacestd_1aa5ddf582a1c96ffe258c997be9a294a3" kindref="member">to_string</ref>(<ref refid="definitions_8hpp_1aa7380b6d694cab49f07aed6a7af592d9" kindref="member">LogMode</ref><sp/>mode)<sp/>{</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(mode<sp/>==<sp/><ref refid="definitions_8hpp_1aa7380b6d694cab49f07aed6a7af592d9ace7898536dd0e928d1640ee2ad531cc8" kindref="member">LogMode::Multi</ref>)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>string(</highlight><highlight class="stringliteral">&quot;Text&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>string(</highlight><highlight class="stringliteral">&quot;Multi&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123" refid="namespacestd_1a7fb649b1361ca7d95cc74045c0dadcdd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="namespacestd_1aa5ddf582a1c96ffe258c997be9a294a3" kindref="member">to_string</ref>(<ref refid="definitions_8hpp_1ab84ebabb02540c4a7ec341a213abf1dc" kindref="member">Result</ref><sp/>res)<sp/>{</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal">((<ref refid="definitions_8hpp_1a378181c29a641d58f55d647b5a9599f2" kindref="member">ENUM</ref>)res)<sp/>{</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>-1:</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ret<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;No<sp/>Blocks&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>0:</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ret<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Two<sp/>whole,<sp/>no<sp/>halves&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>2:</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ret<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Two<sp/>whole,<sp/>two<sp/>halves&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>4:</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ret<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;No<sp/>whole,<sp/>four<sp/>halves&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150" refid="namespacestd_1aae21fd95009e4cc9fa25e1ad3830980b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="namespacestd_1aa5ddf582a1c96ffe258c997be9a294a3" kindref="member">to_string</ref>(<ref refid="definitions_8hpp_1a03325a8a9d4f105db5e37dd587128142" kindref="member">Side</ref><sp/>side)<sp/>{</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(side<sp/>==<sp/><ref refid="definitions_8hpp_1a03325a8a9d4f105db5e37dd587128142a945d5e233cf7d6240f6b783b36a374ff" kindref="member">Side::Left</ref>)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>string(</highlight><highlight class="stringliteral">&quot;Left&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>string(</highlight><highlight class="stringliteral">&quot;Right&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158" refid="namespacestd_1a6bfcd2c3377165652c64085d7acb5c64" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="namespacestd_1aa5ddf582a1c96ffe258c997be9a294a3" kindref="member">to_string</ref>(<ref refid="definitions_8hpp_1a9809446fd16a744b6df9808293f14153" kindref="member">Size</ref><sp/>size)<sp/>{</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(size<sp/>==<sp/><ref refid="definitions_8hpp_1a9809446fd16a744b6df9808293f14153a8394f0347c184cf156ac5924dccb773b" kindref="member">Size::Long</ref>)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>string(</highlight><highlight class="stringliteral">&quot;Long&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>string(</highlight><highlight class="stringliteral">&quot;Short&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166" refid="namespacestd_1ac50951e195256b4c2311f90189f64ba8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="namespacestd_1aa5ddf582a1c96ffe258c997be9a294a3" kindref="member">to_string</ref>(<ref refid="definitions_8hpp_1adbd1e7a33d3e1751c7b2aa2562d0ecb9" kindref="member">Zone</ref><sp/>zone)<sp/>{</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>string(1,<sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">)zone);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="169"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/pi/chip-chip-array/src/definitions.hpp"/>
+  </compounddef>
+</doxygen>

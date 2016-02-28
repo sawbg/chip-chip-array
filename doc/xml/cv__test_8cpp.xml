@@ -1,0 +1,158 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="cv__test_8cpp" kind="file">
+    <compoundname>cv_test.cpp</compoundname>
+    <includes local="no">iostream</includes>
+    <includes refid="definitions_8hpp" local="yes">definitions.hpp</includes>
+    <includes refid="Block_8hpp" local="yes">Block.hpp</includes>
+    <includes refid="Grabber_8hpp" local="yes">Grabber.hpp</includes>
+    <incdepgraph>
+      <node id="274">
+        <label>sys/stat.h</label>
+      </node>
+      <node id="263">
+        <label>definitions.hpp</label>
+        <link refid="definitions_8hpp"/>
+      </node>
+      <node id="261">
+        <label>src/cv_test.cpp</label>
+        <link refid="cv_test.cpp"/>
+        <childnode refid="262" relation="include">
+        </childnode>
+        <childnode refid="263" relation="include">
+        </childnode>
+        <childnode refid="264" relation="include">
+        </childnode>
+        <childnode refid="266" relation="include">
+        </childnode>
+      </node>
+      <node id="276">
+        <label>raspicam/raspicam_cv.h</label>
+      </node>
+      <node id="265">
+        <label>opencv2/core/core.hpp</label>
+      </node>
+      <node id="269">
+        <label>string</label>
+      </node>
+      <node id="271">
+        <label>Log.hpp</label>
+        <link refid="Log_8hpp"/>
+        <childnode refid="272" relation="include">
+        </childnode>
+        <childnode refid="273" relation="include">
+        </childnode>
+        <childnode refid="262" relation="include">
+        </childnode>
+        <childnode refid="267" relation="include">
+        </childnode>
+        <childnode refid="269" relation="include">
+        </childnode>
+        <childnode refid="274" relation="include">
+        </childnode>
+        <childnode refid="263" relation="include">
+        </childnode>
+      </node>
+      <node id="273">
+        <label>fstream</label>
+      </node>
+      <node id="268">
+        <label>opencv2/imgproc/imgproc.hpp</label>
+      </node>
+      <node id="272">
+        <label>ctime</label>
+      </node>
+      <node id="277">
+        <label>unistd.h</label>
+      </node>
+      <node id="270">
+        <label>vector</label>
+      </node>
+      <node id="266">
+        <label>Grabber.hpp</label>
+        <link refid="Grabber_8hpp"/>
+        <childnode refid="267" relation="include">
+        </childnode>
+        <childnode refid="268" relation="include">
+        </childnode>
+        <childnode refid="269" relation="include">
+        </childnode>
+        <childnode refid="270" relation="include">
+        </childnode>
+        <childnode refid="263" relation="include">
+        </childnode>
+        <childnode refid="271" relation="include">
+        </childnode>
+        <childnode refid="275" relation="include">
+        </childnode>
+      </node>
+      <node id="267">
+        <label>opencv2/highgui/highgui.hpp</label>
+      </node>
+      <node id="262">
+        <label>iostream</label>
+      </node>
+      <node id="264">
+        <label>Block.hpp</label>
+        <link refid="Block_8hpp"/>
+        <childnode refid="265" relation="include">
+        </childnode>
+        <childnode refid="263" relation="include">
+        </childnode>
+      </node>
+      <node id="275">
+        <label>PiCamera.hpp</label>
+        <link refid="PiCamera_8hpp"/>
+        <childnode refid="265" relation="include">
+        </childnode>
+        <childnode refid="267" relation="include">
+        </childnode>
+        <childnode refid="276" relation="include">
+        </childnode>
+        <childnode refid="277" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="cv__test_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>()</argsstring>
+        <name>main</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This program was used solely to test the PiCamera wrapper class and its compatibility with the raspicam wrapper and ultimately OpenCV. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pi/chip-chip-array/src/cv_test.cpp" line="13" column="1" bodyfile="/home/pi/chip-chip-array/src/cv_test.cpp" bodystart="13" bodyend="18"/>
+        <references refid="definitions_8hpp_1adbd1e7a33d3e1751c7b2aa2562d0ecb9a7fc56270e7a70fa81a5935b72eacbe29">A</references>
+        <references refid="definitions_8hpp_1a03325a8a9d4f105db5e37dd587128142a92b09c7c48c520c3c55e497875da437c">Right</references>
+        <references refid="classChipChipArray_1_1Grabber_1a86bc18ecf71c7ff4e324df0467af124a" compoundref="Grabber_8hpp" startline="211" endline="341">ChipChipArray::Grabber::LocateBlock</references>
+        <references refid="namespacestd_1aa5ddf582a1c96ffe258c997be9a294a3" compoundref="definitions_8hpp" startline="80" endline="83">std::to_string</references>
+        <references refid="classChipChipArray_1_1Block_1a262210a9a04028f3f2670c9ae38ef3d7" compoundref="Block_8hpp" startline="49">ChipChipArray::Block::color</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="definitions_8hpp" kindref="compound">definitions.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Block_8hpp" kindref="compound">Block.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Grabber_8hpp" kindref="compound">Grabber.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceChipChipArray" kindref="compound">ChipChipArray</ref>;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="cv__test_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" refkind="member"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="namespaceChipChipArray_1a7fc3d1edffca11531cd09fdab7c8b88d" kindref="member">main</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classChipChipArray_1_1Grabber" kindref="compound">Grabber</ref><sp/>g(<ref refid="definitions_8hpp_1adbd1e7a33d3e1751c7b2aa2562d0ecb9a7fc56270e7a70fa81a5935b72eacbe29" kindref="member">Zone::A</ref>,<sp/><ref refid="definitions_8hpp_1a03325a8a9d4f105db5e37dd587128142a92b09c7c48c520c3c55e497875da437c" kindref="member">Side::Right</ref>);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classChipChipArray_1_1Block" kindref="compound">Block</ref><sp/>block<sp/>=<sp/>g.<ref refid="classChipChipArray_1_1Grabber_1a86bc18ecf71c7ff4e324df0467af124a" kindref="member">LocateBlock</ref>();</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/><ref refid="namespacestd_1aa5ddf582a1c96ffe258c997be9a294a3" kindref="member">std::to_string</ref>(block.<ref refid="classChipChipArray_1_1Block_1a262210a9a04028f3f2670c9ae38ef3d7" kindref="member">color</ref>)<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/pi/chip-chip-array/src/cv_test.cpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,158 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="Adafruit__PWMServoDriver_8h">
+    <title>Adafruit_PWMServoDriver.h File Reference</title>
+    <programlisting>#include &lt;wiringPi.h&gt;</programlisting>
+    <programlisting>#include &lt;ctype.h&gt;</programlisting>
+    <programlisting>#include &lt;iostream&gt;</programlisting>
+    <programlisting>#include &lt;cstdlib&gt;</programlisting>
+    <programlisting>#include &lt;unistd.h&gt;</programlisting>
+    <programlisting>#include &lt;wiringPiI2C.h&gt;</programlisting>
+    <programlisting>#include &lt;cmath&gt;</programlisting>
+    <programlisting>#include &lt;errno.h&gt;</programlisting>
+    <programlisting>#include &lt;string.h&gt;</programlisting>
+    <programlisting>#include &lt;string&gt;</programlisting>
+<para>Include dependency diagram for Adafruit_PWMServoDriver.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="Adafruit__PWMServoDriver_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for Adafruit_PWMServoDriver.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="Adafruit__PWMServoDriver_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <simplesect>
+            <title> Classes </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="classAdafruit__PWMServoDriver">Adafruit_PWMServoDriver</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title>Defines</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="Adafruit__PWMServoDriver_8h_1ad58a880e68f5aa69092c658a86641a8e">PCA9685_SUBADR1</link> 0x2</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="Adafruit__PWMServoDriver_8h_1a845ec28ef89ed81642ea5f41691d4b51">PCA9685_SUBADR2</link> 0x3</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="Adafruit__PWMServoDriver_8h_1a7f60829a2cf850c02403f5c7193b0f00">PCA9685_SUBADR3</link> 0x4</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="Adafruit__PWMServoDriver_8h_1aec642e3f25e7f83072d68acb14ae4e74">PCA9685_MODE1</link> 0x0</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="Adafruit__PWMServoDriver_8h_1a7175106bbec978d9acc85dc7485235a3">PCA9685_PRESCALE</link> 0xFE</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="Adafruit__PWMServoDriver_8h_1a62f7dbcbb1fcf1084804f19a5b42248f">LED0_ON_L</link> 0x6</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="Adafruit__PWMServoDriver_8h_1a03deab303c78b50c629847b9e0de106b">LED0_ON_H</link> 0x7</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="Adafruit__PWMServoDriver_8h_1a00e3f4b43121817be365b2f22e8bad84">LED0_OFF_L</link> 0x8</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="Adafruit__PWMServoDriver_8h_1a6d8ff6441f8d2a4fb7b4afd36b8fd329">LED0_OFF_H</link> 0x9</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="Adafruit__PWMServoDriver_8h_1acc163ea7453bc87b5934e8b2bc838556">ALLLED_ON_L</link> 0xFA</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="Adafruit__PWMServoDriver_8h_1a470526d36c4db534d04ec1452ddde736">ALLLED_ON_H</link> 0xFB</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="Adafruit__PWMServoDriver_8h_1a6dc494d4156968e9cd24f7ac07bf2ee3">ALLLED_OFF_L</link> 0xFC</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="Adafruit__PWMServoDriver_8h_1a11632001b28c990e5f6dee015e945b1d">ALLLED_OFF_H</link> 0xFD</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="Adafruit__PWMServoDriver_8h_1ab077fa1127453be2bd9d4c3c8a768fa7">uint8_t</link> unsigned char</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="Adafruit__PWMServoDriver_8h_1a395b3b2bf5cb4674ab41b6bda68c15bb">uint16_t</link> unsigned short int</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+    <simplesect>
+        <title>Detailed Description</title>
+    <para>Definition in file /home/pi/chip-chip-array/src/Adafruit_PWMServoDriver.h</para>
+    </simplesect>
+</section>

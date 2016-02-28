@@ -1,0 +1,224 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.8">
+  <compound refid="classAdafruit__PWMServoDriver" kind="class"><name>Adafruit_PWMServoDriver</name>
+    <member refid="classAdafruit__PWMServoDriver_1a2b9edff4ecbd535c4c3ccac28e9ec1aa" kind="variable"><name>_i2caddr</name></member>
+    <member refid="classAdafruit__PWMServoDriver_1ad130ef3dbd4597f876c1d0931c3844af" kind="variable"><name>_i2cFD</name></member>
+    <member refid="classAdafruit__PWMServoDriver_1a6a949db60836febbc61adef4cc5429ed" kind="function"><name>Adafruit_PWMServoDriver</name></member>
+    <member refid="classAdafruit__PWMServoDriver_1aef401eaad3c34222ac916eb7bd936bc2" kind="function"><name>begin</name></member>
+    <member refid="classAdafruit__PWMServoDriver_1ac976f52233a75a4bd0eb6f2ce9b82b7f" kind="function"><name>reset</name></member>
+    <member refid="classAdafruit__PWMServoDriver_1a0ef6f1e3c81aebbd1d1da1bb12f3ed5c" kind="function"><name>setPWMFreq</name></member>
+    <member refid="classAdafruit__PWMServoDriver_1a724a7fc39c6fba34478ecc0eea038bd3" kind="function"><name>setPWM</name></member>
+    <member refid="classAdafruit__PWMServoDriver_1a1246cd50849fe0f068cc5d474e06ae96" kind="function"><name>setPin</name></member>
+    <member refid="classAdafruit__PWMServoDriver_1a4962ca3a1abcf364aa524c00100a9ad9" kind="function"><name>read8</name></member>
+    <member refid="classAdafruit__PWMServoDriver_1a420016c735b8f29044149d8d1ae77c17" kind="function"><name>write8</name></member>
+  </compound>
+  <compound refid="classChipChipArray_1_1Block" kind="class"><name>ChipChipArray::Block</name>
+    <member refid="classChipChipArray_1_1Block_1ab5f9a9c1cc11e949685f8ad3d52599b2" kind="variable"><name>area</name></member>
+    <member refid="classChipChipArray_1_1Block_1a78304b597a8d8a74a4d9b4bb561a7224" kind="variable"><name>bottomLeft</name></member>
+    <member refid="classChipChipArray_1_1Block_1a82f831883d31e6d74be45b8851eefe96" kind="variable"><name>bottomRight</name></member>
+    <member refid="classChipChipArray_1_1Block_1aed94802c166c9b4553764eb637717a2a" kind="variable"><name>height</name></member>
+    <member refid="classChipChipArray_1_1Block_1aeecc05025c6c8e23ff6ca09a6fbd4b4b" kind="variable"><name>topLeft</name></member>
+    <member refid="classChipChipArray_1_1Block_1aaa4ff82846e95a628800ebdfd3ceefb5" kind="variable"><name>topRight</name></member>
+    <member refid="classChipChipArray_1_1Block_1ac3f815e8aa9060c4ad20d4e1b2649e35" kind="variable"><name>width</name></member>
+    <member refid="classChipChipArray_1_1Block_1a262210a9a04028f3f2670c9ae38ef3d7" kind="variable"><name>color</name></member>
+    <member refid="classChipChipArray_1_1Block_1aebd356d7fcfe7ff11db8195e6d7f8e42" kind="variable"><name>size</name></member>
+    <member refid="classChipChipArray_1_1Block_1a7eb2456e5c95c8a91844c9522eed0578" kind="function"><name>Block</name></member>
+  </compound>
+  <compound refid="classChipChipArray_1_1Grabber" kind="class"><name>ChipChipArray::Grabber</name>
+    <member refid="classChipChipArray_1_1Grabber_1a1ffe733fd5d42a38d25de80e9c082e52" kind="variable"><name>MIN_HALF_BLOCK_SIZE</name></member>
+    <member refid="classChipChipArray_1_1Grabber_1ab536282f995668397901ba012ea6ad69" kind="variable"><name>invokeCount</name></member>
+    <member refid="classChipChipArray_1_1Grabber_1a85869d4051efcf346286f404b00d0f1d" kind="variable"><name>rangeVals</name></member>
+    <member refid="classChipChipArray_1_1Grabber_1a726bcc2367a719cb84de92a981947622" kind="variable"><name>cam</name></member>
+    <member refid="classChipChipArray_1_1Grabber_1a7a64f2b3fad315a181c2fa375a0119b7" kind="variable"><name>log</name></member>
+    <member refid="classChipChipArray_1_1Grabber_1a7333f40c135fbe92d59651f75032b4e7" kind="function"><name>Grabber</name></member>
+    <member refid="classChipChipArray_1_1Grabber_1a0fe4bfbb6e479006a584f50cac0b5d5d" kind="function"><name>~Grabber</name></member>
+    <member refid="classChipChipArray_1_1Grabber_1a56639f8f9ba9468bce4b6d69ceb2eb54" kind="function"><name>Load</name></member>
+    <member refid="classChipChipArray_1_1Grabber_1aacf089ceb4aa5b263c2cc702fb3daf74" kind="function"><name>Close</name></member>
+    <member refid="classChipChipArray_1_1Grabber_1a86bc18ecf71c7ff4e324df0467af124a" kind="function"><name>LocateBlock</name></member>
+    <member refid="classChipChipArray_1_1Grabber_1a09f89b79e745db18009a022e9bfacd3a" kind="function"><name>Discard</name></member>
+    <member refid="classChipChipArray_1_1Grabber_1abecb4047b4f7d5a7e691b7fb581b5a39" kind="function"><name>Extend</name></member>
+    <member refid="classChipChipArray_1_1Grabber_1ae52cf94210d8a5f468c08e59737518c4" kind="function"><name>FindBlock</name></member>
+    <member refid="classChipChipArray_1_1Grabber_1a8ddc7def90b874885b2745034b5677df" kind="function"><name>FindColor</name></member>
+    <member refid="classChipChipArray_1_1Grabber_1a7262ce7fd6d4cc2f0210fcc9cafdd840" kind="function"><name>FindSize</name></member>
+    <member refid="classChipChipArray_1_1Grabber_1a0a8a57e44f291581ab2862272134a592" kind="function"><name>Grab</name></member>
+    <member refid="classChipChipArray_1_1Grabber_1a2833eebf4e57078c0d677379babfd2d4" kind="function"><name>Place</name></member>
+    <member refid="classChipChipArray_1_1Grabber_1a817de2b1ac4208fcbe983e919cede265" kind="function"><name>Place</name></member>
+  </compound>
+  <compound refid="classChipChipArray_1_1Log" kind="class"><name>ChipChipArray::Log</name>
+    <member refid="classChipChipArray_1_1Log_1a27b99be3da1579b0fb237cffcf5dbe8a" kind="variable"><name>PATH_SEP</name></member>
+    <member refid="classChipChipArray_1_1Log_1ab43e996ee338d077268e9d7fa2191e05" kind="variable"><name>dir</name></member>
+    <member refid="classChipChipArray_1_1Log_1aeb08bb5eb2fd85f172e4f82963893ce0" kind="variable"><name>filename</name></member>
+    <member refid="classChipChipArray_1_1Log_1a1fce11d8c939ade5a42a9fa2770b7402" kind="variable"><name>imgCount</name></member>
+    <member refid="classChipChipArray_1_1Log_1a0238555b6eaa29c25390349635dcb272" kind="variable"><name>mode</name></member>
+    <member refid="classChipChipArray_1_1Log_1a2a057989526162b4b9058ee8f2596da5" kind="variable"><name>file</name></member>
+    <member refid="classChipChipArray_1_1Log_1a8dd78bdbe11d9dedb7673eee488c954f" kind="variable"><name>LEN</name></member>
+    <member refid="classChipChipArray_1_1Log_1a2bd48afdb832567e94545e6dc2f6f4d5" kind="function"><name>Log</name></member>
+    <member refid="classChipChipArray_1_1Log_1a4cd28a821789b39e936a6e346329d65b" kind="function"><name>Log</name></member>
+    <member refid="classChipChipArray_1_1Log_1a647df4da22b29d9d5a5ea32af3a1ed83" kind="function"><name>~Log</name></member>
+    <member refid="classChipChipArray_1_1Log_1ac32b435af1577e4ebc67af2bdfea8eff" kind="function"><name>Debug</name></member>
+    <member refid="classChipChipArray_1_1Log_1aba7b7b0555f49f4dcf15f4b9fd3e6b34" kind="function"><name>Error</name></member>
+    <member refid="classChipChipArray_1_1Log_1a65bbab057c8b1453f9e4efcfee7522c4" kind="function"><name>Image</name></member>
+    <member refid="classChipChipArray_1_1Log_1ad27a06a4561f2f59159bd8a7fc2fed3b" kind="function"><name>Open</name></member>
+    <member refid="classChipChipArray_1_1Log_1a66575b6e94c6112e4cefa5736cb996e0" kind="function"><name>Status</name></member>
+    <member refid="classChipChipArray_1_1Log_1a8849569720c26e335e7ef4dcb912170b" kind="function"><name>Variable</name></member>
+    <member refid="classChipChipArray_1_1Log_1a154a5f38d9c7a767693b242684a3d4d9" kind="function"><name>Verbose</name></member>
+    <member refid="classChipChipArray_1_1Log_1a42b8933f00d22d08f87af5d86248de5e" kind="function"><name>LogError</name></member>
+  </compound>
+  <compound refid="classChipChipArray_1_1PiCamera" kind="class"><name>ChipChipArray::PiCamera</name>
+    <member refid="classChipChipArray_1_1PiCamera_1a0fe52c496ee140c8c73bdfae91b834ad" kind="variable"><name>cam</name></member>
+    <member refid="classChipChipArray_1_1PiCamera_1a5910a3284877677decb6529d88e43487" kind="function"><name>PiCamera</name></member>
+    <member refid="classChipChipArray_1_1PiCamera_1a0a4480e9e7475ae7af9a7523239caf8d" kind="function"><name>PiCamera</name></member>
+    <member refid="classChipChipArray_1_1PiCamera_1a38f8205921d6deec5a2c360ea7d24cc5" kind="function"><name>Close</name></member>
+    <member refid="classChipChipArray_1_1PiCamera_1a58fb0de02570dce9a9cb60a1a04fb84f" kind="function"><name>Snap</name></member>
+  </compound>
+  <compound refid="namespaceChipChipArray" kind="namespace"><name>ChipChipArray</name>
+    <member refid="namespaceChipChipArray_1a7fc3d1edffca11531cd09fdab7c8b88d" kind="function"><name>main</name></member>
+    <member refid="namespaceChipChipArray_1a6c7465049b5d408e1a238b6d8ffa887d" kind="function"><name>ScanQR</name></member>
+  </compound>
+  <compound refid="namespacecv" kind="namespace"><name>cv</name>
+  </compound>
+  <compound refid="namespacestd" kind="namespace"><name>std</name>
+    <member refid="namespacestd_1aa5ddf582a1c96ffe258c997be9a294a3" kind="function"><name>to_string</name></member>
+    <member refid="namespacestd_1a6a0c3c323562edbd2f57da3d2bb74326" kind="function"><name>to_string</name></member>
+    <member refid="namespacestd_1adb24d6df94a83c325573f7710df84953" kind="function"><name>to_string</name></member>
+    <member refid="namespacestd_1a7fb649b1361ca7d95cc74045c0dadcdd" kind="function"><name>to_string</name></member>
+    <member refid="namespacestd_1aae21fd95009e4cc9fa25e1ad3830980b" kind="function"><name>to_string</name></member>
+    <member refid="namespacestd_1a6bfcd2c3377165652c64085d7acb5c64" kind="function"><name>to_string</name></member>
+    <member refid="namespacestd_1ac50951e195256b4c2311f90189f64ba8" kind="function"><name>to_string</name></member>
+  </compound>
+  <compound refid="namespacezbar" kind="namespace"><name>zbar</name>
+  </compound>
+  <compound refid="doxygen_8config" kind="file"><name>doxygen.config</name>
+  </compound>
+  <compound refid="makefile" kind="file"><name>makefile</name>
+  </compound>
+  <compound refid="Adafruit__PWMServoDriver_8cpp" kind="file"><name>Adafruit_PWMServoDriver.cpp</name>
+    <member refid="Adafruit__PWMServoDriver_8cpp_1a818989cbf7f37dae193fbb28b2d3976a" kind="define"><name>ENABLE_DEBUG_OUTPUT</name></member>
+  </compound>
+  <compound refid="Adafruit__PWMServoDriver_8h" kind="file"><name>Adafruit_PWMServoDriver.h</name>
+    <member refid="Adafruit__PWMServoDriver_8h_1ad58a880e68f5aa69092c658a86641a8e" kind="define"><name>PCA9685_SUBADR1</name></member>
+    <member refid="Adafruit__PWMServoDriver_8h_1a845ec28ef89ed81642ea5f41691d4b51" kind="define"><name>PCA9685_SUBADR2</name></member>
+    <member refid="Adafruit__PWMServoDriver_8h_1a7f60829a2cf850c02403f5c7193b0f00" kind="define"><name>PCA9685_SUBADR3</name></member>
+    <member refid="Adafruit__PWMServoDriver_8h_1aec642e3f25e7f83072d68acb14ae4e74" kind="define"><name>PCA9685_MODE1</name></member>
+    <member refid="Adafruit__PWMServoDriver_8h_1a7175106bbec978d9acc85dc7485235a3" kind="define"><name>PCA9685_PRESCALE</name></member>
+    <member refid="Adafruit__PWMServoDriver_8h_1a62f7dbcbb1fcf1084804f19a5b42248f" kind="define"><name>LED0_ON_L</name></member>
+    <member refid="Adafruit__PWMServoDriver_8h_1a03deab303c78b50c629847b9e0de106b" kind="define"><name>LED0_ON_H</name></member>
+    <member refid="Adafruit__PWMServoDriver_8h_1a00e3f4b43121817be365b2f22e8bad84" kind="define"><name>LED0_OFF_L</name></member>
+    <member refid="Adafruit__PWMServoDriver_8h_1a6d8ff6441f8d2a4fb7b4afd36b8fd329" kind="define"><name>LED0_OFF_H</name></member>
+    <member refid="Adafruit__PWMServoDriver_8h_1acc163ea7453bc87b5934e8b2bc838556" kind="define"><name>ALLLED_ON_L</name></member>
+    <member refid="Adafruit__PWMServoDriver_8h_1a470526d36c4db534d04ec1452ddde736" kind="define"><name>ALLLED_ON_H</name></member>
+    <member refid="Adafruit__PWMServoDriver_8h_1a6dc494d4156968e9cd24f7ac07bf2ee3" kind="define"><name>ALLLED_OFF_L</name></member>
+    <member refid="Adafruit__PWMServoDriver_8h_1a11632001b28c990e5f6dee015e945b1d" kind="define"><name>ALLLED_OFF_H</name></member>
+    <member refid="Adafruit__PWMServoDriver_8h_1ab077fa1127453be2bd9d4c3c8a768fa7" kind="define"><name>uint8_t</name></member>
+    <member refid="Adafruit__PWMServoDriver_8h_1a395b3b2bf5cb4674ab41b6bda68c15bb" kind="define"><name>uint16_t</name></member>
+  </compound>
+  <compound refid="Block_8hpp" kind="file"><name>Block.hpp</name>
+  </compound>
+  <compound refid="cv__hue_8cpp" kind="file"><name>cv_hue.cpp</name>
+  </compound>
+  <compound refid="cv__shape_8cpp" kind="file"><name>cv_shape.cpp</name>
+    <member refid="cv__shape_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="cv__test_8cpp" kind="file"><name>cv_test.cpp</name>
+    <member refid="cv__test_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="definitions_8hpp" kind="file"><name>definitions.hpp</name>
+    <member refid="definitions_8hpp_1a378181c29a641d58f55d647b5a9599f2" kind="define"><name>ENUM</name></member>
+    <member refid="definitions_8hpp_1a8fe83ac76edc595f6b98cd4a4127aed5" kind="define"><name>ERROR</name></member>
+    <member refid="definitions_8hpp_1ac8e1b1f4bbac5914204c97f66f97d01f" kind="enum"><name>BlockPosition</name></member>
+    <member refid="definitions_8hpp_1ac8e1b1f4bbac5914204c97f66f97d01fa5835bab1ade0060909e31a06af2e2cde" kind="enumvalue"><name>Front</name></member>
+    <member refid="definitions_8hpp_1ac8e1b1f4bbac5914204c97f66f97d01fa0557fa923dcee4d0f86b1409f5c2167f" kind="enumvalue"><name>Back</name></member>
+    <member refid="definitions_8hpp_1abc05a0f46084a3477cf5d5c939ff1436" kind="enum"><name>Color</name></member>
+    <member refid="definitions_8hpp_1abc05a0f46084a3477cf5d5c939ff1436aee38e4d5dd68c4e440825018d549cb47" kind="enumvalue"><name>Red</name></member>
+    <member refid="definitions_8hpp_1abc05a0f46084a3477cf5d5c939ff1436a51e6cd92b6c45f9affdc158ecca2b8b8" kind="enumvalue"><name>Yellow</name></member>
+    <member refid="definitions_8hpp_1abc05a0f46084a3477cf5d5c939ff1436ad382816a3cbeed082c9e216e7392eed1" kind="enumvalue"><name>Green</name></member>
+    <member refid="definitions_8hpp_1abc05a0f46084a3477cf5d5c939ff1436a9594eec95be70e7b1710f730fdda33d9" kind="enumvalue"><name>Blue</name></member>
+    <member refid="definitions_8hpp_1aa7380b6d694cab49f07aed6a7af592d9" kind="enum"><name>LogMode</name></member>
+    <member refid="definitions_8hpp_1aa7380b6d694cab49f07aed6a7af592d9a9dffbf69ffba8bc38bc4e01abf4b1675" kind="enumvalue"><name>Text</name></member>
+    <member refid="definitions_8hpp_1aa7380b6d694cab49f07aed6a7af592d9ace7898536dd0e928d1640ee2ad531cc8" kind="enumvalue"><name>Multi</name></member>
+    <member refid="definitions_8hpp_1ab84ebabb02540c4a7ec341a213abf1dc" kind="enum"><name>Result</name></member>
+    <member refid="definitions_8hpp_1ab84ebabb02540c4a7ec341a213abf1dca32075034997ab91e886dbcad47ed902d" kind="enumvalue"><name>No_Blocks</name></member>
+    <member refid="definitions_8hpp_1ab84ebabb02540c4a7ec341a213abf1dcabdf267b7c95f2ffd040b32d8b005e9a0" kind="enumvalue"><name>No_Halves</name></member>
+    <member refid="definitions_8hpp_1ab84ebabb02540c4a7ec341a213abf1dca5b00716e5e6f2e2dc1b10ffed2e0ef6d" kind="enumvalue"><name>Two_Halves</name></member>
+    <member refid="definitions_8hpp_1ab84ebabb02540c4a7ec341a213abf1dca01f87e08f72dd8784d0665346a006fa3" kind="enumvalue"><name>Four_Halves</name></member>
+    <member refid="definitions_8hpp_1a03325a8a9d4f105db5e37dd587128142" kind="enum"><name>Side</name></member>
+    <member refid="definitions_8hpp_1a03325a8a9d4f105db5e37dd587128142a945d5e233cf7d6240f6b783b36a374ff" kind="enumvalue"><name>Left</name></member>
+    <member refid="definitions_8hpp_1a03325a8a9d4f105db5e37dd587128142a92b09c7c48c520c3c55e497875da437c" kind="enumvalue"><name>Right</name></member>
+    <member refid="definitions_8hpp_1a9809446fd16a744b6df9808293f14153" kind="enum"><name>Size</name></member>
+    <member refid="definitions_8hpp_1a9809446fd16a744b6df9808293f14153a30bb747c98bccdd11b3f89e644c4d0ad" kind="enumvalue"><name>Short</name></member>
+    <member refid="definitions_8hpp_1a9809446fd16a744b6df9808293f14153a8394f0347c184cf156ac5924dccb773b" kind="enumvalue"><name>Long</name></member>
+    <member refid="definitions_8hpp_1adbd1e7a33d3e1751c7b2aa2562d0ecb9" kind="enum"><name>Zone</name></member>
+    <member refid="definitions_8hpp_1adbd1e7a33d3e1751c7b2aa2562d0ecb9a7fc56270e7a70fa81a5935b72eacbe29" kind="enumvalue"><name>A</name></member>
+    <member refid="definitions_8hpp_1adbd1e7a33d3e1751c7b2aa2562d0ecb9a9d5ed678fe57bcca610140957afab571" kind="enumvalue"><name>B</name></member>
+    <member refid="definitions_8hpp_1adbd1e7a33d3e1751c7b2aa2562d0ecb9a0d61f8370cad1d412f80b84d143e1257" kind="enumvalue"><name>C</name></member>
+    <member refid="definitions_8hpp_1a0c8186d9b9b7880309c27230bbb5e69d" kind="typedef"><name>byte</name></member>
+    <member refid="definitions_8hpp_1adde6aaee8457bee49c2a92621fe22b79" kind="typedef"><name>uint8</name></member>
+    <member refid="definitions_8hpp_1a1a6408291ee3cfd0760a61ac64084154" kind="typedef"><name>sint8</name></member>
+    <member refid="definitions_8hpp_1a05f6b0ae8f6a6e135b0e290c25fe0e4e" kind="typedef"><name>uint16</name></member>
+    <member refid="definitions_8hpp_1a74df79fde3c518e55b29ce6360a9c76e" kind="typedef"><name>sint16</name></member>
+    <member refid="definitions_8hpp_1a1134b580f8da4de94ca6b1de4d37975e" kind="typedef"><name>uint32</name></member>
+    <member refid="definitions_8hpp_1a0573de65958b4fda3a0460ed417dafb8" kind="typedef"><name>sint32</name></member>
+    <member refid="definitions_8hpp_1a29940ae63ec06c9998bba873e25407ad" kind="typedef"><name>uint64</name></member>
+    <member refid="definitions_8hpp_1ad91d7e42d1c1abce1d9eeacd54cc0497" kind="typedef"><name>sint64</name></member>
+    <member refid="definitions_8hpp_1aacdc525d6f7bddb3ae95d5c311bd06a1" kind="typedef"><name>float32</name></member>
+    <member refid="definitions_8hpp_1a232fad1b0d6dcc7c16aabde98b2e2a80" kind="typedef"><name>float64</name></member>
+  </compound>
+  <compound refid="Grabber_8hpp" kind="file"><name>Grabber.hpp</name>
+  </compound>
+  <compound refid="Log_8hpp" kind="file"><name>Log.hpp</name>
+  </compound>
+  <compound refid="log__test_8cpp" kind="file"><name>log_test.cpp</name>
+    <member refid="log__test_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="main_8cpp" kind="file"><name>main.cpp</name>
+    <member refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="net__qr__test_8cpp" kind="file"><name>net_qr_test.cpp</name>
+    <member refid="net__qr__test_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="old__cv__test_8cpp" kind="file"><name>old_cv_test.cpp</name>
+    <member refid="old__cv__test_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="PiCamera_8hpp" kind="file"><name>PiCamera.hpp</name>
+  </compound>
+  <compound refid="qr__test_8cpp" kind="file"><name>qr_test.cpp</name>
+    <member refid="qr__test_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="ScanQR_8hpp" kind="file"><name>ScanQR.hpp</name>
+  </compound>
+  <compound refid="Servo__Position__Shell_8cpp" kind="file"><name>Servo_Position_Shell.cpp</name>
+    <member refid="Servo__Position__Shell_8cpp_1a65ff49a6e78be84de6e478345b32b508" kind="define"><name>SERVOMIN</name></member>
+    <member refid="Servo__Position__Shell_8cpp_1a357a7e9fa4e4d8ed2f5ef82f37143836" kind="define"><name>SERVOMAX</name></member>
+    <member refid="Servo__Position__Shell_8cpp_1a2c06cc8f85429bb0f7cb91917164dc54" kind="variable"><name>pwm</name></member>
+    <member refid="Servo__Position__Shell_8cpp_1ac3fe65cfcd6744437ab3133c702ade33" kind="variable"><name>servo_num</name></member>
+    <member refid="Servo__Position__Shell_8cpp_1a4fc01d736fe50cf5b977f755b675f11d" kind="function"><name>setup</name></member>
+    <member refid="Servo__Position__Shell_8cpp_1a7f07c548295f3696f8881f0c9de708b1" kind="function"><name>setServoPulse</name></member>
+    <member refid="Servo__Position__Shell_8cpp_1abd2cd3c2e36d42a2178a6f2fd12af905" kind="function"><name>setServoPosition</name></member>
+  </compound>
+  <compound refid="Servo__Position__Shell_8h" kind="file"><name>Servo_Position_Shell.h</name>
+    <member refid="Servo__Position__Shell_8h_1ab077fa1127453be2bd9d4c3c8a768fa7" kind="define"><name>uint8_t</name></member>
+    <member refid="Servo__Position__Shell_8h_1af629c4ae98db77091b130c7fbc31cab2" kind="enum"><name>Servo</name></member>
+    <member refid="Servo__Position__Shell_8h_1af629c4ae98db77091b130c7fbc31cab2a87afce59ad3a309ba92f43778dde0edf" kind="enumvalue"><name>BASE_TURN</name></member>
+    <member refid="Servo__Position__Shell_8h_1af629c4ae98db77091b130c7fbc31cab2a793d7330231df1a295a841e5b2bb9a8c" kind="enumvalue"><name>BASE_TILT</name></member>
+    <member refid="Servo__Position__Shell_8h_1af629c4ae98db77091b130c7fbc31cab2a9b1c0cf4eb53d13971a120133cf44232" kind="enumvalue"><name>ELBOW</name></member>
+    <member refid="Servo__Position__Shell_8h_1af629c4ae98db77091b130c7fbc31cab2abb1046e4dfca68924f935e255b6fae54" kind="enumvalue"><name>WRIST_TILT</name></member>
+    <member refid="Servo__Position__Shell_8h_1af629c4ae98db77091b130c7fbc31cab2a6e375b725a2efd65c7221fd35055d1b6" kind="enumvalue"><name>WRIST_PAN</name></member>
+    <member refid="Servo__Position__Shell_8h_1af629c4ae98db77091b130c7fbc31cab2a084d4bf780fc2715f33c1f33387c3c76" kind="enumvalue"><name>GRIP_RIGHT</name></member>
+    <member refid="Servo__Position__Shell_8h_1af629c4ae98db77091b130c7fbc31cab2ab8d73f94c1a766d2715c193e847ec85e" kind="enumvalue"><name>GRIP_LEFT</name></member>
+    <member refid="Servo__Position__Shell_8h_1af629c4ae98db77091b130c7fbc31cab2acb554a731a8c87b669bd9e2c02dc6758" kind="enumvalue"><name>GATE_YELLOW</name></member>
+    <member refid="Servo__Position__Shell_8h_1af629c4ae98db77091b130c7fbc31cab2ad0e354edf951326ec371d4c92196f888" kind="enumvalue"><name>GATE_GREEN</name></member>
+    <member refid="Servo__Position__Shell_8h_1af629c4ae98db77091b130c7fbc31cab2a98ebc494e8de87f9bf7b279ddad1db8d" kind="enumvalue"><name>GATE_BLUE</name></member>
+    <member refid="Servo__Position__Shell_8h_1af629c4ae98db77091b130c7fbc31cab2a0a0d0a98add68268fab7353ed017f79c" kind="enumvalue"><name>GATE_RED</name></member>
+    <member refid="Servo__Position__Shell_8h_1af629c4ae98db77091b130c7fbc31cab2a4420b0516bdc38d39f2ca6130e99ad23" kind="enumvalue"><name>LIFT_YELLOW</name></member>
+    <member refid="Servo__Position__Shell_8h_1af629c4ae98db77091b130c7fbc31cab2a5cb3760c8f8b164ab3c81b1aa25fbe15" kind="enumvalue"><name>LIFT_GREEN</name></member>
+    <member refid="Servo__Position__Shell_8h_1af629c4ae98db77091b130c7fbc31cab2ab398235198b5110cebba4f1319cb9a8b" kind="enumvalue"><name>LIFT_BLUE</name></member>
+    <member refid="Servo__Position__Shell_8h_1af629c4ae98db77091b130c7fbc31cab2af6a30464f86fddcb063830ccf79db617" kind="enumvalue"><name>LIFT_RED</name></member>
+    <member refid="Servo__Position__Shell_8h_1a323a36dcf89ccad28f3ed2312e26ed8a" kind="function"><name>setServoPulse</name></member>
+    <member refid="Servo__Position__Shell_8h_1a4fc01d736fe50cf5b977f755b675f11d" kind="function"><name>setup</name></member>
+    <member refid="Servo__Position__Shell_8h_1abd2cd3c2e36d42a2178a6f2fd12af905" kind="function"><name>setServoPosition</name></member>
+  </compound>
+  <compound refid="dir_34c6163d67acbbcfc56107279c411fb1" kind="dir"><name>etc</name>
+  </compound>
+  <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>src</name>
+  </compound>
+</doxygenindex>

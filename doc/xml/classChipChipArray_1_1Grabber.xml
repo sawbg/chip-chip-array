@@ -1,0 +1,372 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="classChipChipArray_1_1Grabber" kind="class" prot="public">
+    <compoundname>ChipChipArray::Grabber</compoundname>
+    <includes refid="Grabber_8hpp" local="no">Grabber.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classChipChipArray_1_1Grabber_1a1ffe733fd5d42a38d25de80e9c082e52" prot="private" static="no" mutable="no">
+        <type>const <ref refid="definitions_8hpp_1a1134b580f8da4de94ca6b1de4d37975e" kindref="member">uint32</ref></type>
+        <definition>const uint32 ChipChipArray::Grabber::MIN_HALF_BLOCK_SIZE</definition>
+        <argsstring></argsstring>
+        <name>MIN_HALF_BLOCK_SIZE</name>
+        <initializer>= 200000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pi/chip-chip-array/src/Grabber.hpp" line="126" column="1" bodyfile="/home/pi/chip-chip-array/src/Grabber.hpp" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classChipChipArray_1_1Grabber_1ab536282f995668397901ba012ea6ad69" prot="private" static="no" mutable="no">
+        <type><ref refid="definitions_8hpp_1adde6aaee8457bee49c2a92621fe22b79" kindref="member">uint8</ref></type>
+        <definition>uint8 ChipChipArray::Grabber::invokeCount</definition>
+        <argsstring></argsstring>
+        <name>invokeCount</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pi/chip-chip-array/src/Grabber.hpp" line="131" column="1" bodyfile="/home/pi/chip-chip-array/src/Grabber.hpp" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classChipChipArray_1_1Grabber_1a85869d4051efcf346286f404b00d0f1d" prot="private" static="no" mutable="no">
+        <type>std::map&lt; <ref refid="definitions_8hpp_1abc05a0f46084a3477cf5d5c939ff1436" kindref="member">Color</ref>, std::array&lt; cv::Scalar, 2 &gt; &gt;</type>
+        <definition>std::map&lt;Color, std::array&lt;cv::Scalar, 2&gt; &gt; ChipChipArray::Grabber::rangeVals</definition>
+        <argsstring></argsstring>
+        <name>rangeVals</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pi/chip-chip-array/src/Grabber.hpp" line="141" column="1" bodyfile="/home/pi/chip-chip-array/src/Grabber.hpp" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classChipChipArray_1_1Grabber_1a726bcc2367a719cb84de92a981947622" prot="private" static="no" mutable="no">
+        <type><ref refid="classChipChipArray_1_1PiCamera" kindref="compound">PiCamera</ref></type>
+        <definition>PiCamera ChipChipArray::Grabber::cam</definition>
+        <argsstring></argsstring>
+        <name>cam</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pi/chip-chip-array/src/Grabber.hpp" line="146" column="1" bodyfile="/home/pi/chip-chip-array/src/Grabber.hpp" bodystart="146" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classChipChipArray_1_1Grabber_1a7a64f2b3fad315a181c2fa375a0119b7" prot="private" static="yes" mutable="no">
+        <type><ref refid="classChipChipArray_1_1Log" kindref="compound">Log</ref></type>
+        <definition>Log ChipChipArray::Grabber::log</definition>
+        <argsstring></argsstring>
+        <name>log</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>need this to prevent linker errors </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pi/chip-chip-array/src/Grabber.hpp" line="136" column="1" bodyfile="/home/pi/chip-chip-array/src/Grabber.hpp" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classChipChipArray_1_1Grabber_1a7333f40c135fbe92d59651f75032b4e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ChipChipArray::Grabber::Grabber</definition>
+        <argsstring>(Zone zone, Side side)</argsstring>
+        <name>Grabber</name>
+        <param>
+          <type><ref refid="definitions_8hpp_1adbd1e7a33d3e1751c7b2aa2562d0ecb9" kindref="member">Zone</ref></type>
+          <declname>zone</declname>
+        </param>
+        <param>
+          <type><ref refid="definitions_8hpp_1a03325a8a9d4f105db5e37dd587128142" kindref="member">Side</ref></type>
+          <declname>side</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Initializes the class according to the side and zone and extends the robotic arm into position.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>zone</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the zone (A, B, or C) for which to pick up blocks.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>side</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the side from which the robot is moving and the position of the blocks (right or left) in the view of the camera to pick up first </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pi/chip-chip-array/src/Grabber.hpp" line="32" column="1" bodyfile="/home/pi/chip-chip-array/src/Grabber.hpp" bodystart="154" bodyend="171"/>
+        <references refid="classChipChipArray_1_1Log_1a154a5f38d9c7a767693b242684a3d4d9" compoundref="Log_8hpp" startline="307" endline="316">ChipChipArray::Log::Verbose</references>
+        <references refid="namespacestd_1aa5ddf582a1c96ffe258c997be9a294a3" compoundref="definitions_8hpp" startline="80" endline="83">std::to_string</references>
+        <references refid="definitions_8hpp_1abc05a0f46084a3477cf5d5c939ff1436aee38e4d5dd68c4e440825018d549cb47">Red</references>
+        <references refid="definitions_8hpp_1abc05a0f46084a3477cf5d5c939ff1436a51e6cd92b6c45f9affdc158ecca2b8b8">Yellow</references>
+        <references refid="definitions_8hpp_1abc05a0f46084a3477cf5d5c939ff1436ad382816a3cbeed082c9e216e7392eed1">Green</references>
+        <references refid="definitions_8hpp_1abc05a0f46084a3477cf5d5c939ff1436a9594eec95be70e7b1710f730fdda33d9">Blue</references>
+      </memberdef>
+      <memberdef kind="function" id="classChipChipArray_1_1Grabber_1a0fe4bfbb6e479006a584f50cac0b5d5d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ChipChipArray::Grabber::~Grabber</definition>
+        <argsstring>()</argsstring>
+        <name>~Grabber</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destructs the class and retracts the arm. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pi/chip-chip-array/src/Grabber.hpp" line="37" column="1" bodyfile="/home/pi/chip-chip-array/src/Grabber.hpp" bodystart="173" bodyend="175"/>
+      </memberdef>
+      <memberdef kind="function" id="classChipChipArray_1_1Grabber_1a56639f8f9ba9468bce4b6d69ceb2eb54" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="definitions_8hpp_1ab84ebabb02540c4a7ec341a213abf1dc" kindref="member">Result</ref></type>
+        <definition>Result ChipChipArray::Grabber::Load</definition>
+        <argsstring>()</argsstring>
+        <name>Load</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Loads a block(s) (if possible) at the robot&apos;s current position.</para><para><simplesect kind="return"><para>the number of half and whole blocks loaded </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pi/chip-chip-array/src/Grabber.hpp" line="45" column="1" bodyfile="/home/pi/chip-chip-array/src/Grabber.hpp" bodystart="207" bodyend="209"/>
+      </memberdef>
+      <memberdef kind="function" id="classChipChipArray_1_1Grabber_1aacf089ceb4aa5b263c2cc702fb3daf74" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ChipChipArray::Grabber::Close</definition>
+        <argsstring>()</argsstring>
+        <name>Close</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pi/chip-chip-array/src/Grabber.hpp" line="47" column="1" bodyfile="/home/pi/chip-chip-array/src/Grabber.hpp" bodystart="177" bodyend="181"/>
+        <references refid="classChipChipArray_1_1Log_1a66575b6e94c6112e4cefa5736cb996e0" compoundref="Log_8hpp" startline="284" endline="293">ChipChipArray::Log::Status</references>
+        <references refid="classChipChipArray_1_1PiCamera_1a38f8205921d6deec5a2c360ea7d24cc5" compoundref="PiCamera_8hpp" startline="57" endline="59">ChipChipArray::PiCamera::Close</references>
+      </memberdef>
+      <memberdef kind="function" id="classChipChipArray_1_1Grabber_1a86bc18ecf71c7ff4e324df0467af124a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classChipChipArray_1_1Block" kindref="compound">Block</ref></type>
+        <definition>Block ChipChipArray::Grabber::LocateBlock</definition>
+        <argsstring>()</argsstring>
+        <name>LocateBlock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pi/chip-chip-array/src/Grabber.hpp" line="49" column="1" bodyfile="/home/pi/chip-chip-array/src/Grabber.hpp" bodystart="211" bodyend="341"/>
+        <references refid="classChipChipArray_1_1Log_1a154a5f38d9c7a767693b242684a3d4d9" compoundref="Log_8hpp" startline="307" endline="316">ChipChipArray::Log::Verbose</references>
+        <references refid="classChipChipArray_1_1PiCamera_1a58fb0de02570dce9a9cb60a1a04fb84f" compoundref="PiCamera_8hpp" startline="61" endline="69">ChipChipArray::PiCamera::Snap</references>
+        <references refid="definitions_8hpp_1abc05a0f46084a3477cf5d5c939ff1436aee38e4d5dd68c4e440825018d549cb47">Red</references>
+        <references refid="definitions_8hpp_1abc05a0f46084a3477cf5d5c939ff1436a51e6cd92b6c45f9affdc158ecca2b8b8">Yellow</references>
+        <references refid="definitions_8hpp_1abc05a0f46084a3477cf5d5c939ff1436ad382816a3cbeed082c9e216e7392eed1">Green</references>
+        <references refid="definitions_8hpp_1abc05a0f46084a3477cf5d5c939ff1436a9594eec95be70e7b1710f730fdda33d9">Blue</references>
+        <references refid="classChipChipArray_1_1Log_1a66575b6e94c6112e4cefa5736cb996e0" compoundref="Log_8hpp" startline="284" endline="293">ChipChipArray::Log::Status</references>
+        <references refid="namespacestd_1aa5ddf582a1c96ffe258c997be9a294a3" compoundref="definitions_8hpp" startline="80" endline="83">std::to_string</references>
+        <references refid="classChipChipArray_1_1Log_1a65bbab057c8b1453f9e4efcfee7522c4" compoundref="Log_8hpp" startline="221" endline="231">ChipChipArray::Log::Image</references>
+        <references refid="classChipChipArray_1_1Log_1ac32b435af1577e4ebc67af2bdfea8eff" compoundref="Log_8hpp" startline="199" endline="208">ChipChipArray::Log::Debug</references>
+        <references refid="classChipChipArray_1_1Block_1aeecc05025c6c8e23ff6ca09a6fbd4b4b" compoundref="Block_8hpp" startline="34">ChipChipArray::Block::topLeft</references>
+        <references refid="classChipChipArray_1_1Block_1a262210a9a04028f3f2670c9ae38ef3d7" compoundref="Block_8hpp" startline="49">ChipChipArray::Block::color</references>
+        <references refid="classChipChipArray_1_1Block_1a82f831883d31e6d74be45b8851eefe96" compoundref="Block_8hpp" startline="24">ChipChipArray::Block::bottomRight</references>
+        <referencedby refid="cv__test_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="cv__test_8cpp" startline="13" endline="18">main</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classChipChipArray_1_1Grabber_1a09f89b79e745db18009a022e9bfacd3a" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ChipChipArray::Grabber::Discard</definition>
+        <argsstring>()</argsstring>
+        <name>Discard</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Takes block currently in the arm&apos;s pinchers and places to side of robot opposite the loading zone. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pi/chip-chip-array/src/Grabber.hpp" line="57" column="1" bodyfile="/home/pi/chip-chip-array/src/Grabber.hpp" bodystart="183" bodyend="185"/>
+      </memberdef>
+      <memberdef kind="function" id="classChipChipArray_1_1Grabber_1abecb4047b4f7d5a7e691b7fb581b5a39" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ChipChipArray::Grabber::Extend</definition>
+        <argsstring>()</argsstring>
+        <name>Extend</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets arm to generic position roughly right above a stack of blocks. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pi/chip-chip-array/src/Grabber.hpp" line="63" column="1" bodyfile="/home/pi/chip-chip-array/src/Grabber.hpp" bodystart="187" bodyend="189"/>
+      </memberdef>
+      <memberdef kind="function" id="classChipChipArray_1_1Grabber_1ae52cf94210d8a5f468c08e59737518c4" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ChipChipArray::Grabber::FindBlock</definition>
+        <argsstring>()</argsstring>
+        <name>FindBlock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Whether there is little doubt that a block is within reach based on the image from the camera.</para><para><simplesect kind="return"><para>if a block is within reach </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pi/chip-chip-array/src/Grabber.hpp" line="71" column="1" bodyfile="/home/pi/chip-chip-array/src/Grabber.hpp" bodystart="191" bodyend="193"/>
+      </memberdef>
+      <memberdef kind="function" id="classChipChipArray_1_1Grabber_1a8ddc7def90b874885b2745034b5677df" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="definitions_8hpp_1abc05a0f46084a3477cf5d5c939ff1436" kindref="member">Color</ref></type>
+        <definition>Color ChipChipArray::Grabber::FindColor</definition>
+        <argsstring>()</argsstring>
+        <name>FindColor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Examines block in pinchers for a definite color and returns most likely Color. For Zones B and C only.</para><para><simplesect kind="return"><para>the Color of the current block </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pi/chip-chip-array/src/Grabber.hpp" line="79" column="1" bodyfile="/home/pi/chip-chip-array/src/Grabber.hpp" bodystart="195" bodyend="197"/>
+      </memberdef>
+      <memberdef kind="function" id="classChipChipArray_1_1Grabber_1a7262ce7fd6d4cc2f0210fcc9cafdd840" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="definitions_8hpp_1a9809446fd16a744b6df9808293f14153" kindref="member">Size</ref></type>
+        <definition>Size ChipChipArray::Grabber::FindSize</definition>
+        <argsstring>()</argsstring>
+        <name>FindSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Determines if block is short or long. It is assumed to be long if there is uncertainty. Zone B only.</para><para><simplesect kind="return"><para>the Size of the current block </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pi/chip-chip-array/src/Grabber.hpp" line="88" column="1" bodyfile="/home/pi/chip-chip-array/src/Grabber.hpp" bodystart="199" bodyend="201"/>
+      </memberdef>
+      <memberdef kind="function" id="classChipChipArray_1_1Grabber_1a0a8a57e44f291581ab2862272134a592" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ChipChipArray::Grabber::Grab</definition>
+        <argsstring>(BlockPosition pos)</argsstring>
+        <name>Grab</name>
+        <param>
+          <type><ref refid="definitions_8hpp_1ac8e1b1f4bbac5914204c97f66f97d01f" kindref="member">BlockPosition</ref></type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Picks up block by ezaming how much it fills up the camera image and where its edges are. It is then decided where to grab the block, and the block is picked up.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>whether the (half-)block is closer to the robot (FRONT) or farther away (BACK). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pi/chip-chip-array/src/Grabber.hpp" line="99" column="1" bodyfile="/home/pi/chip-chip-array/src/Grabber.hpp" bodystart="203" bodyend="205"/>
+      </memberdef>
+      <memberdef kind="function" id="classChipChipArray_1_1Grabber_1a2833eebf4e57078c0d677379babfd2d4" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ChipChipArray::Grabber::Place</definition>
+        <argsstring>(Color color)</argsstring>
+        <name>Place</name>
+        <param>
+          <type><ref refid="definitions_8hpp_1abc05a0f46084a3477cf5d5c939ff1436" kindref="member">Color</ref></type>
+          <declname>color</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Puts block in slot according to color. Zones B and C only.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>the</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>slot into which to place the block </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pi/chip-chip-array/src/Grabber.hpp" line="107" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classChipChipArray_1_1Grabber_1a817de2b1ac4208fcbe983e919cede265" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ChipChipArray::Grabber::Place</definition>
+        <argsstring>(Color color, BlockPosition pos)</argsstring>
+        <name>Place</name>
+        <param>
+          <type><ref refid="definitions_8hpp_1abc05a0f46084a3477cf5d5c939ff1436" kindref="member">Color</ref></type>
+          <declname>color</declname>
+        </param>
+        <param>
+          <type><ref refid="definitions_8hpp_1ac8e1b1f4bbac5914204c97f66f97d01f" kindref="member">BlockPosition</ref></type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Puts half-blocks in the unloader according to whether there is already a half-block in the corresponding slot. Zone B only.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>color</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the slot into which to place the block</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the block position (FRONT/BACK). BACK denotes there is already a half-block stored in the slot, as the FRONT blocks are picked up first. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pi/chip-chip-array/src/Grabber.hpp" line="120" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class finds blocks, identifies them, and sorts them according to color, size, and zone. </para>    </detaileddescription>
+    <location file="/home/pi/chip-chip-array/src/Grabber.hpp" line="19" column="1" bodyfile="/home/pi/chip-chip-array/src/Grabber.hpp" bodystart="19" bodyend="147"/>
+    <listofallmembers>
+      <member refid="classChipChipArray_1_1Grabber_1a726bcc2367a719cb84de92a981947622" prot="private" virt="non-virtual"><scope>ChipChipArray::Grabber</scope><name>cam</name></member>
+      <member refid="classChipChipArray_1_1Grabber_1aacf089ceb4aa5b263c2cc702fb3daf74" prot="public" virt="non-virtual"><scope>ChipChipArray::Grabber</scope><name>Close</name></member>
+      <member refid="classChipChipArray_1_1Grabber_1a09f89b79e745db18009a022e9bfacd3a" prot="protected" virt="non-virtual"><scope>ChipChipArray::Grabber</scope><name>Discard</name></member>
+      <member refid="classChipChipArray_1_1Grabber_1abecb4047b4f7d5a7e691b7fb581b5a39" prot="protected" virt="non-virtual"><scope>ChipChipArray::Grabber</scope><name>Extend</name></member>
+      <member refid="classChipChipArray_1_1Grabber_1ae52cf94210d8a5f468c08e59737518c4" prot="protected" virt="non-virtual"><scope>ChipChipArray::Grabber</scope><name>FindBlock</name></member>
+      <member refid="classChipChipArray_1_1Grabber_1a8ddc7def90b874885b2745034b5677df" prot="protected" virt="non-virtual"><scope>ChipChipArray::Grabber</scope><name>FindColor</name></member>
+      <member refid="classChipChipArray_1_1Grabber_1a7262ce7fd6d4cc2f0210fcc9cafdd840" prot="protected" virt="non-virtual"><scope>ChipChipArray::Grabber</scope><name>FindSize</name></member>
+      <member refid="classChipChipArray_1_1Grabber_1a0a8a57e44f291581ab2862272134a592" prot="protected" virt="non-virtual"><scope>ChipChipArray::Grabber</scope><name>Grab</name></member>
+      <member refid="classChipChipArray_1_1Grabber_1a7333f40c135fbe92d59651f75032b4e7" prot="public" virt="non-virtual"><scope>ChipChipArray::Grabber</scope><name>Grabber</name></member>
+      <member refid="classChipChipArray_1_1Grabber_1ab536282f995668397901ba012ea6ad69" prot="private" virt="non-virtual"><scope>ChipChipArray::Grabber</scope><name>invokeCount</name></member>
+      <member refid="classChipChipArray_1_1Grabber_1a56639f8f9ba9468bce4b6d69ceb2eb54" prot="public" virt="non-virtual"><scope>ChipChipArray::Grabber</scope><name>Load</name></member>
+      <member refid="classChipChipArray_1_1Grabber_1a86bc18ecf71c7ff4e324df0467af124a" prot="public" virt="non-virtual"><scope>ChipChipArray::Grabber</scope><name>LocateBlock</name></member>
+      <member refid="classChipChipArray_1_1Grabber_1a7a64f2b3fad315a181c2fa375a0119b7" prot="private" virt="non-virtual"><scope>ChipChipArray::Grabber</scope><name>log</name></member>
+      <member refid="classChipChipArray_1_1Grabber_1a1ffe733fd5d42a38d25de80e9c082e52" prot="private" virt="non-virtual"><scope>ChipChipArray::Grabber</scope><name>MIN_HALF_BLOCK_SIZE</name></member>
+      <member refid="classChipChipArray_1_1Grabber_1a2833eebf4e57078c0d677379babfd2d4" prot="protected" virt="non-virtual"><scope>ChipChipArray::Grabber</scope><name>Place</name></member>
+      <member refid="classChipChipArray_1_1Grabber_1a817de2b1ac4208fcbe983e919cede265" prot="protected" virt="non-virtual"><scope>ChipChipArray::Grabber</scope><name>Place</name></member>
+      <member refid="classChipChipArray_1_1Grabber_1a85869d4051efcf346286f404b00d0f1d" prot="private" virt="non-virtual"><scope>ChipChipArray::Grabber</scope><name>rangeVals</name></member>
+      <member refid="classChipChipArray_1_1Grabber_1a0fe4bfbb6e479006a584f50cac0b5d5d" prot="public" virt="non-virtual"><scope>ChipChipArray::Grabber</scope><name>~Grabber</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

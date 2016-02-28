@@ -1,0 +1,382 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="classChipChipArray_1_1Grabber">
+<title>ChipChipArray::Grabber class Reference</title>
+<para>
+    <programlisting>#include <link linkend="Grabber_8hpp">&lt;Grabber.hpp&gt;</link></programlisting>
+</para>
+<para>Inheritance diagram for ChipChipArray::Grabber</para>
+<para>
+    <figure>
+        <title>Inheritance graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="classChipChipArray_1_1Grabber__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Collaboration diagram for ChipChipArray::Grabber</para>
+<para>
+    <figure>
+        <title>Collaboration graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="classChipChipArray_1_1Grabber__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <simplesect>
+            <title>Private Attributes</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>const uint32 MIN_HALF_BLOCK_SIZE</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>uint8 invokeCount</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>std::map&lt; Color, std::array&lt; cv::Scalar, 2 &gt; &gt; rangeVals</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>PiCamera cam</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static Log log</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="classChipChipArray_1_1Grabber_1a7333f40c135fbe92d59651f75032b4e7">Grabber</link> (
+<link linkend="definitions_8hpp_1adbd1e7a33d3e1751c7b2aa2562d0ecb9">Zone</link> zone, <link linkend="definitions_8hpp_1a03325a8a9d4f105db5e37dd587128142">Side</link> side)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="classChipChipArray_1_1Grabber_1a0fe4bfbb6e479006a584f50cac0b5d5d">~Grabber</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="definitions_8hpp_1ab84ebabb02540c4a7ec341a213abf1dc">Result</link> <link linkend="classChipChipArray_1_1Grabber_1a56639f8f9ba9468bce4b6d69ceb2eb54">Load</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classChipChipArray_1_1Grabber_1aacf089ceb4aa5b263c2cc702fb3daf74">Close</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="classChipChipArray_1_1Block">Block</link> <link linkend="classChipChipArray_1_1Grabber_1a86bc18ecf71c7ff4e324df0467af124a">LocateBlock</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title></title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classChipChipArray_1_1Grabber_1a09f89b79e745db18009a022e9bfacd3a">Discard</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classChipChipArray_1_1Grabber_1abecb4047b4f7d5a7e691b7fb581b5a39">Extend</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool <link linkend="classChipChipArray_1_1Grabber_1ae52cf94210d8a5f468c08e59737518c4">FindBlock</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="definitions_8hpp_1abc05a0f46084a3477cf5d5c939ff1436">Color</link> <link linkend="classChipChipArray_1_1Grabber_1a8ddc7def90b874885b2745034b5677df">FindColor</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="definitions_8hpp_1a9809446fd16a744b6df9808293f14153">Size</link> <link linkend="classChipChipArray_1_1Grabber_1a7262ce7fd6d4cc2f0210fcc9cafdd840">FindSize</link> (
+)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classChipChipArray_1_1Grabber_1a0a8a57e44f291581ab2862272134a592">Grab</link> (
+<link linkend="definitions_8hpp_1ac8e1b1f4bbac5914204c97f66f97d01f">BlockPosition</link> pos)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classChipChipArray_1_1Grabber_1a2833eebf4e57078c0d677379babfd2d4">Place</link> (
+<link linkend="definitions_8hpp_1abc05a0f46084a3477cf5d5c939ff1436">Color</link> color)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="classChipChipArray_1_1Grabber_1a817de2b1ac4208fcbe983e919cede265">Place</link> (
+<link linkend="definitions_8hpp_1abc05a0f46084a3477cf5d5c939ff1436">Color</link> color, <link linkend="definitions_8hpp_1ac8e1b1f4bbac5914204c97f66f97d01f">BlockPosition</link> pos)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </simplesect>
+        <simplesect>
+            <title>Detailed Description</title>
+
+<para>This class finds blocks, identifies them, and sorts them according to color, size, and zone. </para>
+                <para>Definition at line 19 of file Grabber.hpp</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>Grabber.hpp</para></listitem></itemizedlist></para>
+        </simplesect>
+            <simplesect>
+                <title>Log ChipChipArray::Grabber::log</title>                
+<para>need this to prevent linker errors </para>
+
+                <para>Definition at line 136 of file Grabber.hpp</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>Grabber.hpp</para></listitem></itemizedlist></para>
+            </simplesect>
+            <section xml:id="classChipChipArray_1_1Grabber_1a7333f40c135fbe92d59651f75032b4e7">
+                <title>ChipChipArray::Grabber::Grabber (Zone zone, Side side)</title> <emphasis></emphasis>
+                
+<para>Initializes the class according to the side and zone and extends the robotic arm into position.</para>
+
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>zone</entry>
+                                <entry>
+<para>the zone (A, B, or C) for which to pick up blocks.</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>side</entry>
+                                <entry>
+<para>the side from which the robot is moving and the position of the blocks (right or left) in the view of the camera to pick up first </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="classChipChipArray_1_1Grabber_1a0fe4bfbb6e479006a584f50cac0b5d5d">
+                <title>ChipChipArray::Grabber::~Grabber ()</title> <emphasis></emphasis>
+                
+<para>Destructs the class and retracts the arm. </para>
+
+            </section>
+            <section xml:id="classChipChipArray_1_1Grabber_1a56639f8f9ba9468bce4b6d69ceb2eb54">
+                <title>Result ChipChipArray::Grabber::Load ()</title> <emphasis></emphasis>
+                
+<para>Loads a block(s) (if possible) at the robot&apos;s current position.</para>
+
+<para><formalpara><title>Returns: </title>
+
+<para>the number of half and whole blocks loaded </para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="classChipChipArray_1_1Grabber_1aacf089ceb4aa5b263c2cc702fb3daf74">
+                <title>void ChipChipArray::Grabber::Close ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classChipChipArray_1_1Grabber_1a86bc18ecf71c7ff4e324df0467af124a">
+                <title>Block ChipChipArray::Grabber::LocateBlock ()</title> <emphasis></emphasis>
+                
+            </section>
+            <section xml:id="classChipChipArray_1_1Grabber_1a09f89b79e745db18009a022e9bfacd3a">
+                <title>void ChipChipArray::Grabber::Discard ()</title> <emphasis></emphasis>
+                
+<para>Takes block currently in the arm&apos;s pinchers and places to side of robot opposite the loading zone. </para>
+
+            </section>
+            <section xml:id="classChipChipArray_1_1Grabber_1abecb4047b4f7d5a7e691b7fb581b5a39">
+                <title>void ChipChipArray::Grabber::Extend ()</title> <emphasis></emphasis>
+                
+<para>Sets arm to generic position roughly right above a stack of blocks. </para>
+
+            </section>
+            <section xml:id="classChipChipArray_1_1Grabber_1ae52cf94210d8a5f468c08e59737518c4">
+                <title>bool ChipChipArray::Grabber::FindBlock ()</title> <emphasis></emphasis>
+                
+<para>Whether there is little doubt that a block is within reach based on the image from the camera.</para>
+
+<para><formalpara><title>Returns: </title>
+
+<para>if a block is within reach </para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="classChipChipArray_1_1Grabber_1a8ddc7def90b874885b2745034b5677df">
+                <title>Color ChipChipArray::Grabber::FindColor ()</title> <emphasis></emphasis>
+                
+<para>Examines block in pinchers for a definite color and returns most likely Color. For Zones B and C only.</para>
+
+<para><formalpara><title>Returns: </title>
+
+<para>the Color of the current block </para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="classChipChipArray_1_1Grabber_1a7262ce7fd6d4cc2f0210fcc9cafdd840">
+                <title>Size ChipChipArray::Grabber::FindSize ()</title> <emphasis></emphasis>
+                
+<para>Determines if block is short or long. It is assumed to be long if there is uncertainty. Zone B only.</para>
+
+<para><formalpara><title>Returns: </title>
+
+<para>the Size of the current block </para>
+</formalpara>
+</para>
+
+            </section>
+            <section xml:id="classChipChipArray_1_1Grabber_1a0a8a57e44f291581ab2862272134a592">
+                <title>void ChipChipArray::Grabber::Grab (BlockPosition pos)</title> <emphasis></emphasis>
+                
+<para>Picks up block by ezaming how much it fills up the camera image and where its edges are. It is then decided where to grab the block, and the block is picked up.</para>
+
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>pos</entry>
+                                <entry>
+<para>whether the (half-)block is closer to the robot (FRONT) or farther away (BACK). </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="classChipChipArray_1_1Grabber_1a2833eebf4e57078c0d677379babfd2d4">
+                <title>void ChipChipArray::Grabber::Place (Color color)</title> <emphasis></emphasis>
+                
+<para>Puts block in slot according to color. Zones B and C only.</para>
+
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>the</entry>
+                                <entry>
+<para>slot into which to place the block </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+            <section xml:id="classChipChipArray_1_1Grabber_1a817de2b1ac4208fcbe983e919cede265">
+                <title>void ChipChipArray::Grabber::Place (Color color, BlockPosition pos)</title> <emphasis></emphasis>
+                
+<para>Puts half-blocks in the unloader according to whether there is already a half-block in the corresponding slot. Zone B only.</para>
+
+<para>
+                <formalpara>
+                    <title/>
+                    <table frame="all">
+                        <title>Parameters                        </title>
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <tbody>
+                            <row>
+                                <entry>color</entry>
+                                <entry>
+<para>the slot into which to place the block</para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>pos</entry>
+                                <entry>
+<para>the block position (FRONT/BACK). BACK denotes there is already a half-block stored in the slot, as the FRONT blocks are picked up first. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                </formalpara>
+                </para>
+
+            </section>
+</section>

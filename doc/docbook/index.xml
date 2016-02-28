@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<book xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <info>
+    <title>My Project</title>
+    </info>
+    <chapter>
+        <title>Namespace Documentation</title>
+        <xi:include href="namespaceChipChipArray.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="namespacecv.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="namespacestd.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="namespacezbar.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    </chapter>
+    <chapter>
+        <title>Class Documentation</title>
+        <xi:include href="classAdafruit__PWMServoDriver.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="classChipChipArray_1_1Block.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="classChipChipArray_1_1Grabber.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="classChipChipArray_1_1Log.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="classChipChipArray_1_1PiCamera.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    </chapter>
+    <chapter>
+        <title>File Documentation</title>
+        <xi:include href="doxygen_8config.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="makefile.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="Adafruit__PWMServoDriver_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="Adafruit__PWMServoDriver_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="Block_8hpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="cv__hue_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="cv__shape_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="cv__test_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="definitions_8hpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="Grabber_8hpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="Log_8hpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="log__test_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="main_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="net__qr__test_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="old__cv__test_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="PiCamera_8hpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="qr__test_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="ScanQR_8hpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="Servo__Position__Shell_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="Servo__Position__Shell_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    </chapter>
+    <chapter>
+        <title>Directory Documentation</title>
+        <xi:include href="dir_34c6163d67acbbcfc56107279c411fb1.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="dir_68267d1309a1af8e8297ef4c3efbcdba.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    </chapter>
+</book>

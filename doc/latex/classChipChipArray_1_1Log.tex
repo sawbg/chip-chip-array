@@ -1,0 +1,268 @@
+\hypertarget{classChipChipArray_1_1Log}{\section{Chip\+Chip\+Array\+:\+:Log Class Reference}
+\label{classChipChipArray_1_1Log}\index{Chip\+Chip\+Array\+::\+Log@{Chip\+Chip\+Array\+::\+Log}}
+}
+
+
+{\ttfamily \#include $<$Log.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classChipChipArray_1_1Log_a2bd48afdb832567e94545e6dc2f6f4d5}{Log} ()
+\item 
+\hyperlink{classChipChipArray_1_1Log_a4cd28a821789b39e936a6e346329d65b}{Log} (auto dir, \hyperlink{definitions_8hpp_aa7380b6d694cab49f07aed6a7af592d9}{Log\+Mode} mode=\hyperlink{definitions_8hpp_aa7380b6d694cab49f07aed6a7af592d9a9dffbf69ffba8bc38bc4e01abf4b1675}{Log\+Mode\+::\+Text})
+\item 
+\hyperlink{classChipChipArray_1_1Log_a647df4da22b29d9d5a5ea32af3a1ed83}{$\sim$\+Log} ()
+\item 
+void \hyperlink{classChipChipArray_1_1Log_ac32b435af1577e4ebc67af2bdfea8eff}{Debug} (auto mesg)
+\item 
+void \hyperlink{classChipChipArray_1_1Log_aba7b7b0555f49f4dcf15f4b9fd3e6b34}{Error} (auto mesg)
+\item 
+void \hyperlink{classChipChipArray_1_1Log_a65bbab057c8b1453f9e4efcfee7522c4}{Image} (cv\+::\+Mat image, auto filename)
+\item 
+void \hyperlink{classChipChipArray_1_1Log_ad27a06a4561f2f59159bd8a7fc2fed3b}{Open} (auto dir, \hyperlink{definitions_8hpp_aa7380b6d694cab49f07aed6a7af592d9}{Log\+Mode} mode=\hyperlink{definitions_8hpp_aa7380b6d694cab49f07aed6a7af592d9a9dffbf69ffba8bc38bc4e01abf4b1675}{Log\+Mode\+::\+Text})
+\item 
+void \hyperlink{classChipChipArray_1_1Log_a66575b6e94c6112e4cefa5736cb996e0}{Status} (auto mesg)
+\item 
+void \hyperlink{classChipChipArray_1_1Log_a8849569720c26e335e7ef4dcb912170b}{Variable} (auto name, auto value)
+\item 
+void \hyperlink{classChipChipArray_1_1Log_a154a5f38d9c7a767693b242684a3d4d9}{Verbose} (auto mesg)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class logs the text and images passed to it to specificed directory.
+
+A \char`\"{}container\char`\"{} directory to which the class can write is passed in the constructor. When the \hyperlink{classChipChipArray_1_1Log}{Log} is initialized with \hyperlink{definitions_8hpp_aa7380b6d694cab49f07aed6a7af592d9a9dffbf69ffba8bc38bc4e01abf4b1675}{Log\+Mode\+::\+Text}, a new log file is created with a filename based on the time of initialization in the given directory. When initialized in \hyperlink{definitions_8hpp_aa7380b6d694cab49f07aed6a7af592d9ace7898536dd0e928d1640ee2ad531cc8}{Log\+Mode\+::\+Multi}, it will create a subdirectory in the given directory with a name based on time. In this new directory, a log file will be created. Images may later be stored in this directory with names based on the order in which they were saved.
+
+This class D\+O\+E\+S N\+O\+T W\+O\+R\+K without compiling without a \char`\"{}\+L\+O\+G\char`\"{} definition (\#define L\+O\+G or -\/\+D\+L\+O\+G). 
+
+Definition at line 29 of file Log.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classChipChipArray_1_1Log_a2bd48afdb832567e94545e6dc2f6f4d5}{\index{Chip\+Chip\+Array\+::\+Log@{Chip\+Chip\+Array\+::\+Log}!Log@{Log}}
+\index{Log@{Log}!Chip\+Chip\+Array\+::\+Log@{Chip\+Chip\+Array\+::\+Log}}
+\subsubsection[{Log}]{\setlength{\rightskip}{0pt plus 5cm}Chip\+Chip\+Array\+::\+Log\+::\+Log (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classChipChipArray_1_1Log_a2bd48afdb832567e94545e6dc2f6f4d5}
+Initializes \hyperlink{classChipChipArray_1_1Log}{Log} object but does not open log. \hyperlink{classChipChipArray_1_1Log_ad27a06a4561f2f59159bd8a7fc2fed3b}{Open()} must be called. 
+
+Definition at line 35 of file Log.\+hpp.
+
+\hypertarget{classChipChipArray_1_1Log_a4cd28a821789b39e936a6e346329d65b}{\index{Chip\+Chip\+Array\+::\+Log@{Chip\+Chip\+Array\+::\+Log}!Log@{Log}}
+\index{Log@{Log}!Chip\+Chip\+Array\+::\+Log@{Chip\+Chip\+Array\+::\+Log}}
+\subsubsection[{Log}]{\setlength{\rightskip}{0pt plus 5cm}Chip\+Chip\+Array\+::\+Log\+::\+Log (
+\begin{DoxyParamCaption}
+\item[{auto}]{dir, }
+\item[{{\bf Log\+Mode}}]{mode = {\ttfamily {\bf Log\+Mode\+::\+Text}}}
+\end{DoxyParamCaption}
+)}}\label{classChipChipArray_1_1Log_a4cd28a821789b39e936a6e346329d65b}
+Initializes the \hyperlink{classChipChipArray_1_1Log}{Log}.
+
+A new log file is created in dir if \hyperlink{definitions_8hpp_aa7380b6d694cab49f07aed6a7af592d9a9dffbf69ffba8bc38bc4e01abf4b1675}{Log\+Mode\+::\+Text} is given. The file will have a name based on the current date and time. If \hyperlink{definitions_8hpp_aa7380b6d694cab49f07aed6a7af592d9ace7898536dd0e928d1640ee2ad531cc8}{Log\+Mode\+::\+Multi} is given, a new directory is created, and a log file with a name based on the current date and time is created inside it.
+
+
+\begin{DoxyParams}{Parameters}
+{\em dir} & the directory for the newly created logfile/folder\\
+\hline
+{\em mode} & the Log\+Mode \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 181 of file Log.\+hpp.
+
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{classChipChipArray_1_1Log_a647df4da22b29d9d5a5ea32af3a1ed83}{\index{Chip\+Chip\+Array\+::\+Log@{Chip\+Chip\+Array\+::\+Log}!````~Log@{$\sim$\+Log}}
+\index{````~Log@{$\sim$\+Log}!Chip\+Chip\+Array\+::\+Log@{Chip\+Chip\+Array\+::\+Log}}
+\subsubsection[{$\sim$\+Log}]{\setlength{\rightskip}{0pt plus 5cm}Chip\+Chip\+Array\+::\+Log\+::$\sim$\+Log (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classChipChipArray_1_1Log_a647df4da22b29d9d5a5ea32af3a1ed83}
+Destroys the \hyperlink{classChipChipArray_1_1Log}{Log} and closes the logfile. 
+
+Definition at line 187 of file Log.\+hpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classChipChipArray_1_1Log_ac32b435af1577e4ebc67af2bdfea8eff}{\index{Chip\+Chip\+Array\+::\+Log@{Chip\+Chip\+Array\+::\+Log}!Debug@{Debug}}
+\index{Debug@{Debug}!Chip\+Chip\+Array\+::\+Log@{Chip\+Chip\+Array\+::\+Log}}
+\subsubsection[{Debug}]{\setlength{\rightskip}{0pt plus 5cm}void Chip\+Chip\+Array\+::\+Log\+::\+Debug (
+\begin{DoxyParamCaption}
+\item[{auto}]{mesg}
+\end{DoxyParamCaption}
+)}}\label{classChipChipArray_1_1Log_ac32b435af1577e4ebc67af2bdfea8eff}
+Writes \char`\"{}\+D\+E\+B\+U\+G\+: \char`\"{} to the log file along with the message passed. Should be used for generic debugging information. If recording the value of a variable in the \hyperlink{classChipChipArray_1_1Log}{Log} is desired, use the function \hyperlink{classChipChipArray_1_1Log_a8849569720c26e335e7ef4dcb912170b}{Variable()} instead.
+
+
+\begin{DoxyParams}{Parameters}
+{\em mesg} & the message to record in the logfile \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 199 of file Log.\+hpp.
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classChipChipArray_1_1Log_aba7b7b0555f49f4dcf15f4b9fd3e6b34}{\index{Chip\+Chip\+Array\+::\+Log@{Chip\+Chip\+Array\+::\+Log}!Error@{Error}}
+\index{Error@{Error}!Chip\+Chip\+Array\+::\+Log@{Chip\+Chip\+Array\+::\+Log}}
+\subsubsection[{Error}]{\setlength{\rightskip}{0pt plus 5cm}void Chip\+Chip\+Array\+::\+Log\+::\+Error (
+\begin{DoxyParamCaption}
+\item[{auto}]{mesg}
+\end{DoxyParamCaption}
+)}}\label{classChipChipArray_1_1Log_aba7b7b0555f49f4dcf15f4b9fd3e6b34}
+Writes \char`\"{}\+E\+R\+R\+O\+R\+: \char`\"{} to the log file. Should only be use when an exception is thrown.
+
+
+\begin{DoxyParams}{Parameters}
+{\em mesg} & the message to record in the log \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 210 of file Log.\+hpp.
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classChipChipArray_1_1Log_a65bbab057c8b1453f9e4efcfee7522c4}{\index{Chip\+Chip\+Array\+::\+Log@{Chip\+Chip\+Array\+::\+Log}!Image@{Image}}
+\index{Image@{Image}!Chip\+Chip\+Array\+::\+Log@{Chip\+Chip\+Array\+::\+Log}}
+\subsubsection[{Image}]{\setlength{\rightskip}{0pt plus 5cm}void Chip\+Chip\+Array\+::\+Log\+::\+Image (
+\begin{DoxyParamCaption}
+\item[{cv\+::\+Mat}]{image, }
+\item[{auto}]{filename}
+\end{DoxyParamCaption}
+)}}\label{classChipChipArray_1_1Log_a65bbab057c8b1453f9e4efcfee7522c4}
+Creates a bitmap image in the subdirectory created by the \hyperlink{classChipChipArray_1_1Log}{Log} during initialization. Does nothing if \hyperlink{definitions_8hpp_aa7380b6d694cab49f07aed6a7af592d9a9dffbf69ffba8bc38bc4e01abf4b1675}{Log\+Mode\+::\+Text} was passed in the constructor.
+
+
+\begin{DoxyParams}{Parameters}
+{\em image} & the image to save \\
+\hline
+{\em filename} & the filename for the saved image \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 221 of file Log.\+hpp.
+
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classChipChipArray_1_1Log_ad27a06a4561f2f59159bd8a7fc2fed3b}{\index{Chip\+Chip\+Array\+::\+Log@{Chip\+Chip\+Array\+::\+Log}!Open@{Open}}
+\index{Open@{Open}!Chip\+Chip\+Array\+::\+Log@{Chip\+Chip\+Array\+::\+Log}}
+\subsubsection[{Open}]{\setlength{\rightskip}{0pt plus 5cm}void Chip\+Chip\+Array\+::\+Log\+::\+Open (
+\begin{DoxyParamCaption}
+\item[{auto}]{dir, }
+\item[{{\bf Log\+Mode}}]{mode = {\ttfamily {\bf Log\+Mode\+::\+Text}}}
+\end{DoxyParamCaption}
+)}}\label{classChipChipArray_1_1Log_ad27a06a4561f2f59159bd8a7fc2fed3b}
+
+
+Definition at line 241 of file Log.\+hpp.
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classChipChipArray_1_1Log_a66575b6e94c6112e4cefa5736cb996e0}{\index{Chip\+Chip\+Array\+::\+Log@{Chip\+Chip\+Array\+::\+Log}!Status@{Status}}
+\index{Status@{Status}!Chip\+Chip\+Array\+::\+Log@{Chip\+Chip\+Array\+::\+Log}}
+\subsubsection[{Status}]{\setlength{\rightskip}{0pt plus 5cm}void Chip\+Chip\+Array\+::\+Log\+::\+Status (
+\begin{DoxyParamCaption}
+\item[{auto}]{mesg}
+\end{DoxyParamCaption}
+)}}\label{classChipChipArray_1_1Log_a66575b6e94c6112e4cefa5736cb996e0}
+Writes \char`\"{}\+S\+T\+A\+T\+U\+S\+: \char`\"{} to the log file. Should be used when recording the status or state of the program. It should not be used to record microalgorithmic changes. Use \hyperlink{classChipChipArray_1_1Log_a154a5f38d9c7a767693b242684a3d4d9}{Verbose()} for these instead.
+
+
+\begin{DoxyParams}{Parameters}
+{\em mesg} & the message to record in the logfile \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 284 of file Log.\+hpp.
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classChipChipArray_1_1Log_a8849569720c26e335e7ef4dcb912170b}{\index{Chip\+Chip\+Array\+::\+Log@{Chip\+Chip\+Array\+::\+Log}!Variable@{Variable}}
+\index{Variable@{Variable}!Chip\+Chip\+Array\+::\+Log@{Chip\+Chip\+Array\+::\+Log}}
+\subsubsection[{Variable}]{\setlength{\rightskip}{0pt plus 5cm}void Chip\+Chip\+Array\+::\+Log\+::\+Variable (
+\begin{DoxyParamCaption}
+\item[{auto}]{name, }
+\item[{auto}]{value}
+\end{DoxyParamCaption}
+)}}\label{classChipChipArray_1_1Log_a8849569720c26e335e7ef4dcb912170b}
+Writes \char`\"{}\+V\+A\+R\+I\+A\+B\+L\+E\+: \char`\"{} to the log file. Should be used whenever recording the value of a variable is desired.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & the variable name to record \\
+\hline
+{\em value} & the variable value to record \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 295 of file Log.\+hpp.
+
+
+
+Here is the caller graph for this function\+:
+
+
+\hypertarget{classChipChipArray_1_1Log_a154a5f38d9c7a767693b242684a3d4d9}{\index{Chip\+Chip\+Array\+::\+Log@{Chip\+Chip\+Array\+::\+Log}!Verbose@{Verbose}}
+\index{Verbose@{Verbose}!Chip\+Chip\+Array\+::\+Log@{Chip\+Chip\+Array\+::\+Log}}
+\subsubsection[{Verbose}]{\setlength{\rightskip}{0pt plus 5cm}void Chip\+Chip\+Array\+::\+Log\+::\+Verbose (
+\begin{DoxyParamCaption}
+\item[{auto}]{mesg}
+\end{DoxyParamCaption}
+)}}\label{classChipChipArray_1_1Log_a154a5f38d9c7a767693b242684a3d4d9}
+Writes \char`\"{}\+V\+E\+R\+B\+O\+S\+E\+: \char`\"{} to the log file. Should only be used for recording small, specific portions of code. To record a change in the more general state of the program, use \hyperlink{classChipChipArray_1_1Log_a66575b6e94c6112e4cefa5736cb996e0}{Status()} instead.
+
+
+\begin{DoxyParams}{Parameters}
+{\em mesg} & the message to record in the logfile \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 307 of file Log.\+hpp.
+
+
+
+Here is the caller graph for this function\+:
+
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{Log_8hpp}{Log.\+hpp}\end{DoxyCompactItemize}

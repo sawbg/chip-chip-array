@@ -1,0 +1,64 @@
+\hypertarget{namespaceChipChipArray}{\section{Chip\+Chip\+Array Namespace Reference}
+\label{namespaceChipChipArray}\index{Chip\+Chip\+Array@{Chip\+Chip\+Array}}
+}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classChipChipArray_1_1Block}{Block}
+\item 
+class \hyperlink{classChipChipArray_1_1Grabber}{Grabber}
+\item 
+class \hyperlink{classChipChipArray_1_1Log}{Log}
+\item 
+class \hyperlink{classChipChipArray_1_1PiCamera}{Pi\+Camera}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{namespaceChipChipArray_a7fc3d1edffca11531cd09fdab7c8b88d}{main} (int argc, char $\ast$$\ast$argv)
+\item 
+\hyperlink{definitions_8hpp_abc05a0f46084a3477cf5d5c939ff1436}{Color} \hyperlink{namespaceChipChipArray_a6c7465049b5d408e1a238b6d8ffa887d}{Scan\+Q\+R} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{namespaceChipChipArray_a7fc3d1edffca11531cd09fdab7c8b88d}{\index{Chip\+Chip\+Array@{Chip\+Chip\+Array}!main@{main}}
+\index{main@{main}!Chip\+Chip\+Array@{Chip\+Chip\+Array}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int Chip\+Chip\+Array\+::main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}}\label{namespaceChipChipArray_a7fc3d1edffca11531cd09fdab7c8b88d}
+This program was used before \hyperlink{cv__shape_8cpp}{cv\+\_\+shape.\+cpp} was written to find H\+S\+V ranges for the different color blocks. This is a slightly modified version of some code written by Shermal Fernando in the blog post \char`\"{}\+Color Detection \& Object Tracking\char`\"{} at \href{http://opencv-srf.blogspot.com/2010/09/object-detection-using-color-seperation.html}{\tt http\+://opencv-\/srf.\+blogspot.\+com/2010/09/object-\/detection-\/using-\/color-\/seperation.\+html}". 
+
+Definition at line 20 of file cv\+\_\+hue.\+cpp.
+
+
+
+Here is the call graph for this function\+:
+
+
+\hypertarget{namespaceChipChipArray_a6c7465049b5d408e1a238b6d8ffa887d}{\index{Chip\+Chip\+Array@{Chip\+Chip\+Array}!Scan\+Q\+R@{Scan\+Q\+R}}
+\index{Scan\+Q\+R@{Scan\+Q\+R}!Chip\+Chip\+Array@{Chip\+Chip\+Array}}
+\subsubsection[{Scan\+Q\+R}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Color} Chip\+Chip\+Array\+::\+Scan\+Q\+R (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{namespaceChipChipArray_a6c7465049b5d408e1a238b6d8ffa887d}
+This function manuvers arm to look at the Q\+R code on a train car as the robot is backing up to the car. It attempts to find the code in multiple images before finally throwing an exeption if a code is not found. If multiple codes are found, it returns a single Color by (seemingly) arbitrary decision.
+
+This function is based on code written by Michael Young (\href{https://github.com/ayoungprogrammer/WebcamCodeScanner}{\tt https\+://github.\+com/ayoungprogrammer/\+Webcam\+Code\+Scanner}). 
+
+Definition at line 24 of file Scan\+Q\+R.\+hpp.
+
+
+
+Here is the call graph for this function\+:
+
+
+
+
+Here is the caller graph for this function\+:
+
+

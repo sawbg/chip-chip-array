@@ -1,0 +1,316 @@
+\hypertarget{definitions_8hpp}{\section{src/definitions.hpp File Reference}
+\label{definitions_8hpp}\index{src/definitions.\+hpp@{src/definitions.\+hpp}}
+}
+This graph shows which files directly or indirectly include this file\+:
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespacestd}{std}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{definitions_8hpp_a378181c29a641d58f55d647b5a9599f2}{E\+N\+U\+M}~signed char
+\item 
+\#define \hyperlink{definitions_8hpp_a8fe83ac76edc595f6b98cd4a4127aed5}{E\+R\+R\+O\+R}~-\/1
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef unsigned char \hyperlink{definitions_8hpp_a0c8186d9b9b7880309c27230bbb5e69d}{byte}
+\item 
+typedef unsigned char \hyperlink{definitions_8hpp_adde6aaee8457bee49c2a92621fe22b79}{uint8}
+\item 
+typedef signed char \hyperlink{definitions_8hpp_a1a6408291ee3cfd0760a61ac64084154}{sint8}
+\item 
+typedef unsigned short \hyperlink{definitions_8hpp_a05f6b0ae8f6a6e135b0e290c25fe0e4e}{uint16}
+\item 
+typedef signed short \hyperlink{definitions_8hpp_a74df79fde3c518e55b29ce6360a9c76e}{sint16}
+\item 
+typedef unsigned int \hyperlink{definitions_8hpp_a1134b580f8da4de94ca6b1de4d37975e}{uint32}
+\item 
+typedef signed int \hyperlink{definitions_8hpp_a0573de65958b4fda3a0460ed417dafb8}{sint32}
+\item 
+typedef unsigned long long \hyperlink{definitions_8hpp_a29940ae63ec06c9998bba873e25407ad}{uint64}
+\item 
+typedef signed long long \hyperlink{definitions_8hpp_ad91d7e42d1c1abce1d9eeacd54cc0497}{sint64}
+\item 
+typedef float \hyperlink{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{float32}
+\item 
+typedef double \hyperlink{definitions_8hpp_a232fad1b0d6dcc7c16aabde98b2e2a80}{float64}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{definitions_8hpp_ac8e1b1f4bbac5914204c97f66f97d01f}{Block\+Position} \+: E\+N\+U\+M \{ \hyperlink{definitions_8hpp_ac8e1b1f4bbac5914204c97f66f97d01fa5835bab1ade0060909e31a06af2e2cde}{Block\+Position\+::\+Front}, 
+\hyperlink{definitions_8hpp_ac8e1b1f4bbac5914204c97f66f97d01fa0557fa923dcee4d0f86b1409f5c2167f}{Block\+Position\+::\+Back}
+ \}
+\item 
+enum \hyperlink{definitions_8hpp_abc05a0f46084a3477cf5d5c939ff1436}{Color} \+: E\+N\+U\+M \{ \hyperlink{definitions_8hpp_abc05a0f46084a3477cf5d5c939ff1436aee38e4d5dd68c4e440825018d549cb47}{Color\+::\+Red}, 
+\hyperlink{definitions_8hpp_abc05a0f46084a3477cf5d5c939ff1436a51e6cd92b6c45f9affdc158ecca2b8b8}{Color\+::\+Yellow}, 
+\hyperlink{definitions_8hpp_abc05a0f46084a3477cf5d5c939ff1436ad382816a3cbeed082c9e216e7392eed1}{Color\+::\+Green}, 
+\hyperlink{definitions_8hpp_abc05a0f46084a3477cf5d5c939ff1436a9594eec95be70e7b1710f730fdda33d9}{Color\+::\+Blue}
+ \}
+\item 
+enum \hyperlink{definitions_8hpp_aa7380b6d694cab49f07aed6a7af592d9}{Log\+Mode} \+: E\+N\+U\+M \{ \hyperlink{definitions_8hpp_aa7380b6d694cab49f07aed6a7af592d9a9dffbf69ffba8bc38bc4e01abf4b1675}{Log\+Mode\+::\+Text}, 
+\hyperlink{definitions_8hpp_aa7380b6d694cab49f07aed6a7af592d9ace7898536dd0e928d1640ee2ad531cc8}{Log\+Mode\+::\+Multi}
+ \}
+\item 
+enum \hyperlink{definitions_8hpp_ab84ebabb02540c4a7ec341a213abf1dc}{Result} \+: E\+N\+U\+M \{ \hyperlink{definitions_8hpp_ab84ebabb02540c4a7ec341a213abf1dca32075034997ab91e886dbcad47ed902d}{Result\+::\+No\+\_\+\+Blocks} = -\/1, 
+\hyperlink{definitions_8hpp_ab84ebabb02540c4a7ec341a213abf1dcabdf267b7c95f2ffd040b32d8b005e9a0}{Result\+::\+No\+\_\+\+Halves} = 0, 
+\hyperlink{definitions_8hpp_ab84ebabb02540c4a7ec341a213abf1dca5b00716e5e6f2e2dc1b10ffed2e0ef6d}{Result\+::\+Two\+\_\+\+Halves} = 2, 
+\hyperlink{definitions_8hpp_ab84ebabb02540c4a7ec341a213abf1dca01f87e08f72dd8784d0665346a006fa3}{Result\+::\+Four\+\_\+\+Halves} = 4
+ \}
+\item 
+enum \hyperlink{definitions_8hpp_a03325a8a9d4f105db5e37dd587128142}{Side} \+: E\+N\+U\+M \{ \hyperlink{definitions_8hpp_a03325a8a9d4f105db5e37dd587128142a945d5e233cf7d6240f6b783b36a374ff}{Side\+::\+Left}, 
+\hyperlink{definitions_8hpp_a03325a8a9d4f105db5e37dd587128142a92b09c7c48c520c3c55e497875da437c}{Side\+::\+Right}
+ \}
+\item 
+enum \hyperlink{definitions_8hpp_a9809446fd16a744b6df9808293f14153}{Size} \+: E\+N\+U\+M \{ \hyperlink{definitions_8hpp_a9809446fd16a744b6df9808293f14153a30bb747c98bccdd11b3f89e644c4d0ad}{Size\+::\+Short}, 
+\hyperlink{definitions_8hpp_a9809446fd16a744b6df9808293f14153a8394f0347c184cf156ac5924dccb773b}{Size\+::\+Long}
+ \}
+\item 
+enum \hyperlink{definitions_8hpp_adbd1e7a33d3e1751c7b2aa2562d0ecb9}{Zone} \+: E\+N\+U\+M \{ \hyperlink{definitions_8hpp_adbd1e7a33d3e1751c7b2aa2562d0ecb9a7fc56270e7a70fa81a5935b72eacbe29}{Zone\+::\+A} = 'A', 
+\hyperlink{definitions_8hpp_adbd1e7a33d3e1751c7b2aa2562d0ecb9a9d5ed678fe57bcca610140957afab571}{Zone\+::\+B} = 'B', 
+\hyperlink{definitions_8hpp_adbd1e7a33d3e1751c7b2aa2562d0ecb9a0d61f8370cad1d412f80b84d143e1257}{Zone\+::\+C} = 'C'
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{namespacestd_aa5ddf582a1c96ffe258c997be9a294a3}{std\+::to\+\_\+string} (\hyperlink{definitions_8hpp_ac8e1b1f4bbac5914204c97f66f97d01f}{Block\+Position} pos)
+\item 
+string \hyperlink{namespacestd_a6a0c3c323562edbd2f57da3d2bb74326}{std\+::to\+\_\+string} (\hyperlink{definitions_8hpp_abc05a0f46084a3477cf5d5c939ff1436}{Color} color)
+\item 
+string \hyperlink{namespacestd_adb24d6df94a83c325573f7710df84953}{std\+::to\+\_\+string} (\hyperlink{definitions_8hpp_aa7380b6d694cab49f07aed6a7af592d9}{Log\+Mode} mode)
+\item 
+string \hyperlink{namespacestd_a7fb649b1361ca7d95cc74045c0dadcdd}{std\+::to\+\_\+string} (\hyperlink{definitions_8hpp_ab84ebabb02540c4a7ec341a213abf1dc}{Result} res)
+\item 
+string \hyperlink{namespacestd_aae21fd95009e4cc9fa25e1ad3830980b}{std\+::to\+\_\+string} (\hyperlink{definitions_8hpp_a03325a8a9d4f105db5e37dd587128142}{Side} side)
+\item 
+string \hyperlink{namespacestd_a6bfcd2c3377165652c64085d7acb5c64}{std\+::to\+\_\+string} (\hyperlink{definitions_8hpp_a9809446fd16a744b6df9808293f14153}{Size} size)
+\item 
+string \hyperlink{namespacestd_ac50951e195256b4c2311f90189f64ba8}{std\+::to\+\_\+string} (\hyperlink{definitions_8hpp_adbd1e7a33d3e1751c7b2aa2562d0ecb9}{Zone} zone)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{definitions_8hpp_a378181c29a641d58f55d647b5a9599f2}{\index{definitions.\+hpp@{definitions.\+hpp}!E\+N\+U\+M@{E\+N\+U\+M}}
+\index{E\+N\+U\+M@{E\+N\+U\+M}!definitions.\+hpp@{definitions.\+hpp}}
+\subsubsection[{E\+N\+U\+M}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+N\+U\+M~signed char}}\label{definitions_8hpp_a378181c29a641d58f55d647b5a9599f2}
+
+
+Definition at line 4 of file definitions.\+hpp.
+
+\hypertarget{definitions_8hpp_a8fe83ac76edc595f6b98cd4a4127aed5}{\index{definitions.\+hpp@{definitions.\+hpp}!E\+R\+R\+O\+R@{E\+R\+R\+O\+R}}
+\index{E\+R\+R\+O\+R@{E\+R\+R\+O\+R}!definitions.\+hpp@{definitions.\+hpp}}
+\subsubsection[{E\+R\+R\+O\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+R\+R\+O\+R~-\/1}}\label{definitions_8hpp_a8fe83ac76edc595f6b98cd4a4127aed5}
+
+
+Definition at line 5 of file definitions.\+hpp.
+
+
+
+\subsection{Typedef Documentation}
+\hypertarget{definitions_8hpp_a0c8186d9b9b7880309c27230bbb5e69d}{\index{definitions.\+hpp@{definitions.\+hpp}!byte@{byte}}
+\index{byte@{byte}!definitions.\+hpp@{definitions.\+hpp}}
+\subsubsection[{byte}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned char {\bf byte}}}\label{definitions_8hpp_a0c8186d9b9b7880309c27230bbb5e69d}
+
+
+Definition at line 7 of file definitions.\+hpp.
+
+\hypertarget{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}{\index{definitions.\+hpp@{definitions.\+hpp}!float32@{float32}}
+\index{float32@{float32}!definitions.\+hpp@{definitions.\+hpp}}
+\subsubsection[{float32}]{\setlength{\rightskip}{0pt plus 5cm}typedef float {\bf float32}}}\label{definitions_8hpp_aacdc525d6f7bddb3ae95d5c311bd06a1}
+
+
+Definition at line 20 of file definitions.\+hpp.
+
+\hypertarget{definitions_8hpp_a232fad1b0d6dcc7c16aabde98b2e2a80}{\index{definitions.\+hpp@{definitions.\+hpp}!float64@{float64}}
+\index{float64@{float64}!definitions.\+hpp@{definitions.\+hpp}}
+\subsubsection[{float64}]{\setlength{\rightskip}{0pt plus 5cm}typedef double {\bf float64}}}\label{definitions_8hpp_a232fad1b0d6dcc7c16aabde98b2e2a80}
+
+
+Definition at line 21 of file definitions.\+hpp.
+
+\hypertarget{definitions_8hpp_a74df79fde3c518e55b29ce6360a9c76e}{\index{definitions.\+hpp@{definitions.\+hpp}!sint16@{sint16}}
+\index{sint16@{sint16}!definitions.\+hpp@{definitions.\+hpp}}
+\subsubsection[{sint16}]{\setlength{\rightskip}{0pt plus 5cm}typedef signed short {\bf sint16}}}\label{definitions_8hpp_a74df79fde3c518e55b29ce6360a9c76e}
+
+
+Definition at line 12 of file definitions.\+hpp.
+
+\hypertarget{definitions_8hpp_a0573de65958b4fda3a0460ed417dafb8}{\index{definitions.\+hpp@{definitions.\+hpp}!sint32@{sint32}}
+\index{sint32@{sint32}!definitions.\+hpp@{definitions.\+hpp}}
+\subsubsection[{sint32}]{\setlength{\rightskip}{0pt plus 5cm}typedef signed int {\bf sint32}}}\label{definitions_8hpp_a0573de65958b4fda3a0460ed417dafb8}
+
+
+Definition at line 15 of file definitions.\+hpp.
+
+\hypertarget{definitions_8hpp_ad91d7e42d1c1abce1d9eeacd54cc0497}{\index{definitions.\+hpp@{definitions.\+hpp}!sint64@{sint64}}
+\index{sint64@{sint64}!definitions.\+hpp@{definitions.\+hpp}}
+\subsubsection[{sint64}]{\setlength{\rightskip}{0pt plus 5cm}typedef signed long long {\bf sint64}}}\label{definitions_8hpp_ad91d7e42d1c1abce1d9eeacd54cc0497}
+
+
+Definition at line 18 of file definitions.\+hpp.
+
+\hypertarget{definitions_8hpp_a1a6408291ee3cfd0760a61ac64084154}{\index{definitions.\+hpp@{definitions.\+hpp}!sint8@{sint8}}
+\index{sint8@{sint8}!definitions.\+hpp@{definitions.\+hpp}}
+\subsubsection[{sint8}]{\setlength{\rightskip}{0pt plus 5cm}typedef signed char {\bf sint8}}}\label{definitions_8hpp_a1a6408291ee3cfd0760a61ac64084154}
+
+
+Definition at line 9 of file definitions.\+hpp.
+
+\hypertarget{definitions_8hpp_a05f6b0ae8f6a6e135b0e290c25fe0e4e}{\index{definitions.\+hpp@{definitions.\+hpp}!uint16@{uint16}}
+\index{uint16@{uint16}!definitions.\+hpp@{definitions.\+hpp}}
+\subsubsection[{uint16}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned short {\bf uint16}}}\label{definitions_8hpp_a05f6b0ae8f6a6e135b0e290c25fe0e4e}
+
+
+Definition at line 11 of file definitions.\+hpp.
+
+\hypertarget{definitions_8hpp_a1134b580f8da4de94ca6b1de4d37975e}{\index{definitions.\+hpp@{definitions.\+hpp}!uint32@{uint32}}
+\index{uint32@{uint32}!definitions.\+hpp@{definitions.\+hpp}}
+\subsubsection[{uint32}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned int {\bf uint32}}}\label{definitions_8hpp_a1134b580f8da4de94ca6b1de4d37975e}
+
+
+Definition at line 14 of file definitions.\+hpp.
+
+\hypertarget{definitions_8hpp_a29940ae63ec06c9998bba873e25407ad}{\index{definitions.\+hpp@{definitions.\+hpp}!uint64@{uint64}}
+\index{uint64@{uint64}!definitions.\+hpp@{definitions.\+hpp}}
+\subsubsection[{uint64}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned long long {\bf uint64}}}\label{definitions_8hpp_a29940ae63ec06c9998bba873e25407ad}
+
+
+Definition at line 17 of file definitions.\+hpp.
+
+\hypertarget{definitions_8hpp_adde6aaee8457bee49c2a92621fe22b79}{\index{definitions.\+hpp@{definitions.\+hpp}!uint8@{uint8}}
+\index{uint8@{uint8}!definitions.\+hpp@{definitions.\+hpp}}
+\subsubsection[{uint8}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned char {\bf uint8}}}\label{definitions_8hpp_adde6aaee8457bee49c2a92621fe22b79}
+
+
+Definition at line 8 of file definitions.\+hpp.
+
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{definitions_8hpp_ac8e1b1f4bbac5914204c97f66f97d01f}{\index{definitions.\+hpp@{definitions.\+hpp}!Block\+Position@{Block\+Position}}
+\index{Block\+Position@{Block\+Position}!definitions.\+hpp@{definitions.\+hpp}}
+\subsubsection[{Block\+Position}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Block\+Position} \+: {\bf E\+N\+U\+M}\hspace{0.3cm}{\ttfamily [strong]}}}\label{definitions_8hpp_ac8e1b1f4bbac5914204c97f66f97d01f}
+The position of the block relative to the arm. \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{Front@{Front}!definitions.\+hpp@{definitions.\+hpp}}\index{definitions.\+hpp@{definitions.\+hpp}!Front@{Front}}\item[{\em 
+\hypertarget{definitions_8hpp_ac8e1b1f4bbac5914204c97f66f97d01fa5835bab1ade0060909e31a06af2e2cde}{Front}\label{definitions_8hpp_ac8e1b1f4bbac5914204c97f66f97d01fa5835bab1ade0060909e31a06af2e2cde}
+}]\index{Back@{Back}!definitions.\+hpp@{definitions.\+hpp}}\index{definitions.\+hpp@{definitions.\+hpp}!Back@{Back}}\item[{\em 
+\hypertarget{definitions_8hpp_ac8e1b1f4bbac5914204c97f66f97d01fa0557fa923dcee4d0f86b1409f5c2167f}{Back}\label{definitions_8hpp_ac8e1b1f4bbac5914204c97f66f97d01fa0557fa923dcee4d0f86b1409f5c2167f}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 24 of file definitions.\+hpp.
+
+\hypertarget{definitions_8hpp_abc05a0f46084a3477cf5d5c939ff1436}{\index{definitions.\+hpp@{definitions.\+hpp}!Color@{Color}}
+\index{Color@{Color}!definitions.\+hpp@{definitions.\+hpp}}
+\subsubsection[{Color}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Color} \+: {\bf E\+N\+U\+M}\hspace{0.3cm}{\ttfamily [strong]}}}\label{definitions_8hpp_abc05a0f46084a3477cf5d5c939ff1436}
+The color of a block or train car. \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{Red@{Red}!definitions.\+hpp@{definitions.\+hpp}}\index{definitions.\+hpp@{definitions.\+hpp}!Red@{Red}}\item[{\em 
+\hypertarget{definitions_8hpp_abc05a0f46084a3477cf5d5c939ff1436aee38e4d5dd68c4e440825018d549cb47}{Red}\label{definitions_8hpp_abc05a0f46084a3477cf5d5c939ff1436aee38e4d5dd68c4e440825018d549cb47}
+}]\index{Yellow@{Yellow}!definitions.\+hpp@{definitions.\+hpp}}\index{definitions.\+hpp@{definitions.\+hpp}!Yellow@{Yellow}}\item[{\em 
+\hypertarget{definitions_8hpp_abc05a0f46084a3477cf5d5c939ff1436a51e6cd92b6c45f9affdc158ecca2b8b8}{Yellow}\label{definitions_8hpp_abc05a0f46084a3477cf5d5c939ff1436a51e6cd92b6c45f9affdc158ecca2b8b8}
+}]\index{Green@{Green}!definitions.\+hpp@{definitions.\+hpp}}\index{definitions.\+hpp@{definitions.\+hpp}!Green@{Green}}\item[{\em 
+\hypertarget{definitions_8hpp_abc05a0f46084a3477cf5d5c939ff1436ad382816a3cbeed082c9e216e7392eed1}{Green}\label{definitions_8hpp_abc05a0f46084a3477cf5d5c939ff1436ad382816a3cbeed082c9e216e7392eed1}
+}]\index{Blue@{Blue}!definitions.\+hpp@{definitions.\+hpp}}\index{definitions.\+hpp@{definitions.\+hpp}!Blue@{Blue}}\item[{\em 
+\hypertarget{definitions_8hpp_abc05a0f46084a3477cf5d5c939ff1436a9594eec95be70e7b1710f730fdda33d9}{Blue}\label{definitions_8hpp_abc05a0f46084a3477cf5d5c939ff1436a9594eec95be70e7b1710f730fdda33d9}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 30 of file definitions.\+hpp.
+
+\hypertarget{definitions_8hpp_aa7380b6d694cab49f07aed6a7af592d9}{\index{definitions.\+hpp@{definitions.\+hpp}!Log\+Mode@{Log\+Mode}}
+\index{Log\+Mode@{Log\+Mode}!definitions.\+hpp@{definitions.\+hpp}}
+\subsubsection[{Log\+Mode}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Log\+Mode} \+: {\bf E\+N\+U\+M}\hspace{0.3cm}{\ttfamily [strong]}}}\label{definitions_8hpp_aa7380b6d694cab49f07aed6a7af592d9}
+The mode in which the Log should prepare (i.\+e., text only or text and images). \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{Text@{Text}!definitions.\+hpp@{definitions.\+hpp}}\index{definitions.\+hpp@{definitions.\+hpp}!Text@{Text}}\item[{\em 
+\hypertarget{definitions_8hpp_aa7380b6d694cab49f07aed6a7af592d9a9dffbf69ffba8bc38bc4e01abf4b1675}{Text}\label{definitions_8hpp_aa7380b6d694cab49f07aed6a7af592d9a9dffbf69ffba8bc38bc4e01abf4b1675}
+}]\index{Multi@{Multi}!definitions.\+hpp@{definitions.\+hpp}}\index{definitions.\+hpp@{definitions.\+hpp}!Multi@{Multi}}\item[{\em 
+\hypertarget{definitions_8hpp_aa7380b6d694cab49f07aed6a7af592d9ace7898536dd0e928d1640ee2ad531cc8}{Multi}\label{definitions_8hpp_aa7380b6d694cab49f07aed6a7af592d9ace7898536dd0e928d1640ee2ad531cc8}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 41 of file definitions.\+hpp.
+
+\hypertarget{definitions_8hpp_ab84ebabb02540c4a7ec341a213abf1dc}{\index{definitions.\+hpp@{definitions.\+hpp}!Result@{Result}}
+\index{Result@{Result}!definitions.\+hpp@{definitions.\+hpp}}
+\subsubsection[{Result}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Result} \+: {\bf E\+N\+U\+M}\hspace{0.3cm}{\ttfamily [strong]}}}\label{definitions_8hpp_ab84ebabb02540c4a7ec341a213abf1dc}
+The number of half blocks picked up in a stack. The integer value of the \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{No\+\_\+\+Blocks@{No\+\_\+\+Blocks}!definitions.\+hpp@{definitions.\+hpp}}\index{definitions.\+hpp@{definitions.\+hpp}!No\+\_\+\+Blocks@{No\+\_\+\+Blocks}}\item[{\em 
+\hypertarget{definitions_8hpp_ab84ebabb02540c4a7ec341a213abf1dca32075034997ab91e886dbcad47ed902d}{No\+\_\+\+Blocks}\label{definitions_8hpp_ab84ebabb02540c4a7ec341a213abf1dca32075034997ab91e886dbcad47ed902d}
+}]\index{No\+\_\+\+Halves@{No\+\_\+\+Halves}!definitions.\+hpp@{definitions.\+hpp}}\index{definitions.\+hpp@{definitions.\+hpp}!No\+\_\+\+Halves@{No\+\_\+\+Halves}}\item[{\em 
+\hypertarget{definitions_8hpp_ab84ebabb02540c4a7ec341a213abf1dcabdf267b7c95f2ffd040b32d8b005e9a0}{No\+\_\+\+Halves}\label{definitions_8hpp_ab84ebabb02540c4a7ec341a213abf1dcabdf267b7c95f2ffd040b32d8b005e9a0}
+}]\index{Two\+\_\+\+Halves@{Two\+\_\+\+Halves}!definitions.\+hpp@{definitions.\+hpp}}\index{definitions.\+hpp@{definitions.\+hpp}!Two\+\_\+\+Halves@{Two\+\_\+\+Halves}}\item[{\em 
+\hypertarget{definitions_8hpp_ab84ebabb02540c4a7ec341a213abf1dca5b00716e5e6f2e2dc1b10ffed2e0ef6d}{Two\+\_\+\+Halves}\label{definitions_8hpp_ab84ebabb02540c4a7ec341a213abf1dca5b00716e5e6f2e2dc1b10ffed2e0ef6d}
+}]\index{Four\+\_\+\+Halves@{Four\+\_\+\+Halves}!definitions.\+hpp@{definitions.\+hpp}}\index{definitions.\+hpp@{definitions.\+hpp}!Four\+\_\+\+Halves@{Four\+\_\+\+Halves}}\item[{\em 
+\hypertarget{definitions_8hpp_ab84ebabb02540c4a7ec341a213abf1dca01f87e08f72dd8784d0665346a006fa3}{Four\+\_\+\+Halves}\label{definitions_8hpp_ab84ebabb02540c4a7ec341a213abf1dca01f87e08f72dd8784d0665346a006fa3}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 50 of file definitions.\+hpp.
+
+\hypertarget{definitions_8hpp_a03325a8a9d4f105db5e37dd587128142}{\index{definitions.\+hpp@{definitions.\+hpp}!Side@{Side}}
+\index{Side@{Side}!definitions.\+hpp@{definitions.\+hpp}}
+\subsubsection[{Side}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Side} \+: {\bf E\+N\+U\+M}\hspace{0.3cm}{\ttfamily [strong]}}}\label{definitions_8hpp_a03325a8a9d4f105db5e37dd587128142}
+Represents which block to pick up when multiple blocks are visible. \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{Left@{Left}!definitions.\+hpp@{definitions.\+hpp}}\index{definitions.\+hpp@{definitions.\+hpp}!Left@{Left}}\item[{\em 
+\hypertarget{definitions_8hpp_a03325a8a9d4f105db5e37dd587128142a945d5e233cf7d6240f6b783b36a374ff}{Left}\label{definitions_8hpp_a03325a8a9d4f105db5e37dd587128142a945d5e233cf7d6240f6b783b36a374ff}
+}]\index{Right@{Right}!definitions.\+hpp@{definitions.\+hpp}}\index{definitions.\+hpp@{definitions.\+hpp}!Right@{Right}}\item[{\em 
+\hypertarget{definitions_8hpp_a03325a8a9d4f105db5e37dd587128142a92b09c7c48c520c3c55e497875da437c}{Right}\label{definitions_8hpp_a03325a8a9d4f105db5e37dd587128142a92b09c7c48c520c3c55e497875da437c}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 58 of file definitions.\+hpp.
+
+\hypertarget{definitions_8hpp_a9809446fd16a744b6df9808293f14153}{\index{definitions.\+hpp@{definitions.\+hpp}!Size@{Size}}
+\index{Size@{Size}!definitions.\+hpp@{definitions.\+hpp}}
+\subsubsection[{Size}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Size} \+: {\bf E\+N\+U\+M}\hspace{0.3cm}{\ttfamily [strong]}}}\label{definitions_8hpp_a9809446fd16a744b6df9808293f14153}
+The block size, either 2.\+5\char`\"{} or 5\char`\"{}. \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{Short@{Short}!definitions.\+hpp@{definitions.\+hpp}}\index{definitions.\+hpp@{definitions.\+hpp}!Short@{Short}}\item[{\em 
+\hypertarget{definitions_8hpp_a9809446fd16a744b6df9808293f14153a30bb747c98bccdd11b3f89e644c4d0ad}{Short}\label{definitions_8hpp_a9809446fd16a744b6df9808293f14153a30bb747c98bccdd11b3f89e644c4d0ad}
+}]\index{Long@{Long}!definitions.\+hpp@{definitions.\+hpp}}\index{definitions.\+hpp@{definitions.\+hpp}!Long@{Long}}\item[{\em 
+\hypertarget{definitions_8hpp_a9809446fd16a744b6df9808293f14153a8394f0347c184cf156ac5924dccb773b}{Long}\label{definitions_8hpp_a9809446fd16a744b6df9808293f14153a8394f0347c184cf156ac5924dccb773b}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 64 of file definitions.\+hpp.
+
+\hypertarget{definitions_8hpp_adbd1e7a33d3e1751c7b2aa2562d0ecb9}{\index{definitions.\+hpp@{definitions.\+hpp}!Zone@{Zone}}
+\index{Zone@{Zone}!definitions.\+hpp@{definitions.\+hpp}}
+\subsubsection[{Zone}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Zone} \+: {\bf E\+N\+U\+M}\hspace{0.3cm}{\ttfamily [strong]}}}\label{definitions_8hpp_adbd1e7a33d3e1751c7b2aa2562d0ecb9}
+Zone A, B, or C \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{A@{A}!definitions.\+hpp@{definitions.\+hpp}}\index{definitions.\+hpp@{definitions.\+hpp}!A@{A}}\item[{\em 
+\hypertarget{definitions_8hpp_adbd1e7a33d3e1751c7b2aa2562d0ecb9a7fc56270e7a70fa81a5935b72eacbe29}{A}\label{definitions_8hpp_adbd1e7a33d3e1751c7b2aa2562d0ecb9a7fc56270e7a70fa81a5935b72eacbe29}
+}]\index{B@{B}!definitions.\+hpp@{definitions.\+hpp}}\index{definitions.\+hpp@{definitions.\+hpp}!B@{B}}\item[{\em 
+\hypertarget{definitions_8hpp_adbd1e7a33d3e1751c7b2aa2562d0ecb9a9d5ed678fe57bcca610140957afab571}{B}\label{definitions_8hpp_adbd1e7a33d3e1751c7b2aa2562d0ecb9a9d5ed678fe57bcca610140957afab571}
+}]\index{C@{C}!definitions.\+hpp@{definitions.\+hpp}}\index{definitions.\+hpp@{definitions.\+hpp}!C@{C}}\item[{\em 
+\hypertarget{definitions_8hpp_adbd1e7a33d3e1751c7b2aa2562d0ecb9a0d61f8370cad1d412f80b84d143e1257}{C}\label{definitions_8hpp_adbd1e7a33d3e1751c7b2aa2562d0ecb9a0d61f8370cad1d412f80b84d143e1257}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 70 of file definitions.\+hpp.
+

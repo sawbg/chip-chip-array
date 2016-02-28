@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir">
+    <compoundname>src</compoundname>
+    <innerfile refid="Adafruit__PWMServoDriver_8cpp">Adafruit_PWMServoDriver.cpp</innerfile>
+    <innerfile refid="Adafruit__PWMServoDriver_8h">Adafruit_PWMServoDriver.h</innerfile>
+    <innerfile refid="Block_8hpp">Block.hpp</innerfile>
+    <innerfile refid="cv__hue_8cpp">cv_hue.cpp</innerfile>
+    <innerfile refid="cv__shape_8cpp">cv_shape.cpp</innerfile>
+    <innerfile refid="cv__test_8cpp">cv_test.cpp</innerfile>
+    <innerfile refid="definitions_8hpp">definitions.hpp</innerfile>
+    <innerfile refid="Grabber_8hpp">Grabber.hpp</innerfile>
+    <innerfile refid="Log_8hpp">Log.hpp</innerfile>
+    <innerfile refid="log__test_8cpp">log_test.cpp</innerfile>
+    <innerfile refid="main_8cpp">main.cpp</innerfile>
+    <innerfile refid="net__qr__test_8cpp">net_qr_test.cpp</innerfile>
+    <innerfile refid="old__cv__test_8cpp">old_cv_test.cpp</innerfile>
+    <innerfile refid="PiCamera_8hpp">PiCamera.hpp</innerfile>
+    <innerfile refid="qr__test_8cpp">qr_test.cpp</innerfile>
+    <innerfile refid="ScanQR_8hpp">ScanQR.hpp</innerfile>
+    <innerfile refid="Servo__Position__Shell_8cpp">Servo_Position_Shell.cpp</innerfile>
+    <innerfile refid="Servo__Position__Shell_8h">Servo_Position_Shell.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/pi/chip-chip-array/src/"/>
+  </compounddef>
+</doxygen>
