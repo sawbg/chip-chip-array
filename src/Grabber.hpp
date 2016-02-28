@@ -1,3 +1,8 @@
+/**
+ * @author Samuel Andrew Wisner, awisner94@gmail.com
+ * @brief contains the Grabber class
+ */
+
 #ifndef Grabber_H
 #define Grabber_H
 
@@ -206,6 +211,10 @@ namespace ChipChipArray {
 	}
 
 	Result Grabber::Load() {
+		setServoPosition(BASE_TURN, 150);
+		setServoPosition(WRIST_TILT, 50);
+		setServoPosition(ELBOW, 140);
+		sleep(2);
 		Block b = LocateBlock();
 		int Q = 402;
 		float32 a = 180 / 3.14152 * acos((float)b.offset / Q);
@@ -217,7 +226,7 @@ namespace ChipChipArray {
 		sleep(5);
 		setServoPosition(BASE_TURN, 150);
 		setServoPosition(WRIST_TILT, 50);
-		setServoPosition(ELBOW, 160);
+		setServoPosition(ELBOW, 140);
 	}
 
 	Block Grabber::LocateBlock() {
