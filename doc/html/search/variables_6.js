@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['topleft',['topLeft',['../classChipChipArray_1_1Block.html#aeecc05025c6c8e23ff6ca09a6fbd4b4b',1,'ChipChipArray::Block']]],
-  ['topright',['topRight',['../classChipChipArray_1_1Block.html#aaa4ff82846e95a628800ebdfd3ceefb5',1,'ChipChipArray::Block']]]
+  ['scanqrlog',['scanQrLog',['../namespaceChipChipArray.html#ab5c6290951637c25a5422707020fb3a8',1,'ChipChipArray']]],
+  ['servo_5fnum',['servo_num',['../Servo__Position__Shell_8cpp.html#ac3fe65cfcd6744437ab3133c702ade33',1,'Servo_Position_Shell.cpp']]],
+  ['side',['side',['../classChipChipArray_1_1Grabber.html#a8afbaefae7c767c862fd1bf13968539b',1,'ChipChipArray::Grabber']]],
+  ['size',['size',['../classChipChipArray_1_1Block.html#aebd356d7fcfe7ff11db8195e6d7f8e42',1,'ChipChipArray::Block']]]
 ];

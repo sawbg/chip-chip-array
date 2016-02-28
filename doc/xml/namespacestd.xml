@@ -21,8 +21,9 @@
         <location file="/home/pi/chip-chip-array/src/definitions.hpp" line="80" column="1" bodyfile="/home/pi/chip-chip-array/src/definitions.hpp" bodystart="80" bodyend="83"/>
         <references refid="definitions_8hpp_1ac8e1b1f4bbac5914204c97f66f97d01fa5835bab1ade0060909e31a06af2e2cde">Front</references>
         <referencedby refid="cv__test_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="cv__test_8cpp" startline="13" endline="18">main</referencedby>
-        <referencedby refid="classChipChipArray_1_1Grabber_1a7333f40c135fbe92d59651f75032b4e7" compoundref="Grabber_8hpp" startline="154" endline="171">ChipChipArray::Grabber::Grabber</referencedby>
-        <referencedby refid="classChipChipArray_1_1Grabber_1a86bc18ecf71c7ff4e324df0467af124a" compoundref="Grabber_8hpp" startline="211" endline="341">ChipChipArray::Grabber::LocateBlock</referencedby>
+        <referencedby refid="classChipChipArray_1_1Grabber_1a7333f40c135fbe92d59651f75032b4e7" compoundref="Grabber_8hpp" startline="157" endline="178">ChipChipArray::Grabber::Grabber</referencedby>
+        <referencedby refid="classChipChipArray_1_1Grabber_1a86bc18ecf71c7ff4e324df0467af124a" compoundref="Grabber_8hpp" startline="205" endline="341">ChipChipArray::Grabber::LocateBlock</referencedby>
+        <referencedby refid="namespaceChipChipArray_1a6c7465049b5d408e1a238b6d8ffa887d" compoundref="ScanQR_8hpp" startline="28" endline="86">ChipChipArray::ScanQR</referencedby>
       </memberdef>
       <memberdef kind="function" id="namespacestd_1a6a0c3c323562edbd2f57da3d2bb74326" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>string</type>

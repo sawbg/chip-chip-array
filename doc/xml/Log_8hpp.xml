@@ -11,69 +11,82 @@
     <includes refid="definitions_8hpp" local="yes">definitions.hpp</includes>
     <includedby refid="Grabber_8hpp" local="yes">src/Grabber.hpp</includedby>
     <includedby refid="log__test_8cpp" local="yes">src/log_test.cpp</includedby>
+    <includedby refid="ScanQR_8hpp" local="yes">src/ScanQR.hpp</includedby>
     <incdepgraph>
-      <node id="312">
+      <node id="323">
         <label>sys/stat.h</label>
       </node>
-      <node id="313">
+      <node id="324">
         <label>definitions.hpp</label>
         <link refid="definitions_8hpp"/>
       </node>
-      <node id="311">
+      <node id="322">
         <label>string</label>
       </node>
-      <node id="306">
+      <node id="317">
         <label>src/Log.hpp</label>
         <link refid="Log.hpp"/>
-        <childnode refid="307" relation="include">
+        <childnode refid="318" relation="include">
         </childnode>
-        <childnode refid="308" relation="include">
+        <childnode refid="319" relation="include">
         </childnode>
-        <childnode refid="309" relation="include">
+        <childnode refid="320" relation="include">
         </childnode>
-        <childnode refid="310" relation="include">
+        <childnode refid="321" relation="include">
         </childnode>
-        <childnode refid="311" relation="include">
+        <childnode refid="322" relation="include">
         </childnode>
-        <childnode refid="312" relation="include">
+        <childnode refid="323" relation="include">
         </childnode>
-        <childnode refid="313" relation="include">
+        <childnode refid="324" relation="include">
         </childnode>
       </node>
-      <node id="308">
+      <node id="319">
         <label>fstream</label>
       </node>
-      <node id="307">
+      <node id="318">
         <label>ctime</label>
       </node>
-      <node id="310">
+      <node id="321">
         <label>opencv2/highgui/highgui.hpp</label>
       </node>
-      <node id="309">
+      <node id="320">
         <label>iostream</label>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="316">
+      <node id="327">
         <label>src/cv_test.cpp</label>
         <link refid="cv__test_8cpp"/>
       </node>
-      <node id="317">
+      <node id="328">
         <label>src/log_test.cpp</label>
         <link refid="log__test_8cpp"/>
       </node>
-      <node id="314">
+      <node id="325">
         <label>src/Log.hpp</label>
         <link refid="Log.hpp"/>
-        <childnode refid="315" relation="include">
+        <childnode refid="326" relation="include">
         </childnode>
-        <childnode refid="317" relation="include">
+        <childnode refid="328" relation="include">
+        </childnode>
+        <childnode refid="329" relation="include">
         </childnode>
       </node>
-      <node id="315">
+      <node id="330">
+        <label>src/qr_test.cpp</label>
+        <link refid="qr__test_8cpp"/>
+      </node>
+      <node id="326">
         <label>src/Grabber.hpp</label>
         <link refid="Grabber_8hpp"/>
-        <childnode refid="316" relation="include">
+        <childnode refid="327" relation="include">
+        </childnode>
+      </node>
+      <node id="329">
+        <label>src/ScanQR.hpp</label>
+        <link refid="ScanQR_8hpp"/>
+        <childnode refid="330" relation="include">
         </childnode>
       </node>
     </invincdepgraph>

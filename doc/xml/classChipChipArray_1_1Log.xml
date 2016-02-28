@@ -190,7 +190,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/pi/chip-chip-array/src/Log.hpp" line="68" column="1" bodyfile="/home/pi/chip-chip-array/src/Log.hpp" bodystart="199" bodyend="208"/>
-        <referencedby refid="classChipChipArray_1_1Grabber_1a86bc18ecf71c7ff4e324df0467af124a" compoundref="Grabber_8hpp" startline="211" endline="341">ChipChipArray::Grabber::LocateBlock</referencedby>
+        <referencedby refid="classChipChipArray_1_1Grabber_1a86bc18ecf71c7ff4e324df0467af124a" compoundref="Grabber_8hpp" startline="205" endline="341">ChipChipArray::Grabber::LocateBlock</referencedby>
         <referencedby refid="log__test_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="log__test_8cpp" startline="12" endline="16">main</referencedby>
       </memberdef>
       <memberdef kind="function" id="classChipChipArray_1_1Log_1aba7b7b0555f49f4dcf15f4b9fd3e6b34" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -255,7 +255,8 @@
         </inbodydescription>
         <location file="/home/pi/chip-chip-array/src/Log.hpp" line="86" column="1" bodyfile="/home/pi/chip-chip-array/src/Log.hpp" bodystart="221" bodyend="231"/>
         <references refid="classChipChipArray_1_1Log_1aba7b7b0555f49f4dcf15f4b9fd3e6b34" compoundref="Log_8hpp" startline="210" endline="219">Error</references>
-        <referencedby refid="classChipChipArray_1_1Grabber_1a86bc18ecf71c7ff4e324df0467af124a" compoundref="Grabber_8hpp" startline="211" endline="341">ChipChipArray::Grabber::LocateBlock</referencedby>
+        <referencedby refid="classChipChipArray_1_1Grabber_1a86bc18ecf71c7ff4e324df0467af124a" compoundref="Grabber_8hpp" startline="205" endline="341">ChipChipArray::Grabber::LocateBlock</referencedby>
+        <referencedby refid="namespaceChipChipArray_1a6c7465049b5d408e1a238b6d8ffa887d" compoundref="ScanQR_8hpp" startline="28" endline="86">ChipChipArray::ScanQR</referencedby>
       </memberdef>
       <memberdef kind="function" id="classChipChipArray_1_1Log_1ad27a06a4561f2f59159bd8a7fc2fed3b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -305,8 +306,9 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/pi/chip-chip-array/src/Log.hpp" line="101" column="1" bodyfile="/home/pi/chip-chip-array/src/Log.hpp" bodystart="284" bodyend="293"/>
-        <referencedby refid="classChipChipArray_1_1Grabber_1aacf089ceb4aa5b263c2cc702fb3daf74" compoundref="Grabber_8hpp" startline="177" endline="181">ChipChipArray::Grabber::Close</referencedby>
-        <referencedby refid="classChipChipArray_1_1Grabber_1a86bc18ecf71c7ff4e324df0467af124a" compoundref="Grabber_8hpp" startline="211" endline="341">ChipChipArray::Grabber::LocateBlock</referencedby>
+        <referencedby refid="classChipChipArray_1_1Grabber_1aacf089ceb4aa5b263c2cc702fb3daf74" compoundref="Grabber_8hpp" startline="184" endline="187">ChipChipArray::Grabber::Close</referencedby>
+        <referencedby refid="classChipChipArray_1_1Grabber_1a86bc18ecf71c7ff4e324df0467af124a" compoundref="Grabber_8hpp" startline="205" endline="341">ChipChipArray::Grabber::LocateBlock</referencedby>
+        <referencedby refid="namespaceChipChipArray_1a6c7465049b5d408e1a238b6d8ffa887d" compoundref="ScanQR_8hpp" startline="28" endline="86">ChipChipArray::ScanQR</referencedby>
       </memberdef>
       <memberdef kind="function" id="classChipChipArray_1_1Log_1a8849569720c26e335e7ef4dcb912170b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -369,8 +371,9 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/pi/chip-chip-array/src/Log.hpp" line="121" column="1" bodyfile="/home/pi/chip-chip-array/src/Log.hpp" bodystart="307" bodyend="316"/>
-        <referencedby refid="classChipChipArray_1_1Grabber_1a7333f40c135fbe92d59651f75032b4e7" compoundref="Grabber_8hpp" startline="154" endline="171">ChipChipArray::Grabber::Grabber</referencedby>
-        <referencedby refid="classChipChipArray_1_1Grabber_1a86bc18ecf71c7ff4e324df0467af124a" compoundref="Grabber_8hpp" startline="211" endline="341">ChipChipArray::Grabber::LocateBlock</referencedby>
+        <referencedby refid="classChipChipArray_1_1Grabber_1a7333f40c135fbe92d59651f75032b4e7" compoundref="Grabber_8hpp" startline="157" endline="178">ChipChipArray::Grabber::Grabber</referencedby>
+        <referencedby refid="classChipChipArray_1_1Grabber_1a86bc18ecf71c7ff4e324df0467af124a" compoundref="Grabber_8hpp" startline="205" endline="341">ChipChipArray::Grabber::LocateBlock</referencedby>
+        <referencedby refid="namespaceChipChipArray_1a6c7465049b5d408e1a238b6d8ffa887d" compoundref="ScanQR_8hpp" startline="28" endline="86">ChipChipArray::ScanQR</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">

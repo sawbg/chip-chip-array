@@ -69,7 +69,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/pi/chip-chip-array/src/PiCamera.hpp" line="34" column="1" bodyfile="/home/pi/chip-chip-array/src/PiCamera.hpp" bodystart="57" bodyend="59"/>
-        <referencedby refid="classChipChipArray_1_1Grabber_1aacf089ceb4aa5b263c2cc702fb3daf74" compoundref="Grabber_8hpp" startline="177" endline="181">ChipChipArray::Grabber::Close</referencedby>
+        <referencedby refid="classChipChipArray_1_1Grabber_1aacf089ceb4aa5b263c2cc702fb3daf74" compoundref="Grabber_8hpp" startline="184" endline="187">ChipChipArray::Grabber::Close</referencedby>
       </memberdef>
       <memberdef kind="function" id="classChipChipArray_1_1PiCamera_1a58fb0de02570dce9a9cb60a1a04fb84f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>cv::Mat</type>
@@ -86,8 +86,8 @@
         <location file="/home/pi/chip-chip-array/src/PiCamera.hpp" line="42" column="1" bodyfile="/home/pi/chip-chip-array/src/PiCamera.hpp" bodystart="61" bodyend="69"/>
         <referencedby refid="namespaceChipChipArray_1a7fc3d1edffca11531cd09fdab7c8b88d" compoundref="cv__hue_8cpp" startline="20" endline="109">ChipChipArray::main</referencedby>
         <referencedby refid="cv__shape_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="cv__shape_8cpp" startline="30" endline="120">main</referencedby>
-        <referencedby refid="classChipChipArray_1_1Grabber_1a86bc18ecf71c7ff4e324df0467af124a" compoundref="Grabber_8hpp" startline="211" endline="341">ChipChipArray::Grabber::LocateBlock</referencedby>
-        <referencedby refid="namespaceChipChipArray_1a6c7465049b5d408e1a238b6d8ffa887d" compoundref="ScanQR_8hpp" startline="24" endline="86">ChipChipArray::ScanQR</referencedby>
+        <referencedby refid="classChipChipArray_1_1Grabber_1a86bc18ecf71c7ff4e324df0467af124a" compoundref="Grabber_8hpp" startline="205" endline="341">ChipChipArray::Grabber::LocateBlock</referencedby>
+        <referencedby refid="namespaceChipChipArray_1a6c7465049b5d408e1a238b6d8ffa887d" compoundref="ScanQR_8hpp" startline="28" endline="86">ChipChipArray::ScanQR</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>

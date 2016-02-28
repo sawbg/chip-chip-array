@@ -6,6 +6,36 @@
     <innerclass refid="classChipChipArray_1_1Grabber" prot="public">ChipChipArray::Grabber</innerclass>
     <innerclass refid="classChipChipArray_1_1Log" prot="public">ChipChipArray::Log</innerclass>
     <innerclass refid="classChipChipArray_1_1PiCamera" prot="public">ChipChipArray::PiCamera</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespaceChipChipArray_1a3b2a3c0ffa9f53021293aeb4955d2fef" prot="public" static="no" mutable="no">
+        <type><ref refid="definitions_8hpp_1adde6aaee8457bee49c2a92621fe22b79" kindref="member">uint8</ref></type>
+        <definition>uint8 ChipChipArray::qrInvokeCount</definition>
+        <argsstring></argsstring>
+        <name>qrInvokeCount</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pi/chip-chip-array/src/ScanQR.hpp" line="15" column="1" bodyfile="/home/pi/chip-chip-array/src/ScanQR.hpp" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceChipChipArray_1ab5c6290951637c25a5422707020fb3a8" prot="public" static="no" mutable="no">
+        <type><ref refid="classChipChipArray_1_1Log" kindref="compound">Log</ref></type>
+        <definition>Log ChipChipArray::scanQrLog(&quot;logs/ScanQR&quot;, LogMode::Multi)</definition>
+        <argsstring>(&quot;logs/ScanQR&quot;, LogMode::Multi)</argsstring>
+        <name>scanQrLog</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pi/chip-chip-array/src/ScanQR.hpp" line="16" column="1"/>
+        <referencedby refid="namespaceChipChipArray_1a6c7465049b5d408e1a238b6d8ffa887d" compoundref="ScanQR_8hpp" startline="28" endline="86">ScanQR</referencedby>
+      </memberdef>
+      </sectiondef>
       <sectiondef kind="func">
       <memberdef kind="function" id="namespaceChipChipArray_1a7fc3d1edffca11531cd09fdab7c8b88d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -40,12 +70,17 @@
 <para>This function manuvers arm to look at the QR code on a train car as the robot is backing up to the car. It attempts to find the code in multiple images before finally throwing an exeption if a code is not found. If multiple codes are found, it returns a single Color by (seemingly) arbitrary decision.</para><para>This function is based on code written by Michael Young (<ulink url="https://github.com/ayoungprogrammer/WebcamCodeScanner">https://github.com/ayoungprogrammer/WebcamCodeScanner</ulink>). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/pi/chip-chip-array/src/ScanQR.hpp" line="24" column="1" bodyfile="/home/pi/chip-chip-array/src/ScanQR.hpp" bodystart="24" bodyend="86"/>
+        <location file="/home/pi/chip-chip-array/src/ScanQR.hpp" line="28" column="1" bodyfile="/home/pi/chip-chip-array/src/ScanQR.hpp" bodystart="28" bodyend="86"/>
+        <references refid="namespaceChipChipArray_1ab5c6290951637c25a5422707020fb3a8">scanQrLog</references>
+        <references refid="classChipChipArray_1_1Log_1a154a5f38d9c7a767693b242684a3d4d9" compoundref="Log_8hpp" startline="307" endline="316">ChipChipArray::Log::Verbose</references>
         <references refid="classChipChipArray_1_1PiCamera_1a58fb0de02570dce9a9cb60a1a04fb84f" compoundref="PiCamera_8hpp" startline="61" endline="69">ChipChipArray::PiCamera::Snap</references>
+        <references refid="classChipChipArray_1_1Log_1a65bbab057c8b1453f9e4efcfee7522c4" compoundref="Log_8hpp" startline="221" endline="231">ChipChipArray::Log::Image</references>
+        <references refid="namespacestd_1aa5ddf582a1c96ffe258c997be9a294a3" compoundref="definitions_8hpp" startline="80" endline="83">std::to_string</references>
         <references refid="definitions_8hpp_1abc05a0f46084a3477cf5d5c939ff1436aee38e4d5dd68c4e440825018d549cb47">Red</references>
         <references refid="definitions_8hpp_1abc05a0f46084a3477cf5d5c939ff1436a51e6cd92b6c45f9affdc158ecca2b8b8">Yellow</references>
         <references refid="definitions_8hpp_1abc05a0f46084a3477cf5d5c939ff1436ad382816a3cbeed082c9e216e7392eed1">Green</references>
         <references refid="definitions_8hpp_1abc05a0f46084a3477cf5d5c939ff1436a9594eec95be70e7b1710f730fdda33d9">Blue</references>
+        <references refid="classChipChipArray_1_1Log_1a66575b6e94c6112e4cefa5736cb996e0" compoundref="Log_8hpp" startline="284" endline="293">ChipChipArray::Log::Status</references>
         <referencedby refid="qr__test_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="qr__test_8cpp" startline="16" endline="42">main</referencedby>
       </memberdef>
       </sectiondef>
@@ -53,6 +88,6 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/pi/chip-chip-array/src/Block.hpp" line="5" column="1"/>
+    <location file="/home/pi/chip-chip-array/src/Block.hpp" line="8" column="1"/>
   </compounddef>
 </doxygen>

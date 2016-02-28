@@ -16,6 +16,8 @@ src/ScanQR.hpp \-
 .br
 \fC#include 'definitions\&.hpp'\fP
 .br
+\fC#include 'Log\&.hpp'\fP
+.br
 \fC#include 'PiCamera\&.hpp'\fP
 .br
 
@@ -31,6 +33,16 @@ src/ScanQR.hpp \-
 .in +1c
 .ti -1c
 .RI "\fBColor\fP \fBChipChipArray::ScanQR\fP ()"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fBuint8\fP \fBChipChipArray::qrInvokeCount\fP = 0"
+.br
+.ti -1c
+.RI "Log \fBChipChipArray::scanQrLog\fP ('logs/ScanQR', LogMode::Multi)"
 .br
 .in -1c
 .SH "Author"

@@ -22,24 +22,24 @@
     <member refid="classChipChipArray_1_1Block_1ac3f815e8aa9060c4ad20d4e1b2649e35" kind="variable"><name>width</name></member>
     <member refid="classChipChipArray_1_1Block_1a262210a9a04028f3f2670c9ae38ef3d7" kind="variable"><name>color</name></member>
     <member refid="classChipChipArray_1_1Block_1aebd356d7fcfe7ff11db8195e6d7f8e42" kind="variable"><name>size</name></member>
+    <member refid="classChipChipArray_1_1Block_1a6a221f06cf69323882693931f0156b6b" kind="variable"><name>MIN_WHOLE_BLOCK_SIZE</name></member>
     <member refid="classChipChipArray_1_1Block_1a7eb2456e5c95c8a91844c9522eed0578" kind="function"><name>Block</name></member>
   </compound>
   <compound refid="classChipChipArray_1_1Grabber" kind="class"><name>ChipChipArray::Grabber</name>
+    <member refid="classChipChipArray_1_1Grabber_1a726bcc2367a719cb84de92a981947622" kind="variable"><name>cam</name></member>
+    <member refid="classChipChipArray_1_1Grabber_1a8afbaefae7c767c862fd1bf13968539b" kind="variable"><name>side</name></member>
+    <member refid="classChipChipArray_1_1Grabber_1ab57efe6e0b6f369b19528285a278d967" kind="variable"><name>zone</name></member>
     <member refid="classChipChipArray_1_1Grabber_1a1ffe733fd5d42a38d25de80e9c082e52" kind="variable"><name>MIN_HALF_BLOCK_SIZE</name></member>
+    <member refid="classChipChipArray_1_1Grabber_1a7a64f2b3fad315a181c2fa375a0119b7" kind="variable"><name>log</name></member>
     <member refid="classChipChipArray_1_1Grabber_1ab536282f995668397901ba012ea6ad69" kind="variable"><name>invokeCount</name></member>
     <member refid="classChipChipArray_1_1Grabber_1a85869d4051efcf346286f404b00d0f1d" kind="variable"><name>rangeVals</name></member>
-    <member refid="classChipChipArray_1_1Grabber_1a726bcc2367a719cb84de92a981947622" kind="variable"><name>cam</name></member>
-    <member refid="classChipChipArray_1_1Grabber_1a7a64f2b3fad315a181c2fa375a0119b7" kind="variable"><name>log</name></member>
     <member refid="classChipChipArray_1_1Grabber_1a7333f40c135fbe92d59651f75032b4e7" kind="function"><name>Grabber</name></member>
     <member refid="classChipChipArray_1_1Grabber_1a0fe4bfbb6e479006a584f50cac0b5d5d" kind="function"><name>~Grabber</name></member>
-    <member refid="classChipChipArray_1_1Grabber_1a56639f8f9ba9468bce4b6d69ceb2eb54" kind="function"><name>Load</name></member>
     <member refid="classChipChipArray_1_1Grabber_1aacf089ceb4aa5b263c2cc702fb3daf74" kind="function"><name>Close</name></member>
+    <member refid="classChipChipArray_1_1Grabber_1a56639f8f9ba9468bce4b6d69ceb2eb54" kind="function"><name>Load</name></member>
     <member refid="classChipChipArray_1_1Grabber_1a86bc18ecf71c7ff4e324df0467af124a" kind="function"><name>LocateBlock</name></member>
     <member refid="classChipChipArray_1_1Grabber_1a09f89b79e745db18009a022e9bfacd3a" kind="function"><name>Discard</name></member>
     <member refid="classChipChipArray_1_1Grabber_1abecb4047b4f7d5a7e691b7fb581b5a39" kind="function"><name>Extend</name></member>
-    <member refid="classChipChipArray_1_1Grabber_1ae52cf94210d8a5f468c08e59737518c4" kind="function"><name>FindBlock</name></member>
-    <member refid="classChipChipArray_1_1Grabber_1a8ddc7def90b874885b2745034b5677df" kind="function"><name>FindColor</name></member>
-    <member refid="classChipChipArray_1_1Grabber_1a7262ce7fd6d4cc2f0210fcc9cafdd840" kind="function"><name>FindSize</name></member>
     <member refid="classChipChipArray_1_1Grabber_1a0a8a57e44f291581ab2862272134a592" kind="function"><name>Grab</name></member>
     <member refid="classChipChipArray_1_1Grabber_1a2833eebf4e57078c0d677379babfd2d4" kind="function"><name>Place</name></member>
     <member refid="classChipChipArray_1_1Grabber_1a817de2b1ac4208fcbe983e919cede265" kind="function"><name>Place</name></member>
@@ -72,6 +72,8 @@
     <member refid="classChipChipArray_1_1PiCamera_1a58fb0de02570dce9a9cb60a1a04fb84f" kind="function"><name>Snap</name></member>
   </compound>
   <compound refid="namespaceChipChipArray" kind="namespace"><name>ChipChipArray</name>
+    <member refid="namespaceChipChipArray_1a3b2a3c0ffa9f53021293aeb4955d2fef" kind="variable"><name>qrInvokeCount</name></member>
+    <member refid="namespaceChipChipArray_1ab5c6290951637c25a5422707020fb3a8" kind="variable"><name>scanQrLog</name></member>
     <member refid="namespaceChipChipArray_1a7fc3d1edffca11531cd09fdab7c8b88d" kind="function"><name>main</name></member>
     <member refid="namespaceChipChipArray_1a6c7465049b5d408e1a238b6d8ffa887d" kind="function"><name>ScanQR</name></member>
   </compound>

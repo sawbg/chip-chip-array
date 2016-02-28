@@ -32,6 +32,16 @@ ChipChipArray \-
 .RI "\fBColor\fP \fBScanQR\fP ()"
 .br
 .in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fBuint8\fP \fBqrInvokeCount\fP = 0"
+.br
+.ti -1c
+.RI "\fBLog\fP \fBscanQrLog\fP ('logs/\fBScanQR\fP', LogMode::Multi)"
+.br
+.in -1c
 .SH "Function Documentation"
 .PP 
 .SS "int ChipChipArray::main (intargc, char **argv)"
@@ -43,7 +53,15 @@ This function manuvers arm to look at the QR code on a train car as the robot is
 .PP
 This function is based on code written by Michael Young (https://github.com/ayoungprogrammer/WebcamCodeScanner)\&. 
 .PP
-Definition at line 24 of file ScanQR\&.hpp\&.
+Definition at line 28 of file ScanQR\&.hpp\&.
+.SH "Variable Documentation"
+.PP 
+.SS "\fBuint8\fP ChipChipArray::qrInvokeCount = 0"
+
+.PP
+Definition at line 15 of file ScanQR\&.hpp\&.
+.SS "\fBLog\fP ChipChipArray::scanQrLog('logs/\fBScanQR\fP', LogMode::Multi)"
+
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for My Project from the source code\&.

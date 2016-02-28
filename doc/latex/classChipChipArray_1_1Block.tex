@@ -34,9 +34,9 @@ cv\+::\+Point \hyperlink{classChipChipArray_1_1Block_aaa4ff82846e95a628800ebdfd3
 
 
 \subsection{Detailed Description}
+This class represents a block. It only works for blocks found with the \char`\"{}bounding\+Rect\char`\"{} algorithm (i.\+e., it doesn't work for blocks that are skewed on the image). 
 
-
-Definition at line 9 of file Block.\+hpp.
+Definition at line 14 of file Block.\+hpp.
 
 
 
@@ -49,9 +49,9 @@ Definition at line 9 of file Block.\+hpp.
 \item[{{\bf Color}}]{color}
 \end{DoxyParamCaption}
 )}}\label{classChipChipArray_1_1Block_a7eb2456e5c95c8a91844c9522eed0578}
+Creates a new \hyperlink{classChipChipArray_1_1Block}{Block} using the Points in the cv\+::\+Rect and the color. Also determines the size based on the area of the \hyperlink{classChipChipArray_1_1Block}{Block}. 
 
-
-Definition at line 62 of file Block.\+hpp.
+Definition at line 76 of file Block.\+hpp.
 
 
 
@@ -59,65 +59,65 @@ Definition at line 62 of file Block.\+hpp.
 \hypertarget{classChipChipArray_1_1Block_ab5f9a9c1cc11e949685f8ad3d52599b2}{\index{Chip\+Chip\+Array\+::\+Block@{Chip\+Chip\+Array\+::\+Block}!area@{area}}
 \index{area@{area}!Chip\+Chip\+Array\+::\+Block@{Chip\+Chip\+Array\+::\+Block}}
 \subsubsection[{area}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint32} Chip\+Chip\+Array\+::\+Block\+::area}}\label{classChipChipArray_1_1Block_ab5f9a9c1cc11e949685f8ad3d52599b2}
+The area of the block in pixels 
 
-
-Definition at line 14 of file Block.\+hpp.
+Definition at line 19 of file Block.\+hpp.
 
 \hypertarget{classChipChipArray_1_1Block_a78304b597a8d8a74a4d9b4bb561a7224}{\index{Chip\+Chip\+Array\+::\+Block@{Chip\+Chip\+Array\+::\+Block}!bottom\+Left@{bottom\+Left}}
 \index{bottom\+Left@{bottom\+Left}!Chip\+Chip\+Array\+::\+Block@{Chip\+Chip\+Array\+::\+Block}}
 \subsubsection[{bottom\+Left}]{\setlength{\rightskip}{0pt plus 5cm}cv\+::\+Point Chip\+Chip\+Array\+::\+Block\+::bottom\+Left}}\label{classChipChipArray_1_1Block_a78304b597a8d8a74a4d9b4bb561a7224}
+Point of the block's bottom-\/left corner 
 
-
-Definition at line 19 of file Block.\+hpp.
+Definition at line 24 of file Block.\+hpp.
 
 \hypertarget{classChipChipArray_1_1Block_a82f831883d31e6d74be45b8851eefe96}{\index{Chip\+Chip\+Array\+::\+Block@{Chip\+Chip\+Array\+::\+Block}!bottom\+Right@{bottom\+Right}}
 \index{bottom\+Right@{bottom\+Right}!Chip\+Chip\+Array\+::\+Block@{Chip\+Chip\+Array\+::\+Block}}
 \subsubsection[{bottom\+Right}]{\setlength{\rightskip}{0pt plus 5cm}cv\+::\+Point Chip\+Chip\+Array\+::\+Block\+::bottom\+Right}}\label{classChipChipArray_1_1Block_a82f831883d31e6d74be45b8851eefe96}
+Point of the block's bottom-\/right corner 
 
-
-Definition at line 24 of file Block.\+hpp.
+Definition at line 29 of file Block.\+hpp.
 
 \hypertarget{classChipChipArray_1_1Block_a262210a9a04028f3f2670c9ae38ef3d7}{\index{Chip\+Chip\+Array\+::\+Block@{Chip\+Chip\+Array\+::\+Block}!color@{color}}
 \index{color@{color}!Chip\+Chip\+Array\+::\+Block@{Chip\+Chip\+Array\+::\+Block}}
 \subsubsection[{color}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Color} Chip\+Chip\+Array\+::\+Block\+::color}}\label{classChipChipArray_1_1Block_a262210a9a04028f3f2670c9ae38ef3d7}
+The detected color of the block 
 
-
-Definition at line 49 of file Block.\+hpp.
+Definition at line 54 of file Block.\+hpp.
 
 \hypertarget{classChipChipArray_1_1Block_aed94802c166c9b4553764eb637717a2a}{\index{Chip\+Chip\+Array\+::\+Block@{Chip\+Chip\+Array\+::\+Block}!height@{height}}
 \index{height@{height}!Chip\+Chip\+Array\+::\+Block@{Chip\+Chip\+Array\+::\+Block}}
 \subsubsection[{height}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint16} Chip\+Chip\+Array\+::\+Block\+::height}}\label{classChipChipArray_1_1Block_aed94802c166c9b4553764eb637717a2a}
+The height of the block in pixels 
 
-
-Definition at line 29 of file Block.\+hpp.
+Definition at line 34 of file Block.\+hpp.
 
 \hypertarget{classChipChipArray_1_1Block_aebd356d7fcfe7ff11db8195e6d7f8e42}{\index{Chip\+Chip\+Array\+::\+Block@{Chip\+Chip\+Array\+::\+Block}!size@{size}}
 \index{size@{size}!Chip\+Chip\+Array\+::\+Block@{Chip\+Chip\+Array\+::\+Block}}
 \subsubsection[{size}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Size} Chip\+Chip\+Array\+::\+Block\+::size}}\label{classChipChipArray_1_1Block_aebd356d7fcfe7ff11db8195e6d7f8e42}
+The size of the block (half or whole) 
 
-
-Definition at line 54 of file Block.\+hpp.
+Definition at line 59 of file Block.\+hpp.
 
 \hypertarget{classChipChipArray_1_1Block_aeecc05025c6c8e23ff6ca09a6fbd4b4b}{\index{Chip\+Chip\+Array\+::\+Block@{Chip\+Chip\+Array\+::\+Block}!top\+Left@{top\+Left}}
 \index{top\+Left@{top\+Left}!Chip\+Chip\+Array\+::\+Block@{Chip\+Chip\+Array\+::\+Block}}
 \subsubsection[{top\+Left}]{\setlength{\rightskip}{0pt plus 5cm}cv\+::\+Point Chip\+Chip\+Array\+::\+Block\+::top\+Left}}\label{classChipChipArray_1_1Block_aeecc05025c6c8e23ff6ca09a6fbd4b4b}
+Point of the block's top-\/left corner 
 
-
-Definition at line 34 of file Block.\+hpp.
+Definition at line 39 of file Block.\+hpp.
 
 \hypertarget{classChipChipArray_1_1Block_aaa4ff82846e95a628800ebdfd3ceefb5}{\index{Chip\+Chip\+Array\+::\+Block@{Chip\+Chip\+Array\+::\+Block}!top\+Right@{top\+Right}}
 \index{top\+Right@{top\+Right}!Chip\+Chip\+Array\+::\+Block@{Chip\+Chip\+Array\+::\+Block}}
 \subsubsection[{top\+Right}]{\setlength{\rightskip}{0pt plus 5cm}cv\+::\+Point Chip\+Chip\+Array\+::\+Block\+::top\+Right}}\label{classChipChipArray_1_1Block_aaa4ff82846e95a628800ebdfd3ceefb5}
+Point of the block's top-\/right corner 
 
-
-Definition at line 39 of file Block.\+hpp.
+Definition at line 44 of file Block.\+hpp.
 
 \hypertarget{classChipChipArray_1_1Block_ac3f815e8aa9060c4ad20d4e1b2649e35}{\index{Chip\+Chip\+Array\+::\+Block@{Chip\+Chip\+Array\+::\+Block}!width@{width}}
 \index{width@{width}!Chip\+Chip\+Array\+::\+Block@{Chip\+Chip\+Array\+::\+Block}}
 \subsubsection[{width}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint16} Chip\+Chip\+Array\+::\+Block\+::width}}\label{classChipChipArray_1_1Block_ac3f815e8aa9060c4ad20d4e1b2649e35}
+The width of the block in pixels 
 
-
-Definition at line 44 of file Block.\+hpp.
+Definition at line 49 of file Block.\+hpp.
 
 
 

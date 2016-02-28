@@ -12,16 +12,16 @@ ChipChipArray::Grabber \-
 
 .in +1c
 .ti -1c
-.RI "\fBGrabber\fP (\fBZone\fP zone, \fBSide\fP side)"
+.RI "\fBGrabber\fP (\fBZone\fP \fBzone\fP, \fBSide\fP \fBside\fP)"
 .br
 .ti -1c
 .RI "\fB~Grabber\fP ()"
 .br
 .ti -1c
-.RI "\fBResult\fP \fBLoad\fP ()"
+.RI "void \fBClose\fP ()"
 .br
 .ti -1c
-.RI "void \fBClose\fP ()"
+.RI "\fBResult\fP \fBLoad\fP ()"
 .br
 .ti -1c
 .RI "\fBBlock\fP \fBLocateBlock\fP ()"
@@ -37,15 +37,6 @@ ChipChipArray::Grabber \-
 .RI "void \fBExtend\fP ()"
 .br
 .ti -1c
-.RI "bool \fBFindBlock\fP ()"
-.br
-.ti -1c
-.RI "\fBColor\fP \fBFindColor\fP ()"
-.br
-.ti -1c
-.RI "\fBSize\fP \fBFindSize\fP ()"
-.br
-.ti -1c
 .RI "void \fBGrab\fP (\fBBlockPosition\fP pos)"
 .br
 .ti -1c
@@ -53,6 +44,19 @@ ChipChipArray::Grabber \-
 .br
 .ti -1c
 .RI "void \fBPlace\fP (\fBColor\fP color, \fBBlockPosition\fP pos)"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBPiCamera\fP \fBcam\fP"
+.br
+.ti -1c
+.RI "\fBSide\fP \fBside\fP"
+.br
+.ti -1c
+.RI "\fBZone\fP \fBzone\fP"
 .br
 .in -1c
 .SH "Detailed Description"
@@ -74,58 +78,25 @@ Initializes the class according to the side and zone and extends the robotic arm
 .PP
 
 .PP
-Definition at line 154 of file Grabber\&.hpp\&.
+Definition at line 157 of file Grabber\&.hpp\&.
 .SS "ChipChipArray::Grabber::~Grabber ()"
 Destructs the class and retracts the arm\&. 
 .PP
-Definition at line 173 of file Grabber\&.hpp\&.
+Definition at line 180 of file Grabber\&.hpp\&.
 .SH "Member Function Documentation"
 .PP 
 .SS "void ChipChipArray::Grabber::Close ()"
-
+Closes the \fBGrabber\fP\&. Retracts the arm and closes the camera\&. 
 .PP
-Definition at line 177 of file Grabber\&.hpp\&.
+Definition at line 184 of file Grabber\&.hpp\&.
 .SS "void ChipChipArray::Grabber::Discard ()\fC [protected]\fP"
 Takes block currently in the arm's pinchers and places to side of robot opposite the loading zone\&. 
 .PP
-Definition at line 183 of file Grabber\&.hpp\&.
+Definition at line 189 of file Grabber\&.hpp\&.
 .SS "void ChipChipArray::Grabber::Extend ()\fC [protected]\fP"
 Sets arm to generic position roughly right above a stack of blocks\&. 
 .PP
-Definition at line 187 of file Grabber\&.hpp\&.
-.SS "bool ChipChipArray::Grabber::FindBlock ()\fC [protected]\fP"
-Whether there is little doubt that a block is within reach based on the image from the camera\&.
-.PP
-\fBReturns:\fP
-.RS 4
-if a block is within reach 
-.RE
-.PP
-
-.PP
-Definition at line 191 of file Grabber\&.hpp\&.
-.SS "\fBColor\fP ChipChipArray::Grabber::FindColor ()\fC [protected]\fP"
-Examines block in pinchers for a definite color and returns most likely Color\&. For Zones B and C only\&.
-.PP
-\fBReturns:\fP
-.RS 4
-the Color of the current block 
-.RE
-.PP
-
-.PP
-Definition at line 195 of file Grabber\&.hpp\&.
-.SS "\fBSize\fP ChipChipArray::Grabber::FindSize ()\fC [protected]\fP"
-Determines if block is short or long\&. It is assumed to be long if there is uncertainty\&. Zone B only\&.
-.PP
-\fBReturns:\fP
-.RS 4
-the Size of the current block 
-.RE
-.PP
-
-.PP
-Definition at line 199 of file Grabber\&.hpp\&.
+Definition at line 193 of file Grabber\&.hpp\&.
 .SS "void ChipChipArray::Grabber::Grab (\fBBlockPosition\fPpos)\fC [protected]\fP"
 Picks up block by ezaming how much it fills up the camera image and where its edges are\&. It is then decided where to grab the block, and the block is picked up\&.
 .PP
@@ -136,7 +107,7 @@ Picks up block by ezaming how much it fills up the camera image and where its ed
 .PP
 
 .PP
-Definition at line 203 of file Grabber\&.hpp\&.
+Definition at line 197 of file Grabber\&.hpp\&.
 .SS "\fBResult\fP ChipChipArray::Grabber::Load ()"
 Loads a block(s) (if possible) at the robot's current position\&.
 .PP
@@ -147,11 +118,13 @@ the number of half and whole blocks loaded
 .PP
 
 .PP
-Definition at line 207 of file Grabber\&.hpp\&.
+Definition at line 201 of file Grabber\&.hpp\&.
 .SS "\fBBlock\fP ChipChipArray::Grabber::LocateBlock ()"
-
+Finds the block to pick up\&. Color and block size are contained in this class\&.
 .PP
-Definition at line 211 of file Grabber\&.hpp\&.
+the block to pick up based on the Side given 
+.PP
+Definition at line 205 of file Grabber\&.hpp\&.
 .SS "void ChipChipArray::Grabber::Place (\fBColor\fPcolor)\fC [protected]\fP"
 Puts block in slot according to color\&. Zones B and C only\&.
 .PP
@@ -172,6 +145,20 @@ Puts half-blocks in the unloader according to whether there is already a half-bl
 .RE
 .PP
 
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBPiCamera\fP ChipChipArray::Grabber::cam\fC [protected]\fP"
+The Raspicam 
+.PP
+Definition at line 67 of file Grabber\&.hpp\&.
+.SS "\fBSide\fP ChipChipArray::Grabber::side\fC [protected]\fP"
+The side from which the robot is coming (i\&.e\&., the side where the higher priority blocks are to be picked up\&. 
+.PP
+Definition at line 74 of file Grabber\&.hpp\&.
+.SS "\fBZone\fP ChipChipArray::Grabber::zone\fC [protected]\fP"
+The boat zone 
+.PP
+Definition at line 79 of file Grabber\&.hpp\&.
 
 .SH "Author"
 .PP 

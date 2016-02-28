@@ -11,101 +11,101 @@
     <includes refid="PiCamera_8hpp" local="yes">PiCamera.hpp</includes>
     <includedby refid="cv__test_8cpp" local="yes">src/cv_test.cpp</includedby>
     <incdepgraph>
-      <node id="299">
+      <node id="310">
         <label>sys/stat.h</label>
       </node>
-      <node id="294">
+      <node id="305">
         <label>definitions.hpp</label>
         <link refid="definitions_8hpp"/>
       </node>
-      <node id="302">
+      <node id="313">
         <label>raspicam/raspicam_cv.h</label>
       </node>
-      <node id="301">
+      <node id="312">
         <label>opencv2/core/core.hpp</label>
       </node>
-      <node id="292">
+      <node id="303">
         <label>string</label>
       </node>
-      <node id="295">
+      <node id="306">
         <label>Log.hpp</label>
         <link refid="Log_8hpp"/>
-        <childnode refid="296" relation="include">
+        <childnode refid="307" relation="include">
         </childnode>
-        <childnode refid="297" relation="include">
+        <childnode refid="308" relation="include">
         </childnode>
-        <childnode refid="298" relation="include">
+        <childnode refid="309" relation="include">
         </childnode>
-        <childnode refid="290" relation="include">
-        </childnode>
-        <childnode refid="292" relation="include">
-        </childnode>
-        <childnode refid="299" relation="include">
-        </childnode>
-        <childnode refid="294" relation="include">
-        </childnode>
-      </node>
-      <node id="297">
-        <label>fstream</label>
-      </node>
-      <node id="291">
-        <label>opencv2/imgproc/imgproc.hpp</label>
-      </node>
-      <node id="296">
-        <label>ctime</label>
-      </node>
-      <node id="303">
-        <label>unistd.h</label>
-      </node>
-      <node id="293">
-        <label>vector</label>
-      </node>
-      <node id="289">
-        <label>src/Grabber.hpp</label>
-        <link refid="Grabber.hpp"/>
-        <childnode refid="290" relation="include">
-        </childnode>
-        <childnode refid="291" relation="include">
-        </childnode>
-        <childnode refid="292" relation="include">
-        </childnode>
-        <childnode refid="293" relation="include">
-        </childnode>
-        <childnode refid="294" relation="include">
-        </childnode>
-        <childnode refid="295" relation="include">
-        </childnode>
-        <childnode refid="300" relation="include">
-        </childnode>
-      </node>
-      <node id="290">
-        <label>opencv2/highgui/highgui.hpp</label>
-      </node>
-      <node id="298">
-        <label>iostream</label>
-      </node>
-      <node id="300">
-        <label>PiCamera.hpp</label>
-        <link refid="PiCamera_8hpp"/>
         <childnode refid="301" relation="include">
         </childnode>
-        <childnode refid="290" relation="include">
+        <childnode refid="303" relation="include">
+        </childnode>
+        <childnode refid="310" relation="include">
+        </childnode>
+        <childnode refid="305" relation="include">
+        </childnode>
+      </node>
+      <node id="308">
+        <label>fstream</label>
+      </node>
+      <node id="302">
+        <label>opencv2/imgproc/imgproc.hpp</label>
+      </node>
+      <node id="307">
+        <label>ctime</label>
+      </node>
+      <node id="314">
+        <label>unistd.h</label>
+      </node>
+      <node id="304">
+        <label>vector</label>
+      </node>
+      <node id="300">
+        <label>src/Grabber.hpp</label>
+        <link refid="Grabber.hpp"/>
+        <childnode refid="301" relation="include">
         </childnode>
         <childnode refid="302" relation="include">
         </childnode>
         <childnode refid="303" relation="include">
         </childnode>
+        <childnode refid="304" relation="include">
+        </childnode>
+        <childnode refid="305" relation="include">
+        </childnode>
+        <childnode refid="306" relation="include">
+        </childnode>
+        <childnode refid="311" relation="include">
+        </childnode>
+      </node>
+      <node id="301">
+        <label>opencv2/highgui/highgui.hpp</label>
+      </node>
+      <node id="309">
+        <label>iostream</label>
+      </node>
+      <node id="311">
+        <label>PiCamera.hpp</label>
+        <link refid="PiCamera_8hpp"/>
+        <childnode refid="312" relation="include">
+        </childnode>
+        <childnode refid="301" relation="include">
+        </childnode>
+        <childnode refid="313" relation="include">
+        </childnode>
+        <childnode refid="314" relation="include">
+        </childnode>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="305">
+      <node id="316">
         <label>src/cv_test.cpp</label>
         <link refid="cv__test_8cpp"/>
       </node>
-      <node id="304">
+      <node id="315">
         <label>src/Grabber.hpp</label>
         <link refid="Grabber.hpp"/>
-        <childnode refid="305" relation="include">
+        <childnode refid="316" relation="include">
         </childnode>
       </node>
     </invincdepgraph>
@@ -132,233 +132,230 @@
 <codeline lineno="14"><highlight class="normal"></highlight></codeline>
 <codeline lineno="19" refid="classChipChipArray_1_1Grabber" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classChipChipArray_1_1Grabber" kindref="compound">Grabber</ref><sp/>{</highlight></codeline>
 <codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classChipChipArray_1_1Grabber_1a7333f40c135fbe92d59651f75032b4e7" kindref="member">Grabber</ref>(<ref refid="definitions_8hpp_1adbd1e7a33d3e1751c7b2aa2562d0ecb9" kindref="member">Zone</ref><sp/>zone,<sp/><ref refid="definitions_8hpp_1a03325a8a9d4f105db5e37dd587128142" kindref="member">Side</ref><sp/>side);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classChipChipArray_1_1Grabber_1a7333f40c135fbe92d59651f75032b4e7" kindref="member">Grabber</ref>(<ref refid="definitions_8hpp_1adbd1e7a33d3e1751c7b2aa2562d0ecb9" kindref="member">Zone</ref><sp/><ref refid="classChipChipArray_1_1Grabber_1ab57efe6e0b6f369b19528285a278d967" kindref="member">zone</ref>,<sp/><ref refid="definitions_8hpp_1a03325a8a9d4f105db5e37dd587128142" kindref="member">Side</ref><sp/><ref refid="classChipChipArray_1_1Grabber_1a8afbaefae7c767c862fd1bf13968539b" kindref="member">side</ref>);</highlight></codeline>
 <codeline lineno="33"><highlight class="normal"></highlight></codeline>
 <codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classChipChipArray_1_1Grabber_1a0fe4bfbb6e479006a584f50cac0b5d5d" kindref="member">~Grabber</ref>();</highlight></codeline>
 <codeline lineno="38"><highlight class="normal"></highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="definitions_8hpp_1ab84ebabb02540c4a7ec341a213abf1dc" kindref="member">Result</ref><sp/><ref refid="classChipChipArray_1_1Grabber_1a56639f8f9ba9468bce4b6d69ceb2eb54" kindref="member">Load</ref>();</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"></highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classChipChipArray_1_1Grabber_1aacf089ceb4aa5b263c2cc702fb3daf74" kindref="member">Close</ref>();</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"></highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classChipChipArray_1_1Block" kindref="compound">Block</ref><sp/><ref refid="classChipChipArray_1_1Grabber_1a86bc18ecf71c7ff4e324df0467af124a" kindref="member">LocateBlock</ref>();</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"></highlight></codeline>
-<codeline lineno="51"><highlight class="normal"></highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classChipChipArray_1_1Grabber_1a09f89b79e745db18009a022e9bfacd3a" kindref="member">Discard</ref>();</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"></highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classChipChipArray_1_1Grabber_1abecb4047b4f7d5a7e691b7fb581b5a39" kindref="member">Extend</ref>();</highlight></codeline>
-<codeline lineno="64"><highlight class="normal"></highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classChipChipArray_1_1Grabber_1ae52cf94210d8a5f468c08e59737518c4" kindref="member">FindBlock</ref>();</highlight></codeline>
-<codeline lineno="72"><highlight class="normal"></highlight></codeline>
-<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="definitions_8hpp_1abc05a0f46084a3477cf5d5c939ff1436" kindref="member">Color</ref><sp/><ref refid="classChipChipArray_1_1Grabber_1a8ddc7def90b874885b2745034b5677df" kindref="member">FindColor</ref>();</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classChipChipArray_1_1Grabber_1aacf089ceb4aa5b263c2cc702fb3daf74" kindref="member">Close</ref>();</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="definitions_8hpp_1ab84ebabb02540c4a7ec341a213abf1dc" kindref="member">Result</ref><sp/><ref refid="classChipChipArray_1_1Grabber_1a56639f8f9ba9468bce4b6d69ceb2eb54" kindref="member">Load</ref>();</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classChipChipArray_1_1Block" kindref="compound">Block</ref><sp/><ref refid="classChipChipArray_1_1Grabber_1a86bc18ecf71c7ff4e324df0467af124a" kindref="member">LocateBlock</ref>();</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="67" refid="classChipChipArray_1_1Grabber_1a726bcc2367a719cb84de92a981947622" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classChipChipArray_1_1PiCamera" kindref="compound">PiCamera</ref><sp/><ref refid="classChipChipArray_1_1Grabber_1a726bcc2367a719cb84de92a981947622" kindref="member">cam</ref>;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74" refid="classChipChipArray_1_1Grabber_1a8afbaefae7c767c862fd1bf13968539b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="definitions_8hpp_1a03325a8a9d4f105db5e37dd587128142" kindref="member">Side</ref><sp/><ref refid="classChipChipArray_1_1Grabber_1a8afbaefae7c767c862fd1bf13968539b" kindref="member">side</ref>;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79" refid="classChipChipArray_1_1Grabber_1ab57efe6e0b6f369b19528285a278d967" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="definitions_8hpp_1adbd1e7a33d3e1751c7b2aa2562d0ecb9" kindref="member">Zone</ref><sp/><ref refid="classChipChipArray_1_1Grabber_1ab57efe6e0b6f369b19528285a278d967" kindref="member">zone</ref>;</highlight></codeline>
 <codeline lineno="80"><highlight class="normal"></highlight></codeline>
-<codeline lineno="81"><highlight class="normal"></highlight></codeline>
-<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="definitions_8hpp_1a9809446fd16a744b6df9808293f14153" kindref="member">Size</ref><sp/><ref refid="classChipChipArray_1_1Grabber_1a7262ce7fd6d4cc2f0210fcc9cafdd840" kindref="member">FindSize</ref>();</highlight></codeline>
-<codeline lineno="89"><highlight class="normal"></highlight></codeline>
-<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classChipChipArray_1_1Grabber_1a0a8a57e44f291581ab2862272134a592" kindref="member">Grab</ref>(<ref refid="definitions_8hpp_1ac8e1b1f4bbac5914204c97f66f97d01f" kindref="member">BlockPosition</ref><sp/>pos);</highlight></codeline>
-<codeline lineno="100"><highlight class="normal"></highlight></codeline>
-<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classChipChipArray_1_1Grabber_1a2833eebf4e57078c0d677379babfd2d4" kindref="member">Place</ref>(<ref refid="definitions_8hpp_1abc05a0f46084a3477cf5d5c939ff1436" kindref="member">Color</ref><sp/>color);</highlight></codeline>
-<codeline lineno="108"><highlight class="normal"></highlight></codeline>
-<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classChipChipArray_1_1Grabber_1a2833eebf4e57078c0d677379babfd2d4" kindref="member">Place</ref>(<ref refid="definitions_8hpp_1abc05a0f46084a3477cf5d5c939ff1436" kindref="member">Color</ref><sp/>color,<sp/><ref refid="definitions_8hpp_1ac8e1b1f4bbac5914204c97f66f97d01f" kindref="member">BlockPosition</ref><sp/>pos);</highlight></codeline>
-<codeline lineno="121"><highlight class="normal"></highlight></codeline>
-<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="definitions_8hpp_1a1134b580f8da4de94ca6b1de4d37975e" kindref="member">uint32</ref><sp/>MIN_HALF_BLOCK_SIZE<sp/>=<sp/>200000;</highlight></codeline>
-<codeline lineno="127"><highlight class="normal"></highlight></codeline>
-<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="definitions_8hpp_1adde6aaee8457bee49c2a92621fe22b79" kindref="member">uint8</ref><sp/>invokeCount<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classChipChipArray_1_1Grabber_1a09f89b79e745db18009a022e9bfacd3a" kindref="member">Discard</ref>();</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classChipChipArray_1_1Grabber_1abecb4047b4f7d5a7e691b7fb581b5a39" kindref="member">Extend</ref>();</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classChipChipArray_1_1Grabber_1a0a8a57e44f291581ab2862272134a592" kindref="member">Grab</ref>(<ref refid="definitions_8hpp_1ac8e1b1f4bbac5914204c97f66f97d01f" kindref="member">BlockPosition</ref><sp/>pos);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classChipChipArray_1_1Grabber_1a2833eebf4e57078c0d677379babfd2d4" kindref="member">Place</ref>(<ref refid="definitions_8hpp_1abc05a0f46084a3477cf5d5c939ff1436" kindref="member">Color</ref><sp/>color);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classChipChipArray_1_1Grabber_1a2833eebf4e57078c0d677379babfd2d4" kindref="member">Place</ref>(<ref refid="definitions_8hpp_1abc05a0f46084a3477cf5d5c939ff1436" kindref="member">Color</ref><sp/>color,<sp/><ref refid="definitions_8hpp_1ac8e1b1f4bbac5914204c97f66f97d01f" kindref="member">BlockPosition</ref><sp/>pos);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="definitions_8hpp_1a1134b580f8da4de94ca6b1de4d37975e" kindref="member">uint32</ref><sp/>MIN_HALF_BLOCK_SIZE<sp/>=<sp/>100000;</highlight></codeline>
 <codeline lineno="132"><highlight class="normal"></highlight></codeline>
-<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classChipChipArray_1_1Log" kindref="compound">Log</ref><sp/>log;</highlight></codeline>
-<codeline lineno="137"><highlight class="normal"></highlight></codeline>
-<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::map&lt;Color,<sp/>std::array&lt;cv::Scalar,<sp/>2&gt;&gt;<sp/>rangeVals;</highlight></codeline>
-<codeline lineno="142"><highlight class="normal"></highlight></codeline>
-<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classChipChipArray_1_1PiCamera" kindref="compound">PiCamera</ref><sp/>cam;</highlight></codeline>
-<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
-<codeline lineno="148"><highlight class="normal"></highlight></codeline>
-<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classChipChipArray_1_1Log" kindref="compound">Log</ref><sp/>Grabber::log(</highlight><highlight class="stringliteral">&quot;logs/Grabber&quot;</highlight><highlight class="normal">,<sp/><ref refid="definitions_8hpp_1aa7380b6d694cab49f07aed6a7af592d9ace7898536dd0e928d1640ee2ad531cc8" kindref="member">LogMode::Multi</ref>);</highlight></codeline>
-<codeline lineno="153"><highlight class="normal"></highlight></codeline>
-<codeline lineno="154" refid="classChipChipArray_1_1Grabber_1a7333f40c135fbe92d59651f75032b4e7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classChipChipArray_1_1Grabber_1a7333f40c135fbe92d59651f75032b4e7" kindref="member">Grabber::Grabber</ref>(<ref refid="definitions_8hpp_1adbd1e7a33d3e1751c7b2aa2562d0ecb9" kindref="member">Zone</ref><sp/>zone,<sp/><ref refid="definitions_8hpp_1a03325a8a9d4f105db5e37dd587128142" kindref="member">Side</ref><sp/>side)<sp/>{</highlight></codeline>
-<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>log.<ref refid="classChipChipArray_1_1Log_1a154a5f38d9c7a767693b242684a3d4d9" kindref="member">Verbose</ref>(</highlight><highlight class="stringliteral">&quot;Initializing<sp/>Grabber&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>log.<ref refid="classChipChipArray_1_1Log_1a154a5f38d9c7a767693b242684a3d4d9" kindref="member">Verbose</ref>(</highlight><highlight class="stringliteral">&quot;Zone:<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/><ref refid="namespacestd_1aa5ddf582a1c96ffe258c997be9a294a3" kindref="member">std::to_string</ref>(zone));</highlight></codeline>
-<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>log.<ref refid="classChipChipArray_1_1Log_1a154a5f38d9c7a767693b242684a3d4d9" kindref="member">Verbose</ref>(</highlight><highlight class="stringliteral">&quot;Side:<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/><ref refid="namespacestd_1aa5ddf582a1c96ffe258c997be9a294a3" kindref="member">std::to_string</ref>(side));</highlight></codeline>
-<codeline lineno="158"><highlight class="normal"></highlight></codeline>
-<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>invokeCount++;</highlight></codeline>
-<codeline lineno="160"><highlight class="normal"></highlight></codeline>
-<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>log.<ref refid="classChipChipArray_1_1Log_1a154a5f38d9c7a767693b242684a3d4d9" kindref="member">Verbose</ref>(</highlight><highlight class="stringliteral">&quot;Setting<sp/>HSV<sp/>threshold<sp/>values&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rangeVals[<ref refid="definitions_8hpp_1abc05a0f46084a3477cf5d5c939ff1436aee38e4d5dd68c4e440825018d549cb47" kindref="member">Color::Red</ref>]<sp/>=<sp/>{<sp/>cv::Scalar(0,<sp/>165,<sp/>0),</highlight></codeline>
-<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cv::Scalar(10,<sp/>255,<sp/>100)<sp/>};</highlight></codeline>
-<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rangeVals[<ref refid="definitions_8hpp_1abc05a0f46084a3477cf5d5c939ff1436a51e6cd92b6c45f9affdc158ecca2b8b8" kindref="member">Color::Yellow</ref>]<sp/>=<sp/>{<sp/>cv::Scalar(25,<sp/>224,<sp/>114),</highlight></codeline>
-<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cv::Scalar(36,<sp/>225,<sp/>183)<sp/>};</highlight></codeline>
-<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rangeVals[<ref refid="definitions_8hpp_1abc05a0f46084a3477cf5d5c939ff1436ad382816a3cbeed082c9e216e7392eed1" kindref="member">Color::Green</ref>]<sp/>=<sp/>{<sp/>cv::Scalar(44,<sp/>128,<sp/>0),</highlight></codeline>
-<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cv::Scalar(70,<sp/>255,<sp/>124)<sp/>};</highlight></codeline>
-<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rangeVals[<ref refid="definitions_8hpp_1abc05a0f46084a3477cf5d5c939ff1436a9594eec95be70e7b1710f730fdda33d9" kindref="member">Color::Blue</ref>]<sp/>=<sp/>{<sp/>cv::Scalar(70,<sp/>128,<sp/>0),</highlight></codeline>
-<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cv::Scalar(113,<sp/>255,<sp/>255)<sp/>};</highlight></codeline>
-<codeline lineno="170"><highlight class="normal"></highlight></codeline>
-<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="172"><highlight class="normal"></highlight></codeline>
-<codeline lineno="173" refid="classChipChipArray_1_1Grabber_1a0fe4bfbb6e479006a584f50cac0b5d5d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classChipChipArray_1_1Grabber_1a0fe4bfbb6e479006a584f50cac0b5d5d" kindref="member">Grabber::~Grabber</ref>()<sp/>{</highlight></codeline>
-<codeline lineno="174"><highlight class="normal"></highlight></codeline>
-<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="176"><highlight class="normal"></highlight></codeline>
-<codeline lineno="177" refid="classChipChipArray_1_1Grabber_1aacf089ceb4aa5b263c2cc702fb3daf74" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classChipChipArray_1_1Grabber_1aacf089ceb4aa5b263c2cc702fb3daf74" kindref="member">Grabber::Close</ref>()<sp/>{</highlight></codeline>
-<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>log.<ref refid="classChipChipArray_1_1Log_1a66575b6e94c6112e4cefa5736cb996e0" kindref="member">Status</ref>(</highlight><highlight class="stringliteral">&quot;Closing<sp/>Grabber&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cv::destroyAllWindows();</highlight></codeline>
-<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cam.<ref refid="classChipChipArray_1_1PiCamera_1a38f8205921d6deec5a2c360ea7d24cc5" kindref="member">Close</ref>();</highlight></codeline>
-<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="182"><highlight class="normal"></highlight></codeline>
-<codeline lineno="183" refid="classChipChipArray_1_1Grabber_1a09f89b79e745db18009a022e9bfacd3a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classChipChipArray_1_1Grabber_1a09f89b79e745db18009a022e9bfacd3a" kindref="member">Grabber::Discard</ref>()<sp/>{</highlight></codeline>
-<codeline lineno="184"><highlight class="normal"></highlight></codeline>
-<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="186"><highlight class="normal"></highlight></codeline>
-<codeline lineno="187" refid="classChipChipArray_1_1Grabber_1abecb4047b4f7d5a7e691b7fb581b5a39" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classChipChipArray_1_1Grabber_1abecb4047b4f7d5a7e691b7fb581b5a39" kindref="member">Grabber::Extend</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classChipChipArray_1_1Log" kindref="compound">Log</ref><sp/>log;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="definitions_8hpp_1adde6aaee8457bee49c2a92621fe22b79" kindref="member">uint8</ref><sp/>invokeCount<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::map&lt;Color,<sp/>std::array&lt;cv::Scalar,<sp/>2&gt;&gt;<sp/>rangeVals;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classChipChipArray_1_1Log" kindref="compound">Log</ref><sp/>Grabber::log(</highlight><highlight class="stringliteral">&quot;logs/Grabber&quot;</highlight><highlight class="normal">,<sp/><ref refid="definitions_8hpp_1aa7380b6d694cab49f07aed6a7af592d9ace7898536dd0e928d1640ee2ad531cc8" kindref="member">LogMode::Multi</ref>);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157" refid="classChipChipArray_1_1Grabber_1a7333f40c135fbe92d59651f75032b4e7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classChipChipArray_1_1Grabber_1a7333f40c135fbe92d59651f75032b4e7" kindref="member">Grabber::Grabber</ref>(<ref refid="definitions_8hpp_1adbd1e7a33d3e1751c7b2aa2562d0ecb9" kindref="member">Zone</ref><sp/>zone,<sp/><ref refid="definitions_8hpp_1a03325a8a9d4f105db5e37dd587128142" kindref="member">Side</ref><sp/>side)<sp/>{</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>log.<ref refid="classChipChipArray_1_1Log_1a154a5f38d9c7a767693b242684a3d4d9" kindref="member">Verbose</ref>(</highlight><highlight class="stringliteral">&quot;Initializing<sp/>Grabber&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>log.<ref refid="classChipChipArray_1_1Log_1a154a5f38d9c7a767693b242684a3d4d9" kindref="member">Verbose</ref>(</highlight><highlight class="stringliteral">&quot;Zone:<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/><ref refid="namespacestd_1aa5ddf582a1c96ffe258c997be9a294a3" kindref="member">std::to_string</ref>(zone));</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>log.<ref refid="classChipChipArray_1_1Log_1a154a5f38d9c7a767693b242684a3d4d9" kindref="member">Verbose</ref>(</highlight><highlight class="stringliteral">&quot;Side:<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/><ref refid="namespacestd_1aa5ddf582a1c96ffe258c997be9a294a3" kindref="member">std::to_string</ref>(side));</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>invokeCount++;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;zone<sp/>=<sp/><ref refid="classChipChipArray_1_1Grabber_1ab57efe6e0b6f369b19528285a278d967" kindref="member">zone</ref>;</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;side<sp/>=<sp/><ref refid="classChipChipArray_1_1Grabber_1a8afbaefae7c767c862fd1bf13968539b" kindref="member">side</ref>;</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>log.<ref refid="classChipChipArray_1_1Log_1a154a5f38d9c7a767693b242684a3d4d9" kindref="member">Verbose</ref>(</highlight><highlight class="stringliteral">&quot;Setting<sp/>HSV<sp/>threshold<sp/>values&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rangeVals[<ref refid="definitions_8hpp_1abc05a0f46084a3477cf5d5c939ff1436aee38e4d5dd68c4e440825018d549cb47" kindref="member">Color::Red</ref>]<sp/>=<sp/>{<sp/>cv::Scalar(0,<sp/>0,<sp/>0),</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cv::Scalar(12,<sp/>255,<sp/>255)<sp/>};</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rangeVals[<ref refid="definitions_8hpp_1abc05a0f46084a3477cf5d5c939ff1436a51e6cd92b6c45f9affdc158ecca2b8b8" kindref="member">Color::Yellow</ref>]<sp/>=<sp/>{<sp/>cv::Scalar(25,<sp/>224,<sp/>114),</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cv::Scalar(36,<sp/>225,<sp/>183)<sp/>};</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rangeVals[<ref refid="definitions_8hpp_1abc05a0f46084a3477cf5d5c939ff1436ad382816a3cbeed082c9e216e7392eed1" kindref="member">Color::Green</ref>]<sp/>=<sp/>{<sp/>cv::Scalar(44,<sp/>128,<sp/>0),</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cv::Scalar(70,<sp/>255,<sp/>124)<sp/>};</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rangeVals[<ref refid="definitions_8hpp_1abc05a0f46084a3477cf5d5c939ff1436a9594eec95be70e7b1710f730fdda33d9" kindref="member">Color::Blue</ref>]<sp/>=<sp/>{<sp/>cv::Scalar(70,<sp/>128,<sp/>0),</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cv::Scalar(113,<sp/>255,<sp/>255)<sp/>};</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180" refid="classChipChipArray_1_1Grabber_1a0fe4bfbb6e479006a584f50cac0b5d5d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classChipChipArray_1_1Grabber_1a0fe4bfbb6e479006a584f50cac0b5d5d" kindref="member">Grabber::~Grabber</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight></codeline>
+<codeline lineno="184" refid="classChipChipArray_1_1Grabber_1aacf089ceb4aa5b263c2cc702fb3daf74" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classChipChipArray_1_1Grabber_1aacf089ceb4aa5b263c2cc702fb3daf74" kindref="member">Grabber::Close</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>log.<ref refid="classChipChipArray_1_1Log_1a66575b6e94c6112e4cefa5736cb996e0" kindref="member">Status</ref>(</highlight><highlight class="stringliteral">&quot;Closing<sp/>Grabber&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classChipChipArray_1_1Grabber_1a726bcc2367a719cb84de92a981947622" kindref="member">cam</ref>.<ref refid="classChipChipArray_1_1PiCamera_1a38f8205921d6deec5a2c360ea7d24cc5" kindref="member">Close</ref>();</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="188"><highlight class="normal"></highlight></codeline>
-<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="189" refid="classChipChipArray_1_1Grabber_1a09f89b79e745db18009a022e9bfacd3a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classChipChipArray_1_1Grabber_1a09f89b79e745db18009a022e9bfacd3a" kindref="member">Grabber::Discard</ref>()<sp/>{</highlight></codeline>
 <codeline lineno="190"><highlight class="normal"></highlight></codeline>
-<codeline lineno="191" refid="classChipChipArray_1_1Grabber_1ae52cf94210d8a5f468c08e59737518c4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classChipChipArray_1_1Grabber_1ae52cf94210d8a5f468c08e59737518c4" kindref="member">Grabber::FindBlock</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="192"><highlight class="normal"></highlight></codeline>
-<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="193" refid="classChipChipArray_1_1Grabber_1abecb4047b4f7d5a7e691b7fb581b5a39" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classChipChipArray_1_1Grabber_1abecb4047b4f7d5a7e691b7fb581b5a39" kindref="member">Grabber::Extend</ref>()<sp/>{</highlight></codeline>
 <codeline lineno="194"><highlight class="normal"></highlight></codeline>
-<codeline lineno="195" refid="classChipChipArray_1_1Grabber_1a8ddc7def90b874885b2745034b5677df" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8hpp_1abc05a0f46084a3477cf5d5c939ff1436" kindref="member">Color</ref><sp/><ref refid="classChipChipArray_1_1Grabber_1a8ddc7def90b874885b2745034b5677df" kindref="member">Grabber::FindColor</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="196"><highlight class="normal"></highlight></codeline>
-<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="197" refid="classChipChipArray_1_1Grabber_1a0a8a57e44f291581ab2862272134a592" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classChipChipArray_1_1Grabber_1a0a8a57e44f291581ab2862272134a592" kindref="member">Grabber::Grab</ref>(<ref refid="definitions_8hpp_1ac8e1b1f4bbac5914204c97f66f97d01f" kindref="member">BlockPosition</ref><sp/>pos)<sp/>{</highlight></codeline>
 <codeline lineno="198"><highlight class="normal"></highlight></codeline>
-<codeline lineno="199" refid="classChipChipArray_1_1Grabber_1a7262ce7fd6d4cc2f0210fcc9cafdd840" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8hpp_1a9809446fd16a744b6df9808293f14153" kindref="member">Size</ref><sp/><ref refid="classChipChipArray_1_1Grabber_1a7262ce7fd6d4cc2f0210fcc9cafdd840" kindref="member">Grabber::FindSize</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="200"><highlight class="normal"></highlight></codeline>
-<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="201" refid="classChipChipArray_1_1Grabber_1a56639f8f9ba9468bce4b6d69ceb2eb54" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8hpp_1ab84ebabb02540c4a7ec341a213abf1dc" kindref="member">Result</ref><sp/><ref refid="classChipChipArray_1_1Grabber_1a56639f8f9ba9468bce4b6d69ceb2eb54" kindref="member">Grabber::Load</ref>()<sp/>{</highlight></codeline>
 <codeline lineno="202"><highlight class="normal"></highlight></codeline>
-<codeline lineno="203" refid="classChipChipArray_1_1Grabber_1a0a8a57e44f291581ab2862272134a592" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classChipChipArray_1_1Grabber_1a0a8a57e44f291581ab2862272134a592" kindref="member">Grabber::Grab</ref>(<ref refid="definitions_8hpp_1ac8e1b1f4bbac5914204c97f66f97d01f" kindref="member">BlockPosition</ref><sp/>pos)<sp/>{</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="204"><highlight class="normal"></highlight></codeline>
-<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="206"><highlight class="normal"></highlight></codeline>
-<codeline lineno="207" refid="classChipChipArray_1_1Grabber_1a56639f8f9ba9468bce4b6d69ceb2eb54" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="definitions_8hpp_1ab84ebabb02540c4a7ec341a213abf1dc" kindref="member">Result</ref><sp/><ref refid="classChipChipArray_1_1Grabber_1a56639f8f9ba9468bce4b6d69ceb2eb54" kindref="member">Grabber::Load</ref>()<sp/>{</highlight></codeline>
-<codeline lineno="208"><highlight class="normal"></highlight></codeline>
-<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="205" refid="classChipChipArray_1_1Grabber_1a86bc18ecf71c7ff4e324df0467af124a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classChipChipArray_1_1Block" kindref="compound">Block</ref><sp/><ref refid="classChipChipArray_1_1Grabber_1a86bc18ecf71c7ff4e324df0467af124a" kindref="member">Grabber::LocateBlock</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>log.<ref refid="classChipChipArray_1_1Log_1a154a5f38d9c7a767693b242684a3d4d9" kindref="member">Verbose</ref>(</highlight><highlight class="stringliteral">&quot;Locating<sp/>block&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cv::Mat<sp/>imgOrig;</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cv::transpose(<ref refid="classChipChipArray_1_1Grabber_1a726bcc2367a719cb84de92a981947622" kindref="member">cam</ref>.<ref refid="classChipChipArray_1_1PiCamera_1a58fb0de02570dce9a9cb60a1a04fb84f" kindref="member">Snap</ref>(),<sp/>imgOrig);</highlight></codeline>
 <codeline lineno="210"><highlight class="normal"></highlight></codeline>
-<codeline lineno="211" refid="classChipChipArray_1_1Grabber_1a86bc18ecf71c7ff4e324df0467af124a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classChipChipArray_1_1Block" kindref="compound">Block</ref><sp/><ref refid="classChipChipArray_1_1Grabber_1a86bc18ecf71c7ff4e324df0467af124a" kindref="member">Grabber::LocateBlock</ref>()<sp/>{</highlight></codeline>
-<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>log.<ref refid="classChipChipArray_1_1Log_1a154a5f38d9c7a767693b242684a3d4d9" kindref="member">Verbose</ref>(</highlight><highlight class="stringliteral">&quot;Locating<sp/>block&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="213"><highlight class="normal"></highlight></codeline>
-<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cv::Mat<sp/>imgOrig<sp/>=<sp/>cam.<ref refid="classChipChipArray_1_1PiCamera_1a58fb0de02570dce9a9cb60a1a04fb84f" kindref="member">Snap</ref>();</highlight></codeline>
-<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cv::Mat<sp/>imgHSV;</highlight></codeline>
-<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cv::Mat<sp/>imgThresh;</highlight></codeline>
-<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;cv::Rect&gt;<sp/>blocks;</highlight></codeline>
-<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;Color&gt;<sp/>colors;</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cv::Mat<sp/>imgHSV;</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cv::Mat<sp/>imgThresh;</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;cv::Rect&gt;<sp/>blocks;</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;Color&gt;<sp/>colors;</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>rangeVals.size();<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>bc<sp/>c++<sp/>can<sp/>be<sp/>just<sp/>weird<sp/>sometimes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="definitions_8hpp_1abc05a0f46084a3477cf5d5c939ff1436" kindref="member">Color</ref><sp/>color;</highlight></codeline>
 <codeline lineno="219"><highlight class="normal"></highlight></codeline>
-<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>rangeVals.size();<sp/>i++)<sp/>{</highlight></codeline>
-<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>bc<sp/>c++<sp/>can<sp/>be<sp/>just<sp/>weird<sp/>sometimes</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="definitions_8hpp_1abc05a0f46084a3477cf5d5c939ff1436" kindref="member">Color</ref><sp/>color;</highlight></codeline>
-<codeline lineno="223"><highlight class="normal"></highlight></codeline>
-<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal">(i)<sp/>{</highlight></codeline>
-<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>0:</highlight></codeline>
-<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>color<sp/>=<sp/><ref refid="definitions_8hpp_1abc05a0f46084a3477cf5d5c939ff1436aee38e4d5dd68c4e440825018d549cb47" kindref="member">Color::Red</ref>;</highlight></codeline>
-<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="228"><highlight class="normal"></highlight></codeline>
-<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>1:</highlight></codeline>
-<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>color<sp/>=<sp/><ref refid="definitions_8hpp_1abc05a0f46084a3477cf5d5c939ff1436a51e6cd92b6c45f9affdc158ecca2b8b8" kindref="member">Color::Yellow</ref>;</highlight></codeline>
-<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="232"><highlight class="normal"></highlight></codeline>
-<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>2:</highlight></codeline>
-<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>color<sp/>=<sp/><ref refid="definitions_8hpp_1abc05a0f46084a3477cf5d5c939ff1436ad382816a3cbeed082c9e216e7392eed1" kindref="member">Color::Green</ref>;</highlight></codeline>
-<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="236"><highlight class="normal"></highlight></codeline>
-<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>3:</highlight></codeline>
-<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>color<sp/>=<sp/><ref refid="definitions_8hpp_1abc05a0f46084a3477cf5d5c939ff1436a9594eec95be70e7b1710f730fdda33d9" kindref="member">Color::Blue</ref>;</highlight></codeline>
-<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="classChipChipArray_1_1Grabber_1ab57efe6e0b6f369b19528285a278d967" kindref="member">zone</ref><sp/>==<sp/><ref refid="definitions_8hpp_1adbd1e7a33d3e1751c7b2aa2562d0ecb9a7fc56270e7a70fa81a5935b72eacbe29" kindref="member">Zone::A</ref>)<sp/>color<sp/>=<sp/><ref refid="definitions_8hpp_1abc05a0f46084a3477cf5d5c939ff1436a9594eec95be70e7b1710f730fdda33d9" kindref="member">Color::Blue</ref>;</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal">(i)<sp/>{</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>0:</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>color<sp/>=<sp/><ref refid="definitions_8hpp_1abc05a0f46084a3477cf5d5c939ff1436aee38e4d5dd68c4e440825018d549cb47" kindref="member">Color::Red</ref>;</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>1:</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>color<sp/>=<sp/><ref refid="definitions_8hpp_1abc05a0f46084a3477cf5d5c939ff1436a51e6cd92b6c45f9affdc158ecca2b8b8" kindref="member">Color::Yellow</ref>;</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>2:</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>color<sp/>=<sp/><ref refid="definitions_8hpp_1abc05a0f46084a3477cf5d5c939ff1436ad382816a3cbeed082c9e216e7392eed1" kindref="member">Color::Green</ref>;</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>3:</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>color<sp/>=<sp/><ref refid="definitions_8hpp_1abc05a0f46084a3477cf5d5c939ff1436a9594eec95be70e7b1710f730fdda33d9" kindref="member">Color::Blue</ref>;</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="240"><highlight class="normal"></highlight></codeline>
-<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>color<sp/>=<sp/><ref refid="definitions_8hpp_1abc05a0f46084a3477cf5d5c939ff1436aee38e4d5dd68c4e440825018d549cb47" kindref="member">Color::Red</ref>;<sp/><sp/></highlight><highlight class="comment">//<sp/>for<sp/>funzies</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="245"><highlight class="normal"></highlight></codeline>
-<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>log.<ref refid="classChipChipArray_1_1Log_1a66575b6e94c6112e4cefa5736cb996e0" kindref="member">Status</ref>(</highlight><highlight class="stringliteral">&quot;Searching:<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/><ref refid="namespacestd_1aa5ddf582a1c96ffe258c997be9a294a3" kindref="member">std::to_string</ref>(color));</highlight></codeline>
-<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cv::cvtColor(imgOrig,<sp/>imgHSV,<sp/>cv::COLOR_BGR2HSV);</highlight></codeline>
-<codeline lineno="248"><highlight class="normal"></highlight></codeline>
-<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cv::Scalar<sp/>low[2]<sp/>=<sp/>rangeVals[color][0];</highlight></codeline>
-<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cv::Scalar<sp/>high[2]<sp/>=<sp/>rangeVals[color][1];</highlight></codeline>
-<codeline lineno="251"><highlight class="normal"></highlight></codeline>
-<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cv::inRange(imgHSV,<sp/>rangeVals[color][0],</highlight></codeline>
-<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rangeVals[color][1],<sp/>imgThresh);</highlight></codeline>
-<codeline lineno="254"><highlight class="normal"></highlight></codeline>
-<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/></highlight></codeline>
-<codeline lineno="256"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>Not<sp/>quite<sp/>sure<sp/>what<sp/>all<sp/>this<sp/>does,<sp/>but<sp/>it<sp/>seems<sp/>to</highlight></codeline>
-<codeline lineno="257"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>relate<sp/>to<sp/>smoothing<sp/>the<sp/>image</highlight></codeline>
-<codeline lineno="258"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cv::erode(imgThresh,<sp/>imgThresh,</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>log.<ref refid="classChipChipArray_1_1Log_1a154a5f38d9c7a767693b242684a3d4d9" kindref="member">Verbose</ref>(</highlight><highlight class="stringliteral">&quot;Searching:<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/><ref refid="namespacestd_1aa5ddf582a1c96ffe258c997be9a294a3" kindref="member">std::to_string</ref>(color));</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cv::cvtColor(imgOrig,<sp/>imgHSV,<sp/>cv::COLOR_BGR2HSV);</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"></highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cv::inRange(imgHSV,<sp/>rangeVals[color][0],</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rangeVals[color][1],<sp/>imgThresh);</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/></highlight></codeline>
+<codeline lineno="248"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>Not<sp/>quite<sp/>sure<sp/>what<sp/>all<sp/>this<sp/>does,<sp/>but<sp/>it<sp/>seems<sp/>to</highlight></codeline>
+<codeline lineno="249"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>relate<sp/>to<sp/>smoothing<sp/>the<sp/>image</highlight></codeline>
+<codeline lineno="250"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cv::erode(imgThresh,<sp/>imgThresh,</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cv::getStructuringElement(</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cv::MORPH_ELLIPSE,</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="definitions_8hpp_1a9809446fd16a744b6df9808293f14153" kindref="member">cv::Size</ref>(5,<sp/>5)));</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cv::dilate(imgThresh,<sp/>imgThresh,</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cv::getStructuringElement(</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cv::MORPH_ELLIPSE,</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="definitions_8hpp_1a9809446fd16a744b6df9808293f14153" kindref="member">cv::Size</ref>(5,<sp/>5)));</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cv::dilate(imgThresh,<sp/>imgThresh,</highlight></codeline>
 <codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cv::getStructuringElement(</highlight></codeline>
 <codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cv::MORPH_ELLIPSE,</highlight></codeline>
 <codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="definitions_8hpp_1a9809446fd16a744b6df9808293f14153" kindref="member">cv::Size</ref>(5,<sp/>5)));</highlight></codeline>
-<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cv::dilate(imgThresh,<sp/>imgThresh,</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cv::erode(imgThresh,<sp/>imgThresh,</highlight></codeline>
 <codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cv::getStructuringElement(</highlight></codeline>
 <codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cv::MORPH_ELLIPSE,</highlight></codeline>
 <codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="definitions_8hpp_1a9809446fd16a744b6df9808293f14153" kindref="member">cv::Size</ref>(5,<sp/>5)));</highlight></codeline>
-<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cv::dilate(imgThresh,<sp/>imgThresh,</highlight></codeline>
-<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cv::getStructuringElement(</highlight></codeline>
-<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cv::MORPH_ELLIPSE,</highlight></codeline>
-<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="definitions_8hpp_1a9809446fd16a744b6df9808293f14153" kindref="member">cv::Size</ref>(5,<sp/>5)));</highlight></codeline>
-<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cv::erode(imgThresh,<sp/>imgThresh,</highlight></codeline>
-<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cv::getStructuringElement(</highlight></codeline>
-<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cv::MORPH_ELLIPSE,</highlight></codeline>
-<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="definitions_8hpp_1a9809446fd16a744b6df9808293f14153" kindref="member">cv::Size</ref>(5,<sp/>5)));</highlight></codeline>
-<codeline lineno="275"><highlight class="normal"></highlight></codeline>
-<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>log.<ref refid="classChipChipArray_1_1Log_1a65bbab057c8b1453f9e4efcfee7522c4" kindref="member">Image</ref>(imgThresh,<sp/></highlight><highlight class="stringliteral">&quot;thresh_&quot;</highlight><highlight class="normal"><sp/>+<sp/><ref refid="namespacestd_1aa5ddf582a1c96ffe258c997be9a294a3" kindref="member">std::to_string</ref>(color)</highlight></codeline>
-<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/></highlight><highlight class="stringliteral">&quot;_&quot;</highlight><highlight class="normal"><sp/>+<sp/><ref refid="namespacestd_1aa5ddf582a1c96ffe258c997be9a294a3" kindref="member">std::to_string</ref>(invokeCount)</highlight></codeline>
-<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/></highlight><highlight class="stringliteral">&quot;.bmp&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="279"><highlight class="normal"></highlight></codeline>
-<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>calculate<sp/>contours</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;std::vector&lt;cv::Point&gt;&gt;<sp/>contours;</highlight></codeline>
-<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cv::findContours(imgThresh,<sp/>contours,<sp/>CV_RETR_TREE,</highlight></codeline>
-<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CV_CHAIN_APPROX_SIMPLE,</highlight></codeline>
-<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cv::Point(0,<sp/>0));</highlight></codeline>
-<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;std::vector&lt;cv::Point&gt;&gt;</highlight></codeline>
-<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>contours_poly(contours.size());</highlight></codeline>
-<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;cv::Rect&gt;<sp/>bounds(contours.size());</highlight></codeline>
-<codeline lineno="288"><highlight class="normal"></highlight></codeline>
-<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>find<sp/>rectangle<sp/>around<sp/>polygon-ish<sp/>shapes</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>contours.size();<sp/>i++)<sp/>{</highlight></codeline>
-<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cv::approxPolyDP(cv::Mat(contours[i]),</highlight></codeline>
-<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>contours_poly[i],<sp/>20,</highlight></codeline>
-<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cv::Rect<sp/>rect<sp/>=<sp/>cv::boundingRect(</highlight></codeline>
-<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cv::Mat(contours_poly[i]));</highlight></codeline>
-<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="definitions_8hpp_1a1134b580f8da4de94ca6b1de4d37975e" kindref="member">uint32</ref><sp/>area<sp/>=<sp/>rect.width<sp/>*<sp/>rect.height;</highlight></codeline>
-<codeline lineno="297"><highlight class="normal"></highlight></codeline>
-<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(area<sp/>&gt;<sp/>MIN_HALF_BLOCK_SIZE)<sp/>{</highlight></codeline>
-<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>log.<ref refid="classChipChipArray_1_1Log_1ac32b435af1577e4ebc67af2bdfea8eff" kindref="member">Debug</ref>(<ref refid="namespacestd_1aa5ddf582a1c96ffe258c997be9a294a3" kindref="member">std::to_string</ref>(color)</highlight></codeline>
-<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/></highlight><highlight class="stringliteral">&quot;<sp/>block<sp/>detected<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;with<sp/>area<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/><ref refid="namespacestd_1aa5ddf582a1c96ffe258c997be9a294a3" kindref="member">std::to_string</ref>(</highlight></codeline>
-<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>area));</highlight></codeline>
-<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>blocks.push_back(rect);</highlight></codeline>
-<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>colors.push_back(color);</highlight></codeline>
-<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="308"><highlight class="normal"></highlight></codeline>
-<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="310"><highlight class="normal"></highlight></codeline>
-<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(blocks.size()<sp/>==<sp/>0)<sp/>{</highlight></codeline>
-<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(</highlight><highlight class="stringliteral">&quot;No<sp/>blocks<sp/>found!&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
-<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>log.<ref refid="classChipChipArray_1_1Log_1a66575b6e94c6112e4cefa5736cb996e0" kindref="member">Status</ref>(<ref refid="namespacestd_1aa5ddf582a1c96ffe258c997be9a294a3" kindref="member">std::to_string</ref>(blocks.size())</highlight></codeline>
-<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/></highlight><highlight class="stringliteral">&quot;<sp/>blocks<sp/>found&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="317"><highlight class="normal"></highlight></codeline>
-<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>coordinates<sp/>start<sp/>in<sp/>top<sp/>right</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classChipChipArray_1_1Block" kindref="compound">Block</ref><sp/>block<sp/>=<sp/><ref refid="classChipChipArray_1_1Block" kindref="compound">Block</ref>(blocks[0],<sp/>colors[0]);</highlight></codeline>
-<codeline lineno="320"><highlight class="normal"></highlight></codeline>
-<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(blocks.size()<sp/>&gt;<sp/>1)<sp/>{</highlight></codeline>
-<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>1;<sp/>i<sp/>&lt;<sp/>blocks.size();<sp/>i++)<sp/>{<sp/></highlight></codeline>
-<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(blocks[i].x<sp/>&gt;<sp/>block.<ref refid="classChipChipArray_1_1Block_1aeecc05025c6c8e23ff6ca09a6fbd4b4b" kindref="member">topLeft</ref>.x)<sp/>{</highlight></codeline>
-<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>block<sp/>=<sp/><ref refid="classChipChipArray_1_1Block" kindref="compound">Block</ref>(blocks[i],<sp/>colors[i]);</highlight></codeline>
-<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="328"><highlight class="normal"></highlight></codeline>
-<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>log.<ref refid="classChipChipArray_1_1Log_1a66575b6e94c6112e4cefa5736cb996e0" kindref="member">Status</ref>(<ref refid="namespacestd_1aa5ddf582a1c96ffe258c997be9a294a3" kindref="member">std::to_string</ref>(block.<ref refid="classChipChipArray_1_1Block_1a262210a9a04028f3f2670c9ae38ef3d7" kindref="member">color</ref>)<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;<sp/>block<sp/>is<sp/>located&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="330"><highlight class="normal"></highlight></codeline>
-<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/></highlight></codeline>
-<codeline lineno="332"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>Draw<sp/>surrounding<sp/>rectangles<sp/>from<sp/>above<sp/>on<sp/>original</highlight></codeline>
-<codeline lineno="333"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>image.</highlight></codeline>
-<codeline lineno="334"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="335"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cv::rectangle(imgOrig,<sp/>block.<ref refid="classChipChipArray_1_1Block_1aeecc05025c6c8e23ff6ca09a6fbd4b4b" kindref="member">topLeft</ref><sp/>,<sp/>block.<ref refid="classChipChipArray_1_1Block_1a82f831883d31e6d74be45b8851eefe96" kindref="member">bottomRight</ref>,</highlight></codeline>
-<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cv::Scalar(255,<sp/>0,<sp/>0),<sp/>4,<sp/>8);</highlight></codeline>
-<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>log.<ref refid="classChipChipArray_1_1Log_1a65bbab057c8b1453f9e4efcfee7522c4" kindref="member">Image</ref>(imgOrig,<sp/></highlight><highlight class="stringliteral">&quot;original_&quot;</highlight><highlight class="normal"><sp/>+<sp/><ref refid="namespacestd_1aa5ddf582a1c96ffe258c997be9a294a3" kindref="member">std::to_string</ref>(invokeCount)</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"></highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>log.<ref refid="classChipChipArray_1_1Log_1a65bbab057c8b1453f9e4efcfee7522c4" kindref="member">Image</ref>(imgThresh,<sp/></highlight><highlight class="stringliteral">&quot;thresh_&quot;</highlight><highlight class="normal"><sp/>+<sp/><ref refid="namespacestd_1aa5ddf582a1c96ffe258c997be9a294a3" kindref="member">std::to_string</ref>(color)</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/></highlight><highlight class="stringliteral">&quot;_&quot;</highlight><highlight class="normal"><sp/>+<sp/><ref refid="namespacestd_1aa5ddf582a1c96ffe258c997be9a294a3" kindref="member">std::to_string</ref>(<ref refid="classChipChipArray_1_1Grabber_1ab57efe6e0b6f369b19528285a278d967" kindref="member">zone</ref>)</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/><ref refid="namespacestd_1aa5ddf582a1c96ffe258c997be9a294a3" kindref="member">std::to_string</ref>(invokeCount)</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/></highlight><highlight class="stringliteral">&quot;.bmp&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"></highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>calculate<sp/>contours</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;std::vector&lt;cv::Point&gt;&gt;<sp/>contours;</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cv::findContours(imgThresh,<sp/>contours,<sp/>CV_RETR_TREE,</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CV_CHAIN_APPROX_SIMPLE,</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cv::Point(0,<sp/>0));</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;std::vector&lt;cv::Point&gt;&gt;</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>contours_poly(contours.size());</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;cv::Rect&gt;<sp/>bounds(contours.size());</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"></highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>find<sp/>rectangle<sp/>around<sp/>polygon-ish<sp/>shapes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>contours.size();<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cv::approxPolyDP(cv::Mat(contours[i]),</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>contours_poly[i],<sp/>20,</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cv::Rect<sp/>rect<sp/>=<sp/>cv::boundingRect(</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cv::Mat(contours_poly[i]));</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="definitions_8hpp_1a1134b580f8da4de94ca6b1de4d37975e" kindref="member">uint32</ref><sp/>area<sp/>=<sp/>rect.width<sp/>*<sp/>rect.height;</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"></highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>determine<sp/>if<sp/>block<sp/>and<sp/>add<sp/>to<sp/>blocks<sp/>vector</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(area<sp/>&gt;<sp/>MIN_HALF_BLOCK_SIZE)<sp/>{</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>log.<ref refid="classChipChipArray_1_1Log_1ac32b435af1577e4ebc67af2bdfea8eff" kindref="member">Debug</ref>(<ref refid="namespacestd_1aa5ddf582a1c96ffe258c997be9a294a3" kindref="member">std::to_string</ref>(color)</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/></highlight><highlight class="stringliteral">&quot;<sp/>block<sp/>detected<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;with<sp/>area<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/><ref refid="namespacestd_1aa5ddf582a1c96ffe258c997be9a294a3" kindref="member">std::to_string</ref>(</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>area));</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>blocks.push_back(rect);</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>colors.push_back(color);</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"></highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="classChipChipArray_1_1Grabber_1ab57efe6e0b6f369b19528285a278d967" kindref="member">zone</ref><sp/>==<sp/><ref refid="definitions_8hpp_1adbd1e7a33d3e1751c7b2aa2562d0ecb9a7fc56270e7a70fa81a5935b72eacbe29" kindref="member">Zone::A</ref>)<sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"></highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(blocks.size()<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(</highlight><highlight class="stringliteral">&quot;No<sp/>blocks<sp/>found!&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>log.<ref refid="classChipChipArray_1_1Log_1a66575b6e94c6112e4cefa5736cb996e0" kindref="member">Status</ref>(<ref refid="namespacestd_1aa5ddf582a1c96ffe258c997be9a294a3" kindref="member">std::to_string</ref>(blocks.size())</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/></highlight><highlight class="stringliteral">&quot;<sp/>blocks<sp/>found&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"></highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>coordinates<sp/>start<sp/>in<sp/>top<sp/>right</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classChipChipArray_1_1Block" kindref="compound">Block</ref><sp/>block<sp/>=<sp/><ref refid="classChipChipArray_1_1Block" kindref="compound">Block</ref>(blocks[0],<sp/>colors[0]);</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"></highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(blocks.size()<sp/>&gt;<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>1;<sp/>i<sp/>&lt;<sp/>blocks.size();<sp/>i++)<sp/>{<sp/></highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">((<ref refid="classChipChipArray_1_1Grabber_1a8afbaefae7c767c862fd1bf13968539b" kindref="member">side</ref><sp/>==<sp/><ref refid="definitions_8hpp_1a03325a8a9d4f105db5e37dd587128142a92b09c7c48c520c3c55e497875da437c" kindref="member">Side::Right</ref><sp/>&amp;&amp;<sp/>blocks[i].x<sp/></highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&gt;<sp/>block.<ref refid="classChipChipArray_1_1Block_1aeecc05025c6c8e23ff6ca09a6fbd4b4b" kindref="member">topLeft</ref>.x)</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>||<sp/>(<ref refid="classChipChipArray_1_1Grabber_1a8afbaefae7c767c862fd1bf13968539b" kindref="member">side</ref><sp/>==<sp/><ref refid="definitions_8hpp_1a03325a8a9d4f105db5e37dd587128142a945d5e233cf7d6240f6b783b36a374ff" kindref="member">Side::Left</ref></highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;&amp;<sp/>blocks[i].x</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;<sp/>block.<ref refid="classChipChipArray_1_1Block_1aeecc05025c6c8e23ff6ca09a6fbd4b4b" kindref="member">topLeft</ref>.x))<sp/>{</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>block<sp/>=<sp/><ref refid="classChipChipArray_1_1Block" kindref="compound">Block</ref>(blocks[i],<sp/>colors[i]);</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"></highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>log.<ref refid="classChipChipArray_1_1Log_1a66575b6e94c6112e4cefa5736cb996e0" kindref="member">Status</ref>(<ref refid="namespacestd_1aa5ddf582a1c96ffe258c997be9a294a3" kindref="member">std::to_string</ref>(block.<ref refid="classChipChipArray_1_1Block_1a262210a9a04028f3f2670c9ae38ef3d7" kindref="member">color</ref>)<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;<sp/>block<sp/>is<sp/>located&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"></highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/></highlight></codeline>
+<codeline lineno="331"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>Draw<sp/>surrounding<sp/>rectangles<sp/>from<sp/>above<sp/>on<sp/>original</highlight></codeline>
+<codeline lineno="332"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>image.</highlight></codeline>
+<codeline lineno="333"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cv::rectangle(imgOrig,<sp/>block.<ref refid="classChipChipArray_1_1Block_1aeecc05025c6c8e23ff6ca09a6fbd4b4b" kindref="member">topLeft</ref><sp/>,<sp/>block.<ref refid="classChipChipArray_1_1Block_1a82f831883d31e6d74be45b8851eefe96" kindref="member">bottomRight</ref>,</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cv::Scalar(255,<sp/>0,<sp/>0),<sp/>4,<sp/>8);</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>log.<ref refid="classChipChipArray_1_1Log_1a65bbab057c8b1453f9e4efcfee7522c4" kindref="member">Image</ref>(imgOrig,<sp/></highlight><highlight class="stringliteral">&quot;original_&quot;</highlight><highlight class="normal"><sp/>+<sp/><ref refid="namespacestd_1aa5ddf582a1c96ffe258c997be9a294a3" kindref="member">std::to_string</ref>(<ref refid="classChipChipArray_1_1Grabber_1ab57efe6e0b6f369b19528285a278d967" kindref="member">zone</ref>)</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/><ref refid="namespacestd_1aa5ddf582a1c96ffe258c997be9a294a3" kindref="member">std::to_string</ref>(invokeCount)</highlight></codeline>
 <codeline lineno="338"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/></highlight><highlight class="stringliteral">&quot;.bmp&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="339"><highlight class="normal"></highlight></codeline>
 <codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>block;</highlight></codeline>

@@ -12,11 +12,11 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>The area of the block in pixels </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/pi/chip-chip-array/src/Block.hpp" line="14" column="1" bodyfile="/home/pi/chip-chip-array/src/Block.hpp" bodystart="14" bodyend="-1"/>
-        <referencedby refid="classChipChipArray_1_1Block_1a7eb2456e5c95c8a91844c9522eed0578" compoundref="Block_8hpp" startline="62" endline="72">Block</referencedby>
+        <location file="/home/pi/chip-chip-array/src/Block.hpp" line="19" column="1" bodyfile="/home/pi/chip-chip-array/src/Block.hpp" bodystart="19" bodyend="-1"/>
+        <referencedby refid="classChipChipArray_1_1Block_1a7eb2456e5c95c8a91844c9522eed0578" compoundref="Block_8hpp" startline="76" endline="87">Block</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classChipChipArray_1_1Block_1a78304b597a8d8a74a4d9b4bb561a7224" prot="public" static="no" mutable="no">
         <type>cv::Point</type>
@@ -26,11 +26,11 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>Point of the block&apos;s bottom-left corner </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/pi/chip-chip-array/src/Block.hpp" line="19" column="1" bodyfile="/home/pi/chip-chip-array/src/Block.hpp" bodystart="19" bodyend="-1"/>
-        <referencedby refid="classChipChipArray_1_1Block_1a7eb2456e5c95c8a91844c9522eed0578" compoundref="Block_8hpp" startline="62" endline="72">Block</referencedby>
+        <location file="/home/pi/chip-chip-array/src/Block.hpp" line="24" column="1" bodyfile="/home/pi/chip-chip-array/src/Block.hpp" bodystart="24" bodyend="-1"/>
+        <referencedby refid="classChipChipArray_1_1Block_1a7eb2456e5c95c8a91844c9522eed0578" compoundref="Block_8hpp" startline="76" endline="87">Block</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classChipChipArray_1_1Block_1a82f831883d31e6d74be45b8851eefe96" prot="public" static="no" mutable="no">
         <type>cv::Point</type>
@@ -40,12 +40,12 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>Point of the block&apos;s bottom-right corner </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/pi/chip-chip-array/src/Block.hpp" line="24" column="1" bodyfile="/home/pi/chip-chip-array/src/Block.hpp" bodystart="24" bodyend="-1"/>
-        <referencedby refid="classChipChipArray_1_1Block_1a7eb2456e5c95c8a91844c9522eed0578" compoundref="Block_8hpp" startline="62" endline="72">Block</referencedby>
-        <referencedby refid="classChipChipArray_1_1Grabber_1a86bc18ecf71c7ff4e324df0467af124a" compoundref="Grabber_8hpp" startline="211" endline="341">ChipChipArray::Grabber::LocateBlock</referencedby>
+        <location file="/home/pi/chip-chip-array/src/Block.hpp" line="29" column="1" bodyfile="/home/pi/chip-chip-array/src/Block.hpp" bodystart="29" bodyend="-1"/>
+        <referencedby refid="classChipChipArray_1_1Block_1a7eb2456e5c95c8a91844c9522eed0578" compoundref="Block_8hpp" startline="76" endline="87">Block</referencedby>
+        <referencedby refid="classChipChipArray_1_1Grabber_1a86bc18ecf71c7ff4e324df0467af124a" compoundref="Grabber_8hpp" startline="205" endline="341">ChipChipArray::Grabber::LocateBlock</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classChipChipArray_1_1Block_1aed94802c166c9b4553764eb637717a2a" prot="public" static="no" mutable="no">
         <type><ref refid="definitions_8hpp_1a05f6b0ae8f6a6e135b0e290c25fe0e4e" kindref="member">uint16</ref></type>
@@ -55,11 +55,11 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>The height of the block in pixels </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/pi/chip-chip-array/src/Block.hpp" line="29" column="1" bodyfile="/home/pi/chip-chip-array/src/Block.hpp" bodystart="29" bodyend="-1"/>
-        <referencedby refid="classChipChipArray_1_1Block_1a7eb2456e5c95c8a91844c9522eed0578" compoundref="Block_8hpp" startline="62" endline="72">Block</referencedby>
+        <location file="/home/pi/chip-chip-array/src/Block.hpp" line="34" column="1" bodyfile="/home/pi/chip-chip-array/src/Block.hpp" bodystart="34" bodyend="-1"/>
+        <referencedby refid="classChipChipArray_1_1Block_1a7eb2456e5c95c8a91844c9522eed0578" compoundref="Block_8hpp" startline="76" endline="87">Block</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classChipChipArray_1_1Block_1aeecc05025c6c8e23ff6ca09a6fbd4b4b" prot="public" static="no" mutable="no">
         <type>cv::Point</type>
@@ -69,12 +69,12 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>Point of the block&apos;s top-left corner </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/pi/chip-chip-array/src/Block.hpp" line="34" column="1" bodyfile="/home/pi/chip-chip-array/src/Block.hpp" bodystart="34" bodyend="-1"/>
-        <referencedby refid="classChipChipArray_1_1Block_1a7eb2456e5c95c8a91844c9522eed0578" compoundref="Block_8hpp" startline="62" endline="72">Block</referencedby>
-        <referencedby refid="classChipChipArray_1_1Grabber_1a86bc18ecf71c7ff4e324df0467af124a" compoundref="Grabber_8hpp" startline="211" endline="341">ChipChipArray::Grabber::LocateBlock</referencedby>
+        <location file="/home/pi/chip-chip-array/src/Block.hpp" line="39" column="1" bodyfile="/home/pi/chip-chip-array/src/Block.hpp" bodystart="39" bodyend="-1"/>
+        <referencedby refid="classChipChipArray_1_1Block_1a7eb2456e5c95c8a91844c9522eed0578" compoundref="Block_8hpp" startline="76" endline="87">Block</referencedby>
+        <referencedby refid="classChipChipArray_1_1Grabber_1a86bc18ecf71c7ff4e324df0467af124a" compoundref="Grabber_8hpp" startline="205" endline="341">ChipChipArray::Grabber::LocateBlock</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classChipChipArray_1_1Block_1aaa4ff82846e95a628800ebdfd3ceefb5" prot="public" static="no" mutable="no">
         <type>cv::Point</type>
@@ -84,11 +84,11 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>Point of the block&apos;s top-right corner </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/pi/chip-chip-array/src/Block.hpp" line="39" column="1" bodyfile="/home/pi/chip-chip-array/src/Block.hpp" bodystart="39" bodyend="-1"/>
-        <referencedby refid="classChipChipArray_1_1Block_1a7eb2456e5c95c8a91844c9522eed0578" compoundref="Block_8hpp" startline="62" endline="72">Block</referencedby>
+        <location file="/home/pi/chip-chip-array/src/Block.hpp" line="44" column="1" bodyfile="/home/pi/chip-chip-array/src/Block.hpp" bodystart="44" bodyend="-1"/>
+        <referencedby refid="classChipChipArray_1_1Block_1a7eb2456e5c95c8a91844c9522eed0578" compoundref="Block_8hpp" startline="76" endline="87">Block</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classChipChipArray_1_1Block_1ac3f815e8aa9060c4ad20d4e1b2649e35" prot="public" static="no" mutable="no">
         <type><ref refid="definitions_8hpp_1a05f6b0ae8f6a6e135b0e290c25fe0e4e" kindref="member">uint16</ref></type>
@@ -98,11 +98,11 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>The width of the block in pixels </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/pi/chip-chip-array/src/Block.hpp" line="44" column="1" bodyfile="/home/pi/chip-chip-array/src/Block.hpp" bodystart="44" bodyend="-1"/>
-        <referencedby refid="classChipChipArray_1_1Block_1a7eb2456e5c95c8a91844c9522eed0578" compoundref="Block_8hpp" startline="62" endline="72">Block</referencedby>
+        <location file="/home/pi/chip-chip-array/src/Block.hpp" line="49" column="1" bodyfile="/home/pi/chip-chip-array/src/Block.hpp" bodystart="49" bodyend="-1"/>
+        <referencedby refid="classChipChipArray_1_1Block_1a7eb2456e5c95c8a91844c9522eed0578" compoundref="Block_8hpp" startline="76" endline="87">Block</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classChipChipArray_1_1Block_1a262210a9a04028f3f2670c9ae38ef3d7" prot="public" static="no" mutable="no">
         <type><ref refid="definitions_8hpp_1abc05a0f46084a3477cf5d5c939ff1436" kindref="member">Color</ref></type>
@@ -112,13 +112,13 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>The detected color of the block </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/pi/chip-chip-array/src/Block.hpp" line="49" column="1" bodyfile="/home/pi/chip-chip-array/src/Block.hpp" bodystart="49" bodyend="-1"/>
-        <referencedby refid="classChipChipArray_1_1Block_1a7eb2456e5c95c8a91844c9522eed0578" compoundref="Block_8hpp" startline="62" endline="72">Block</referencedby>
+        <location file="/home/pi/chip-chip-array/src/Block.hpp" line="54" column="1" bodyfile="/home/pi/chip-chip-array/src/Block.hpp" bodystart="54" bodyend="-1"/>
+        <referencedby refid="classChipChipArray_1_1Block_1a7eb2456e5c95c8a91844c9522eed0578" compoundref="Block_8hpp" startline="76" endline="87">Block</referencedby>
         <referencedby refid="cv__test_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="cv__test_8cpp" startline="13" endline="18">main</referencedby>
-        <referencedby refid="classChipChipArray_1_1Grabber_1a86bc18ecf71c7ff4e324df0467af124a" compoundref="Grabber_8hpp" startline="211" endline="341">ChipChipArray::Grabber::LocateBlock</referencedby>
+        <referencedby refid="classChipChipArray_1_1Grabber_1a86bc18ecf71c7ff4e324df0467af124a" compoundref="Grabber_8hpp" startline="205" endline="341">ChipChipArray::Grabber::LocateBlock</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classChipChipArray_1_1Block_1aebd356d7fcfe7ff11db8195e6d7f8e42" prot="public" static="no" mutable="no">
         <type><ref refid="definitions_8hpp_1a9809446fd16a744b6df9808293f14153" kindref="member">Size</ref></type>
@@ -128,10 +128,27 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>The size of the block (half or whole) </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/pi/chip-chip-array/src/Block.hpp" line="54" column="1" bodyfile="/home/pi/chip-chip-array/src/Block.hpp" bodystart="54" bodyend="-1"/>
+        <location file="/home/pi/chip-chip-array/src/Block.hpp" line="59" column="1" bodyfile="/home/pi/chip-chip-array/src/Block.hpp" bodystart="59" bodyend="-1"/>
+        <referencedby refid="classChipChipArray_1_1Block_1a7eb2456e5c95c8a91844c9522eed0578" compoundref="Block_8hpp" startline="76" endline="87">Block</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classChipChipArray_1_1Block_1a6a221f06cf69323882693931f0156b6b" prot="private" static="yes" mutable="no">
+        <type>const <ref refid="definitions_8hpp_1a1134b580f8da4de94ca6b1de4d37975e" kindref="member">uint32</ref></type>
+        <definition>const uint32 ChipChipArray::Block::MIN_WHOLE_BLOCK_SIZE</definition>
+        <argsstring></argsstring>
+        <name>MIN_WHOLE_BLOCK_SIZE</name>
+        <initializer>= 5000000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The minimum block area in pixels to be classified as a whole (large) block </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/pi/chip-chip-array/src/Block.hpp" line="73" column="1" bodyfile="/home/pi/chip-chip-array/src/Block.hpp" bodystart="73" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -151,25 +168,28 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>Creates a new <ref refid="classChipChipArray_1_1Block" kindref="compound">Block</ref> using the Points in the cv::Rect and the color. Also determines the size based on the area of the <ref refid="classChipChipArray_1_1Block" kindref="compound">Block</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/pi/chip-chip-array/src/Block.hpp" line="59" column="1" bodyfile="/home/pi/chip-chip-array/src/Block.hpp" bodystart="62" bodyend="72"/>
-        <references refid="classChipChipArray_1_1Block_1ab5f9a9c1cc11e949685f8ad3d52599b2" compoundref="Block_8hpp" startline="14">area</references>
-        <references refid="classChipChipArray_1_1Block_1aed94802c166c9b4553764eb637717a2a" compoundref="Block_8hpp" startline="29">height</references>
-        <references refid="classChipChipArray_1_1Block_1ac3f815e8aa9060c4ad20d4e1b2649e35" compoundref="Block_8hpp" startline="44">width</references>
-        <references refid="classChipChipArray_1_1Block_1aeecc05025c6c8e23ff6ca09a6fbd4b4b" compoundref="Block_8hpp" startline="34">topLeft</references>
-        <references refid="classChipChipArray_1_1Block_1a82f831883d31e6d74be45b8851eefe96" compoundref="Block_8hpp" startline="24">bottomRight</references>
-        <references refid="classChipChipArray_1_1Block_1aaa4ff82846e95a628800ebdfd3ceefb5" compoundref="Block_8hpp" startline="39">topRight</references>
-        <references refid="classChipChipArray_1_1Block_1a78304b597a8d8a74a4d9b4bb561a7224" compoundref="Block_8hpp" startline="19">bottomLeft</references>
-        <references refid="classChipChipArray_1_1Block_1a262210a9a04028f3f2670c9ae38ef3d7" compoundref="Block_8hpp" startline="49">color</references>
+        <location file="/home/pi/chip-chip-array/src/Block.hpp" line="66" column="1" bodyfile="/home/pi/chip-chip-array/src/Block.hpp" bodystart="76" bodyend="87"/>
+        <references refid="classChipChipArray_1_1Block_1ab5f9a9c1cc11e949685f8ad3d52599b2" compoundref="Block_8hpp" startline="19">area</references>
+        <references refid="classChipChipArray_1_1Block_1aed94802c166c9b4553764eb637717a2a" compoundref="Block_8hpp" startline="34">height</references>
+        <references refid="classChipChipArray_1_1Block_1ac3f815e8aa9060c4ad20d4e1b2649e35" compoundref="Block_8hpp" startline="49">width</references>
+        <references refid="classChipChipArray_1_1Block_1aeecc05025c6c8e23ff6ca09a6fbd4b4b" compoundref="Block_8hpp" startline="39">topLeft</references>
+        <references refid="classChipChipArray_1_1Block_1a82f831883d31e6d74be45b8851eefe96" compoundref="Block_8hpp" startline="29">bottomRight</references>
+        <references refid="classChipChipArray_1_1Block_1aaa4ff82846e95a628800ebdfd3ceefb5" compoundref="Block_8hpp" startline="44">topRight</references>
+        <references refid="classChipChipArray_1_1Block_1a78304b597a8d8a74a4d9b4bb561a7224" compoundref="Block_8hpp" startline="24">bottomLeft</references>
+        <references refid="classChipChipArray_1_1Block_1a262210a9a04028f3f2670c9ae38ef3d7" compoundref="Block_8hpp" startline="54">color</references>
+        <references refid="classChipChipArray_1_1Block_1aebd356d7fcfe7ff11db8195e6d7f8e42" compoundref="Block_8hpp" startline="59">size</references>
+        <references refid="definitions_8hpp_1a9809446fd16a744b6df9808293f14153a8394f0347c184cf156ac5924dccb773b">Long</references>
+        <references refid="definitions_8hpp_1a9809446fd16a744b6df9808293f14153a30bb747c98bccdd11b3f89e644c4d0ad">Short</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-    </detaileddescription>
-    <location file="/home/pi/chip-chip-array/src/Block.hpp" line="9" column="1" bodyfile="/home/pi/chip-chip-array/src/Block.hpp" bodystart="9" bodyend="60"/>
+<para>This class represents a block. It only works for blocks found with the &quot;boundingRect&quot; algorithm (i.e., it doesn&apos;t work for blocks that are skewed on the image). </para>    </detaileddescription>
+    <location file="/home/pi/chip-chip-array/src/Block.hpp" line="14" column="1" bodyfile="/home/pi/chip-chip-array/src/Block.hpp" bodystart="14" bodyend="74"/>
     <listofallmembers>
       <member refid="classChipChipArray_1_1Block_1ab5f9a9c1cc11e949685f8ad3d52599b2" prot="public" virt="non-virtual"><scope>ChipChipArray::Block</scope><name>area</name></member>
       <member refid="classChipChipArray_1_1Block_1a7eb2456e5c95c8a91844c9522eed0578" prot="public" virt="non-virtual"><scope>ChipChipArray::Block</scope><name>Block</name></member>
@@ -177,6 +197,7 @@
       <member refid="classChipChipArray_1_1Block_1a82f831883d31e6d74be45b8851eefe96" prot="public" virt="non-virtual"><scope>ChipChipArray::Block</scope><name>bottomRight</name></member>
       <member refid="classChipChipArray_1_1Block_1a262210a9a04028f3f2670c9ae38ef3d7" prot="public" virt="non-virtual"><scope>ChipChipArray::Block</scope><name>color</name></member>
       <member refid="classChipChipArray_1_1Block_1aed94802c166c9b4553764eb637717a2a" prot="public" virt="non-virtual"><scope>ChipChipArray::Block</scope><name>height</name></member>
+      <member refid="classChipChipArray_1_1Block_1a6a221f06cf69323882693931f0156b6b" prot="private" virt="non-virtual"><scope>ChipChipArray::Block</scope><name>MIN_WHOLE_BLOCK_SIZE</name></member>
       <member refid="classChipChipArray_1_1Block_1aebd356d7fcfe7ff11db8195e6d7f8e42" prot="public" virt="non-virtual"><scope>ChipChipArray::Block</scope><name>size</name></member>
       <member refid="classChipChipArray_1_1Block_1aeecc05025c6c8e23ff6ca09a6fbd4b4b" prot="public" virt="non-virtual"><scope>ChipChipArray::Block</scope><name>topLeft</name></member>
       <member refid="classChipChipArray_1_1Block_1aaa4ff82846e95a628800ebdfd3ceefb5" prot="public" virt="non-virtual"><scope>ChipChipArray::Block</scope><name>topRight</name></member>

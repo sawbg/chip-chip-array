@@ -9,4 +9,8 @@ digraph "src/Log.hpp"
   Node3 [label="src/cv_test.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$cv__test_8cpp.html"];
   Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
   Node4 [label="src/log_test.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$log__test_8cpp.html"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="src/ScanQR.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ScanQR_8hpp.html"];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="src/qr_test.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$qr__test_8cpp.html"];
 }
