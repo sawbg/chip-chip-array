@@ -7,9 +7,13 @@
 #include <zbar.h>
 
 #include "definitions.hpp"
+#include "Log.hpp"
 #include "PiCamera.hpp"
 
 namespace ChipChipArray {
+
+	uint8 qrInvokeCount = 0;
+	Log scanQrLog("logs/ScanQR", LogMode::Multi);
 
 	/**
 	 * This function manuvers arm to look at the QR code on a train car as
@@ -25,24 +29,22 @@ namespace ChipChipArray {
 		// 0. Initialize variables
 		Color color;
 		PiCamera cam(false);
-#ifdef DEBUG
-		std::string window = "Searching...";
-		cv::namedWindow(window, CV_WINDOW_AUTOSIZE);
-#endif
 
 		// 1. Position arm
+		scanQrLog.Verbose("Positioning arm");
 
 		// 2. Scan images from camera
-		while(true) {
+		scanQrLog.Verbose("Scanning for QR code");
+
+		// Nick's supposed to make sure this isn't an endles loop
+		while(true) {			
+			// get image
 			cv::Mat frame = cam.Snap();
 			cv::Mat canvas;
-			cv::cvtColor(frame, canvas, CV_BGR2GRAY); 
-#ifdef DEBUG
-			cv::imshow(window, canvas);
-
-			 // has to be called right after imshow()
-			cv::waitKey(10);
-#endif
+			cv::cvtColor(frame, canvas, CV_BGR2GRAY);
+			scanQrLog.Image(canvas, std::to_string(++qrInvokeCount)
+					+ ".bmp");
+			
 			uint32 width = canvas.cols;
 			uint32 height = canvas.rows;
 			zbar::Image image(width, height, "Y800",
@@ -72,16 +74,14 @@ namespace ChipChipArray {
 						break;
 				}
 
+				scanQrLog.Status("Detected " + std::to_string(color)
+						+ " train car");
 				break;
-
-#ifdef DEBUG
-				cv::destroyWindow(window);
-#endif
 			}
 		}
 
 		// 3. Retract arm
-		
+		scanQrLog.Verbose("Retracting arm");		
 		return color;
 	}
 }
