@@ -23,6 +23,9 @@ configure:
 cv-test:
 	$(GCC) src/cv_test.cpp -o bin/cvtest $(CVFLAGS) $(CPPFLAGS) $(LOG)
 
+jacob-algorithm-test:
+	$(GCC) src/jacob_alg_test.cpp -o bin/jacobalgtest $(CVFLAGS) $(CPPFLAGS)
+
 loading-test:
 	$(GCC) src/loading_test.cpp -o bin/loadingtest $(CPPFLAGS) $(LOG) $(ARM) $(CVFLAGS)
 
