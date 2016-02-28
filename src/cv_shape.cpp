@@ -91,6 +91,7 @@ int main() {
 		vector<vector<Point>> contours_poly(contours.size());
 		vector<Rect> bounds(contours.size());
 		int maxArea = 0;
+		int offset;
 
 		// find rectangle around polygon-ish shapes
 		for(int i = 0; i < contours.size(); i++) {
@@ -104,16 +105,20 @@ int main() {
 		 * image.
 		 */
 		for(int i = 0; i < contours.size(); i++) {
-			//rectangle(imgOrig, bounds[i].tl(), bounds[i].br(),
-			//		Scalar(255, 0, 0), 2, 8, 0);
-			drawContours(imgOrig, contours_poly, i,
-					Scalar(255, 0, 0), 4, 8);
+			rectangle(imgOrig, bounds[i].tl(), bounds[i].br(),
+					Scalar(255, 0, 0), 2, 8, 0);
+			//drawContours(imgOrig, contours_poly, i,
+			//		Scalar(255, 0, 0), 4, 8);
 			int area = bounds[i].width * bounds[i].height;
 
-			if(area > maxArea) maxArea = area;
+			if(area > maxArea) {
+				offset = abs(640 - (bounds[i].tl().x + bounds[i].width / 2));
+				maxArea = area;
+			}
 		}
 
-		cout << "Block area: " << maxArea << " pixels" << endl;
+		cout << "Block area: " << maxArea << " pixels\t\t" 
+			<< "Center offset: " << offset << endl;
 		imshow(winContours, imgOrig);  // show original image with rectangles
 		waitKey(50);  // has to be here :(
 	}

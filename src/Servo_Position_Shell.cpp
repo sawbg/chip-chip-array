@@ -7,6 +7,7 @@
 
 #include <wiringPi.h>
 #include "Adafruit_PWMServoDriver.h"
+#include "Adafruit_PWMServoDriver.cpp"
 #include <iostream>
 #include "Servo_Position_Shell.h"
 
@@ -31,7 +32,7 @@ uint8_t servo_num;
  * servos to 60Hz.
  */
 void setup() {
-    cout << "Testing Servos" << endl;
+    //cout << "Testing Servos" << endl;
     pwm.begin();
     pwm.setPWMFreq(60.0); // Analog servos run at ~60 Hz updates
 }

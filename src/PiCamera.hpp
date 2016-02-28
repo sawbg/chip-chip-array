@@ -33,6 +33,11 @@ namespace ChipChipArray {
 			 */
 			void Close();
 
+	/**
+	 *
+	 */
+			void Exposure(sint8 msec);
+	
 			/**
 			 * Makes picture.
 			 *
@@ -52,10 +57,18 @@ namespace ChipChipArray {
 		cam.set(CV_CAP_PROP_FORMAT, (useColor ? CV_16UC3 : CV_16UC1));
 		cam.open();
 		usleep(500000);  // required to allow camera time to adjust!
+		Exposure(30);
+		cam.set(CV_CAP_PROP_GAIN, 90);
+		usleep(500000);
 	}
 
 	void PiCamera::Close() {
 		cam.release();
+	}
+
+	void PiCamera::Exposure(sint8 msec) {
+		if(msec > -1) msec *= 3;
+		std::cout << cam.set(CV_CAP_PROP_EXPOSURE, msec) << std::endl;
 	}
 
 	cv::Mat PiCamera::Snap() {

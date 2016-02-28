@@ -29,6 +29,13 @@ namespace ChipChipArray {
 			cv::Point bottomRight;
 
 			/**
+			 * The difference in pixels between the vertical center of the image
+			 * and the vertical center of the block. Assumes image is 1280
+			 * pixels wide (like the Raspicam images).
+			 */
+			sint16 offset;
+
+			/**
 			 * The height of the block in pixels
 			 */
 			uint16 height;
@@ -70,7 +77,7 @@ namespace ChipChipArray {
 			 * The minimum block area in pixels to be classified
 			 * as a whole (large) block
 			 */
-			static const uint32 MIN_WHOLE_BLOCK_SIZE = 5000000;
+			static const uint32 MIN_WHOLE_BLOCK_SIZE = 50000;
 	};
 
 	Block::Block(cv::Rect rect, Color color) {
@@ -82,6 +89,8 @@ namespace ChipChipArray {
 		bottomRight = rect.br();
 		topRight = cv::Point(topLeft.x + width, topLeft.y);
 		bottomLeft = cv::Point(topLeft.x, topLeft.y + height);
+		offset = (sint16)(topLeft.x + width / 2) - 640;
+
 		this->color = color;
 		size = area > MIN_WHOLE_BLOCK_SIZE ? Size::Long : Size::Short;
 	}

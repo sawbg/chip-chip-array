@@ -1,4 +1,5 @@
 GCC = g++-4.9
+ARM = -lwiringPi
 CPPFLAGS = -g -std=gnu++14
 CVFLAGS = -lraspicam -lraspicam_cv -lmmal -lmmal_core -lmmal_util -lzbar -lopencv_core -lopencv_highgui -lopencv_imgproc
 DEBUG = -DDEBUG
@@ -13,7 +14,7 @@ comp:
 	$(GCC) src/main.cpp -o bin/main $(CVFLAGS) $(CPPFLAGS) $(LOG)
 
 configure:
-	sudo apt-get install -y libopencv-dev libzbar-dev cmake doxygen
+	sudo apt-get install -y libopencv-dev libzbar-dev cmake doxygen libgl1-meda-dri
 	git clone https://github.com/cedricve/raspicam
 	cd raspicam; mkdir build; cd build; cmake ..; make; sudo make install; sudo ldconfig;
 	sudo rm -r raspicam
@@ -21,6 +22,9 @@ configure:
 
 cv-test:
 	$(GCC) src/cv_test.cpp -o bin/cvtest $(CVFLAGS) $(CPPFLAGS) $(LOG)
+
+loading-test:
+	$(GCC) src/loading_test.cpp -o bin/loadingtest $(CPPFLAGS) $(LOG) $(ARM) $(CVFLAGS)
 
 log-test:
 	$(GCC) src/log_test.cpp -o bin/logtest $(CPPFLAGS) $(LOG)

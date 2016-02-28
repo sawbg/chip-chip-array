@@ -4,11 +4,14 @@
 #include <opencv2/highgui/highgui.hpp>
 #include <opencv2/imgproc/imgproc.hpp>
 #include <string>
+#include <unistd.h>
 #include <vector>
 
 #include "definitions.hpp"
+#include "Block.hpp"
 #include "Log.hpp"
 #include "PiCamera.hpp"
+#include "Servo_Position_Shell.cpp"
 
 namespace ChipChipArray {
 
@@ -30,11 +33,6 @@ namespace ChipChipArray {
 			 * view of the camera to pick up first
 			 */
 			Grabber(Zone zone, Side side);
-
-			/**
-			 * Destructs the class and retracts the arm.
-			 */
-			~Grabber();
 
 			/**
 			 * Closes the Grabber. Retracts the arm and closes the
@@ -102,6 +100,14 @@ namespace ChipChipArray {
 			void Grab(BlockPosition pos);
 
 			/**
+			 * Picks up a block passed as an argument by examining the block's
+			 * vertical offset from the vertical center of the image.
+			 *
+			 * @param block the block to be picked up
+			 */
+			void Grab(Block block);
+
+			/**
 			 * Puts block in slot according to color. Zones B and C
 			 * only.
 			 *
@@ -128,7 +134,7 @@ namespace ChipChipArray {
 			/**
 			 * The minimum area in pixels to be considered a block
 			 */
-			static const uint32 MIN_HALF_BLOCK_SIZE = 100000;
+			static const uint32 MIN_HALF_BLOCK_SIZE = 50000;
 
 			/**
 			 * The log object to be shared among the Grabber
@@ -155,7 +161,7 @@ namespace ChipChipArray {
 	Log Grabber::log("logs/Grabber", LogMode::Multi);
 
 	Grabber::Grabber(Zone zone, Side side) {
-		log.Verbose("Initializing Grabber");
+		log.Status("Opening Grabber");
 		log.Verbose("Zone: " + std::to_string(zone));
 		log.Verbose("Side: " + std::to_string(side));
 
@@ -166,18 +172,16 @@ namespace ChipChipArray {
 
 		log.Verbose("Setting HSV threshold values");
 
-		rangeVals[Color::Red] = { cv::Scalar(0, 0, 0),
+		rangeVals[Color::Red] = { cv::Scalar(0, 20, 20),
 			cv::Scalar(12, 255, 255) };
-		rangeVals[Color::Yellow] = { cv::Scalar(25, 224, 114),
-			cv::Scalar(36, 225, 183) };
-		rangeVals[Color::Green] = { cv::Scalar(44, 128, 0),
-			cv::Scalar(70, 255, 124) };
-		rangeVals[Color::Blue] = { cv::Scalar(70, 128, 0),
-			cv::Scalar(113, 255, 255) };
-
-	}
-
-	Grabber::~Grabber() {
+		//rangeVals[Color::Yellow] = { cv::Scalar(25, 224, 114),
+		//	cv::Scalar(36, 225, 183) };
+		rangeVals[Color::Yellow] = { cv::Scalar(255, 255, 255),
+			cv::Scalar(255, 255, 255) };
+		rangeVals[Color::Green] = { cv::Scalar(49, 0, 0),
+			cv::Scalar(63, 255, 30) };
+		rangeVals[Color::Blue] = { cv::Scalar(70, 0, 0),
+			cv::Scalar(100, 255, 255) };
 
 	}
 
@@ -198,15 +202,29 @@ namespace ChipChipArray {
 
 	}
 
-	Result Grabber::Load() {
+	void Grabber::Grab(Block block) {
+	}
 
+	Result Grabber::Load() {
+		Block b = LocateBlock();
+		int Q = 402;
+		float32 a = 180 / 3.14152 * acos((float)b.offset / Q);
+		if(a > 90) a -= 90;
+		log.Debug("Angle a: " + to_string(a));
+		setServoPosition(BASE_TURN, 150 + a);
+		setServoPosition(WRIST_TILT, 50 - a);
+		setServoPosition(ELBOW, 125);
+		sleep(5);
+		setServoPosition(BASE_TURN, 150);
+		setServoPosition(WRIST_TILT, 50);
+		setServoPosition(ELBOW, 160);
 	}
 
 	Block Grabber::LocateBlock() {
 		log.Verbose("Locating block");
 
-		cv::Mat imgOrig;
-		cv::transpose(cam.Snap(), imgOrig);
+		cv::Mat imgOrig = cam.Snap();
+		//cv::transpose(cam.Snap(), imgOrig);
 
 		cv::Mat imgHSV;
 		cv::Mat imgThresh;
@@ -304,6 +322,10 @@ namespace ChipChipArray {
 		}
 
 		if(blocks.size() == 0) {
+			log.Image(imgOrig, "original_" + std::to_string(zone)
+					+ std::to_string(invokeCount)
+					+ "_no_blocks.bmp");
+
 			throw std::runtime_error("No blocks found!");
 		} else {
 			log.Status(std::to_string(blocks.size())
