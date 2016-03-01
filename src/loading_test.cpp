@@ -1,3 +1,8 @@
+/**
+ * @author Samuel Andrew Wisner, awisner94@gmail.com
+ * @brief contains a program to test Grabber class
+ */
+
 #include <iostream>
 
 #include "definitions.hpp"

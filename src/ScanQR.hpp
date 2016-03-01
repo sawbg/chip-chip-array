@@ -1,3 +1,8 @@
+/**
+ * @author Samuel Andrew Wisner, awisner94@gmail.com
+ * @brief contains ScanQR() function
+ */
+
 #ifndef ScanQR_H
 #define ScanQR_H
 

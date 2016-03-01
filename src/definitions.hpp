@@ -1,3 +1,10 @@
+/**
+ * @author Samuel Andrew Wisner, awisner94@gmail.com
+ * @brief contains definitions for architecture-independant numeric variables,
+ * enumerations and enumerated classes, and #define'd constants, and to_sting()
+ * overloads for the enumerated classes.
+ */
+
 #ifndef definitions_H
 #define definitions_H
 

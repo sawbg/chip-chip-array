@@ -12,7 +12,9 @@
 
 namespace ChipChipArray {
 	/**
-	 *
+	 * This class provides a layer of abstraction from the existing servo
+	 * interface. It is designed to make more sense programmatically and to be
+	 * easier to use.
 	 */
 	class Arm {
 		public:
@@ -31,95 +33,138 @@ namespace ChipChipArray {
 
 			/**
 			 * Twists the entire arm.
-			 *
 			 * 
+			 * @param a desired servo position in degrees
 			 */
 			void BaseTurn(uint8 a);
 
 			/**
-			 * 
+			 * Tilts the base a certain number of degrees. 
+			 *
+			 * @param degrees to move servo. Positive values add to the servo
+			 * angle, and negative values subtract from the servo angle.
 			 */
-			void dBaseTilt(uint8 a);
+			void dBaseTilt(sint16 a);
 
 			/**
+			 * Turn the base a certain number of degrees.
 			 *
+			 * @param degrees to move servo. Positive values add to the servo
+			 * angle, and negative values subtract from the servo angle. 
 			 */
-			void dBaseTurn(uint8 a);
+			void dBaseTurn(sint16 a);
 
 			/**
+			 * Bend the elbow a certain number of degrees.
 			 *
+			 * @param degrees to move servo. Positive values add to the servo
+			 * angle, and negative values subtract from the servo angle. 
 			 */
-			void dElbow(uint8 a);
+			void dElbow(sint16 a);
 
 			/**
+			 * Move the grippers a certain number of degrees. Note that they
+			 * will both move inward or outward; one will never move inward and
+			 * the other outward.
 			 *
+			 * @param degrees to move servo. 
 			 */
-			void dGrippers(uint8 a);
+			void dGrippers(sint16 a);
 
 			/**
+			 * Tilt the wrist a certain number of degrees.
 			 *
+			 * @param degrees to move servo. Positive values add to the servo
+			 * angle, and negative values subtract from the servo angle.
 			 */
-			void dWristTilt(uint8 a);
+			void dWristTilt(sint16 a);
 
 			/**
+			 * Twist the wrist a certain number of degrees.
 			 *
+			 * @param degrees to move servo. Positive values add to the servo
+			 * angle, and negative values subtract from the servo angle. 
 			 */
-			void dWristTwist(uint8 a);
+			void dWristTwist(sint16 a);
 
 			/**
+			 * Bend the elbow to a specific position.
 			 *
+			 * @param a desired servo position in degrees
 			 */
 			void Elbow(uint8 a);
 
 			/**
+			 * Move the grippers to a specific position. Note that they will
+			 * both move inward or outward; one will never move inward and the
+			 * other outward.
 			 *
+			 * @param a desired servo position in degrees
 			 */
 			void Grippers(uint8 a);
 
 			/**
+			 * Moves arm into its "hovering" position over the blocks. The
+			 * position changes with the zone.
 			 *
+			 * @param zone the zone for which the arm should position itself
 			 */
 			void Hover(Zone zone);
 
 			/**
+			 * Tilt the wrist to a specific position.
 			 *
+			 * @param a desired servo position in degrees
 			 */
 			void WristTilt(uint8 a);
 
 			/**
+			 * Twist the wrist to a specific position.
 			 *
+			 * @param a desired servo position in degrees
 			 */
 			void WristTwist(uint8 a);
 
 		protected:
 			/**
-			 *
+			 * The instantaneous position of each arm servo.
 			 */
 			uint8 servoPos[] = { 0, 0, 0, 0, 0, 0, 0 };
 
 			/**
+			 * Moves the left gripper servo a certain number of degrees.
 			 *
+			 * @param degrees to move servo. Positive values add to the servo
+			 * angle, and negative values subtract from the servo angle. 
 			 */
 			void dLeftGripper(sint16 a);
 
 			/**
+			 * Moves the right gripper servo a certain number of degrees.
 			 *
+			 * @param degrees to move servo. Positive values add to the servo
+			 * angle, and negative values subtract from the servo angle. 
 			 */
 			void dRightGripper(sint16 a);
 
 			/**
+			 * Moves the left gripper to a specific position.
 			 *
+			 * @param a desired servo position in degrees
 			 */
 			void LeftGripper(uint8 a);
 
 			/**
+			 * Moves the right gripper to a specific position.
 			 *
+			 * @param a desired servo position in degrees
 			 */
 			void RightGripper(uint8 a);
 
 		private:
 			/**
-			 *
+			 * Whether the I2C connection has been initialized (i.e., setup()
+			 * has been called).
 			 */
 			static bool init = false;
 	};

@@ -1,3 +1,8 @@
+/**
+ * @author Samuel Andrew Wisner, awisner94@gmail.com
+ * @brief contains Log class
+ */
+
 #ifndef Log_H
 #define Log_H
 
