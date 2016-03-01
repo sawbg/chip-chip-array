@@ -38,7 +38,8 @@ enum class Color : ENUM {
 	Red,
 	Yellow,
 	Green,
-	Blue
+	Blue,
+	Perrywinkle  // essentially, no color
 };
 
 /**
