@@ -50,4 +50,4 @@ docs:
 	git push
 
 count:
-	find src/ -name '*' | xargs wc -l  # works assuming there's no subdirectories
+	grep -r "src/" -e "Samuel Andrew Wisner" -l | xargs wc -l  # works assuming there's no subdirectories
