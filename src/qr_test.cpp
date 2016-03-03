@@ -1,3 +1,8 @@
+/**
+ * @author Samuel Andrew Wisner, awisner94@gmail.com
+ * @brief contains test program for ScanQR() function
+ */
+
 #include <iostream>
 #include <opencv2/core/core.hpp>
 #include <opencv2/highgui/highgui.hpp>

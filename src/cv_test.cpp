@@ -1,3 +1,8 @@
+/**
+ * @author Samuel Andrew Wisner, awisner94@gmail.com
+ * @brief contains program used to test PiCamera class
+ */
+
 #include <iostream>
 
 #include "definitions.hpp"

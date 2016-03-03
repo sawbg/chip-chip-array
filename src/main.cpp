@@ -1,20 +1,25 @@
 /* 
  * File:   main.cpp
- * Author: Nick
+ * @author Nickolas Neeley
+ * @brief contains servo-control program
  *
  * Created on February 1, 2016, 8:20 AM
  */
 
 #include <cstdlib>
 #include <unistd.h>
-#include "Servo_Position_Shell.h"
 #include <iostream>
 #include <map>
-using namespace std;
-/*
- * Test code for Servos 
- */
 
+#include "Servo_Position_Shell.h"
+
+using namespace std;
+
+/**
+ * This program moves a specified servo to a specified position. It doubles as a
+ * test program for the functional servo interface (i.e.,
+ * Servo_Position_Shell.cpp). 
+ */
 int main() {
  
     Servo whichservo;

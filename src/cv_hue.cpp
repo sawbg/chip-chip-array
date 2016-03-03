@@ -1,3 +1,9 @@
+/**
+ * @author Shermal Fernando
+ * @author Samuel Andrew Wisner, awisner94@gmail.com
+ * @brief contains program formally used to find HSV values for blocks.
+ */
+
 #include <iostream>
 #include "opencv2/highgui/highgui.hpp"
 #include "opencv2/imgproc/imgproc.hpp"

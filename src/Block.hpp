@@ -1,3 +1,8 @@
+/**
+ * @author Samuel Andrew Wisner, awisner94@gmail.com
+ * @brief contains Block class
+ */
+
 #ifndef Block_H
 #define Block_H
 

@@ -1,6 +1,7 @@
 /* 
  * File:   Servo_Position_Shell.cpp
- * Author: Nickolas Neely
+ * @author Nickolas Neely
+ * @brief contains servo stuffs and whatchamacallits
  *
  * Created on February 8, 2016, 12:05 PM
  */

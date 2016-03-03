@@ -1,6 +1,7 @@
-/* 
+/** 
  * File: Servo_Position_Shell.h
- * Author: Nickolas Neely
+ * @author Nickolas Neely
+ * @brief 
  *
  * Created on February 8, 2016, 12:05 PM
  */

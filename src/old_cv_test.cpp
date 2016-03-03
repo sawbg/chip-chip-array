@@ -1,3 +1,8 @@
+/**
+ * @author Samuel Andrew Wisner, awisner94@gmail.com
+ * @brief contains old test program for the RaspiCam_Cv class
+ */
+
 #include <core/core.hpp>
 #include <highgui/highgui.hpp>
 #include <iostream>
