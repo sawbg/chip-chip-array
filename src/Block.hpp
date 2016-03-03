@@ -17,7 +17,7 @@ namespace ChipChipArray {
 			 * The area of the block in pixels
 			 */
 			uint32 area;
-			
+
 			/**
 			 * Point of the block's bottom-left corner
 			 */
@@ -27,6 +27,46 @@ namespace ChipChipArray {
 			 * Point of the block's bottom-right corner
 			 */
 			cv::Point bottomRight;
+
+			/**
+			 * Number of pixels from the block's bottom edge to the bottom edge
+			 * of the image frame.
+			 */
+			sint16 dBottom;
+
+			/**
+			 * Number of pixels from the block's left edge to the left edge of
+			 * the image frame.
+			 */
+			sint16 dLeft;
+
+			/**
+			 * Number of pixels from the block's right edge to the right edge
+			 * of the image frame.
+			 */
+			sint16 dRight;
+
+			/**
+			 * Number of pixels from the block's top edge to the top edge of the
+			 * image frame.
+			 */
+			sint16 dTop;
+
+			/**
+			 * The difference between dTop and dBottom. It indicates the
+			 * relative vertical positioning of the block regardless of the
+			 * block's area. A positive value indicates the block is off-center
+			 * towards the bottom.
+			 */
+			sint16 dTopBottom;
+
+			/**
+			 * The difference between dRight and dLeft. It indicates the
+			 * relative vertical positioning of the block regardless of the
+			 * block's area. A positive value indicates the block is off-center
+			 * towards the left.
+			 */
+			sint16 dRightLeft;
 
 			/**
 			 * The difference in pixels between the vertical center of the image
@@ -74,6 +114,16 @@ namespace ChipChipArray {
 
 		private:
 			/**
+			 *
+			 */
+			static const uint16 IMG_HEIGHT = 1280;
+
+			/**
+			 *
+			 */
+			static const uint16 IMG_WIDTH = 720;
+
+			/**
 			 * The minimum block area in pixels to be classified
 			 * as a whole (large) block
 			 */
@@ -81,16 +131,27 @@ namespace ChipChipArray {
 	};
 
 	Block::Block(cv::Rect rect, Color color) {
+		// basic geometric properties
 		area = rect.area();
 		height = rect.height;
 		width = rect.width;
 
+		// assigning corners
 		topLeft = rect.tl();
 		bottomRight = rect.br();
 		topRight = cv::Point(topLeft.x + width, topLeft.y);
 		bottomLeft = cv::Point(topLeft.x, topLeft.y + height);
-		offset = (sint16)(topLeft.x + width / 2) - 640;
+		offset = (sint16)(topLeft.x + width / 2) - IMG_WIDTH / 2;
 
+		// calculating offsets (opencv low coordinates start top left)
+		dLeft = topLeft.x;
+		dRight = IMG_WIDTH - topRight.x;
+		dTop = topLeft.y;
+		dBottom = IMG_HEIGHT - bottomRight.y;
+		dTopBottom = dTop - dBottom;
+		dRightLeft = dRight - dLeft;
+
+		// set color and size
 		this->color = color;
 		size = area > MIN_WHOLE_BLOCK_SIZE ? Size::Long : Size::Short;
 	}
