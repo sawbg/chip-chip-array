@@ -57,6 +57,11 @@ namespace ChipChipArray {
 
 		protected:
 			/**
+			 *
+			 */
+			Arm arm;
+			
+			/**
 			 * The Raspicam
 			 */
 			PiCamera cam;
@@ -225,11 +230,16 @@ namespace ChipChipArray {
 		}
 
 		void Grabber::Grab(Block block) {
-
+			// assume random base-turn constant of 10
+			while(block.dRightLeft > 20) {
+				arm.dBaseTurn(block.dRightLeft / 10);
+				block = LocateBlocks(blocks);
+			}	
+			
 		}
 
 		Result Grabber::Load() {
-			setServoPosition(BASE_TURN, 150);
+			/*setServoPosition(BASE_TURN, 150);
 			setServoPosition(WRIST_TILT, 50);
 			setServoPosition(ELBOW, 140);
 			sleep(2);
@@ -245,6 +255,8 @@ namespace ChipChipArray {
 			setServoPosition(BASE_TURN, 150);
 			setServoPosition(WRIST_TILT, 50);
 			setServoPosition(ELBOW, 140);
+			*/
+			Grab(LocateBlocks(Color::Perrywinkle);
 		}
 
 		Block Grabber::LocateBlocks(Color color) {

@@ -129,7 +129,7 @@ namespace ChipChipArray {
 			/**
 			 * The instantaneous position of each arm servo.
 			 */
-			uint8 servoPos[] = { 0, 0, 0, 0, 0, 0, 0 };
+			uint8 servoPos = { 0, 0, 0, 0, 0, 0, 0 };
 
 			/**
 			 * Moves the left gripper servo a certain number of degrees.
@@ -166,8 +166,10 @@ namespace ChipChipArray {
 			 * Whether the I2C connection has been initialized (i.e., setup()
 			 * has been called).
 			 */
-			static bool init = false;
+			static bool init;
 	};
+
+	Arm::init = false;
 
 	Arm::Arm() {
 		if(!init) {
