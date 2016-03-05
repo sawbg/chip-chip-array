@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['old_5fcv_5ftest_2ecpp',['old_cv_test.cpp',['../old__cv__test_8cpp.html',1,'']]],
-  ['open',['Open',['../classChipChipArray_1_1Log.html#ad27a06a4561f2f59159bd8a7fc2fed3b',1,'ChipChipArray::Log']]]
+  ['net_5fqr_5ftest_2ecpp',['net_qr_test.cpp',['../net__qr__test_8cpp.html',1,'']]],
+  ['no_5fblocks',['No_Blocks',['../definitions_8hpp.html#ab84ebabb02540c4a7ec341a213abf1dca32075034997ab91e886dbcad47ed902d',1,'definitions.hpp']]],
+  ['no_5fhalves',['No_Halves',['../definitions_8hpp.html#ab84ebabb02540c4a7ec341a213abf1dcabdf267b7c95f2ffd040b32d8b005e9a0',1,'definitions.hpp']]]
 ];

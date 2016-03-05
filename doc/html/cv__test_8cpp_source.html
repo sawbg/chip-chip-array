@@ -105,30 +105,40 @@ $(document).ready(function(){initNavTree('cv__test_8cpp_source.html','');});
 <div class="title">cv_test.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="cv__test_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="definitions_8hpp.html">definitions.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Block_8hpp.html">Block.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Grabber_8hpp.html">Grabber.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespaceChipChipArray.html">ChipChipArray</a>;</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="cv__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">   13</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="namespaceChipChipArray.html#a7fc3d1edffca11531cd09fdab7c8b88d">main</a>() {</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="classChipChipArray_1_1Grabber.html">Grabber</a> g(<a class="code" href="definitions_8hpp.html#adbd1e7a33d3e1751c7b2aa2562d0ecb9a7fc56270e7a70fa81a5935b72eacbe29">Zone::A</a>, <a class="code" href="definitions_8hpp.html#a03325a8a9d4f105db5e37dd587128142a92b09c7c48c520c3c55e497875da437c">Side::Right</a>);</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="classChipChipArray_1_1Block.html">Block</a> block = g.<a class="code" href="classChipChipArray_1_1Grabber.html#a86bc18ecf71c7ff4e324df0467af124a">LocateBlock</a>();</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    std::cout &lt;&lt; <a class="code" href="namespacestd.html#aa5ddf582a1c96ffe258c997be9a294a3">std::to_string</a>(block.<a class="code" href="classChipChipArray_1_1Block.html#a262210a9a04028f3f2670c9ae38ef3d7">color</a>) &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}</div>
-<div class="ttc" id="classChipChipArray_1_1Block_html"><div class="ttname"><a href="classChipChipArray_1_1Block.html">ChipChipArray::Block</a></div><div class="ttdef"><b>Definition:</b> <a href="Block_8hpp_source.html#l00014">Block.hpp:14</a></div></div>
+<a href="cv__test_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="definitions_8hpp.html">definitions.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Block_8hpp.html">Block.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Grabber_8hpp.html">Grabber.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespaceChipChipArray.html">ChipChipArray</a>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="cv__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">   18</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="namespaceChipChipArray.html#a7fc3d1edffca11531cd09fdab7c8b88d">main</a>() {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    Grabber g(<a class="code" href="definitions_8hpp.html#adbd1e7a33d3e1751c7b2aa2562d0ecb9a0d61f8370cad1d412f80b84d143e1257">Zone::C</a>, <a class="code" href="definitions_8hpp.html#a03325a8a9d4f105db5e37dd587128142a945d5e233cf7d6240f6b783b36a374ff">Side::Left</a>);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="classChipChipArray_1_1Block.html">Block</a> block = g.LocateBlock();</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    g.Close();</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    std::cout &lt;&lt; <a class="code" href="namespacestd.html#aa5ddf582a1c96ffe258c997be9a294a3">std::to_string</a>(block.<a class="code" href="classChipChipArray_1_1Block.html#a262210a9a04028f3f2670c9ae38ef3d7">color</a>) &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;Offset: &quot;</span> &lt;&lt; block.<a class="code" href="classChipChipArray_1_1Block.html#a42e2ca0775dc09b04049a2db1bc0bb4f">offset</a> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    Grabber g2(<a class="code" href="definitions_8hpp.html#adbd1e7a33d3e1751c7b2aa2562d0ecb9a9d5ed678fe57bcca610140957afab571">Zone::B</a>, <a class="code" href="definitions_8hpp.html#a03325a8a9d4f105db5e37dd587128142a92b09c7c48c520c3c55e497875da437c">Side::Right</a>);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="classChipChipArray_1_1Block.html">Block</a> block2 = g2.LocateBlock();</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    g2.Close();</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    std::cout &lt;&lt; <a class="code" href="namespacestd.html#aa5ddf582a1c96ffe258c997be9a294a3">std::to_string</a>(block2.<a class="code" href="classChipChipArray_1_1Block.html#a262210a9a04028f3f2670c9ae38ef3d7">color</a>) &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;Offset: &quot;</span> &lt;&lt; block2.<a class="code" href="classChipChipArray_1_1Block.html#a42e2ca0775dc09b04049a2db1bc0bb4f">offset</a> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
+<div class="ttc" id="classChipChipArray_1_1Block_html"><div class="ttname"><a href="classChipChipArray_1_1Block.html">ChipChipArray::Block</a></div><div class="ttdef"><b>Definition:</b> <a href="Block_8hpp_source.html#l00019">Block.hpp:19</a></div></div>
 <div class="ttc" id="definitions_8hpp_html"><div class="ttname"><a href="definitions_8hpp.html">definitions.hpp</a></div></div>
-<div class="ttc" id="classChipChipArray_1_1Grabber_html_a86bc18ecf71c7ff4e324df0467af124a"><div class="ttname"><a href="classChipChipArray_1_1Grabber.html#a86bc18ecf71c7ff4e324df0467af124a">ChipChipArray::Grabber::LocateBlock</a></div><div class="ttdeci">Block LocateBlock()</div><div class="ttdef"><b>Definition:</b> <a href="Grabber_8hpp_source.html#l00205">Grabber.hpp:205</a></div></div>
-<div class="ttc" id="namespaceChipChipArray_html"><div class="ttname"><a href="namespaceChipChipArray.html">ChipChipArray</a></div><div class="ttdef"><b>Definition:</b> <a href="Block_8hpp_source.html#l00008">Block.hpp:8</a></div></div>
-<div class="ttc" id="namespacestd_html_aa5ddf582a1c96ffe258c997be9a294a3"><div class="ttname"><a href="namespacestd.html#aa5ddf582a1c96ffe258c997be9a294a3">std::to_string</a></div><div class="ttdeci">string to_string(BlockPosition pos)</div><div class="ttdef"><b>Definition:</b> <a href="definitions_8hpp_source.html#l00080">definitions.hpp:80</a></div></div>
-<div class="ttc" id="classChipChipArray_1_1Block_html_a262210a9a04028f3f2670c9ae38ef3d7"><div class="ttname"><a href="classChipChipArray_1_1Block.html#a262210a9a04028f3f2670c9ae38ef3d7">ChipChipArray::Block::color</a></div><div class="ttdeci">Color color</div><div class="ttdef"><b>Definition:</b> <a href="Block_8hpp_source.html#l00054">Block.hpp:54</a></div></div>
-<div class="ttc" id="definitions_8hpp_html_adbd1e7a33d3e1751c7b2aa2562d0ecb9a7fc56270e7a70fa81a5935b72eacbe29"><div class="ttname"><a href="definitions_8hpp.html#adbd1e7a33d3e1751c7b2aa2562d0ecb9a7fc56270e7a70fa81a5935b72eacbe29">Zone::A</a></div></div>
-<div class="ttc" id="namespaceChipChipArray_html_a7fc3d1edffca11531cd09fdab7c8b88d"><div class="ttname"><a href="namespaceChipChipArray.html#a7fc3d1edffca11531cd09fdab7c8b88d">ChipChipArray::main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="cv__hue_8cpp_source.html#l00020">cv_hue.cpp:20</a></div></div>
+<div class="ttc" id="namespaceChipChipArray_html"><div class="ttname"><a href="namespaceChipChipArray.html">ChipChipArray</a></div><div class="ttdoc">contains Block class </div><div class="ttdef"><b>Definition:</b> <a href="Arm_8hpp_source.html#l00013">Arm.hpp:13</a></div></div>
+<div class="ttc" id="definitions_8hpp_html_adbd1e7a33d3e1751c7b2aa2562d0ecb9a9d5ed678fe57bcca610140957afab571"><div class="ttname"><a href="definitions_8hpp.html#adbd1e7a33d3e1751c7b2aa2562d0ecb9a9d5ed678fe57bcca610140957afab571">Zone::B</a></div></div>
+<div class="ttc" id="namespacestd_html_aa5ddf582a1c96ffe258c997be9a294a3"><div class="ttname"><a href="namespacestd.html#aa5ddf582a1c96ffe258c997be9a294a3">std::to_string</a></div><div class="ttdeci">string to_string(BlockPosition pos)</div><div class="ttdef"><b>Definition:</b> <a href="definitions_8hpp_source.html#l00088">definitions.hpp:88</a></div></div>
+<div class="ttc" id="classChipChipArray_1_1Block_html_a262210a9a04028f3f2670c9ae38ef3d7"><div class="ttname"><a href="classChipChipArray_1_1Block.html#a262210a9a04028f3f2670c9ae38ef3d7">ChipChipArray::Block::color</a></div><div class="ttdeci">Color color</div><div class="ttdef"><b>Definition:</b> <a href="Block_8hpp_source.html#l00106">Block.hpp:106</a></div></div>
+<div class="ttc" id="definitions_8hpp_html_adbd1e7a33d3e1751c7b2aa2562d0ecb9a0d61f8370cad1d412f80b84d143e1257"><div class="ttname"><a href="definitions_8hpp.html#adbd1e7a33d3e1751c7b2aa2562d0ecb9a0d61f8370cad1d412f80b84d143e1257">Zone::C</a></div></div>
+<div class="ttc" id="classChipChipArray_1_1Block_html_a42e2ca0775dc09b04049a2db1bc0bb4f"><div class="ttname"><a href="classChipChipArray_1_1Block.html#a42e2ca0775dc09b04049a2db1bc0bb4f">ChipChipArray::Block::offset</a></div><div class="ttdeci">sint16 offset</div><div class="ttdef"><b>Definition:</b> <a href="Block_8hpp_source.html#l00081">Block.hpp:81</a></div></div>
+<div class="ttc" id="namespaceChipChipArray_html_a7fc3d1edffca11531cd09fdab7c8b88d"><div class="ttname"><a href="namespaceChipChipArray.html#a7fc3d1edffca11531cd09fdab7c8b88d">ChipChipArray::main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> <a href="cv__hue_8cpp_source.html#l00026">cv_hue.cpp:26</a></div></div>
 <div class="ttc" id="Grabber_8hpp_html"><div class="ttname"><a href="Grabber_8hpp.html">Grabber.hpp</a></div></div>
-<div class="ttc" id="classChipChipArray_1_1Grabber_html"><div class="ttname"><a href="classChipChipArray_1_1Grabber.html">ChipChipArray::Grabber</a></div><div class="ttdef"><b>Definition:</b> <a href="Grabber_8hpp_source.html#l00019">Grabber.hpp:19</a></div></div>
+<div class="ttc" id="definitions_8hpp_html_a03325a8a9d4f105db5e37dd587128142a945d5e233cf7d6240f6b783b36a374ff"><div class="ttname"><a href="definitions_8hpp.html#a03325a8a9d4f105db5e37dd587128142a945d5e233cf7d6240f6b783b36a374ff">Side::Left</a></div></div>
 <div class="ttc" id="Block_8hpp_html"><div class="ttname"><a href="Block_8hpp.html">Block.hpp</a></div></div>
 <div class="ttc" id="definitions_8hpp_html_a03325a8a9d4f105db5e37dd587128142a92b09c7c48c520c3c55e497875da437c"><div class="ttname"><a href="definitions_8hpp.html#a03325a8a9d4f105db5e37dd587128142a92b09c7c48c520c3c55e497875da437c">Side::Right</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
@@ -137,7 +147,7 @@ $(document).ready(function(){initNavTree('cv__test_8cpp_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="cv__test_8cpp.html">cv_test.cpp</a></li>
-    <li class="footer">Generated on Sun Feb 28 2016 05:12:32 for My Project by
+    <li class="footer">Generated on Sat Mar 5 2016 17:43:01 for My Project by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

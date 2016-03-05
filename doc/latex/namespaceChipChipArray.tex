@@ -1,12 +1,17 @@
 \hypertarget{namespaceChipChipArray}{\section{Chip\+Chip\+Array Namespace Reference}
 \label{namespaceChipChipArray}\index{Chip\+Chip\+Array@{Chip\+Chip\+Array}}
 }
+
+
+contains \hyperlink{classChipChipArray_1_1Block}{Block} class  
+
+
 \subsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
-class \hyperlink{classChipChipArray_1_1Block}{Block}
+class \hyperlink{classChipChipArray_1_1Arm}{Arm}
 \item 
-class \hyperlink{classChipChipArray_1_1Grabber}{Grabber}
+class \hyperlink{classChipChipArray_1_1Block}{Block}
 \item 
 class \hyperlink{classChipChipArray_1_1Log}{Log}
 \item 
@@ -28,6 +33,20 @@ int \hyperlink{namespaceChipChipArray_a7fc3d1edffca11531cd09fdab7c8b88d}{main} (
 \end{DoxyCompactItemize}
 
 
+\subsection{Detailed Description}
+contains \hyperlink{classChipChipArray_1_1Block}{Block} class 
+
+contains \hyperlink{namespaceChipChipArray_a6c7465049b5d408e1a238b6d8ffa887d}{Scan\+Q\+R()} function
+
+contains \hyperlink{classChipChipArray_1_1PiCamera}{Pi\+Camera} class
+
+contains \hyperlink{classChipChipArray_1_1Log}{Log} class
+
+\begin{DoxyAuthor}{Author}
+Samuel Andrew Wisner, \href{mailto:awisner94@gmail.com}{\tt awisner94@gmail.\+com} 
+\end{DoxyAuthor}
+
+
 \subsection{Function Documentation}
 \hypertarget{namespaceChipChipArray_a7fc3d1edffca11531cd09fdab7c8b88d}{\index{Chip\+Chip\+Array@{Chip\+Chip\+Array}!main@{main}}
 \index{main@{main}!Chip\+Chip\+Array@{Chip\+Chip\+Array}}
@@ -39,11 +58,18 @@ int \hyperlink{namespaceChipChipArray_a7fc3d1edffca11531cd09fdab7c8b88d}{main} (
 )}}\label{namespaceChipChipArray_a7fc3d1edffca11531cd09fdab7c8b88d}
 This program was used before \hyperlink{cv__shape_8cpp}{cv\+\_\+shape.\+cpp} was written to find H\+S\+V ranges for the different color blocks. This is a slightly modified version of some code written by Shermal Fernando in the blog post \char`\"{}\+Color Detection \& Object Tracking\char`\"{} at \href{http://opencv-srf.blogspot.com/2010/09/object-detection-using-color-seperation.html}{\tt http\+://opencv-\/srf.\+blogspot.\+com/2010/09/object-\/detection-\/using-\/color-\/seperation.\+html}". 
 
-Definition at line 20 of file cv\+\_\+hue.\+cpp.
+Definition at line 26 of file cv\+\_\+hue.\+cpp.
 
 
 
 Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespaceChipChipArray_a7fc3d1edffca11531cd09fdab7c8b88d_cgraph}
+\end{center}
+\end{figure}
 
 
 \hypertarget{namespaceChipChipArray_a6c7465049b5d408e1a238b6d8ffa887d}{\index{Chip\+Chip\+Array@{Chip\+Chip\+Array}!Scan\+Q\+R@{Scan\+Q\+R}}
@@ -57,16 +83,30 @@ This function manuvers arm to look at the Q\+R code on a train car as the robot 
 
 This function is based on code written by Michael Young (\href{https://github.com/ayoungprogrammer/WebcamCodeScanner}{\tt https\+://github.\+com/ayoungprogrammer/\+Webcam\+Code\+Scanner}). 
 
-Definition at line 28 of file Scan\+Q\+R.\+hpp.
+Definition at line 33 of file Scan\+Q\+R.\+hpp.
 
 
 
 Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespaceChipChipArray_a6c7465049b5d408e1a238b6d8ffa887d_cgraph}
+\end{center}
+\end{figure}
 
 
 
 
 Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=278pt]{namespaceChipChipArray_a6c7465049b5d408e1a238b6d8ffa887d_icgraph}
+\end{center}
+\end{figure}
 
 
 
@@ -77,7 +117,7 @@ Here is the caller graph for this function\+:
 \subsubsection[{qr\+Invoke\+Count}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint8} Chip\+Chip\+Array\+::qr\+Invoke\+Count = 0}}\label{namespaceChipChipArray_a3b2a3c0ffa9f53021293aeb4955d2fef}
 
 
-Definition at line 15 of file Scan\+Q\+R.\+hpp.
+Definition at line 20 of file Scan\+Q\+R.\+hpp.
 
 \hypertarget{namespaceChipChipArray_ab5c6290951637c25a5422707020fb3a8}{\index{Chip\+Chip\+Array@{Chip\+Chip\+Array}!scan\+Qr\+Log@{scan\+Qr\+Log}}
 \index{scan\+Qr\+Log@{scan\+Qr\+Log}!Chip\+Chip\+Array@{Chip\+Chip\+Array}}

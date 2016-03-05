@@ -105,84 +105,90 @@ $(document).ready(function(){initNavTree('net__qr__test_8cpp_source.html','');})
 <div class="title">net_qr_test.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="net__qr__test_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &lt;opencv2/highgui/highgui.hpp&gt;</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;opencv2/imgproc/imgproc.hpp&gt;</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;zbar.h&gt;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="PiCamera_8hpp.html">PiCamera.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacecv.html">cv</a>;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacestd.html">std</a>;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacezbar.html">zbar</a>;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespaceChipChipArray.html">ChipChipArray</a>;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="net__qr__test_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">   18</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="net__qr__test_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* argv[])</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="classChipChipArray_1_1PiCamera.html">PiCamera</a> cam; <span class="comment">// open the video camera no. 0</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    ImageScanner scanner;  </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    scanner.set_config(ZBAR_NONE, ZBAR_CFG_ENABLE, 1);  </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    namedWindow(<span class="stringliteral">&quot;MyVideo&quot;</span>,CV_WINDOW_AUTOSIZE); <span class="comment">//create a window called &quot;MyVideo&quot;</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordflow">while</span> (1)</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    {</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        Mat frame = cam.<a class="code" href="classChipChipArray_1_1PiCamera.html#a58fb0de02570dce9a9cb60a1a04fb84f">Snap</a>();</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        Mat grey;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        cvtColor(frame,grey,CV_BGR2GRAY);</div>
+<a href="net__qr__test_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * @author Michael Young</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * @author Samuel Andrew Wisner, awisner94@gmail.com</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * @brief contains test program for reading QR codes</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;opencv2/highgui/highgui.hpp&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;opencv2/imgproc/imgproc.hpp&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;zbar.h&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="PiCamera_8hpp.html">PiCamera.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacecv.html">cv</a>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacestd.html">std</a>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacezbar.html">zbar</a>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespaceChipChipArray.html">ChipChipArray</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="net__qr__test_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">   24</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="net__qr__test_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* argv[])</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="classChipChipArray_1_1PiCamera.html">PiCamera</a> cam; <span class="comment">// open the video camera no. 0</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    ImageScanner scanner;  </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    scanner.set_config(ZBAR_NONE, ZBAR_CFG_ENABLE, 1);  </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    namedWindow(<span class="stringliteral">&quot;MyVideo&quot;</span>,CV_WINDOW_AUTOSIZE); <span class="comment">//create a window called &quot;MyVideo&quot;</span></div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keywordtype">int</span> width = frame.cols;  </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordtype">int</span> height = frame.rows;  </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        uchar *raw = (uchar *)grey.data;  </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="comment">// wrap image data  </span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        zbar::Image image(width, height, <span class="stringliteral">&quot;Y800&quot;</span>, raw, width * height);  </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="comment">// scan the image for barcodes  </span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keywordtype">int</span> n = scanner.scan(image);  </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="comment">// extract results  </span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordflow">for</span>(Image::SymbolIterator symbol = image.symbol_begin();  </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                symbol != image.symbol_end();  </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                ++symbol) {  </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            vector&lt;Point&gt; vp;  </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            <span class="comment">// do something useful with results  </span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            cout &lt;&lt; <span class="stringliteral">&quot;decoded &quot;</span> &lt;&lt; symbol-&gt;get_type_name()  &lt;&lt; <span class="stringliteral">&quot; symbol \&quot;&quot;</span> &lt;&lt; symbol-&gt;get_data() &lt;&lt; <span class="charliteral">&#39;&quot;&#39;</span> &lt;&lt;<span class="stringliteral">&quot; &quot;</span>&lt;&lt; endl;  </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            <span class="keywordtype">int</span> n = symbol-&gt;get_location_size();  </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;n;i++){  </div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                vp.push_back(Point(symbol-&gt;get_location_x(i),symbol-&gt;get_location_y(i))); </div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            }  </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            RotatedRect r = minAreaRect(vp);  </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            Point2f pts[4];  </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            r.points(pts);  </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;4;i++){  </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                line(frame,pts[i],pts[(i+1)%4],Scalar(255,0,0),3);  </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordflow">while</span> (1)</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        Mat frame = cam.<a class="code" href="classChipChipArray_1_1PiCamera.html#a58fb0de02570dce9a9cb60a1a04fb84f">Snap</a>();</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        Mat grey;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        cvtColor(frame,grey,CV_BGR2GRAY);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keywordtype">int</span> width = frame.cols;  </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keywordtype">int</span> height = frame.rows;  </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        uchar *raw = (uchar *)grey.data;  </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="comment">// wrap image data  </span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        zbar::Image image(width, height, <span class="stringliteral">&quot;Y800&quot;</span>, raw, width * height);  </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="comment">// scan the image for barcodes  </span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keywordtype">int</span> n = scanner.scan(image);  </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="comment">// extract results  </span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keywordflow">for</span>(Image::SymbolIterator symbol = image.symbol_begin();  </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                symbol != image.symbol_end();  </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                ++symbol) {  </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            vector&lt;Point&gt; vp;  </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            <span class="comment">// do something useful with results  </span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            cout &lt;&lt; <span class="stringliteral">&quot;decoded &quot;</span> &lt;&lt; symbol-&gt;get_type_name()  &lt;&lt; <span class="stringliteral">&quot; symbol \&quot;&quot;</span> &lt;&lt; symbol-&gt;get_data() &lt;&lt; <span class="charliteral">&#39;&quot;&#39;</span> &lt;&lt;<span class="stringliteral">&quot; &quot;</span>&lt;&lt; endl;  </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            <span class="keywordtype">int</span> n = symbol-&gt;get_location_size();  </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;n;i++){  </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                vp.push_back(Point(symbol-&gt;get_location_x(i),symbol-&gt;get_location_y(i))); </div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            }  </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        }  </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        imshow(<span class="stringliteral">&quot;MyVideo&quot;</span>, frame); <span class="comment">//show the frame in &quot;MyVideo&quot; window</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordflow">if</span> (waitKey(30) == 27) <span class="comment">//wait for &#39;esc&#39; key press for 30ms. If &#39;esc&#39; key is pressed, break loop</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        {</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            cout &lt;&lt; <span class="stringliteral">&quot;esc key is pressed by user&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <span class="keywordflow">break</span>; </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        }</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    }</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;}</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            RotatedRect r = minAreaRect(vp);  </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            Point2f pts[4];  </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            r.points(pts);  </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;4;i++){  </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                line(frame,pts[i],pts[(i+1)%4],Scalar(255,0,0),3);  </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            }  </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        }  </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        imshow(<span class="stringliteral">&quot;MyVideo&quot;</span>, frame); <span class="comment">//show the frame in &quot;MyVideo&quot; window</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keywordflow">if</span> (waitKey(30) == 27) <span class="comment">//wait for &#39;esc&#39; key press for 30ms. If &#39;esc&#39; key is pressed, break loop</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        {</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            cout &lt;&lt; <span class="stringliteral">&quot;esc key is pressed by user&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            <span class="keywordflow">break</span>; </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        }</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    }</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;}</div>
 <div class="ttc" id="namespacezbar_html"><div class="ttname"><a href="namespacezbar.html">zbar</a></div></div>
 <div class="ttc" id="PiCamera_8hpp_html"><div class="ttname"><a href="PiCamera_8hpp.html">PiCamera.hpp</a></div></div>
-<div class="ttc" id="namespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div><div class="ttdef"><b>Definition:</b> <a href="definitions_8hpp_source.html#l00076">definitions.hpp:76</a></div></div>
-<div class="ttc" id="namespacecv_html"><div class="ttname"><a href="namespacecv.html">cv</a></div></div>
-<div class="ttc" id="namespaceChipChipArray_html"><div class="ttname"><a href="namespaceChipChipArray.html">ChipChipArray</a></div><div class="ttdef"><b>Definition:</b> <a href="Block_8hpp_source.html#l00008">Block.hpp:8</a></div></div>
-<div class="ttc" id="classChipChipArray_1_1PiCamera_html"><div class="ttname"><a href="classChipChipArray_1_1PiCamera.html">ChipChipArray::PiCamera</a></div><div class="ttdef"><b>Definition:</b> <a href="PiCamera_8hpp_source.html#l00016">PiCamera.hpp:16</a></div></div>
-<div class="ttc" id="classChipChipArray_1_1PiCamera_html_a58fb0de02570dce9a9cb60a1a04fb84f"><div class="ttname"><a href="classChipChipArray_1_1PiCamera.html#a58fb0de02570dce9a9cb60a1a04fb84f">ChipChipArray::PiCamera::Snap</a></div><div class="ttdeci">cv::Mat Snap()</div><div class="ttdef"><b>Definition:</b> <a href="PiCamera_8hpp_source.html#l00061">PiCamera.hpp:61</a></div></div>
-<div class="ttc" id="net__qr__test_8cpp_html_a0ddf1224851353fc92bfbff6f499fa97"><div class="ttname"><a href="net__qr__test_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a></div><div class="ttdeci">int main(int argc, char *argv[])</div><div class="ttdef"><b>Definition:</b> <a href="net__qr__test_8cpp_source.html#l00018">net_qr_test.cpp:18</a></div></div>
+<div class="ttc" id="namespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div><div class="ttdef"><b>Definition:</b> <a href="definitions_8hpp_source.html#l00084">definitions.hpp:84</a></div></div>
+<div class="ttc" id="namespacecv_html"><div class="ttname"><a href="namespacecv.html">cv</a></div><div class="ttdoc">contains program formally used to find HSV values for blocks. </div></div>
+<div class="ttc" id="namespaceChipChipArray_html"><div class="ttname"><a href="namespaceChipChipArray.html">ChipChipArray</a></div><div class="ttdoc">contains Block class </div><div class="ttdef"><b>Definition:</b> <a href="Arm_8hpp_source.html#l00013">Arm.hpp:13</a></div></div>
+<div class="ttc" id="classChipChipArray_1_1PiCamera_html"><div class="ttname"><a href="classChipChipArray_1_1PiCamera.html">ChipChipArray::PiCamera</a></div><div class="ttdef"><b>Definition:</b> <a href="PiCamera_8hpp_source.html#l00023">PiCamera.hpp:23</a></div></div>
+<div class="ttc" id="classChipChipArray_1_1PiCamera_html_a58fb0de02570dce9a9cb60a1a04fb84f"><div class="ttname"><a href="classChipChipArray_1_1PiCamera.html#a58fb0de02570dce9a9cb60a1a04fb84f">ChipChipArray::PiCamera::Snap</a></div><div class="ttdeci">cv::Mat Snap()</div><div class="ttdef"><b>Definition:</b> <a href="PiCamera_8hpp_source.html#l00068">PiCamera.hpp:68</a></div></div>
+<div class="ttc" id="net__qr__test_8cpp_html_a0ddf1224851353fc92bfbff6f499fa97"><div class="ttname"><a href="net__qr__test_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a></div><div class="ttdeci">int main(int argc, char *argv[])</div><div class="ttdef"><b>Definition:</b> <a href="net__qr__test_8cpp_source.html#l00024">net_qr_test.cpp:24</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="net__qr__test_8cpp.html">net_qr_test.cpp</a></li>
-    <li class="footer">Generated on Sun Feb 28 2016 05:12:32 for My Project by
+    <li class="footer">Generated on Sat Mar 5 2016 17:43:01 for My Project by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

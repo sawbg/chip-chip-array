@@ -1,0 +1,5 @@
+<map id="setup" name="setup">
+<area shape="rect" id="node2" href="$classAdafruit__PWMServoDriver.html#aef401eaad3c34222ac916eb7bd936bc2" title="Adafruit_PWMServoDriver\l::begin" alt="" coords="108,5,284,47"/>
+<area shape="rect" id="node4" href="$classAdafruit__PWMServoDriver.html#a0ef6f1e3c81aebbd1d1da1bb12f3ed5c" title="Adafruit_PWMServoDriver\l::setPWMFreq" alt="" coords="108,71,284,112"/>
+<area shape="rect" id="node3" href="$classAdafruit__PWMServoDriver.html#ac976f52233a75a4bd0eb6f2ce9b82b7f" title="Adafruit_PWMServoDriver\l::reset" alt="" coords="332,5,508,47"/>
+</map>

@@ -1,0 +1,547 @@
+\hypertarget{classChipChipArray_1_1Arm}{\section{Chip\+Chip\+Array\+:\+:Arm Class Reference}
+\label{classChipChipArray_1_1Arm}\index{Chip\+Chip\+Array\+::\+Arm@{Chip\+Chip\+Array\+::\+Arm}}
+}
+
+
+{\ttfamily \#include $<$Arm.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classChipChipArray_1_1Arm_aeda43d8461e50eaca9aa891ee2863c05}{Arm} ()
+\item 
+void \hyperlink{classChipChipArray_1_1Arm_a8b077a3791d9fc5ef285c1520fe4c5d8}{Base\+Tilt} (\hyperlink{definitions_8hpp_adde6aaee8457bee49c2a92621fe22b79}{uint8} a)
+\item 
+void \hyperlink{classChipChipArray_1_1Arm_addaedfe85ff2b14ff00c344fc4b40cd6}{Base\+Turn} (\hyperlink{definitions_8hpp_adde6aaee8457bee49c2a92621fe22b79}{uint8} a)
+\item 
+void \hyperlink{classChipChipArray_1_1Arm_af84b91c664baec0f2882dcf4089ae027}{d\+Base\+Tilt} (\hyperlink{definitions_8hpp_a74df79fde3c518e55b29ce6360a9c76e}{sint16} a)
+\item 
+void \hyperlink{classChipChipArray_1_1Arm_a980f5bd278cbe06aa21754fb8e0324b3}{d\+Base\+Turn} (\hyperlink{definitions_8hpp_a74df79fde3c518e55b29ce6360a9c76e}{sint16} a)
+\item 
+void \hyperlink{classChipChipArray_1_1Arm_ae8d0a664dd1a0e556cf40c0984035163}{d\+Elbow} (\hyperlink{definitions_8hpp_a74df79fde3c518e55b29ce6360a9c76e}{sint16} a)
+\item 
+void \hyperlink{classChipChipArray_1_1Arm_a2e46473723c15e88952a2c4fbd0a8bd8}{d\+Grippers} (\hyperlink{definitions_8hpp_a74df79fde3c518e55b29ce6360a9c76e}{sint16} a)
+\item 
+void \hyperlink{classChipChipArray_1_1Arm_a43daba698f13a522887ad022b78557bb}{d\+Wrist\+Tilt} (\hyperlink{definitions_8hpp_a74df79fde3c518e55b29ce6360a9c76e}{sint16} a)
+\item 
+void \hyperlink{classChipChipArray_1_1Arm_a6bde822b1be63926e21222f36aad67b3}{d\+Wrist\+Twist} (\hyperlink{definitions_8hpp_a74df79fde3c518e55b29ce6360a9c76e}{sint16} a)
+\item 
+void \hyperlink{classChipChipArray_1_1Arm_ac45149e03abfac230b75156bb42e8417}{Elbow} (\hyperlink{definitions_8hpp_adde6aaee8457bee49c2a92621fe22b79}{uint8} a)
+\item 
+void \hyperlink{classChipChipArray_1_1Arm_afe581f2e6c85ba07729d3ffe90fee9cd}{Grippers} (\hyperlink{definitions_8hpp_adde6aaee8457bee49c2a92621fe22b79}{uint8} a)
+\item 
+void \hyperlink{classChipChipArray_1_1Arm_a8871580fd6a75fd60d99300f2b5c21d1}{Hover} (\hyperlink{definitions_8hpp_adbd1e7a33d3e1751c7b2aa2562d0ecb9}{Zone} zone)
+\item 
+void \hyperlink{classChipChipArray_1_1Arm_ad61f7c1e63eb09981b6c304bd924e217}{Wrist\+Tilt} (\hyperlink{definitions_8hpp_adde6aaee8457bee49c2a92621fe22b79}{uint8} a)
+\item 
+void \hyperlink{classChipChipArray_1_1Arm_a35ec7756840d9d32dcfbb88d831f087f}{Wrist\+Twist} (\hyperlink{definitions_8hpp_adde6aaee8457bee49c2a92621fe22b79}{uint8} a)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classChipChipArray_1_1Arm_a6da0950c7e3bd4a31264e562916c032d}{d\+Left\+Gripper} (\hyperlink{definitions_8hpp_a74df79fde3c518e55b29ce6360a9c76e}{sint16} a)
+\item 
+void \hyperlink{classChipChipArray_1_1Arm_adfa7cc779b7ec3bf8453277796c142ed}{d\+Right\+Gripper} (\hyperlink{definitions_8hpp_a74df79fde3c518e55b29ce6360a9c76e}{sint16} a)
+\item 
+void \hyperlink{classChipChipArray_1_1Arm_a776eade3a7aaa6effaabad7f37c71031}{Left\+Gripper} (\hyperlink{definitions_8hpp_adde6aaee8457bee49c2a92621fe22b79}{uint8} a)
+\item 
+void \hyperlink{classChipChipArray_1_1Arm_a46a0b0cfb37cb0b663c91cd07e440e10}{Right\+Gripper} (\hyperlink{definitions_8hpp_adde6aaee8457bee49c2a92621fe22b79}{uint8} a)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{definitions_8hpp_adde6aaee8457bee49c2a92621fe22b79}{uint8} \hyperlink{classChipChipArray_1_1Arm_abe425c250c1929e9c9c86e6ea9eeeb04}{servo\+Pos} = \{ 0, 0, 0, 0, 0, 0, 0 \}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class provides a layer of abstraction from the existing servo interface. It is designed to make more sense programmatically and to be easier to use. 
+
+Definition at line 19 of file Arm.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classChipChipArray_1_1Arm_aeda43d8461e50eaca9aa891ee2863c05}{\index{Chip\+Chip\+Array\+::\+Arm@{Chip\+Chip\+Array\+::\+Arm}!Arm@{Arm}}
+\index{Arm@{Arm}!Chip\+Chip\+Array\+::\+Arm@{Chip\+Chip\+Array\+::\+Arm}}
+\subsubsection[{Arm}]{\setlength{\rightskip}{0pt plus 5cm}Chip\+Chip\+Array\+::\+Arm\+::\+Arm (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classChipChipArray_1_1Arm_aeda43d8461e50eaca9aa891ee2863c05}
+Initializes the I2\+C interface for the arm if another instance of the \hyperlink{classChipChipArray_1_1Arm}{Arm} class has not already. 
+
+Definition at line 174 of file Arm.\+hpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classChipChipArray_1_1Arm_aeda43d8461e50eaca9aa891ee2863c05_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classChipChipArray_1_1Arm_a8b077a3791d9fc5ef285c1520fe4c5d8}{\index{Chip\+Chip\+Array\+::\+Arm@{Chip\+Chip\+Array\+::\+Arm}!Base\+Tilt@{Base\+Tilt}}
+\index{Base\+Tilt@{Base\+Tilt}!Chip\+Chip\+Array\+::\+Arm@{Chip\+Chip\+Array\+::\+Arm}}
+\subsubsection[{Base\+Tilt}]{\setlength{\rightskip}{0pt plus 5cm}void Chip\+Chip\+Array\+::\+Arm\+::\+Base\+Tilt (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8}}]{a}
+\end{DoxyParamCaption}
+)}}\label{classChipChipArray_1_1Arm_a8b077a3791d9fc5ef285c1520fe4c5d8}
+Tilts the base of the arm.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & desired servo position in degrees \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 181 of file Arm.\+hpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classChipChipArray_1_1Arm_a8b077a3791d9fc5ef285c1520fe4c5d8_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classChipChipArray_1_1Arm_addaedfe85ff2b14ff00c344fc4b40cd6}{\index{Chip\+Chip\+Array\+::\+Arm@{Chip\+Chip\+Array\+::\+Arm}!Base\+Turn@{Base\+Turn}}
+\index{Base\+Turn@{Base\+Turn}!Chip\+Chip\+Array\+::\+Arm@{Chip\+Chip\+Array\+::\+Arm}}
+\subsubsection[{Base\+Turn}]{\setlength{\rightskip}{0pt plus 5cm}void Chip\+Chip\+Array\+::\+Arm\+::\+Base\+Turn (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8}}]{a}
+\end{DoxyParamCaption}
+)}}\label{classChipChipArray_1_1Arm_addaedfe85ff2b14ff00c344fc4b40cd6}
+Twists the entire arm.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & desired servo position in degrees \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 186 of file Arm.\+hpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classChipChipArray_1_1Arm_addaedfe85ff2b14ff00c344fc4b40cd6_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classChipChipArray_1_1Arm_af84b91c664baec0f2882dcf4089ae027}{\index{Chip\+Chip\+Array\+::\+Arm@{Chip\+Chip\+Array\+::\+Arm}!d\+Base\+Tilt@{d\+Base\+Tilt}}
+\index{d\+Base\+Tilt@{d\+Base\+Tilt}!Chip\+Chip\+Array\+::\+Arm@{Chip\+Chip\+Array\+::\+Arm}}
+\subsubsection[{d\+Base\+Tilt}]{\setlength{\rightskip}{0pt plus 5cm}void Chip\+Chip\+Array\+::\+Arm\+::d\+Base\+Tilt (
+\begin{DoxyParamCaption}
+\item[{{\bf sint16}}]{a}
+\end{DoxyParamCaption}
+)}}\label{classChipChipArray_1_1Arm_af84b91c664baec0f2882dcf4089ae027}
+Tilts the base a certain number of degrees.
+
+
+\begin{DoxyParams}{Parameters}
+{\em degrees} & to move servo. Positive values add to the servo angle, and negative values subtract from the servo angle. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 191 of file Arm.\+hpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classChipChipArray_1_1Arm_af84b91c664baec0f2882dcf4089ae027_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classChipChipArray_1_1Arm_a980f5bd278cbe06aa21754fb8e0324b3}{\index{Chip\+Chip\+Array\+::\+Arm@{Chip\+Chip\+Array\+::\+Arm}!d\+Base\+Turn@{d\+Base\+Turn}}
+\index{d\+Base\+Turn@{d\+Base\+Turn}!Chip\+Chip\+Array\+::\+Arm@{Chip\+Chip\+Array\+::\+Arm}}
+\subsubsection[{d\+Base\+Turn}]{\setlength{\rightskip}{0pt plus 5cm}void Chip\+Chip\+Array\+::\+Arm\+::d\+Base\+Turn (
+\begin{DoxyParamCaption}
+\item[{{\bf sint16}}]{a}
+\end{DoxyParamCaption}
+)}}\label{classChipChipArray_1_1Arm_a980f5bd278cbe06aa21754fb8e0324b3}
+Turn the base a certain number of degrees.
+
+
+\begin{DoxyParams}{Parameters}
+{\em degrees} & to move servo. Positive values add to the servo angle, and negative values subtract from the servo angle. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 197 of file Arm.\+hpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classChipChipArray_1_1Arm_a980f5bd278cbe06aa21754fb8e0324b3_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classChipChipArray_1_1Arm_ae8d0a664dd1a0e556cf40c0984035163}{\index{Chip\+Chip\+Array\+::\+Arm@{Chip\+Chip\+Array\+::\+Arm}!d\+Elbow@{d\+Elbow}}
+\index{d\+Elbow@{d\+Elbow}!Chip\+Chip\+Array\+::\+Arm@{Chip\+Chip\+Array\+::\+Arm}}
+\subsubsection[{d\+Elbow}]{\setlength{\rightskip}{0pt plus 5cm}void Chip\+Chip\+Array\+::\+Arm\+::d\+Elbow (
+\begin{DoxyParamCaption}
+\item[{{\bf sint16}}]{a}
+\end{DoxyParamCaption}
+)}}\label{classChipChipArray_1_1Arm_ae8d0a664dd1a0e556cf40c0984035163}
+Bend the elbow a certain number of degrees.
+
+
+\begin{DoxyParams}{Parameters}
+{\em degrees} & to move servo. Positive values add to the servo angle, and negative values subtract from the servo angle. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 203 of file Arm.\+hpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classChipChipArray_1_1Arm_ae8d0a664dd1a0e556cf40c0984035163_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classChipChipArray_1_1Arm_a2e46473723c15e88952a2c4fbd0a8bd8}{\index{Chip\+Chip\+Array\+::\+Arm@{Chip\+Chip\+Array\+::\+Arm}!d\+Grippers@{d\+Grippers}}
+\index{d\+Grippers@{d\+Grippers}!Chip\+Chip\+Array\+::\+Arm@{Chip\+Chip\+Array\+::\+Arm}}
+\subsubsection[{d\+Grippers}]{\setlength{\rightskip}{0pt plus 5cm}void Chip\+Chip\+Array\+::\+Arm\+::d\+Grippers (
+\begin{DoxyParamCaption}
+\item[{{\bf sint16}}]{a}
+\end{DoxyParamCaption}
+)}}\label{classChipChipArray_1_1Arm_a2e46473723c15e88952a2c4fbd0a8bd8}
+Move the grippers a certain number of degrees. Note that they will both move inward or outward; one will never move inward and the other outward.
+
+
+\begin{DoxyParams}{Parameters}
+{\em degrees} & to move servo. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 209 of file Arm.\+hpp.
+
+\hypertarget{classChipChipArray_1_1Arm_a6da0950c7e3bd4a31264e562916c032d}{\index{Chip\+Chip\+Array\+::\+Arm@{Chip\+Chip\+Array\+::\+Arm}!d\+Left\+Gripper@{d\+Left\+Gripper}}
+\index{d\+Left\+Gripper@{d\+Left\+Gripper}!Chip\+Chip\+Array\+::\+Arm@{Chip\+Chip\+Array\+::\+Arm}}
+\subsubsection[{d\+Left\+Gripper}]{\setlength{\rightskip}{0pt plus 5cm}void Chip\+Chip\+Array\+::\+Arm\+::d\+Left\+Gripper (
+\begin{DoxyParamCaption}
+\item[{{\bf sint16}}]{a}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classChipChipArray_1_1Arm_a6da0950c7e3bd4a31264e562916c032d}
+Moves the left gripper servo a certain number of degrees.
+
+
+\begin{DoxyParams}{Parameters}
+{\em degrees} & to move servo. Positive values add to the servo angle, and negative values subtract from the servo angle. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 216 of file Arm.\+hpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classChipChipArray_1_1Arm_a6da0950c7e3bd4a31264e562916c032d_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classChipChipArray_1_1Arm_adfa7cc779b7ec3bf8453277796c142ed}{\index{Chip\+Chip\+Array\+::\+Arm@{Chip\+Chip\+Array\+::\+Arm}!d\+Right\+Gripper@{d\+Right\+Gripper}}
+\index{d\+Right\+Gripper@{d\+Right\+Gripper}!Chip\+Chip\+Array\+::\+Arm@{Chip\+Chip\+Array\+::\+Arm}}
+\subsubsection[{d\+Right\+Gripper}]{\setlength{\rightskip}{0pt plus 5cm}void Chip\+Chip\+Array\+::\+Arm\+::d\+Right\+Gripper (
+\begin{DoxyParamCaption}
+\item[{{\bf sint16}}]{a}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classChipChipArray_1_1Arm_adfa7cc779b7ec3bf8453277796c142ed}
+Moves the right gripper servo a certain number of degrees.
+
+
+\begin{DoxyParams}{Parameters}
+{\em degrees} & to move servo. Positive values add to the servo angle, and negative values subtract from the servo angle. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 222 of file Arm.\+hpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classChipChipArray_1_1Arm_adfa7cc779b7ec3bf8453277796c142ed_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classChipChipArray_1_1Arm_a43daba698f13a522887ad022b78557bb}{\index{Chip\+Chip\+Array\+::\+Arm@{Chip\+Chip\+Array\+::\+Arm}!d\+Wrist\+Tilt@{d\+Wrist\+Tilt}}
+\index{d\+Wrist\+Tilt@{d\+Wrist\+Tilt}!Chip\+Chip\+Array\+::\+Arm@{Chip\+Chip\+Array\+::\+Arm}}
+\subsubsection[{d\+Wrist\+Tilt}]{\setlength{\rightskip}{0pt plus 5cm}void Chip\+Chip\+Array\+::\+Arm\+::d\+Wrist\+Tilt (
+\begin{DoxyParamCaption}
+\item[{{\bf sint16}}]{a}
+\end{DoxyParamCaption}
+)}}\label{classChipChipArray_1_1Arm_a43daba698f13a522887ad022b78557bb}
+Tilt the wrist a certain number of degrees.
+
+
+\begin{DoxyParams}{Parameters}
+{\em degrees} & to move servo. Positive values add to the servo angle, and negative values subtract from the servo angle. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 228 of file Arm.\+hpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classChipChipArray_1_1Arm_a43daba698f13a522887ad022b78557bb_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classChipChipArray_1_1Arm_a6bde822b1be63926e21222f36aad67b3}{\index{Chip\+Chip\+Array\+::\+Arm@{Chip\+Chip\+Array\+::\+Arm}!d\+Wrist\+Twist@{d\+Wrist\+Twist}}
+\index{d\+Wrist\+Twist@{d\+Wrist\+Twist}!Chip\+Chip\+Array\+::\+Arm@{Chip\+Chip\+Array\+::\+Arm}}
+\subsubsection[{d\+Wrist\+Twist}]{\setlength{\rightskip}{0pt plus 5cm}void Chip\+Chip\+Array\+::\+Arm\+::d\+Wrist\+Twist (
+\begin{DoxyParamCaption}
+\item[{{\bf sint16}}]{a}
+\end{DoxyParamCaption}
+)}}\label{classChipChipArray_1_1Arm_a6bde822b1be63926e21222f36aad67b3}
+Twist the wrist a certain number of degrees.
+
+
+\begin{DoxyParams}{Parameters}
+{\em degrees} & to move servo. Positive values add to the servo angle, and negative values subtract from the servo angle. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classChipChipArray_1_1Arm_ac45149e03abfac230b75156bb42e8417}{\index{Chip\+Chip\+Array\+::\+Arm@{Chip\+Chip\+Array\+::\+Arm}!Elbow@{Elbow}}
+\index{Elbow@{Elbow}!Chip\+Chip\+Array\+::\+Arm@{Chip\+Chip\+Array\+::\+Arm}}
+\subsubsection[{Elbow}]{\setlength{\rightskip}{0pt plus 5cm}void Chip\+Chip\+Array\+::\+Arm\+::\+Elbow (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8}}]{a}
+\end{DoxyParamCaption}
+)}}\label{classChipChipArray_1_1Arm_ac45149e03abfac230b75156bb42e8417}
+Bend the elbow to a specific position.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & desired servo position in degrees \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 240 of file Arm.\+hpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classChipChipArray_1_1Arm_ac45149e03abfac230b75156bb42e8417_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classChipChipArray_1_1Arm_afe581f2e6c85ba07729d3ffe90fee9cd}{\index{Chip\+Chip\+Array\+::\+Arm@{Chip\+Chip\+Array\+::\+Arm}!Grippers@{Grippers}}
+\index{Grippers@{Grippers}!Chip\+Chip\+Array\+::\+Arm@{Chip\+Chip\+Array\+::\+Arm}}
+\subsubsection[{Grippers}]{\setlength{\rightskip}{0pt plus 5cm}void Chip\+Chip\+Array\+::\+Arm\+::\+Grippers (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8}}]{a}
+\end{DoxyParamCaption}
+)}}\label{classChipChipArray_1_1Arm_afe581f2e6c85ba07729d3ffe90fee9cd}
+Move the grippers to a specific position. Note that they will both move inward or outward; one will never move inward and the other outward.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & desired servo position in degrees \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 245 of file Arm.\+hpp.
+
+\hypertarget{classChipChipArray_1_1Arm_a8871580fd6a75fd60d99300f2b5c21d1}{\index{Chip\+Chip\+Array\+::\+Arm@{Chip\+Chip\+Array\+::\+Arm}!Hover@{Hover}}
+\index{Hover@{Hover}!Chip\+Chip\+Array\+::\+Arm@{Chip\+Chip\+Array\+::\+Arm}}
+\subsubsection[{Hover}]{\setlength{\rightskip}{0pt plus 5cm}void Chip\+Chip\+Array\+::\+Arm\+::\+Hover (
+\begin{DoxyParamCaption}
+\item[{{\bf Zone}}]{zone}
+\end{DoxyParamCaption}
+)}}\label{classChipChipArray_1_1Arm_a8871580fd6a75fd60d99300f2b5c21d1}
+Moves arm into its \char`\"{}hovering\char`\"{} position over the blocks. The position changes with the zone.
+
+
+\begin{DoxyParams}{Parameters}
+{\em zone} & the zone for which the arm should position itself \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 249 of file Arm.\+hpp.
+
+\hypertarget{classChipChipArray_1_1Arm_a776eade3a7aaa6effaabad7f37c71031}{\index{Chip\+Chip\+Array\+::\+Arm@{Chip\+Chip\+Array\+::\+Arm}!Left\+Gripper@{Left\+Gripper}}
+\index{Left\+Gripper@{Left\+Gripper}!Chip\+Chip\+Array\+::\+Arm@{Chip\+Chip\+Array\+::\+Arm}}
+\subsubsection[{Left\+Gripper}]{\setlength{\rightskip}{0pt plus 5cm}void Chip\+Chip\+Array\+::\+Arm\+::\+Left\+Gripper (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8}}]{a}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classChipChipArray_1_1Arm_a776eade3a7aaa6effaabad7f37c71031}
+Moves the left gripper to a specific position.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & desired servo position in degrees \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 253 of file Arm.\+hpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classChipChipArray_1_1Arm_a776eade3a7aaa6effaabad7f37c71031_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classChipChipArray_1_1Arm_a46a0b0cfb37cb0b663c91cd07e440e10}{\index{Chip\+Chip\+Array\+::\+Arm@{Chip\+Chip\+Array\+::\+Arm}!Right\+Gripper@{Right\+Gripper}}
+\index{Right\+Gripper@{Right\+Gripper}!Chip\+Chip\+Array\+::\+Arm@{Chip\+Chip\+Array\+::\+Arm}}
+\subsubsection[{Right\+Gripper}]{\setlength{\rightskip}{0pt plus 5cm}void Chip\+Chip\+Array\+::\+Arm\+::\+Right\+Gripper (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8}}]{a}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classChipChipArray_1_1Arm_a46a0b0cfb37cb0b663c91cd07e440e10}
+Moves the right gripper to a specific position.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & desired servo position in degrees \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 258 of file Arm.\+hpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classChipChipArray_1_1Arm_a46a0b0cfb37cb0b663c91cd07e440e10_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classChipChipArray_1_1Arm_ad61f7c1e63eb09981b6c304bd924e217}{\index{Chip\+Chip\+Array\+::\+Arm@{Chip\+Chip\+Array\+::\+Arm}!Wrist\+Tilt@{Wrist\+Tilt}}
+\index{Wrist\+Tilt@{Wrist\+Tilt}!Chip\+Chip\+Array\+::\+Arm@{Chip\+Chip\+Array\+::\+Arm}}
+\subsubsection[{Wrist\+Tilt}]{\setlength{\rightskip}{0pt plus 5cm}void Chip\+Chip\+Array\+::\+Arm\+::\+Wrist\+Tilt (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8}}]{a}
+\end{DoxyParamCaption}
+)}}\label{classChipChipArray_1_1Arm_ad61f7c1e63eb09981b6c304bd924e217}
+Tilt the wrist to a specific position.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & desired servo position in degrees \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 263 of file Arm.\+hpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classChipChipArray_1_1Arm_ad61f7c1e63eb09981b6c304bd924e217_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classChipChipArray_1_1Arm_a35ec7756840d9d32dcfbb88d831f087f}{\index{Chip\+Chip\+Array\+::\+Arm@{Chip\+Chip\+Array\+::\+Arm}!Wrist\+Twist@{Wrist\+Twist}}
+\index{Wrist\+Twist@{Wrist\+Twist}!Chip\+Chip\+Array\+::\+Arm@{Chip\+Chip\+Array\+::\+Arm}}
+\subsubsection[{Wrist\+Twist}]{\setlength{\rightskip}{0pt plus 5cm}void Chip\+Chip\+Array\+::\+Arm\+::\+Wrist\+Twist (
+\begin{DoxyParamCaption}
+\item[{{\bf uint8}}]{a}
+\end{DoxyParamCaption}
+)}}\label{classChipChipArray_1_1Arm_a35ec7756840d9d32dcfbb88d831f087f}
+Twist the wrist to a specific position.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & desired servo position in degrees \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classChipChipArray_1_1Arm_abe425c250c1929e9c9c86e6ea9eeeb04}{\index{Chip\+Chip\+Array\+::\+Arm@{Chip\+Chip\+Array\+::\+Arm}!servo\+Pos@{servo\+Pos}}
+\index{servo\+Pos@{servo\+Pos}!Chip\+Chip\+Array\+::\+Arm@{Chip\+Chip\+Array\+::\+Arm}}
+\subsubsection[{servo\+Pos}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint8} Chip\+Chip\+Array\+::\+Arm\+::servo\+Pos = \{ 0, 0, 0, 0, 0, 0, 0 \}\hspace{0.3cm}{\ttfamily [protected]}}}\label{classChipChipArray_1_1Arm_abe425c250c1929e9c9c86e6ea9eeeb04}
+The instantaneous position of each arm servo. 
+
+Definition at line 132 of file Arm.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{Arm_8hpp}{Arm.\+hpp}\end{DoxyCompactItemize}

@@ -1,4 +1,4 @@
-.TH "src/Servo_Position_Shell.cpp" 3 "Sun Feb 28 2016" "My Project" \" -*- nroff -*-
+.TH "src/Servo_Position_Shell.cpp" 3 "Sat Mar 5 2016" "My Project" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -9,6 +9,8 @@ src/Servo_Position_Shell.cpp \-
 \fC#include <wiringPi\&.h>\fP
 .br
 \fC#include 'Adafruit_PWMServoDriver\&.h'\fP
+.br
+\fC#include 'Adafruit_PWMServoDriver\&.cpp'\fP
 .br
 \fC#include <iostream>\fP
 .br
@@ -53,11 +55,11 @@ src/Servo_Position_Shell.cpp \-
 .SS "#define SERVOMAX   600"
 
 .PP
-Definition at line 23 of file Servo_Position_Shell\&.cpp\&.
+Definition at line 25 of file Servo_Position_Shell\&.cpp\&.
 .SS "#define SERVOMIN   150"
 
 .PP
-Definition at line 22 of file Servo_Position_Shell\&.cpp\&.
+Definition at line 24 of file Servo_Position_Shell\&.cpp\&.
 .SH "Function Documentation"
 .PP 
 .SS "void setServoPosition (\fBServo\fPwhichservo, intposition)"
@@ -72,7 +74,7 @@ Desc: This function sets which servo to use using whichservo and what position o
 .PP
 
 .PP
-Definition at line 63 of file Servo_Position_Shell\&.cpp\&.
+Definition at line 65 of file Servo_Position_Shell\&.cpp\&.
 .SS "void setServoPulse (\fBuint8_t\fPn, doublepulse)"
 Desc: This function sets which servo to use and what pulse to set that servos pwm to\&. 
 .PP
@@ -85,21 +87,21 @@ Desc: This function sets which servo to use and what pulse to set that servos pw
 .PP
 
 .PP
-Definition at line 42 of file Servo_Position_Shell\&.cpp\&.
+Definition at line 44 of file Servo_Position_Shell\&.cpp\&.
 .SS "void setup ()"
 Desc: This function sets up the breakout board communication with I2C using Adafruits_PWMServoDriver\&.cpp and to set the frequency of the servos to 60Hz\&. 
 .PP
-Definition at line 33 of file Servo_Position_Shell\&.cpp\&.
+Definition at line 35 of file Servo_Position_Shell\&.cpp\&.
 .SH "Variable Documentation"
 .PP 
 .SS "\fBAdafruit_PWMServoDriver\fP pwm = \fBAdafruit_PWMServoDriver\fP()"
 
 .PP
-Definition at line 14 of file Servo_Position_Shell\&.cpp\&.
+Definition at line 16 of file Servo_Position_Shell\&.cpp\&.
 .SS "\fBuint8_t\fP servo_num"
 
 .PP
-Definition at line 26 of file Servo_Position_Shell\&.cpp\&.
+Definition at line 28 of file Servo_Position_Shell\&.cpp\&.
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for My Project from the source code\&.

@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['grab',['Grab',['../classChipChipArray_1_1Grabber.html#a0a8a57e44f291581ab2862272134a592',1,'ChipChipArray::Grabber']]],
-  ['grabber',['Grabber',['../classChipChipArray_1_1Grabber.html#a7333f40c135fbe92d59651f75032b4e7',1,'ChipChipArray::Grabber']]]
+  ['grippers',['Grippers',['../classChipChipArray_1_1Arm.html#afe581f2e6c85ba07729d3ffe90fee9cd',1,'ChipChipArray::Arm']]]
 ];

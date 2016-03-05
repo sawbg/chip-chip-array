@@ -21,7 +21,8 @@ var definitions_8hpp =
       [ "Red", "definitions_8hpp.html#abc05a0f46084a3477cf5d5c939ff1436aee38e4d5dd68c4e440825018d549cb47", null ],
       [ "Yellow", "definitions_8hpp.html#abc05a0f46084a3477cf5d5c939ff1436a51e6cd92b6c45f9affdc158ecca2b8b8", null ],
       [ "Green", "definitions_8hpp.html#abc05a0f46084a3477cf5d5c939ff1436ad382816a3cbeed082c9e216e7392eed1", null ],
-      [ "Blue", "definitions_8hpp.html#abc05a0f46084a3477cf5d5c939ff1436a9594eec95be70e7b1710f730fdda33d9", null ]
+      [ "Blue", "definitions_8hpp.html#abc05a0f46084a3477cf5d5c939ff1436a9594eec95be70e7b1710f730fdda33d9", null ],
+      [ "Perrywinkle", "definitions_8hpp.html#abc05a0f46084a3477cf5d5c939ff1436a1e700ac224a6d34c5b171bb6f462aa41", null ]
     ] ],
     [ "LogMode", "definitions_8hpp.html#aa7380b6d694cab49f07aed6a7af592d9", [
       [ "Text", "definitions_8hpp.html#aa7380b6d694cab49f07aed6a7af592d9a9dffbf69ffba8bc38bc4e01abf4b1675", null ],

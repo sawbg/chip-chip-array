@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['yellow',['Yellow',['../definitions_8hpp.html#abc05a0f46084a3477cf5d5c939ff1436a51e6cd92b6c45f9affdc158ecca2b8b8',1,'definitions.hpp']]]
+  ['wrist_5fpan',['WRIST_PAN',['../Servo__Position__Shell_8h.html#af629c4ae98db77091b130c7fbc31cab2a6e375b725a2efd65c7221fd35055d1b6',1,'Servo_Position_Shell.h']]],
+  ['wrist_5ftilt',['WRIST_TILT',['../Servo__Position__Shell_8h.html#af629c4ae98db77091b130c7fbc31cab2abb1046e4dfca68924f935e255b6fae54',1,'Servo_Position_Shell.h']]]
 ];

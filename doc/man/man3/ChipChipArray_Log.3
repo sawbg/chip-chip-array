@@ -1,4 +1,4 @@
-.TH "ChipChipArray::Log" 3 "Sun Feb 28 2016" "My Project" \" -*- nroff -*-
+.TH "ChipChipArray::Log" 3 "Sat Mar 5 2016" "My Project" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -50,13 +50,13 @@ A 'container' directory to which the class can write is passed in the constructo
 .PP
 This class DOES NOT WORK without compiling without a 'LOG' definition (#define LOG or -DLOG)\&. 
 .PP
-Definition at line 29 of file Log\&.hpp\&.
+Definition at line 34 of file Log\&.hpp\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "ChipChipArray::Log::Log ()\fC [inline]\fP"
 Initializes \fBLog\fP object but does not open log\&. \fBOpen()\fP must be called\&. 
 .PP
-Definition at line 35 of file Log\&.hpp\&.
+Definition at line 40 of file Log\&.hpp\&.
 .SS "ChipChipArray::Log::Log (autodir, \fBLogMode\fPmode = \fC\fBLogMode::Text\fP\fP)"
 Initializes the \fBLog\fP\&.
 .PP
@@ -71,11 +71,11 @@ A new log file is created in dir if \fBLogMode::Text\fP is given\&. The file wil
 .PP
 
 .PP
-Definition at line 181 of file Log\&.hpp\&.
+Definition at line 186 of file Log\&.hpp\&.
 .SS "ChipChipArray::Log::~Log ()"
 Destroys the \fBLog\fP and closes the logfile\&. 
 .PP
-Definition at line 187 of file Log\&.hpp\&.
+Definition at line 192 of file Log\&.hpp\&.
 .SH "Member Function Documentation"
 .PP 
 .SS "void ChipChipArray::Log::Debug (automesg)"
@@ -88,7 +88,7 @@ Writes 'DEBUG: ' to the log file along with the message passed\&. Should be used
 .PP
 
 .PP
-Definition at line 199 of file Log\&.hpp\&.
+Definition at line 204 of file Log\&.hpp\&.
 .SS "void ChipChipArray::Log::Error (automesg)"
 Writes 'ERROR: ' to the log file\&. Should only be use when an exception is thrown\&.
 .PP
@@ -99,7 +99,7 @@ Writes 'ERROR: ' to the log file\&. Should only be use when an exception is thro
 .PP
 
 .PP
-Definition at line 210 of file Log\&.hpp\&.
+Definition at line 215 of file Log\&.hpp\&.
 .SS "void ChipChipArray::Log::Image (cv::Matimage, autofilename)"
 Creates a bitmap image in the subdirectory created by the \fBLog\fP during initialization\&. Does nothing if \fBLogMode::Text\fP was passed in the constructor\&.
 .PP
@@ -112,11 +112,11 @@ Creates a bitmap image in the subdirectory created by the \fBLog\fP during initi
 .PP
 
 .PP
-Definition at line 221 of file Log\&.hpp\&.
+Definition at line 226 of file Log\&.hpp\&.
 .SS "void ChipChipArray::Log::Open (autodir, \fBLogMode\fPmode = \fC\fBLogMode::Text\fP\fP)"
 
 .PP
-Definition at line 241 of file Log\&.hpp\&.
+Definition at line 246 of file Log\&.hpp\&.
 .SS "void ChipChipArray::Log::Status (automesg)"
 Writes 'STATUS: ' to the log file\&. Should be used when recording the status or state of the program\&. It should not be used to record microalgorithmic changes\&. Use \fBVerbose()\fP for these instead\&.
 .PP
@@ -127,7 +127,7 @@ Writes 'STATUS: ' to the log file\&. Should be used when recording the status or
 .PP
 
 .PP
-Definition at line 284 of file Log\&.hpp\&.
+Definition at line 289 of file Log\&.hpp\&.
 .SS "void ChipChipArray::Log::Variable (autoname, autovalue)"
 Writes 'VARIABLE: ' to the log file\&. Should be used whenever recording the value of a variable is desired\&.
 .PP
@@ -140,7 +140,7 @@ Writes 'VARIABLE: ' to the log file\&. Should be used whenever recording the val
 .PP
 
 .PP
-Definition at line 295 of file Log\&.hpp\&.
+Definition at line 300 of file Log\&.hpp\&.
 .SS "void ChipChipArray::Log::Verbose (automesg)"
 Writes 'VERBOSE: ' to the log file\&. Should only be used for recording small, specific portions of code\&. To record a change in the more general state of the program, use \fBStatus()\fP instead\&.
 .PP
@@ -151,7 +151,7 @@ Writes 'VERBOSE: ' to the log file\&. Should only be used for recording small, s
 .PP
 
 .PP
-Definition at line 307 of file Log\&.hpp\&.
+Definition at line 312 of file Log\&.hpp\&.
 
 .SH "Author"
 .PP 

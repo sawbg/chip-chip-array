@@ -1,9 +1,8 @@
 var searchData=
 [
-  ['uint16',['uint16',['../definitions_8hpp.html#a05f6b0ae8f6a6e135b0e290c25fe0e4e',1,'definitions.hpp']]],
-  ['uint16_5ft',['uint16_t',['../Adafruit__PWMServoDriver_8h.html#a395b3b2bf5cb4674ab41b6bda68c15bb',1,'Adafruit_PWMServoDriver.h']]],
-  ['uint32',['uint32',['../definitions_8hpp.html#a1134b580f8da4de94ca6b1de4d37975e',1,'definitions.hpp']]],
-  ['uint64',['uint64',['../definitions_8hpp.html#a29940ae63ec06c9998bba873e25407ad',1,'definitions.hpp']]],
-  ['uint8',['uint8',['../definitions_8hpp.html#adde6aaee8457bee49c2a92621fe22b79',1,'definitions.hpp']]],
-  ['uint8_5ft',['uint8_t',['../Adafruit__PWMServoDriver_8h.html#ab077fa1127453be2bd9d4c3c8a768fa7',1,'uint8_t():&#160;Adafruit_PWMServoDriver.h'],['../Servo__Position__Shell_8h.html#ab077fa1127453be2bd9d4c3c8a768fa7',1,'uint8_t():&#160;Servo_Position_Shell.h']]]
+  ['text',['Text',['../definitions_8hpp.html#aa7380b6d694cab49f07aed6a7af592d9a9dffbf69ffba8bc38bc4e01abf4b1675',1,'definitions.hpp']]],
+  ['to_5fstring',['to_string',['../namespacestd.html#aa5ddf582a1c96ffe258c997be9a294a3',1,'std::to_string(BlockPosition pos)'],['../namespacestd.html#a6a0c3c323562edbd2f57da3d2bb74326',1,'std::to_string(Color color)'],['../namespacestd.html#adb24d6df94a83c325573f7710df84953',1,'std::to_string(LogMode mode)'],['../namespacestd.html#a7fb649b1361ca7d95cc74045c0dadcdd',1,'std::to_string(Result res)'],['../namespacestd.html#aae21fd95009e4cc9fa25e1ad3830980b',1,'std::to_string(Side side)'],['../namespacestd.html#a6bfcd2c3377165652c64085d7acb5c64',1,'std::to_string(Size size)'],['../namespacestd.html#ac50951e195256b4c2311f90189f64ba8',1,'std::to_string(Zone zone)']]],
+  ['topleft',['topLeft',['../classChipChipArray_1_1Block.html#aeecc05025c6c8e23ff6ca09a6fbd4b4b',1,'ChipChipArray::Block']]],
+  ['topright',['topRight',['../classChipChipArray_1_1Block.html#aaa4ff82846e95a628800ebdfd3ceefb5',1,'ChipChipArray::Block']]],
+  ['two_5fhalves',['Two_Halves',['../definitions_8hpp.html#ab84ebabb02540c4a7ec341a213abf1dca5b00716e5e6f2e2dc1b10ffed2e0ef6d',1,'definitions.hpp']]]
 ];
