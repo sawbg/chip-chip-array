@@ -1,4 +1,6 @@
 bin/*
 !bin/lv
 logs/*
+!logs/Grabber
+!logs/ScanQR
 logs/Grabber/*
