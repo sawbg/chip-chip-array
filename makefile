@@ -44,7 +44,7 @@ qr-test:
 docs:
 	rm -r doc/
 	doxygen etc/doxygen.config
-	cd docs/latex; make pdf;
+	cd doc/latex; make pdf;
 	git reset
 	git add doc/.
 	git commit -m "Updated documentation."
