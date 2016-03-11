@@ -8,5 +8,8 @@ var searchData=
   ['allled_5foff_5fl',['ALLLED_OFF_L',['../Adafruit__PWMServoDriver_8h.html#a6dc494d4156968e9cd24f7ac07bf2ee3',1,'Adafruit_PWMServoDriver.h']]],
   ['allled_5fon_5fh',['ALLLED_ON_H',['../Adafruit__PWMServoDriver_8h.html#a470526d36c4db534d04ec1452ddde736',1,'Adafruit_PWMServoDriver.h']]],
   ['allled_5fon_5fl',['ALLLED_ON_L',['../Adafruit__PWMServoDriver_8h.html#acc163ea7453bc87b5934e8b2bc838556',1,'Adafruit_PWMServoDriver.h']]],
-  ['area',['area',['../classChipChipArray_1_1Block.html#ab5f9a9c1cc11e949685f8ad3d52599b2',1,'ChipChipArray::Block']]]
+  ['area',['area',['../classChipChipArray_1_1Block.html#ab5f9a9c1cc11e949685f8ad3d52599b2',1,'ChipChipArray::Block']]],
+  ['arm',['Arm',['../classChipChipArray_1_1Arm.html',1,'ChipChipArray']]],
+  ['arm',['Arm',['../classChipChipArray_1_1Arm.html#aeda43d8461e50eaca9aa891ee2863c05',1,'ChipChipArray::Arm']]],
+  ['arm_2ehpp',['Arm.hpp',['../Arm_8hpp.html',1,'']]]
 ];

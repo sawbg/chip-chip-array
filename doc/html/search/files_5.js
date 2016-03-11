@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['log_2ehpp',['Log.hpp',['../Log_8hpp.html',1,'']]],
-  ['log_5ftest_2ecpp',['log_test.cpp',['../log__test_8cpp.html',1,'']]]
+  ['jacob_5falg_5ftest_2ecpp',['jacob_alg_test.cpp',['../jacob__alg__test_8cpp.html',1,'']]]
 ];

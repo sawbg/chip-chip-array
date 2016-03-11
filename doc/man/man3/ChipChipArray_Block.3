@@ -1,4 +1,4 @@
-.TH "ChipChipArray::Block" 3 "Sun Feb 28 2016" "My Project" \" -*- nroff -*-
+.TH "ChipChipArray::Block" 3 "Tue Mar 8 2016" "My Project" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -28,6 +28,27 @@ ChipChipArray::Block \-
 .RI "cv::Point \fBbottomRight\fP"
 .br
 .ti -1c
+.RI "\fBsint16\fP \fBdBottom\fP"
+.br
+.ti -1c
+.RI "\fBsint16\fP \fBdLeft\fP"
+.br
+.ti -1c
+.RI "\fBsint16\fP \fBdRight\fP"
+.br
+.ti -1c
+.RI "\fBsint16\fP \fBdTop\fP"
+.br
+.ti -1c
+.RI "\fBsint16\fP \fBdTopBottom\fP"
+.br
+.ti -1c
+.RI "\fBsint16\fP \fBdRightLeft\fP"
+.br
+.ti -1c
+.RI "\fBsint16\fP \fBoffset\fP"
+.br
+.ti -1c
 .RI "\fBuint16\fP \fBheight\fP"
 .br
 .ti -1c
@@ -50,51 +71,79 @@ ChipChipArray::Block \-
 .PP 
 This class represents a block\&. It only works for blocks found with the 'boundingRect' algorithm (i\&.e\&., it doesn't work for blocks that are skewed on the image)\&. 
 .PP
-Definition at line 14 of file Block\&.hpp\&.
+Definition at line 19 of file Block\&.hpp\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "ChipChipArray::Block::Block (cv::Rectrect, \fBColor\fPcolor)"
 Creates a new \fBBlock\fP using the Points in the cv::Rect and the color\&. Also determines the size based on the area of the \fBBlock\fP\&. 
 .PP
-Definition at line 76 of file Block\&.hpp\&.
+Definition at line 138 of file Block\&.hpp\&.
 .SH "Member Data Documentation"
 .PP 
 .SS "\fBuint32\fP ChipChipArray::Block::area"
 The area of the block in pixels 
 .PP
-Definition at line 19 of file Block\&.hpp\&.
+Definition at line 24 of file Block\&.hpp\&.
 .SS "cv::Point ChipChipArray::Block::bottomLeft"
 Point of the block's bottom-left corner 
 .PP
-Definition at line 24 of file Block\&.hpp\&.
+Definition at line 29 of file Block\&.hpp\&.
 .SS "cv::Point ChipChipArray::Block::bottomRight"
 Point of the block's bottom-right corner 
 .PP
-Definition at line 29 of file Block\&.hpp\&.
+Definition at line 34 of file Block\&.hpp\&.
 .SS "\fBColor\fP ChipChipArray::Block::color"
 The detected color of the block 
 .PP
-Definition at line 54 of file Block\&.hpp\&.
+Definition at line 106 of file Block\&.hpp\&.
+.SS "\fBsint16\fP ChipChipArray::Block::dBottom"
+Number of pixels from the block's bottom edge to the bottom edge of the image frame\&. 
+.PP
+Definition at line 40 of file Block\&.hpp\&.
+.SS "\fBsint16\fP ChipChipArray::Block::dLeft"
+Number of pixels from the block's left edge to the left edge of the image frame\&. 
+.PP
+Definition at line 46 of file Block\&.hpp\&.
+.SS "\fBsint16\fP ChipChipArray::Block::dRight"
+Number of pixels from the block's right edge to the right edge of the image frame\&. 
+.PP
+Definition at line 52 of file Block\&.hpp\&.
+.SS "\fBsint16\fP ChipChipArray::Block::dRightLeft"
+The difference between dRight and dLeft\&. It indicates the relative vertical positioning of the block regardless of the block's area\&. A positive value indicates the block is off-center towards the left\&. 
+.PP
+Definition at line 74 of file Block\&.hpp\&.
+.SS "\fBsint16\fP ChipChipArray::Block::dTop"
+Number of pixels from the block's top edge to the top edge of the image frame\&. 
+.PP
+Definition at line 58 of file Block\&.hpp\&.
+.SS "\fBsint16\fP ChipChipArray::Block::dTopBottom"
+The difference between dTop and dBottom\&. It indicates the relative vertical positioning of the block regardless of the block's area\&. A positive value indicates the block is off-center towards the bottom\&. 
+.PP
+Definition at line 66 of file Block\&.hpp\&.
 .SS "\fBuint16\fP ChipChipArray::Block::height"
 The height of the block in pixels 
 .PP
-Definition at line 34 of file Block\&.hpp\&.
+Definition at line 86 of file Block\&.hpp\&.
+.SS "\fBsint16\fP ChipChipArray::Block::offset"
+The difference in pixels between the vertical center of the image and the vertical center of the block\&. Assumes image is 1280 pixels wide (like the Raspicam images)\&. 
+.PP
+Definition at line 81 of file Block\&.hpp\&.
 .SS "\fBSize\fP ChipChipArray::Block::size"
 The size of the block (half or whole) 
 .PP
-Definition at line 59 of file Block\&.hpp\&.
+Definition at line 111 of file Block\&.hpp\&.
 .SS "cv::Point ChipChipArray::Block::topLeft"
 Point of the block's top-left corner 
 .PP
-Definition at line 39 of file Block\&.hpp\&.
+Definition at line 91 of file Block\&.hpp\&.
 .SS "cv::Point ChipChipArray::Block::topRight"
 Point of the block's top-right corner 
 .PP
-Definition at line 44 of file Block\&.hpp\&.
+Definition at line 96 of file Block\&.hpp\&.
 .SS "\fBuint16\fP ChipChipArray::Block::width"
 The width of the block in pixels 
 .PP
-Definition at line 49 of file Block\&.hpp\&.
+Definition at line 101 of file Block\&.hpp\&.
 
 .SH "Author"
 .PP 

@@ -1,8 +1,11 @@
-.TH "ChipChipArray" 3 "Sun Feb 28 2016" "My Project" \" -*- nroff -*-
+.TH "ChipChipArray" 3 "Tue Mar 8 2016" "My Project" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
 ChipChipArray \- 
+.PP
+contains \fBBlock\fP class  
+
 .SH SYNOPSIS
 .br
 .PP
@@ -10,10 +13,10 @@ ChipChipArray \-
 
 .in +1c
 .ti -1c
-.RI "class \fBBlock\fP"
+.RI "class \fBArm\fP"
 .br
 .ti -1c
-.RI "class \fBGrabber\fP"
+.RI "class \fBBlock\fP"
 .br
 .ti -1c
 .RI "class \fBLog\fP"
@@ -42,24 +45,40 @@ ChipChipArray \-
 .RI "\fBLog\fP \fBscanQrLog\fP ('logs/\fBScanQR\fP', LogMode::Multi)"
 .br
 .in -1c
+.SH "Detailed Description"
+.PP 
+contains \fBBlock\fP class 
+
+contains \fBScanQR()\fP function
+.PP
+contains \fBPiCamera\fP class
+.PP
+contains \fBLog\fP class
+.PP
+\fBAuthor:\fP
+.RS 4
+Samuel Andrew Wisner, awisner94@gmail.com 
+.RE
+.PP
+
 .SH "Function Documentation"
 .PP 
 .SS "int ChipChipArray::main (intargc, char **argv)"
 This program was used before \fBcv_shape\&.cpp\fP was written to find HSV ranges for the different color blocks\&. This is a slightly modified version of some code written by Shermal Fernando in the blog post 'Color Detection & Object Tracking' at http://opencv-srf.blogspot.com/2010/09/object-detection-using-color-seperation.html"\&. 
 .PP
-Definition at line 20 of file cv_hue\&.cpp\&.
+Definition at line 26 of file cv_hue\&.cpp\&.
 .SS "\fBColor\fP ChipChipArray::ScanQR ()"
 This function manuvers arm to look at the QR code on a train car as the robot is backing up to the car\&. It attempts to find the code in multiple images before finally throwing an exeption if a code is not found\&. If multiple codes are found, it returns a single Color by (seemingly) arbitrary decision\&.
 .PP
 This function is based on code written by Michael Young (https://github.com/ayoungprogrammer/WebcamCodeScanner)\&. 
 .PP
-Definition at line 28 of file ScanQR\&.hpp\&.
+Definition at line 33 of file ScanQR\&.hpp\&.
 .SH "Variable Documentation"
 .PP 
 .SS "\fBuint8\fP ChipChipArray::qrInvokeCount = 0"
 
 .PP
-Definition at line 15 of file ScanQR\&.hpp\&.
+Definition at line 20 of file ScanQR\&.hpp\&.
 .SS "\fBLog\fP ChipChipArray::scanQrLog('logs/\fBScanQR\fP', LogMode::Multi)"
 
 .SH "Author"

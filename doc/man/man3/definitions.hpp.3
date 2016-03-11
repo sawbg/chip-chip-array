@@ -1,4 +1,4 @@
-.TH "src/definitions.hpp" 3 "Sun Feb 28 2016" "My Project" \" -*- nroff -*-
+.TH "src/definitions.hpp" 3 "Tue Mar 8 2016" "My Project" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -19,6 +19,7 @@ src/definitions.hpp \-
 .ti -1c
 .RI "#define \fBENUM\fP   signed char"
 .br
+.RI "\fIcontains definitions for architecture-independant numeric variables, enumerations and enumerated classes, and #define'd constants, and to_sting() overloads for the enumerated classes\&. \fP"
 .ti -1c
 .RI "#define \fBERROR\fP   -1"
 .br
@@ -67,7 +68,7 @@ src/definitions.hpp \-
 .RI "enum \fBBlockPosition\fP : ENUM { \fBBlockPosition::Front\fP, \fBBlockPosition::Back\fP }"
 .br
 .ti -1c
-.RI "enum \fBColor\fP : ENUM { \fBColor::Red\fP, \fBColor::Yellow\fP, \fBColor::Green\fP, \fBColor::Blue\fP }"
+.RI "enum \fBColor\fP : ENUM { \fBColor::Red\fP, \fBColor::Yellow\fP, \fBColor::Green\fP, \fBColor::Blue\fP, \fBColor::Perrywinkle\fP }"
 .br
 .ti -1c
 .RI "enum \fBLogMode\fP : ENUM { \fBLogMode::Text\fP, \fBLogMode::Multi\fP }"
@@ -115,57 +116,66 @@ src/definitions.hpp \-
 .SS "#define ENUM   signed char"
 
 .PP
-Definition at line 4 of file definitions\&.hpp\&.
+contains definitions for architecture-independant numeric variables, enumerations and enumerated classes, and #define'd constants, and to_sting() overloads for the enumerated classes\&. 
+.PP
+\fBAuthor:\fP
+.RS 4
+Samuel Andrew Wisner, awisner94@gmail.com 
+.RE
+.PP
+
+.PP
+Definition at line 11 of file definitions\&.hpp\&.
 .SS "#define ERROR   -1"
 
 .PP
-Definition at line 5 of file definitions\&.hpp\&.
+Definition at line 12 of file definitions\&.hpp\&.
 .SH "Typedef Documentation"
 .PP 
 .SS "typedef unsigned char \fBbyte\fP"
 
 .PP
-Definition at line 7 of file definitions\&.hpp\&.
+Definition at line 14 of file definitions\&.hpp\&.
 .SS "typedef float \fBfloat32\fP"
 
 .PP
-Definition at line 20 of file definitions\&.hpp\&.
+Definition at line 27 of file definitions\&.hpp\&.
 .SS "typedef double \fBfloat64\fP"
 
 .PP
-Definition at line 21 of file definitions\&.hpp\&.
+Definition at line 28 of file definitions\&.hpp\&.
 .SS "typedef signed short \fBsint16\fP"
 
 .PP
-Definition at line 12 of file definitions\&.hpp\&.
+Definition at line 19 of file definitions\&.hpp\&.
 .SS "typedef signed int \fBsint32\fP"
 
 .PP
-Definition at line 15 of file definitions\&.hpp\&.
+Definition at line 22 of file definitions\&.hpp\&.
 .SS "typedef signed long long \fBsint64\fP"
 
 .PP
-Definition at line 18 of file definitions\&.hpp\&.
+Definition at line 25 of file definitions\&.hpp\&.
 .SS "typedef signed char \fBsint8\fP"
 
 .PP
-Definition at line 9 of file definitions\&.hpp\&.
+Definition at line 16 of file definitions\&.hpp\&.
 .SS "typedef unsigned short \fBuint16\fP"
 
 .PP
-Definition at line 11 of file definitions\&.hpp\&.
+Definition at line 18 of file definitions\&.hpp\&.
 .SS "typedef unsigned int \fBuint32\fP"
 
 .PP
-Definition at line 14 of file definitions\&.hpp\&.
+Definition at line 21 of file definitions\&.hpp\&.
 .SS "typedef unsigned long long \fBuint64\fP"
 
 .PP
-Definition at line 17 of file definitions\&.hpp\&.
+Definition at line 24 of file definitions\&.hpp\&.
 .SS "typedef unsigned char \fBuint8\fP"
 
 .PP
-Definition at line 8 of file definitions\&.hpp\&.
+Definition at line 15 of file definitions\&.hpp\&.
 .SH "Enumeration Type Documentation"
 .PP 
 .SS "enum \fBBlockPosition\fP : \fBENUM\fP\fC [strong]\fP"
@@ -178,7 +188,7 @@ The position of the block relative to the arm\&.
 .TP
 \fB\fIBack \fP\fP
 .PP
-Definition at line 24 of file definitions\&.hpp\&.
+Definition at line 31 of file definitions\&.hpp\&.
 .SS "enum \fBColor\fP : \fBENUM\fP\fC [strong]\fP"
 The color of a block or train car\&. 
 .PP
@@ -192,8 +202,10 @@ The color of a block or train car\&.
 \fB\fIGreen \fP\fP
 .TP
 \fB\fIBlue \fP\fP
+.TP
+\fB\fIPerrywinkle \fP\fP
 .PP
-Definition at line 30 of file definitions\&.hpp\&.
+Definition at line 37 of file definitions\&.hpp\&.
 .SS "enum \fBLogMode\fP : \fBENUM\fP\fC [strong]\fP"
 The mode in which the Log should prepare (i\&.e\&., text only or text and images)\&. 
 .PP
@@ -204,7 +216,7 @@ The mode in which the Log should prepare (i\&.e\&., text only or text and images
 .TP
 \fB\fIMulti \fP\fP
 .PP
-Definition at line 41 of file definitions\&.hpp\&.
+Definition at line 49 of file definitions\&.hpp\&.
 .SS "enum \fBResult\fP : \fBENUM\fP\fC [strong]\fP"
 The number of half blocks picked up in a stack\&. The integer value of the 
 .PP
@@ -219,7 +231,7 @@ The number of half blocks picked up in a stack\&. The integer value of the
 .TP
 \fB\fIFour_Halves \fP\fP
 .PP
-Definition at line 50 of file definitions\&.hpp\&.
+Definition at line 58 of file definitions\&.hpp\&.
 .SS "enum \fBSide\fP : \fBENUM\fP\fC [strong]\fP"
 Represents which block to pick up when multiple blocks are visible\&. 
 .PP
@@ -230,7 +242,7 @@ Represents which block to pick up when multiple blocks are visible\&.
 .TP
 \fB\fIRight \fP\fP
 .PP
-Definition at line 58 of file definitions\&.hpp\&.
+Definition at line 66 of file definitions\&.hpp\&.
 .SS "enum \fBSize\fP : \fBENUM\fP\fC [strong]\fP"
 The block size, either 2\&.5' or 5'\&. 
 .PP
@@ -241,7 +253,7 @@ The block size, either 2\&.5' or 5'\&.
 .TP
 \fB\fILong \fP\fP
 .PP
-Definition at line 64 of file definitions\&.hpp\&.
+Definition at line 72 of file definitions\&.hpp\&.
 .SS "enum \fBZone\fP : \fBENUM\fP\fC [strong]\fP"
 Zone A, B, or C 
 .PP
@@ -254,7 +266,7 @@ Zone A, B, or C
 .TP
 \fB\fIC \fP\fP
 .PP
-Definition at line 70 of file definitions\&.hpp\&.
+Definition at line 78 of file definitions\&.hpp\&.
 .SH "Author"
 .PP 
 Generated automatically by Doxygen for My Project from the source code\&.

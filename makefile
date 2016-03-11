@@ -50,6 +50,7 @@ servotrip:
 docs:
 	rm -r doc/
 	doxygen etc/doxygen.config
+	cd doc/latex; make pdf;
 	git reset
 	git add doc/.
 	git commit -m "Updated documentation."

@@ -1,13 +1,6 @@
 var searchData=
 [
-  ['pca9685_5fmode1',['PCA9685_MODE1',['../Adafruit__PWMServoDriver_8h.html#aec642e3f25e7f83072d68acb14ae4e74',1,'Adafruit_PWMServoDriver.h']]],
-  ['pca9685_5fprescale',['PCA9685_PRESCALE',['../Adafruit__PWMServoDriver_8h.html#a7175106bbec978d9acc85dc7485235a3',1,'Adafruit_PWMServoDriver.h']]],
-  ['pca9685_5fsubadr1',['PCA9685_SUBADR1',['../Adafruit__PWMServoDriver_8h.html#ad58a880e68f5aa69092c658a86641a8e',1,'Adafruit_PWMServoDriver.h']]],
-  ['pca9685_5fsubadr2',['PCA9685_SUBADR2',['../Adafruit__PWMServoDriver_8h.html#a845ec28ef89ed81642ea5f41691d4b51',1,'Adafruit_PWMServoDriver.h']]],
-  ['pca9685_5fsubadr3',['PCA9685_SUBADR3',['../Adafruit__PWMServoDriver_8h.html#a7f60829a2cf850c02403f5c7193b0f00',1,'Adafruit_PWMServoDriver.h']]],
-  ['picamera',['PiCamera',['../classChipChipArray_1_1PiCamera.html#a5910a3284877677decb6529d88e43487',1,'ChipChipArray::PiCamera::PiCamera()'],['../classChipChipArray_1_1PiCamera.html#a0a4480e9e7475ae7af9a7523239caf8d',1,'ChipChipArray::PiCamera::PiCamera(bool useColor)']]],
-  ['picamera',['PiCamera',['../classChipChipArray_1_1PiCamera.html',1,'ChipChipArray']]],
-  ['picamera_2ehpp',['PiCamera.hpp',['../PiCamera_8hpp.html',1,'']]],
-  ['place',['Place',['../classChipChipArray_1_1Grabber.html#a2833eebf4e57078c0d677379babfd2d4',1,'ChipChipArray::Grabber::Place(Color color)'],['../classChipChipArray_1_1Grabber.html#a817de2b1ac4208fcbe983e919cede265',1,'ChipChipArray::Grabber::Place(Color color, BlockPosition pos)']]],
-  ['pwm',['pwm',['../Servo__Position__Shell_8cpp.html#a2c06cc8f85429bb0f7cb91917164dc54',1,'Servo_Position_Shell.cpp']]]
+  ['offset',['offset',['../classChipChipArray_1_1Block.html#a42e2ca0775dc09b04049a2db1bc0bb4f',1,'ChipChipArray::Block']]],
+  ['old_5fcv_5ftest_2ecpp',['old_cv_test.cpp',['../old__cv__test_8cpp.html',1,'']]],
+  ['open',['Open',['../classChipChipArray_1_1Log.html#ad27a06a4561f2f59159bd8a7fc2fed3b',1,'ChipChipArray::Log']]]
 ];

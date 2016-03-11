@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['qrinvokecount',['qrInvokeCount',['../namespaceChipChipArray.html#a3b2a3c0ffa9f53021293aeb4955d2fef',1,'ChipChipArray']]]
+  ['offset',['offset',['../classChipChipArray_1_1Block.html#a42e2ca0775dc09b04049a2db1bc0bb4f',1,'ChipChipArray::Block']]]
 ];
