@@ -1,11 +1,14 @@
 GCC = g++-4.9
-ARM = -lwiringPi
+ARM = -L/usr/local/lib -lwiringPi
 CPPFLAGS = -g -std=gnu++14
 CVFLAGS = -lraspicam -lraspicam_cv -lmmal -lmmal_core -lmmal_util -lzbar -lopencv_core -lopencv_highgui -lopencv_imgproc
 DEBUG = -DDEBUG
 LOG = -DLOG
 
 export LIBRARY_PATH=/opt/vc/lib:/usr/lib/arm-linux-gnueabihf
+
+arm:
+	$(GCC) src/dark_magic.cpp -o bin/arm $(ARM) $(CPPFLAGS)
 
 block-test:
 	$(GCC) src/cv_shape.cpp -o bin/cvshape $(CVFLAGS) $(CPPFLAGS)
@@ -40,6 +43,9 @@ net-qr-test:
 
 qr-test:
 	$(GCC) src/qr_test.cpp -o bin/qrtest $(CPPFLAGS) $(CVFLAGS) $(LOG)
+
+servotrip:
+	$(GCC) src/main.cpp -o bin/servotrip $(CPPFLAGS) $(ARM)
 
 docs:
 	rm -r doc/
