@@ -68,8 +68,8 @@ int main() {
 		Mat imgOrig = cam.Snap();  // real iage
 		Mat imgHSV;  // RGB image converted to HSV space
 		Mat imgThresh;  // binary threshold image
-		cvtColor(imgOrig, imgHSV, CV_BGR2YUV);
-		cvtColor(imgHSV, imgOrig, CV_HSV2BGR);
+		//cvtColor(imgOrig, imgHSV, CV_BGR2YUV);
+		//cvtColor(imgHSV, imgOrig, CV_HSV2BGR);
 		cvtColor(imgOrig, imgHSV, COLOR_BGR2HSV);
 
 		// create binary image

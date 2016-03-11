@@ -6,6 +6,7 @@
 #ifndef Grabber_H
 #define Grabber_H
 
+#include <cmath>
 #include <opencv2/highgui/highgui.hpp>
 #include <opencv2/imgproc/imgproc.hpp>
 #include <string>
@@ -203,7 +204,7 @@ namespace ChipChipArray {
 		/* Remember, we're only pretending this color's image is in HSV space.
 		 * It's really in YUV, as required by Jacob yellow-detection algorithm. */
 		rangeVals[Color::Yellow] = { cv::Scalar(0, 0, 0),
-			cv::Scalar(255, 255, 40)};
+			cv::Scalar(255, 255, 20)};
 	}
 
 	void Grabber::Close() {
@@ -237,14 +238,16 @@ namespace ChipChipArray {
 				* std::sqrt(std::abs(block.dRightLeft)) / 3 + 0.5;
 			sint16 elbowAngle = (block.dTopBottom > 0 ? -1 : 1)
 				* std::sqrt(std::abs(block.dTopBottom)) * 1  + 0.5; 
-			
+
 			if(arm.servoPos[BASE_TURN] > 135 
 					&& arm.servoPos[BASE_TURN] < 165)  {
 				arm.dBaseTurn(baseTurnAngle);
+				arm.dBaseTurn(-baseTurnAngle);
 			}
 			
-			log.Debug(string("Elbow anglie: ") + elbowAngle);
-			log.Debug(string("Base turn angle: ") + baseTurnAngle);
+			log.Debug(string("Elbow angle: ") + std::to_string(elbowAngle));
+			log.Debug(string("Base turn angle: ")
+					+ std::to_string(baseTurnAngle));
 
 			arm.dElbow(elbowAngle);
 			block = LocateBlocks(block.color);
@@ -271,6 +274,7 @@ namespace ChipChipArray {
 
 		cv::Mat imgOrig;
 		cv::transpose(cam.Snap(), imgOrig);
+		//cv::flip(imgOrig, imgOrig, 1);
 
 		cv::Mat imgHSV;
 		cv::Mat imgThresh;

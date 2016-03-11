@@ -18,6 +18,6 @@ using namespace ChipChipArray;
 int main() {
 	setup();
 	Grabber g(Zone::C, Side::Left);
-	//g.Load();
+	g.Load();
 	g.Close();
 }

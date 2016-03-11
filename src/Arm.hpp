@@ -180,7 +180,8 @@ namespace ChipChipArray {
 
 			BaseTurn(150);
 			BaseTilt(50);
-			Elbow(160);
+			Elbow(140);
+			WristTwist(90);
 			sleep(1);
 		}
 	}

@@ -9,7 +9,6 @@
 #ifndef SERVO_POSITION_SHELL_H
 #define	SERVO_POSITION_SHELL_H
 
-
 #ifndef uint8_t
 #define uint8_t unsigned char
 #endif
@@ -23,7 +22,7 @@ enum Servo{
     BASE_TILT = 1,
     ELBOW = 2,
     WRIST_TILT = 3,
-    WRIST_PAN = 4,
+    WRIST_TWIST = 4,
     GRIP_RIGHT = 5,
     GRIP_LEFT = 6,
     GATE_YELLOW = 7,

@@ -1,3 +1,6 @@
+#ifndef Adafruit_PWMServoDrive_CPP
+#define Adafruit_PWMServoDrive_CPP
+
 /* File: Adafruit_PWMServoDriver.cpp
  * Credit to Limor Fried/Ladyada for PWM servo driver code. 
  * Editted by: Nickolas Neely for ChipChipArray Raspberry Pi 
@@ -147,3 +150,5 @@ void Adafruit_PWMServoDriver::write8(uint8_t addr, uint8_t d) {
         cout << "Error write8: " << std::dec << (unsigned int)addr << " -> " << (unsigned int)d << " -> " << s.c_str() << endl;
     }
 }
+
+#endif

@@ -121,12 +121,12 @@ namespace ChipChipArray {
 			/**
 			 *
 			 */
-			static const uint16 IMG_HEIGHT = 720;
+			static const uint16 IMG_HEIGHT = 1280;
 
 			/**
 			 *
 			 */
-			static const uint16 IMG_WIDTH = 1280;
+			static const uint16 IMG_WIDTH = 720;
 
 			/**
 			 * The minimum block area in pixels to be classified
