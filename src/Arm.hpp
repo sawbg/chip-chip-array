@@ -1,11 +1,12 @@
 /**
- * @file
  * @author Samuel Andrew Wisner, awisner94@gmail.com
  * @brief contains the Arm class used to control the robotic arm
  */
 
 #ifndef Arm_H
 #define Arm_H
+
+#include <unistd.h>
 
 #include "definitions.hpp"
 #include "Servo_Position_Shell.cpp"
@@ -23,6 +24,11 @@ namespace ChipChipArray {
 			 * the Arm class has not already.
 			 */
 			Arm();
+
+			/**
+			 * The instantaneous position of each arm servo.
+			 */
+			uint8 servoPos[7] = { 0, 0, 0, 0, 0, 0, 0 };
 
 			/**
 			 * Tilts the base of the arm.
@@ -126,11 +132,7 @@ namespace ChipChipArray {
 			void WristTwist(uint8 a);
 
 		protected:
-			/**
-			 * The instantaneous position of each arm servo.
-			 */
-			uint8 servoPos = { 0, 0, 0, 0, 0, 0, 0 };
-
+			
 			/**
 			 * Moves the left gripper servo a certain number of degrees.
 			 *
@@ -169,12 +171,17 @@ namespace ChipChipArray {
 			static bool init;
 	};
 
-	Arm::init = false;
+	bool Arm::init = false;
 
 	Arm::Arm() {
 		if(!init) {
 			setup();
 			init = true;
+
+			BaseTurn(150);
+			BaseTilt(50);
+			Elbow(160);
+			sleep(1);
 		}
 	}
 
@@ -213,13 +220,13 @@ namespace ChipChipArray {
 			*/
 	}
 
-	void Arm::dLeftGripper(uint8 a) {
+	void Arm::dLeftGripper(sint16 a) {
 		a += servoPos[GRIP_LEFT];
 		setServoPosition(GRIP_LEFT, a);
 		servoPos[GRIP_LEFT] = a;
 	}
 
-	void Arm::dRightGripper(uint8 a) {
+	void Arm::dRightGripper(sint16 a) {
 		a += servoPos[GRIP_RIGHT];
 		setServoPosition(GRIP_RIGHT, a);
 		servoPos[GRIP_RIGHT] = a;
@@ -231,10 +238,10 @@ namespace ChipChipArray {
 		servoPos[WRIST_TILT] = a;
 	}
 
-	void Arm::dWristTurn(sint16 a) {
-		a += servoPos[WRIST_TURN];
-		setServoPosition(WRIST_TURN, a);
-		servoPos[WRIST_TURN] = a;
+	void Arm::dWristTwist(sint16 a) {
+		a += servoPos[WRIST_TWIST];
+		setServoPosition(WRIST_TWIST, a);
+		servoPos[WRIST_TWIST] = a;
 	}
 
 	void Arm::Elbow(uint8 a) {
@@ -243,7 +250,8 @@ namespace ChipChipArray {
 	}
 
 	void Arm::Grippers(uint8 a) {
-		// implement later	
+		LeftGripper(a);
+		RightGripper(a);
 	}
 
 	void Arm::Hover(Zone zone) {
@@ -265,9 +273,9 @@ namespace ChipChipArray {
 		servoPos[WRIST_TILT] = a;
 	}
 
-	void Arm::WristTurn(uint8 a) {
-		setServoPosition(WRIST_TURN, a);
-		servoPos[WRIST_TURN] = a;
+	void Arm::WristTwist(uint8 a) {
+		setServoPosition(WRIST_TWIST, a);
+		servoPos[WRIST_TWIST] = a;
 	}
 }
 
