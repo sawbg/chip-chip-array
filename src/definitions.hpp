@@ -112,6 +112,10 @@ namespace std {
 			case 3:
 				ret = "Blue";
 				break;
+
+			case 4:
+				ret = "All";
+				break;
 		}
 
 		return ret;
