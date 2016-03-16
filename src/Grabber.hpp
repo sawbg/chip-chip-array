@@ -87,33 +87,16 @@ namespace ChipChipArray {
 			void Extend();
 
 			/**
-			 * Finds a single block of a particular color. This is intended to
-			 * find a given when a block has already been chosen to be picked up
-			 * and the camera has moved. To clarify, this function effectively
-			 * finds only the new position of a given block.
+			 * Picks up block.
 			 *
-			 * @param block the block to find
-			 */
-			//			Block FindBlock(Block block);
-
-			/**
-			 * Picks up block by examing how much it fills up the
-			 * camera image and where its edges are. It is then
-			 * decided where to grab the block, and the block is
-			 * picked up.
+			 * @param layer whether the block is on the top of the stack or the
+			 * bottom
 			 *
 			 * @param pos whether the (half-)block is closer to the
-			 * robot (FRONT) or farther away (BACK).
+			 * robot (FRONT) or farther away (BACK). MIDDLE indicates a whole
+			 * block.
 			 */
-			void Grab(BlockPosition pos);
-
-			/**
-			 * Picks up a block passed as an argument by examining the block's
-			 * vertical offset from the vertical center of the image.
-			 *
-			 * @param block the block to be picked up
-			 */
-			void Grab(Block block);
+			void Grab(Layer layer, BlockPosition pos = BlockPosition::Middle);
 
 			/**
 			 * Finds the block to pick up. Color and block size are
@@ -153,7 +136,7 @@ namespace ChipChipArray {
 			/**
 			 * The minimum area in pixels to be considered a block
 			 */
-			static const uint32 MIN_HALF_BLOCK_SIZE = 5000;
+			static const uint32 MIN_HALF_BLOCK_SIZE = 50000;
 
 			/**
 			 * The log object to be shared among the Grabber
@@ -220,46 +203,36 @@ namespace ChipChipArray {
 
 	}
 
-	/*void Grabber::FindBlock(Block block) {
-
-	  }*/
-
-	void Grabber::Grab(BlockPosition pos) {
-
-	}
-
-	void Grabber::Grab(Block block) {
-		// assume random base-turn constant oif 10
-		uint8 max = 0;
-		arm.Grippers(90);
+	void Grabber::Grab(Layer layer, BlockPosition pos) {
 		
-			while(std::abs(block.dRightLeft) > 20 && max++ < 3) {
-			sint16 baseTurnAngle = (block.dRightLeft > 0 ? -1 : 1)
-				* std::sqrt(std::abs(block.dRightLeft)) / 3 + 0.5;
-			sint16 elbowAngle = (block.dTopBottom > 0 ? -1 : 1)
-				* std::sqrt(std::abs(block.dTopBottom)) * 1  + 0.5; 
-
-			if(arm.servoPos[BASE_TURN] > 135 
-					&& arm.servoPos[BASE_TURN] < 165)  {
-				arm.dBaseTurn(baseTurnAngle);
-				arm.dBaseTurn(-baseTurnAngle);
-			}
-			
-			log.Debug(string("Elbow angle: ") + std::to_string(elbowAngle));
-			log.Debug(string("Base turn angle: ")
-					+ std::to_string(baseTurnAngle));
-
-			arm.dElbow(elbowAngle);
-			block = LocateBlocks(block.color);
-		}
-
-
-		arm.Grippers(0);
-
 	}
 
 	Result Grabber::Load() {
-		Grab(LocateBlocks(Color::Perrywinkle));
+		try {
+			uint8 wholeBlockCount = 0;
+			uint8 halfBlockCount = 0;
+
+			for(uint8 i = 0; i < 2; i++) {  // top and bottom layers
+				for(uint8 j = 0; j < 2; j++) {  // front and back of half blocks
+					Block block = LocateBlocks();
+					if(block.size == Size::Long || zone != Zone::B) {
+						// GRAB
+						
+
+						// PLACE
+
+						wholeBlockCount++;
+						break;
+					} else {
+						halfBlockCount++;
+					}
+				}
+			}
+		} catch(std::exception ex) {
+			log.Error("An exception occured attempting to load the blocks in "
+					"function Grabber::Load().");
+			return Result::NoBlocks;
+		}
 	}
 
 	Block Grabber::LocateBlocks(Color color) {
@@ -274,7 +247,6 @@ namespace ChipChipArray {
 
 		cv::Mat imgOrig;
 		cv::transpose(cam.Snap(), imgOrig);
-		//cv::flip(imgOrig, imgOrig, 1);
 
 		cv::Mat imgHSV;
 		cv::Mat imgThresh;
@@ -315,13 +287,13 @@ namespace ChipChipArray {
 				cv::cvtColor(imgHSV, temp, CV_HSV2BGR);
 				cv::cvtColor(temp, imgHSV, cv::COLOR_BGR2HSV);
 				log.Image(temp, "yuv_yellow_" + std::to_string(color)
-					+ "_" + std::to_string(zone)
-					+ std::to_string(invokeCount)
-					+ ".bmp");
+						+ "_" + std::to_string(zone)
+						+ std::to_string(invokeCount)
+						+ ".bmp");
 			} else {
 				cv::cvtColor(imgOrig, imgHSV, cv::COLOR_BGR2HSV);
 			}
-			
+
 			cv::inRange(imgHSV, rangeVals[color][0],
 					rangeVals[color][1], imgThresh);
 
@@ -408,6 +380,13 @@ namespace ChipChipArray {
 		}
 
 		log.Status(std::to_string(block.color) + " block is located");
+
+		log.Debug("Block properties => area: " + std::to_string(block.area)
+				+ ", height: " + std::to_string(block.height) + ", width: "
+				+ std::to_string(block.width) + ", offset: "
+				+ std::to_string(block.offset) + ", color: "
+				+ std::to_string(block.color) + ", size: "
+				+ std::to_string(block.size));
 
 		/* 
 		 * Draw surrounding rectangles from above on original

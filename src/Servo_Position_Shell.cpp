@@ -10,6 +10,7 @@
 #include <iostream>
 #include "Servo_Position_Shell.h"
 
+
 // called this way, it uses the default address 0x40
 Adafruit_PWMServoDriver pwm = Adafruit_PWMServoDriver();
 // you can also call it with a different address you want
@@ -65,6 +66,12 @@ void setServoPosition(Servo whichservo, int position) {
     double dividedconstant = 180.0;
     double highservo = 2.4;
     double lowservo = 0.6;
+    // To fix the magical digital servo on LIFT 1
+    double highservoweird = 1.9;
+    double lowservoweird = 0.6;
+    // To compensate for the bent servo spline on LIFT 2
+    double highservospline = 2.25;
+    double lowservospline = 0.6;
     // works for servo 1, 2
     double digitalservohigh = 2.45;
     double digitalservolow = 0.9;
@@ -83,7 +90,7 @@ void setServoPosition(Servo whichservo, int position) {
         {
             if (position == -1) {
                 pulse = 0.0;
-            }else if (position < 20){
+            }else if (position < 0){
                 position = 20;
                 pulse = ((((highservo - lowservo) / dividedconstant)*((double) position)) + lowservo);
             }else if (position > 179){
@@ -104,14 +111,14 @@ void setServoPosition(Servo whichservo, int position) {
             
             if (position == -1) {
                 pulse = 0.0;
-            } else if (position < 0){
-                position = 0;
-                pulse = ((((digitalservohigh - digitalservolow) / dividedconstant)*((double) position)) + digitalservolow);
-            } else if (position > 100){
-                position = 100;
-                pulse = ((((digitalservohigh - digitalservolow) / dividedconstant)*((double) position)) + digitalservolow);
+            } else if (position < 90){
+                position = 90;
+                pulse = ((((highservo - lowservo) / dividedconstant)*((double) position)) + lowservo);
+            } else if (position > 172){
+                position = 172;
+                pulse = ((((highservo - lowservo) / dividedconstant)*((double) position)) + lowservo);
             } else {
-                pulse = ((((digitalservohigh - digitalservolow) / dividedconstant)*((double) position)) + digitalservolow);
+                pulse = ((((highservo - lowservo) / dividedconstant)*((double) position)) + lowservo);
             }
         }
             break;
@@ -121,8 +128,8 @@ void setServoPosition(Servo whichservo, int position) {
         {
             if (position == -1) {
                 pulse = 0.0;
-            } else if (position < 50){
-                position = 50;
+            } else if (position < 43){
+                position = 43;
                 pulse = ((((digitalservohigh - digitalservolow) / dividedconstant)*((double) position)) + digitalservolow);
             } else if (position > 179){
                 position = 179;
@@ -168,8 +175,10 @@ void setServoPosition(Servo whichservo, int position) {
                 pulse = 0.0;
             } else if(position < 0){
                 position = 0;
+                pulse = ((((griprightopen - griprightclose) / dividedconstant)*((double) position)) + griprightclose);
             }else if(position > 90){
                 position = 90;
+                pulse = ((((griprightopen - griprightclose) / dividedconstant)*((double) position)) + griprightclose);
             } else {
                 pulse = ((((gripleftopen - gripleftclose) / dividedconstant)*((double) position)) + gripleftclose);
             }
@@ -183,8 +192,10 @@ void setServoPosition(Servo whichservo, int position) {
                 pulse = 0.0;
             } else if(position < 90){
                 position = 90;
+                pulse = ((((griprightopen - griprightclose) / dividedconstant)*((double) position)) + griprightclose);
             } else if(position > 180){
                 position = 180;
+                pulse = ((((griprightopen - griprightclose) / dividedconstant)*((double) position)) + griprightclose);
             }else{
                 pulse = ((((griprightopen - griprightclose) / dividedconstant)*((double) position)) + griprightclose);
             }
@@ -242,41 +253,41 @@ void setServoPosition(Servo whichservo, int position) {
         }
             break;
 
-            // Michael Red Gate
+            // Michael Lift 1
         case 10:
         {
             if (position == -1) {
                 pulse = 0.0;
             } else if(position < 0){
                 position = 0;
-                pulse = ((((highservo - lowservo) / dividedconstant)*((double) position)) + lowservo);
-            } else if(position > 90){
-                position = 90;
-                pulse = ((((highservo - lowservo) / dividedconstant)*((double) position)) + lowservo);
+                pulse = ((((highservoweird - lowservoweird) / dividedconstant)*((double) position)) + lowservoweird);
+            } else if(position > 105){
+                position = 105;
+                pulse = ((((highservoweird - lowservoweird) / dividedconstant)*((double) position)) + lowservoweird);
             } else {
-                pulse = ((((highservo - lowservo) / dividedconstant)*((double) position)) + lowservo);
+                pulse = ((((highservoweird - lowservoweird) / dividedconstant)*((double) position)) + lowservoweird);
             }
         }
             break;
 
-            //Michael lift Yellow
+            //Michael Lift 2
         case 11:
         {
             if (position == -1) {
                 pulse = 0.0;
             } else if(position < 0){
                 position = 0;
-                pulse = ((((highservo - lowservo) / dividedconstant)*((double) position)) + lowservo);
+                pulse = ((((highservospline - lowservospline) / dividedconstant)*((double) position)) + lowservospline);
             } else if(position > 105){
                 position = 105;
-                pulse = ((((highservo - lowservo) / dividedconstant)*((double) position)) + lowservo);
+                pulse = ((((highservospline - lowservospline) / dividedconstant)*((double) position)) + lowservospline);
             } else {
-                pulse = ((((highservo - lowservo) / dividedconstant)*((double) position)) + lowservo);
+                pulse = ((((highservospline - lowservospline) / dividedconstant)*((double) position)) + lowservospline);
             }
         }
             break;
 
-            //Michael lift Green
+            //Michael lift 3
         case 12:
         {
             if (position == -1) {
@@ -293,7 +304,7 @@ void setServoPosition(Servo whichservo, int position) {
         }
             break;
 
-            // Michael lift Blue
+            // Michael lift 4
         case 13:
         {
             if (position == -1) {
@@ -310,7 +321,7 @@ void setServoPosition(Servo whichservo, int position) {
         }
             break;
 
-            // Michael lift Red
+            // Michael RED GATE
         case 14:
         {
             if (position == -1) {

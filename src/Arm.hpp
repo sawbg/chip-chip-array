@@ -177,12 +177,6 @@ namespace ChipChipArray {
 		if(!init) {
 			setup();
 			init = true;
-
-			BaseTurn(150);
-			BaseTilt(50);
-			Elbow(140);
-			WristTwist(90);
-			sleep(1);
 		}
 	}
 

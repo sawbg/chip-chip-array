@@ -27,19 +27,32 @@ typedef signed long long sint64;
 typedef float float32;
 typedef double float64;
 
-/** The position of the block relative to the arm. */
-enum class BlockPosition : ENUM {
+/** 
+ * The position of the block relative to the arm.
+ * */
+enum BlockPosition : ENUM {
 	Front,
-	Back
+	Back,
+	Middle
 };
 
-/** The color of a block or train car. */
+/** 
+ * The color of a block or train car. Perrywinkle represents all colors.
+ */
 enum class Color : ENUM {
 	Red,
 	Yellow,
 	Green,
 	Blue,
 	Perrywinkle  // essentially, no color
+};
+
+/**
+ * Defines the location of a block in its stack.
+ */
+enum Layer : ENUM {
+	Top,
+	Bottom
 };
 
 /**

@@ -25,14 +25,14 @@ enum Servo{
     WRIST_PAN = 4,
     GRIP_RIGHT = 5,
     GRIP_LEFT = 6,
-    GATE_YELLOW = 7,
-    GATE_GREEN = 8,
-    GATE_BLUE = 9,
-    GATE_RED = 10,
-    LIFT_YELLOW = 11,
-    LIFT_GREEN = 12,
-    LIFT_BLUE = 13,
-    LIFT_RED = 14
+    GATE_1 = 7,
+    GATE_2 = 8,
+    GATE_3 = 9,
+    GATE_4 = 10,
+    LIFT_1 = 11,
+    LIFT_2 = 12,
+    LIFT_3 = 13,
+    LIFT_4 = 14
 };
 
 #ifdef __cplusplus

@@ -3,9 +3,6 @@
  * Editted by: Nickolas Neely for ChipChipArray Raspberry Pi 
  */
 
-#ifndef Adafruit_PWMServoDrive_H
-#define Adafruit_PWMServoDrive_H
-
 /*************************************************** 
   This is a library for our Adafruit 16-channel PWM & Servo driver
 
@@ -26,10 +23,7 @@
 #ifndef _ADAFRUIT_PWMServoDriver_H
 #define _ADAFRUIT_PWMServoDriver_H
 
-extern "C" {
 #include <wiringPi.h>
-}
-
 #include <ctype.h>
 #include <iostream>
 #include <cstdlib>
@@ -69,22 +63,20 @@ using namespace std;
 
 
 class Adafruit_PWMServoDriver {
-	public:
-		Adafruit_PWMServoDriver(uint8_t addr = 0x41);
-		void begin(void);
-		void reset(void);
-		void setPWMFreq(float freq);
-		void setPWM(uint8_t num, uint16_t on, uint16_t off);
-		void setPin(uint8_t num, uint16_t val, bool invert=false);
+ public:
+  Adafruit_PWMServoDriver(uint8_t addr = 0x41);
+  void begin(void);
+  void reset(void);
+  void setPWMFreq(float freq);
+  void setPWM(uint8_t num, uint16_t on, uint16_t off);
+  void setPin(uint8_t num, uint16_t val, bool invert=false);
 
-	private:
-		uint8_t _i2caddr;
-		int _i2cFD;
+ private:
+  uint8_t _i2caddr;
+  int _i2cFD;
 
-		uint8_t read8(uint8_t addr);
-		void write8(uint8_t addr, uint8_t d);
+  uint8_t read8(uint8_t addr);
+  void write8(uint8_t addr, uint8_t d);
 };
-
-#endif
 
 #endif

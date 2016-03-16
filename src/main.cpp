@@ -8,13 +8,13 @@
 #include <cstdlib>
 #include <unistd.h>
 #include "Servo_Position_Shell.h"
-#include "Servo_Position_Shell.cpp"
+#include "Adafruit_PWMServoDriver.h"
 #include <iostream>
 #include <map>
 #include "NavigationControl.h"
 //#define UNLOADTEST
-//#define ARMTEST
-#define NAVTEST
+#define ARMTEST
+//#define NAVTEST
 using namespace std;
 /*
  * Test code for Servos 
@@ -69,23 +69,30 @@ int main() {
     Servo whichservo;
     int tmpServo = -1;
     int position;
+
     setup();
     while(1){
+        
         cout<<endl;
-        cout<<"Pick a servo to use: GATE_YELLOW = 7, GATE_GREEN = 8, GATE_BLUE = 9, GATE_RED = 10,";
-        cout<<endl<<"UNLOAD_YELLOW = 11, UNLOAD_GREEN = 12, UNLOAD_BLUE = 13, UNLOAD_RED = 14";
+        cout<<"Pick a servo to use: ";
+        cout<<endl<<"UNLOAD_1= 10, UNLOAD_2 = 11, UNLOAD_3 = 12, UNLOAD_4 = 13";
         cout<<endl;
         cin>>tmpServo;
-        if(tmpServo < 7 || tmpServo > 14){
+        if(tmpServo < 10 || tmpServo > 14){
             cout<<"Please choose again:"<<endl;
             continue;
         }
         whichservo = (Servo)tmpServo;
+          
         cout<<endl;
         cout<<"Pick a position (set position to -1 to disengage servo and set pwm to 0):";
         cin>>position;
         cout<<endl;
-        setServoPosition(whichservo,position);
+        setServoPosition((Servo)tmpServo,position); 
+        //setServoPosition((Servo)10,position);
+        //setServoPosition((Servo)11,position);
+        //setServoPosition((Servo)12,position);
+        //setServoPosition((Servo)13,position);
         
     }
     
