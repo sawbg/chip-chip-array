@@ -6,7 +6,7 @@
  */
 
 #include <wiringPi.h>
-#include "Adafruit_PWMServoDriver.h"
+#include "Adafruit_PWMServoDriver.cpp"
 #include <iostream>
 #include "Servo_Position_Shell.h"
 
@@ -77,10 +77,10 @@ void setServoPosition(Servo whichservo, int position) {
     double digitalservolow = 0.9;
     // left gripper servo 5
     double gripleftopen = 2.2;
-    double gripleftclose = 1.5;
+    double gripleftclose = 1.35;
     // right gripper servo 6
     double griprightopen = 2.2;
-    double griprightclose = 1.5;
+    double griprightclose = 1.35;
     double pulse;
 
     switch (whichservo) {
