@@ -74,6 +74,11 @@ namespace ChipChipArray {
 			 */
 			Zone zone;
 
+/**
+ *
+ */
+			void Deposit(Color color = Color::Blue);
+
 			/**
 			 * Takes block currently in the arm's pinchers and
 			 * places to side of robot opposite the loading zone.
@@ -192,12 +197,35 @@ namespace ChipChipArray {
 		cam.Close();
 	}
 
-	void Grabber::Discard() {
-
+	void Grabber::Deposit(Color color) {
+		if(color == Color::Blue) {
+				arm.ClawClose();
+				sleep(1);
+				arm.BaseTilt(160);
+				sleep(1);
+				arm.Elbow(130);
+				sleep(1);
+				arm.BaseTurn(47);
+				sleep(1);
+				arm.ClawOpen();
+				sleep(1);
+		} else {
+			throw std::runtime_error("Du Idiot! Die Armbewegungen für diese "
+					"Farbe sind noch nicht implementiert. Vielleicht sollst "
+					"du die englische Phrase lernen 'Would you like fries "
+					"with that?");
+					}
 	}
 
 	void Grabber::Extend() {
-
+		arm.Elbow(180);
+		usleep(500000);
+		arm.BaseTurn(132);
+		arm.BaseTilt(125);
+		arm.Elbow(150);
+		arm.WristTwist(90);
+		arm.ClawOpen();
+		sleep(2);
 	}
 
 	void Grabber::Grab(Layer layer, BlockPosition pos) {
@@ -205,85 +233,50 @@ namespace ChipChipArray {
 	}
 
 	Result Grabber::Load() {
-		/*static std::map< lookPos;
-		  static PosMap lowPos;
-		  static PosMap grabPos;*/
-		static uint8 DELTA_BASE_TURN = 10;
-		static uint8 BASE_TURN_MIDDLE = 135;
-
-		//		lookPos[Zone::C][BlockPosition::Middle] = 135;
-		//		lookPos[Zone::C][
-
 		try {
-			uint8 wholeBlockCount = 0;
-			uint8 halfBlockCount = 0;
+			for(uint8 i = 0; i < 2; i++) {
+				Extend();
 
-			//	for(uint8 i = 0; i < 2; i++) {  // top and bottom layers
-			uint8 baseTilt;
-			uint8 elbow;
+				Block block = (zone == Zone::A)
+					? LocateBlocks(Color::Blue) : LocateBlueBlock();
 
-			//		switch(zone) {
-			//			case Zone::A:
-			baseTilt = 125;
-			elbow = 150;
-			//				break;
-			//		}
+				float32 baseKonstant = 0.5;
+				if(block.dRightLeft > 0) baseKonstant *= -1;
+				float32 degree = baseKonstant * std::sqrt(block.dRightLeft);
+				arm.dBaseTurn(degree);
+				arm.dWristTwist(-degree);
+				sleep(1);
+				arm.BaseTilt(140);
+				sleep(1);
 
-			arm.Elbow(180);
-			usleep(500000);
-			arm.BaseTurn(132);
-			arm.BaseTilt(baseTilt);
-			arm.Elbow(elbow);
-			arm.WristTwist(90);
-			arm.ClawOpen();
-			sleep(2);
+				uint8 bend = (i == 0 ? 100 : 90);
 
-			Block block = (zone == Zone::A)
-				? LocateBlocks(Color::Blue) : LocateBlueBlock();
+				// lower claw over block
+				for(uint8 j = 140; j >= bend; j -= 10) {
+					arm.Elbow(j);
+					sleep(1);
+				}
 
-			// front and back of half blocks
-			//	for(uint8 j = 0; j < 2; j++) {  
-			//		if(block.size == Size::Long || zone != Zone::B) {
-			// GRAB
-			float32 baseKonstant = 0.5;
-			if(block.dRightLeft > 0) baseKonstant *= -1;
-			float32 degree = baseKonstant * std::sqrt(block.dRightLeft);
-			arm.dBaseTurn(degree);
-			arm.dWristTwist(-degree);
-			sleep(1);
-			arm.BaseTilt(140);
-			sleep(1);
-			arm.Elbow(140);
-			sleep(1);
-			arm.Elbow(130);
-			sleep(1);
-			arm.Elbow(120);
-			sleep(1);
-			arm.Elbow(110);
-			sleep(1);
-			arm.Elbow(100);
-			sleep(2);
-			arm.ClawClose();
+				// deposit in bin
+				sleep(1);
+				Deposit();
 
-			sleep(1);
-			arm.BaseTilt(160);
-			sleep(1);
-			arm.Elbow(120);
-			sleep(1);
-			arm.BaseTurn(40);
-			sleep(1);
-			arm.ClawOpen();
+				if(i == 0) {
+					arm.BaseTurn(132);
+				} else {
+					arm.BaseTurn(135);
+					sleep(1);
+					arm.BaseTilt(180);
+					sleep(1);
+					arm.Elbow(90);
+					sleep(1);
+					arm.Elbow(45);
+					sleep(1);
+					arm.Elbow(0);
+				}
 
+			}
 
-			// PLACE
-
-			//			wholeBlockCount++;
-			//			break;
-			//		} else {
-			//			halfBlockCount++;
-			//		}
-			//	}
-			//	}
 		} catch(std::exception ex) {
 			log.Error(std::string("An exception occured attempting "
 						"to load the blocks in function Grabber::Load(): ") 
