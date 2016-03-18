@@ -464,7 +464,7 @@ namespace ChipChipArray {
 		cv::transpose(channels[0], img);
 
 		log.Verbose("Searching: Blue block");
-		cv::inRange(img, 10, 255, imgThresh);
+		cv::inRange(img, 30, 255, imgThresh);
 		log.Image(imgThresh, "thresh_blue" + std::to_string(zone)
 				+ std::to_string(invokeCount) + ".bmp");
 
