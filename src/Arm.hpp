@@ -11,6 +11,8 @@
 #include "definitions.hpp"
 #include "Servo_Position_Shell.cpp"
 
+#define WRIST_TWIST WRIST_PAN
+
 namespace ChipChipArray {
 	/**
 	 * This class provides a layer of abstraction from the existing servo
@@ -45,6 +47,16 @@ namespace ChipChipArray {
 			void BaseTurn(uint8 a);
 
 			/**
+			 *
+			 */
+			void ClawOpen();
+
+			/**
+			 *
+			 */
+			void ClawClose();
+
+			/**
 			 * Tilts the base a certain number of degrees. 
 			 *
 			 * @param degrees to move servo. Positive values add to the servo
@@ -67,15 +79,6 @@ namespace ChipChipArray {
 			 * angle, and negative values subtract from the servo angle. 
 			 */
 			void dElbow(sint16 a);
-
-			/**
-			 * Move the grippers a certain number of degrees. Note that they
-			 * will both move inward or outward; one will never move inward and
-			 * the other outward.
-			 *
-			 * @param degrees to move servo. 
-			 */
-			void dGrippers(sint16 a);
 
 			/**
 			 * Tilt the wrist a certain number of degrees.
@@ -101,15 +104,6 @@ namespace ChipChipArray {
 			void Elbow(uint8 a);
 
 			/**
-			 * Move the grippers to a specific position. Note that they will
-			 * both move inward or outward; one will never move inward and the
-			 * other outward.
-			 *
-			 * @param a desired servo position in degrees
-			 */
-			void Grippers(uint8 a);
-
-			/**
 			 * Moves arm into its "hovering" position over the blocks. The
 			 * position changes with the zone.
 			 *
@@ -132,7 +126,7 @@ namespace ChipChipArray {
 			void WristTwist(uint8 a);
 
 		protected:
-			
+
 			/**
 			 * Moves the left gripper servo a certain number of degrees.
 			 *
@@ -190,6 +184,16 @@ namespace ChipChipArray {
 		servoPos[BASE_TURN] = a;
 	}
 
+	void Arm::ClawOpen() {
+		LeftGripper(0);
+		RightGripper(180);
+	}
+
+	void Arm::ClawClose() {
+		LeftGripper(180);
+		RightGripper(0);
+	}
+
 	void Arm::dBaseTilt(sint16 a) {
 		a += servoPos[BASE_TILT];
 		setServoPosition(BASE_TILT, a);
@@ -206,13 +210,6 @@ namespace ChipChipArray {
 		a += servoPos[ELBOW];
 		setServoPosition(ELBOW, a);
 		servoPos[ELBOW] = a;
-	}
-
-	void Arm::dGrippers(sint16 a) {
-		/*	a += servoPos[BASE_TILT];
-			setServoPosition(BASE_TILT, a);
-			servoPos[BASE_TILT] = a;
-			*/
 	}
 
 	void Arm::dLeftGripper(sint16 a) {
@@ -242,15 +239,6 @@ namespace ChipChipArray {
 	void Arm::Elbow(uint8 a) {
 		setServoPosition(ELBOW, a);
 		servoPos[ELBOW] = a;
-	}
-
-	void Arm::Grippers(uint8 a) {
-		LeftGripper(a);
-		RightGripper(a);
-	}
-
-	void Arm::Hover(Zone zone) {
-		// implement later
 	}
 
 	void Arm::LeftGripper(uint8 a) {

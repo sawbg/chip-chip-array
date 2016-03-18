@@ -17,7 +17,7 @@ using namespace ChipChipArray;
  */
 int main() {
 	setup();
-	Grabber g(Zone::C, Side::Left);
+	Grabber g(Zone::A, Side::Left);
 	g.Load();
 	g.Close();
 }

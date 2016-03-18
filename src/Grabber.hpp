@@ -7,6 +7,7 @@
 #define Grabber_H
 
 #include <cmath>
+#include <map>
 #include <opencv2/highgui/highgui.hpp>
 #include <opencv2/imgproc/imgproc.hpp>
 #include <string>
@@ -18,7 +19,6 @@
 #include "Block.hpp"
 #include "Log.hpp"
 #include "PiCamera.hpp"
-#include "Servo_Position_Shell.cpp"
 
 namespace ChipChipArray {
 
@@ -99,17 +99,14 @@ namespace ChipChipArray {
 			void Grab(Layer layer, BlockPosition pos = BlockPosition::Middle);
 
 			/**
-			 * Finds the block to pick up. Color and block size are
-			 * contained in this class.
 			 *
-			 * @eturn the block to pick up based on the Side given
 			 */
-			Block LocateBlocks();
+			Block LocateBlocks(Color color = Color::Perrywinkle);
 
 			/**
 			 *
 			 */
-			Block LocateBlocks(Color color);
+			Block LocateBlueBlock();
 
 			/**
 			 * Puts block in slot according to color. Zones B and C
@@ -204,33 +201,93 @@ namespace ChipChipArray {
 	}
 
 	void Grabber::Grab(Layer layer, BlockPosition pos) {
-		
+
 	}
 
 	Result Grabber::Load() {
+		/*static std::map< lookPos;
+		  static PosMap lowPos;
+		  static PosMap grabPos;*/
+		static uint8 DELTA_BASE_TURN = 10;
+		static uint8 BASE_TURN_MIDDLE = 135;
+
+		//		lookPos[Zone::C][BlockPosition::Middle] = 135;
+		//		lookPos[Zone::C][
+
 		try {
 			uint8 wholeBlockCount = 0;
 			uint8 halfBlockCount = 0;
 
-			for(uint8 i = 0; i < 2; i++) {  // top and bottom layers
-				for(uint8 j = 0; j < 2; j++) {  // front and back of half blocks
-					Block block = LocateBlocks();
-					if(block.size == Size::Long || zone != Zone::B) {
-						// GRAB
-						
+			//	for(uint8 i = 0; i < 2; i++) {  // top and bottom layers
+			uint8 baseTilt;
+			uint8 elbow;
 
-						// PLACE
+			//		switch(zone) {
+			//			case Zone::A:
+			baseTilt = 125;
+			elbow = 150;
+			//				break;
+			//		}
 
-						wholeBlockCount++;
-						break;
-					} else {
-						halfBlockCount++;
-					}
-				}
-			}
+			arm.Elbow(180);
+			usleep(500000);
+			arm.BaseTurn(132);
+			arm.BaseTilt(baseTilt);
+			arm.Elbow(elbow);
+			arm.WristTwist(90);
+			arm.ClawOpen();
+			sleep(2);
+
+			Block block = (zone == Zone::A)
+				? LocateBlocks(Color::Blue) : LocateBlueBlock();
+
+			// front and back of half blocks
+			//	for(uint8 j = 0; j < 2; j++) {  
+			//		if(block.size == Size::Long || zone != Zone::B) {
+			// GRAB
+			float32 baseKonstant = 0.5;
+			if(block.dRightLeft > 0) baseKonstant *= -1;
+			float32 degree = baseKonstant * std::sqrt(block.dRightLeft);
+			arm.dBaseTurn(degree);
+			arm.dWristTwist(-degree);
+			sleep(1);
+			arm.BaseTilt(140);
+			sleep(1);
+			arm.Elbow(140);
+			sleep(1);
+			arm.Elbow(130);
+			sleep(1);
+			arm.Elbow(120);
+			sleep(1);
+			arm.Elbow(110);
+			sleep(1);
+			arm.Elbow(100);
+			sleep(2);
+			arm.ClawClose();
+
+			sleep(1);
+			arm.BaseTilt(160);
+			sleep(1);
+			arm.Elbow(120);
+			sleep(1);
+			arm.BaseTurn(40);
+			sleep(1);
+			arm.ClawOpen();
+
+
+			// PLACE
+
+			//			wholeBlockCount++;
+			//			break;
+			//		} else {
+			//			halfBlockCount++;
+			//		}
+			//	}
+			//	}
 		} catch(std::exception ex) {
-			log.Error("An exception occured attempting to load the blocks in "
-					"function Grabber::Load().");
+			log.Error(std::string("An exception occured attempting "
+						"to load the blocks in function Grabber::Load(): ") 
+					+ ex.what());
 			return Result::NoBlocks;
 		}
 	}
@@ -400,5 +457,97 @@ namespace ChipChipArray {
 
 		return block;
 	}
+
+	Block Grabber::LocateBlueBlock() {
+		std::vector<cv::Mat> channels;
+		std::vector<cv::Rect> blocks;	
+
+		invokeCount++;
+		log.Status("Locating blue blocks");
+
+		cv::Mat img;
+		cv::Mat imgThresh;
+		cv::split(cam.Snap(), channels);
+		cv::transpose(channels[0], img);
+
+		log.Verbose("Searching: Blue block");
+		cv::inRange(img, 10, 255, imgThresh);
+		log.Image(imgThresh, "thresh_blue" + std::to_string(zone)
+				+ std::to_string(invokeCount) + ".bmp");
+
+		// calculate contours
+		std::vector<std::vector<cv::Point>> contours;
+		cv::findContours(imgThresh, contours, CV_RETR_TREE,
+				CV_CHAIN_APPROX_SIMPLE,
+				cv::Point(0, 0));
+		std::vector<std::vector<cv::Point>>
+			contours_poly(contours.size());
+		std::vector<cv::Rect> bounds(contours.size());
+
+		// find rectangle around polygon-ish shapes
+		for(int i = 0; i < contours.size(); i++) {
+			uint32 area = cv::contourArea(contours[i]);
+
+			// determine if block and add to blocks vector
+			if(area > MIN_HALF_BLOCK_SIZE) {
+				cv::approxPolyDP(cv::Mat(contours[i]),
+						contours_poly[i], 20,
+						false);
+				cv::Rect rect = cv::boundingRect(
+						cv::Mat(contours_poly[i]));
+				log.Debug("Blue block detected with area "
+						+ std::to_string(area));
+				blocks.push_back(rect);
+			}
+		}
+
+
+		if(blocks.size() == 0) {
+			log.Image(img, "original_" + std::to_string(zone)
+					+ std::to_string(invokeCount)
+					+ "_no_blocks.bmp");
+			throw std::runtime_error("No blocks found!");
+		} else {
+			log.Status(std::to_string(blocks.size())
+					+ " blocks found");
+		}
+
+		// coordinates start in top right
+		Block block = Block(blocks[0], Color::Blue);
+
+		if(blocks.size() > 1) {
+			for(int i = 1; i < blocks.size(); i++) { 
+				if((side == Side::Right && blocks[i].x 
+							> block.topLeft.x)
+						|| (side == Side::Left
+							&& blocks[i].x
+							< block.topLeft.x)) {
+					block = Block(blocks[i], Color::Blue);
+				}
+			}
+		}
+
+		log.Status(std::to_string(block.color) + " block is located");
+
+		log.Debug("Block properties => area: " + std::to_string(block.area)
+				+ ", height: " + std::to_string(block.height) + ", width: "
+				+ std::to_string(block.width) + ", offset: "
+				+ std::to_string(block.offset) + ", color: "
+				+ std::to_string(block.color) + ", size: "
+				+ std::to_string(block.size));
+
+		/* 
+		 * Draw surrounding rectangles from above on original
+		 * image.
+		 */
+		cv::rectangle(img, block.topLeft , block.bottomRight,
+				cv::Scalar(255, 0, 0), 4, 8);
+		log.Image(img, "original_" + std::to_string(zone)
+				+ std::to_string(invokeCount)
+				+ ".bmp");
+
+		return block;
+	}
 }
+
 #endif

@@ -11,6 +11,8 @@
 #define ENUM signed char
 #define ERROR -1
 
+#include <map>
+
 typedef unsigned char byte;
 typedef unsigned char uint8;
 typedef signed char sint8;
@@ -27,10 +29,11 @@ typedef signed long long sint64;
 typedef float float32;
 typedef double float64;
 
+
 /** 
  * The position of the block relative to the arm.
  * */
-enum BlockPosition : ENUM {
+enum class BlockPosition : ENUM {
 	Front,
 	Back,
 	Middle
@@ -50,7 +53,7 @@ enum class Color : ENUM {
 /**
  * Defines the location of a block in its stack.
  */
-enum Layer : ENUM {
+enum class Layer : ENUM {
 	Top,
 	Bottom
 };
@@ -69,10 +72,10 @@ enum class LogMode : ENUM {
  * The integer value of the 
  */
 enum class Result : ENUM {
-	No_Blocks = -1,
-	No_Halves = 0,
-	Two_Halves = 2,
-	Four_Halves = 4
+	NoBlocks = -1,
+	NoHalves = 0,
+	TwoHalves = 2,
+	FourHalves = 4
 };
 
 /** Represents which block to pick up when multiple blocks are visible. */
@@ -93,6 +96,8 @@ enum class Zone : ENUM {
 	B = 'B',
 	C = 'C'
 };
+
+typedef std::map<Zone, std::map<BlockPosition, uint8>> PosMap;
 
 namespace std {
 	/**
