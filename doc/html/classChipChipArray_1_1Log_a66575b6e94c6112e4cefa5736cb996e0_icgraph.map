@@ -1,4 +1,11 @@
 <map id="ChipChipArray::Log::Status" name="ChipChipArray::Log::Status">
-<area shape="rect" id="node2" href="$namespaceChipChipArray.html#a6c7465049b5d408e1a238b6d8ffa887d" title="ChipChipArray::ScanQR" alt="" coords="189,13,355,39"/>
-<area shape="rect" id="node3" href="$qr__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="403,13,453,39"/>
+<area shape="rect" id="node2" href="$classChipChipArray_1_1Grabber.html#a7333f40c135fbe92d59651f75032b4e7" title="ChipChipArray::Grabber\l::Grabber" alt="" coords="191,5,353,47"/>
+<area shape="rect" id="node3" href="$classChipChipArray_1_1Grabber.html#aacf089ceb4aa5b263c2cc702fb3daf74" title="ChipChipArray::Grabber\l::Close" alt="" coords="191,71,353,112"/>
+<area shape="rect" id="node5" href="$classChipChipArray_1_1Grabber.html#af49248c957a1695dcde79c0f5f8df99b" title="ChipChipArray::Grabber\l::LocateBlocks" alt="" coords="191,136,353,177"/>
+<area shape="rect" id="node8" href="$classChipChipArray_1_1Grabber.html#ab9b0d6a64b2c94c0d0f810a5ebeef6ec" title="ChipChipArray::Grabber\l::LocateBlueBlock" alt="" coords="191,201,353,243"/>
+<area shape="rect" id="node9" href="$namespaceChipChipArray.html#a6c7465049b5d408e1a238b6d8ffa887d" title="ChipChipArray::ScanQR" alt="" coords="189,267,355,294"/>
+<area shape="rect" id="node4" href="$cv__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="458,78,509,105"/>
+<area shape="rect" id="node6" href="$classChipChipArray_1_1Grabber.html#a56639f8f9ba9468bce4b6d69ceb2eb54" title="ChipChipArray::Grabber\l::Load" alt="" coords="403,169,564,211"/>
+<area shape="rect" id="node7" href="$loading__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="612,177,663,203"/>
+<area shape="rect" id="node10" href="$qr__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="458,267,509,294"/>
 </map>

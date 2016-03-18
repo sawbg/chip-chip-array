@@ -1,3 +1,6 @@
 <map id="main" name="main">
-<area shape="rect" id="node2" href="$namespacestd.html#aa5ddf582a1c96ffe258c997be9a294a3" title="std::to_string" alt="" coords="104,5,203,32"/>
+<area shape="rect" id="node2" href="$classChipChipArray_1_1Grabber.html#aacf089ceb4aa5b263c2cc702fb3daf74" title="ChipChipArray::Grabber\l::Close" alt="" coords="104,39,265,80"/>
+<area shape="rect" id="node5" href="$namespacestd.html#aa5ddf582a1c96ffe258c997be9a294a3" title="std::to_string" alt="" coords="135,105,234,131"/>
+<area shape="rect" id="node3" href="$classChipChipArray_1_1Log.html#a66575b6e94c6112e4cefa5736cb996e0" title="ChipChipArray::Log\l::Status" alt="" coords="332,5,468,47"/>
+<area shape="rect" id="node4" href="$classChipChipArray_1_1PiCamera.html#a38f8205921d6deec5a2c360ea7d24cc5" title="ChipChipArray::PiCamera\l::Close" alt="" coords="313,71,487,112"/>
 </map>

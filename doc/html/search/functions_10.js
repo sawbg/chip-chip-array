@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['wristtilt',['WristTilt',['../classChipChipArray_1_1Arm.html#ad61f7c1e63eb09981b6c304bd924e217',1,'ChipChipArray::Arm']]],
-  ['wristtwist',['WristTwist',['../classChipChipArray_1_1Arm.html#a35ec7756840d9d32dcfbb88d831f087f',1,'ChipChipArray::Arm']]]
+  ['variable',['Variable',['../classChipChipArray_1_1Log.html#a8849569720c26e335e7ef4dcb912170b',1,'ChipChipArray::Log']]],
+  ['verbose',['Verbose',['../classChipChipArray_1_1Log.html#a154a5f38d9c7a767693b242684a3d4d9',1,'ChipChipArray::Log']]]
 ];

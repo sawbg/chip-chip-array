@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['open',['Open',['../classChipChipArray_1_1Log.html#ad27a06a4561f2f59159bd8a7fc2fed3b',1,'ChipChipArray::Log']]]
+  ['navigationsetup',['navigationSetup',['../NavigationControl_8cpp.html#acb338a668bf01ea34c27c56db0d23782',1,'navigationSetup(uint8_t navigation_add):&#160;NavigationControl.cpp'],['../NavigationControl_8h.html#acb338a668bf01ea34c27c56db0d23782',1,'navigationSetup(uint8_t navigation_add):&#160;NavigationControl.cpp']]]
 ];

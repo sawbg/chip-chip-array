@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['pwm',['pwm',['../Servo__Position__Shell_8cpp.html#a2c06cc8f85429bb0f7cb91917164dc54',1,'Servo_Position_Shell.cpp']]]
+  ['offset',['offset',['../classChipChipArray_1_1Block.html#a42e2ca0775dc09b04049a2db1bc0bb4f',1,'ChipChipArray::Block']]]
 ];

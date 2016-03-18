@@ -1,0 +1,7 @@
+<map id="ChipChipArray::Arm::ClawOpen" name="ChipChipArray::Arm::ClawOpen">
+<area shape="rect" id="node2" href="$classChipChipArray_1_1Arm.html#a776eade3a7aaa6effaabad7f37c71031" title="ChipChipArray::Arm\l::LeftGripper" alt="" coords="192,5,331,47"/>
+<area shape="rect" id="node6" href="$classChipChipArray_1_1Arm.html#a46a0b0cfb37cb0b663c91cd07e440e10" title="ChipChipArray::Arm\l::RightGripper" alt="" coords="192,71,331,112"/>
+<area shape="rect" id="node3" href="$Servo__Position__Shell_8cpp.html#abd2cd3c2e36d42a2178a6f2fd12af905" title="setServoPosition" alt="" coords="379,46,500,73"/>
+<area shape="rect" id="node4" href="$Servo__Position__Shell_8cpp.html#a7f07c548295f3696f8881f0c9de708b1" title="setServoPulse" alt="" coords="548,46,655,73"/>
+<area shape="rect" id="node5" href="$classAdafruit__PWMServoDriver.html#a724a7fc39c6fba34478ecc0eea038bd3" title="Adafruit_PWMServoDriver\l::setPWM" alt="" coords="703,39,879,80"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="ChipChipArray::Grabber::LocateBlocks" name="ChipChipArray::Grabber::LocateBlocks">
+<area shape="rect" id="node2" href="$namespacestd.html#aa5ddf582a1c96ffe258c997be9a294a3" title="std::to_string" alt="" coords="252,5,351,32"/>
+<area shape="rect" id="node3" href="$classChipChipArray_1_1Log.html#a154a5f38d9c7a767693b242684a3d4d9" title="ChipChipArray::Log\l::Verbose" alt="" coords="233,57,369,98"/>
+<area shape="rect" id="node4" href="$classChipChipArray_1_1PiCamera.html#a58fb0de02570dce9a9cb60a1a04fb84f" title="ChipChipArray::PiCamera\l::Snap" alt="" coords="215,122,388,163"/>
+<area shape="rect" id="node5" href="$classChipChipArray_1_1Log.html#a65bbab057c8b1453f9e4efcfee7522c4" title="ChipChipArray::Log\l::Image" alt="" coords="233,187,369,229"/>
+<area shape="rect" id="node7" href="$classChipChipArray_1_1Log.html#ac32b435af1577e4ebc67af2bdfea8eff" title="ChipChipArray::Log\l::Debug" alt="" coords="233,253,369,294"/>
+<area shape="rect" id="node8" href="$classChipChipArray_1_1Log.html#a66575b6e94c6112e4cefa5736cb996e0" title="ChipChipArray::Log\l::Status" alt="" coords="233,318,369,359"/>
+<area shape="rect" id="node6" href="$classChipChipArray_1_1Log.html#aba7b7b0555f49f4dcf15f4b9fd3e6b34" title="ChipChipArray::Log\l::Error" alt="" coords="436,187,572,229"/>
+</map>

@@ -1,6 +1,31 @@
 <map id="main" name="main">
-<area shape="rect" id="node2" href="$Servo__Position__Shell_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d" title="setup" alt="" coords="104,46,159,73"/>
-<area shape="rect" id="node3" href="$classAdafruit__PWMServoDriver.html#aef401eaad3c34222ac916eb7bd936bc2" title="Adafruit_PWMServoDriver\l::begin" alt="" coords="207,5,383,47"/>
-<area shape="rect" id="node5" href="$classAdafruit__PWMServoDriver.html#a0ef6f1e3c81aebbd1d1da1bb12f3ed5c" title="Adafruit_PWMServoDriver\l::setPWMFreq" alt="" coords="207,71,383,112"/>
-<area shape="rect" id="node4" href="$classAdafruit__PWMServoDriver.html#ac976f52233a75a4bd0eb6f2ce9b82b7f" title="Adafruit_PWMServoDriver\l::reset" alt="" coords="431,5,607,47"/>
+<area shape="rect" id="node2" href="$Servo__Position__Shell_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d" title="setup" alt="" coords="157,78,212,105"/>
+<area shape="rect" id="node6" href="$classChipChipArray_1_1Grabber.html#a56639f8f9ba9468bce4b6d69ceb2eb54" title="ChipChipArray::Grabber\l::Load" alt="" coords="104,435,265,476"/>
+<area shape="rect" id="node29" href="$classChipChipArray_1_1Grabber.html#aacf089ceb4aa5b263c2cc702fb3daf74" title="ChipChipArray::Grabber\l::Close" alt="" coords="104,1009,265,1051"/>
+<area shape="rect" id="node3" href="$classAdafruit__PWMServoDriver.html#aef401eaad3c34222ac916eb7bd936bc2" title="Adafruit_PWMServoDriver\l::begin" alt="" coords="313,5,489,47"/>
+<area shape="rect" id="node5" href="$classAdafruit__PWMServoDriver.html#a0ef6f1e3c81aebbd1d1da1bb12f3ed5c" title="Adafruit_PWMServoDriver\l::setPWMFreq" alt="" coords="313,71,489,112"/>
+<area shape="rect" id="node4" href="$classAdafruit__PWMServoDriver.html#ac976f52233a75a4bd0eb6f2ce9b82b7f" title="Adafruit_PWMServoDriver\l::reset" alt="" coords="537,5,713,47"/>
+<area shape="rect" id="node7" href="$classChipChipArray_1_1Arm.html#ac45149e03abfac230b75156bb42e8417" title="ChipChipArray::Arm\l::Elbow" alt="" coords="556,121,695,163"/>
+<area shape="rect" id="node11" href="$classChipChipArray_1_1Arm.html#addaedfe85ff2b14ff00c344fc4b40cd6" title="ChipChipArray::Arm\l::BaseTurn" alt="" coords="556,187,695,228"/>
+<area shape="rect" id="node12" href="$classChipChipArray_1_1Arm.html#a8b077a3791d9fc5ef285c1520fe4c5d8" title="ChipChipArray::Arm\l::BaseTilt" alt="" coords="332,239,471,280"/>
+<area shape="rect" id="node13" href="$classChipChipArray_1_1Arm.html#a35ec7756840d9d32dcfbb88d831f087f" title="ChipChipArray::Arm\l::WristTwist" alt="" coords="332,304,471,345"/>
+<area shape="rect" id="node14" href="$classChipChipArray_1_1Arm.html#abb33b5bb11034554d632f8c9b95b2c44" title="ChipChipArray::Arm\l::ClawOpen" alt="" coords="332,369,471,411"/>
+<area shape="rect" id="node17" href="$classChipChipArray_1_1Grabber.html#af49248c957a1695dcde79c0f5f8df99b" title="ChipChipArray::Grabber\l::LocateBlocks" alt="" coords="321,671,482,712"/>
+<area shape="rect" id="node22" href="$classChipChipArray_1_1Log.html#aba7b7b0555f49f4dcf15f4b9fd3e6b34" title="ChipChipArray::Log\l::Error" alt="" coords="761,864,897,905"/>
+<area shape="rect" id="node25" href="$classChipChipArray_1_1Grabber.html#ab9b0d6a64b2c94c0d0f810a5ebeef6ec" title="ChipChipArray::Grabber\l::LocateBlueBlock" alt="" coords="321,736,482,777"/>
+<area shape="rect" id="node26" href="$classChipChipArray_1_1Arm.html#a980f5bd278cbe06aa21754fb8e0324b3" title="ChipChipArray::Arm\l::dBaseTurn" alt="" coords="332,500,471,541"/>
+<area shape="rect" id="node27" href="$classChipChipArray_1_1Arm.html#a6bde822b1be63926e21222f36aad67b3" title="ChipChipArray::Arm\l::dWristTwist" alt="" coords="332,565,471,607"/>
+<area shape="rect" id="node28" href="$classChipChipArray_1_1Arm.html#a20c6fe3fe79c16f492a8c18b91427080" title="ChipChipArray::Arm\l::ClawClose" alt="" coords="332,435,471,476"/>
+<area shape="rect" id="node8" href="$Servo__Position__Shell_8cpp.html#abd2cd3c2e36d42a2178a6f2fd12af905" title="setServoPosition" alt="" coords="769,333,890,359"/>
+<area shape="rect" id="node9" href="$Servo__Position__Shell_8cpp.html#a7f07c548295f3696f8881f0c9de708b1" title="setServoPulse" alt="" coords="945,333,1052,359"/>
+<area shape="rect" id="node10" href="$classAdafruit__PWMServoDriver.html#a724a7fc39c6fba34478ecc0eea038bd3" title="Adafruit_PWMServoDriver\l::setPWM" alt="" coords="1100,325,1276,367"/>
+<area shape="rect" id="node15" href="$classChipChipArray_1_1Arm.html#a776eade3a7aaa6effaabad7f37c71031" title="ChipChipArray::Arm\l::LeftGripper" alt="" coords="556,355,695,396"/>
+<area shape="rect" id="node16" href="$classChipChipArray_1_1Arm.html#a46a0b0cfb37cb0b663c91cd07e440e10" title="ChipChipArray::Arm\l::RightGripper" alt="" coords="556,420,695,461"/>
+<area shape="rect" id="node18" href="$namespacestd.html#aa5ddf582a1c96ffe258c997be9a294a3" title="std::to_string" alt="" coords="576,587,675,614"/>
+<area shape="rect" id="node19" href="$classChipChipArray_1_1Log.html#a154a5f38d9c7a767693b242684a3d4d9" title="ChipChipArray::Log\l::Verbose" alt="" coords="557,639,693,680"/>
+<area shape="rect" id="node20" href="$classChipChipArray_1_1PiCamera.html#a58fb0de02570dce9a9cb60a1a04fb84f" title="ChipChipArray::PiCamera\l::Snap" alt="" coords="539,704,712,745"/>
+<area shape="rect" id="node21" href="$classChipChipArray_1_1Log.html#a65bbab057c8b1453f9e4efcfee7522c4" title="ChipChipArray::Log\l::Image" alt="" coords="557,769,693,811"/>
+<area shape="rect" id="node23" href="$classChipChipArray_1_1Log.html#ac32b435af1577e4ebc67af2bdfea8eff" title="ChipChipArray::Log\l::Debug" alt="" coords="557,835,693,876"/>
+<area shape="rect" id="node24" href="$classChipChipArray_1_1Log.html#a66575b6e94c6112e4cefa5736cb996e0" title="ChipChipArray::Log\l::Status" alt="" coords="557,900,693,941"/>
+<area shape="rect" id="node30" href="$classChipChipArray_1_1PiCamera.html#a38f8205921d6deec5a2c360ea7d24cc5" title="ChipChipArray::PiCamera\l::Close" alt="" coords="315,1068,488,1109"/>
 </map>

@@ -1,0 +1,346 @@
+\hypertarget{classChipChipArray_1_1Grabber}{\section{Chip\+Chip\+Array\+:\+:Grabber Class Reference}
+\label{classChipChipArray_1_1Grabber}\index{Chip\+Chip\+Array\+::\+Grabber@{Chip\+Chip\+Array\+::\+Grabber}}
+}
+
+
+{\ttfamily \#include $<$Grabber.\+hpp$>$}
+
+
+
+Collaboration diagram for Chip\+Chip\+Array\+:\+:Grabber\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=210pt]{classChipChipArray_1_1Grabber__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classChipChipArray_1_1Grabber_a7333f40c135fbe92d59651f75032b4e7}{Grabber} (\hyperlink{definitions_8hpp_adbd1e7a33d3e1751c7b2aa2562d0ecb9}{Zone} \hyperlink{classChipChipArray_1_1Grabber_ab57efe6e0b6f369b19528285a278d967}{zone}, \hyperlink{definitions_8hpp_a03325a8a9d4f105db5e37dd587128142}{Side} \hyperlink{classChipChipArray_1_1Grabber_a8afbaefae7c767c862fd1bf13968539b}{side})
+\item 
+void \hyperlink{classChipChipArray_1_1Grabber_aacf089ceb4aa5b263c2cc702fb3daf74}{Close} ()
+\item 
+\hyperlink{definitions_8hpp_ab84ebabb02540c4a7ec341a213abf1dc}{Result} \hyperlink{classChipChipArray_1_1Grabber_a56639f8f9ba9468bce4b6d69ceb2eb54}{Load} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classChipChipArray_1_1Grabber_a09f89b79e745db18009a022e9bfacd3a}{Discard} ()
+\item 
+void \hyperlink{classChipChipArray_1_1Grabber_abecb4047b4f7d5a7e691b7fb581b5a39}{Extend} ()
+\item 
+void \hyperlink{classChipChipArray_1_1Grabber_af8e39e110dd0b73398727a0f07c5db40}{Grab} (\hyperlink{definitions_8hpp_abfc825e587f2bcba34a9e7a012e2ce2f}{Layer} layer, \hyperlink{definitions_8hpp_ac8e1b1f4bbac5914204c97f66f97d01f}{Block\+Position} pos=\hyperlink{definitions_8hpp_ac8e1b1f4bbac5914204c97f66f97d01fab1ca34f82e83c52b010f86955f264e05}{Block\+Position\+::\+Middle})
+\item 
+\hyperlink{classChipChipArray_1_1Block}{Block} \hyperlink{classChipChipArray_1_1Grabber_af49248c957a1695dcde79c0f5f8df99b}{Locate\+Blocks} (\hyperlink{definitions_8hpp_abc05a0f46084a3477cf5d5c939ff1436}{Color} color=\hyperlink{definitions_8hpp_abc05a0f46084a3477cf5d5c939ff1436a1e700ac224a6d34c5b171bb6f462aa41}{Color\+::\+Perrywinkle})
+\item 
+\hyperlink{classChipChipArray_1_1Block}{Block} \hyperlink{classChipChipArray_1_1Grabber_ab9b0d6a64b2c94c0d0f810a5ebeef6ec}{Locate\+Blue\+Block} ()
+\item 
+void \hyperlink{classChipChipArray_1_1Grabber_a2833eebf4e57078c0d677379babfd2d4}{Place} (\hyperlink{definitions_8hpp_abc05a0f46084a3477cf5d5c939ff1436}{Color} color)
+\item 
+void \hyperlink{classChipChipArray_1_1Grabber_a817de2b1ac4208fcbe983e919cede265}{Place} (\hyperlink{definitions_8hpp_abc05a0f46084a3477cf5d5c939ff1436}{Color} color, \hyperlink{definitions_8hpp_ac8e1b1f4bbac5914204c97f66f97d01f}{Block\+Position} pos)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classChipChipArray_1_1PiCamera}{Pi\+Camera} \hyperlink{classChipChipArray_1_1Grabber_a726bcc2367a719cb84de92a981947622}{cam}
+\item 
+\hyperlink{definitions_8hpp_a03325a8a9d4f105db5e37dd587128142}{Side} \hyperlink{classChipChipArray_1_1Grabber_a8afbaefae7c767c862fd1bf13968539b}{side}
+\item 
+\hyperlink{definitions_8hpp_adbd1e7a33d3e1751c7b2aa2562d0ecb9}{Zone} \hyperlink{classChipChipArray_1_1Grabber_ab57efe6e0b6f369b19528285a278d967}{zone}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class finds blocks, identifies them, and sorts them according to color, size, and zone. 
+
+Definition at line 29 of file Grabber.\+hpp.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classChipChipArray_1_1Grabber_a7333f40c135fbe92d59651f75032b4e7}{\index{Chip\+Chip\+Array\+::\+Grabber@{Chip\+Chip\+Array\+::\+Grabber}!Grabber@{Grabber}}
+\index{Grabber@{Grabber}!Chip\+Chip\+Array\+::\+Grabber@{Chip\+Chip\+Array\+::\+Grabber}}
+\subsubsection[{Grabber}]{\setlength{\rightskip}{0pt plus 5cm}Chip\+Chip\+Array\+::\+Grabber\+::\+Grabber (
+\begin{DoxyParamCaption}
+\item[{{\bf Zone}}]{zone, }
+\item[{{\bf Side}}]{side}
+\end{DoxyParamCaption}
+)}}\label{classChipChipArray_1_1Grabber_a7333f40c135fbe92d59651f75032b4e7}
+Initializes the class according to the side and zone and extends the robotic arm into position.
+
+
+\begin{DoxyParams}{Parameters}
+{\em zone} & the zone (A, B, or C) for which to pick up blocks.\\
+\hline
+{\em side} & the side from which the robot is moving and the position of the blocks (right or left) in the view of the camera to pick up first \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 167 of file Grabber.\+hpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=339pt]{classChipChipArray_1_1Grabber_a7333f40c135fbe92d59651f75032b4e7_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classChipChipArray_1_1Grabber_aacf089ceb4aa5b263c2cc702fb3daf74}{\index{Chip\+Chip\+Array\+::\+Grabber@{Chip\+Chip\+Array\+::\+Grabber}!Close@{Close}}
+\index{Close@{Close}!Chip\+Chip\+Array\+::\+Grabber@{Chip\+Chip\+Array\+::\+Grabber}}
+\subsubsection[{Close}]{\setlength{\rightskip}{0pt plus 5cm}void Chip\+Chip\+Array\+::\+Grabber\+::\+Close (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classChipChipArray_1_1Grabber_aacf089ceb4aa5b263c2cc702fb3daf74}
+Closes the \hyperlink{classChipChipArray_1_1Grabber}{Grabber}. Retracts the arm and closes the camera. 
+
+Definition at line 190 of file Grabber.\+hpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classChipChipArray_1_1Grabber_aacf089ceb4aa5b263c2cc702fb3daf74_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=275pt]{classChipChipArray_1_1Grabber_aacf089ceb4aa5b263c2cc702fb3daf74_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classChipChipArray_1_1Grabber_a09f89b79e745db18009a022e9bfacd3a}{\index{Chip\+Chip\+Array\+::\+Grabber@{Chip\+Chip\+Array\+::\+Grabber}!Discard@{Discard}}
+\index{Discard@{Discard}!Chip\+Chip\+Array\+::\+Grabber@{Chip\+Chip\+Array\+::\+Grabber}}
+\subsubsection[{Discard}]{\setlength{\rightskip}{0pt plus 5cm}void Chip\+Chip\+Array\+::\+Grabber\+::\+Discard (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classChipChipArray_1_1Grabber_a09f89b79e745db18009a022e9bfacd3a}
+Takes block currently in the arm's pinchers and places to side of robot opposite the loading zone. 
+
+Definition at line 195 of file Grabber.\+hpp.
+
+\hypertarget{classChipChipArray_1_1Grabber_abecb4047b4f7d5a7e691b7fb581b5a39}{\index{Chip\+Chip\+Array\+::\+Grabber@{Chip\+Chip\+Array\+::\+Grabber}!Extend@{Extend}}
+\index{Extend@{Extend}!Chip\+Chip\+Array\+::\+Grabber@{Chip\+Chip\+Array\+::\+Grabber}}
+\subsubsection[{Extend}]{\setlength{\rightskip}{0pt plus 5cm}void Chip\+Chip\+Array\+::\+Grabber\+::\+Extend (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classChipChipArray_1_1Grabber_abecb4047b4f7d5a7e691b7fb581b5a39}
+Sets arm to generic position roughly right above a stack of blocks. 
+
+Definition at line 199 of file Grabber.\+hpp.
+
+\hypertarget{classChipChipArray_1_1Grabber_af8e39e110dd0b73398727a0f07c5db40}{\index{Chip\+Chip\+Array\+::\+Grabber@{Chip\+Chip\+Array\+::\+Grabber}!Grab@{Grab}}
+\index{Grab@{Grab}!Chip\+Chip\+Array\+::\+Grabber@{Chip\+Chip\+Array\+::\+Grabber}}
+\subsubsection[{Grab}]{\setlength{\rightskip}{0pt plus 5cm}void Chip\+Chip\+Array\+::\+Grabber\+::\+Grab (
+\begin{DoxyParamCaption}
+\item[{{\bf Layer}}]{layer, }
+\item[{{\bf Block\+Position}}]{pos = {\ttfamily {\bf Block\+Position\+::\+Middle}}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classChipChipArray_1_1Grabber_af8e39e110dd0b73398727a0f07c5db40}
+Picks up block.
+
+
+\begin{DoxyParams}{Parameters}
+{\em layer} & whether the block is on the top of the stack or the bottom\\
+\hline
+{\em pos} & whether the (half-\/)block is closer to the robot (F\+R\+O\+N\+T) or farther away (B\+A\+C\+K). M\+I\+D\+D\+L\+E indicates a whole block. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 203 of file Grabber.\+hpp.
+
+\hypertarget{classChipChipArray_1_1Grabber_a56639f8f9ba9468bce4b6d69ceb2eb54}{\index{Chip\+Chip\+Array\+::\+Grabber@{Chip\+Chip\+Array\+::\+Grabber}!Load@{Load}}
+\index{Load@{Load}!Chip\+Chip\+Array\+::\+Grabber@{Chip\+Chip\+Array\+::\+Grabber}}
+\subsubsection[{Load}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Result} Chip\+Chip\+Array\+::\+Grabber\+::\+Load (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classChipChipArray_1_1Grabber_a56639f8f9ba9468bce4b6d69ceb2eb54}
+Loads a block(s) (if possible) at the robot's current position.
+
+\begin{DoxyReturn}{Returns}
+the number of half and whole blocks loaded 
+\end{DoxyReturn}
+
+
+Definition at line 207 of file Grabber.\+hpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classChipChipArray_1_1Grabber_a56639f8f9ba9468bce4b6d69ceb2eb54_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=275pt]{classChipChipArray_1_1Grabber_a56639f8f9ba9468bce4b6d69ceb2eb54_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classChipChipArray_1_1Grabber_af49248c957a1695dcde79c0f5f8df99b}{\index{Chip\+Chip\+Array\+::\+Grabber@{Chip\+Chip\+Array\+::\+Grabber}!Locate\+Blocks@{Locate\+Blocks}}
+\index{Locate\+Blocks@{Locate\+Blocks}!Chip\+Chip\+Array\+::\+Grabber@{Chip\+Chip\+Array\+::\+Grabber}}
+\subsubsection[{Locate\+Blocks}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Block} Chip\+Chip\+Array\+::\+Grabber\+::\+Locate\+Blocks (
+\begin{DoxyParamCaption}
+\item[{{\bf Color}}]{color = {\ttfamily {\bf Color\+::\+Perrywinkle}}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classChipChipArray_1_1Grabber_af49248c957a1695dcde79c0f5f8df99b}
+
+
+Definition at line 295 of file Grabber.\+hpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classChipChipArray_1_1Grabber_af49248c957a1695dcde79c0f5f8df99b_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classChipChipArray_1_1Grabber_af49248c957a1695dcde79c0f5f8df99b_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classChipChipArray_1_1Grabber_ab9b0d6a64b2c94c0d0f810a5ebeef6ec}{\index{Chip\+Chip\+Array\+::\+Grabber@{Chip\+Chip\+Array\+::\+Grabber}!Locate\+Blue\+Block@{Locate\+Blue\+Block}}
+\index{Locate\+Blue\+Block@{Locate\+Blue\+Block}!Chip\+Chip\+Array\+::\+Grabber@{Chip\+Chip\+Array\+::\+Grabber}}
+\subsubsection[{Locate\+Blue\+Block}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Block} Chip\+Chip\+Array\+::\+Grabber\+::\+Locate\+Blue\+Block (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classChipChipArray_1_1Grabber_ab9b0d6a64b2c94c0d0f810a5ebeef6ec}
+
+
+Definition at line 461 of file Grabber.\+hpp.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classChipChipArray_1_1Grabber_ab9b0d6a64b2c94c0d0f810a5ebeef6ec_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classChipChipArray_1_1Grabber_ab9b0d6a64b2c94c0d0f810a5ebeef6ec_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classChipChipArray_1_1Grabber_a2833eebf4e57078c0d677379babfd2d4}{\index{Chip\+Chip\+Array\+::\+Grabber@{Chip\+Chip\+Array\+::\+Grabber}!Place@{Place}}
+\index{Place@{Place}!Chip\+Chip\+Array\+::\+Grabber@{Chip\+Chip\+Array\+::\+Grabber}}
+\subsubsection[{Place}]{\setlength{\rightskip}{0pt plus 5cm}void Chip\+Chip\+Array\+::\+Grabber\+::\+Place (
+\begin{DoxyParamCaption}
+\item[{{\bf Color}}]{color}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classChipChipArray_1_1Grabber_a2833eebf4e57078c0d677379babfd2d4}
+Puts block in slot according to color. Zones B and C only.
+
+
+\begin{DoxyParams}{Parameters}
+{\em the} & slot into which to place the block \\
+\hline
+\end{DoxyParams}
+\hypertarget{classChipChipArray_1_1Grabber_a817de2b1ac4208fcbe983e919cede265}{\index{Chip\+Chip\+Array\+::\+Grabber@{Chip\+Chip\+Array\+::\+Grabber}!Place@{Place}}
+\index{Place@{Place}!Chip\+Chip\+Array\+::\+Grabber@{Chip\+Chip\+Array\+::\+Grabber}}
+\subsubsection[{Place}]{\setlength{\rightskip}{0pt plus 5cm}void Chip\+Chip\+Array\+::\+Grabber\+::\+Place (
+\begin{DoxyParamCaption}
+\item[{{\bf Color}}]{color, }
+\item[{{\bf Block\+Position}}]{pos}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classChipChipArray_1_1Grabber_a817de2b1ac4208fcbe983e919cede265}
+Puts half-\/blocks in the unloader according to whether there is already a half-\/block in the corresponding slot. Zone B only.
+
+
+\begin{DoxyParams}{Parameters}
+{\em color} & the slot into which to place the block\\
+\hline
+{\em pos} & the block position (F\+R\+O\+N\+T/\+B\+A\+C\+K). B\+A\+C\+K denotes there is already a half-\/block stored in the slot, as the F\+R\+O\+N\+T blocks are picked up first. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classChipChipArray_1_1Grabber_a726bcc2367a719cb84de92a981947622}{\index{Chip\+Chip\+Array\+::\+Grabber@{Chip\+Chip\+Array\+::\+Grabber}!cam@{cam}}
+\index{cam@{cam}!Chip\+Chip\+Array\+::\+Grabber@{Chip\+Chip\+Array\+::\+Grabber}}
+\subsubsection[{cam}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Pi\+Camera} Chip\+Chip\+Array\+::\+Grabber\+::cam\hspace{0.3cm}{\ttfamily [protected]}}}\label{classChipChipArray_1_1Grabber_a726bcc2367a719cb84de92a981947622}
+The Raspicam 
+
+Definition at line 63 of file Grabber.\+hpp.
+
+\hypertarget{classChipChipArray_1_1Grabber_a8afbaefae7c767c862fd1bf13968539b}{\index{Chip\+Chip\+Array\+::\+Grabber@{Chip\+Chip\+Array\+::\+Grabber}!side@{side}}
+\index{side@{side}!Chip\+Chip\+Array\+::\+Grabber@{Chip\+Chip\+Array\+::\+Grabber}}
+\subsubsection[{side}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Side} Chip\+Chip\+Array\+::\+Grabber\+::side\hspace{0.3cm}{\ttfamily [protected]}}}\label{classChipChipArray_1_1Grabber_a8afbaefae7c767c862fd1bf13968539b}
+The side from which the robot is coming (i.\+e., the side where the higher priority blocks are to be picked up. 
+
+Definition at line 70 of file Grabber.\+hpp.
+
+\hypertarget{classChipChipArray_1_1Grabber_ab57efe6e0b6f369b19528285a278d967}{\index{Chip\+Chip\+Array\+::\+Grabber@{Chip\+Chip\+Array\+::\+Grabber}!zone@{zone}}
+\index{zone@{zone}!Chip\+Chip\+Array\+::\+Grabber@{Chip\+Chip\+Array\+::\+Grabber}}
+\subsubsection[{zone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Zone} Chip\+Chip\+Array\+::\+Grabber\+::zone\hspace{0.3cm}{\ttfamily [protected]}}}\label{classChipChipArray_1_1Grabber_ab57efe6e0b6f369b19528285a278d967}
+The boat zone 
+
+Definition at line 75 of file Grabber.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{Grabber_8hpp}{Grabber.\+hpp}\end{DoxyCompactItemize}

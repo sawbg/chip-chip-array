@@ -1,0 +1,6 @@
+<map id="ChipChipArray::Arm::RightGripper" name="ChipChipArray::Arm::RightGripper">
+<area shape="rect" id="node2" href="$classChipChipArray_1_1Arm.html#abb33b5bb11034554d632f8c9b95b2c44" title="ChipChipArray::Arm\l::ClawOpen" alt="" coords="192,5,331,47"/>
+<area shape="rect" id="node5" href="$classChipChipArray_1_1Arm.html#a20c6fe3fe79c16f492a8c18b91427080" title="ChipChipArray::Arm\l::ClawClose" alt="" coords="192,71,331,112"/>
+<area shape="rect" id="node3" href="$classChipChipArray_1_1Grabber.html#a56639f8f9ba9468bce4b6d69ceb2eb54" title="ChipChipArray::Grabber\l::Load" alt="" coords="379,39,540,80"/>
+<area shape="rect" id="node4" href="$loading__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="588,46,639,73"/>
+</map>

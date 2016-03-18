@@ -1,3 +1,7 @@
 <map id="ChipChipArray::Log::Debug" name="ChipChipArray::Log::Debug">
-<area shape="rect" id="node2" href="$log__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="189,13,240,39"/>
+<area shape="rect" id="node2" href="$classChipChipArray_1_1Grabber.html#af49248c957a1695dcde79c0f5f8df99b" title="ChipChipArray::Grabber\l::LocateBlocks" alt="" coords="189,5,351,47"/>
+<area shape="rect" id="node5" href="$classChipChipArray_1_1Grabber.html#ab9b0d6a64b2c94c0d0f810a5ebeef6ec" title="ChipChipArray::Grabber\l::LocateBlueBlock" alt="" coords="189,71,351,112"/>
+<area shape="rect" id="node6" href="$log__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="245,137,295,163"/>
+<area shape="rect" id="node3" href="$classChipChipArray_1_1Grabber.html#a56639f8f9ba9468bce4b6d69ceb2eb54" title="ChipChipArray::Grabber\l::Load" alt="" coords="399,39,560,80"/>
+<area shape="rect" id="node4" href="$loading__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="608,46,659,73"/>
 </map>

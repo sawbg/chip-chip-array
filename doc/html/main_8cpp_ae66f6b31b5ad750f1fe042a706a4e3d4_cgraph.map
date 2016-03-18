@@ -1,9 +1,11 @@
 <map id="main" name="main">
-<area shape="rect" id="node2" href="$Servo__Position__Shell_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d" title="setup" alt="" coords="137,78,192,105"/>
-<area shape="rect" id="node6" href="$Servo__Position__Shell_8cpp.html#abd2cd3c2e36d42a2178a6f2fd12af905" title="setServoPosition" alt="" coords="104,133,225,159"/>
-<area shape="rect" id="node3" href="$classAdafruit__PWMServoDriver.html#aef401eaad3c34222ac916eb7bd936bc2" title="Adafruit_PWMServoDriver\l::begin" alt="" coords="273,5,449,47"/>
-<area shape="rect" id="node5" href="$classAdafruit__PWMServoDriver.html#a0ef6f1e3c81aebbd1d1da1bb12f3ed5c" title="Adafruit_PWMServoDriver\l::setPWMFreq" alt="" coords="273,71,449,112"/>
-<area shape="rect" id="node4" href="$classAdafruit__PWMServoDriver.html#ac976f52233a75a4bd0eb6f2ce9b82b7f" title="Adafruit_PWMServoDriver\l::reset" alt="" coords="497,5,673,47"/>
-<area shape="rect" id="node7" href="$Servo__Position__Shell_8cpp.html#a7f07c548295f3696f8881f0c9de708b1" title="setServoPulse" alt="" coords="308,137,415,163"/>
-<area shape="rect" id="node8" href="$classAdafruit__PWMServoDriver.html#a724a7fc39c6fba34478ecc0eea038bd3" title="Adafruit_PWMServoDriver\l::setPWM" alt="" coords="497,129,673,171"/>
+<area shape="rect" id="node2" href="$Servo__Position__Shell_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d" title="setup" alt="" coords="147,78,202,105"/>
+<area shape="rect" id="node6" href="$Servo__Position__Shell_8cpp.html#abd2cd3c2e36d42a2178a6f2fd12af905" title="setServoPosition" alt="" coords="114,133,235,159"/>
+<area shape="rect" id="node9" href="$NavigationControl_8cpp.html#acb338a668bf01ea34c27c56db0d23782" title="navigationSetup" alt="" coords="117,183,232,210"/>
+<area shape="rect" id="node10" href="$NavigationControl_8cpp.html#a7534ad4cfb2b6663c3a1d15bb41bd71d" title="commandNavigation" alt="" coords="104,234,245,261"/>
+<area shape="rect" id="node3" href="$classAdafruit__PWMServoDriver.html#aef401eaad3c34222ac916eb7bd936bc2" title="Adafruit_PWMServoDriver\l::begin" alt="" coords="293,5,469,47"/>
+<area shape="rect" id="node5" href="$classAdafruit__PWMServoDriver.html#a0ef6f1e3c81aebbd1d1da1bb12f3ed5c" title="Adafruit_PWMServoDriver\l::setPWMFreq" alt="" coords="293,71,469,112"/>
+<area shape="rect" id="node4" href="$classAdafruit__PWMServoDriver.html#ac976f52233a75a4bd0eb6f2ce9b82b7f" title="Adafruit_PWMServoDriver\l::reset" alt="" coords="517,5,693,47"/>
+<area shape="rect" id="node7" href="$Servo__Position__Shell_8cpp.html#a7f07c548295f3696f8881f0c9de708b1" title="setServoPulse" alt="" coords="328,137,435,163"/>
+<area shape="rect" id="node8" href="$classAdafruit__PWMServoDriver.html#a724a7fc39c6fba34478ecc0eea038bd3" title="Adafruit_PWMServoDriver\l::setPWM" alt="" coords="517,129,693,171"/>
 </map>

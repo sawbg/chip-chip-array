@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['no_5fblocks',['No_Blocks',['../definitions_8hpp.html#ab84ebabb02540c4a7ec341a213abf1dca32075034997ab91e886dbcad47ed902d',1,'definitions.hpp']]],
-  ['no_5fhalves',['No_Halves',['../definitions_8hpp.html#ab84ebabb02540c4a7ec341a213abf1dcabdf267b7c95f2ffd040b32d8b005e9a0',1,'definitions.hpp']]]
+  ['noblocks',['NoBlocks',['../definitions_8hpp.html#ab84ebabb02540c4a7ec341a213abf1dca12c5f407936267bec3be17733df1beff',1,'definitions.hpp']]],
+  ['nohalves',['NoHalves',['../definitions_8hpp.html#ab84ebabb02540c4a7ec341a213abf1dca06b966627c5d1aa7dc2cd8fd36d62c98',1,'definitions.hpp']]]
 ];

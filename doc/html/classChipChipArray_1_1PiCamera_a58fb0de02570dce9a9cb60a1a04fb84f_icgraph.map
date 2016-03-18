@@ -1,6 +1,10 @@
 <map id="ChipChipArray::PiCamera::Snap" name="ChipChipArray::PiCamera::Snap">
-<area shape="rect" id="node2" href="$namespaceChipChipArray.html#a7fc3d1edffca11531cd09fdab7c8b88d" title="ChipChipArray::main" alt="" coords="238,5,381,32"/>
-<area shape="rect" id="node3" href="$cv__shape_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="284,56,335,83"/>
-<area shape="rect" id="node4" href="$namespaceChipChipArray.html#a6c7465049b5d408e1a238b6d8ffa887d" title="ChipChipArray::ScanQR" alt="" coords="227,107,392,133"/>
-<area shape="rect" id="node5" href="$qr__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="440,107,491,133"/>
+<area shape="rect" id="node2" href="$cv__channel__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="284,5,335,32"/>
+<area shape="rect" id="node3" href="$namespaceChipChipArray.html#a7fc3d1edffca11531cd09fdab7c8b88d" title="ChipChipArray::main" alt="" coords="238,56,381,83"/>
+<area shape="rect" id="node4" href="$classChipChipArray_1_1Grabber.html#af49248c957a1695dcde79c0f5f8df99b" title="ChipChipArray::Grabber\l::LocateBlocks" alt="" coords="229,107,390,149"/>
+<area shape="rect" id="node7" href="$classChipChipArray_1_1Grabber.html#ab9b0d6a64b2c94c0d0f810a5ebeef6ec" title="ChipChipArray::Grabber\l::LocateBlueBlock" alt="" coords="229,173,390,214"/>
+<area shape="rect" id="node8" href="$namespaceChipChipArray.html#a6c7465049b5d408e1a238b6d8ffa887d" title="ChipChipArray::ScanQR" alt="" coords="227,239,392,265"/>
+<area shape="rect" id="node5" href="$classChipChipArray_1_1Grabber.html#a56639f8f9ba9468bce4b6d69ceb2eb54" title="ChipChipArray::Grabber\l::Load" alt="" coords="440,141,601,182"/>
+<area shape="rect" id="node6" href="$loading__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="649,148,700,175"/>
+<area shape="rect" id="node9" href="$qr__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="495,239,546,265"/>
 </map>

@@ -1,11 +1,11 @@
 <map id="src/Grabber.hpp" name="src/Grabber.hpp">
-<area shape="rect" id="node7" href="$Arm_8hpp.html" title="contains the Arm class used to control the robotic arm " alt="" coords="388,80,459,107"/>
-<area shape="rect" id="node8" href="$definitions_8hpp.html" title="definitions.hpp" alt="" coords="910,155,1017,181"/>
-<area shape="rect" id="node9" href="$Servo__Position__Shell_8cpp.html" title="Servo_Position_Shell.cpp" alt="" coords="265,155,435,181"/>
-<area shape="rect" id="node21" href="$Block_8hpp.html" title="Block.hpp" alt="" coords="1126,80,1206,107"/>
-<area shape="rect" id="node23" href="$Log_8hpp.html" title="Log.hpp" alt="" coords="805,80,873,107"/>
-<area shape="rect" id="node27" href="$PiCamera_8hpp.html" title="PiCamera.hpp" alt="" coords="1260,80,1365,107"/>
-<area shape="rect" id="node11" href="$Adafruit__PWMServoDriver_8h.html" title="Adafruit_PWMServoDriver.h" alt="" coords="265,304,451,331"/>
-<area shape="rect" id="node19" href="$Adafruit__PWMServoDriver_8cpp.html" title="Adafruit_PWMServoDriver.cpp" alt="" coords="199,229,400,256"/>
-<area shape="rect" id="node20" href="$Servo__Position__Shell_8h.html" title="Servo_Position_Shell.h" alt="" coords="82,304,239,331"/>
+<area shape="rect" id="node9" href="$Arm_8hpp.html" title="Arm.hpp" alt="" coords="1153,80,1223,107"/>
+<area shape="rect" id="node10" href="$definitions_8hpp.html" title="definitions.hpp" alt="" coords="773,155,880,181"/>
+<area shape="rect" id="node22" href="$Block_8hpp.html" title="Block.hpp" alt="" coords="659,80,739,107"/>
+<area shape="rect" id="node24" href="$Log_8hpp.html" title="Log.hpp" alt="" coords="909,80,977,107"/>
+<area shape="rect" id="node28" href="$PiCamera_8hpp.html" title="PiCamera.hpp" alt="" coords="470,80,575,107"/>
+<area shape="rect" id="node11" href="$Servo__Position__Shell_8cpp.html" title="Servo_Position_Shell.cpp" alt="" coords="1280,155,1451,181"/>
+<area shape="rect" id="node13" href="$Adafruit__PWMServoDriver_8cpp.html" title="Adafruit_PWMServoDriver.cpp" alt="" coords="1105,229,1306,256"/>
+<area shape="rect" id="node21" href="$Servo__Position__Shell_8h.html" title="Servo_Position_Shell.h" alt="" coords="841,304,999,331"/>
+<area shape="rect" id="node14" href="$Adafruit__PWMServoDriver_8h.html" title="Adafruit_PWMServoDriver.h" alt="" coords="1023,304,1209,331"/>
 </map>

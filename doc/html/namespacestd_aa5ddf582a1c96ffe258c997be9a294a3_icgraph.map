@@ -1,5 +1,10 @@
 <map id="std::to_string" name="std::to_string">
 <area shape="rect" id="node2" href="$cv__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="209,5,260,32"/>
-<area shape="rect" id="node3" href="$namespaceChipChipArray.html#a6c7465049b5d408e1a238b6d8ffa887d" title="ChipChipArray::ScanQR" alt="" coords="152,56,317,83"/>
-<area shape="rect" id="node4" href="$qr__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="365,56,416,83"/>
+<area shape="rect" id="node3" href="$classChipChipArray_1_1Grabber.html#a7333f40c135fbe92d59651f75032b4e7" title="ChipChipArray::Grabber\l::Grabber" alt="" coords="154,57,315,98"/>
+<area shape="rect" id="node4" href="$classChipChipArray_1_1Grabber.html#af49248c957a1695dcde79c0f5f8df99b" title="ChipChipArray::Grabber\l::LocateBlocks" alt="" coords="154,122,315,163"/>
+<area shape="rect" id="node7" href="$classChipChipArray_1_1Grabber.html#ab9b0d6a64b2c94c0d0f810a5ebeef6ec" title="ChipChipArray::Grabber\l::LocateBlueBlock" alt="" coords="154,187,315,229"/>
+<area shape="rect" id="node8" href="$namespaceChipChipArray.html#a6c7465049b5d408e1a238b6d8ffa887d" title="ChipChipArray::ScanQR" alt="" coords="152,253,317,280"/>
+<area shape="rect" id="node5" href="$classChipChipArray_1_1Grabber.html#a56639f8f9ba9468bce4b6d69ceb2eb54" title="ChipChipArray::Grabber\l::Load" alt="" coords="365,155,527,197"/>
+<area shape="rect" id="node6" href="$loading__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="575,163,625,189"/>
+<area shape="rect" id="node9" href="$qr__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="421,253,471,280"/>
 </map>
