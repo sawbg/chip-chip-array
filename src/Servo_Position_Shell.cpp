@@ -77,10 +77,10 @@ void setServoPosition(Servo whichservo, int position) {
     double digitalservolow = 0.9;
     // left gripper servo 5
     double gripleftopen = 2.2;
-    double gripleftclose = 1.35;
+    double gripleftclose = 1.3;
     // right gripper servo 6
     double griprightopen = 2.2;
-    double griprightclose = 1.35;
+    double griprightclose = 1.3;
     double pulse;
 
     switch (whichservo) {
