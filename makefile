@@ -13,6 +13,10 @@ arm:
 block-test:
 	$(GCC) src/cv_shape.cpp -o bin/cvshape $(CVFLAGS) $(CPPFLAGS)
 
+channel-test:
+	$(GCC) src/cv_channel_test.cpp -o bin/channeltest $(CVFLAGS) $(CPPFLAGS)
+
+
 comp:
 	$(GCC) src/main.cpp -o bin/main $(CVFLAGS) $(CPPFLAGS) $(LOG)
 
