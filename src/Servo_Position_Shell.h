@@ -9,11 +9,12 @@
 #define	SERVO_POSITION_SHELL_H
 
 
-#ifndef uint8_t
-#define uint8_t unsigned char
-#endif
 
+#include <wiringPi.h>
+#include "Adafruit_PWMServoDriver.h"
+#include <iostream>
 #include <ctype.h>
+#include <cstdint>
 
 /** Defines each of the servos on the robot.
  */
@@ -28,11 +29,11 @@ enum Servo{
     GATE_1 = 7,
     GATE_2 = 8,
     GATE_3 = 9,
-    GATE_4 = 10,
-    LIFT_1 = 11,
-    LIFT_2 = 12,
-    LIFT_3 = 13,
-    LIFT_4 = 14
+    LIFT_1 = 10,
+    LIFT_2 = 11,
+    LIFT_3 = 12,
+    LIFT_4 = 13,
+    GATE_4 = 14
 };
 
 #ifdef __cplusplus

@@ -18,7 +18,7 @@ channel-test:
 
 
 comp:
-	$(GCC) src/main.cpp -o bin/main $(CVFLAGS) $(CPPFLAGS) $(LOG)
+	$(GCC) src/main.cpp -o bin/main $(CVFLAGS) $(CPPFLAGS) $(ARM) -lpthread
 
 configure:
 	sudo apt-get install -y libopencv-dev libzbar-dev cmake doxygen libgl1-meda-dri

@@ -74,9 +74,9 @@ namespace ChipChipArray {
 			 */
 			Zone zone;
 
-/**
- *
- */
+			/**
+			 *
+			 */
 			void Deposit(Color color = Color::Blue);
 
 			/**
@@ -199,22 +199,22 @@ namespace ChipChipArray {
 
 	void Grabber::Deposit(Color color) {
 		if(color == Color::Blue) {
-				arm.ClawClose();
-				sleep(1);
-				arm.BaseTilt(160);
-				sleep(1);
-				arm.Elbow(130);
-				sleep(1);
-				arm.BaseTurn(47);
-				sleep(1);
-				arm.ClawOpen();
-				sleep(1);
+			arm.ClawClose();
+			sleep(1);
+			arm.BaseTilt(160);
+			sleep(1);
+			arm.Elbow(130);
+			sleep(1);
+			arm.BaseTurn(47);
+			sleep(1);
+			arm.ClawOpen();
+			sleep(1);
 		} else {
 			throw std::runtime_error("Du Idiot! Die Armbewegungen für diese "
 					"Farbe sind noch nicht implementiert. Vielleicht sollst "
 					"du die englische Phrase lernen 'Would you like fries "
 					"with that?");
-					}
+		}
 	}
 
 	void Grabber::Extend() {
@@ -233,10 +233,10 @@ namespace ChipChipArray {
 	}
 
 	Result Grabber::Load() {
-		try {
-			for(uint8 i = 0; i < 2; i++) {
-				Extend();
+		for(uint8 i = 0; i < 2; i++) {
+			Extend();
 
+			try {
 				Block block = (zone == Zone::A)
 					? LocateBlocks(Color::Blue) : LocateBlueBlock();
 
@@ -260,30 +260,29 @@ namespace ChipChipArray {
 				// deposit in bin
 				sleep(1);
 				Deposit();
-
-				if(i == 0) {
-					arm.BaseTurn(132);
-				} else {
-					arm.BaseTurn(135);
-					sleep(1);
-					arm.BaseTilt(180);
-					sleep(1);
-					arm.Elbow(90);
-					sleep(1);
-					arm.Elbow(45);
-					sleep(1);
-					arm.Elbow(0);
-				}
-
+			} catch(std::exception ex) {
+				log.Error(std::string("An exception occured attempting "
+							"to load the blocks in function Grabber::Load(): ") 
+						+ ex.what());
 			}
 
-		} catch(std::exception ex) {
-			log.Error(std::string("An exception occured attempting "
-						"to load the blocks in function Grabber::Load(): ") 
-					+ ex.what());
-			return Result::NoBlocks;
+
+			if(i == 0) {
+				arm.BaseTurn(132);
+			} else {
+				arm.BaseTurn(135);
+				sleep(1);
+				arm.BaseTilt(180);
+				sleep(1);
+				arm.Elbow(90);
+				sleep(1);
+				arm.Elbow(45);
+				sleep(1);
+				arm.Elbow(0);
+			}
 		}
 	}
+
 
 	Block Grabber::LocateBlocks(Color color) {
 		invokeCount++;
