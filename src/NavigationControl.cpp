@@ -1,10 +1,8 @@
-/*
- * File: NavigationControl.cpp
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * @file
+ * @author Nickolas Neely
+ * @brief Contains the navigation control function definitions.
  */
-
 
 #include "NavigationControl.h"
     

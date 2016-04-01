@@ -1,6 +1,7 @@
 /**
+ * @file
  * @author Samuel Andrew Wisner, awisner94@gmail.com
- * @brief contains test program for ScanQR() function
+ * @brief Contains test program for ScanQR() function.
  */
 
 #include <iostream>

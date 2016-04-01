@@ -1,6 +1,7 @@
 /**
+ * @file
  * @author Samuel Andrew Wisner, awisner94@gmail.com
- * @brief contains a program that tests Jacob's yellow-detection algorithm
+ * @brief Contains a program that tests Jacob's yellow-detection algorithm.
  */
 
 #include <iostream>

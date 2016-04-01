@@ -1,6 +1,7 @@
 /**
+ * @file
  * @author Samuel Andrew Wisner, awisner94@gmail.com
- * @brief contains Log class
+ * @brief Contains Log class.
  */
 
 #ifndef Log_H

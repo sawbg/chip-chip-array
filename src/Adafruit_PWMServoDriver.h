@@ -1,3 +1,11 @@
+/**
+ * @file
+ * @author Limor Fried/Ladyada
+ * @author Nickolas Neely
+ * @bief Contains the function and class headers necessary for the PWM servo
+ * driver.
+ */
+
 /* File: Adafruit_PWMServoDriver.h
  * Credit to Limor Fried/Ladyada for PWM servo driver code. 
  * Editted by: Nickolas Neely for ChipChipArray Raspberry Pi 

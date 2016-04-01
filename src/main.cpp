@@ -1,3 +1,10 @@
+/**
+ * @file
+ * @author Nickolas Neely
+ * @brief Contains the main() function to the whole project.
+ * @date 1. February 2016, 8:20 AM
+ */
+
 /* 
  * File:   main.cpp
  * Author: Nick
@@ -38,6 +45,9 @@ int unloadtheblocks;
 int giveitasec;
 int startloadingthread;
 
+/**
+ * The main() project program function.
+ */
 int main() {
 
 initialization();

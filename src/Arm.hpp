@@ -1,6 +1,7 @@
 /**
+ * @file
  * @author Samuel Andrew Wisner, awisner94@gmail.com
- * @brief contains the Arm class used to control the robotic arm
+ * @brief Contains the Arm class used to control the robotic arm.
  */
 
 #ifndef Arm_H
@@ -47,12 +48,14 @@ namespace ChipChipArray {
 			void BaseTurn(uint8 a);
 
 			/**
-			 *
+			 * Opens the claw completely (within safe limits).
 			 */
 			void ClawOpen();
 
 			/**
-			 *
+			 * Closes the claw enough to hold a block in place during movement
+			 * but does not attempt to completely close the claw in order ot
+			 * prevent unnecessary strain on the servos.
 			 */
 			void ClawClose();
 

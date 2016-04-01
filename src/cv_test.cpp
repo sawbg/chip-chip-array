@@ -1,7 +1,7 @@
 /**
  * @file
  * @author Samuel Andrew Wisner, awisner94@gmail.com
- * @brief contains program used to test PiCamera class
+ * @brief Contains program used to test PiCamera class.
  */
 
 #include <iostream>

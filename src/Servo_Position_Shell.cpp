@@ -1,3 +1,10 @@
+/**
+ * @file
+ * @author Nickolas Neely
+ * @date 8. February 2016, 12:05 PM
+ * @brief COntains the function definitions for the servo position shell.
+ */
+
 /* 
  * File:   Servo_Position_Shell.cpp
  * Author: Nickolas Neely

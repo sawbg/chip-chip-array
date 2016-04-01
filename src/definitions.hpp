@@ -1,6 +1,7 @@
 /**
+ * @file
  * @author Samuel Andrew Wisner, awisner94@gmail.com
- * @brief contains definitions for architecture-independant numeric variables,
+ * @brief Contains definitions for architecture-independant numeric variables,
  * enumerations and enumerated classes, and #define'd constants, and to_sting()
  * overloads for the enumerated classes.
  */
@@ -197,5 +198,26 @@ namespace std {
 		return string(1, (char)zone);
 	}
 }
+
+// OTHER FILES
+
+/**
+ * @file makefile
+ * @author Samuel Andrew Wisner, awisner94@gmail.com
+ * @brief Project makefile containing recipes for compiling the actual
+ * application, test applications, and generating documentation.
+ */
+
+/**
+ * @file README.md
+ * @author Samuel Andrew Wisner, awisner94@gmail.com
+ * @brief Project README, which doesn't contain a whole lot.
+ */
+
+/**
+ * @file doxygen.config
+ * @author Samuel Andrew Wisner, awisner94@gmail.com
+ * @brief Doxygen configuration file.
+ */
 
 #endif

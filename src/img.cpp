@@ -1,6 +1,7 @@
 /**
+ * @file
  * @author Samuel Andrew Wisner, awisner94@gmail.com
- * @brief contains a program to display the current camera image
+ * @brief Contains a program to display the current camera image.
  *  */
 
 #include <iostream>

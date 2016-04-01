@@ -1,7 +1,8 @@
-/*
+/**
+ * @file
  * @author Michael Young
  * @author Samuel Andrew Wisner, awisner94@gmail.com
- * @brief contains test program for reading QR codes
+ * @brief Contains test program for reading QR codes.
  */
 
 #include <opencv2/highgui/highgui.hpp>

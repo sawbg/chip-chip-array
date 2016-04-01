@@ -1,6 +1,7 @@
 /**
+ * @file
  * @author Samuel Andrew Wisner, awisner94@gmail.com
- * @brief contains the Grabber class
+ * @brief Contains the Grabber class.
  */
 
 #ifndef Grabber_H
@@ -70,20 +71,14 @@ namespace ChipChipArray {
 			Side side;
 
 			/**
-			 * The boat zone
+			 * The zone in which blocks are being loaded.
 			 */
 			Zone zone;
 
 			/**
-			 *
+			 * Deposits blocks in the storage/unloading unit.
 			 */
 			void Deposit(Color color = Color::Blue);
-
-			/**
-			 * Takes block currently in the arm's pinchers and
-			 * places to side of robot opposite the loading zone.
-			 */
-			void Discard();
 
 			/**
 			 * Sets arm to generic position roughly right above a
@@ -92,47 +87,23 @@ namespace ChipChipArray {
 			void Extend();
 
 			/**
-			 * Picks up block.
+			 * Loads a stack of blocks for all zones. Does multiple colors and
+			 * both sizes.
 			 *
-			 * @param layer whether the block is on the top of the stack or the
-			 * bottom
+			 * @param color the color block for which to search. Perrywinkle
+			 * denotes searching for all colors (because who actually knows what
+			 * color perrywinkle is?).
 			 *
-			 * @param pos whether the (half-)block is closer to the
-			 * robot (FRONT) or farther away (BACK). MIDDLE indicates a whole
-			 * block.
-			 */
-			void Grab(Layer layer, BlockPosition pos = BlockPosition::Middle);
-
-			/**
-			 *
+			 * @return Block instance representing the block found
 			 */
 			Block LocateBlocks(Color color = Color::Perrywinkle);
 
 			/**
+			 * Finds whole, blue blocks.
 			 *
+			 * @return Block instance representing the block found
 			 */
 			Block LocateBlueBlock();
-
-			/**
-			 * Puts block in slot according to color. Zones B and C
-			 * only.
-			 *
-			 * @param the slot into which to place the block
-			 */
-			void Place(Color color);
-
-			/**
-			 * Puts half-blocks in the unloader according to whether
-			 * there is already a half-block in the corresponding
-			 * slot. Zone B only.
-			 *
-			 * @param color the slot into which to place the block
-			 *
-			 * @param pos the block position (FRONT/BACK). BACK
-			 * denotes there is already a half-block stored in the
-			 * slot, as the FRONT blocks are picked up first.
-			 */
-			void Place(Color color, BlockPosition pos);
 
 		private:
 			/**
@@ -226,10 +197,6 @@ namespace ChipChipArray {
 		arm.WristTwist(90);
 		arm.ClawOpen();
 		sleep(2);
-	}
-
-	void Grabber::Grab(Layer layer, BlockPosition pos) {
-
 	}
 
 	Result Grabber::Load() {

@@ -1,6 +1,7 @@
 /**
+ * @file
  * @author Samuel Andrew Wisner, awisner94@gmail.com
- * @brief contains ScanQR() function
+ * @brief Contains ScanQR() function.
  */
 
 #ifndef ScanQR_H
@@ -17,7 +18,14 @@
 
 namespace ChipChipArray {
 
+	/**
+	 * The number of times ScanQR() has been called. Used for ScanQR log.
+	 */
 	uint8 qrInvokeCount = 0;
+	
+	/**
+	 * The Log instance used by the ScanQR() function.
+	 */
 	Log scanQrLog("logs/ScanQR", LogMode::Multi);
 
 	/**

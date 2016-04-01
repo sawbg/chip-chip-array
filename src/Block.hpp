@@ -1,7 +1,7 @@
 /**
  * @file
  * @author Samuel Andrew Wisner, awisner94@gmail.com
- * @brief contains Block class
+ * @brief Contains Block class.
  */
 
 #ifndef Block_H
@@ -120,18 +120,18 @@ namespace ChipChipArray {
 
 		private:
 			/**
-			 * Image height.
+			 * The image height in pixels.
 			 */
 			static const uint16 IMG_HEIGHT = 1280;
 
 			/**
-			 * 
+			 * The image width.
 			 */
 			static const uint16 IMG_WIDTH = 720;
 
 			/**
 			 * The minimum block area in pixels to be classified
-			 * as a whole (large) block
+			 * as a whole (large) block.
 			 */
 			static const uint32 MIN_WHOLE_BLOCK_SIZE = 50000;
 	};

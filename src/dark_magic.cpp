@@ -1,6 +1,7 @@
 /**
+ * @file
  * @author Samuel Andrew Wisner, awisner94@gmail.com
- * @brief contains test code for arm
+ * @brief Contains test code for arm.
  */
 
 #include <cstdlib>
@@ -11,6 +12,12 @@
 
 using namespace std;
 
+/**
+ * Controls the positions of the arm servos. Will likely work for other servos
+ * on the robot, as well.
+ *
+ * Usage: arm [SERVO NUMBER] [ANGULAR POSITION DEGREES]
+ */
 int main(int argc, char** argv) {
 	setup();
 	

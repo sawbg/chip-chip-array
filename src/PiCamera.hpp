@@ -1,6 +1,7 @@
 /**
+ * @file
  * @author Samuel Andrew Wisner, awisner94@gmail.com
- * @brief contains PiCamera class
+ * @brief Contains PiCamera class.
  */
 
 #ifndef PiCamera_H

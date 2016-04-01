@@ -2,7 +2,7 @@
  * @file
  * @author Shermal Fernando
  * @author Samuel Andrew Wisner, awisner94@gmail.com
- * @brief contains program formally used to find HSV values for blocks.
+ * @brief Contains program formally used to find HSV values for blocks.
  */
 
 #include <iostream>
