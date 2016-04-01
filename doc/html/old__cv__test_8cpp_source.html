@@ -94,30 +94,30 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;raspicam_cv.h&quot;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
-<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="old__cv__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">    7</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="old__cv__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>() {</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    cv::namedWindow(<span class="stringliteral">&quot;Test&quot;</span>, CV_WINDOW_AUTOSIZE);</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    raspicam::RaspiCam_Cv cam;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    cv::Mat image;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keywordtype">bool</span> s = cam.set(CV_CAP_PROP_FORMAT, CV_16UC3);</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordtype">bool</span> o = cam.open();</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordflow">while</span>(<span class="keyword">true</span>) {</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        cam.grab();</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        cam.retrieve(image);</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        cv::imshow(<span class="stringliteral">&quot;Test&quot;</span>, image);</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        cv::waitKey(1000);</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    }</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    cam.release();</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;}</div>
-<div class="ttc" id="old__cv__test_8cpp_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="old__cv__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdef"><b>Definition:</b> <a href="old__cv__test_8cpp_source.html#l00007">old_cv_test.cpp:7</a></div></div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="old__cv__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">   11</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="old__cv__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>() {</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    cv::namedWindow(<span class="stringliteral">&quot;Test&quot;</span>, CV_WINDOW_AUTOSIZE);</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    raspicam::RaspiCam_Cv cam;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    cv::Mat image;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordtype">bool</span> s = cam.set(CV_CAP_PROP_FORMAT, CV_16UC3);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">bool</span> o = cam.open();</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordflow">while</span>(<span class="keyword">true</span>) {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        cam.grab();</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        cam.retrieve(image);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        cv::imshow(<span class="stringliteral">&quot;Test&quot;</span>, image);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        cv::waitKey(1000);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    }</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    cam.release();</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;}</div>
+<div class="ttc" id="old__cv__test_8cpp_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="old__cv__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdef"><b>Definition:</b> <a href="old__cv__test_8cpp_source.html#l00011">old_cv_test.cpp:11</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 25 2016 11:21:44 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Apr 1 2016 00:16:12 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>
