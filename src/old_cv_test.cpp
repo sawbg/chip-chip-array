@@ -4,6 +4,10 @@
 
 #include "raspicam_cv.h"
 
+/**
+ * This program was used to test the raspicam wrapper for OpenCV before
+ * implementing it in a more projet-friendly form as the PiCamera class.
+ */
 int main() {
 	cv::namedWindow("Test", CV_WINDOW_AUTOSIZE);
 

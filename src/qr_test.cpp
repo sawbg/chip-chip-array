@@ -10,7 +10,8 @@
 using namespace ChipChipArray;
 
 /**
- *
+ * This program tests the ScanQR() function in terms of reading QR codes (not
+ * moving the arm).
  */
 int main() {
 	while(true) {
