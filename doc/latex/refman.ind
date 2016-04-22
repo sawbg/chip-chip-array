@@ -8,9 +8,9 @@
   \item {B}
     \subitem {definitions.\+hpp}, \hyperpage{84}
   \item {B\+A\+S\+E\+\_\+\+T\+I\+L\+T}
-    \subitem {Servo\+\_\+\+Position\+\_\+\+Shell.\+h}, \hyperpage{140}
+    \subitem {Servo\+\_\+\+Position\+\_\+\+Shell.\+h}, \hyperpage{141}
   \item {B\+A\+S\+E\+\_\+\+T\+U\+R\+N}
-    \subitem {Servo\+\_\+\+Position\+\_\+\+Shell.\+h}, \hyperpage{140}
+    \subitem {Servo\+\_\+\+Position\+\_\+\+Shell.\+h}, \hyperpage{141}
   \item {Back}
     \subitem {definitions.\+hpp}, \hyperpage{82}
   \item {Blue}
@@ -53,7 +53,7 @@
   \indexspace
 
   \item {E\+L\+B\+O\+W}
-    \subitem {Servo\+\_\+\+Position\+\_\+\+Shell.\+h}, \hyperpage{140}
+    \subitem {Servo\+\_\+\+Position\+\_\+\+Shell.\+h}, \hyperpage{141}
 
   \indexspace
 
@@ -65,30 +65,30 @@
   \indexspace
 
   \item {G\+A\+T\+E\+\_\+1}
-    \subitem {Servo\+\_\+\+Position\+\_\+\+Shell.\+h}, \hyperpage{140}
+    \subitem {Servo\+\_\+\+Position\+\_\+\+Shell.\+h}, \hyperpage{141}
   \item {G\+A\+T\+E\+\_\+2}
-    \subitem {Servo\+\_\+\+Position\+\_\+\+Shell.\+h}, \hyperpage{140}
+    \subitem {Servo\+\_\+\+Position\+\_\+\+Shell.\+h}, \hyperpage{141}
   \item {G\+A\+T\+E\+\_\+3}
-    \subitem {Servo\+\_\+\+Position\+\_\+\+Shell.\+h}, \hyperpage{140}
+    \subitem {Servo\+\_\+\+Position\+\_\+\+Shell.\+h}, \hyperpage{141}
   \item {G\+A\+T\+E\+\_\+4}
-    \subitem {Servo\+\_\+\+Position\+\_\+\+Shell.\+h}, \hyperpage{140}
+    \subitem {Servo\+\_\+\+Position\+\_\+\+Shell.\+h}, \hyperpage{141}
   \item {G\+R\+I\+P\+\_\+\+L\+E\+F\+T}
-    \subitem {Servo\+\_\+\+Position\+\_\+\+Shell.\+h}, \hyperpage{140}
+    \subitem {Servo\+\_\+\+Position\+\_\+\+Shell.\+h}, \hyperpage{141}
   \item {G\+R\+I\+P\+\_\+\+R\+I\+G\+H\+T}
-    \subitem {Servo\+\_\+\+Position\+\_\+\+Shell.\+h}, \hyperpage{140}
+    \subitem {Servo\+\_\+\+Position\+\_\+\+Shell.\+h}, \hyperpage{141}
   \item {Green}
     \subitem {definitions.\+hpp}, \hyperpage{83}
 
   \indexspace
 
   \item {L\+I\+F\+T\+\_\+1}
-    \subitem {Servo\+\_\+\+Position\+\_\+\+Shell.\+h}, \hyperpage{140}
+    \subitem {Servo\+\_\+\+Position\+\_\+\+Shell.\+h}, \hyperpage{141}
   \item {L\+I\+F\+T\+\_\+2}
-    \subitem {Servo\+\_\+\+Position\+\_\+\+Shell.\+h}, \hyperpage{140}
+    \subitem {Servo\+\_\+\+Position\+\_\+\+Shell.\+h}, \hyperpage{141}
   \item {L\+I\+F\+T\+\_\+3}
-    \subitem {Servo\+\_\+\+Position\+\_\+\+Shell.\+h}, \hyperpage{140}
+    \subitem {Servo\+\_\+\+Position\+\_\+\+Shell.\+h}, \hyperpage{141}
   \item {L\+I\+F\+T\+\_\+4}
-    \subitem {Servo\+\_\+\+Position\+\_\+\+Shell.\+h}, \hyperpage{140}
+    \subitem {Servo\+\_\+\+Position\+\_\+\+Shell.\+h}, \hyperpage{141}
   \item {Left}
     \subitem {definitions.\+hpp}, \hyperpage{84}
   \item {Long}
@@ -124,21 +124,21 @@
   \indexspace
 
   \item {Servo\+\_\+\+Position\+\_\+\+Shell.\+h}
-    \subitem {B\+A\+S\+E\+\_\+\+T\+I\+L\+T}, \hyperpage{140}
-    \subitem {B\+A\+S\+E\+\_\+\+T\+U\+R\+N}, \hyperpage{140}
-    \subitem {E\+L\+B\+O\+W}, \hyperpage{140}
-    \subitem {G\+A\+T\+E\+\_\+1}, \hyperpage{140}
-    \subitem {G\+A\+T\+E\+\_\+2}, \hyperpage{140}
-    \subitem {G\+A\+T\+E\+\_\+3}, \hyperpage{140}
-    \subitem {G\+A\+T\+E\+\_\+4}, \hyperpage{140}
-    \subitem {G\+R\+I\+P\+\_\+\+L\+E\+F\+T}, \hyperpage{140}
-    \subitem {G\+R\+I\+P\+\_\+\+R\+I\+G\+H\+T}, \hyperpage{140}
-    \subitem {L\+I\+F\+T\+\_\+1}, \hyperpage{140}
-    \subitem {L\+I\+F\+T\+\_\+2}, \hyperpage{140}
-    \subitem {L\+I\+F\+T\+\_\+3}, \hyperpage{140}
-    \subitem {L\+I\+F\+T\+\_\+4}, \hyperpage{140}
-    \subitem {W\+R\+I\+S\+T\+\_\+\+P\+A\+N}, \hyperpage{140}
-    \subitem {W\+R\+I\+S\+T\+\_\+\+T\+I\+L\+T}, \hyperpage{140}
+    \subitem {B\+A\+S\+E\+\_\+\+T\+I\+L\+T}, \hyperpage{141}
+    \subitem {B\+A\+S\+E\+\_\+\+T\+U\+R\+N}, \hyperpage{141}
+    \subitem {E\+L\+B\+O\+W}, \hyperpage{141}
+    \subitem {G\+A\+T\+E\+\_\+1}, \hyperpage{141}
+    \subitem {G\+A\+T\+E\+\_\+2}, \hyperpage{141}
+    \subitem {G\+A\+T\+E\+\_\+3}, \hyperpage{141}
+    \subitem {G\+A\+T\+E\+\_\+4}, \hyperpage{141}
+    \subitem {G\+R\+I\+P\+\_\+\+L\+E\+F\+T}, \hyperpage{141}
+    \subitem {G\+R\+I\+P\+\_\+\+R\+I\+G\+H\+T}, \hyperpage{141}
+    \subitem {L\+I\+F\+T\+\_\+1}, \hyperpage{141}
+    \subitem {L\+I\+F\+T\+\_\+2}, \hyperpage{141}
+    \subitem {L\+I\+F\+T\+\_\+3}, \hyperpage{141}
+    \subitem {L\+I\+F\+T\+\_\+4}, \hyperpage{141}
+    \subitem {W\+R\+I\+S\+T\+\_\+\+P\+A\+N}, \hyperpage{141}
+    \subitem {W\+R\+I\+S\+T\+\_\+\+T\+I\+L\+T}, \hyperpage{141}
   \item {Short}
     \subitem {definitions.\+hpp}, \hyperpage{84}
   \item {std}, \hyperpage{10}
@@ -155,9 +155,9 @@
   \indexspace
 
   \item {W\+R\+I\+S\+T\+\_\+\+P\+A\+N}
-    \subitem {Servo\+\_\+\+Position\+\_\+\+Shell.\+h}, \hyperpage{140}
+    \subitem {Servo\+\_\+\+Position\+\_\+\+Shell.\+h}, \hyperpage{141}
   \item {W\+R\+I\+S\+T\+\_\+\+T\+I\+L\+T}
-    \subitem {Servo\+\_\+\+Position\+\_\+\+Shell.\+h}, \hyperpage{140}
+    \subitem {Servo\+\_\+\+Position\+\_\+\+Shell.\+h}, \hyperpage{141}
 
   \indexspace
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2016.4.2)  22 APR 2016 16:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2016.4.2)  22 APR 2016 16:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1110,7 +1110,11 @@ Chapter 2.
 
 ]
 Chapter 3.
-(./files.tex [5]) [6]
+(./files.tex
+Underfull \vbox (badness 3250) has occurred while \output is active []
+
+ [5])
+[6]
 Chapter 4.
 (./namespaceChipChipArray.tex
 LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
@@ -1165,7 +1169,7 @@ Overfull \hbox (19.35555pt too wide) in paragraph at lines 135--135
  []
 
 
-<namespaceChipChipArray_a7fc3d1edffca11531cd09fdab7c8b88d_cgraph.pdf, id=1790, 
+<namespaceChipChipArray_a7fc3d1edffca11531cd09fdab7c8b88d_cgraph.pdf, id=1795, 
 354.32375pt x 111.41624pt>
 File: namespaceChipChipArray_a7fc3d1edffca11531cd09fdab7c8b88d_cgraph.pdf Graph
 ic file (type pdf)
@@ -1179,7 +1183,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [8]
 [9 <./namespaceChipChipArray_a7fc3d1edffca11531cd09fdab7c8b88d_cgraph.pdf>]
-<namespaceChipChipArray_a6c7465049b5d408e1a238b6d8ffa887d_cgraph.pdf, id=1844, 
+<namespaceChipChipArray_a6c7465049b5d408e1a238b6d8ffa887d_cgraph.pdf, id=1849, 
 509.905pt x 298.11375pt>
 File: namespaceChipChipArray_a6c7465049b5d408e1a238b6d8ffa887d_cgraph.pdf Graph
 ic file (type pdf)
@@ -1189,7 +1193,7 @@ Package pdftex.def Info: namespaceChipChipArray_a6c7465049b5d408e1a238b6d8ffa88
 7d_cgraph.pdf used on input line 240.
 (pdftex.def)             Requested size: 350.0pt x 204.63428pt.
 
-<namespaceChipChipArray_a6c7465049b5d408e1a238b6d8ffa887d_icgraph.pdf, id=1845,
+<namespaceChipChipArray_a6c7465049b5d408e1a238b6d8ffa887d_icgraph.pdf, id=1850,
  279.0425pt x 100.375pt>
 File: namespaceChipChipArray_a6c7465049b5d408e1a238b6d8ffa887d_icgraph.pdf Grap
 hic file (type pdf)
@@ -1207,7 +1211,7 @@ pdfTeX warning: pdflatex (file ./namespaceChipChipArray_a6c7465049b5d408e1a238b
 6d8ffa887d_icgraph.pdf): PDF inclusion: multiple pdfs with page group included 
 in a single page
 >]
-<namespacestd_aa5ddf582a1c96ffe258c997be9a294a3_icgraph.pdf, id=1885, 547.04375
+<namespacestd_aa5ddf582a1c96ffe258c997be9a294a3_icgraph.pdf, id=1890, 547.04375
 pt x 287.0725pt>
 File: namespacestd_aa5ddf582a1c96ffe258c997be9a294a3_icgraph.pdf Graphic file (
 type pdf)
@@ -1228,7 +1232,7 @@ LaTeX Font Warning: Font shape `T1/pcr/bc/it' undefined
 
 
 <classAdafruit__PWMServoDriver_aef401eaad3c34222ac916eb7bd936bc2_cgraph.pdf, id
-=1971, 381.425pt x 111.41624pt>
+=1976, 381.425pt x 111.41624pt>
 File: classAdafruit__PWMServoDriver_aef401eaad3c34222ac916eb7bd936bc2_cgraph.pd
 f Graphic file (type pdf)
 
@@ -1239,7 +1243,7 @@ Package pdftex.def Info: classAdafruit__PWMServoDriver_aef401eaad3c34222ac916eb
 (pdftex.def)             Requested size: 350.0pt x 102.24068pt.
  [15]
 <classAdafruit__PWMServoDriver_aef401eaad3c34222ac916eb7bd936bc2_icgraph.pdf, i
-d=1990, 454.69875pt x 138.5175pt>
+d=1995, 454.69875pt x 138.5175pt>
 File: classAdafruit__PWMServoDriver_aef401eaad3c34222ac916eb7bd936bc2_icgraph.p
 df Graphic file (type pdf)
 
@@ -1250,7 +1254,7 @@ Package pdftex.def Info: classAdafruit__PWMServoDriver_aef401eaad3c34222ac916eb
 (pdftex.def)             Requested size: 350.0pt x 106.62286pt.
 
 <classAdafruit__PWMServoDriver_ac976f52233a75a4bd0eb6f2ce9b82b7f_icgraph.pdf, i
-d=1994, 623.32875pt x 138.5175pt>
+d=1999, 623.32875pt x 138.5175pt>
 File: classAdafruit__PWMServoDriver_ac976f52233a75a4bd0eb6f2ce9b82b7f_icgraph.p
 df Graphic file (type pdf)
 
@@ -1274,7 +1278,7 @@ bd0eb6f2ce9b82b7f_icgraph.pdf): PDF inclusion: multiple pdfs with page group in
 cluded in a single page
 >]
 <classAdafruit__PWMServoDriver_a1246cd50849fe0f068cc5d474e06ae96_cgraph.pdf, id
-=2027, 381.425pt x 111.41624pt>
+=2032, 381.425pt x 111.41624pt>
 File: classAdafruit__PWMServoDriver_a1246cd50849fe0f068cc5d474e06ae96_cgraph.pd
 f Graphic file (type pdf)
 
@@ -1285,7 +1289,7 @@ Package pdftex.def Info: classAdafruit__PWMServoDriver_a1246cd50849fe0f068cc5d4
 (pdftex.def)             Requested size: 350.0pt x 102.24068pt.
 
 <classAdafruit__PWMServoDriver_a724a7fc39c6fba34478ecc0eea038bd3_icgraph.pdf, i
-d=2032, 1179.40625pt x 768.8725pt>
+d=2037, 1179.40625pt x 768.8725pt>
 File: classAdafruit__PWMServoDriver_a724a7fc39c6fba34478ecc0eea038bd3_icgraph.p
 df Graphic file (type pdf)
 
@@ -1300,7 +1304,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [17 <./classAdafruit__PWMServoDriver_a1246cd50849fe0f068cc5d474e06ae96_cgraph.
 pdf>]
 <classAdafruit__PWMServoDriver_a0ef6f1e3c81aebbd1d1da1bb12f3ed5c_icgraph.pdf, i
-d=2059, 454.69875pt x 138.5175pt>
+d=2064, 454.69875pt x 138.5175pt>
 File: classAdafruit__PWMServoDriver_a0ef6f1e3c81aebbd1d1da1bb12f3ed5c_icgraph.p
 df Graphic file (type pdf)
 
@@ -1317,7 +1321,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 (./classChipChipArray_1_1Arm.tex [19 <./classAdafruit__PWMServoDriver_a0ef6f1e3
 c81aebbd1d1da1bb12f3ed5c_icgraph.pdf>]
 <classChipChipArray_1_1Arm_aeda43d8461e50eaca9aa891ee2863c05_cgraph.pdf, id=215
-1, 623.32875pt x 160.6pt>
+6, 623.32875pt x 160.6pt>
 File: classChipChipArray_1_1Arm_aeda43d8461e50eaca9aa891ee2863c05_cgraph.pdf Gr
 aphic file (type pdf)
 
@@ -1330,8 +1334,8 @@ LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
 (Font)              scaled to size 8.99994pt on input line 111.
 
-<classChipChipArray_1_1Arm_a8b077a3791d9fc5ef285c1520fe4c5d8_cgraph.pdf, id=215
-8, 597.23125pt x 111.41624pt>
+<classChipChipArray_1_1Arm_a8b077a3791d9fc5ef285c1520fe4c5d8_cgraph.pdf, id=216
+3, 597.23125pt x 111.41624pt>
 File: classChipChipArray_1_1Arm_a8b077a3791d9fc5ef285c1520fe4c5d8_cgraph.pdf Gr
 aphic file (type pdf)
 
@@ -1341,7 +1345,7 @@ Package pdftex.def Info: classChipChipArray_1_1Arm_a8b077a3791d9fc5ef285c1520fe
 (pdftex.def)             Requested size: 350.0pt x 65.2947pt.
 
 <classChipChipArray_1_1Arm_a8b077a3791d9fc5ef285c1520fe4c5d8_icgraph.pdf, id=21
-59, 574.145pt x 199.74625pt>
+64, 574.145pt x 199.74625pt>
 File: classChipChipArray_1_1Arm_a8b077a3791d9fc5ef285c1520fe4c5d8_icgraph.pdf G
 raphic file (type pdf)
 
@@ -1358,7 +1362,7 @@ pdfTeX warning: pdflatex (file ./classChipChipArray_1_1Arm_a8b077a3791d9fc5ef28
 d in a single page
 >]
 <classChipChipArray_1_1Arm_addaedfe85ff2b14ff00c344fc4b40cd6_cgraph.pdf, id=219
-0, 597.23125pt x 111.41624pt>
+5, 597.23125pt x 111.41624pt>
 File: classChipChipArray_1_1Arm_addaedfe85ff2b14ff00c344fc4b40cd6_cgraph.pdf Gr
 aphic file (type pdf)
 
@@ -1368,7 +1372,7 @@ Package pdftex.def Info: classChipChipArray_1_1Arm_addaedfe85ff2b14ff00c344fc4b
 (pdftex.def)             Requested size: 350.0pt x 65.2947pt.
 
 <classChipChipArray_1_1Arm_addaedfe85ff2b14ff00c344fc4b40cd6_icgraph.pdf, id=21
-91, 574.145pt x 199.74625pt>
+96, 574.145pt x 199.74625pt>
 File: classChipChipArray_1_1Arm_addaedfe85ff2b14ff00c344fc4b40cd6_icgraph.pdf G
 raphic file (type pdf)
 
@@ -1389,8 +1393,8 @@ pdfTeX warning: pdflatex (file ./classChipChipArray_1_1Arm_addaedfe85ff2b14ff00
 c344fc4b40cd6_icgraph.pdf): PDF inclusion: multiple pdfs with page group includ
 ed in a single page
 >]
-<classChipChipArray_1_1Arm_a20c6fe3fe79c16f492a8c18b91427080_cgraph.pdf, id=221
-8, 737.75626pt x 160.6pt>
+<classChipChipArray_1_1Arm_a20c6fe3fe79c16f492a8c18b91427080_cgraph.pdf, id=222
+3, 737.75626pt x 160.6pt>
 File: classChipChipArray_1_1Arm_a20c6fe3fe79c16f492a8c18b91427080_cgraph.pdf Gr
 aphic file (type pdf)
 
@@ -1400,7 +1404,7 @@ Package pdftex.def Info: classChipChipArray_1_1Arm_a20c6fe3fe79c16f492a8c18b914
 (pdftex.def)             Requested size: 350.0pt x 76.1902pt.
 
 <classChipChipArray_1_1Arm_a20c6fe3fe79c16f492a8c18b91427080_icgraph.pdf, id=22
-19, 574.145pt x 111.41624pt>
+24, 574.145pt x 111.41624pt>
 File: classChipChipArray_1_1Arm_a20c6fe3fe79c16f492a8c18b91427080_icgraph.pdf G
 raphic file (type pdf)
 
@@ -1410,7 +1414,7 @@ Package pdftex.def Info: classChipChipArray_1_1Arm_a20c6fe3fe79c16f492a8c18b914
 (pdftex.def)             Requested size: 350.0pt x 67.9213pt.
 
 <classChipChipArray_1_1Arm_abb33b5bb11034554d632f8c9b95b2c44_cgraph.pdf, id=222
-4, 737.75626pt x 160.6pt>
+9, 737.75626pt x 160.6pt>
 File: classChipChipArray_1_1Arm_abb33b5bb11034554d632f8c9b95b2c44_cgraph.pdf Gr
 aphic file (type pdf)
 
@@ -1420,7 +1424,7 @@ b2c44_cgraph.pdf used on input line 265.
 (pdftex.def)             Requested size: 350.0pt x 76.1902pt.
 
 <classChipChipArray_1_1Arm_abb33b5bb11034554d632f8c9b95b2c44_icgraph.pdf, id=22
-25, 574.145pt x 160.6pt>
+30, 574.145pt x 160.6pt>
 File: classChipChipArray_1_1Arm_abb33b5bb11034554d632f8c9b95b2c44_icgraph.pdf G
 raphic file (type pdf)
 
@@ -1447,7 +1451,7 @@ pdfTeX warning: pdflatex (file ./classChipChipArray_1_1Arm_abb33b5bb11034554d63
 ed in a single page
 >]
 <classChipChipArray_1_1Arm_af84b91c664baec0f2882dcf4089ae027_cgraph.pdf, id=226
-1, 597.23125pt x 111.41624pt>
+6, 597.23125pt x 111.41624pt>
 File: classChipChipArray_1_1Arm_af84b91c664baec0f2882dcf4089ae027_cgraph.pdf Gr
 aphic file (type pdf)
 
@@ -1457,7 +1461,7 @@ ae027_cgraph.pdf used on input line 315.
 (pdftex.def)             Requested size: 350.0pt x 65.2947pt.
 
 <classChipChipArray_1_1Arm_a980f5bd278cbe06aa21754fb8e0324b3_cgraph.pdf, id=227
-0, 597.23125pt x 111.41624pt>
+5, 597.23125pt x 111.41624pt>
 File: classChipChipArray_1_1Arm_a980f5bd278cbe06aa21754fb8e0324b3_cgraph.pdf Gr
 aphic file (type pdf)
 
@@ -1467,7 +1471,7 @@ Package pdftex.def Info: classChipChipArray_1_1Arm_a980f5bd278cbe06aa21754fb8e0
 (pdftex.def)             Requested size: 350.0pt x 65.2947pt.
 
 <classChipChipArray_1_1Arm_a980f5bd278cbe06aa21754fb8e0324b3_icgraph.pdf, id=22
-71, 416.55624pt x 111.41624pt>
+76, 416.55624pt x 111.41624pt>
 File: classChipChipArray_1_1Arm_a980f5bd278cbe06aa21754fb8e0324b3_icgraph.pdf G
 raphic file (type pdf)
 
@@ -1485,8 +1489,8 @@ pdfTeX warning: pdflatex (file ./classChipChipArray_1_1Arm_a980f5bd278cbe06aa21
 754fb8e0324b3_cgraph.pdf): PDF inclusion: multiple pdfs with page group include
 d in a single page
 >]
-<classChipChipArray_1_1Arm_ae8d0a664dd1a0e556cf40c0984035163_cgraph.pdf, id=229
-7, 597.23125pt x 111.41624pt>
+<classChipChipArray_1_1Arm_ae8d0a664dd1a0e556cf40c0984035163_cgraph.pdf, id=230
+2, 597.23125pt x 111.41624pt>
 File: classChipChipArray_1_1Arm_ae8d0a664dd1a0e556cf40c0984035163_cgraph.pdf Gr
 aphic file (type pdf)
 
@@ -1500,8 +1504,8 @@ LaTeX Font Warning: Font shape `T1/pcr/bc/n' undefined
 (Font)              using `T1/pcr/m/n' instead on input line 414.
 
 
-<classChipChipArray_1_1Arm_a6da0950c7e3bd4a31264e562916c032d_cgraph.pdf, id=230
-6, 597.23125pt x 111.41624pt>
+<classChipChipArray_1_1Arm_a6da0950c7e3bd4a31264e562916c032d_cgraph.pdf, id=231
+1, 597.23125pt x 111.41624pt>
 File: classChipChipArray_1_1Arm_a6da0950c7e3bd4a31264e562916c032d_cgraph.pdf Gr
 aphic file (type pdf)
 
@@ -1519,8 +1523,8 @@ pdfTeX warning: pdflatex (file ./classChipChipArray_1_1Arm_ae8d0a664dd1a0e556cf
 40c0984035163_cgraph.pdf): PDF inclusion: multiple pdfs with page group include
 d in a single page
 >]
-<classChipChipArray_1_1Arm_adfa7cc779b7ec3bf8453277796c142ed_cgraph.pdf, id=233
-5, 597.23125pt x 111.41624pt>
+<classChipChipArray_1_1Arm_adfa7cc779b7ec3bf8453277796c142ed_cgraph.pdf, id=234
+0, 597.23125pt x 111.41624pt>
 File: classChipChipArray_1_1Arm_adfa7cc779b7ec3bf8453277796c142ed_cgraph.pdf Gr
 aphic file (type pdf)
 
@@ -1530,7 +1534,7 @@ Package pdftex.def Info: classChipChipArray_1_1Arm_adfa7cc779b7ec3bf8453277796c
 (pdftex.def)             Requested size: 350.0pt x 65.2947pt.
 
 <classChipChipArray_1_1Arm_a43daba698f13a522887ad022b78557bb_cgraph.pdf, id=234
-4, 597.23125pt x 111.41624pt>
+9, 597.23125pt x 111.41624pt>
 File: classChipChipArray_1_1Arm_a43daba698f13a522887ad022b78557bb_cgraph.pdf Gr
 aphic file (type pdf)
 
@@ -1551,8 +1555,8 @@ pdfTeX warning: pdflatex (file ./classChipChipArray_1_1Arm_a43daba698f13a522887
 ad022b78557bb_cgraph.pdf): PDF inclusion: multiple pdfs with page group include
 d in a single page
 >]
-<classChipChipArray_1_1Arm_a6bde822b1be63926e21222f36aad67b3_cgraph.pdf, id=237
-8, 597.23125pt x 111.41624pt>
+<classChipChipArray_1_1Arm_a6bde822b1be63926e21222f36aad67b3_cgraph.pdf, id=238
+3, 597.23125pt x 111.41624pt>
 File: classChipChipArray_1_1Arm_a6bde822b1be63926e21222f36aad67b3_cgraph.pdf Gr
 aphic file (type pdf)
 
@@ -1562,7 +1566,7 @@ d67b3_cgraph.pdf used on input line 555.
 (pdftex.def)             Requested size: 350.0pt x 65.2947pt.
 
 <classChipChipArray_1_1Arm_a6bde822b1be63926e21222f36aad67b3_icgraph.pdf, id=23
-79, 416.55624pt x 111.41624pt>
+84, 416.55624pt x 111.41624pt>
 File: classChipChipArray_1_1Arm_a6bde822b1be63926e21222f36aad67b3_icgraph.pdf G
 raphic file (type pdf)
 
@@ -1571,8 +1575,8 @@ Package pdftex.def Info: classChipChipArray_1_1Arm_a6bde822b1be63926e21222f36aa
 d67b3_icgraph.pdf used on input line 567.
 (pdftex.def)             Requested size: 350.0pt x 93.6196pt.
 
-<classChipChipArray_1_1Arm_ac45149e03abfac230b75156bb42e8417_cgraph.pdf, id=238
-6, 597.23125pt x 111.41624pt>
+<classChipChipArray_1_1Arm_ac45149e03abfac230b75156bb42e8417_cgraph.pdf, id=239
+1, 597.23125pt x 111.41624pt>
 File: classChipChipArray_1_1Arm_ac45149e03abfac230b75156bb42e8417_cgraph.pdf Gr
 aphic file (type pdf)
 
@@ -1582,7 +1586,7 @@ e8417_cgraph.pdf used on input line 604.
 (pdftex.def)             Requested size: 350.0pt x 65.2947pt.
 
 <classChipChipArray_1_1Arm_ac45149e03abfac230b75156bb42e8417_icgraph.pdf, id=23
-87, 574.145pt x 199.74625pt>
+92, 574.145pt x 199.74625pt>
 File: classChipChipArray_1_1Arm_ac45149e03abfac230b75156bb42e8417_icgraph.pdf G
 raphic file (type pdf)
 
@@ -1603,8 +1607,8 @@ pdfTeX warning: pdflatex (file ./classChipChipArray_1_1Arm_ac45149e03abfac230b7
 5156bb42e8417_cgraph.pdf): PDF inclusion: multiple pdfs with page group include
 d in a single page
 >]
-<classChipChipArray_1_1Arm_a776eade3a7aaa6effaabad7f37c71031_cgraph.pdf, id=241
-7, 597.23125pt x 111.41624pt>
+<classChipChipArray_1_1Arm_a776eade3a7aaa6effaabad7f37c71031_cgraph.pdf, id=242
+2, 597.23125pt x 111.41624pt>
 File: classChipChipArray_1_1Arm_a776eade3a7aaa6effaabad7f37c71031_cgraph.pdf Gr
 aphic file (type pdf)
 
@@ -1614,7 +1618,7 @@ Package pdftex.def Info: classChipChipArray_1_1Arm_a776eade3a7aaa6effaabad7f37c
 (pdftex.def)             Requested size: 350.0pt x 65.2947pt.
 
 <classChipChipArray_1_1Arm_a776eade3a7aaa6effaabad7f37c71031_icgraph.pdf, id=24
-18, 714.67pt x 160.6pt>
+23, 714.67pt x 160.6pt>
 File: classChipChipArray_1_1Arm_a776eade3a7aaa6effaabad7f37c71031_icgraph.pdf G
 raphic file (type pdf)
 
@@ -1636,7 +1640,7 @@ bad7f37c71031_icgraph.pdf): PDF inclusion: multiple pdfs with page group includ
 ed in a single page
 >] [28]
 <classChipChipArray_1_1Arm_a46a0b0cfb37cb0b663c91cd07e440e10_cgraph.pdf, id=245
-1, 597.23125pt x 111.41624pt>
+6, 597.23125pt x 111.41624pt>
 File: classChipChipArray_1_1Arm_a46a0b0cfb37cb0b663c91cd07e440e10_cgraph.pdf Gr
 aphic file (type pdf)
 
@@ -1646,7 +1650,7 @@ Package pdftex.def Info: classChipChipArray_1_1Arm_a46a0b0cfb37cb0b663c91cd07e4
 (pdftex.def)             Requested size: 350.0pt x 65.2947pt.
 
 <classChipChipArray_1_1Arm_a46a0b0cfb37cb0b663c91cd07e440e10_icgraph.pdf, id=24
-52, 714.67pt x 160.6pt>
+57, 714.67pt x 160.6pt>
 File: classChipChipArray_1_1Arm_a46a0b0cfb37cb0b663c91cd07e440e10_icgraph.pdf G
 raphic file (type pdf)
 
@@ -1655,8 +1659,8 @@ Package pdftex.def Info: classChipChipArray_1_1Arm_a46a0b0cfb37cb0b663c91cd07e4
 40e10_icgraph.pdf used on input line 728.
 (pdftex.def)             Requested size: 350.0pt x 78.65056pt.
 
-<classChipChipArray_1_1Arm_ad61f7c1e63eb09981b6c304bd924e217_cgraph.pdf, id=245
-9, 597.23125pt x 111.41624pt>
+<classChipChipArray_1_1Arm_ad61f7c1e63eb09981b6c304bd924e217_cgraph.pdf, id=246
+4, 597.23125pt x 111.41624pt>
 File: classChipChipArray_1_1Arm_ad61f7c1e63eb09981b6c304bd924e217_cgraph.pdf Gr
 aphic file (type pdf)
 
@@ -1677,8 +1681,8 @@ pdfTeX warning: pdflatex (file ./classChipChipArray_1_1Arm_ad61f7c1e63eb09981b6
 c304bd924e217_cgraph.pdf): PDF inclusion: multiple pdfs with page group include
 d in a single page
 >]
-<classChipChipArray_1_1Arm_a35ec7756840d9d32dcfbb88d831f087f_cgraph.pdf, id=248
-8, 597.23125pt x 111.41624pt>
+<classChipChipArray_1_1Arm_a35ec7756840d9d32dcfbb88d831f087f_cgraph.pdf, id=249
+3, 597.23125pt x 111.41624pt>
 File: classChipChipArray_1_1Arm_a35ec7756840d9d32dcfbb88d831f087f_cgraph.pdf Gr
 aphic file (type pdf)
 
@@ -1688,7 +1692,7 @@ f087f_cgraph.pdf used on input line 802.
 (pdftex.def)             Requested size: 350.0pt x 65.2947pt.
 
 <classChipChipArray_1_1Arm_a35ec7756840d9d32dcfbb88d831f087f_icgraph.pdf, id=24
-89, 574.145pt x 111.41624pt>
+94, 574.145pt x 111.41624pt>
 File: classChipChipArray_1_1Arm_a35ec7756840d9d32dcfbb88d831f087f_icgraph.pdf G
 raphic file (type pdf)
 
@@ -1705,7 +1709,7 @@ pdfTeX warning: pdflatex (file ./classChipChipArray_1_1Arm_a35ec7756840d9d32dcf
 bb88d831f087f_icgraph.pdf): PDF inclusion: multiple pdfs with page group includ
 ed in a single page
 >] [31] [32]) (./classChipChipArray_1_1Grabber.tex
-<classChipChipArray_1_1Grabber__coll__graph.pdf, id=2662, 210.7875pt x 167.6262
+<classChipChipArray_1_1Grabber__coll__graph.pdf, id=2667, 210.7875pt x 167.6262
 5pt>
 File: classChipChipArray_1_1Grabber__coll__graph.pdf Graphic file (type pdf)
  <use classChipChipArray_1_1Grabber__coll__graph.pdf>
@@ -1718,7 +1722,7 @@ Underfull \vbox (badness 6625) has occurred while \output is active []
  [33]
 [34 <./classChipChipArray_1_1Grabber__coll__graph.pdf>]
 <classChipChipArray_1_1Grabber_a7333f40c135fbe92d59651f75032b4e7_cgraph.pdf, id
-=2743, 340.27126pt x 199.74625pt>
+=2748, 340.27126pt x 199.74625pt>
 File: classChipChipArray_1_1Grabber_a7333f40c135fbe92d59651f75032b4e7_cgraph.pd
 f Graphic file (type pdf)
 
@@ -1729,7 +1733,7 @@ Package pdftex.def Info: classChipChipArray_1_1Grabber_a7333f40c135fbe92d59651f
 (pdftex.def)             Requested size: 339.0pt x 199.01122pt.
 
 <classChipChipArray_1_1Grabber_aacf089ceb4aa5b263c2cc702fb3daf74_cgraph.pdf, id
-=2750, 368.37625pt x 160.6pt>
+=2755, 368.37625pt x 160.6pt>
 File: classChipChipArray_1_1Grabber_aacf089ceb4aa5b263c2cc702fb3daf74_cgraph.pd
 f Graphic file (type pdf)
 
@@ -1744,7 +1748,7 @@ Underfull \vbox (badness 2671) has occurred while \output is active []
  [35 <./classChipChipArray_1_1Grabber_a7333f40c135fbe92d59651f75032b4e7_cgraph.
 pdf>]
 <classChipChipArray_1_1Grabber_aacf089ceb4aa5b263c2cc702fb3daf74_icgraph.pdf, i
-d=2765, 276.03125pt x 111.41624pt>
+d=2770, 276.03125pt x 111.41624pt>
 File: classChipChipArray_1_1Grabber_aacf089ceb4aa5b263c2cc702fb3daf74_icgraph.p
 df Graphic file (type pdf)
 
@@ -1755,7 +1759,7 @@ Package pdftex.def Info: classChipChipArray_1_1Grabber_aacf089ceb4aa5b263c2cc70
 (pdftex.def)             Requested size: 275.0pt x 111.01134pt.
 
 <classChipChipArray_1_1Grabber_a44e5aeb908634f68de356ad8df3c4bf1_cgraph.pdf, id
-=2774, 895.345pt x 300.12125pt>
+=2779, 895.345pt x 300.12125pt>
 File: classChipChipArray_1_1Grabber_a44e5aeb908634f68de356ad8df3c4bf1_cgraph.pd
 f Graphic file (type pdf)
 
@@ -1776,7 +1780,7 @@ pdfTeX warning: pdflatex (file ./classChipChipArray_1_1Grabber_aacf089ceb4aa5b2
 cluded in a single page
 >]
 <classChipChipArray_1_1Grabber_a44e5aeb908634f68de356ad8df3c4bf1_icgraph.pdf, i
-d=2791, 433.62pt x 111.41624pt>
+d=2796, 433.62pt x 111.41624pt>
 File: classChipChipArray_1_1Grabber_a44e5aeb908634f68de356ad8df3c4bf1_icgraph.p
 df Graphic file (type pdf)
 
@@ -1787,7 +1791,7 @@ Package pdftex.def Info: classChipChipArray_1_1Grabber_a44e5aeb908634f68de356ad
 (pdftex.def)             Requested size: 350.0pt x 89.93555pt.
 
 <classChipChipArray_1_1Grabber_abecb4047b4f7d5a7e691b7fb581b5a39_cgraph.pdf, id
-=2800, 895.345pt x 336.25626pt>
+=2805, 895.345pt x 336.25626pt>
 File: classChipChipArray_1_1Grabber_abecb4047b4f7d5a7e691b7fb581b5a39_cgraph.pd
 f Graphic file (type pdf)
 
@@ -1798,7 +1802,7 @@ b581b5a39_cgraph.pdf used on input line 248.
 (pdftex.def)             Requested size: 350.0pt x 131.44725pt.
 
 <classChipChipArray_1_1Grabber_abecb4047b4f7d5a7e691b7fb581b5a39_icgraph.pdf, i
-d=2801, 433.62pt x 111.41624pt>
+d=2806, 433.62pt x 111.41624pt>
 File: classChipChipArray_1_1Grabber_abecb4047b4f7d5a7e691b7fb581b5a39_icgraph.p
 df Graphic file (type pdf)
 
@@ -1827,7 +1831,7 @@ Underfull \hbox (badness 10000) detected at line 274
 
 
 <classChipChipArray_1_1Grabber_a56639f8f9ba9468bce4b6d69ceb2eb54_cgraph.pdf, id
-=2849, 1079.03125pt x 749.80125pt>
+=2854, 1079.03125pt x 749.80125pt>
 File: classChipChipArray_1_1Grabber_a56639f8f9ba9468bce4b6d69ceb2eb54_cgraph.pd
 f Graphic file (type pdf)
 
@@ -1839,7 +1843,7 @@ Package pdftex.def Info: classChipChipArray_1_1Grabber_a56639f8f9ba9468bce4b6d6
  [38 <./classChipChipArray_1_1Grabber_abecb4047b4f7d5a7e691b7fb581b5a39_icgraph
 .pdf>]
 <classChipChipArray_1_1Grabber_a56639f8f9ba9468bce4b6d69ceb2eb54_icgraph.pdf, i
-d=2864, 276.03125pt x 111.41624pt>
+d=2870, 276.03125pt x 111.41624pt>
 File: classChipChipArray_1_1Grabber_a56639f8f9ba9468bce4b6d69ceb2eb54_icgraph.p
 df Graphic file (type pdf)
 
@@ -1865,7 +1869,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [40]
 <classChipChipArray_1_1Grabber_af49248c957a1695dcde79c0f5f8df99b_cgraph.pdf, id
-=2944, 506.89375pt x 347.2975pt>
+=2949, 506.89375pt x 347.2975pt>
 File: classChipChipArray_1_1Grabber_af49248c957a1695dcde79c0f5f8df99b_cgraph.pd
 f Graphic file (type pdf)
 
@@ -1879,7 +1883,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [41]
 <classChipChipArray_1_1Grabber_af49248c957a1695dcde79c0f5f8df99b_icgraph.pdf, i
-d=2951, 433.62pt x 111.41624pt>
+d=2956, 433.62pt x 111.41624pt>
 File: classChipChipArray_1_1Grabber_af49248c957a1695dcde79c0f5f8df99b_icgraph.p
 df Graphic file (type pdf)
 
@@ -1902,7 +1906,7 @@ dcde79c0f5f8df99b_icgraph.pdf): PDF inclusion: multiple pdfs with page group in
 cluded in a single page
 >]
 <classChipChipArray_1_1Grabber_ab9b0d6a64b2c94c0d0f810a5ebeef6ec_cgraph.pdf, id
-=3008, 506.89375pt x 347.2975pt>
+=3013, 506.89375pt x 347.2975pt>
 File: classChipChipArray_1_1Grabber_ab9b0d6a64b2c94c0d0f810a5ebeef6ec_cgraph.pd
 f Graphic file (type pdf)
 
@@ -1916,7 +1920,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [43]
 <classChipChipArray_1_1Grabber_ab9b0d6a64b2c94c0d0f810a5ebeef6ec_icgraph.pdf, i
-d=3014, 433.62pt x 111.41624pt>
+d=3019, 433.62pt x 111.41624pt>
 File: classChipChipArray_1_1Grabber_ab9b0d6a64b2c94c0d0f810a5ebeef6ec_icgraph.p
 df Graphic file (type pdf)
 
@@ -1934,7 +1938,7 @@ pdfTeX warning: pdflatex (file ./classChipChipArray_1_1Grabber_ab9b0d6a64b2c94c
 cluded in a single page
 >]) (./classChipChipArray_1_1Log.tex [45]
 <classChipChipArray_1_1Log_a4cd28a821789b39e936a6e346329d65b_cgraph.pdf, id=308
-3, 343.2825pt x 111.41624pt>
+8, 343.2825pt x 111.41624pt>
 File: classChipChipArray_1_1Log_a4cd28a821789b39e936a6e346329d65b_cgraph.pdf Gr
 aphic file (type pdf)
 
@@ -1957,7 +1961,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 
 <classChipChipArray_1_1Log_ac32b435af1577e4ebc67af2bdfea8eff_icgraph.pdf, id=30
-91, 572.1375pt x 199.74625pt>
+96, 572.1375pt x 199.74625pt>
 File: classChipChipArray_1_1Log_ac32b435af1577e4ebc67af2bdfea8eff_icgraph.pdf G
 raphic file (type pdf)
 
@@ -1969,7 +1973,7 @@ a8eff_icgraph.pdf used on input line 169.
 [46 <./classChipChipArray_1_1Log_a4cd28a821789b39e936a6e346329d65b_cgraph.pdf>]
 
 <classChipChipArray_1_1Log_aba7b7b0555f49f4dcf15f4b9fd3e6b34_icgraph.pdf, id=31
-08, 713.66624pt x 219.82124pt>
+13, 713.66624pt x 219.82124pt>
 File: classChipChipArray_1_1Log_aba7b7b0555f49f4dcf15f4b9fd3e6b34_icgraph.pdf G
 raphic file (type pdf)
 
@@ -1986,7 +1990,7 @@ pdfTeX warning: pdflatex (file ./classChipChipArray_1_1Log_aba7b7b0555f49f4dcf1
 ed in a single page
 >]
 <classChipChipArray_1_1Log_a65bbab057c8b1453f9e4efcfee7522c4_cgraph.pdf, id=313
-0, 321.2pt x 111.41624pt>
+5, 321.2pt x 111.41624pt>
 File: classChipChipArray_1_1Log_a65bbab057c8b1453f9e4efcfee7522c4_cgraph.pdf Gr
 aphic file (type pdf)
 
@@ -1996,7 +2000,7 @@ Package pdftex.def Info: classChipChipArray_1_1Log_a65bbab057c8b1453f9e4efcfee7
 (pdftex.def)             Requested size: 320.0pt x 111.00284pt.
 
 <classChipChipArray_1_1Log_a65bbab057c8b1453f9e4efcfee7522c4_icgraph.pdf, id=31
-31, 575.14874pt x 199.74625pt>
+36, 575.14874pt x 199.74625pt>
 File: classChipChipArray_1_1Log_a65bbab057c8b1453f9e4efcfee7522c4_icgraph.pdf G
 raphic file (type pdf)
 
@@ -2013,7 +2017,7 @@ pdfTeX warning: pdflatex (file ./classChipChipArray_1_1Log_a65bbab057c8b1453f9e
 ed in a single page
 >]
 <classChipChipArray_1_1Log_ad27a06a4561f2f59159bd8a7fc2fed3b_icgraph.pdf, id=31
-52, 343.2825pt x 111.41624pt>
+57, 343.2825pt x 111.41624pt>
 File: classChipChipArray_1_1Log_ad27a06a4561f2f59159bd8a7fc2fed3b_icgraph.pdf G
 raphic file (type pdf)
 
@@ -2023,7 +2027,7 @@ fed3b_icgraph.pdf used on input line 340.
 (pdftex.def)             Requested size: 342.0pt x 110.99945pt.
 
 <classChipChipArray_1_1Log_a66575b6e94c6112e4cefa5736cb996e0_icgraph.pdf, id=31
-56, 575.14874pt x 298.11375pt>
+61, 575.14874pt x 298.11375pt>
 File: classChipChipArray_1_1Log_a66575b6e94c6112e4cefa5736cb996e0_icgraph.pdf G
 raphic file (type pdf)
 
@@ -2037,7 +2041,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [49 <./classChipChipArray_1_1Log_ad27a06a4561f2f59159bd8a7fc2fed3b_icgraph.pdf
 >]
 <classChipChipArray_1_1Log_a8849569720c26e335e7ef4dcb912170b_icgraph.pdf, id=31
-71, 256.96pt x 111.41624pt>
+76, 256.96pt x 111.41624pt>
 File: classChipChipArray_1_1Log_a8849569720c26e335e7ef4dcb912170b_icgraph.pdf G
 raphic file (type pdf)
 
@@ -2054,7 +2058,7 @@ ef4dcb912170b_icgraph.pdf): PDF inclusion: multiple pdfs with page group includ
 ed in a single page
 >]
 <classChipChipArray_1_1Log_a154a5f38d9c7a767693b242684a3d4d9_icgraph.pdf, id=31
-91, 575.14874pt x 248.93pt>
+96, 575.14874pt x 248.93pt>
 File: classChipChipArray_1_1Log_a154a5f38d9c7a767693b242684a3d4d9_icgraph.pdf G
 raphic file (type pdf)
 
@@ -2075,7 +2079,7 @@ LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
 (Font)              scaled to size 6.29996pt on input line 55.
 
 <classChipChipArray_1_1PiCamera_a38f8205921d6deec5a2c360ea7d24cc5_icgraph.pdf, 
-id=3224, 442.65375pt x 111.41624pt>
+id=3229, 442.65375pt x 111.41624pt>
 File: classChipChipArray_1_1PiCamera_a38f8205921d6deec5a2c360ea7d24cc5_icgraph.
 pdf Graphic file (type pdf)
 
@@ -2092,7 +2096,7 @@ Underfull \hbox (badness 10000) detected at line 111
 [52 <./classChipChipArray_1_1PiCamera_a38f8205921d6deec5a2c360ea7d24cc5_icgraph
 .pdf>]
 <classChipChipArray_1_1PiCamera_a58fb0de02570dce9a9cb60a1a04fb84f_icgraph.pdf, 
-id=3240, 603.25375pt x 276.03125pt>
+id=3245, 603.25375pt x 276.03125pt>
 File: classChipChipArray_1_1PiCamera_a58fb0de02570dce9a9cb60a1a04fb84f_icgraph.
 pdf Graphic file (type pdf)
 
@@ -2117,7 +2121,7 @@ Underfull \hbox (badness 10000) detected at line 14
  []
 
 ) (./makefile_source.tex [56]) (./Adafruit__PWMServoDriver_8cpp.tex
-<Adafruit__PWMServoDriver_8cpp__incl.pdf, id=3272, 759.83875pt x 212.795pt>
+<Adafruit__PWMServoDriver_8cpp__incl.pdf, id=3277, 759.83875pt x 212.795pt>
 File: Adafruit__PWMServoDriver_8cpp__incl.pdf Graphic file (type pdf)
 
 <use Adafruit__PWMServoDriver_8cpp__incl.pdf>
@@ -2125,7 +2129,7 @@ Package pdftex.def Info: Adafruit__PWMServoDriver_8cpp__incl.pdf used on input
 line 15.
 (pdftex.def)             Requested size: 350.0pt x 98.02pt.
 
-<Adafruit__PWMServoDriver_8cpp__dep__incl.pdf, id=3273, 334.24875pt x 336.25626
+<Adafruit__PWMServoDriver_8cpp__dep__incl.pdf, id=3278, 334.24875pt x 336.25626
 pt>
 File: Adafruit__PWMServoDriver_8cpp__dep__incl.pdf Graphic file (type pdf)
  <use Adafruit__PWMServoDriver_8cpp__dep__incl.pdf>
@@ -2152,7 +2156,7 @@ signed[] int)addr << []" -> "[] << ([]unsigned[] []int[])d << []" -> "[] <[]
  []
 
 ) (./Adafruit__PWMServoDriver_8h.tex
-<Adafruit__PWMServoDriver_8h__incl.pdf, id=3349, 759.83875pt x 156.585pt>
+<Adafruit__PWMServoDriver_8h__incl.pdf, id=3354, 759.83875pt x 156.585pt>
 File: Adafruit__PWMServoDriver_8h__incl.pdf Graphic file (type pdf)
 
 <use Adafruit__PWMServoDriver_8h__incl.pdf>
@@ -2160,7 +2164,7 @@ Package pdftex.def Info: Adafruit__PWMServoDriver_8h__incl.pdf used on input li
 ne 19.
 (pdftex.def)             Requested size: 350.0pt x 72.12793pt.
 
-<Adafruit__PWMServoDriver_8h__dep__incl.pdf, id=3350, 438.63875pt x 403.5075pt>
+<Adafruit__PWMServoDriver_8h__dep__incl.pdf, id=3355, 438.63875pt x 403.5075pt>
 File: Adafruit__PWMServoDriver_8h__dep__incl.pdf Graphic file (type pdf)
 <use Adafruit__PWMServoDriver_8h__dep__incl.pdf>
 Package pdftex.def Info: Adafruit__PWMServoDriver_8h__dep__incl.pdf used on inp
@@ -2176,14 +2180,14 @@ Underfull \hbox (badness 10000) detected at line 71
  []
 
 [62]) (./Adafruit__PWMServoDriver_8h_source.tex [63]) (./Arm_8hpp.tex
-<Arm_8hpp__incl.pdf, id=3484, 824.07875pt x 325.215pt>
+<Arm_8hpp__incl.pdf, id=3489, 824.07875pt x 325.215pt>
 File: Arm_8hpp__incl.pdf Graphic file (type pdf)
 
 <use Arm_8hpp__incl.pdf>
 Package pdftex.def Info: Arm_8hpp__incl.pdf used on input line 17.
 (pdftex.def)             Requested size: 350.0pt x 138.12274pt.
 
-<Arm_8hpp__dep__incl.pdf, id=3485, 287.0725pt x 212.795pt>
+<Arm_8hpp__dep__incl.pdf, id=3490, 287.0725pt x 212.795pt>
 File: Arm_8hpp__dep__incl.pdf Graphic file (type pdf)
 
 <use Arm_8hpp__dep__incl.pdf>
@@ -2201,7 +2205,7 @@ Underfull \hbox (badness 10000) detected at line 48
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [66])
-(./Block_8hpp.tex <Block_8hpp__incl.pdf, id=3692, 295.1025pt x 212.795pt>
+(./Block_8hpp.tex <Block_8hpp__incl.pdf, id=3697, 295.1025pt x 212.795pt>
 File: Block_8hpp__incl.pdf Graphic file (type pdf)
 
 <use Block_8hpp__incl.pdf>
@@ -2211,7 +2215,7 @@ Package pdftex.def Info: Block_8hpp__incl.pdf used on input line 16.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [67]
-<Block_8hpp__dep__incl.pdf, id=3699, 302.12875pt x 212.795pt>
+<Block_8hpp__dep__incl.pdf, id=3704, 302.12875pt x 212.795pt>
 File: Block_8hpp__dep__incl.pdf Graphic file (type pdf)
 
 <use Block_8hpp__dep__incl.pdf>
@@ -2227,7 +2231,7 @@ Underfull \hbox (badness 10000) detected at line 42
  []
 
 ) (./Block_8hpp_source.tex [69]) (./cv__hue_8cpp.tex
-<cv__hue_8cpp__incl.pdf, id=3818, 665.48625pt x 269.005pt>
+<cv__hue_8cpp__incl.pdf, id=3823, 665.48625pt x 269.005pt>
 File: cv__hue_8cpp__incl.pdf Graphic file (type pdf)
 
 <use cv__hue_8cpp__incl.pdf>
@@ -2260,7 +2264,7 @@ Overfull \hbox (19.35555pt too wide) in paragraph at lines 106--106
  []
 
 ) (./cv__shape_8cpp.tex
-<cv__shape_8cpp__incl.pdf, id=3855, 665.48625pt x 269.005pt>
+<cv__shape_8cpp__incl.pdf, id=3860, 665.48625pt x 269.005pt>
 File: cv__shape_8cpp__incl.pdf Graphic file (type pdf)
 
 <use cv__shape_8cpp__incl.pdf>
@@ -2278,7 +2282,7 @@ Underfull \hbox (badness 2591) in paragraph at lines 57--58
  []
 
 [73]
-<cv__shape_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.pdf, id=3892, 285.065p
+<cv__shape_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.pdf, id=3897, 285.065p
 t x 111.41624pt>
 File: cv__shape_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.pdf Graphic file 
 (type pdf)
@@ -2294,7 +2298,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [75])
 (./cv__test_8cpp.tex
-<cv__test_8cpp__incl.pdf, id=3920, 1272.755pt x 437.635pt>
+<cv__test_8cpp__incl.pdf, id=3925, 1272.755pt x 437.635pt>
 File: cv__test_8cpp__incl.pdf Graphic file (type pdf)
 
 <use cv__test_8cpp__incl.pdf>
@@ -2306,7 +2310,7 @@ Underfull \hbox (badness 10000) detected at line 31
  []
 
 [76 <./cv__test_8cpp__incl.pdf>]
-<cv__test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.pdf, id=3957, 442.65375
+<cv__test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.pdf, id=3962, 442.65375
 pt x 175.65625pt>
 File: cv__test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.pdf Graphic file (
 type pdf)
@@ -2317,7 +2321,7 @@ Package pdftex.def Info: cv__test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph
 (pdftex.def)             Requested size: 350.0pt x 138.89555pt.
 )
 (./cv__test_8cpp_source.tex) (./dark__magic_8cpp.tex
-<dark__magic_8cpp__incl.pdf, id=3980, 759.83875pt x 325.215pt>
+<dark__magic_8cpp__incl.pdf, id=3985, 759.83875pt x 325.215pt>
 File: dark__magic_8cpp__incl.pdf Graphic file (type pdf)
 
 <use dark__magic_8cpp__incl.pdf>
@@ -2332,7 +2336,7 @@ Underfull \hbox (badness 10000) detected at line 31
  []
 
 
-<dark__magic_8cpp_a3c04138a5bfe5d72780bb7e82a18e627_cgraph.pdf, id=3999, 583.17
+<dark__magic_8cpp_a3c04138a5bfe5d72780bb7e82a18e627_cgraph.pdf, id=4004, 583.17
 876pt x 204.765pt>
 File: dark__magic_8cpp_a3c04138a5bfe5d72780bb7e82a18e627_cgraph.pdf Graphic fil
 e (type pdf)
@@ -2346,14 +2350,14 @@ Underfull \vbox (badness 6396) has occurred while \output is active []
 
  [78 <./dark__magic_8cpp__incl.pdf>]) (./dark__magic_8cpp_source.tex)
 (./definitions_8hpp.tex
-<definitions_8hpp__incl.pdf, id=4022, 176.66pt x 156.585pt>
+<definitions_8hpp__incl.pdf, id=4027, 176.66pt x 156.585pt>
 File: definitions_8hpp__incl.pdf Graphic file (type pdf)
 
 <use definitions_8hpp__incl.pdf>
 Package pdftex.def Info: definitions_8hpp__incl.pdf used on input line 15.
 (pdftex.def)             Requested size: 176.0pt x 156.00162pt.
 
-<definitions_8hpp__dep__incl.pdf, id=4023, 1140.26pt x 269.005pt>
+<definitions_8hpp__dep__incl.pdf, id=4028, 1140.26pt x 269.005pt>
 File: definitions_8hpp__dep__incl.pdf Graphic file (type pdf)
 
 <use definitions_8hpp__dep__incl.pdf>
@@ -2429,14 +2433,14 @@ Underfull \hbox (badness 10000) detected at line 429
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [86])
-(./Grabber_8hpp.tex <Grabber_8hpp__incl.pdf, id=4368, 1298.8525pt x 381.425pt>
+(./Grabber_8hpp.tex <Grabber_8hpp__incl.pdf, id=4373, 1298.8525pt x 381.425pt>
 File: Grabber_8hpp__incl.pdf Graphic file (type pdf)
 
 <use Grabber_8hpp__incl.pdf>
 Package pdftex.def Info: Grabber_8hpp__incl.pdf used on input line 26.
 (pdftex.def)             Requested size: 350.0pt x 102.78241pt.
 
-<Grabber_8hpp__dep__incl.pdf, id=4369, 287.0725pt x 156.585pt>
+<Grabber_8hpp__dep__incl.pdf, id=4374, 287.0725pt x 156.585pt>
 File: Grabber_8hpp__dep__incl.pdf Graphic file (type pdf)
 
 <use Grabber_8hpp__dep__incl.pdf>
@@ -2464,7 +2468,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [92])
-(./img_8cpp.tex <img_8cpp__incl.pdf, id=4649, 665.48625pt x 269.005pt>
+(./img_8cpp.tex <img_8cpp__incl.pdf, id=4654, 665.48625pt x 269.005pt>
 File: img_8cpp__incl.pdf Graphic file (type pdf)
 
 <use img_8cpp__incl.pdf>
@@ -2476,7 +2480,7 @@ Underfull \hbox (badness 10000) detected at line 33
  []
 
 [93 <./img_8cpp__incl.pdf>]
-<img_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.pdf, id=4670, 285.065pt x 11
+<img_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.pdf, id=4675, 285.065pt x 11
 1.41624pt>
 File: img_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.pdf Graphic file (type 
 pdf)
@@ -2486,7 +2490,7 @@ used on input line 77.
 (pdftex.def)             Requested size: 284.0pt x 110.99945pt.
 )
 (./img_8cpp_source.tex) (./jacob__alg__test_8cpp.tex
-<jacob__alg__test_8cpp__incl.pdf, id=4680, 665.48625pt x 269.005pt>
+<jacob__alg__test_8cpp__incl.pdf, id=4685, 665.48625pt x 269.005pt>
 File: jacob__alg__test_8cpp__incl.pdf Graphic file (type pdf)
 
 <use jacob__alg__test_8cpp__incl.pdf>
@@ -2499,7 +2503,7 @@ Underfull \hbox (badness 10000) detected at line 31
  []
 
 
-<jacob__alg__test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.pdf, id=4699, 2
+<jacob__alg__test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.pdf, id=4704, 2
 85.065pt x 111.41624pt>
 File: jacob__alg__test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.pdf Graphi
 c file (type pdf)
@@ -2514,11 +2518,11 @@ Underfull \vbox (badness 1990) has occurred while \output is active []
  [95 <./jacob__alg__test_8cpp__incl.pdf>]) (./jacob__alg__test_8cpp_source.tex)
 
 (./loading__test_8cpp.tex
-<loading__test_8cpp__incl.pdf, id=4723, 1272.755pt x 437.635pt>
+<loading__test_8cpp__incl.pdf, id=4728, 1272.755pt x 437.635pt>
 File: loading__test_8cpp__incl.pdf Graphic file (type pdf)
 
 <use loading__test_8cpp__incl.pdf>
-Package pdftex.def Info: loading__test_8cpp__incl.pdf used on input line 13.
+Package pdftex.def Info: loading__test_8cpp__incl.pdf used on input line 18.
 (pdftex.def)             Requested size: 350.0pt x 120.34665pt.
  [96 <./jacob__alg__test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.pdf> <./
 loading__test_8cpp__incl.pdf
@@ -2526,25 +2530,30 @@ loading__test_8cpp__incl.pdf
 pdfTeX warning: pdflatex (file ./loading__test_8cpp__incl.pdf): PDF inclusion: 
 multiple pdfs with page group included in a single page
 >]
-<loading__test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.pdf, id=4748, 1166
+Underfull \hbox (badness 10000) detected at line 31
+[][][]
+ []
+
+
+<loading__test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.pdf, id=4753, 1166
 .3575pt x 933.4875pt>
 File: loading__test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.pdf Graphic f
 ile (type pdf)
 
 <use loading__test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.pdf>
 Package pdftex.def Info: loading__test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_c
-graph.pdf used on input line 51.
+graph.pdf used on input line 68.
 (pdftex.def)             Requested size: 350.0pt x 280.11963pt.
 )
-(./loading__test_8cpp_source.tex) (./Log_8hpp.tex [97 <./loading__test_8cpp_ae6
-6f6b31b5ad750f1fe042a706a4e3d4_cgraph.pdf>]
-<Log_8hpp__incl.pdf, id=4774, 658.46pt x 212.795pt>
+(./loading__test_8cpp_source.tex [97 <./loading__test_8cpp_ae66f6b31b5ad750f1fe
+042a706a4e3d4_cgraph.pdf>]) (./Log_8hpp.tex
+<Log_8hpp__incl.pdf, id=4781, 658.46pt x 212.795pt>
 File: Log_8hpp__incl.pdf Graphic file (type pdf)
  <use Log_8hpp__incl.pdf>
 Package pdftex.def Info: Log_8hpp__incl.pdf used on input line 21.
 (pdftex.def)             Requested size: 350.0pt x 113.11198pt.
 
-<Log_8hpp__dep__incl.pdf, id=4775, 440.64626pt x 212.795pt>
+<Log_8hpp__dep__incl.pdf, id=4782, 440.64626pt x 212.795pt>
 File: Log_8hpp__dep__incl.pdf Graphic file (type pdf)
 
 <use Log_8hpp__dep__incl.pdf>
@@ -2564,19 +2573,22 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [100])
 (./log__test_8cpp.tex
-<log__test_8cpp__incl.pdf, id=4852, 658.46pt x 269.005pt>
+<log__test_8cpp__incl.pdf, id=4859, 658.46pt x 269.005pt>
 File: log__test_8cpp__incl.pdf Graphic file (type pdf)
 
 <use log__test_8cpp__incl.pdf>
 Package pdftex.def Info: log__test_8cpp__incl.pdf used on input line 19.
 (pdftex.def)             Requested size: 350.0pt x 142.99063pt.
- [101 <./log__test_8cpp__incl.pdf>]
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [101]
 Underfull \hbox (badness 10000) detected at line 32
 [][][]
  []
 
 
-<log__test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.pdf, id=4872, 256.96pt
+<log__test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.pdf, id=4871, 256.96pt
  x 160.6pt>
 File: log__test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.pdf Graphic file 
 (type pdf)
@@ -2584,32 +2596,40 @@ File: log__test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.pdf Graphic file
 Package pdftex.def Info: log__test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgrap
 h.pdf used on input line 68.
 (pdftex.def)             Requested size: 256.0pt x 160.01146pt.
-)
-(./log__test_8cpp_source.tex) (./main_8cpp.tex
-<main_8cpp__incl.pdf, id=4883, 882.29625pt x 269.005pt>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [102 <./log__test_8cpp__incl.pdf>]) (./log__test_8cpp_source.tex) (./main_8cpp
+.tex
+<main_8cpp__incl.pdf, id=4896, 882.29625pt x 269.005pt>
 File: main_8cpp__incl.pdf Graphic file (type pdf)
 
 <use main_8cpp__incl.pdf>
 Package pdftex.def Info: main_8cpp__incl.pdf used on input line 21.
 (pdftex.def)             Requested size: 350.0pt x 106.71347pt.
- [102 <./log__test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.pdf>]
+ [103 <./log__test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.pdf> <./main_8
+cpp__incl.pdf
+
+pdfTeX warning: pdflatex (file ./main_8cpp__incl.pdf): PDF inclusion: multiple 
+pdfs with page group included in a single page
+>]
 Underfull \hbox (badness 10000) detected at line 74
 [][][]
  []
 
-[103 <./main_8cpp__incl.pdf>]
+
 Underfull \hbox (badness 10000) detected at line 77
 [][][]
  []
 
-[104]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [105]
+[104] [105]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [106]
-<main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.pdf, id=5088, 583.17876pt x
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [107]
+<main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.pdf, id=5098, 583.17876pt x
  207.77625pt>
 File: main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.pdf Graphic file (type
  pdf)
@@ -2618,16 +2638,16 @@ Package pdftex.def Info: main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.pdf
  used on input line 406.
 (pdftex.def)             Requested size: 350.0pt x 124.70157pt.
 
-[107 <./main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.pdf>] [108])
-(./main_8cpp_source.tex [109]
+[108 <./main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.pdf>])
+(./main_8cpp_source.tex [109] [110]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [110]
+ [111]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [111])
+ [112])
 (./NavigationControl_8cpp.tex
-<NavigationControl_8cpp__incl.pdf, id=5325, 373.395pt x 212.795pt>
+<NavigationControl_8cpp__incl.pdf, id=5335, 373.395pt x 212.795pt>
 File: NavigationControl_8cpp__incl.pdf Graphic file (type pdf)
 
 <use NavigationControl_8cpp__incl.pdf>
@@ -2635,16 +2655,16 @@ Package pdftex.def Info: NavigationControl_8cpp__incl.pdf used on input line 15
 .
 (pdftex.def)             Requested size: 350.0pt x 199.47208pt.
 
-Underfull \vbox (badness 7759) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [112]
+ [113]
 Underfull \hbox (badness 10000) detected at line 37
 [][][]
  []
 
-[113 <./NavigationControl_8cpp__incl.pdf>])
+[114 <./NavigationControl_8cpp__incl.pdf>])
 (./NavigationControl_8cpp_source.tex) (./NavigationControl_8h.tex
-<NavigationControl_8h__incl.pdf, id=5384, 373.395pt x 156.585pt>
+<NavigationControl_8h__incl.pdf, id=5394, 373.395pt x 156.585pt>
 File: NavigationControl_8h__incl.pdf Graphic file (type pdf)
 
 <use NavigationControl_8h__incl.pdf>
@@ -2653,8 +2673,8 @@ Package pdftex.def Info: NavigationControl_8h__incl.pdf used on input line 18.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [114]
-<NavigationControl_8h__dep__incl.pdf, id=5395, 303.1325pt x 156.585pt>
+ [115]
+<NavigationControl_8h__dep__incl.pdf, id=5406, 303.1325pt x 156.585pt>
 File: NavigationControl_8h__dep__incl.pdf Graphic file (type pdf)
 
 <use NavigationControl_8h__dep__incl.pdf>
@@ -2671,23 +2691,23 @@ Underfull \hbox (badness 10000) detected at line 49
 [][][]
  []
 
-[115 <./NavigationControl_8h__incl.pdf> <./NavigationControl_8h__dep__incl.pdf
+[116 <./NavigationControl_8h__incl.pdf> <./NavigationControl_8h__dep__incl.pdf
 
 pdfTeX warning: pdflatex (file ./NavigationControl_8h__dep__incl.pdf): PDF incl
 usion: multiple pdfs with page group included in a single page
 >]) (./NavigationControl_8h_source.tex) (./net__qr__test_8cpp.tex
-<net__qr__test_8cpp__incl.pdf, id=5435, 707.64375pt x 269.005pt>
+<net__qr__test_8cpp__incl.pdf, id=5445, 707.64375pt x 269.005pt>
 File: net__qr__test_8cpp__incl.pdf Graphic file (type pdf)
 
 <use net__qr__test_8cpp__incl.pdf>
 Package pdftex.def Info: net__qr__test_8cpp__incl.pdf used on input line 19.
 (pdftex.def)             Requested size: 350.0pt x 133.0491pt.
- [116]
+ [117]
 Underfull \hbox (badness 10000) detected at line 32
 [][][]
  []
 
-[117 <./net__qr__test_8cpp__incl.pdf>]
+[118 <./net__qr__test_8cpp__incl.pdf>]
 Overfull \hbox (18.65555pt too wide) in paragraph at lines 84--85
 []\T1/pcr/m/n/7 00052             cout << []"decoded "[] << symbol->get_type_na
 me()  << []" symbol $\OMS/ztmcm/m/n/7 n$\T1/pcr/m/n/7 ""[] << symbol->get_data(
@@ -2695,7 +2715,7 @@ me()  << []" symbol $\OMS/ztmcm/m/n/7 n$\T1/pcr/m/n/7 ""[] << symbol->get_data(
  []
 
 
-<net__qr__test_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph.pdf, id=5464, 285.
+<net__qr__test_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph.pdf, id=5474, 285.
 065pt x 111.41624pt>
 File: net__qr__test_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph.pdf Graphic f
 ile (type pdf)
@@ -2705,7 +2725,7 @@ Package pdftex.def Info: net__qr__test_8cpp_a0ddf1224851353fc92bfbff6f499fa97_c
 graph.pdf used on input line 117.
 (pdftex.def)             Requested size: 284.0pt x 110.99945pt.
 )
-(./net__qr__test_8cpp_source.tex [118 <./net__qr__test_8cpp_a0ddf1224851353fc92
+(./net__qr__test_8cpp_source.tex [119 <./net__qr__test_8cpp_a0ddf1224851353fc92
 bfbff6f499fa97_cgraph.pdf>]
 Overfull \hbox (18.65555pt too wide) in paragraph at lines 46--47
 []\T1/pcr/m/n/7 00052             cout << []"decoded "[] << symbol->get_type_na
@@ -2714,26 +2734,26 @@ me()  << []" symbol $\OMS/ztmcm/m/n/7 n$\T1/pcr/m/n/7 ""[] << symbol->get_data(
  []
 
 ) (./old__cv__test_8cpp.tex
-<old__cv__test_8cpp__incl.pdf, id=5486, 445.665pt x 156.585pt>
+<old__cv__test_8cpp__incl.pdf, id=5496, 445.665pt x 156.585pt>
 File: old__cv__test_8cpp__incl.pdf Graphic file (type pdf)
 
 <use old__cv__test_8cpp__incl.pdf>
 Package pdftex.def Info: old__cv__test_8cpp__incl.pdf used on input line 18.
 (pdftex.def)             Requested size: 350.0pt x 122.97444pt.
- [119 <./old__cv__test_8cpp__incl.pdf>]
+ [120 <./old__cv__test_8cpp__incl.pdf>]
 Underfull \hbox (badness 10000) detected at line 31
 [][][]
  []
 
 ) (./old__cv__test_8cpp_source.tex) (./PiCamera_8hpp.tex
-<PiCamera_8hpp__incl.pdf, id=5506, 665.48625pt x 212.795pt>
+<PiCamera_8hpp__incl.pdf, id=5516, 665.48625pt x 212.795pt>
 File: PiCamera_8hpp__incl.pdf Graphic file (type pdf)
 
 <use PiCamera_8hpp__incl.pdf>
 Package pdftex.def Info: PiCamera_8hpp__incl.pdf used on input line 19.
 (pdftex.def)             Requested size: 350.0pt x 111.9171pt.
- [120]
-<PiCamera_8hpp__dep__incl.pdf, id=5513, 867.24pt x 212.795pt>
+ [121]
+<PiCamera_8hpp__dep__incl.pdf, id=5524, 867.24pt x 212.795pt>
 File: PiCamera_8hpp__dep__incl.pdf Graphic file (type pdf)
 
 <use PiCamera_8hpp__dep__incl.pdf>
@@ -2744,25 +2764,25 @@ Underfull \hbox (badness 10000) detected at line 45
 [][][]
  []
 
-) (./PiCamera_8hpp_source.tex [121 <./PiCamera_8hpp__incl.pdf> <./PiCamera_8hpp
+) (./PiCamera_8hpp_source.tex [122 <./PiCamera_8hpp__incl.pdf> <./PiCamera_8hpp
 __dep__incl.pdf
 
 pdfTeX warning: pdflatex (file ./PiCamera_8hpp__dep__incl.pdf): PDF inclusion: 
 multiple pdfs with page group included in a single page
 >]) (./qr__test_8cpp.tex
-<qr__test_8cpp__incl.pdf, id=5553, 1012.78375pt x 325.215pt>
+<qr__test_8cpp__incl.pdf, id=5563, 1012.78375pt x 325.215pt>
 File: qr__test_8cpp__incl.pdf Graphic file (type pdf)
 
 <use qr__test_8cpp__incl.pdf>
 Package pdftex.def Info: qr__test_8cpp__incl.pdf used on input line 21.
 (pdftex.def)             Requested size: 350.0pt x 112.38786pt.
- [122 <./qr__test_8cpp__incl.pdf>]
+ [123 <./qr__test_8cpp__incl.pdf>]
 Underfull \hbox (badness 10000) detected at line 34
 [][][]
  []
 
 
-<qr__test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.pdf, id=5579, 584.1825p
+<qr__test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.pdf, id=5589, 584.1825p
 t x 298.11375pt>
 File: qr__test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.pdf Graphic file (
 type pdf)
@@ -2772,16 +2792,16 @@ Package pdftex.def Info: qr__test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph
 .pdf used on input line 92.
 (pdftex.def)             Requested size: 350.0pt x 178.61488pt.
 )
-(./qr__test_8cpp_source.tex [123 <./qr__test_8cpp_ae66f6b31b5ad750f1fe042a706a4
+(./qr__test_8cpp_source.tex [124 <./qr__test_8cpp_ae66f6b31b5ad750f1fe042a706a4
 e3d4_cgraph.pdf>]) (./ScanQR_8hpp.tex
-<ScanQR_8hpp__incl.pdf, id=5606, 1003.75pt x 269.005pt>
+<ScanQR_8hpp__incl.pdf, id=5616, 1003.75pt x 269.005pt>
 File: ScanQR_8hpp__incl.pdf Graphic file (type pdf)
 
 <use ScanQR_8hpp__incl.pdf>
 Package pdftex.def Info: ScanQR_8hpp__incl.pdf used on input line 21.
 (pdftex.def)             Requested size: 350.0pt x 93.80016pt.
 
-<ScanQR_8hpp__dep__incl.pdf, id=5607, 169.63374pt x 156.585pt>
+<ScanQR_8hpp__dep__incl.pdf, id=5617, 169.63374pt x 156.585pt>
 File: ScanQR_8hpp__dep__incl.pdf Graphic file (type pdf)
 
 <use ScanQR_8hpp__dep__incl.pdf>
@@ -2790,14 +2810,14 @@ Package pdftex.def Info: ScanQR_8hpp__dep__incl.pdf used on input line 29.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [124 <./ScanQR_8hpp__incl.pdf>]
+ [125 <./ScanQR_8hpp__incl.pdf>]
 Underfull \hbox (badness 10000) detected at line 54
 [][][]
  []
 
-) (./ScanQR_8hpp_source.tex [125 <./ScanQR_8hpp__dep__incl.pdf>])
+) (./ScanQR_8hpp_source.tex [126 <./ScanQR_8hpp__dep__incl.pdf>])
 (./Servo__Position__Shell_8cpp.tex
-<Servo__Position__Shell_8cpp__incl.pdf, id=5674, 759.83875pt x 280.04625pt>
+<Servo__Position__Shell_8cpp__incl.pdf, id=5684, 759.83875pt x 280.04625pt>
 File: Servo__Position__Shell_8cpp__incl.pdf Graphic file (type pdf)
 
 <use Servo__Position__Shell_8cpp__incl.pdf>
@@ -2807,15 +2827,15 @@ ne 18.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [126]
-<Servo__Position__Shell_8cpp__dep__incl.pdf, id=5679, 334.24875pt x 280.04625pt
+ [127]
+<Servo__Position__Shell_8cpp__dep__incl.pdf, id=5691, 334.24875pt x 280.04625pt
 >
 File: Servo__Position__Shell_8cpp__dep__incl.pdf Graphic file (type pdf)
  <use Servo__Position__Shell_8cpp__dep__incl.pdf>
 Package pdftex.def Info: Servo__Position__Shell_8cpp__dep__incl.pdf used on inp
 ut line 26.
 (pdftex.def)             Requested size: 333.0pt x 279.02426pt.
- [127 <./Servo__Position__Shell_8cpp__incl.pdf> <./Servo__Position__Shell_8cpp_
+ [128 <./Servo__Position__Shell_8cpp__incl.pdf> <./Servo__Position__Shell_8cpp_
 _dep__incl.pdf
 
 pdfTeX warning: pdflatex (file ./Servo__Position__Shell_8cpp__dep__incl.pdf): P
@@ -2830,18 +2850,18 @@ Underfull \hbox (badness 10000) detected at line 60
 [][][]
  []
 
-[128]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [129]
+[129]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [130]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [131]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [132]
 <Servo__Position__Shell_8cpp_abd2cd3c2e36d42a2178a6f2fd12af905_cgraph.pdf, id=5
-746, 456.70625pt x 111.41624pt>
+756, 456.70625pt x 111.41624pt>
 File: Servo__Position__Shell_8cpp_abd2cd3c2e36d42a2178a6f2fd12af905_cgraph.pdf 
 Graphic file (type pdf)
 
@@ -2851,7 +2871,7 @@ Package pdftex.def Info: Servo__Position__Shell_8cpp_abd2cd3c2e36d42a2178a6f2fd
 (pdftex.def)             Requested size: 350.0pt x 85.38785pt.
 
 <Servo__Position__Shell_8cpp_abd2cd3c2e36d42a2178a6f2fd12af905_icgraph.pdf, id=
-5747, 842.14626pt x 768.8725pt>
+5757, 842.14626pt x 768.8725pt>
 File: Servo__Position__Shell_8cpp_abd2cd3c2e36d42a2178a6f2fd12af905_icgraph.pdf
  Graphic file (type pdf)
 
@@ -2859,7 +2879,7 @@ File: Servo__Position__Shell_8cpp_abd2cd3c2e36d42a2178a6f2fd12af905_icgraph.pdf
 Package pdftex.def Info: Servo__Position__Shell_8cpp_abd2cd3c2e36d42a2178a6f2fd
 12af905_icgraph.pdf used on input line 423.
 (pdftex.def)             Requested size: 350.0pt x 319.54543pt.
-[132 <./Servo__Position__Shell_8cpp_abd2cd3c2e36d42a2178a6f2fd12af905_cgraph.pd
+[133 <./Servo__Position__Shell_8cpp_abd2cd3c2e36d42a2178a6f2fd12af905_cgraph.pd
 f> <./Servo__Position__Shell_8cpp_abd2cd3c2e36d42a2178a6f2fd12af905_icgraph.pdf
 
 
@@ -2868,7 +2888,7 @@ pdfTeX warning: pdflatex (file ./Servo__Position__Shell_8cpp_abd2cd3c2e36d42a21
 uded in a single page
 >]
 <Servo__Position__Shell_8cpp_a7f07c548295f3696f8881f0c9de708b1_cgraph.pdf, id=5
-769, 329.23pt x 111.41624pt>
+780, 329.23pt x 111.41624pt>
 File: Servo__Position__Shell_8cpp_a7f07c548295f3696f8881f0c9de708b1_cgraph.pdf 
 Graphic file (type pdf)
 
@@ -2878,7 +2898,7 @@ de708b1_cgraph.pdf used on input line 471.
 (pdftex.def)             Requested size: 328.0pt x 111.00284pt.
 
 <Servo__Position__Shell_8cpp_a7f07c548295f3696f8881f0c9de708b1_icgraph.pdf, id=
-5770, 958.58125pt x 768.8725pt>
+5781, 958.58125pt x 768.8725pt>
 File: Servo__Position__Shell_8cpp_a7f07c548295f3696f8881f0c9de708b1_icgraph.pdf
  Graphic file (type pdf)
 
@@ -2886,7 +2906,7 @@ File: Servo__Position__Shell_8cpp_a7f07c548295f3696f8881f0c9de708b1_icgraph.pdf
 Package pdftex.def Info: Servo__Position__Shell_8cpp_a7f07c548295f3696f8881f0c9
 de708b1_icgraph.pdf used on input line 483.
 (pdftex.def)             Requested size: 350.0pt x 280.73586pt.
-[133 <./Servo__Position__Shell_8cpp_a7f07c548295f3696f8881f0c9de708b1_cgraph.pd
+[134 <./Servo__Position__Shell_8cpp_a7f07c548295f3696f8881f0c9de708b1_cgraph.pd
 f> <./Servo__Position__Shell_8cpp_a7f07c548295f3696f8881f0c9de708b1_icgraph.pdf
 
 
@@ -2895,7 +2915,7 @@ pdfTeX warning: pdflatex (file ./Servo__Position__Shell_8cpp_a7f07c548295f3696f
 uded in a single page
 >]
 <Servo__Position__Shell_8cpp_a4fc01d736fe50cf5b977f755b675f11d_cgraph.pdf, id=5
-794, 458.71375pt x 160.6pt>
+804, 458.71375pt x 160.6pt>
 File: Servo__Position__Shell_8cpp_a4fc01d736fe50cf5b977f755b675f11d_cgraph.pdf 
 Graphic file (type pdf)
 
@@ -2905,7 +2925,7 @@ Package pdftex.def Info: Servo__Position__Shell_8cpp_a4fc01d736fe50cf5b977f755b
 (pdftex.def)             Requested size: 350.0pt x 122.5449pt.
 
 <Servo__Position__Shell_8cpp_a4fc01d736fe50cf5b977f755b675f11d_icgraph.pdf, id=
-5795, 286.06876pt x 138.5175pt>
+5805, 286.06876pt x 138.5175pt>
 File: Servo__Position__Shell_8cpp_a4fc01d736fe50cf5b977f755b675f11d_icgraph.pdf
  Graphic file (type pdf)
 
@@ -2913,7 +2933,7 @@ File: Servo__Position__Shell_8cpp_a4fc01d736fe50cf5b977f755b675f11d_icgraph.pdf
 Package pdftex.def Info: Servo__Position__Shell_8cpp_a4fc01d736fe50cf5b977f755b
 675f11d_icgraph.pdf used on input line 526.
 (pdftex.def)             Requested size: 285.0pt x 138.00142pt.
-) (./Servo__Position__Shell_8cpp_source.tex [134 <./Servo__Position__Shell_8cpp
+) (./Servo__Position__Shell_8cpp_source.tex [135 <./Servo__Position__Shell_8cpp
 _a4fc01d736fe50cf5b977f755b675f11d_cgraph.pdf> <./Servo__Position__Shell_8cpp_a
 4fc01d736fe50cf5b977f755b675f11d_icgraph.pdf
 
@@ -2923,15 +2943,15 @@ uded in a single page
 >]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [135]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
  [136]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [137])
-(./Servo__Position__Shell_8h.tex [138]
-<Servo__Position__Shell_8h__incl.pdf, id=5863, 759.83875pt x 223.83624pt>
+ [137]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [138])
+(./Servo__Position__Shell_8h.tex [139]
+<Servo__Position__Shell_8h__incl.pdf, id=5874, 759.83875pt x 223.83624pt>
 File: Servo__Position__Shell_8h__incl.pdf Graphic file (type pdf)
 
 <use Servo__Position__Shell_8h__incl.pdf>
@@ -2939,7 +2959,7 @@ Package pdftex.def Info: Servo__Position__Shell_8h__incl.pdf used on input line
  19.
 (pdftex.def)             Requested size: 350.0pt x 103.10594pt.
 
-<Servo__Position__Shell_8h__dep__incl.pdf, id=5864, 372.39125pt x 347.2975pt>
+<Servo__Position__Shell_8h__dep__incl.pdf, id=5875, 372.39125pt x 347.2975pt>
 File: Servo__Position__Shell_8h__dep__incl.pdf Graphic file (type pdf)
 
 <use Servo__Position__Shell_8h__dep__incl.pdf>
@@ -2949,7 +2969,7 @@ Package pdftex.def Info: Servo__Position__Shell_8h__dep__incl.pdf used on input
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [139 <./Servo__Position__Shell_8h__incl.pdf> <./Servo__Position__Shell_8h__dep
+ [140 <./Servo__Position__Shell_8h__incl.pdf> <./Servo__Position__Shell_8h__dep
 __incl.pdf
 
 pdfTeX warning: pdflatex (file ./Servo__Position__Shell_8h__dep__incl.pdf): PDF
@@ -2969,14 +2989,14 @@ Underfull \hbox (badness 10000) detected at line 85
 [][][]
  []
 
-[140] [141]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [142]
+[141] [142]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [143]
-<Servo__Position__Shell_8h_abd2cd3c2e36d42a2178a6f2fd12af905_cgraph.pdf, id=595
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [144]
+<Servo__Position__Shell_8h_abd2cd3c2e36d42a2178a6f2fd12af905_cgraph.pdf, id=596
 2, 456.70625pt x 111.41624pt>
 File: Servo__Position__Shell_8h_abd2cd3c2e36d42a2178a6f2fd12af905_cgraph.pdf Gr
 aphic file (type pdf)
@@ -2988,9 +3008,9 @@ af905_cgraph.pdf used on input line 470.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [144]
+ [145]
 <Servo__Position__Shell_8h_abd2cd3c2e36d42a2178a6f2fd12af905_icgraph.pdf, id=59
-57, 842.14626pt x 768.8725pt>
+68, 842.14626pt x 768.8725pt>
 File: Servo__Position__Shell_8h_abd2cd3c2e36d42a2178a6f2fd12af905_icgraph.pdf G
 raphic file (type pdf)
 
@@ -2999,14 +3019,14 @@ Package pdftex.def Info: Servo__Position__Shell_8h_abd2cd3c2e36d42a2178a6f2fd12
 af905_icgraph.pdf used on input line 482.
 (pdftex.def)             Requested size: 350.0pt x 319.54543pt.
 
-[145 <./Servo__Position__Shell_8h_abd2cd3c2e36d42a2178a6f2fd12af905_cgraph.pdf>
+[146 <./Servo__Position__Shell_8h_abd2cd3c2e36d42a2178a6f2fd12af905_cgraph.pdf>
  <./Servo__Position__Shell_8h_abd2cd3c2e36d42a2178a6f2fd12af905_icgraph.pdf
 
 pdfTeX warning: pdflatex (file ./Servo__Position__Shell_8h_abd2cd3c2e36d42a2178
 a6f2fd12af905_icgraph.pdf): PDF inclusion: multiple pdfs with page group includ
 ed in a single page
 >]
-<Servo__Position__Shell_8h_a323a36dcf89ccad28f3ed2312e26ed8a_cgraph.pdf, id=598
+<Servo__Position__Shell_8h_a323a36dcf89ccad28f3ed2312e26ed8a_cgraph.pdf, id=599
 0, 329.23pt x 111.41624pt>
 File: Servo__Position__Shell_8h_a323a36dcf89ccad28f3ed2312e26ed8a_cgraph.pdf Gr
 aphic file (type pdf)
@@ -3017,7 +3037,7 @@ Package pdftex.def Info: Servo__Position__Shell_8h_a323a36dcf89ccad28f3ed2312e2
 (pdftex.def)             Requested size: 328.0pt x 111.00284pt.
 
 <Servo__Position__Shell_8h_a323a36dcf89ccad28f3ed2312e26ed8a_icgraph.pdf, id=59
-81, 958.58125pt x 768.8725pt>
+91, 958.58125pt x 768.8725pt>
 File: Servo__Position__Shell_8h_a323a36dcf89ccad28f3ed2312e26ed8a_icgraph.pdf G
 raphic file (type pdf)
 
@@ -3026,7 +3046,7 @@ Package pdftex.def Info: Servo__Position__Shell_8h_a323a36dcf89ccad28f3ed2312e2
 6ed8a_icgraph.pdf used on input line 542.
 (pdftex.def)             Requested size: 350.0pt x 280.73586pt.
 
-<Servo__Position__Shell_8h_a4fc01d736fe50cf5b977f755b675f11d_cgraph.pdf, id=598
+<Servo__Position__Shell_8h_a4fc01d736fe50cf5b977f755b675f11d_cgraph.pdf, id=599
 8, 458.71375pt x 160.6pt>
 File: Servo__Position__Shell_8h_a4fc01d736fe50cf5b977f755b675f11d_cgraph.pdf Gr
 aphic file (type pdf)
@@ -3036,7 +3056,7 @@ Package pdftex.def Info: Servo__Position__Shell_8h_a4fc01d736fe50cf5b977f755b67
 5f11d_cgraph.pdf used on input line 573.
 (pdftex.def)             Requested size: 350.0pt x 122.5449pt.
 
-[146 <./Servo__Position__Shell_8h_a323a36dcf89ccad28f3ed2312e26ed8a_cgraph.pdf>
+[147 <./Servo__Position__Shell_8h_a323a36dcf89ccad28f3ed2312e26ed8a_cgraph.pdf>
  <./Servo__Position__Shell_8h_a323a36dcf89ccad28f3ed2312e26ed8a_icgraph.pdf
 
 pdfTeX warning: pdflatex (file ./Servo__Position__Shell_8h_a323a36dcf89ccad28f3
@@ -3044,7 +3064,7 @@ ed2312e26ed8a_icgraph.pdf): PDF inclusion: multiple pdfs with page group includ
 ed in a single page
 >]
 <Servo__Position__Shell_8h_a4fc01d736fe50cf5b977f755b675f11d_icgraph.pdf, id=60
-04, 286.06876pt x 138.5175pt>
+15, 286.06876pt x 138.5175pt>
 File: Servo__Position__Shell_8h_a4fc01d736fe50cf5b977f755b675f11d_icgraph.pdf G
 raphic file (type pdf)
 
@@ -3053,16 +3073,16 @@ Package pdftex.def Info: Servo__Position__Shell_8h_a4fc01d736fe50cf5b977f755b67
 5f11d_icgraph.pdf used on input line 585.
 (pdftex.def)             Requested size: 285.0pt x 138.00142pt.
 )
-(./Servo__Position__Shell_8h_source.tex [147 <./Servo__Position__Shell_8h_a4fc0
+(./Servo__Position__Shell_8h_source.tex [148 <./Servo__Position__Shell_8h_a4fc0
 1d736fe50cf5b977f755b675f11d_cgraph.pdf> <./Servo__Position__Shell_8h_a4fc01d73
 6fe50cf5b977f755b675f11d_icgraph.pdf
 
 pdfTeX warning: pdflatex (file ./Servo__Position__Shell_8h_a4fc01d736fe50cf5b97
 7f755b675f11d_icgraph.pdf): PDF inclusion: multiple pdfs with page group includ
 ed in a single page
->]) [148] (./refman.ind [149
+>]) [149] (./refman.ind [150
 
-] [150
+] [151
 
 ])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 220.
@@ -3071,7 +3091,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 220.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 220.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 220.
 Package rerunfilecheck Info: File `refman.out' has not changed.
-(rerunfilecheck)             Checksum: DA7E3AD09766B9DD2719BA251574DAE9;57981.
+(rerunfilecheck)             Checksum: 86BA1A26E13822AC9AAAAB12338C308A;58187.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -3079,13 +3099,13 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 220.
  ) 
 Here is how much of TeX's memory you used:
- 14685 strings out of 495020
- 256559 string characters out of 6181325
+ 14687 strings out of 495020
+ 256582 string characters out of 6181325
  311076 words of memory out of 5000000
- 16456 multiletter control sequences out of 15000+600000
+ 16457 multiletter control sequences out of 15000+600000
  87146 words of font info for 115 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 48i,17n,43p,2409b,499s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 48i,17n,43p,2409b,508s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{namespacezbar} has been referenced but does not e
 xist, replaced by a fixed one
 
@@ -3101,10 +3121,10 @@ hvb8ac.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb>
 </usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvbo8ac.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/te
 xmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on refman.pdf (162 pages, 785283 bytes).
+Output written on refman.pdf (163 pages, 785732 bytes).
 PDF statistics:
- 6402 PDF objects out of 7423 (max. 8388607)
- 5927 compressed objects within 60 object streams
- 966 named destinations out of 1000 (max. 500000)
- 3094 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 6414 PDF objects out of 7423 (max. 8388607)
+ 5938 compressed objects within 60 object streams
+ 968 named destinations out of 1000 (max. 500000)
+ 3102 words of extra memory for PDF output out of 10000 (max. 10000000)
 
