@@ -1,6 +1,6 @@
 var NAVTREE =
 [
-  [ "The Automatic Vasospasm Detection Application", "index.html", [
+  [ "ChipChipArray", "index.html", [
     [ "Namespaces", null, [
       [ "Namespace List", "namespaces.html", "namespaces" ],
       [ "Namespace Members", "namespacemembers.html", [

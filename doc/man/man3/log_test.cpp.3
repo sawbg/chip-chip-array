@@ -1,8 +1,11 @@
-.TH "src/log_test.cpp" 3 "Fri Apr 22 2016" "The Automatic Vasospasm Detection Application" \" -*- nroff -*-
+.TH "src/log_test.cpp" 3 "Fri Apr 22 2016" "ChipChipArray" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
 src/log_test.cpp \- 
+.PP
+contains a program to test partially the Log class  
+
 .SH SYNOPSIS
 .br
 .PP
@@ -24,20 +27,34 @@ src/log_test.cpp \-
 .RI "int \fBmain\fP ()"
 .br
 .in -1c
+.SH "Detailed Description"
+.PP 
+contains a program to test partially the Log class 
+
+
+.PP
+\fBAuthor:\fP
+.RS 4
+Samuel Andrew Wisner, awisner94@gmail.com 
+.RE
+.PP
+
+.PP
+Definition in file \fBlog_test\&.cpp\fP\&.
 .SH "Function Documentation"
 .PP 
 .SS "int main ()"
 This program partially tests the Log class\&. 
 .PP
-Definition at line 17 of file log_test\&.cpp\&.
+Definition at line 18 of file log_test\&.cpp\&.
 .PP
 .nf
-17            {
-18     Log log("logs", LogMode::Text);
-19     log\&.Debug("yolo!");
-20     log\&.Variable("mymom","toldme");
-21 }
+18            {
+19     Log log("logs", LogMode::Text);
+20     log\&.Debug("yolo!");
+21     log\&.Variable("mymom","toldme");
+22 }
 .fi
 .SH "Author"
 .PP 
-Generated automatically by Doxygen for The Automatic Vasospasm Detection Application from the source code\&.
+Generated automatically by Doxygen for ChipChipArray from the source code\&.

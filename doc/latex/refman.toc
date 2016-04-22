@@ -220,8 +220,9 @@
 \contentsline {subsection}{\numberline {6.31.1}Detailed Description}{98}{subsection.6.31.1}
 \contentsline {section}{\numberline {6.32}Log.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}hpp}{99}{section.6.32}
 \contentsline {section}{\numberline {6.33}src/log\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}test.cpp File Reference}{101}{section.6.33}
-\contentsline {subsection}{\numberline {6.33.1}Function Documentation}{102}{subsection.6.33.1}
-\contentsline {subsubsection}{\numberline {6.33.1.1}main}{102}{subsubsection.6.33.1.1}
+\contentsline {subsection}{\numberline {6.33.1}Detailed Description}{102}{subsection.6.33.1}
+\contentsline {subsection}{\numberline {6.33.2}Function Documentation}{102}{subsection.6.33.2}
+\contentsline {subsubsection}{\numberline {6.33.2.1}main}{102}{subsubsection.6.33.2.1}
 \contentsline {section}{\numberline {6.34}log\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}\_\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}test.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cpp}{102}{section.6.34}
 \contentsline {section}{\numberline {6.35}src/main.cpp File Reference}{102}{section.6.35}
 \contentsline {subsection}{\numberline {6.35.1}Detailed Description}{103}{subsection.6.35.1}
@@ -230,8 +231,8 @@
 \contentsline {subsection}{\numberline {6.35.3}Function Documentation}{104}{subsection.6.35.3}
 \contentsline {subsubsection}{\numberline {6.35.3.1}main}{104}{subsubsection.6.35.3.1}
 \contentsline {subsection}{\numberline {6.35.4}Variable Documentation}{107}{subsection.6.35.4}
-\contentsline {subsubsection}{\numberline {6.35.4.1}cleartoload}{107}{subsubsection.6.35.4.1}
-\contentsline {subsubsection}{\numberline {6.35.4.2}cleartonavigate}{107}{subsubsection.6.35.4.2}
+\contentsline {subsubsection}{\numberline {6.35.4.1}cleartoload}{108}{subsubsection.6.35.4.1}
+\contentsline {subsubsection}{\numberline {6.35.4.2}cleartonavigate}{108}{subsubsection.6.35.4.2}
 \contentsline {subsubsection}{\numberline {6.35.4.3}cleartounload}{108}{subsubsection.6.35.4.3}
 \contentsline {subsubsection}{\numberline {6.35.4.4}giveitasec}{108}{subsubsection.6.35.4.4}
 \contentsline {subsubsection}{\numberline {6.35.4.5}loadcounter}{108}{subsubsection.6.35.4.5}
@@ -242,8 +243,8 @@
 \contentsline {subsubsection}{\numberline {6.35.4.10}startroboth}{108}{subsubsection.6.35.4.10}
 \contentsline {subsubsection}{\numberline {6.35.4.11}startstatus}{108}{subsubsection.6.35.4.11}
 \contentsline {subsubsection}{\numberline {6.35.4.12}stoproboth}{108}{subsubsection.6.35.4.12}
-\contentsline {subsubsection}{\numberline {6.35.4.13}track}{108}{subsubsection.6.35.4.13}
-\contentsline {subsubsection}{\numberline {6.35.4.14}unloadcounter}{108}{subsubsection.6.35.4.14}
+\contentsline {subsubsection}{\numberline {6.35.4.13}track}{109}{subsubsection.6.35.4.13}
+\contentsline {subsubsection}{\numberline {6.35.4.14}unloadcounter}{109}{subsubsection.6.35.4.14}
 \contentsline {subsubsection}{\numberline {6.35.4.15}unloadtheblocks}{109}{subsubsection.6.35.4.15}
 \contentsline {subsubsection}{\numberline {6.35.4.16}whereistherobot}{109}{subsubsection.6.35.4.16}
 \contentsline {section}{\numberline {6.36}main.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}cpp}{109}{section.6.36}
