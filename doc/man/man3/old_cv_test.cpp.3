@@ -1,0 +1,72 @@
+.TH "src/old_cv_test.cpp" 3 "Fri Apr 22 2016" "The Automatic Vasospasm Detection Application" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/old_cv_test.cpp \- 
+.PP
+Contains old test program for the RaspiCam_Cv class\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <core/core\&.hpp>\fP
+.br
+\fC#include <highgui/highgui\&.hpp>\fP
+.br
+\fC#include <iostream>\fP
+.br
+\fC#include 'raspicam_cv\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBmain\fP ()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Contains old test program for the RaspiCam_Cv class\&. 
+
+
+.PP
+\fBAuthor:\fP
+.RS 4
+Samuel Andrew Wisner, awisner94@gmail.com 
+.RE
+.PP
+
+.PP
+Definition in file \fBold_cv_test\&.cpp\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "int main ()"
+This program was used to test the raspicam wrapper for OpenCV before implementing it in a more projet-friendly form as the PiCamera class\&. 
+.PP
+Definition at line 17 of file old_cv_test\&.cpp\&.
+.PP
+.nf
+17            {
+18     cv::namedWindow("Test", CV_WINDOW_AUTOSIZE);
+19 
+20     raspicam::RaspiCam_Cv cam;
+21     cv::Mat image;
+22 
+23     bool s = cam\&.set(CV_CAP_PROP_FORMAT, CV_16UC3);
+24     bool o = cam\&.open();
+25 
+26     while(true) {
+27         cam\&.grab();
+28         cam\&.retrieve(image);
+29         cv::imshow("Test", image);
+30         cv::waitKey(1000);
+31 
+32     }
+33 
+34     cam\&.release();
+35 }
+.fi
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for The Automatic Vasospasm Detection Application from the source code\&.

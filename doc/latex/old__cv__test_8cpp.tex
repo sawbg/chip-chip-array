@@ -1,6 +1,11 @@
 \hypertarget{old__cv__test_8cpp}{\section{src/old\+\_\+cv\+\_\+test.cpp File Reference}
 \label{old__cv__test_8cpp}\index{src/old\+\_\+cv\+\_\+test.\+cpp@{src/old\+\_\+cv\+\_\+test.\+cpp}}
 }
+
+
+Contains old test program for the Raspi\+Cam\+\_\+\+Cv class.  
+
+
 {\ttfamily \#include $<$core/core.\+hpp$>$}\\*
 {\ttfamily \#include $<$highgui/highgui.\+hpp$>$}\\*
 {\ttfamily \#include $<$iostream$>$}\\*
@@ -17,7 +22,19 @@ Include dependency graph for old\+\_\+cv\+\_\+test.\+cpp\+:
 \begin{DoxyCompactItemize}
 \item 
 int \hyperlink{old__cv__test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
-\begin{DoxyCompactList}\small\item\em contains old test program for the Raspi\+Cam\+\_\+\+Cv class \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Contains old test program for the Raspi\+Cam\+\_\+\+Cv class. 
+
+\begin{DoxyAuthor}{Author}
+Samuel Andrew Wisner, \href{mailto:awisner94@gmail.com}{\tt awisner94@gmail.\+com} 
+\end{DoxyAuthor}
+
+
+Definition in file \hyperlink{old__cv__test_8cpp_source}{old\+\_\+cv\+\_\+test.\+cpp}.
+
 
 
 \subsection{Function Documentation}
@@ -28,14 +45,29 @@ int \hyperlink{old__cv__test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
 {}
 \end{DoxyParamCaption}
 )}}\label{old__cv__test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
+This program was used to test the raspicam wrapper for Open\+C\+V before implementing it in a more projet-\/friendly form as the Pi\+Camera class. 
+
+Definition at line \hyperlink{old__cv__test_8cpp_source_l00017}{17} of file \hyperlink{old__cv__test_8cpp_source}{old\+\_\+cv\+\_\+test.\+cpp}.
 
 
-contains old test program for the Raspi\+Cam\+\_\+\+Cv class 
-
-\begin{DoxyAuthor}{Author}
-Samuel Andrew Wisner, \href{mailto:awisner94@gmail.com}{\tt awisner94@gmail.\+com} This program was used to test the raspicam wrapper for Open\+C\+V before implementing it in a more projet-\/friendly form as the Pi\+Camera class. 
-\end{DoxyAuthor}
-
-
-Definition at line 16 of file old\+\_\+cv\+\_\+test.\+cpp.
-
+\begin{DoxyCode}
+00017            \{
+00018     cv::namedWindow(\textcolor{stringliteral}{"Test"}, CV\_WINDOW\_AUTOSIZE);
+00019 
+00020     raspicam::RaspiCam\_Cv cam;
+00021     cv::Mat image;
+00022 
+00023     \textcolor{keywordtype}{bool} s = cam.set(CV\_CAP\_PROP\_FORMAT, CV\_16UC3);
+00024     \textcolor{keywordtype}{bool} o = cam.open();
+00025 
+00026     \textcolor{keywordflow}{while}(\textcolor{keyword}{true}) \{
+00027         cam.grab();
+00028         cam.retrieve(image);
+00029         cv::imshow(\textcolor{stringliteral}{"Test"}, image);
+00030         cv::waitKey(1000);
+00031 
+00032     \}
+00033 
+00034     cam.release();
+00035 \}
+\end{DoxyCode}

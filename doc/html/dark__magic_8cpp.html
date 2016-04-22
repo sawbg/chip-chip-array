@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.8"/>
-<title>My Project: src/dark_magic.cpp File Reference</title>
+<title>The Automatic Vasospasm Detection Application: src/dark_magic.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,7 +29,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">My Project
+   <div id="projectname">The Automatic Vasospasm Detection Application
    </div>
   </td>
  </tr>
@@ -107,6 +107,9 @@ $(document).ready(function(){initNavTree('dark__magic_8cpp.html','');});
 <div class="title">dark_magic.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Contains test code for arm.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;cstdlib&gt;</code><br />
 <code>#include &lt;iostream&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
@@ -116,7 +119,7 @@ Include dependency graph for dark_magic.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="dark__magic_8cpp__incl.png" border="0" usemap="#src_2dark__magic_8cpp" alt=""/></div>
 <map name="src_2dark__magic_8cpp" id="src_2dark__magic_8cpp">
-<area shape="rect" id="node5" href="Servo__Position__Shell_8cpp.html" title="Servo_Position_Shell.cpp" alt="" coords="197,80,367,107"/><area shape="rect" id="node7" href="Adafruit__PWMServoDriver_8cpp.html" title="Adafruit_PWMServoDriver.cpp" alt="" coords="361,155,563,181"/><area shape="rect" id="node15" href="Servo__Position__Shell_8h.html" title="Servo_Position_Shell.h" alt="" coords="203,229,361,256"/><area shape="rect" id="node8" href="Adafruit__PWMServoDriver_8h.html" title="Adafruit_PWMServoDriver.h" alt="" coords="385,229,571,256"/></map>
+<area shape="rect" id="node5" href="Servo__Position__Shell_8cpp.html" title="COntains the function definitions for the servo position shell. " alt="" coords="279,80,450,107"/><area shape="rect" id="node7" href="Adafruit__PWMServoDriver_8cpp.html" title="Contains the function and class definitions necessary for the PWM servo driver. " alt="" coords="264,155,465,181"/><area shape="rect" id="node15" href="Servo__Position__Shell_8h.html" title="Contains the function prototypes for the servo position shell. " alt="" coords="490,155,647,181"/><area shape="rect" id="node8" href="Adafruit__PWMServoDriver_8h.html" title="Adafruit_PWMServoDriver.h" alt="" coords="309,229,495,256"/></map>
 </div>
 </div>
 <p><a href="dark__magic_8cpp_source.html">Go to the source code of this file.</a></p>
@@ -126,7 +129,12 @@ Functions</h2></td></tr>
 <tr class="memitem:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dark__magic_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a> (int argc, char **argv)</td></tr>
 <tr class="separator:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Contains test code for arm. </p>
+<dl class="section author"><dt>Author</dt><dd>Samuel Andrew Wisner, <a href="#" onclick="location.href='mai'+'lto:'+'awi'+'sn'+'er9'+'4@'+'gma'+'il'+'.co'+'m'; return false;">awisn<span style="display: none;">.nosp@m.</span>er94<span style="display: none;">.nosp@m.</span>@gmai<span style="display: none;">.nosp@m.</span>l.co<span style="display: none;">.nosp@m.</span>m</a> </dd></dl>
+
+<p>Definition in file <a class="el" href="dark__magic_8cpp_source.html">dark_magic.cpp</a>.</p>
+</div><h2 class="groupheader">Function Documentation</h2>
 <a class="anchor" id="a3c04138a5bfe5d72780bb7e82a18e627"></a>
 <div class="memitem">
 <div class="memproto">
@@ -150,9 +158,23 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Controls the positions of the arm servos. Will likely work for other servos on the robot, as well.</p>
+<p>Usage: arm [SERVO NUMBER] [ANGULAR POSITION DEGREES] </p>
 
-<p>Definition at line <a class="el" href="dark__magic_8cpp_source.html#l00014">14</a> of file <a class="el" href="dark__magic_8cpp_source.html">dark_magic.cpp</a>.</p>
-
+<p>Definition at line <a class="el" href="dark__magic_8cpp_source.html#l00021">21</a> of file <a class="el" href="dark__magic_8cpp_source.html">dark_magic.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;                                {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="Servo__Position__Shell_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d">setup</a>();</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordflow">if</span>(argc != 3) {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;Usage: arm [SERVO] [VALUE]&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <a class="code" href="Servo__Position__Shell_8cpp.html#abd2cd3c2e36d42a2178a6f2fd12af905">setServoPosition</a>((<a class="code" href="Servo__Position__Shell_8h.html#af629c4ae98db77091b130c7fbc31cab2">Servo</a>)atoi(argv[1]), atoi(argv[2]));</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    }</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;}</div>
+<div class="ttc" id="Servo__Position__Shell_8h_html_af629c4ae98db77091b130c7fbc31cab2"><div class="ttname"><a href="Servo__Position__Shell_8h.html#af629c4ae98db77091b130c7fbc31cab2">Servo</a></div><div class="ttdeci">Servo</div><div class="ttdef"><b>Definition:</b> <a href="Servo__Position__Shell_8h_source.html#l00028">Servo_Position_Shell.h:28</a></div></div>
+<div class="ttc" id="Servo__Position__Shell_8cpp_html_a4fc01d736fe50cf5b977f755b675f11d"><div class="ttname"><a href="Servo__Position__Shell_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d">setup</a></div><div class="ttdeci">void setup()</div><div class="ttdef"><b>Definition:</b> <a href="Servo__Position__Shell_8cpp_source.html#l00041">Servo_Position_Shell.cpp:41</a></div></div>
+<div class="ttc" id="Servo__Position__Shell_8cpp_html_abd2cd3c2e36d42a2178a6f2fd12af905"><div class="ttname"><a href="Servo__Position__Shell_8cpp.html#abd2cd3c2e36d42a2178a6f2fd12af905">setServoPosition</a></div><div class="ttdeci">void setServoPosition(Servo whichservo, int position)</div><div class="ttdef"><b>Definition:</b> <a href="Servo__Position__Shell_8cpp_source.html#l00071">Servo_Position_Shell.cpp:71</a></div></div>
+</div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -170,7 +192,7 @@ Here is the call graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dark__magic_8cpp.html">dark_magic.cpp</a></li>
-    <li class="footer">Generated on Fri Mar 18 2016 20:38:59 for My Project by
+    <li class="footer">Generated on Fri Apr 22 2016 15:41:26 for The Automatic Vasospasm Detection Application by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

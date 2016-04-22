@@ -1,0 +1,29 @@
+\hypertarget{cv__test_8cpp_source}{\section{cv\+\_\+test.\+cpp}
+\label{cv__test_8cpp_source}\index{src/cv\+\_\+test.\+cpp@{src/cv\+\_\+test.\+cpp}}
+}
+
+\begin{DoxyCode}
+00001 
+00007 \textcolor{preprocessor}{#include <iostream>}
+00008 
+00009 \textcolor{preprocessor}{#include "\hyperlink{definitions_8hpp}{definitions.hpp}"}
+00010 \textcolor{preprocessor}{#include "\hyperlink{Block_8hpp}{Block.hpp}"}
+00011 \textcolor{preprocessor}{#include "\hyperlink{Grabber_8hpp}{Grabber.hpp}"}
+00012 
+00013 \textcolor{keyword}{using namespace }\hyperlink{namespaceChipChipArray}{ChipChipArray};
+00014 
+\hypertarget{cv__test_8cpp_source_l00019}{}\hyperlink{cv__test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{00019} \textcolor{keywordtype}{int} \hyperlink{namespaceChipChipArray_a7fc3d1edffca11531cd09fdab7c8b88d}{main}() \{
+00020     \hyperlink{classChipChipArray_1_1Grabber}{Grabber} g(\hyperlink{definitions_8hpp_adbd1e7a33d3e1751c7b2aa2562d0ecb9a0d61f8370cad1d412f80b84d143e1257}{Zone::C}, \hyperlink{definitions_8hpp_a03325a8a9d4f105db5e37dd587128142a945d5e233cf7d6240f6b783b36a374ff}{Side::Left});
+00021     \hyperlink{classChipChipArray_1_1Block}{Block} block = g.LocateBlock();
+00022     g.\hyperlink{classChipChipArray_1_1Grabber_aacf089ceb4aa5b263c2cc702fb3daf74}{Close}();
+00023     std::cout << \hyperlink{namespacestd_aa5ddf582a1c96ffe258c997be9a294a3}{std::to\_string}(block.\hyperlink{classChipChipArray_1_1Block_a262210a9a04028f3f2670c9ae38ef3d7}{color}) << std::endl;
+00024     std::cout << \textcolor{stringliteral}{"Offset: "} << block.\hyperlink{classChipChipArray_1_1Block_a42e2ca0775dc09b04049a2db1bc0bb4f}{offset} << std::endl;
+00025 
+00026     \hyperlink{classChipChipArray_1_1Grabber}{Grabber} g2(\hyperlink{definitions_8hpp_adbd1e7a33d3e1751c7b2aa2562d0ecb9a9d5ed678fe57bcca610140957afab571}{Zone::B}, \hyperlink{definitions_8hpp_a03325a8a9d4f105db5e37dd587128142a92b09c7c48c520c3c55e497875da437c}{Side::Right});
+00027     \hyperlink{classChipChipArray_1_1Block}{Block} block2 = g2.LocateBlock();
+00028     g2.\hyperlink{classChipChipArray_1_1Grabber_aacf089ceb4aa5b263c2cc702fb3daf74}{Close}();
+00029     std::cout << \hyperlink{namespacestd_aa5ddf582a1c96ffe258c997be9a294a3}{std::to\_string}(block2.\hyperlink{classChipChipArray_1_1Block_a262210a9a04028f3f2670c9ae38ef3d7}{color}) << std::endl;
+00030     std::cout << \textcolor{stringliteral}{"Offset: "} << block2.\hyperlink{classChipChipArray_1_1Block_a42e2ca0775dc09b04049a2db1bc0bb4f}{offset} << std::endl;
+00031 
+00032 \}
+\end{DoxyCode}

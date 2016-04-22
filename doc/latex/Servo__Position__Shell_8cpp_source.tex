@@ -1,0 +1,354 @@
+\hypertarget{Servo__Position__Shell_8cpp_source}{\section{Servo\+\_\+\+Position\+\_\+\+Shell.\+cpp}
+\label{Servo__Position__Shell_8cpp_source}\index{src/\+Servo\+\_\+\+Position\+\_\+\+Shell.\+cpp@{src/\+Servo\+\_\+\+Position\+\_\+\+Shell.\+cpp}}
+}
+
+\begin{DoxyCode}
+00001 
+00008 \textcolor{comment}{/* }
+00009 \textcolor{comment}{ * File:   Servo\_Position\_Shell.cpp}
+00010 \textcolor{comment}{ * Author: Nickolas Neely}
+00011 \textcolor{comment}{ *}
+00012 \textcolor{comment}{ * Created on February 8, 2016, 12:05 PM}
+00013 \textcolor{comment}{ */}
+00014 
+00015 \textcolor{preprocessor}{#include <wiringPi.h>}
+00016 \textcolor{preprocessor}{#include "\hyperlink{Adafruit__PWMServoDriver_8cpp}{Adafruit\_PWMServoDriver.cpp}"}
+00017 \textcolor{preprocessor}{#include <iostream>}
+00018 \textcolor{preprocessor}{#include "\hyperlink{Servo__Position__Shell_8h}{Servo\_Position\_Shell.h}"}
+00019 
+00020 
+00021 \textcolor{comment}{// called this way, it uses the default address 0x40}
+\hypertarget{Servo__Position__Shell_8cpp_source_l00022}{}\hyperlink{Servo__Position__Shell_8cpp_a2c06cc8f85429bb0f7cb91917164dc54}{00022} \hyperlink{classAdafruit__PWMServoDriver}{Adafruit\_PWMServoDriver} \hyperlink{Servo__Position__Shell_8cpp_a2c06cc8f85429bb0f7cb91917164dc54}{pwm} = \hyperlink{classAdafruit__PWMServoDriver}{Adafruit\_PWMServoDriver}();
+00023 \textcolor{comment}{// you can also call it with a different address you want}
+00024 \textcolor{comment}{//Adafruit\_PWMServoDriver pwm = Adafruit\_PWMServoDriver(0x41);}
+00025 
+00026 \textcolor{comment}{// Depending on your servo make, the pulse width min and max may vary, you }
+00027 \textcolor{comment}{// want these to be as small/large as possible without hitting the hard stop}
+00028 \textcolor{comment}{// for max range. You'll have to tweak them as necessary to match the servos you}
+00029 \textcolor{comment}{// have!}
+\hypertarget{Servo__Position__Shell_8cpp_source_l00030}{}\hyperlink{Servo__Position__Shell_8cpp_a65ff49a6e78be84de6e478345b32b508}{00030} \textcolor{preprocessor}{#define SERVOMIN  150 // this is the 'minimum' pulse length count (out of 4096)}
+\hypertarget{Servo__Position__Shell_8cpp_source_l00031}{}\hyperlink{Servo__Position__Shell_8cpp_a357a7e9fa4e4d8ed2f5ef82f37143836}{00031} \textcolor{preprocessor}{#define SERVOMAX  600 // this is the 'maximum' pulse length count (out of 4096)}
+00032 
+00033 \textcolor{comment}{// our servo # counter}
+\hypertarget{Servo__Position__Shell_8cpp_source_l00034}{}\hyperlink{Servo__Position__Shell_8cpp_ac3fe65cfcd6744437ab3133c702ade33}{00034} \hyperlink{Adafruit__PWMServoDriver_8h_ab077fa1127453be2bd9d4c3c8a768fa7}{uint8\_t} \hyperlink{Servo__Position__Shell_8cpp_ac3fe65cfcd6744437ab3133c702ade33}{servo\_num};
+00035 
+\hypertarget{Servo__Position__Shell_8cpp_source_l00041}{}\hyperlink{Servo__Position__Shell_8h_a4fc01d736fe50cf5b977f755b675f11d}{00041} \textcolor{keywordtype}{void} \hyperlink{Servo__Position__Shell_8cpp_a4fc01d736fe50cf5b977f755b675f11d}{setup}() \{
+00042     \textcolor{comment}{//cout << "Testing Servos" << endl;}
+00043     pwm.\hyperlink{classAdafruit__PWMServoDriver_aef401eaad3c34222ac916eb7bd936bc2}{begin}();
+00044     pwm.\hyperlink{classAdafruit__PWMServoDriver_a0ef6f1e3c81aebbd1d1da1bb12f3ed5c}{setPWMFreq}(60.0); \textcolor{comment}{// Analog servos run at ~60 Hz updates}
+00045 \}
+00046 
+00047 \textcolor{comment}{// you can use this function if you'd like to set the pulse length in seconds}
+00048 \textcolor{comment}{// e.g. setServoPulse(0, 0.001) is a ~1 millisecond pulse width. its not precise!}
+00049 
+\hypertarget{Servo__Position__Shell_8cpp_source_l00050}{}\hyperlink{Servo__Position__Shell_8h_a323a36dcf89ccad28f3ed2312e26ed8a}{00050} \textcolor{keywordtype}{void} \hyperlink{Servo__Position__Shell_8cpp_a7f07c548295f3696f8881f0c9de708b1}{setServoPulse}(\hyperlink{Adafruit__PWMServoDriver_8h_ab077fa1127453be2bd9d4c3c8a768fa7}{uint8\_t} \hyperlink{Servo__Position__Shell_8cpp_ac3fe65cfcd6744437ab3133c702ade33}{servo\_num}, \textcolor{keywordtype}{double} pulse) \{
+00051     \textcolor{keywordtype}{double} pulselength;
+00052 
+00053     pulselength = 1000000; \textcolor{comment}{// 1,000,000 us per second}
+00054     pulselength /= 60; \textcolor{comment}{// 60 Hz}
+00055     \textcolor{comment}{//cout << pulselength << " us per period" << endl;}
+00056     pulselength /= 4096; \textcolor{comment}{// 12 bits of resolution}
+00057     \textcolor{comment}{//cout << pulselength << "us per bit" << endl;}
+00058     pulse *= 1000;
+00059     pulse /= pulselength;
+00060     \textcolor{comment}{//cout << (uint16\_t) pulse << endl;}
+00061     pwm.\hyperlink{classAdafruit__PWMServoDriver_a724a7fc39c6fba34478ecc0eea038bd3}{setPWM}(servo\_num, 0, (\hyperlink{Adafruit__PWMServoDriver_8h_a395b3b2bf5cb4674ab41b6bda68c15bb}{uint16\_t}) pulse);
+00062     \textcolor{comment}{//cout << endl;}
+00063 \}
+00064 
+\hypertarget{Servo__Position__Shell_8cpp_source_l00071}{}\hyperlink{Servo__Position__Shell_8h_abd2cd3c2e36d42a2178a6f2fd12af905}{00071} \textcolor{keywordtype}{void} \hyperlink{Servo__Position__Shell_8cpp_abd2cd3c2e36d42a2178a6f2fd12af905}{setServoPosition}(\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2}{Servo} whichservo, \textcolor{keywordtype}{int} position) \{
+00072     \textcolor{comment}{// works for servo 0, 3, 4}
+00073     \textcolor{keywordtype}{double} dividedconstant = 180.0;
+00074     \textcolor{keywordtype}{double} highservo = 2.4;
+00075     \textcolor{keywordtype}{double} lowservo = 0.6;
+00076     \textcolor{comment}{// To fix the magical digital servo on LIFT 1}
+00077     \textcolor{keywordtype}{double} highservoweird = 1.9;
+00078     \textcolor{keywordtype}{double} lowservoweird = 0.6;
+00079     \textcolor{comment}{// To compensate for the bent servo spline on LIFT 2}
+00080     \textcolor{keywordtype}{double} highservospline = 2.25;
+00081     \textcolor{keywordtype}{double} lowservospline = 0.6;
+00082     \textcolor{comment}{// works for servo 1, 2}
+00083     \textcolor{keywordtype}{double} digitalservohigh = 2.45;
+00084     \textcolor{keywordtype}{double} digitalservolow = 0.9;
+00085     \textcolor{comment}{// left gripper servo 5}
+00086     \textcolor{keywordtype}{double} gripleftopen = 2.2;
+00087     \textcolor{keywordtype}{double} gripleftclose = 1.3;
+00088     \textcolor{comment}{// right gripper servo 6}
+00089     \textcolor{keywordtype}{double} griprightopen = 2.2;
+00090     \textcolor{keywordtype}{double} griprightclose = 1.3;
+00091     \textcolor{keywordtype}{double} pulse;
+00092 
+00093     \textcolor{keywordflow}{switch} (whichservo) \{
+00094 
+00095             \textcolor{comment}{// BASE TURN}
+00096         \textcolor{keywordflow}{case} 0:
+00097         \{
+00098             \textcolor{keywordflow}{if} (position == -1) \{
+00099                 pulse = 0.0;
+00100             \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (position < 0)\{
+00101                 position = 20;
+00102                 pulse = ((((highservo - lowservo) / dividedconstant)*((double) position)) + lowservo);
+00103             \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (position > 179)\{
+00104                 position = 179;
+00105                 pulse = ((((highservo - lowservo) / dividedconstant)*((double) position)) + lowservo);
+00106             \}\textcolor{keywordflow}{else}\{
+00107                 pulse = ((((highservo - lowservo) / dividedconstant)*((double) position)) + lowservo);
+00108             \}
+00109             
+00110         \}
+00111 
+00112             \textcolor{keywordflow}{break};
+00113 
+00114             \textcolor{comment}{// BASE TILT}
+00115         \textcolor{keywordflow}{case} 1:
+00116         \{
+00117             
+00118             
+00119             \textcolor{keywordflow}{if} (position == -1) \{
+00120                 pulse = 0.0;
+00121             \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (position < 90)\{
+00122                 position = 90;
+00123                 pulse = ((((highservo - lowservo) / dividedconstant)*((double) position)) + lowservo);
+00124             \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (position > 172)\{
+00125                 position = 172;
+00126                 pulse = ((((highservo - lowservo) / dividedconstant)*((double) position)) + lowservo);
+00127             \} \textcolor{keywordflow}{else} \{
+00128                 pulse = ((((highservo - lowservo) / dividedconstant)*((double) position)) + lowservo);
+00129             \}
+00130         \}
+00131             \textcolor{keywordflow}{break};
+00132 
+00133             \textcolor{comment}{// ELBOW}
+00134         \textcolor{keywordflow}{case} 2:
+00135         \{
+00136             \textcolor{keywordflow}{if} (position == -1) \{
+00137                 pulse = 0.0;
+00138             \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (position < 43)\{
+00139                 position = 43;
+00140                 pulse = ((((digitalservohigh - digitalservolow) / dividedconstant)*((double) position)) + 
+      digitalservolow);
+00141             \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (position > 179)\{
+00142                 position = 179;
+00143                 pulse = ((((digitalservohigh - digitalservolow) / dividedconstant)*((double) position)) + 
+      digitalservolow);
+00144             \} \textcolor{keywordflow}{else} \{
+00145                 pulse = ((((digitalservohigh - digitalservolow) / dividedconstant)*((double) position)) + 
+      digitalservolow);
+00146             \}
+00147         \}
+00148             \textcolor{keywordflow}{break};
+00149 
+00150             \textcolor{comment}{// WRIST TURN}
+00151         \textcolor{keywordflow}{case} 3:
+00152         \{
+00153             \textcolor{keywordflow}{if} (position == -1) \{
+00154                 pulse = 0.0;
+00155             \} \textcolor{keywordflow}{else} \{
+00156                 pulse = ((((highservo - lowservo) / dividedconstant)*((double) position)) + lowservo);
+00157             \}
+00158         \}
+00159             \textcolor{keywordflow}{break};
+00160 
+00161             \textcolor{comment}{// WRIST PAN}
+00162         \textcolor{keywordflow}{case} 4:
+00163         \{
+00164             \textcolor{keywordflow}{if} (position == -1) \{
+00165                 pulse = 0.0;
+00166             \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (position < 0)\{
+00167                 position = 0;
+00168                 pulse = ((((highservo - lowservo) / dividedconstant)*((double) position)) + lowservo);
+00169             \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (position > 180)\{
+00170                 position = 180;
+00171                 pulse = ((((highservo - lowservo) / dividedconstant)*((double) position)) + lowservo);
+00172             \} \textcolor{keywordflow}{else} \{
+00173                 pulse = ((((highservo - lowservo) / dividedconstant)*((double) position)) + lowservo);
+00174             \}
+00175         \}
+00176             \textcolor{keywordflow}{break};
+00177 
+00178             \textcolor{comment}{// GRIP LEFT}
+00179         \textcolor{keywordflow}{case} 5:
+00180         \{
+00181             \textcolor{keywordflow}{if} (position == -1) \{
+00182                 pulse = 0.0;
+00183             \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(position < 0)\{
+00184                 position = 0;
+00185                 pulse = ((((griprightopen - griprightclose) / dividedconstant)*((double) position)) + 
+      griprightclose);
+00186             \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(position > 90)\{
+00187                 position = 90;
+00188                 pulse = ((((griprightopen - griprightclose) / dividedconstant)*((double) position)) + 
+      griprightclose);
+00189             \} \textcolor{keywordflow}{else} \{
+00190                 pulse = ((((gripleftopen - gripleftclose) / dividedconstant)*((double) position)) + 
+      gripleftclose);
+00191             \}
+00192         \}
+00193             \textcolor{keywordflow}{break};
+00194 
+00195             \textcolor{comment}{// GRIP RIGHT}
+00196         \textcolor{keywordflow}{case} 6:
+00197         \{
+00198             \textcolor{keywordflow}{if} (position == -1) \{
+00199                 pulse = 0.0;
+00200             \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(position < 90)\{
+00201                 position = 90;
+00202                 pulse = ((((griprightopen - griprightclose) / dividedconstant)*((double) position)) + 
+      griprightclose);
+00203             \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(position > 180)\{
+00204                 position = 180;
+00205                 pulse = ((((griprightopen - griprightclose) / dividedconstant)*((double) position)) + 
+      griprightclose);
+00206             \}\textcolor{keywordflow}{else}\{
+00207                 pulse = ((((griprightopen - griprightclose) / dividedconstant)*((double) position)) + 
+      griprightclose);
+00208             \}
+00209         \}
+00210             \textcolor{keywordflow}{break};
+00211 
+00212             \textcolor{comment}{// Michael Yellow Gate}
+00213         \textcolor{keywordflow}{case} 7:
+00214         \{
+00215             \textcolor{keywordflow}{if} (position == -1) \{
+00216                 pulse = 0.0;
+00217             \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(position < 0)\{
+00218                 position = 0;
+00219                 pulse = ((((highservo - lowservo) / dividedconstant)*((double) position)) + lowservo);
+00220             \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(position > 90)\{
+00221                 position = 90;
+00222                 pulse = ((((highservo - lowservo) / dividedconstant)*((double) position)) + lowservo);
+00223             \} \textcolor{keywordflow}{else} \{
+00224                 pulse = ((((highservo - lowservo) / dividedconstant)*((double) position)) + lowservo);
+00225             \}
+00226         \}
+00227             \textcolor{keywordflow}{break};
+00228 
+00229             \textcolor{comment}{// Michael Green Gate}
+00230         \textcolor{keywordflow}{case} 8:
+00231         \{
+00232             \textcolor{keywordflow}{if} (position == -1) \{
+00233                 pulse = 0.0;
+00234             \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(position < 0)\{
+00235                 position = 0;
+00236                 pulse = ((((highservo - lowservo) / dividedconstant)*((double) position)) + lowservo);
+00237             \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(position > 90)\{
+00238                 position = 90;
+00239                 pulse = ((((highservo - lowservo) / dividedconstant)*((double) position)) + lowservo);
+00240             \} \textcolor{keywordflow}{else} \{
+00241                 pulse = ((((highservo - lowservo) / dividedconstant)*((double) position)) + lowservo);
+00242             \}
+00243         \}
+00244             \textcolor{keywordflow}{break};
+00245 
+00246             \textcolor{comment}{// Michael Blue Gate}
+00247         \textcolor{keywordflow}{case} 9:
+00248         \{
+00249             \textcolor{keywordflow}{if} (position == -1) \{
+00250                 pulse = 0.0;
+00251             \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(position < 0)\{
+00252                 position = 0;
+00253                 pulse = ((((highservo - lowservo) / dividedconstant)*((double) position)) + lowservo);
+00254             \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(position > 90)\{
+00255                 position = 90;
+00256                 pulse = ((((highservo - lowservo) / dividedconstant)*((double) position)) + lowservo);
+00257             \} \textcolor{keywordflow}{else} \{
+00258                 pulse = ((((highservo - lowservo) / dividedconstant)*((double) position)) + lowservo);
+00259             \}
+00260         \}
+00261             \textcolor{keywordflow}{break};
+00262 
+00263             \textcolor{comment}{// Michael Lift 1}
+00264         \textcolor{keywordflow}{case} 10:
+00265         \{
+00266             \textcolor{keywordflow}{if} (position == -1) \{
+00267                 pulse = 0.0;
+00268             \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(position < 0)\{
+00269                 position = 0;
+00270                 pulse = ((((highservoweird - lowservoweird) / dividedconstant)*((double) position)) + 
+      lowservoweird);
+00271             \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(position > 105)\{
+00272                 position = 105;
+00273                 pulse = ((((highservoweird - lowservoweird) / dividedconstant)*((double) position)) + 
+      lowservoweird);
+00274             \} \textcolor{keywordflow}{else} \{
+00275                 pulse = ((((highservoweird - lowservoweird) / dividedconstant)*((double) position)) + 
+      lowservoweird);
+00276             \}
+00277         \}
+00278             \textcolor{keywordflow}{break};
+00279 
+00280             \textcolor{comment}{//Michael Lift 2}
+00281         \textcolor{keywordflow}{case} 11:
+00282         \{
+00283             \textcolor{keywordflow}{if} (position == -1) \{
+00284                 pulse = 0.0;
+00285             \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(position < 0)\{
+00286                 position = 0;
+00287                 pulse = ((((highservospline - lowservospline) / dividedconstant)*((double) position)) + 
+      lowservospline);
+00288             \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(position > 105)\{
+00289                 position = 105;
+00290                 pulse = ((((highservospline - lowservospline) / dividedconstant)*((double) position)) + 
+      lowservospline);
+00291             \} \textcolor{keywordflow}{else} \{
+00292                 pulse = ((((highservospline - lowservospline) / dividedconstant)*((double) position)) + 
+      lowservospline);
+00293             \}
+00294         \}
+00295             \textcolor{keywordflow}{break};
+00296 
+00297             \textcolor{comment}{//Michael lift 3}
+00298         \textcolor{keywordflow}{case} 12:
+00299         \{
+00300             \textcolor{keywordflow}{if} (position == -1) \{
+00301                 pulse = 0.0;
+00302             \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(position < 0)\{
+00303                 position = 0;
+00304                 pulse = ((((highservo - lowservo) / dividedconstant)*((double) position)) + lowservo);
+00305             \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(position > 105)\{
+00306                 position = 105;
+00307                 pulse = ((((highservo - lowservo) / dividedconstant)*((double) position)) + lowservo);
+00308             \} \textcolor{keywordflow}{else} \{
+00309                 pulse = ((((highservo - lowservo) / dividedconstant)*((double) position)) + lowservo);
+00310             \}
+00311         \}
+00312             \textcolor{keywordflow}{break};
+00313 
+00314             \textcolor{comment}{// Michael lift 4}
+00315         \textcolor{keywordflow}{case} 13:
+00316         \{
+00317             \textcolor{keywordflow}{if} (position == -1) \{
+00318                 pulse = 0.0;
+00319             \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(position < 0)\{
+00320                 position = 0;
+00321                 pulse = ((((highservo - lowservo) / dividedconstant)*((double) position)) + lowservo);
+00322             \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(position > 105)\{
+00323                 position = 105;
+00324                 pulse = ((((highservo - lowservo) / dividedconstant)*((double) position)) + lowservo);
+00325             \} \textcolor{keywordflow}{else} \{
+00326                 pulse = ((((highservo - lowservo) / dividedconstant)*((double) position)) + lowservo);
+00327             \}
+00328         \}
+00329             \textcolor{keywordflow}{break};
+00330 
+00331             \textcolor{comment}{// Michael RED GATE}
+00332         \textcolor{keywordflow}{case} 14:
+00333         \{
+00334             \textcolor{keywordflow}{if} (position == -1) \{
+00335                 pulse = 0.0;
+00336             \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(position < 0)\{
+00337                 position = 0;
+00338                 pulse = ((((highservo - lowservo) / dividedconstant)*((double) position)) + lowservo);
+00339             \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(position > 105)\{
+00340                 position = 105;
+00341                 pulse = ((((highservo - lowservo) / dividedconstant)*((double) position)) + lowservo);
+00342             \} \textcolor{keywordflow}{else} \{
+00343                 pulse = ((((highservo - lowservo) / dividedconstant)*((double) position)) + lowservo);
+00344             \}
+00345         \}
+00346             \textcolor{keywordflow}{break};
+00347     \}
+00348     \hyperlink{Servo__Position__Shell_8cpp_a7f07c548295f3696f8881f0c9de708b1}{setServoPulse}(whichservo, pulse);
+00349 
+00350 \}
+\end{DoxyCode}

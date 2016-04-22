@@ -1,0 +1,87 @@
+\hypertarget{ScanQR_8hpp_source}{\section{Scan\+Q\+R.\+hpp}
+\label{ScanQR_8hpp_source}\index{src/\+Scan\+Q\+R.\+hpp@{src/\+Scan\+Q\+R.\+hpp}}
+}
+
+\begin{DoxyCode}
+00001 
+00007 \textcolor{preprocessor}{#ifndef ScanQR\_H}
+00008 \textcolor{preprocessor}{#define ScanQR\_H}
+00009 
+00010 \textcolor{preprocessor}{#include <string>}
+00011 \textcolor{preprocessor}{#include <opencv2/highgui/highgui.hpp>}
+00012 \textcolor{preprocessor}{#include <opencv2/imgproc/imgproc.hpp>}
+00013 \textcolor{preprocessor}{#include <zbar.h>}
+00014 
+00015 \textcolor{preprocessor}{#include "\hyperlink{definitions_8hpp}{definitions.hpp}"}
+00016 \textcolor{preprocessor}{#include "\hyperlink{Log_8hpp}{Log.hpp}"}
+00017 \textcolor{preprocessor}{#include "\hyperlink{PiCamera_8hpp}{PiCamera.hpp}"}
+00018 
+00019 \textcolor{keyword}{namespace }\hyperlink{namespaceChipChipArray}{ChipChipArray} \{
+00020 
+\hypertarget{ScanQR_8hpp_source_l00024}{}\hyperlink{namespaceChipChipArray_a3b2a3c0ffa9f53021293aeb4955d2fef}{00024}     \hyperlink{definitions_8hpp_adde6aaee8457bee49c2a92621fe22b79}{uint8} \hyperlink{namespaceChipChipArray_a3b2a3c0ffa9f53021293aeb4955d2fef}{qrInvokeCount} = 0;
+00025     
+00029     \hyperlink{classChipChipArray_1_1Log}{Log} \hyperlink{namespaceChipChipArray_ab5c6290951637c25a5422707020fb3a8}{scanQrLog}(\textcolor{stringliteral}{"logs/ScanQR"}, \hyperlink{definitions_8hpp_aa7380b6d694cab49f07aed6a7af592d9ace7898536dd0e928d1640ee2ad531cc8}{LogMode::Multi});
+00030 
+\hypertarget{ScanQR_8hpp_source_l00041}{}\hyperlink{namespaceChipChipArray_a6c7465049b5d408e1a238b6d8ffa887d}{00041}     \hyperlink{definitions_8hpp_abc05a0f46084a3477cf5d5c939ff1436}{Color} \hyperlink{namespaceChipChipArray_a6c7465049b5d408e1a238b6d8ffa887d}{ScanQR}() \{
+00042         \textcolor{comment}{// 0. Initialize variables}
+00043         \hyperlink{definitions_8hpp_abc05a0f46084a3477cf5d5c939ff1436}{Color} color;
+00044         \hyperlink{classChipChipArray_1_1PiCamera}{PiCamera} cam(\textcolor{keyword}{false});
+00045 
+00046         \textcolor{comment}{// 1. Position arm}
+00047         \hyperlink{namespaceChipChipArray_ab5c6290951637c25a5422707020fb3a8}{scanQrLog}.\hyperlink{classChipChipArray_1_1Log_a154a5f38d9c7a767693b242684a3d4d9}{Verbose}(\textcolor{stringliteral}{"Positioning arm"});
+00048 
+00049         \textcolor{comment}{// 2. Scan images from camera}
+00050         \hyperlink{namespaceChipChipArray_ab5c6290951637c25a5422707020fb3a8}{scanQrLog}.\hyperlink{classChipChipArray_1_1Log_a154a5f38d9c7a767693b242684a3d4d9}{Verbose}(\textcolor{stringliteral}{"Scanning for QR code"});
+00051 
+00052         \textcolor{comment}{// Nick's supposed to make sure this isn't an endles loop}
+00053         \textcolor{keywordflow}{while}(\textcolor{keyword}{true}) \{           
+00054             \textcolor{comment}{// get image}
+00055             cv::Mat frame = cam.\hyperlink{classChipChipArray_1_1PiCamera_a58fb0de02570dce9a9cb60a1a04fb84f}{Snap}();
+00056             cv::Mat canvas;
+00057             cv::cvtColor(frame, canvas, CV\_BGR2GRAY);
+00058             \hyperlink{namespaceChipChipArray_ab5c6290951637c25a5422707020fb3a8}{scanQrLog}.\hyperlink{classChipChipArray_1_1Log_a65bbab057c8b1453f9e4efcfee7522c4}{Image}(canvas, \hyperlink{namespacestd_aa5ddf582a1c96ffe258c997be9a294a3}{std::to\_string}(++qrInvokeCount)
+00059                     + \textcolor{stringliteral}{".bmp"});
+00060             
+00061             \hyperlink{definitions_8hpp_a1134b580f8da4de94ca6b1de4d37975e}{uint32} width = canvas.cols;
+00062             \hyperlink{definitions_8hpp_a1134b580f8da4de94ca6b1de4d37975e}{uint32} height = canvas.rows;
+00063             zbar::Image image(width, height, \textcolor{stringliteral}{"Y800"},
+00064                     (uchar*)canvas.data, width * height);
+00065 
+00066             zbar::ImageScanner scanner;
+00067             scanner.set\_config(zbar::ZBAR\_NONE, zbar::ZBAR\_CFG\_ENABLE, 1);
+00068             scanner.scan(image);
+00069             zbar::Image::SymbolIterator symbol = image.symbol\_begin();
+00070 
+00071             \textcolor{keywordflow}{if}(symbol != image.symbol\_end()) \{
+00072                 \textcolor{keywordflow}{switch}(symbol->get\_data()[0]) \{
+00073                     \textcolor{keywordflow}{case} \textcolor{charliteral}{'r'}:
+00074                         color = \hyperlink{definitions_8hpp_abc05a0f46084a3477cf5d5c939ff1436aee38e4d5dd68c4e440825018d549cb47}{Color::Red};
+00075                         \textcolor{keywordflow}{break};
+00076 
+00077                     \textcolor{keywordflow}{case} \textcolor{charliteral}{'y'}:
+00078                         color = \hyperlink{definitions_8hpp_abc05a0f46084a3477cf5d5c939ff1436a51e6cd92b6c45f9affdc158ecca2b8b8}{Color::Yellow};
+00079                         \textcolor{keywordflow}{break};
+00080 
+00081                     \textcolor{keywordflow}{case} \textcolor{charliteral}{'g'}:
+00082                         color = \hyperlink{definitions_8hpp_abc05a0f46084a3477cf5d5c939ff1436ad382816a3cbeed082c9e216e7392eed1}{Color::Green};
+00083                         \textcolor{keywordflow}{break};
+00084 
+00085                     \textcolor{keywordflow}{case} \textcolor{charliteral}{'b'}:
+00086                         color = \hyperlink{definitions_8hpp_abc05a0f46084a3477cf5d5c939ff1436a9594eec95be70e7b1710f730fdda33d9}{Color::Blue};
+00087                         \textcolor{keywordflow}{break};
+00088                 \}
+00089 
+00090                 \hyperlink{namespaceChipChipArray_ab5c6290951637c25a5422707020fb3a8}{scanQrLog}.\hyperlink{classChipChipArray_1_1Log_a66575b6e94c6112e4cefa5736cb996e0}{Status}(\textcolor{stringliteral}{"Detected "} + \hyperlink{namespacestd_aa5ddf582a1c96ffe258c997be9a294a3}{std::to\_string}(color)
+00091                         + \textcolor{stringliteral}{" train car"});
+00092                 \textcolor{keywordflow}{break};
+00093             \}
+00094         \}
+00095 
+00096         \textcolor{comment}{// 3. Retract arm}
+00097         \hyperlink{namespaceChipChipArray_ab5c6290951637c25a5422707020fb3a8}{scanQrLog}.\hyperlink{classChipChipArray_1_1Log_a154a5f38d9c7a767693b242684a3d4d9}{Verbose}(\textcolor{stringliteral}{"Retracting arm"});        
+00098         \textcolor{keywordflow}{return} color;
+00099     \}
+00100 \}
+00101 
+00102 \textcolor{preprocessor}{#endif}
+\end{DoxyCode}

@@ -7,7 +7,7 @@ var searchData=
   ['debug',['Debug',['../classChipChipArray_1_1Log.html#ac32b435af1577e4ebc67af2bdfea8eff',1,'ChipChipArray::Log']]],
   ['definitions_2ehpp',['definitions.hpp',['../definitions_8hpp.html',1,'']]],
   ['delbow',['dElbow',['../classChipChipArray_1_1Arm.html#ae8d0a664dd1a0e556cf40c0984035163',1,'ChipChipArray::Arm']]],
-  ['discard',['Discard',['../classChipChipArray_1_1Grabber.html#a09f89b79e745db18009a022e9bfacd3a',1,'ChipChipArray::Grabber']]],
+  ['deposit',['Deposit',['../classChipChipArray_1_1Grabber.html#a44e5aeb908634f68de356ad8df3c4bf1',1,'ChipChipArray::Grabber']]],
   ['dleft',['dLeft',['../classChipChipArray_1_1Block.html#aca89dc06d62feb9a6478a06976171b2b',1,'ChipChipArray::Block']]],
   ['dleftgripper',['dLeftGripper',['../classChipChipArray_1_1Arm.html#a6da0950c7e3bd4a31264e562916c032d',1,'ChipChipArray::Arm']]],
   ['doxygen_2econfig',['doxygen.config',['../doxygen_8config.html',1,'']]],

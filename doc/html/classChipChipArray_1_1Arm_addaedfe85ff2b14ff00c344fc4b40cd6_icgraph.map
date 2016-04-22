@@ -1,4 +1,6 @@
 <map id="ChipChipArray::Arm::BaseTurn" name="ChipChipArray::Arm::BaseTurn">
-<area shape="rect" id="node2" href="$classChipChipArray_1_1Grabber.html#a56639f8f9ba9468bce4b6d69ceb2eb54" title="ChipChipArray::Grabber\l::Load" alt="" coords="192,5,353,47"/>
-<area shape="rect" id="node3" href="$loading__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="401,13,452,39"/>
+<area shape="rect" id="node2" href="$classChipChipArray_1_1Grabber.html#a44e5aeb908634f68de356ad8df3c4bf1" title="ChipChipArray::Grabber\l::Deposit" alt="" coords="192,5,353,47"/>
+<area shape="rect" id="node3" href="$classChipChipArray_1_1Grabber.html#a56639f8f9ba9468bce4b6d69ceb2eb54" title="ChipChipArray::Grabber\l::Load" alt="" coords="401,64,563,105"/>
+<area shape="rect" id="node5" href="$classChipChipArray_1_1Grabber.html#abecb4047b4f7d5a7e691b7fb581b5a39" title="ChipChipArray::Grabber\l::Extend" alt="" coords="192,123,353,164"/>
+<area shape="rect" id="node4" href="$loading__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="611,71,661,98"/>
 </map>

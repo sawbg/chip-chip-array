@@ -1,0 +1,55 @@
+\hypertarget{PiCamera_8hpp_source}{\section{Pi\+Camera.\+hpp}
+\label{PiCamera_8hpp_source}\index{src/\+Pi\+Camera.\+hpp@{src/\+Pi\+Camera.\+hpp}}
+}
+
+\begin{DoxyCode}
+00001 
+00007 \textcolor{preprocessor}{#ifndef PiCamera\_H}
+00008 \textcolor{preprocessor}{#define PiCamera\_H}
+00009 
+00010 \textcolor{preprocessor}{#include <opencv2/core/core.hpp>}
+00011 \textcolor{preprocessor}{#include <opencv2/highgui/highgui.hpp>}
+00012 \textcolor{preprocessor}{#include <raspicam/raspicam\_cv.h>}
+00013 \textcolor{preprocessor}{#include <unistd.h>}
+00014 
+00015 \textcolor{preprocessor}{#include "\hyperlink{definitions_8hpp}{definitions.hpp}"}
+00016 
+00017 \textcolor{keyword}{namespace }\hyperlink{namespaceChipChipArray}{ChipChipArray} \{
+00018 
+\hypertarget{PiCamera_8hpp_source_l00024}{}\hyperlink{classChipChipArray_1_1PiCamera}{00024}     \textcolor{keyword}{class }\hyperlink{classChipChipArray_1_1PiCamera}{PiCamera} \{
+00025         \textcolor{keyword}{public}:
+\hypertarget{PiCamera_8hpp_source_l00029}{}\hyperlink{classChipChipArray_1_1PiCamera_a5910a3284877677decb6529d88e43487}{00029}             \hyperlink{classChipChipArray_1_1PiCamera_a5910a3284877677decb6529d88e43487}{PiCamera}() : \hyperlink{classChipChipArray_1_1PiCamera}{PiCamera}(true) \{\};
+00030             
+00037             \hyperlink{classChipChipArray_1_1PiCamera_a5910a3284877677decb6529d88e43487}{PiCamera}(\textcolor{keywordtype}{bool} useColor);
+00038             
+00042             \textcolor{keywordtype}{void} \hyperlink{classChipChipArray_1_1PiCamera_a38f8205921d6deec5a2c360ea7d24cc5}{Close}();
+00043 
+00050             cv::Mat \hyperlink{classChipChipArray_1_1PiCamera_a58fb0de02570dce9a9cb60a1a04fb84f}{Snap}();
+00051 
+00052         \textcolor{keyword}{private}:
+00056             raspicam::RaspiCam\_Cv cam;
+00057     \};
+00058 
+\hypertarget{PiCamera_8hpp_source_l00059}{}\hyperlink{classChipChipArray_1_1PiCamera_a0a4480e9e7475ae7af9a7523239caf8d}{00059}     \hyperlink{classChipChipArray_1_1PiCamera_a5910a3284877677decb6529d88e43487}{PiCamera::PiCamera}(\textcolor{keywordtype}{bool} useColor) \{
+00060         cam.set(CV\_CAP\_PROP\_FORMAT, (useColor ? CV\_16UC3 : CV\_16UC1));
+00061         cam.open();
+00062         usleep(500000);  \textcolor{comment}{// required to allow camera time to adjust!}
+00063     \}
+00064 
+\hypertarget{PiCamera_8hpp_source_l00065}{}\hyperlink{classChipChipArray_1_1PiCamera_a38f8205921d6deec5a2c360ea7d24cc5}{00065}     \textcolor{keywordtype}{void} \hyperlink{classChipChipArray_1_1PiCamera_a38f8205921d6deec5a2c360ea7d24cc5}{PiCamera::Close}() \{
+00066         cam.release();
+00067     \}
+00068 
+\hypertarget{PiCamera_8hpp_source_l00069}{}\hyperlink{classChipChipArray_1_1PiCamera_a58fb0de02570dce9a9cb60a1a04fb84f}{00069}     cv::Mat \hyperlink{classChipChipArray_1_1PiCamera_a58fb0de02570dce9a9cb60a1a04fb84f}{PiCamera::Snap}() \{
+00070         \textcolor{keywordflow}{if}(!cam.isOpened()) \textcolor{keywordflow}{throw} std::runtime\_error(\textcolor{stringliteral}{"Camera "}
+00071                 \textcolor{stringliteral}{"is not open!"});
+00072 
+00073         cv::Mat image;
+00074         cam.grab();
+00075         cam.retrieve(image);
+00076         \textcolor{keywordflow}{return} image;
+00077     \}
+00078 \}
+00079 
+00080 \textcolor{preprocessor}{#endif}
+\end{DoxyCode}

@@ -1,0 +1,28 @@
+\hypertarget{jacob__alg__test_8cpp_source}{\section{jacob\+\_\+alg\+\_\+test.\+cpp}
+\label{jacob__alg__test_8cpp_source}\index{src/jacob\+\_\+alg\+\_\+test.\+cpp@{src/jacob\+\_\+alg\+\_\+test.\+cpp}}
+}
+
+\begin{DoxyCode}
+00001 
+00007 \textcolor{preprocessor}{#include <iostream>}
+00008 \textcolor{preprocessor}{#include <opencv2/core/core.hpp>}
+00009 \textcolor{preprocessor}{#include <opencv2/imgproc/imgproc.hpp>}
+00010 
+00011 \textcolor{preprocessor}{#include "\hyperlink{PiCamera_8hpp}{PiCamera.hpp}"}
+00012 
+00013 \textcolor{keyword}{using namespace }\hyperlink{namespacestd}{std};
+00014 \textcolor{keyword}{using namespace }\hyperlink{namespacecv}{cv};
+00015 \textcolor{keyword}{using namespace }\hyperlink{namespaceChipChipArray}{ChipChipArray};
+00016 
+\hypertarget{jacob__alg__test_8cpp_source_l00021}{}\hyperlink{jacob__alg__test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{00021} \textcolor{keywordtype}{int} \hyperlink{jacob__alg__test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}() \{
+00022     \hyperlink{classChipChipArray_1_1PiCamera}{PiCamera} cam;
+00023     namedWindow(\textcolor{stringliteral}{"window"}, CV\_WINDOW\_NORMAL);
+00024     Mat orig = cam.\hyperlink{classChipChipArray_1_1PiCamera_a58fb0de02570dce9a9cb60a1a04fb84f}{Snap}();
+00025     Mat yuv;
+00026     Mat fin;
+00027     cvtColor(orig, yuv, CV\_BGR2YUV);
+00028     cvtColor(yuv, fin, CV\_HSV2BGR);
+00029     imshow(\textcolor{stringliteral}{"window"}, fin);
+00030     waitKey(-1);
+00031 \}
+\end{DoxyCode}

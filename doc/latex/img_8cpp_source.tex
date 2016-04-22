@@ -1,0 +1,32 @@
+\hypertarget{img_8cpp_source}{\section{img.\+cpp}
+\label{img_8cpp_source}\index{src/img.\+cpp@{src/img.\+cpp}}
+}
+
+\begin{DoxyCode}
+00001 
+00007 \textcolor{preprocessor}{#include <iostream>}
+00008 \textcolor{preprocessor}{#include <opencv2/highgui/highgui.hpp>}
+00009 \textcolor{preprocessor}{#include <opencv2/imgproc/imgproc.hpp>}
+00010 \textcolor{preprocessor}{#include <string>}
+00011 
+00012 \textcolor{preprocessor}{#include "\hyperlink{definitions_8hpp}{definitions.hpp}"}
+00013 \textcolor{preprocessor}{#include "\hyperlink{PiCamera_8hpp}{PiCamera.hpp}"}
+00014 
+00015 \textcolor{keyword}{using namespace }\hyperlink{namespaceChipChipArray}{ChipChipArray};
+00016 \textcolor{keyword}{using namespace }\hyperlink{namespacecv}{cv};
+00017 \textcolor{keyword}{using namespace }\hyperlink{namespacestd}{std};
+00018 
+\hypertarget{img_8cpp_source_l00022}{}\hyperlink{img_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{00022} \textcolor{keywordtype}{int} \hyperlink{namespaceChipChipArray_a7fc3d1edffca11531cd09fdab7c8b88d}{main}() \{
+00023     \textcolor{keywordtype}{string} window = \textcolor{stringliteral}{"Current"};
+00024     \hyperlink{classChipChipArray_1_1PiCamera}{PiCamera} cam;
+00025     
+00026     namedWindow(window, CV\_WINDOW\_NORMAL | CV\_WINDOW\_KEEPRATIO);
+00027 
+00028     \textcolor{keywordflow}{while}(\textcolor{keyword}{true}) \{
+00029         Mat image;
+00030         transpose(cam.\hyperlink{classChipChipArray_1_1PiCamera_a58fb0de02570dce9a9cb60a1a04fb84f}{Snap}(), image);
+00031         imshow(window, image);
+00032         waitKey(10);  \textcolor{comment}{// has to be here :(}
+00033     \}
+00034 \}
+\end{DoxyCode}

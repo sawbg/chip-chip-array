@@ -1,0 +1,310 @@
+.TH "ChipChipArray::Log" 3 "Fri Apr 22 2016" "The Automatic Vasospasm Detection Application" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ChipChipArray::Log \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Log\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBLog\fP ()"
+.br
+.ti -1c
+.RI "\fBLog\fP (auto dir, \fBLogMode\fP mode=\fBLogMode::Text\fP)"
+.br
+.ti -1c
+.RI "\fB~Log\fP ()"
+.br
+.ti -1c
+.RI "void \fBDebug\fP (auto mesg)"
+.br
+.ti -1c
+.RI "void \fBError\fP (auto mesg)"
+.br
+.ti -1c
+.RI "void \fBImage\fP (cv::Mat image, auto filename)"
+.br
+.ti -1c
+.RI "void \fBOpen\fP (auto dir, \fBLogMode\fP mode=\fBLogMode::Text\fP)"
+.br
+.ti -1c
+.RI "void \fBStatus\fP (auto mesg)"
+.br
+.ti -1c
+.RI "void \fBVariable\fP (auto name, auto value)"
+.br
+.ti -1c
+.RI "void \fBVerbose\fP (auto mesg)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class logs the text and images passed to it to specificed directory\&.
+.PP
+A 'container' directory to which the class can write is passed in the constructor\&. When the \fBLog\fP is initialized with \fBLogMode::Text\fP, a new log file is created with a filename based on the time of initialization in the given directory\&. When initialized in \fBLogMode::Multi\fP, it will create a subdirectory in the given directory with a name based on time\&. In this new directory, a log file will be created\&. Images may later be stored in this directory with names based on the order in which they were saved\&.
+.PP
+This class DOES NOT WORK without compiling without a 'LOG' definition (#define LOG or -DLOG)\&. 
+.PP
+Definition at line 35 of file Log\&.hpp\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ChipChipArray::Log::Log ()\fC [inline]\fP"
+Initializes \fBLog\fP object but does not open log\&. \fBOpen()\fP must be called\&. 
+.PP
+Definition at line 41 of file Log\&.hpp\&.
+.PP
+.nf
+41 {};
+.fi
+.SS "ChipChipArray::Log::Log (autodir, \fBLogMode\fPmode = \fC\fBLogMode::Text\fP\fP)"
+Initializes the \fBLog\fP\&.
+.PP
+A new log file is created in dir if \fBLogMode::Text\fP is given\&. The file will have a name based on the current date and time\&. If \fBLogMode::Multi\fP is given, a new directory is created, and a log file with a name based on the current date and time is created inside it\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdir\fP the directory for the newly created logfile/folder
+.br
+\fImode\fP the LogMode 
+.RE
+.PP
+
+.PP
+Definition at line 187 of file Log\&.hpp\&.
+.PP
+.nf
+187                                    {
+188 #ifdef LOG
+189         Open(dir, mode);
+190 #endif
+191     }
+.fi
+.SS "ChipChipArray::Log::~Log ()"
+Destroys the \fBLog\fP and closes the logfile\&. 
+.PP
+Definition at line 193 of file Log\&.hpp\&.
+.PP
+.nf
+193               {
+194 #ifdef LOG
+195         try {
+196             file\&.flush();
+197             file\&.close();
+198         } catch (std::ofstream::failure f) {
+199             LogError("Gosh dang it! A fatal error has occured " 
+200                     "closing the logfile\&.", f);
+201         }
+202 #endif
+203     }
+.fi
+.SH "Member Function Documentation"
+.PP 
+.SS "void ChipChipArray::Log::Debug (automesg)"
+Writes 'DEBUG: ' to the log file along with the message passed\&. Should be used for generic debugging information\&. If recording the value of a variable in the \fBLog\fP is desired, use the function \fBVariable()\fP instead\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fImesg\fP the message to record in the logfile 
+.RE
+.PP
+
+.PP
+Definition at line 205 of file Log\&.hpp\&.
+.PP
+.nf
+205                              {
+206 #ifdef LOG
+207         try {
+208             file << "DEBUG: " << mesg << std::endl;
+209             file\&.flush();
+210         } catch(std::ofstream::failure f) {
+211             LogError("Debug() write error", f);
+212         }
+213 #endif
+214     }
+.fi
+.SS "void ChipChipArray::Log::Error (automesg)"
+Writes 'ERROR: ' to the log file\&. Should only be use when an exception is thrown\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fImesg\fP the message to record in the log 
+.RE
+.PP
+
+.PP
+Definition at line 216 of file Log\&.hpp\&.
+.PP
+.nf
+216                              {
+217 #ifdef LOG
+218         try {
+219             file << "ERROR: " << mesg << std::endl;
+220             file\&.flush();
+221         } catch(std::ofstream::failure f) {
+222             LogError("Error() write error", f);
+223         }
+224 #endif
+225     }
+.fi
+.SS "void ChipChipArray::Log::Image (cv::Matimage, autofilename)"
+Creates a bitmap image in the subdirectory created by the \fBLog\fP during initialization\&. Does nothing if \fBLogMode::Text\fP was passed in the constructor\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIimage\fP the image to save 
+.br
+\fIfilename\fP the filename for the saved image 
+.RE
+.PP
+
+.PP
+Definition at line 227 of file Log\&.hpp\&.
+.PP
+.nf
+227                                               {
+228 #ifdef LOG
+229         try {
+230             cv::imwrite(dir + std::string(filename), image);
+231         } catch(std::ofstream::failure f) {
+232             LogError("Image() write error", f);
+233         } catch(std::exception ex) {
+234             Error("Error writing image " + std::string(filename));
+235         }
+236 #endif
+237     }
+.fi
+.SS "void ChipChipArray::Log::Open (autodir, \fBLogMode\fPmode = \fC\fBLogMode::Text\fP\fP)"
+
+.PP
+Definition at line 247 of file Log\&.hpp\&.
+.PP
+.nf
+247                                          {
+248 #ifdef LOG
+249         // format date and time
+250         char date[32];
+251         time_t sec = time(nullptr);
+252         struct tm * loctime = localtime(&sec);
+253         strftime(date, 32, "%m-%d_%H-%M-%S", loctime);
+254 
+255         // create temperary strings
+256         this->dir = std::string(dir);
+257         std::string datestr = std::string(date);
+258 
+259         // add path separator if necessary
+260         if(this->dir[this->dir\&.length() - 1] != PATH_SEP) {
+261             this->dir += PATH_SEP;
+262         }
+263 
+264         // add directory for log and images if necessary
+265         if(mode == LogMode::Multi) this->dir += datestr + PATH_SEP;
+266 
+267         int ret = mkdir(this->dir\&.c_str(), S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP
+268                 | S_IROTH | S_IWOTH | S_IXUSR | S_IXGRP
+269                 | S_IXOTH);
+270 
+271         filename = this->dir + datestr + "\&.log";
+272 
+273         // set class mode
+274         this->mode = mode;
+275 
+276         // Initializing file
+277         file\&.exceptions(std::ofstream::failbit
+278                 | std::ofstream::badbit);
+279 
+280         try {
+281             file\&.open(filename, std::ofstream::out
+282                     | std::ofstream::app);
+283         } catch(std::ofstream::failure ex) {
+284             LogError("Oh, no! An error has occurred opening the "
+285                     "log file\&.", ex);
+286         }
+287 #endif
+288     }
+.fi
+.SS "void ChipChipArray::Log::Status (automesg)"
+Writes 'STATUS: ' to the log file\&. Should be used when recording the status or state of the program\&. It should not be used to record microalgorithmic changes\&. Use \fBVerbose()\fP for these instead\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fImesg\fP the message to record in the logfile 
+.RE
+.PP
+
+.PP
+Definition at line 290 of file Log\&.hpp\&.
+.PP
+.nf
+290                               {
+291 #ifdef LOG
+292         try {
+293             file << "STATUS: " << mesg << std::endl;
+294             file\&.flush();
+295         } catch (std::ofstream::failure f) {
+296             LogError("Status() write error", f);
+297         }
+298 #endif
+299     }
+.fi
+.SS "void ChipChipArray::Log::Variable (autoname, autovalue)"
+Writes 'VARIABLE: ' to the log file\&. Should be used whenever recording the value of a variable is desired\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIname\fP the variable name to record 
+.br
+\fIvalue\fP the variable value to record 
+.RE
+.PP
+
+.PP
+Definition at line 301 of file Log\&.hpp\&.
+.PP
+.nf
+301                                             {
+302 #ifdef LOG
+303         try {
+304             file << "VARIABLE: " << name << " = " << value
+305                 << std::endl;
+306             file\&.flush();
+307         } catch(std::ofstream::failure f) {
+308             LogError("Variable() write error", f);
+309         }
+310 #endif
+311     }
+.fi
+.SS "void ChipChipArray::Log::Verbose (automesg)"
+Writes 'VERBOSE: ' to the log file\&. Should only be used for recording small, specific portions of code\&. To record a change in the more general state of the program, use \fBStatus()\fP instead\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fImesg\fP the message to record in the logfile 
+.RE
+.PP
+
+.PP
+Definition at line 313 of file Log\&.hpp\&.
+.PP
+.nf
+313                                {
+314 #ifdef LOG
+315         try {
+316             file << "VERBOSE: " << mesg << std::endl;
+317             file\&.flush();
+318         } catch(std::ofstream::failure f) {
+319             LogError("Verbose() write error", f);
+320         }
+321 #endif
+322     }
+.fi
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for The Automatic Vasospasm Detection Application from the source code\&.

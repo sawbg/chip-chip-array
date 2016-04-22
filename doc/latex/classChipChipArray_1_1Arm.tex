@@ -57,7 +57,7 @@ void \hyperlink{classChipChipArray_1_1Arm_a46a0b0cfb37cb0b663c91cd07e440e10}{Rig
 \subsection{Detailed Description}
 This class provides a layer of abstraction from the existing servo interface. It is designed to make more sense programmatically and to be easier to use. 
 
-Definition at line 22 of file Arm.\+hpp.
+Definition at line \hyperlink{Arm_8hpp_source_l00023}{23} of file \hyperlink{Arm_8hpp_source}{Arm.\+hpp}.
 
 
 
@@ -71,8 +71,17 @@ Definition at line 22 of file Arm.\+hpp.
 )}}\label{classChipChipArray_1_1Arm_aeda43d8461e50eaca9aa891ee2863c05}
 Initializes the I2\+C interface for the arm if another instance of the \hyperlink{classChipChipArray_1_1Arm}{Arm} class has not already. 
 
-Definition at line 170 of file Arm.\+hpp.
+Definition at line \hyperlink{Arm_8hpp_source_l00173}{173} of file \hyperlink{Arm_8hpp_source}{Arm.\+hpp}.
 
+
+\begin{DoxyCode}
+00173              \{
+00174         \textcolor{keywordflow}{if}(!init) \{
+00175             \hyperlink{Servo__Position__Shell_8cpp_a4fc01d736fe50cf5b977f755b675f11d}{setup}();
+00176             init = \textcolor{keyword}{true};
+00177         \}
+00178     \}
+\end{DoxyCode}
 
 
 Here is the call graph for this function\+:
@@ -104,8 +113,15 @@ Tilts the base of the arm.
 \end{DoxyParams}
 
 
-Definition at line 177 of file Arm.\+hpp.
+Definition at line \hyperlink{Arm_8hpp_source_l00180}{180} of file \hyperlink{Arm_8hpp_source}{Arm.\+hpp}.
 
+
+\begin{DoxyCode}
+00180                               \{
+00181         \hyperlink{Servo__Position__Shell_8cpp_abd2cd3c2e36d42a2178a6f2fd12af905}{setServoPosition}(\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2a793d7330231df1a295a841e5b2bb9a8c}{BASE\_TILT}, a);
+00182         \hyperlink{classChipChipArray_1_1Arm_a9ddcea9544b6e2a4315b9dd705df8fdd}{servoPos}[\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2a793d7330231df1a295a841e5b2bb9a8c}{BASE\_TILT}] = a;
+00183     \}
+\end{DoxyCode}
 
 
 Here is the call graph for this function\+:
@@ -146,8 +162,15 @@ Twists the entire arm.
 \end{DoxyParams}
 
 
-Definition at line 182 of file Arm.\+hpp.
+Definition at line \hyperlink{Arm_8hpp_source_l00185}{185} of file \hyperlink{Arm_8hpp_source}{Arm.\+hpp}.
 
+
+\begin{DoxyCode}
+00185                               \{
+00186         \hyperlink{Servo__Position__Shell_8cpp_abd2cd3c2e36d42a2178a6f2fd12af905}{setServoPosition}(\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2a87afce59ad3a309ba92f43778dde0edf}{BASE\_TURN}, a);
+00187         \hyperlink{classChipChipArray_1_1Arm_a9ddcea9544b6e2a4315b9dd705df8fdd}{servoPos}[\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2a87afce59ad3a309ba92f43778dde0edf}{BASE\_TURN}] = a;
+00188     \}
+\end{DoxyCode}
 
 
 Here is the call graph for this function\+:
@@ -179,10 +202,17 @@ Here is the caller graph for this function\+:
 {}
 \end{DoxyParamCaption}
 )}}\label{classChipChipArray_1_1Arm_a20c6fe3fe79c16f492a8c18b91427080}
+Closes the claw enough to hold a block in place during movement but does not attempt to completely close the claw in order ot prevent unnecessary strain on the servos. 
+
+Definition at line \hyperlink{Arm_8hpp_source_l00195}{195} of file \hyperlink{Arm_8hpp_source}{Arm.\+hpp}.
 
 
-Definition at line 192 of file Arm.\+hpp.
-
+\begin{DoxyCode}
+00195                         \{
+00196         \hyperlink{classChipChipArray_1_1Arm_a776eade3a7aaa6effaabad7f37c71031}{LeftGripper}(180);
+00197         \hyperlink{classChipChipArray_1_1Arm_a46a0b0cfb37cb0b663c91cd07e440e10}{RightGripper}(0);
+00198     \}
+\end{DoxyCode}
 
 
 Here is the call graph for this function\+:
@@ -214,10 +244,17 @@ Here is the caller graph for this function\+:
 {}
 \end{DoxyParamCaption}
 )}}\label{classChipChipArray_1_1Arm_abb33b5bb11034554d632f8c9b95b2c44}
+Opens the claw completely (within safe limits). 
+
+Definition at line \hyperlink{Arm_8hpp_source_l00190}{190} of file \hyperlink{Arm_8hpp_source}{Arm.\+hpp}.
 
 
-Definition at line 187 of file Arm.\+hpp.
-
+\begin{DoxyCode}
+00190                        \{
+00191         \hyperlink{classChipChipArray_1_1Arm_a776eade3a7aaa6effaabad7f37c71031}{LeftGripper}(0);
+00192         \hyperlink{classChipChipArray_1_1Arm_a46a0b0cfb37cb0b663c91cd07e440e10}{RightGripper}(180);
+00193     \}
+\end{DoxyCode}
 
 
 Here is the call graph for this function\+:
@@ -258,8 +295,16 @@ Tilts the base a certain number of degrees.
 \end{DoxyParams}
 
 
-Definition at line 197 of file Arm.\+hpp.
+Definition at line \hyperlink{Arm_8hpp_source_l00200}{200} of file \hyperlink{Arm_8hpp_source}{Arm.\+hpp}.
 
+
+\begin{DoxyCode}
+00200                                 \{
+00201         a += \hyperlink{classChipChipArray_1_1Arm_a9ddcea9544b6e2a4315b9dd705df8fdd}{servoPos}[\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2a793d7330231df1a295a841e5b2bb9a8c}{BASE\_TILT}];
+00202         \hyperlink{Servo__Position__Shell_8cpp_abd2cd3c2e36d42a2178a6f2fd12af905}{setServoPosition}(\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2a793d7330231df1a295a841e5b2bb9a8c}{BASE\_TILT}, a);
+00203         \hyperlink{classChipChipArray_1_1Arm_a9ddcea9544b6e2a4315b9dd705df8fdd}{servoPos}[\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2a793d7330231df1a295a841e5b2bb9a8c}{BASE\_TILT}] = a;
+00204     \}
+\end{DoxyCode}
 
 
 Here is the call graph for this function\+:
@@ -288,8 +333,16 @@ Turn the base a certain number of degrees.
 \end{DoxyParams}
 
 
-Definition at line 203 of file Arm.\+hpp.
+Definition at line \hyperlink{Arm_8hpp_source_l00206}{206} of file \hyperlink{Arm_8hpp_source}{Arm.\+hpp}.
 
+
+\begin{DoxyCode}
+00206                                 \{
+00207         a += \hyperlink{classChipChipArray_1_1Arm_a9ddcea9544b6e2a4315b9dd705df8fdd}{servoPos}[\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2a87afce59ad3a309ba92f43778dde0edf}{BASE\_TURN}];
+00208         \hyperlink{Servo__Position__Shell_8cpp_abd2cd3c2e36d42a2178a6f2fd12af905}{setServoPosition}(\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2a87afce59ad3a309ba92f43778dde0edf}{BASE\_TURN}, a);
+00209         \hyperlink{classChipChipArray_1_1Arm_a9ddcea9544b6e2a4315b9dd705df8fdd}{servoPos}[\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2a87afce59ad3a309ba92f43778dde0edf}{BASE\_TURN}] = a;
+00210     \}
+\end{DoxyCode}
 
 
 Here is the call graph for this function\+:
@@ -330,8 +383,16 @@ Bend the elbow a certain number of degrees.
 \end{DoxyParams}
 
 
-Definition at line 209 of file Arm.\+hpp.
+Definition at line \hyperlink{Arm_8hpp_source_l00212}{212} of file \hyperlink{Arm_8hpp_source}{Arm.\+hpp}.
 
+
+\begin{DoxyCode}
+00212                              \{
+00213         a += \hyperlink{classChipChipArray_1_1Arm_a9ddcea9544b6e2a4315b9dd705df8fdd}{servoPos}[\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2a9b1c0cf4eb53d13971a120133cf44232}{ELBOW}];
+00214         \hyperlink{Servo__Position__Shell_8cpp_abd2cd3c2e36d42a2178a6f2fd12af905}{setServoPosition}(\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2a9b1c0cf4eb53d13971a120133cf44232}{ELBOW}, a);
+00215         \hyperlink{classChipChipArray_1_1Arm_a9ddcea9544b6e2a4315b9dd705df8fdd}{servoPos}[\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2a9b1c0cf4eb53d13971a120133cf44232}{ELBOW}] = a;
+00216     \}
+\end{DoxyCode}
 
 
 Here is the call graph for this function\+:
@@ -360,8 +421,16 @@ Moves the left gripper servo a certain number of degrees.
 \end{DoxyParams}
 
 
-Definition at line 215 of file Arm.\+hpp.
+Definition at line \hyperlink{Arm_8hpp_source_l00218}{218} of file \hyperlink{Arm_8hpp_source}{Arm.\+hpp}.
 
+
+\begin{DoxyCode}
+00218                                    \{
+00219         a += \hyperlink{classChipChipArray_1_1Arm_a9ddcea9544b6e2a4315b9dd705df8fdd}{servoPos}[\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2ab8d73f94c1a766d2715c193e847ec85e}{GRIP\_LEFT}];
+00220         \hyperlink{Servo__Position__Shell_8cpp_abd2cd3c2e36d42a2178a6f2fd12af905}{setServoPosition}(\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2ab8d73f94c1a766d2715c193e847ec85e}{GRIP\_LEFT}, a);
+00221         \hyperlink{classChipChipArray_1_1Arm_a9ddcea9544b6e2a4315b9dd705df8fdd}{servoPos}[\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2ab8d73f94c1a766d2715c193e847ec85e}{GRIP\_LEFT}] = a;
+00222     \}
+\end{DoxyCode}
 
 
 Here is the call graph for this function\+:
@@ -390,8 +459,16 @@ Moves the right gripper servo a certain number of degrees.
 \end{DoxyParams}
 
 
-Definition at line 221 of file Arm.\+hpp.
+Definition at line \hyperlink{Arm_8hpp_source_l00224}{224} of file \hyperlink{Arm_8hpp_source}{Arm.\+hpp}.
 
+
+\begin{DoxyCode}
+00224                                     \{
+00225         a += \hyperlink{classChipChipArray_1_1Arm_a9ddcea9544b6e2a4315b9dd705df8fdd}{servoPos}[\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2a084d4bf780fc2715f33c1f33387c3c76}{GRIP\_RIGHT}];
+00226         \hyperlink{Servo__Position__Shell_8cpp_abd2cd3c2e36d42a2178a6f2fd12af905}{setServoPosition}(\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2a084d4bf780fc2715f33c1f33387c3c76}{GRIP\_RIGHT}, a);
+00227         \hyperlink{classChipChipArray_1_1Arm_a9ddcea9544b6e2a4315b9dd705df8fdd}{servoPos}[\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2a084d4bf780fc2715f33c1f33387c3c76}{GRIP\_RIGHT}] = a;
+00228     \}
+\end{DoxyCode}
 
 
 Here is the call graph for this function\+:
@@ -420,8 +497,16 @@ Tilt the wrist a certain number of degrees.
 \end{DoxyParams}
 
 
-Definition at line 227 of file Arm.\+hpp.
+Definition at line \hyperlink{Arm_8hpp_source_l00230}{230} of file \hyperlink{Arm_8hpp_source}{Arm.\+hpp}.
 
+
+\begin{DoxyCode}
+00230                                  \{
+00231         a += \hyperlink{classChipChipArray_1_1Arm_a9ddcea9544b6e2a4315b9dd705df8fdd}{servoPos}[\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2abb1046e4dfca68924f935e255b6fae54}{WRIST\_TILT}];
+00232         \hyperlink{Servo__Position__Shell_8cpp_abd2cd3c2e36d42a2178a6f2fd12af905}{setServoPosition}(\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2abb1046e4dfca68924f935e255b6fae54}{WRIST\_TILT}, a);
+00233         \hyperlink{classChipChipArray_1_1Arm_a9ddcea9544b6e2a4315b9dd705df8fdd}{servoPos}[\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2abb1046e4dfca68924f935e255b6fae54}{WRIST\_TILT}] = a;
+00234     \}
+\end{DoxyCode}
 
 
 Here is the call graph for this function\+:
@@ -450,8 +535,16 @@ Twist the wrist a certain number of degrees.
 \end{DoxyParams}
 
 
-Definition at line 233 of file Arm.\+hpp.
+Definition at line \hyperlink{Arm_8hpp_source_l00236}{236} of file \hyperlink{Arm_8hpp_source}{Arm.\+hpp}.
 
+
+\begin{DoxyCode}
+00236                                   \{
+00237         a += \hyperlink{classChipChipArray_1_1Arm_a9ddcea9544b6e2a4315b9dd705df8fdd}{servoPos}[\hyperlink{Arm_8hpp_a02a3a5fbd2fb97badde7f301b7499e05}{WRIST\_TWIST}];
+00238         \hyperlink{Servo__Position__Shell_8cpp_abd2cd3c2e36d42a2178a6f2fd12af905}{setServoPosition}(\hyperlink{Arm_8hpp_a02a3a5fbd2fb97badde7f301b7499e05}{WRIST\_TWIST}, a);
+00239         \hyperlink{classChipChipArray_1_1Arm_a9ddcea9544b6e2a4315b9dd705df8fdd}{servoPos}[\hyperlink{Arm_8hpp_a02a3a5fbd2fb97badde7f301b7499e05}{WRIST\_TWIST}] = a;
+00240     \}
+\end{DoxyCode}
 
 
 Here is the call graph for this function\+:
@@ -492,8 +585,15 @@ Bend the elbow to a specific position.
 \end{DoxyParams}
 
 
-Definition at line 239 of file Arm.\+hpp.
+Definition at line \hyperlink{Arm_8hpp_source_l00242}{242} of file \hyperlink{Arm_8hpp_source}{Arm.\+hpp}.
 
+
+\begin{DoxyCode}
+00242                            \{
+00243         \hyperlink{Servo__Position__Shell_8cpp_abd2cd3c2e36d42a2178a6f2fd12af905}{setServoPosition}(\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2a9b1c0cf4eb53d13971a120133cf44232}{ELBOW}, a);
+00244         \hyperlink{classChipChipArray_1_1Arm_a9ddcea9544b6e2a4315b9dd705df8fdd}{servoPos}[\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2a9b1c0cf4eb53d13971a120133cf44232}{ELBOW}] = a;
+00245     \}
+\end{DoxyCode}
 
 
 Here is the call graph for this function\+:
@@ -548,8 +648,15 @@ Moves the left gripper to a specific position.
 \end{DoxyParams}
 
 
-Definition at line 244 of file Arm.\+hpp.
+Definition at line \hyperlink{Arm_8hpp_source_l00247}{247} of file \hyperlink{Arm_8hpp_source}{Arm.\+hpp}.
 
+
+\begin{DoxyCode}
+00247                                  \{
+00248         \hyperlink{Servo__Position__Shell_8cpp_abd2cd3c2e36d42a2178a6f2fd12af905}{setServoPosition}(\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2ab8d73f94c1a766d2715c193e847ec85e}{GRIP\_LEFT}, a);
+00249         \hyperlink{classChipChipArray_1_1Arm_a9ddcea9544b6e2a4315b9dd705df8fdd}{servoPos}[\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2ab8d73f94c1a766d2715c193e847ec85e}{GRIP\_LEFT}] = a;
+00250     \}
+\end{DoxyCode}
 
 
 Here is the call graph for this function\+:
@@ -590,8 +697,15 @@ Moves the right gripper to a specific position.
 \end{DoxyParams}
 
 
-Definition at line 249 of file Arm.\+hpp.
+Definition at line \hyperlink{Arm_8hpp_source_l00252}{252} of file \hyperlink{Arm_8hpp_source}{Arm.\+hpp}.
 
+
+\begin{DoxyCode}
+00252                                   \{
+00253         \hyperlink{Servo__Position__Shell_8cpp_abd2cd3c2e36d42a2178a6f2fd12af905}{setServoPosition}(\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2a084d4bf780fc2715f33c1f33387c3c76}{GRIP\_RIGHT}, a);
+00254         \hyperlink{classChipChipArray_1_1Arm_a9ddcea9544b6e2a4315b9dd705df8fdd}{servoPos}[\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2a084d4bf780fc2715f33c1f33387c3c76}{GRIP\_RIGHT}] = a;
+00255     \}
+\end{DoxyCode}
 
 
 Here is the call graph for this function\+:
@@ -632,8 +746,15 @@ Tilt the wrist to a specific position.
 \end{DoxyParams}
 
 
-Definition at line 254 of file Arm.\+hpp.
+Definition at line \hyperlink{Arm_8hpp_source_l00257}{257} of file \hyperlink{Arm_8hpp_source}{Arm.\+hpp}.
 
+
+\begin{DoxyCode}
+00257                                \{
+00258         \hyperlink{Servo__Position__Shell_8cpp_abd2cd3c2e36d42a2178a6f2fd12af905}{setServoPosition}(\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2abb1046e4dfca68924f935e255b6fae54}{WRIST\_TILT}, a);
+00259         \hyperlink{classChipChipArray_1_1Arm_a9ddcea9544b6e2a4315b9dd705df8fdd}{servoPos}[\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2abb1046e4dfca68924f935e255b6fae54}{WRIST\_TILT}] = a;
+00260     \}
+\end{DoxyCode}
 
 
 Here is the call graph for this function\+:
@@ -662,8 +783,15 @@ Twist the wrist to a specific position.
 \end{DoxyParams}
 
 
-Definition at line 259 of file Arm.\+hpp.
+Definition at line \hyperlink{Arm_8hpp_source_l00262}{262} of file \hyperlink{Arm_8hpp_source}{Arm.\+hpp}.
 
+
+\begin{DoxyCode}
+00262                                 \{
+00263         \hyperlink{Servo__Position__Shell_8cpp_abd2cd3c2e36d42a2178a6f2fd12af905}{setServoPosition}(\hyperlink{Arm_8hpp_a02a3a5fbd2fb97badde7f301b7499e05}{WRIST\_TWIST}, a);
+00264         \hyperlink{classChipChipArray_1_1Arm_a9ddcea9544b6e2a4315b9dd705df8fdd}{servoPos}[\hyperlink{Arm_8hpp_a02a3a5fbd2fb97badde7f301b7499e05}{WRIST\_TWIST}] = a;
+00265     \}
+\end{DoxyCode}
 
 
 Here is the call graph for this function\+:
@@ -696,7 +824,7 @@ Here is the caller graph for this function\+:
 \subsubsection[{servo\+Pos}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint8} Chip\+Chip\+Array\+::\+Arm\+::servo\+Pos\mbox{[}7\mbox{]} = \{ 0, 0, 0, 0, 0, 0, 0 \}}}\label{classChipChipArray_1_1Arm_a9ddcea9544b6e2a4315b9dd705df8fdd}
 The instantaneous position of each arm servo. 
 
-Definition at line 33 of file Arm.\+hpp.
+Definition at line \hyperlink{Arm_8hpp_source_l00034}{34} of file \hyperlink{Arm_8hpp_source}{Arm.\+hpp}.
 
 
 

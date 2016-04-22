@@ -1,0 +1,207 @@
+\hypertarget{Log_8hpp_source}{\section{Log.\+hpp}
+\label{Log_8hpp_source}\index{src/\+Log.\+hpp@{src/\+Log.\+hpp}}
+}
+
+\begin{DoxyCode}
+00001 
+00007 \textcolor{preprocessor}{#ifndef Log\_H}
+00008 \textcolor{preprocessor}{#define Log\_H}
+00009 
+00010 \textcolor{preprocessor}{#include <ctime>}
+00011 \textcolor{preprocessor}{#include <fstream>}
+00012 \textcolor{preprocessor}{#include <iostream>}
+00013 \textcolor{preprocessor}{#include <opencv2/highgui/highgui.hpp>}
+00014 \textcolor{preprocessor}{#include <string>}
+00015 \textcolor{preprocessor}{#include <sys/stat.h>}
+00016 
+00017 \textcolor{preprocessor}{#include "\hyperlink{definitions_8hpp}{definitions.hpp}"}
+00018 
+00019 \textcolor{keyword}{namespace }\hyperlink{namespaceChipChipArray}{ChipChipArray} \{
+00020 
+\hypertarget{Log_8hpp_source_l00035}{}\hyperlink{classChipChipArray_1_1Log}{00035}     \textcolor{keyword}{class }\hyperlink{classChipChipArray_1_1Log}{Log} \{
+00036         \textcolor{keyword}{public}:
+\hypertarget{Log_8hpp_source_l00041}{}\hyperlink{classChipChipArray_1_1Log_a2bd48afdb832567e94545e6dc2f6f4d5}{00041}             \hyperlink{classChipChipArray_1_1Log_a2bd48afdb832567e94545e6dc2f6f4d5}{Log}() \{\};
+00042 
+00058             \hyperlink{classChipChipArray_1_1Log_a2bd48afdb832567e94545e6dc2f6f4d5}{Log}(\textcolor{keyword}{auto} dir, \hyperlink{definitions_8hpp_aa7380b6d694cab49f07aed6a7af592d9}{LogMode} mode = \hyperlink{definitions_8hpp_aa7380b6d694cab49f07aed6a7af592d9a9dffbf69ffba8bc38bc4e01abf4b1675}{LogMode::Text});
+00059 
+00063             \hyperlink{classChipChipArray_1_1Log_a647df4da22b29d9d5a5ea32af3a1ed83}{~Log}();
+00064 
+00074             \textcolor{keywordtype}{void} \hyperlink{classChipChipArray_1_1Log_ac32b435af1577e4ebc67af2bdfea8eff}{Debug}(\textcolor{keyword}{auto} mesg);
+00075 
+00082             \textcolor{keywordtype}{void} \hyperlink{classChipChipArray_1_1Log_aba7b7b0555f49f4dcf15f4b9fd3e6b34}{Error}(\textcolor{keyword}{auto} mesg);
+00083 
+00092             \textcolor{keywordtype}{void} \hyperlink{classChipChipArray_1_1Log_a65bbab057c8b1453f9e4efcfee7522c4}{Image}(cv::Mat image, \textcolor{keyword}{auto} filename);
+00093 
+00097             \textcolor{keywordtype}{void} \hyperlink{classChipChipArray_1_1Log_ad27a06a4561f2f59159bd8a7fc2fed3b}{Open}(\textcolor{keyword}{auto} dir, \hyperlink{definitions_8hpp_aa7380b6d694cab49f07aed6a7af592d9}{LogMode} mode = \hyperlink{definitions_8hpp_aa7380b6d694cab49f07aed6a7af592d9a9dffbf69ffba8bc38bc4e01abf4b1675}{LogMode::Text});
+00098 
+00107             \textcolor{keywordtype}{void} \hyperlink{classChipChipArray_1_1Log_a66575b6e94c6112e4cefa5736cb996e0}{Status}(\textcolor{keyword}{auto} mesg);
+00108 
+00117             \textcolor{keywordtype}{void} \hyperlink{classChipChipArray_1_1Log_a8849569720c26e335e7ef4dcb912170b}{Variable}(\textcolor{keyword}{auto} name, \textcolor{keyword}{auto} value);
+00118 
+00127             \textcolor{keywordtype}{void} \hyperlink{classChipChipArray_1_1Log_a154a5f38d9c7a767693b242684a3d4d9}{Verbose}(\textcolor{keyword}{auto} mesg);
+00128 
+00129         \textcolor{keyword}{private}:
+00130             \textcolor{comment}{// CONSTANTS}
+00131 
+00136             \textcolor{keyword}{const} \textcolor{keywordtype}{char} PATH\_SEP = \textcolor{charliteral}{'/'};
+00137 
+00142             \textcolor{keyword}{static} \textcolor{keyword}{const} \hyperlink{definitions_8hpp_adde6aaee8457bee49c2a92621fe22b79}{uint8} LEN = 255;
+00143 
+00144 
+00145             \textcolor{comment}{// OTHER VARIABLES}
+00146 
+00151             std::string dir;
+00152 
+00156             std::string filename;
+00157 
+00162             \hyperlink{definitions_8hpp_adde6aaee8457bee49c2a92621fe22b79}{uint8} imgCount = 0;
+00163 
+00167             \hyperlink{definitions_8hpp_aa7380b6d694cab49f07aed6a7af592d9}{LogMode} mode;
+00168 
+00172             std::ofstream file;
+00173 
+00174 
+00175             \textcolor{comment}{// FUNCTIONS}
+00176 
+00184             \textcolor{keywordtype}{void} LogError(\textcolor{keyword}{auto} mesg, std::ofstream::failure f);
+00185     \};
+00186 
+\hypertarget{Log_8hpp_source_l00187}{}\hyperlink{classChipChipArray_1_1Log_a4cd28a821789b39e936a6e346329d65b}{00187}     \hyperlink{classChipChipArray_1_1Log_a2bd48afdb832567e94545e6dc2f6f4d5}{Log::Log}(\textcolor{keyword}{auto} dir, \hyperlink{definitions_8hpp_aa7380b6d694cab49f07aed6a7af592d9}{LogMode} mode) \{
+00188 \textcolor{preprocessor}{#ifdef LOG}
+00189         \hyperlink{classChipChipArray_1_1Log_ad27a06a4561f2f59159bd8a7fc2fed3b}{Open}(dir, mode);
+00190 \textcolor{preprocessor}{#endif}
+00191     \}
+00192 
+\hypertarget{Log_8hpp_source_l00193}{}\hyperlink{classChipChipArray_1_1Log_a647df4da22b29d9d5a5ea32af3a1ed83}{00193}     \hyperlink{classChipChipArray_1_1Log_a647df4da22b29d9d5a5ea32af3a1ed83}{Log::~Log}() \{
+00194 \textcolor{preprocessor}{#ifdef LOG}
+00195         \textcolor{keywordflow}{try} \{
+00196             file.flush();
+00197             file.close();
+00198         \} \textcolor{keywordflow}{catch} (std::ofstream::failure f) \{
+00199             LogError(\textcolor{stringliteral}{"Gosh dang it! A fatal error has occured "} 
+00200                     \textcolor{stringliteral}{"closing the logfile."}, f);
+00201         \}
+00202 \textcolor{preprocessor}{#endif}
+00203     \}
+00204 
+\hypertarget{Log_8hpp_source_l00205}{}\hyperlink{classChipChipArray_1_1Log_ac32b435af1577e4ebc67af2bdfea8eff}{00205}     \textcolor{keywordtype}{void} \hyperlink{classChipChipArray_1_1Log_ac32b435af1577e4ebc67af2bdfea8eff}{Log::Debug}(\textcolor{keyword}{auto} mesg) \{
+00206 \textcolor{preprocessor}{#ifdef LOG}
+00207         \textcolor{keywordflow}{try} \{
+00208             file << \textcolor{stringliteral}{"DEBUG: "} << mesg << std::endl;
+00209             file.flush();
+00210         \} \textcolor{keywordflow}{catch}(std::ofstream::failure f) \{
+00211             LogError(\textcolor{stringliteral}{"Debug() write error"}, f);
+00212         \}
+00213 \textcolor{preprocessor}{#endif}
+00214     \}
+00215 
+\hypertarget{Log_8hpp_source_l00216}{}\hyperlink{classChipChipArray_1_1Log_aba7b7b0555f49f4dcf15f4b9fd3e6b34}{00216}     \textcolor{keywordtype}{void} \hyperlink{classChipChipArray_1_1Log_aba7b7b0555f49f4dcf15f4b9fd3e6b34}{Log::Error}(\textcolor{keyword}{auto} mesg) \{
+00217 \textcolor{preprocessor}{#ifdef LOG}
+00218         \textcolor{keywordflow}{try} \{
+00219             file << \textcolor{stringliteral}{"ERROR: "} << mesg << std::endl;
+00220             file.flush();
+00221         \} \textcolor{keywordflow}{catch}(std::ofstream::failure f) \{
+00222             LogError(\textcolor{stringliteral}{"Error() write error"}, f);
+00223         \}
+00224 \textcolor{preprocessor}{#endif}
+00225     \}
+00226 
+\hypertarget{Log_8hpp_source_l00227}{}\hyperlink{classChipChipArray_1_1Log_a65bbab057c8b1453f9e4efcfee7522c4}{00227}     \textcolor{keywordtype}{void} \hyperlink{classChipChipArray_1_1Log_a65bbab057c8b1453f9e4efcfee7522c4}{Log::Image}(cv::Mat image, \textcolor{keyword}{auto} filename) \{
+00228 \textcolor{preprocessor}{#ifdef LOG}
+00229         \textcolor{keywordflow}{try} \{
+00230             cv::imwrite(dir + std::string(filename), image);
+00231         \} \textcolor{keywordflow}{catch}(std::ofstream::failure f) \{
+00232             LogError(\textcolor{stringliteral}{"Image() write error"}, f);
+00233         \} \textcolor{keywordflow}{catch}(std::exception ex) \{
+00234             \hyperlink{classChipChipArray_1_1Log_aba7b7b0555f49f4dcf15f4b9fd3e6b34}{Error}(\textcolor{stringliteral}{"Error writing image "} + std::string(filename));
+00235         \}
+00236 \textcolor{preprocessor}{#endif}
+00237     \}
+00238 
+00239     \textcolor{keywordtype}{void} Log::LogError(\textcolor{keyword}{auto} mesg, std::ofstream::failure f) \{
+00240 \textcolor{preprocessor}{#ifdef LOG}
+00241         std::cerr << mesg << std::endl;
+00242         std::cerr << \textcolor{stringliteral}{"MESSAGE: "} << f.what() << std::endl;
+00243         exit(\hyperlink{definitions_8hpp_a8fe83ac76edc595f6b98cd4a4127aed5}{ERROR});
+00244 \textcolor{preprocessor}{#endif}
+00245     \}
+00246 
+\hypertarget{Log_8hpp_source_l00247}{}\hyperlink{classChipChipArray_1_1Log_ad27a06a4561f2f59159bd8a7fc2fed3b}{00247}     \textcolor{keywordtype}{void} \hyperlink{classChipChipArray_1_1Log_ad27a06a4561f2f59159bd8a7fc2fed3b}{Log::Open}(\textcolor{keyword}{auto} dir, \hyperlink{definitions_8hpp_aa7380b6d694cab49f07aed6a7af592d9}{LogMode} mode) \{
+00248 \textcolor{preprocessor}{#ifdef LOG}
+00249         \textcolor{comment}{// format date and time}
+00250         \textcolor{keywordtype}{char} date[32];
+00251         time\_t sec = time(\textcolor{keyword}{nullptr});
+00252         \textcolor{keyword}{struct }tm * loctime = localtime(&sec);
+00253         strftime(date, 32, \textcolor{stringliteral}{"%m-%d\_%H-%M-%S"}, loctime);
+00254 
+00255         \textcolor{comment}{// create temperary strings}
+00256         this->dir = std::string(dir);
+00257         std::string datestr = std::string(date);
+00258 
+00259         \textcolor{comment}{// add path separator if necessary}
+00260         \textcolor{keywordflow}{if}(this->dir[this->dir.length() - 1] != PATH\_SEP) \{
+00261             this->dir += PATH\_SEP;
+00262         \}
+00263 
+00264         \textcolor{comment}{// add directory for log and images if necessary}
+00265         \textcolor{keywordflow}{if}(mode == \hyperlink{definitions_8hpp_aa7380b6d694cab49f07aed6a7af592d9ace7898536dd0e928d1640ee2ad531cc8}{LogMode::Multi}) this->dir += datestr + PATH\_SEP;
+00266 
+00267         \textcolor{keywordtype}{int} ret = mkdir(this->dir.c\_str(), S\_IRUSR | S\_IWUSR | S\_IRGRP | S\_IWGRP
+00268                 | S\_IROTH | S\_IWOTH | S\_IXUSR | S\_IXGRP
+00269                 | S\_IXOTH);
+00270 
+00271         filename = this->dir + datestr + \textcolor{stringliteral}{".log"};
+00272 
+00273         \textcolor{comment}{// set class mode}
+00274         this->mode = mode;
+00275 
+00276         \textcolor{comment}{// Initializing file}
+00277         file.exceptions(std::ofstream::failbit
+00278                 | std::ofstream::badbit);
+00279 
+00280         \textcolor{keywordflow}{try} \{
+00281             file.open(filename, std::ofstream::out
+00282                     | std::ofstream::app);
+00283         \} \textcolor{keywordflow}{catch}(std::ofstream::failure ex) \{
+00284             LogError(\textcolor{stringliteral}{"Oh, no! An error has occurred opening the "}
+00285                     \textcolor{stringliteral}{"log file."}, ex);
+00286         \}
+00287 \textcolor{preprocessor}{#endif}
+00288     \}
+00289 
+\hypertarget{Log_8hpp_source_l00290}{}\hyperlink{classChipChipArray_1_1Log_a66575b6e94c6112e4cefa5736cb996e0}{00290}     \textcolor{keywordtype}{void} \hyperlink{classChipChipArray_1_1Log_a66575b6e94c6112e4cefa5736cb996e0}{Log::Status}(\textcolor{keyword}{auto} mesg) \{
+00291 \textcolor{preprocessor}{#ifdef LOG}
+00292         \textcolor{keywordflow}{try} \{
+00293             file << \textcolor{stringliteral}{"STATUS: "} << mesg << std::endl;
+00294             file.flush();
+00295         \} \textcolor{keywordflow}{catch} (std::ofstream::failure f) \{
+00296             LogError(\textcolor{stringliteral}{"Status() write error"}, f);
+00297         \}
+00298 \textcolor{preprocessor}{#endif}
+00299     \}
+00300 
+\hypertarget{Log_8hpp_source_l00301}{}\hyperlink{classChipChipArray_1_1Log_a8849569720c26e335e7ef4dcb912170b}{00301}     \textcolor{keywordtype}{void} \hyperlink{classChipChipArray_1_1Log_a8849569720c26e335e7ef4dcb912170b}{Log::Variable}(\textcolor{keyword}{auto} name, \textcolor{keyword}{auto} value) \{
+00302 \textcolor{preprocessor}{#ifdef LOG}
+00303         \textcolor{keywordflow}{try} \{
+00304             file << \textcolor{stringliteral}{"VARIABLE: "} << name << \textcolor{stringliteral}{" = "} << value
+00305                 << std::endl;
+00306             file.flush();
+00307         \} \textcolor{keywordflow}{catch}(std::ofstream::failure f) \{
+00308             LogError(\textcolor{stringliteral}{"Variable() write error"}, f);
+00309         \}
+00310 \textcolor{preprocessor}{#endif}
+00311     \}
+00312 
+\hypertarget{Log_8hpp_source_l00313}{}\hyperlink{classChipChipArray_1_1Log_a154a5f38d9c7a767693b242684a3d4d9}{00313}     \textcolor{keywordtype}{void} \hyperlink{classChipChipArray_1_1Log_a154a5f38d9c7a767693b242684a3d4d9}{Log::Verbose}(\textcolor{keyword}{auto} mesg) \{
+00314 \textcolor{preprocessor}{#ifdef LOG}
+00315         \textcolor{keywordflow}{try} \{
+00316             file << \textcolor{stringliteral}{"VERBOSE: "} << mesg << std::endl;
+00317             file.flush();
+00318         \} \textcolor{keywordflow}{catch}(std::ofstream::failure f) \{
+00319             LogError(\textcolor{stringliteral}{"Verbose() write error"}, f);
+00320         \}
+00321 \textcolor{preprocessor}{#endif}
+00322     \}
+00323 \}
+00324 \textcolor{preprocessor}{#endif}
+\end{DoxyCode}

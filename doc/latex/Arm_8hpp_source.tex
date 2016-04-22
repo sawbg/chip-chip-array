@@ -1,0 +1,162 @@
+\hypertarget{Arm_8hpp_source}{\section{Arm.\+hpp}
+\label{Arm_8hpp_source}\index{src/\+Arm.\+hpp@{src/\+Arm.\+hpp}}
+}
+
+\begin{DoxyCode}
+00001 
+00007 \textcolor{preprocessor}{#ifndef Arm\_H}
+00008 \textcolor{preprocessor}{#define Arm\_H}
+00009 
+00010 \textcolor{preprocessor}{#include <unistd.h>}
+00011 
+00012 \textcolor{preprocessor}{#include "\hyperlink{definitions_8hpp}{definitions.hpp}"}
+00013 \textcolor{preprocessor}{#include "\hyperlink{Servo__Position__Shell_8cpp}{Servo\_Position\_Shell.cpp}"}
+00014 
+\hypertarget{Arm_8hpp_source_l00015}{}\hyperlink{Arm_8hpp_a02a3a5fbd2fb97badde7f301b7499e05}{00015} \textcolor{preprocessor}{#define WRIST\_TWIST WRIST\_PAN}
+00016 
+\hypertarget{Arm_8hpp_source_l00017}{}\hyperlink{namespaceChipChipArray}{00017} \textcolor{keyword}{namespace }\hyperlink{namespaceChipChipArray}{ChipChipArray} \{
+\hypertarget{Arm_8hpp_source_l00023}{}\hyperlink{classChipChipArray_1_1Arm}{00023}     \textcolor{keyword}{class }\hyperlink{classChipChipArray_1_1Arm}{Arm} \{
+00024         \textcolor{keyword}{public}:
+00029             \hyperlink{classChipChipArray_1_1Arm_aeda43d8461e50eaca9aa891ee2863c05}{Arm}();
+00030 
+\hypertarget{Arm_8hpp_source_l00034}{}\hyperlink{classChipChipArray_1_1Arm_a9ddcea9544b6e2a4315b9dd705df8fdd}{00034}             \hyperlink{definitions_8hpp_adde6aaee8457bee49c2a92621fe22b79}{uint8} \hyperlink{classChipChipArray_1_1Arm_a9ddcea9544b6e2a4315b9dd705df8fdd}{servoPos}[7] = \{ 0, 0, 0, 0, 0, 0, 0 \};
+00035 
+00041             \textcolor{keywordtype}{void} \hyperlink{classChipChipArray_1_1Arm_a8b077a3791d9fc5ef285c1520fe4c5d8}{BaseTilt}(\hyperlink{definitions_8hpp_adde6aaee8457bee49c2a92621fe22b79}{uint8} a);
+00042 
+00048             \textcolor{keywordtype}{void} \hyperlink{classChipChipArray_1_1Arm_addaedfe85ff2b14ff00c344fc4b40cd6}{BaseTurn}(\hyperlink{definitions_8hpp_adde6aaee8457bee49c2a92621fe22b79}{uint8} a);
+00049 
+00053             \textcolor{keywordtype}{void} \hyperlink{classChipChipArray_1_1Arm_abb33b5bb11034554d632f8c9b95b2c44}{ClawOpen}();
+00054 
+00060             \textcolor{keywordtype}{void} \hyperlink{classChipChipArray_1_1Arm_a20c6fe3fe79c16f492a8c18b91427080}{ClawClose}();
+00061 
+00068             \textcolor{keywordtype}{void} \hyperlink{classChipChipArray_1_1Arm_af84b91c664baec0f2882dcf4089ae027}{dBaseTilt}(\hyperlink{definitions_8hpp_a74df79fde3c518e55b29ce6360a9c76e}{sint16} a);
+00069 
+00076             \textcolor{keywordtype}{void} \hyperlink{classChipChipArray_1_1Arm_a980f5bd278cbe06aa21754fb8e0324b3}{dBaseTurn}(\hyperlink{definitions_8hpp_a74df79fde3c518e55b29ce6360a9c76e}{sint16} a);
+00077 
+00084             \textcolor{keywordtype}{void} \hyperlink{classChipChipArray_1_1Arm_ae8d0a664dd1a0e556cf40c0984035163}{dElbow}(\hyperlink{definitions_8hpp_a74df79fde3c518e55b29ce6360a9c76e}{sint16} a);
+00085 
+00092             \textcolor{keywordtype}{void} \hyperlink{classChipChipArray_1_1Arm_a43daba698f13a522887ad022b78557bb}{dWristTilt}(\hyperlink{definitions_8hpp_a74df79fde3c518e55b29ce6360a9c76e}{sint16} a);
+00093 
+00100             \textcolor{keywordtype}{void} \hyperlink{classChipChipArray_1_1Arm_a6bde822b1be63926e21222f36aad67b3}{dWristTwist}(\hyperlink{definitions_8hpp_a74df79fde3c518e55b29ce6360a9c76e}{sint16} a);
+00101 
+00107             \textcolor{keywordtype}{void} \hyperlink{classChipChipArray_1_1Arm_ac45149e03abfac230b75156bb42e8417}{Elbow}(\hyperlink{definitions_8hpp_adde6aaee8457bee49c2a92621fe22b79}{uint8} a);
+00108 
+00115             \textcolor{keywordtype}{void} \hyperlink{classChipChipArray_1_1Arm_a8871580fd6a75fd60d99300f2b5c21d1}{Hover}(\hyperlink{definitions_8hpp_adbd1e7a33d3e1751c7b2aa2562d0ecb9}{Zone} zone);
+00116 
+00122             \textcolor{keywordtype}{void} \hyperlink{classChipChipArray_1_1Arm_ad61f7c1e63eb09981b6c304bd924e217}{WristTilt}(\hyperlink{definitions_8hpp_adde6aaee8457bee49c2a92621fe22b79}{uint8} a);
+00123 
+00129             \textcolor{keywordtype}{void} \hyperlink{classChipChipArray_1_1Arm_a35ec7756840d9d32dcfbb88d831f087f}{WristTwist}(\hyperlink{definitions_8hpp_adde6aaee8457bee49c2a92621fe22b79}{uint8} a);
+00130 
+00131         \textcolor{keyword}{protected}:
+00132 
+00139             \textcolor{keywordtype}{void} \hyperlink{classChipChipArray_1_1Arm_a6da0950c7e3bd4a31264e562916c032d}{dLeftGripper}(\hyperlink{definitions_8hpp_a74df79fde3c518e55b29ce6360a9c76e}{sint16} a);
+00140 
+00147             \textcolor{keywordtype}{void} \hyperlink{classChipChipArray_1_1Arm_adfa7cc779b7ec3bf8453277796c142ed}{dRightGripper}(\hyperlink{definitions_8hpp_a74df79fde3c518e55b29ce6360a9c76e}{sint16} a);
+00148 
+00154             \textcolor{keywordtype}{void} \hyperlink{classChipChipArray_1_1Arm_a776eade3a7aaa6effaabad7f37c71031}{LeftGripper}(\hyperlink{definitions_8hpp_adde6aaee8457bee49c2a92621fe22b79}{uint8} a);
+00155 
+00161             \textcolor{keywordtype}{void} \hyperlink{classChipChipArray_1_1Arm_a46a0b0cfb37cb0b663c91cd07e440e10}{RightGripper}(\hyperlink{definitions_8hpp_adde6aaee8457bee49c2a92621fe22b79}{uint8} a);
+00162 
+00163         \textcolor{keyword}{private}:
+00168             \textcolor{keyword}{static} \textcolor{keywordtype}{bool} init;
+00169     \};
+00170 
+00171     \textcolor{keywordtype}{bool} Arm::init = \textcolor{keyword}{false};
+00172 
+\hypertarget{Arm_8hpp_source_l00173}{}\hyperlink{classChipChipArray_1_1Arm_aeda43d8461e50eaca9aa891ee2863c05}{00173}     \hyperlink{classChipChipArray_1_1Arm_aeda43d8461e50eaca9aa891ee2863c05}{Arm::Arm}() \{
+00174         \textcolor{keywordflow}{if}(!init) \{
+00175             \hyperlink{Servo__Position__Shell_8cpp_a4fc01d736fe50cf5b977f755b675f11d}{setup}();
+00176             init = \textcolor{keyword}{true};
+00177         \}
+00178     \}
+00179 
+\hypertarget{Arm_8hpp_source_l00180}{}\hyperlink{classChipChipArray_1_1Arm_a8b077a3791d9fc5ef285c1520fe4c5d8}{00180}     \textcolor{keywordtype}{void} \hyperlink{classChipChipArray_1_1Arm_a8b077a3791d9fc5ef285c1520fe4c5d8}{Arm::BaseTilt}(\hyperlink{definitions_8hpp_adde6aaee8457bee49c2a92621fe22b79}{uint8} a) \{
+00181         \hyperlink{Servo__Position__Shell_8cpp_abd2cd3c2e36d42a2178a6f2fd12af905}{setServoPosition}(\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2a793d7330231df1a295a841e5b2bb9a8c}{BASE\_TILT}, a);
+00182         \hyperlink{classChipChipArray_1_1Arm_a9ddcea9544b6e2a4315b9dd705df8fdd}{servoPos}[\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2a793d7330231df1a295a841e5b2bb9a8c}{BASE\_TILT}] = a;
+00183     \}
+00184 
+\hypertarget{Arm_8hpp_source_l00185}{}\hyperlink{classChipChipArray_1_1Arm_addaedfe85ff2b14ff00c344fc4b40cd6}{00185}     \textcolor{keywordtype}{void} \hyperlink{classChipChipArray_1_1Arm_addaedfe85ff2b14ff00c344fc4b40cd6}{Arm::BaseTurn}(\hyperlink{definitions_8hpp_adde6aaee8457bee49c2a92621fe22b79}{uint8} a) \{
+00186         \hyperlink{Servo__Position__Shell_8cpp_abd2cd3c2e36d42a2178a6f2fd12af905}{setServoPosition}(\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2a87afce59ad3a309ba92f43778dde0edf}{BASE\_TURN}, a);
+00187         \hyperlink{classChipChipArray_1_1Arm_a9ddcea9544b6e2a4315b9dd705df8fdd}{servoPos}[\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2a87afce59ad3a309ba92f43778dde0edf}{BASE\_TURN}] = a;
+00188     \}
+00189 
+\hypertarget{Arm_8hpp_source_l00190}{}\hyperlink{classChipChipArray_1_1Arm_abb33b5bb11034554d632f8c9b95b2c44}{00190}     \textcolor{keywordtype}{void} \hyperlink{classChipChipArray_1_1Arm_abb33b5bb11034554d632f8c9b95b2c44}{Arm::ClawOpen}() \{
+00191         \hyperlink{classChipChipArray_1_1Arm_a776eade3a7aaa6effaabad7f37c71031}{LeftGripper}(0);
+00192         \hyperlink{classChipChipArray_1_1Arm_a46a0b0cfb37cb0b663c91cd07e440e10}{RightGripper}(180);
+00193     \}
+00194 
+\hypertarget{Arm_8hpp_source_l00195}{}\hyperlink{classChipChipArray_1_1Arm_a20c6fe3fe79c16f492a8c18b91427080}{00195}     \textcolor{keywordtype}{void} \hyperlink{classChipChipArray_1_1Arm_a20c6fe3fe79c16f492a8c18b91427080}{Arm::ClawClose}() \{
+00196         \hyperlink{classChipChipArray_1_1Arm_a776eade3a7aaa6effaabad7f37c71031}{LeftGripper}(180);
+00197         \hyperlink{classChipChipArray_1_1Arm_a46a0b0cfb37cb0b663c91cd07e440e10}{RightGripper}(0);
+00198     \}
+00199 
+\hypertarget{Arm_8hpp_source_l00200}{}\hyperlink{classChipChipArray_1_1Arm_af84b91c664baec0f2882dcf4089ae027}{00200}     \textcolor{keywordtype}{void} \hyperlink{classChipChipArray_1_1Arm_af84b91c664baec0f2882dcf4089ae027}{Arm::dBaseTilt}(\hyperlink{definitions_8hpp_a74df79fde3c518e55b29ce6360a9c76e}{sint16} a) \{
+00201         a += \hyperlink{classChipChipArray_1_1Arm_a9ddcea9544b6e2a4315b9dd705df8fdd}{servoPos}[\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2a793d7330231df1a295a841e5b2bb9a8c}{BASE\_TILT}];
+00202         \hyperlink{Servo__Position__Shell_8cpp_abd2cd3c2e36d42a2178a6f2fd12af905}{setServoPosition}(\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2a793d7330231df1a295a841e5b2bb9a8c}{BASE\_TILT}, a);
+00203         \hyperlink{classChipChipArray_1_1Arm_a9ddcea9544b6e2a4315b9dd705df8fdd}{servoPos}[\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2a793d7330231df1a295a841e5b2bb9a8c}{BASE\_TILT}] = a;
+00204     \}
+00205 
+\hypertarget{Arm_8hpp_source_l00206}{}\hyperlink{classChipChipArray_1_1Arm_a980f5bd278cbe06aa21754fb8e0324b3}{00206}     \textcolor{keywordtype}{void} \hyperlink{classChipChipArray_1_1Arm_a980f5bd278cbe06aa21754fb8e0324b3}{Arm::dBaseTurn}(\hyperlink{definitions_8hpp_a74df79fde3c518e55b29ce6360a9c76e}{sint16} a) \{
+00207         a += \hyperlink{classChipChipArray_1_1Arm_a9ddcea9544b6e2a4315b9dd705df8fdd}{servoPos}[\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2a87afce59ad3a309ba92f43778dde0edf}{BASE\_TURN}];
+00208         \hyperlink{Servo__Position__Shell_8cpp_abd2cd3c2e36d42a2178a6f2fd12af905}{setServoPosition}(\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2a87afce59ad3a309ba92f43778dde0edf}{BASE\_TURN}, a);
+00209         \hyperlink{classChipChipArray_1_1Arm_a9ddcea9544b6e2a4315b9dd705df8fdd}{servoPos}[\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2a87afce59ad3a309ba92f43778dde0edf}{BASE\_TURN}] = a;
+00210     \}
+00211 
+\hypertarget{Arm_8hpp_source_l00212}{}\hyperlink{classChipChipArray_1_1Arm_ae8d0a664dd1a0e556cf40c0984035163}{00212}     \textcolor{keywordtype}{void} \hyperlink{classChipChipArray_1_1Arm_ae8d0a664dd1a0e556cf40c0984035163}{Arm::dElbow}(\hyperlink{definitions_8hpp_a74df79fde3c518e55b29ce6360a9c76e}{sint16} a) \{
+00213         a += \hyperlink{classChipChipArray_1_1Arm_a9ddcea9544b6e2a4315b9dd705df8fdd}{servoPos}[\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2a9b1c0cf4eb53d13971a120133cf44232}{ELBOW}];
+00214         \hyperlink{Servo__Position__Shell_8cpp_abd2cd3c2e36d42a2178a6f2fd12af905}{setServoPosition}(\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2a9b1c0cf4eb53d13971a120133cf44232}{ELBOW}, a);
+00215         \hyperlink{classChipChipArray_1_1Arm_a9ddcea9544b6e2a4315b9dd705df8fdd}{servoPos}[\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2a9b1c0cf4eb53d13971a120133cf44232}{ELBOW}] = a;
+00216     \}
+00217 
+\hypertarget{Arm_8hpp_source_l00218}{}\hyperlink{classChipChipArray_1_1Arm_a6da0950c7e3bd4a31264e562916c032d}{00218}     \textcolor{keywordtype}{void} \hyperlink{classChipChipArray_1_1Arm_a6da0950c7e3bd4a31264e562916c032d}{Arm::dLeftGripper}(\hyperlink{definitions_8hpp_a74df79fde3c518e55b29ce6360a9c76e}{sint16} a) \{
+00219         a += \hyperlink{classChipChipArray_1_1Arm_a9ddcea9544b6e2a4315b9dd705df8fdd}{servoPos}[\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2ab8d73f94c1a766d2715c193e847ec85e}{GRIP\_LEFT}];
+00220         \hyperlink{Servo__Position__Shell_8cpp_abd2cd3c2e36d42a2178a6f2fd12af905}{setServoPosition}(\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2ab8d73f94c1a766d2715c193e847ec85e}{GRIP\_LEFT}, a);
+00221         \hyperlink{classChipChipArray_1_1Arm_a9ddcea9544b6e2a4315b9dd705df8fdd}{servoPos}[\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2ab8d73f94c1a766d2715c193e847ec85e}{GRIP\_LEFT}] = a;
+00222     \}
+00223 
+\hypertarget{Arm_8hpp_source_l00224}{}\hyperlink{classChipChipArray_1_1Arm_adfa7cc779b7ec3bf8453277796c142ed}{00224}     \textcolor{keywordtype}{void} \hyperlink{classChipChipArray_1_1Arm_adfa7cc779b7ec3bf8453277796c142ed}{Arm::dRightGripper}(\hyperlink{definitions_8hpp_a74df79fde3c518e55b29ce6360a9c76e}{sint16} a) \{
+00225         a += \hyperlink{classChipChipArray_1_1Arm_a9ddcea9544b6e2a4315b9dd705df8fdd}{servoPos}[\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2a084d4bf780fc2715f33c1f33387c3c76}{GRIP\_RIGHT}];
+00226         \hyperlink{Servo__Position__Shell_8cpp_abd2cd3c2e36d42a2178a6f2fd12af905}{setServoPosition}(\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2a084d4bf780fc2715f33c1f33387c3c76}{GRIP\_RIGHT}, a);
+00227         \hyperlink{classChipChipArray_1_1Arm_a9ddcea9544b6e2a4315b9dd705df8fdd}{servoPos}[\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2a084d4bf780fc2715f33c1f33387c3c76}{GRIP\_RIGHT}] = a;
+00228     \}
+00229 
+\hypertarget{Arm_8hpp_source_l00230}{}\hyperlink{classChipChipArray_1_1Arm_a43daba698f13a522887ad022b78557bb}{00230}     \textcolor{keywordtype}{void} \hyperlink{classChipChipArray_1_1Arm_a43daba698f13a522887ad022b78557bb}{Arm::dWristTilt}(\hyperlink{definitions_8hpp_a74df79fde3c518e55b29ce6360a9c76e}{sint16} a) \{
+00231         a += \hyperlink{classChipChipArray_1_1Arm_a9ddcea9544b6e2a4315b9dd705df8fdd}{servoPos}[\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2abb1046e4dfca68924f935e255b6fae54}{WRIST\_TILT}];
+00232         \hyperlink{Servo__Position__Shell_8cpp_abd2cd3c2e36d42a2178a6f2fd12af905}{setServoPosition}(\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2abb1046e4dfca68924f935e255b6fae54}{WRIST\_TILT}, a);
+00233         \hyperlink{classChipChipArray_1_1Arm_a9ddcea9544b6e2a4315b9dd705df8fdd}{servoPos}[\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2abb1046e4dfca68924f935e255b6fae54}{WRIST\_TILT}] = a;
+00234     \}
+00235 
+\hypertarget{Arm_8hpp_source_l00236}{}\hyperlink{classChipChipArray_1_1Arm_a6bde822b1be63926e21222f36aad67b3}{00236}     \textcolor{keywordtype}{void} \hyperlink{classChipChipArray_1_1Arm_a6bde822b1be63926e21222f36aad67b3}{Arm::dWristTwist}(\hyperlink{definitions_8hpp_a74df79fde3c518e55b29ce6360a9c76e}{sint16} a) \{
+00237         a += \hyperlink{classChipChipArray_1_1Arm_a9ddcea9544b6e2a4315b9dd705df8fdd}{servoPos}[\hyperlink{Arm_8hpp_a02a3a5fbd2fb97badde7f301b7499e05}{WRIST\_TWIST}];
+00238         \hyperlink{Servo__Position__Shell_8cpp_abd2cd3c2e36d42a2178a6f2fd12af905}{setServoPosition}(\hyperlink{Arm_8hpp_a02a3a5fbd2fb97badde7f301b7499e05}{WRIST\_TWIST}, a);
+00239         \hyperlink{classChipChipArray_1_1Arm_a9ddcea9544b6e2a4315b9dd705df8fdd}{servoPos}[\hyperlink{Arm_8hpp_a02a3a5fbd2fb97badde7f301b7499e05}{WRIST\_TWIST}] = a;
+00240     \}
+00241 
+\hypertarget{Arm_8hpp_source_l00242}{}\hyperlink{classChipChipArray_1_1Arm_ac45149e03abfac230b75156bb42e8417}{00242}     \textcolor{keywordtype}{void} \hyperlink{classChipChipArray_1_1Arm_ac45149e03abfac230b75156bb42e8417}{Arm::Elbow}(\hyperlink{definitions_8hpp_adde6aaee8457bee49c2a92621fe22b79}{uint8} a) \{
+00243         \hyperlink{Servo__Position__Shell_8cpp_abd2cd3c2e36d42a2178a6f2fd12af905}{setServoPosition}(\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2a9b1c0cf4eb53d13971a120133cf44232}{ELBOW}, a);
+00244         \hyperlink{classChipChipArray_1_1Arm_a9ddcea9544b6e2a4315b9dd705df8fdd}{servoPos}[\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2a9b1c0cf4eb53d13971a120133cf44232}{ELBOW}] = a;
+00245     \}
+00246 
+\hypertarget{Arm_8hpp_source_l00247}{}\hyperlink{classChipChipArray_1_1Arm_a776eade3a7aaa6effaabad7f37c71031}{00247}     \textcolor{keywordtype}{void} \hyperlink{classChipChipArray_1_1Arm_a776eade3a7aaa6effaabad7f37c71031}{Arm::LeftGripper}(\hyperlink{definitions_8hpp_adde6aaee8457bee49c2a92621fe22b79}{uint8} a) \{
+00248         \hyperlink{Servo__Position__Shell_8cpp_abd2cd3c2e36d42a2178a6f2fd12af905}{setServoPosition}(\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2ab8d73f94c1a766d2715c193e847ec85e}{GRIP\_LEFT}, a);
+00249         \hyperlink{classChipChipArray_1_1Arm_a9ddcea9544b6e2a4315b9dd705df8fdd}{servoPos}[\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2ab8d73f94c1a766d2715c193e847ec85e}{GRIP\_LEFT}] = a;
+00250     \}
+00251 
+\hypertarget{Arm_8hpp_source_l00252}{}\hyperlink{classChipChipArray_1_1Arm_a46a0b0cfb37cb0b663c91cd07e440e10}{00252}     \textcolor{keywordtype}{void} \hyperlink{classChipChipArray_1_1Arm_a46a0b0cfb37cb0b663c91cd07e440e10}{Arm::RightGripper}(\hyperlink{definitions_8hpp_adde6aaee8457bee49c2a92621fe22b79}{uint8} a) \{
+00253         \hyperlink{Servo__Position__Shell_8cpp_abd2cd3c2e36d42a2178a6f2fd12af905}{setServoPosition}(\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2a084d4bf780fc2715f33c1f33387c3c76}{GRIP\_RIGHT}, a);
+00254         \hyperlink{classChipChipArray_1_1Arm_a9ddcea9544b6e2a4315b9dd705df8fdd}{servoPos}[\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2a084d4bf780fc2715f33c1f33387c3c76}{GRIP\_RIGHT}] = a;
+00255     \}
+00256 
+\hypertarget{Arm_8hpp_source_l00257}{}\hyperlink{classChipChipArray_1_1Arm_ad61f7c1e63eb09981b6c304bd924e217}{00257}     \textcolor{keywordtype}{void} \hyperlink{classChipChipArray_1_1Arm_ad61f7c1e63eb09981b6c304bd924e217}{Arm::WristTilt}(\hyperlink{definitions_8hpp_adde6aaee8457bee49c2a92621fe22b79}{uint8} a) \{
+00258         \hyperlink{Servo__Position__Shell_8cpp_abd2cd3c2e36d42a2178a6f2fd12af905}{setServoPosition}(\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2abb1046e4dfca68924f935e255b6fae54}{WRIST\_TILT}, a);
+00259         \hyperlink{classChipChipArray_1_1Arm_a9ddcea9544b6e2a4315b9dd705df8fdd}{servoPos}[\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2abb1046e4dfca68924f935e255b6fae54}{WRIST\_TILT}] = a;
+00260     \}
+00261 
+\hypertarget{Arm_8hpp_source_l00262}{}\hyperlink{classChipChipArray_1_1Arm_a35ec7756840d9d32dcfbb88d831f087f}{00262}     \textcolor{keywordtype}{void} \hyperlink{classChipChipArray_1_1Arm_a35ec7756840d9d32dcfbb88d831f087f}{Arm::WristTwist}(\hyperlink{definitions_8hpp_adde6aaee8457bee49c2a92621fe22b79}{uint8} a) \{
+00263         \hyperlink{Servo__Position__Shell_8cpp_abd2cd3c2e36d42a2178a6f2fd12af905}{setServoPosition}(\hyperlink{Arm_8hpp_a02a3a5fbd2fb97badde7f301b7499e05}{WRIST\_TWIST}, a);
+00264         \hyperlink{classChipChipArray_1_1Arm_a9ddcea9544b6e2a4315b9dd705df8fdd}{servoPos}[\hyperlink{Arm_8hpp_a02a3a5fbd2fb97badde7f301b7499e05}{WRIST\_TWIST}] = a;
+00265     \}
+00266 \}
+00267 
+00268 \textcolor{preprocessor}{#endif}
+\end{DoxyCode}

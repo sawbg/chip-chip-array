@@ -24,6 +24,10 @@ var searchData=
   ['sint8',['sint8',['../definitions_8hpp.html#a1a6408291ee3cfd0760a61ac64084154',1,'definitions.hpp']]],
   ['size',['size',['../classChipChipArray_1_1Block.html#aebd356d7fcfe7ff11db8195e6d7f8e42',1,'ChipChipArray::Block::size()'],['../definitions_8hpp.html#a9809446fd16a744b6df9808293f14153',1,'Size():&#160;definitions.hpp']]],
   ['snap',['Snap',['../classChipChipArray_1_1PiCamera.html#a58fb0de02570dce9a9cb60a1a04fb84f',1,'ChipChipArray::PiCamera']]],
+  ['startloadingthread',['startloadingthread',['../main_8cpp.html#a0275a007a43d3231e63e3a706cd8f38a',1,'main.cpp']]],
+  ['startroboth',['startroboth',['../main_8cpp.html#ad9b6ac21900fa682d910b2c72a6d1a7f',1,'main.cpp']]],
+  ['startstatus',['startstatus',['../main_8cpp.html#a86ef28eff7b2064f6e9f34bb8371d523',1,'main.cpp']]],
   ['status',['Status',['../classChipChipArray_1_1Log.html#a66575b6e94c6112e4cefa5736cb996e0',1,'ChipChipArray::Log']]],
-  ['std',['std',['../namespacestd.html',1,'']]]
+  ['std',['std',['../namespacestd.html',1,'']]],
+  ['stoproboth',['stoproboth',['../main_8cpp.html#ac941dfef463fc77cd96e79758d7d8a57',1,'main.cpp']]]
 ];

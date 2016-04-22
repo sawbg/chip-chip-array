@@ -1,6 +1,11 @@
 \hypertarget{img_8cpp}{\section{src/img.cpp File Reference}
 \label{img_8cpp}\index{src/img.\+cpp@{src/img.\+cpp}}
 }
+
+
+Contains a program to display the current camera image.  
+
+
 {\ttfamily \#include $<$iostream$>$}\\*
 {\ttfamily \#include $<$opencv2/highgui/highgui.\+hpp$>$}\\*
 {\ttfamily \#include $<$opencv2/imgproc/imgproc.\+hpp$>$}\\*
@@ -22,6 +27,18 @@ int \hyperlink{img_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
 \end{DoxyCompactItemize}
 
 
+\subsection{Detailed Description}
+Contains a program to display the current camera image. 
+
+\begin{DoxyAuthor}{Author}
+Samuel Andrew Wisner, \href{mailto:awisner94@gmail.com}{\tt awisner94@gmail.\+com} 
+\end{DoxyAuthor}
+
+
+Definition in file \hyperlink{img_8cpp_source}{img.\+cpp}.
+
+
+
 \subsection{Function Documentation}
 \hypertarget{img_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{\index{img.\+cpp@{img.\+cpp}!main@{main}}
 \index{main@{main}!img.\+cpp@{img.\+cpp}}
@@ -32,8 +49,24 @@ int \hyperlink{img_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
 )}}\label{img_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
 This program displays the current camera image. 
 
-Definition at line 21 of file img.\+cpp.
+Definition at line \hyperlink{img_8cpp_source_l00022}{22} of file \hyperlink{img_8cpp_source}{img.\+cpp}.
 
+
+\begin{DoxyCode}
+00022            \{
+00023     \textcolor{keywordtype}{string} window = \textcolor{stringliteral}{"Current"};
+00024     \hyperlink{classChipChipArray_1_1PiCamera}{PiCamera} cam;
+00025     
+00026     namedWindow(window, CV\_WINDOW\_NORMAL | CV\_WINDOW\_KEEPRATIO);
+00027 
+00028     \textcolor{keywordflow}{while}(\textcolor{keyword}{true}) \{
+00029         Mat image;
+00030         transpose(cam.\hyperlink{classChipChipArray_1_1PiCamera_a58fb0de02570dce9a9cb60a1a04fb84f}{Snap}(), image);
+00031         imshow(window, image);
+00032         waitKey(10);  \textcolor{comment}{// has to be here :(}
+00033     \}
+00034 \}
+\end{DoxyCode}
 
 
 Here is the call graph for this function\+:

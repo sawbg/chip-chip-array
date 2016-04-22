@@ -1,0 +1,162 @@
+\hypertarget{Adafruit__PWMServoDriver_8cpp_source}{\section{Adafruit\+\_\+\+P\+W\+M\+Servo\+Driver.\+cpp}
+\label{Adafruit__PWMServoDriver_8cpp_source}\index{src/\+Adafruit\+\_\+\+P\+W\+M\+Servo\+Driver.\+cpp@{src/\+Adafruit\+\_\+\+P\+W\+M\+Servo\+Driver.\+cpp}}
+}
+
+\begin{DoxyCode}
+00001 
+00009 \textcolor{comment}{/* File: Adafruit\_PWMServoDriver.cpp}
+00010 \textcolor{comment}{ * Credit to Limor Fried/Ladyada for PWM servo driver code. }
+00011 \textcolor{comment}{ * Editted by: Nickolas Neely for ChipChipArray Raspberry Pi }
+00012 \textcolor{comment}{ */}
+00013 
+00014 \textcolor{comment}{/*************************************************** }
+00015 \textcolor{comment}{  This is a library for our Adafruit 16-channel PWM & Servo driver}
+00016 \textcolor{comment}{}
+00017 \textcolor{comment}{  Pick one up today in the adafruit shop!}
+00018 \textcolor{comment}{  ------> http://www.adafruit.com/products/815}
+00019 \textcolor{comment}{}
+00020 \textcolor{comment}{  These displays use I2C to communicate, 2 pins are required to  }
+00021 \textcolor{comment}{  interface. For Arduino UNOs, thats SCL -> Analog 5, SDA -> Analog 4}
+00022 \textcolor{comment}{}
+00023 \textcolor{comment}{  Adafruit invests time and resources providing this open source code, }
+00024 \textcolor{comment}{  please support Adafruit and open-source hardware by purchasing }
+00025 \textcolor{comment}{  products from Adafruit!}
+00026 \textcolor{comment}{}
+00027 \textcolor{comment}{  Written by Limor Fried/Ladyada for Adafruit Industries.  }
+00028 \textcolor{comment}{  BSD license, all text above must be included in any redistribution}
+00029 \textcolor{comment}{ ****************************************************/}
+00030 
+00031 \textcolor{preprocessor}{#include "\hyperlink{Adafruit__PWMServoDriver_8h}{Adafruit\_PWMServoDriver.h}"}
+00032 
+00033 
+00034 \textcolor{comment}{// Set to true to print some debug messages, or false to disable them.}
+\hypertarget{Adafruit__PWMServoDriver_8cpp_source_l00035}{}\hyperlink{Adafruit__PWMServoDriver_8cpp_a818989cbf7f37dae193fbb28b2d3976a}{00035} \textcolor{preprocessor}{#define ENABLE\_DEBUG\_OUTPUT false}
+00036 
+\hypertarget{Adafruit__PWMServoDriver_8cpp_source_l00037}{}\hyperlink{classAdafruit__PWMServoDriver_a6a949db60836febbc61adef4cc5429ed}{00037} \hyperlink{classAdafruit__PWMServoDriver_a6a949db60836febbc61adef4cc5429ed}{Adafruit\_PWMServoDriver::Adafruit\_PWMServoDriver}(
+      \hyperlink{Adafruit__PWMServoDriver_8h_ab077fa1127453be2bd9d4c3c8a768fa7}{uint8\_t} addr) \{
+00038     \_i2caddr = addr;
+00039     \_i2cFD = -1;
+00040 \}
+00041 
+\hypertarget{Adafruit__PWMServoDriver_8cpp_source_l00042}{}\hyperlink{classAdafruit__PWMServoDriver_aef401eaad3c34222ac916eb7bd936bc2}{00042} \textcolor{keywordtype}{void} \hyperlink{classAdafruit__PWMServoDriver_aef401eaad3c34222ac916eb7bd936bc2}{Adafruit\_PWMServoDriver::begin}(\textcolor{keywordtype}{void}) \{
+00043     \_i2cFD = wiringPiI2CSetup(\_i2caddr);
+00044     \textcolor{keywordflow}{if} (\_i2cFD < 0) \{
+00045         \textcolor{comment}{//FIXME: error occurred}
+00046     \}
+00047     \hyperlink{classAdafruit__PWMServoDriver_ac976f52233a75a4bd0eb6f2ce9b82b7f}{reset}();
+00048 \}
+00049 
+\hypertarget{Adafruit__PWMServoDriver_8cpp_source_l00050}{}\hyperlink{classAdafruit__PWMServoDriver_ac976f52233a75a4bd0eb6f2ce9b82b7f}{00050} \textcolor{keywordtype}{void} \hyperlink{classAdafruit__PWMServoDriver_ac976f52233a75a4bd0eb6f2ce9b82b7f}{Adafruit\_PWMServoDriver::reset}(\textcolor{keywordtype}{void}) \{
+00051     write8(\hyperlink{Adafruit__PWMServoDriver_8h_aec642e3f25e7f83072d68acb14ae4e74}{PCA9685\_MODE1}, 0x0);
+00052 \}
+00053 
+\hypertarget{Adafruit__PWMServoDriver_8cpp_source_l00054}{}\hyperlink{classAdafruit__PWMServoDriver_a0ef6f1e3c81aebbd1d1da1bb12f3ed5c}{00054} \textcolor{keywordtype}{void} \hyperlink{classAdafruit__PWMServoDriver_a0ef6f1e3c81aebbd1d1da1bb12f3ed5c}{Adafruit\_PWMServoDriver::setPWMFreq}(\textcolor{keywordtype}{float} freq) \{
+00055     \textcolor{comment}{//Serial.print("Attempting to set freq ");}
+00056     \textcolor{comment}{//Serial.println(freq);}
+00057     freq *= 0.9; \textcolor{comment}{// Correct for overshoot in the frequency setting (see issue #11).}
+00058     \textcolor{keywordtype}{float} prescaleval = 25000000;
+00059     prescaleval /= 4096;
+00060     prescaleval /= freq;
+00061     prescaleval -= 1;
+00062     \textcolor{keywordflow}{if} (\hyperlink{Adafruit__PWMServoDriver_8cpp_a818989cbf7f37dae193fbb28b2d3976a}{ENABLE\_DEBUG\_OUTPUT}) \{
+00063         cout << \textcolor{stringliteral}{"Estimated pre-scale: "} << prescaleval << endl;
+00064     \}
+00065     \hyperlink{Adafruit__PWMServoDriver_8h_ab077fa1127453be2bd9d4c3c8a768fa7}{uint8\_t} prescale = floor(prescaleval + 0.5);
+00066     \textcolor{keywordflow}{if} (\hyperlink{Adafruit__PWMServoDriver_8cpp_a818989cbf7f37dae193fbb28b2d3976a}{ENABLE\_DEBUG\_OUTPUT}) \{
+00067         cout << \textcolor{stringliteral}{"Final pre-scale: "} << prescale << endl;
+00068     \}
+00069 
+00070     \hyperlink{Adafruit__PWMServoDriver_8h_ab077fa1127453be2bd9d4c3c8a768fa7}{uint8\_t} oldmode = read8(\hyperlink{Adafruit__PWMServoDriver_8h_aec642e3f25e7f83072d68acb14ae4e74}{PCA9685\_MODE1});
+00071     \hyperlink{Adafruit__PWMServoDriver_8h_ab077fa1127453be2bd9d4c3c8a768fa7}{uint8\_t} newmode = (oldmode & 0x7F) | 0x10; \textcolor{comment}{// sleep}
+00072     write8(\hyperlink{Adafruit__PWMServoDriver_8h_aec642e3f25e7f83072d68acb14ae4e74}{PCA9685\_MODE1}, newmode); \textcolor{comment}{// go to sleep}
+00073     write8(\hyperlink{Adafruit__PWMServoDriver_8h_a7175106bbec978d9acc85dc7485235a3}{PCA9685\_PRESCALE}, prescale); \textcolor{comment}{// set the prescaler}
+00074     write8(\hyperlink{Adafruit__PWMServoDriver_8h_aec642e3f25e7f83072d68acb14ae4e74}{PCA9685\_MODE1}, oldmode);
+00075     usleep(5000);
+00076     write8(\hyperlink{Adafruit__PWMServoDriver_8h_aec642e3f25e7f83072d68acb14ae4e74}{PCA9685\_MODE1}, oldmode | 0xa1); \textcolor{comment}{//  This sets the MODE1 register to turn on auto
+       increment.}
+00077     \textcolor{comment}{// This is why the beginTransmission below was not working.}
+00078     \textcolor{comment}{//  Serial.print("Mode now 0x"); Serial.println(read8(PCA9685\_MODE1), HEX);}
+00079 \}
+00080 
+\hypertarget{Adafruit__PWMServoDriver_8cpp_source_l00081}{}\hyperlink{classAdafruit__PWMServoDriver_a724a7fc39c6fba34478ecc0eea038bd3}{00081} \textcolor{keywordtype}{void} \hyperlink{classAdafruit__PWMServoDriver_a724a7fc39c6fba34478ecc0eea038bd3}{Adafruit\_PWMServoDriver::setPWM}(\hyperlink{Adafruit__PWMServoDriver_8h_ab077fa1127453be2bd9d4c3c8a768fa7}{uint8\_t} num, 
+      \hyperlink{Adafruit__PWMServoDriver_8h_a395b3b2bf5cb4674ab41b6bda68c15bb}{uint16\_t} on, \hyperlink{Adafruit__PWMServoDriver_8h_a395b3b2bf5cb4674ab41b6bda68c15bb}{uint16\_t} off) \{
+00082     \textcolor{comment}{//Serial.print("Setting PWM "); Serial.print(num); Serial.print(": "); Serial.print(on);
+       Serial.print("->"); Serial.println(off);}
+00083 
+00084     \textcolor{keywordtype}{int} result = wiringPiI2CWriteReg16(\_i2cFD, \hyperlink{Adafruit__PWMServoDriver_8h_a62f7dbcbb1fcf1084804f19a5b42248f}{LED0\_ON\_L} + 4 * num, on);
+00085     \textcolor{keywordflow}{if} (result < 0) \{
+00086         \textcolor{keywordtype}{string} s(strerror(errno));
+00087         cout << \textcolor{stringliteral}{"setPWM error: "} << s.c\_str() << endl;
+00088     \}
+00089 \textcolor{comment}{//    result = wiringPiI2CWrite(\_i2cFD, on);}
+00090 \textcolor{comment}{//    if (result < 0) \{}
+00091 \textcolor{comment}{//        string s(strerror(errno));}
+00092 \textcolor{comment}{//        cout << "setPWM error: " << s.c\_str() << endl;}
+00093 \textcolor{comment}{//    \}}
+00094 \textcolor{comment}{//    result = wiringPiI2CWrite(\_i2cFD, on >> 8);}
+00095 \textcolor{comment}{//    if (result < 0) \{}
+00096 \textcolor{comment}{//        string s(strerror(errno));}
+00097 \textcolor{comment}{//        cout << "setPWM error: " << s.c\_str() << endl;}
+00098 \textcolor{comment}{//    \}}
+00099     result = wiringPiI2CWriteReg16(\_i2cFD, \hyperlink{Adafruit__PWMServoDriver_8h_a00e3f4b43121817be365b2f22e8bad84}{LED0\_OFF\_L} + 4 * num, off);
+00100 \textcolor{comment}{//    result = wiringPiI2CWrite(\_i2cFD, off);}
+00101     \textcolor{keywordflow}{if} (result < 0) \{
+00102         \textcolor{keywordtype}{string} s(strerror(errno));
+00103         cout << \textcolor{stringliteral}{"setPWM error: "} << s.c\_str() << endl;
+00104     \}
+00105 \textcolor{comment}{//    result = wiringPiI2CWrite(\_i2cFD, off >> 8);}
+00106 \textcolor{comment}{//    if (result < 0) \{}
+00107 \textcolor{comment}{//        string s(strerror(errno));}
+00108 \textcolor{comment}{//        cout << "setPWM error: " << s.c\_str() << endl;}
+00109 \textcolor{comment}{//    \}}
+00110 \}
+00111 
+00112 \textcolor{comment}{// Sets pin without having to deal with on/off tick placement and properly handles}
+00113 \textcolor{comment}{// a zero value as completely off.  Optional invert parameter supports inverting}
+00114 \textcolor{comment}{// the pulse for sinking to ground.  Val should be a value from 0 to 4095 inclusive.}
+00115 
+\hypertarget{Adafruit__PWMServoDriver_8cpp_source_l00116}{}\hyperlink{classAdafruit__PWMServoDriver_a1246cd50849fe0f068cc5d474e06ae96}{00116} \textcolor{keywordtype}{void} \hyperlink{classAdafruit__PWMServoDriver_a1246cd50849fe0f068cc5d474e06ae96}{Adafruit\_PWMServoDriver::setPin}(\hyperlink{Adafruit__PWMServoDriver_8h_ab077fa1127453be2bd9d4c3c8a768fa7}{uint8\_t} num, 
+      \hyperlink{Adafruit__PWMServoDriver_8h_a395b3b2bf5cb4674ab41b6bda68c15bb}{uint16\_t} val, \textcolor{keywordtype}{bool} invert) \{
+00117     \textcolor{comment}{// Clamp value between 0 and 4095 inclusive.}
+00118     val = min(val, (\hyperlink{Adafruit__PWMServoDriver_8h_a395b3b2bf5cb4674ab41b6bda68c15bb}{uint16\_t})4095);
+00119     \textcolor{keywordflow}{if} (invert) \{
+00120         \textcolor{keywordflow}{if} (val == 0) \{
+00121             \textcolor{comment}{// Special value for signal fully on.}
+00122             \hyperlink{classAdafruit__PWMServoDriver_a724a7fc39c6fba34478ecc0eea038bd3}{setPWM}(num, 4096, 0);
+00123         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (val == 4095) \{
+00124             \textcolor{comment}{// Special value for signal fully off.}
+00125             \hyperlink{classAdafruit__PWMServoDriver_a724a7fc39c6fba34478ecc0eea038bd3}{setPWM}(num, 0, 4096);
+00126         \} \textcolor{keywordflow}{else} \{
+00127             \hyperlink{classAdafruit__PWMServoDriver_a724a7fc39c6fba34478ecc0eea038bd3}{setPWM}(num, 0, 4095 - val);
+00128         \}
+00129     \} \textcolor{keywordflow}{else} \{
+00130         \textcolor{keywordflow}{if} (val == 4095) \{
+00131             \textcolor{comment}{// Special value for signal fully on.}
+00132             \hyperlink{classAdafruit__PWMServoDriver_a724a7fc39c6fba34478ecc0eea038bd3}{setPWM}(num, 4096, 0);
+00133         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (val == 0) \{
+00134             \textcolor{comment}{// Special value for signal fully off.}
+00135             \hyperlink{classAdafruit__PWMServoDriver_a724a7fc39c6fba34478ecc0eea038bd3}{setPWM}(num, 0, 4096);
+00136         \} \textcolor{keywordflow}{else} \{
+00137             \hyperlink{classAdafruit__PWMServoDriver_a724a7fc39c6fba34478ecc0eea038bd3}{setPWM}(num, 0, val);
+00138         \}
+00139     \}
+00140 \}
+00141 
+00142 \hyperlink{Adafruit__PWMServoDriver_8h_ab077fa1127453be2bd9d4c3c8a768fa7}{uint8\_t} Adafruit\_PWMServoDriver::read8(\hyperlink{Adafruit__PWMServoDriver_8h_ab077fa1127453be2bd9d4c3c8a768fa7}{uint8\_t} addr) \{
+00143     \textcolor{keywordtype}{int} result = wiringPiI2CReadReg8(\_i2cFD, addr);
+00144     \textcolor{keywordflow}{if} (result < 0) \{
+00145         \textcolor{keywordtype}{string} s(strerror(errno));
+00146         cout << \textcolor{stringliteral}{"Error read8: "} << std::dec << (\textcolor{keywordtype}{unsigned} int)addr << \textcolor{stringliteral}{" -> "} << s.c\_str() << endl;
+00147     \}
+00148     \textcolor{keywordflow}{return} result;
+00149 \}
+00150 
+00151 \textcolor{keywordtype}{void} Adafruit\_PWMServoDriver::write8(\hyperlink{Adafruit__PWMServoDriver_8h_ab077fa1127453be2bd9d4c3c8a768fa7}{uint8\_t} addr, \hyperlink{Adafruit__PWMServoDriver_8h_ab077fa1127453be2bd9d4c3c8a768fa7}{uint8\_t} d) \{
+00152     \textcolor{keywordtype}{int} result = wiringPiI2CWriteReg8(\_i2cFD, addr, d);
+00153     \textcolor{keywordflow}{if} (result < 0) \{
+00154         \textcolor{keywordtype}{string} s(strerror(errno));
+00155         cout << \textcolor{stringliteral}{"Error write8: "} << std::dec << (\textcolor{keywordtype}{unsigned} int)addr << \textcolor{stringliteral}{" -> "} << (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int})d << \textcolor{stringliteral}{" -> "} <
+      < s.c\_str() << endl;
+00156     \}
+00157 \}
+\end{DoxyCode}

@@ -1,0 +1,45 @@
+\hypertarget{qr__test_8cpp_source}{\section{qr\+\_\+test.\+cpp}
+\label{qr__test_8cpp_source}\index{src/qr\+\_\+test.\+cpp@{src/qr\+\_\+test.\+cpp}}
+}
+
+\begin{DoxyCode}
+00001 
+00007 \textcolor{preprocessor}{#include <iostream>}
+00008 \textcolor{preprocessor}{#include <opencv2/core/core.hpp>}
+00009 \textcolor{preprocessor}{#include <opencv2/highgui/highgui.hpp>}
+00010 \textcolor{preprocessor}{#include <string>}
+00011 
+00012 \textcolor{preprocessor}{#include "\hyperlink{definitions_8hpp}{definitions.hpp}"}
+00013 \textcolor{preprocessor}{#include "\hyperlink{PiCamera_8hpp}{PiCamera.hpp}"}
+00014 \textcolor{preprocessor}{#include "\hyperlink{ScanQR_8hpp}{ScanQR.hpp}"}
+00015 
+00016 \textcolor{keyword}{using namespace }\hyperlink{namespaceChipChipArray}{ChipChipArray};
+00017 
+\hypertarget{qr__test_8cpp_source_l00022}{}\hyperlink{qr__test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{00022} \textcolor{keywordtype}{int} \hyperlink{namespaceChipChipArray_a7fc3d1edffca11531cd09fdab7c8b88d}{main}() \{
+00023     \textcolor{keywordflow}{while}(\textcolor{keyword}{true}) \{
+00024         \hyperlink{definitions_8hpp_abc05a0f46084a3477cf5d5c939ff1436}{Color} color = \hyperlink{namespaceChipChipArray_a6c7465049b5d408e1a238b6d8ffa887d}{ScanQR}();
+00025         std::string colstr;
+00026 
+00027         \textcolor{keywordflow}{switch}(color) \{
+00028             \textcolor{keywordflow}{case} \hyperlink{definitions_8hpp_abc05a0f46084a3477cf5d5c939ff1436aee38e4d5dd68c4e440825018d549cb47}{Color::Red}:
+00029                 colstr = \textcolor{stringliteral}{"RED"};
+00030                 \textcolor{keywordflow}{break};
+00031 
+00032             \textcolor{keywordflow}{case} \hyperlink{definitions_8hpp_abc05a0f46084a3477cf5d5c939ff1436a51e6cd92b6c45f9affdc158ecca2b8b8}{Color::Yellow}:
+00033                 colstr = \textcolor{stringliteral}{"YELLOW"};
+00034                 \textcolor{keywordflow}{break};
+00035 
+00036             \textcolor{keywordflow}{case} \hyperlink{definitions_8hpp_abc05a0f46084a3477cf5d5c939ff1436ad382816a3cbeed082c9e216e7392eed1}{Color::Green}:
+00037                 colstr = \textcolor{stringliteral}{"GREEN"};
+00038                 \textcolor{keywordflow}{break};
+00039 
+00040             \textcolor{keywordflow}{case} \hyperlink{definitions_8hpp_abc05a0f46084a3477cf5d5c939ff1436a9594eec95be70e7b1710f730fdda33d9}{Color::Blue}:
+00041                 colstr = \textcolor{stringliteral}{"BLUE"};
+00042                 \textcolor{keywordflow}{break};
+00043 
+00044         \}
+00045 
+00046         std::cout << colstr << std::endl;
+00047     \}
+00048 \}
+\end{DoxyCode}

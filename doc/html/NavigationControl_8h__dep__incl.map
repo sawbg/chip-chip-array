@@ -1,4 +1,4 @@
 <map id="src/NavigationControl.h" name="src/NavigationControl.h">
-<area shape="rect" id="node2" href="$main_8cpp.html" title="src/main.cpp" alt="" coords="5,80,103,107"/>
-<area shape="rect" id="node3" href="$NavigationControl_8cpp.html" title="src/NavigationControl.cpp" alt="" coords="127,80,301,107"/>
+<area shape="rect" id="node2" href="$main_8cpp.html" title="Contains the main() function to the whole project. " alt="" coords="5,80,103,107"/>
+<area shape="rect" id="node3" href="$NavigationControl_8cpp.html" title="Contains the navigation control function definitions. " alt="" coords="127,80,301,107"/>
 </map>

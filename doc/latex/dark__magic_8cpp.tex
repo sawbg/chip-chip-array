@@ -1,6 +1,11 @@
 \hypertarget{dark__magic_8cpp}{\section{src/dark\+\_\+magic.cpp File Reference}
 \label{dark__magic_8cpp}\index{src/dark\+\_\+magic.\+cpp@{src/dark\+\_\+magic.\+cpp}}
 }
+
+
+Contains test code for arm.  
+
+
 {\ttfamily \#include $<$cstdlib$>$}\\*
 {\ttfamily \#include $<$iostream$>$}\\*
 {\ttfamily \#include $<$string$>$}\\*
@@ -20,6 +25,18 @@ int \hyperlink{dark__magic_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int ar
 \end{DoxyCompactItemize}
 
 
+\subsection{Detailed Description}
+Contains test code for arm. 
+
+\begin{DoxyAuthor}{Author}
+Samuel Andrew Wisner, \href{mailto:awisner94@gmail.com}{\tt awisner94@gmail.\+com} 
+\end{DoxyAuthor}
+
+
+Definition in file \hyperlink{dark__magic_8cpp_source}{dark\+\_\+magic.\+cpp}.
+
+
+
 \subsection{Function Documentation}
 \hypertarget{dark__magic_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{\index{dark\+\_\+magic.\+cpp@{dark\+\_\+magic.\+cpp}!main@{main}}
 \index{main@{main}!dark\+\_\+magic.\+cpp@{dark\+\_\+magic.\+cpp}}
@@ -29,10 +46,24 @@ int \hyperlink{dark__magic_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int ar
 \item[{char $\ast$$\ast$}]{argv}
 \end{DoxyParamCaption}
 )}}\label{dark__magic_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}
+Controls the positions of the arm servos. Will likely work for other servos on the robot, as well.
+
+Usage\+: arm \mbox{[}S\+E\+R\+V\+O N\+U\+M\+B\+E\+R\mbox{]} \mbox{[}A\+N\+G\+U\+L\+A\+R P\+O\+S\+I\+T\+I\+O\+N D\+E\+G\+R\+E\+E\+S\mbox{]} 
+
+Definition at line \hyperlink{dark__magic_8cpp_source_l00021}{21} of file \hyperlink{dark__magic_8cpp_source}{dark\+\_\+magic.\+cpp}.
 
 
-Definition at line 14 of file dark\+\_\+magic.\+cpp.
-
+\begin{DoxyCode}
+00021                                 \{
+00022     \hyperlink{Servo__Position__Shell_8cpp_a4fc01d736fe50cf5b977f755b675f11d}{setup}();
+00023     
+00024     \textcolor{keywordflow}{if}(argc != 3) \{
+00025         cout << \textcolor{stringliteral}{"Usage: arm [SERVO] [VALUE]"} << endl;
+00026     \} \textcolor{keywordflow}{else} \{
+00027         \hyperlink{Servo__Position__Shell_8cpp_abd2cd3c2e36d42a2178a6f2fd12af905}{setServoPosition}((\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2}{Servo})atoi(argv[1]), atoi(argv[2]));
+00028     \}
+00029 \}
+\end{DoxyCode}
 
 
 Here is the call graph for this function\+:

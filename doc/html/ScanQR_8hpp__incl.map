@@ -1,5 +1,5 @@
 <map id="src/ScanQR.hpp" name="src/ScanQR.hpp">
-<area shape="rect" id="node6" href="$definitions_8hpp.html" title="definitions.hpp" alt="" coords="666,155,773,181"/>
-<area shape="rect" id="node8" href="$Log_8hpp.html" title="Log.hpp" alt="" coords="260,80,328,107"/>
-<area shape="rect" id="node13" href="$PiCamera_8hpp.html" title="PiCamera.hpp" alt="" coords="789,80,895,107"/>
+<area shape="rect" id="node6" href="$definitions_8hpp.html" title="Contains definitions for architecture&#45;independant numeric variables, enumerations and enumerated clas..." alt="" coords="666,155,773,181"/>
+<area shape="rect" id="node8" href="$Log_8hpp.html" title="Contains Log class. " alt="" coords="260,80,328,107"/>
+<area shape="rect" id="node13" href="$PiCamera_8hpp.html" title="Contains PiCamera class. " alt="" coords="789,80,895,107"/>
 </map>

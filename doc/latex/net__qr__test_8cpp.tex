@@ -1,6 +1,11 @@
 \hypertarget{net__qr__test_8cpp}{\section{src/net\+\_\+qr\+\_\+test.cpp File Reference}
 \label{net__qr__test_8cpp}\index{src/net\+\_\+qr\+\_\+test.\+cpp@{src/net\+\_\+qr\+\_\+test.\+cpp}}
 }
+
+
+Contains test program for reading Q\+R codes.  
+
+
 {\ttfamily \#include $<$opencv2/highgui/highgui.\+hpp$>$}\\*
 {\ttfamily \#include $<$opencv2/imgproc/imgproc.\+hpp$>$}\\*
 {\ttfamily \#include $<$zbar.\+h$>$}\\*
@@ -21,6 +26,20 @@ int \hyperlink{net__qr__test_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main} (int 
 \end{DoxyCompactItemize}
 
 
+\subsection{Detailed Description}
+Contains test program for reading Q\+R codes. 
+
+\begin{DoxyAuthor}{Author}
+Michael Young 
+
+Samuel Andrew Wisner, \href{mailto:awisner94@gmail.com}{\tt awisner94@gmail.\+com} 
+\end{DoxyAuthor}
+
+
+Definition in file \hyperlink{net__qr__test_8cpp_source}{net\+\_\+qr\+\_\+test.\+cpp}.
+
+
+
 \subsection{Function Documentation}
 \hypertarget{net__qr__test_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{\index{net\+\_\+qr\+\_\+test.\+cpp@{net\+\_\+qr\+\_\+test.\+cpp}!main@{main}}
 \index{main@{main}!net\+\_\+qr\+\_\+test.\+cpp@{net\+\_\+qr\+\_\+test.\+cpp}}
@@ -32,8 +51,62 @@ int \hyperlink{net__qr__test_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main} (int 
 )}}\label{net__qr__test_8cpp_a0ddf1224851353fc92bfbff6f499fa97}
 This is a (modified) test program written by Michael Young (\href{https://github.com/ayoungprogrammer/WebcamCodeScanner}{\tt https\+://github.\+com/ayoungprogrammer/\+Webcam\+Code\+Scanner}). It was modified to work with the Raspicam. 
 
-Definition at line 24 of file net\+\_\+qr\+\_\+test.\+cpp.
+Definition at line \hyperlink{net__qr__test_8cpp_source_l00025}{25} of file \hyperlink{net__qr__test_8cpp_source}{net\+\_\+qr\+\_\+test.\+cpp}.
 
+
+\begin{DoxyCode}
+00026 \{
+00027     \hyperlink{classChipChipArray_1_1PiCamera}{PiCamera} cam; \textcolor{comment}{// open the video camera no. 0}
+00028     ImageScanner scanner;  
+00029     scanner.set\_config(ZBAR\_NONE, ZBAR\_CFG\_ENABLE, 1);  
+00030 
+00031     namedWindow(\textcolor{stringliteral}{"MyVideo"},CV\_WINDOW\_AUTOSIZE); \textcolor{comment}{//create a window called "MyVideo"}
+00032 
+00033     \textcolor{keywordflow}{while} (1)
+00034     \{
+00035         Mat frame = cam.\hyperlink{classChipChipArray_1_1PiCamera_a58fb0de02570dce9a9cb60a1a04fb84f}{Snap}();
+00036         Mat grey;
+00037         cvtColor(frame,grey,CV\_BGR2GRAY);
+00038 
+00039         \textcolor{keywordtype}{int} width = frame.cols;  
+00040         \textcolor{keywordtype}{int} height = frame.rows;  
+00041         uchar *raw = (uchar *)grey.data;  
+00042         \textcolor{comment}{// wrap image data  }
+00043         zbar::Image image(width, height, \textcolor{stringliteral}{"Y800"}, raw, width * height);  
+00044         \textcolor{comment}{// scan the image for barcodes  }
+00045         \textcolor{keywordtype}{int} n = scanner.scan(image);  
+00046         \textcolor{comment}{// extract results  }
+00047         \textcolor{keywordflow}{for}(Image::SymbolIterator symbol = image.symbol\_begin();  
+00048                 symbol != image.symbol\_end();  
+00049                 ++symbol) \{  
+00050             vector<Point> vp;  
+00051             \textcolor{comment}{// do something useful with results  }
+00052             cout << \textcolor{stringliteral}{"decoded "} << symbol->get\_type\_name()  << \textcolor{stringliteral}{" symbol \(\backslash\)""} << symbol->get\_data() << \textcolor{charliteral}{'"'} <<\textcolor{stringliteral}{"
+       "}<< endl;  
+00053             \textcolor{keywordtype}{int} n = symbol->get\_location\_size();  
+00054             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<n;i++)\{  
+00055                 vp.push\_back(Point(symbol->get\_location\_x(i),symbol->get\_location\_y(i))); 
+00056             \}  
+00057             RotatedRect r = minAreaRect(vp);  
+00058             Point2f pts[4];  
+00059             r.points(pts);  
+00060             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<4;i++)\{  
+00061                 line(frame,pts[i],pts[(i+1)%4],Scalar(255,0,0),3);  
+00062             \}  
+00063         \}  
+00064 
+00065         imshow(\textcolor{stringliteral}{"MyVideo"}, frame); \textcolor{comment}{//show the frame in "MyVideo" window}
+00066 
+00067         \textcolor{keywordflow}{if} (waitKey(30) == 27) \textcolor{comment}{//wait for 'esc' key press for 30ms. If 'esc' key is pressed, break loop}
+00068         \{
+00069             cout << \textcolor{stringliteral}{"esc key is pressed by user"} << endl;
+00070             \textcolor{keywordflow}{break}; 
+00071         \}
+00072     \}
+00073     \textcolor{keywordflow}{return} 0;
+00074 
+00075 \}
+\end{DoxyCode}
 
 
 Here is the call graph for this function\+:

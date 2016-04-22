@@ -1,0 +1,454 @@
+.TH "src/main.cpp" 3 "Fri Apr 22 2016" "The Automatic Vasospasm Detection Application" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/main.cpp \- 
+.PP
+Contains the \fBmain()\fP function to the whole project\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <cstdlib>\fP
+.br
+\fC#include <unistd\&.h>\fP
+.br
+\fC#include 'Servo_Position_Shell\&.h'\fP
+.br
+\fC#include 'Adafruit_PWMServoDriver\&.h'\fP
+.br
+\fC#include <iostream>\fP
+.br
+\fC#include 'NavigationControl\&.h'\fP
+.br
+\fC#include 'Initialization\&.cpp'\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBREADTHINKDO\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBmain\fP ()"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "int \fBstartstatus\fP"
+.br
+.ti -1c
+.RI "int \fBstartroboth\fP"
+.br
+.ti -1c
+.RI "int \fBstoproboth\fP"
+.br
+.ti -1c
+.RI "int \fBtrack\fP"
+.br
+.ti -1c
+.RI "int \fBnavigationbusy\fP"
+.br
+.ti -1c
+.RI "int \fBcleartonavigate\fP"
+.br
+.ti -1c
+.RI "int \fBcleartoload\fP"
+.br
+.ti -1c
+.RI "int \fBcleartounload\fP"
+.br
+.ti -1c
+.RI "int \fBrobotismoving\fP"
+.br
+.ti -1c
+.RI "int \fBwhereistherobot\fP"
+.br
+.ti -1c
+.RI "int \fBloadcounter\fP"
+.br
+.ti -1c
+.RI "int \fBunloadcounter\fP"
+.br
+.ti -1c
+.RI "int \fBloadtheblocks\fP"
+.br
+.ti -1c
+.RI "int \fBunloadtheblocks\fP"
+.br
+.ti -1c
+.RI "int \fBgiveitasec\fP"
+.br
+.ti -1c
+.RI "int \fBstartloadingthread\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Contains the \fBmain()\fP function to the whole project\&. 
+
+
+.PP
+\fBAuthor:\fP
+.RS 4
+Nickolas Neely 
+.RE
+.PP
+\fBDate:\fP
+.RS 4
+1\&. February 2016, 8:20 AM 
+.RE
+.PP
+
+.PP
+Definition in file \fBmain\&.cpp\fP\&.
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define READTHINKDO"
+
+.PP
+Definition at line 27 of file main\&.cpp\&.
+.SH "Function Documentation"
+.PP 
+.SS "int main ()"
+The \fBmain()\fP project program function\&. 
+.PP
+Definition at line 51 of file main\&.cpp\&.
+.PP
+.nf
+51            {
+52 
+53 initialization();
+54 #ifdef READTHINKDO
+55 /*Track selection initialization will allow track select until start condition is true*/
+56 while(1){
+57     while(track == 1 && startroboth == 0){
+58         startstatus = digitalRead(0);
+59         track = digitalRead(1);
+60         cout<<endl<<"I am in left track mode";
+61         if(startstatus == 1){
+62             startroboth = 1;
+63         }
+64         
+65         /* RUN MODE FOR LEFT TRACK GAME START!*/
+66         while(startroboth == 1 && stoproboth == 0){
+67  //READ for left track
+68             
+69             startstatus = digitalRead(0);
+70             navigationbusy = digitalRead(2);
+71             
+72 //THINK for left track
+73             
+74             //clearance to do an action;
+75             if(cleartoload == 1 || cleartounload == 1){
+76                 cleartonavigate = 0;
+77             }
+78             else if(cleartonavigate == 1 || cleartounload == 1){
+79                 cleartoload = 0;
+80             }
+81             else if(cleartonavigate == 1 || cleartoload == 1){
+82                 cleartounload = 0;
+83             }
+84 
+85             
+86             // latch to figure out robot position in sequence
+87             if(navigationbusy == 1 && robotismoving == 0){
+88                 robotismoving = 1;
+89                 whereistherobot++;
+90             }else if(navigationbusy == 0 && robotismoving == 1){
+91                 robotismoving = 0;
+92             }
+93             
+94             //working actions 
+95             if(whereistherobot > 0 && whereistherobot <=4 && navigationbusy == 0){
+96                 cleartoload = 1;
+97             }else if(whereistherobot > 0 && whereistherobot <=4 && navigationbusy == 1){
+98                 cleartoload = 0;
+99             }else if(whereistherobot == 5 && navigationbusy == 0){
+100                 cleartounload = 1;
+101             }else if(whereistherobot == 5 && navigationbusy == 1){
+102                 cleartounload = 0;
+103             }
+104             
+105 
+106             //controls load action timing
+107             if(cleartoload == 1 && loadcounter < 2000){
+108                 loadtheblocks = 1;
+109                 loadcounter ++;
+110                 startloadingthread = 1;
+111                 
+112             }else if(loadcounter >= 2000){
+113                 cleartoload = 0;
+114                 loadcounter = 1;
+115             }
+116             
+117             //controls the unload action timing
+118             if(cleartounload ==1 && unloadcounter < 150){
+119                 unloadcounter++;
+120                 unloadtheblocks = 1;
+121             }else if(loadcounter >= 150){
+122                 cleartounload = 0;
+123                 unloadcounter = 1;
+124                 unloadtheblocks = 0;
+125             }
+126             
+127 //DO for the left track
+128             
+129             //Navigate to next position in sequence
+130             if(cleartounload == 0 && cleartoload == 0 && robotismoving == 0){
+131                 digitalWrite(3,HIGH);  
+132             }else if(robotismoving == 1){
+133                 digitalWrite(3,LOW);
+134             }
+135             
+136             //load blocks 
+137             if(loadtheblocks ==1){
+138                 pthread_t andrewthread;
+139                 pthread_create(&andrewthread,NULL,grabCall,NULL);
+140                 
+141                 loadtheblocks =0;
+142                 
+143             }
+144             
+145             // unload the blocks
+146             if(unloadtheblocks ==1 && unloadcounter < 100){
+147                 setServoPosition(Servo(10),90);
+148                 setServoPosition(Servo(11),90);
+149                 setServoPosition(Servo(12),90);
+150                 setServoPosition(Servo(13),90);
+151             }else if(unloadtheblocks == 1 && unloadcounter >= 100 && unloadcounter <140){
+152                 setServoPosition(Servo(10),0);
+153                 setServoPosition(Servo(11),0);
+154                 setServoPosition(Servo(12),0);
+155                 setServoPosition(Servo(13),0);
+156             }else if(unloadtheblocks == 1 && unloadcounter >= 140){
+157                 setServoPosition(Servo(10),-1);
+158                 setServoPosition(Servo(11),-1);
+159                 setServoPosition(Servo(12),-1);
+160                 setServoPosition(Servo(13),-1);
+161             }
+162             
+163             cout<<endl<<"I am in run mode of left track";
+164             
+165             /* stops Robot if ever hit on a RTD loop*/
+166             if(startstatus == 0){
+167                 digitalWrite(3,LOW);
+168                 cout<<endl<<"Halting all function stop engaged after a start";
+169                 giveitasec++;
+170                 if(giveitasec >= 50){
+171                     stoproboth = 1;
+172                     giveitasec = 0;
+173                 }
+174             }
+175             cout<<endl<<"The current position of robot is:"<<whereistherobot<<endl;
+176             
+177             // delay for 20 milliseconds per loop
+178             usleep(20000);
+179 
+180 
+181         }
+182     }
+183     /*Track selection initialization will allow track select until start condition is true*/
+184     while(track == 0 && startroboth ==0){
+185         startstatus = digitalRead(0);
+186         track = digitalRead(1);
+187         if(startstatus == 1){
+188             startroboth = 1;
+189         }
+190         cout<<endl<<"I am in right track mode\&.";
+191         cout<<"Not yet implemented\&. Danger\&. Danger\&. Danger\&.";
+192     }
+193 }
+194 #endif
+195 #ifdef SWITCHTEST
+196     int cat;
+197     int dog;
+198     wiringPiSetup();
+199     while(1){
+200         
+201         //test each pin if needed for setup and checking
+202         /*
+203         cout<<endl;
+204         cout<<"Input a pin to check:"<<endl;
+205         cin>>dog;
+206         cat =digitalRead(dog);
+207         cout<<"I am reading:"<<cat<<endl;
+208         */
+209         
+210         if(digitalRead(0)==1){
+211             cout<<"Heavy is in stop or idle mode\&."<<endl;
+212            
+213         }else if(digitalRead(0)==0){
+214             cout<<"Heavy is in run mode!"<<endl;
+215         }
+216         if(digitalRead(1)==1){
+217             cout<<"Heavy is set for left track\&."<<endl;
+218         }else if(digitalRead(1)==0){
+219             cout<<"Heavy is set for right track\&."<<endl;
+220         }
+221         
+222         cout<<endl<<"Press enter to continue";
+223         cin\&.ignore();
+224     }
+225 #endif
+226     
+227 #ifdef ARMTEST
+228     
+229     Servo whichservo;
+230     int tmpServo = -1;
+231     int position;
+232     setup();
+233     while(1){
+234         cout<<endl;
+235         cout<<"Pick a servo to use: BASE_TURN = 0, BASE_TILT = 1, ELBOW = 2, WRIST_TILT = 3,";
+236         cout<<endl<<"WRIST_PAN = 4, GRIP_LEFT = 5, GRIP_RIGHT = 6";
+237         cout<<endl;
+238         cin>>tmpServo;
+239         if(tmpServo > 6 || tmpServo < 0){
+240             cout<<"Please choose again:"<<endl;
+241             continue;
+242         }
+243         whichservo = (Servo)tmpServo;
+244         cout<<endl;
+245         cout<<"Pick a position (set position to -1 to disengage servo and set pwm to 0):";
+246         cin>>position;
+247         cout<<endl;
+248         setServoPosition(whichservo,position);
+249         
+250     }
+251 #endif     
+252 
+253 #ifdef NAVTEST
+254 
+255     int cat = 0;
+256     pinMode(2,INPUT);
+257     while(1){
+258         cout<<"High or Low?:"<<endl;
+259         cin>>cat;
+260         digitalWrite(3,cat);
+261         cout<<endl;
+262         if(digitalRead(2)==1){
+263             cout<<"I am getting a high from Micah"<<endl;
+264            
+265         }else if(digitalRead(2)==0){
+266             cout<<"I am getting a low from Micah"<<endl;
+267         }
+268     } 
+269     cin\&.ignore();
+270 
+271     
+272     
+273 #endif
+274 
+275 #ifdef UNLOADTEST
+276     
+277     Servo whichservo;
+278     int tmpServo = -1;
+279     int position;
+280 
+281     setup();
+282     while(1){
+283         /*
+284         cout<<endl;
+285         cout<<"Pick a servo to use: ";
+286         cout<<endl<<"UNLOAD_1= 10, UNLOAD_2 = 11, UNLOAD_3 = 12, UNLOAD_4 = 13";
+287         cout<<endl;
+288         cin>>tmpServo;
+289         if(tmpServo < 10 || tmpServo > 14){
+290             cout<<"Please choose again:"<<endl;
+291             continue;
+292         }
+293         whichservo = (Servo)tmpServo;
+294         */ 
+295         cout<<endl;
+296         cout<<"Pick a position (set position to -1 to disengage servo and set pwm to 0):";
+297         cin>>position;
+298         cout<<endl;
+299         //setServoPosition((Servo)tmpServo,position); 
+300         setServoPosition((Servo)10,position);
+301         setServoPosition((Servo)11,position);
+302         setServoPosition((Servo)12,position);
+303         setServoPosition((Servo)13,position);
+304         
+305     }
+306     
+307 #endif
+308     return 0;
+309 }
+.fi
+.SH "Variable Documentation"
+.PP 
+.SS "int cleartoload"
+
+.PP
+Definition at line 37 of file main\&.cpp\&.
+.SS "int cleartonavigate"
+
+.PP
+Definition at line 36 of file main\&.cpp\&.
+.SS "int cleartounload"
+
+.PP
+Definition at line 38 of file main\&.cpp\&.
+.SS "int giveitasec"
+
+.PP
+Definition at line 45 of file main\&.cpp\&.
+.SS "int loadcounter"
+
+.PP
+Definition at line 41 of file main\&.cpp\&.
+.SS "int loadtheblocks"
+
+.PP
+Definition at line 43 of file main\&.cpp\&.
+.SS "int navigationbusy"
+
+.PP
+Definition at line 35 of file main\&.cpp\&.
+.SS "int robotismoving"
+
+.PP
+Definition at line 39 of file main\&.cpp\&.
+.SS "int startloadingthread"
+
+.PP
+Definition at line 46 of file main\&.cpp\&.
+.SS "int startroboth"
+
+.PP
+Definition at line 32 of file main\&.cpp\&.
+.SS "int startstatus"
+
+.PP
+Definition at line 31 of file main\&.cpp\&.
+.SS "int stoproboth"
+
+.PP
+Definition at line 33 of file main\&.cpp\&.
+.SS "int track"
+
+.PP
+Definition at line 34 of file main\&.cpp\&.
+.SS "int unloadcounter"
+
+.PP
+Definition at line 42 of file main\&.cpp\&.
+.SS "int unloadtheblocks"
+
+.PP
+Definition at line 44 of file main\&.cpp\&.
+.SS "int whereistherobot"
+
+.PP
+Definition at line 40 of file main\&.cpp\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for The Automatic Vasospasm Detection Application from the source code\&.

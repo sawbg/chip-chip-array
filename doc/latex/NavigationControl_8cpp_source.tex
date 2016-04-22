@@ -1,0 +1,23 @@
+\hypertarget{NavigationControl_8cpp_source}{\section{Navigation\+Control.\+cpp}
+\label{NavigationControl_8cpp_source}\index{src/\+Navigation\+Control.\+cpp@{src/\+Navigation\+Control.\+cpp}}
+}
+
+\begin{DoxyCode}
+00001 
+00007 \textcolor{preprocessor}{#include "\hyperlink{NavigationControl_8h}{NavigationControl.h}"}
+00008     
+00009 \textcolor{comment}{//uint8\_t navigation\_address = 10u;}
+\hypertarget{NavigationControl_8cpp_source_l00010}{}\hyperlink{NavigationControl_8cpp_a010709a5553ea7e8217d2669ba3a5d81}{00010} \hyperlink{Adafruit__PWMServoDriver_8h_ab077fa1127453be2bd9d4c3c8a768fa7}{uint8\_t} \hyperlink{NavigationControl_8cpp_a010709a5553ea7e8217d2669ba3a5d81}{navigationcmd};
+\hypertarget{NavigationControl_8cpp_source_l00011}{}\hyperlink{NavigationControl_8cpp_a7b644cec5c881e356faacfa0e618a605}{00011} \hyperlink{Adafruit__PWMServoDriver_8h_ab077fa1127453be2bd9d4c3c8a768fa7}{uint8\_t} \hyperlink{NavigationControl_8cpp_a7b644cec5c881e356faacfa0e618a605}{nav\_fd}; 
+00012 
+00013 
+\hypertarget{NavigationControl_8cpp_source_l00014}{}\hyperlink{NavigationControl_8h_acb338a668bf01ea34c27c56db0d23782}{00014} \textcolor{keywordtype}{void} \hyperlink{NavigationControl_8cpp_acb338a668bf01ea34c27c56db0d23782}{navigationSetup}(\hyperlink{Adafruit__PWMServoDriver_8h_ab077fa1127453be2bd9d4c3c8a768fa7}{uint8\_t} navigation\_add)\{
+00015     \hyperlink{NavigationControl_8cpp_a7b644cec5c881e356faacfa0e618a605}{nav\_fd}=wiringPiI2CSetup(navigation\_add);
+00016     
+00017 \}
+00018 
+\hypertarget{NavigationControl_8cpp_source_l00019}{}\hyperlink{NavigationControl_8h_a7534ad4cfb2b6663c3a1d15bb41bd71d}{00019} \textcolor{keywordtype}{void} \hyperlink{NavigationControl_8cpp_a7534ad4cfb2b6663c3a1d15bb41bd71d}{commandNavigation}(\hyperlink{Adafruit__PWMServoDriver_8h_ab077fa1127453be2bd9d4c3c8a768fa7}{uint8\_t} navigationcommand)\{
+00020     \hyperlink{Adafruit__PWMServoDriver_8h_ab077fa1127453be2bd9d4c3c8a768fa7}{uint8\_t} data = navigationcommand;
+00021     wiringPiI2CWrite(\hyperlink{NavigationControl_8cpp_a7b644cec5c881e356faacfa0e618a605}{nav\_fd}, data);
+00022 \}
+\end{DoxyCode}

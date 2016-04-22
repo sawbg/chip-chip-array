@@ -1,0 +1,100 @@
+.TH "ChipChipArray::PiCamera" 3 "Fri Apr 22 2016" "The Automatic Vasospasm Detection Application" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ChipChipArray::PiCamera \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <PiCamera\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBPiCamera\fP ()"
+.br
+.ti -1c
+.RI "\fBPiCamera\fP (bool useColor)"
+.br
+.ti -1c
+.RI "void \fBClose\fP ()"
+.br
+.ti -1c
+.RI "cv::Mat \fBSnap\fP ()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class is a basic wrapper to allow the Raspicam to interface with OpenCV\&. It uses another wrapper class, Raspicam, provided by Cédric Verstraeten (https://github.com/cedricve/raspicam)\&. 
+.PP
+Definition at line 24 of file PiCamera\&.hpp\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ChipChipArray::PiCamera::PiCamera ()\fC [inline]\fP"
+Opens the camera and configures it for color images\&. 
+.PP
+Definition at line 29 of file PiCamera\&.hpp\&.
+.PP
+.nf
+29 : PiCamera(true) {};
+.fi
+.SS "ChipChipArray::PiCamera::PiCamera (booluseColor)"
+Opens the camera\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIuseColor\fP Specifices whether camera should make color images\&. TRUE = color, FALSE = grayscale\&. 
+.RE
+.PP
+
+.PP
+Definition at line 59 of file PiCamera\&.hpp\&.
+.PP
+.nf
+59                                     {
+60         cam\&.set(CV_CAP_PROP_FORMAT, (useColor ? CV_16UC3 : CV_16UC1));
+61         cam\&.open();
+62         usleep(500000);  // required to allow camera time to adjust!
+63     }
+.fi
+.SH "Member Function Documentation"
+.PP 
+.SS "void ChipChipArray::PiCamera::Close ()"
+Closes connection to camera\&. 
+.PP
+Definition at line 65 of file PiCamera\&.hpp\&.
+.PP
+.nf
+65                          {
+66         cam\&.release();
+67     }
+.fi
+.SS "cv::Mat ChipChipArray::PiCamera::Snap ()"
+Makes picture\&.
+.PP
+\fBReturns:\fP
+.RS 4
+OpenCV Mat object (i\&.e\&., an image) from the camera 
+.RE
+.PP
+
+.PP
+Definition at line 69 of file PiCamera\&.hpp\&.
+.PP
+.nf
+69                          {
+70         if(!cam\&.isOpened()) throw std::runtime_error("Camera "
+71                 "is not open!");
+72 
+73         cv::Mat image;
+74         cam\&.grab();
+75         cam\&.retrieve(image);
+76         return image;
+77     }
+.fi
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for The Automatic Vasospasm Detection Application from the source code\&.

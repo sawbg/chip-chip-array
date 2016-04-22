@@ -50,7 +50,7 @@ cv\+::\+Point \hyperlink{classChipChipArray_1_1Block_aaa4ff82846e95a628800ebdfd3
 \subsection{Detailed Description}
 This class represents a block. It only works for blocks found with the \char`\"{}bounding\+Rect\char`\"{} algorithm (i.\+e., it doesn't work for blocks that are skewed on the image). 
 
-Definition at line 19 of file Block.\+hpp.
+Definition at line \hyperlink{Block_8hpp_source_l00020}{20} of file \hyperlink{Block_8hpp_source}{Block.\+hpp}.
 
 
 
@@ -65,8 +65,38 @@ Definition at line 19 of file Block.\+hpp.
 )}}\label{classChipChipArray_1_1Block_a7eb2456e5c95c8a91844c9522eed0578}
 Creates a new \hyperlink{classChipChipArray_1_1Block}{Block} using the Points in the cv\+::\+Rect and the color. Also determines the size based on the area of the \hyperlink{classChipChipArray_1_1Block}{Block}. 
 
-Definition at line 138 of file Block.\+hpp.
+Definition at line \hyperlink{Block_8hpp_source_l00139}{139} of file \hyperlink{Block_8hpp_source}{Block.\+hpp}.
 
+
+\begin{DoxyCode}
+00139                                          \{
+00140         \textcolor{comment}{// basic geometric properties}
+00141         \hyperlink{classChipChipArray_1_1Block_ab5f9a9c1cc11e949685f8ad3d52599b2}{area} = rect.area();
+00142         \hyperlink{classChipChipArray_1_1Block_aed94802c166c9b4553764eb637717a2a}{height} = rect.height;
+00143         \hyperlink{classChipChipArray_1_1Block_ac3f815e8aa9060c4ad20d4e1b2649e35}{width} = rect.width;
+00144 
+00145         \textcolor{comment}{// assigning corners}
+00146         \hyperlink{classChipChipArray_1_1Block_aeecc05025c6c8e23ff6ca09a6fbd4b4b}{topLeft} = rect.tl();
+00147         \hyperlink{classChipChipArray_1_1Block_a82f831883d31e6d74be45b8851eefe96}{bottomRight} = rect.br();
+00148         \hyperlink{classChipChipArray_1_1Block_aaa4ff82846e95a628800ebdfd3ceefb5}{topRight} = cv::Point(\hyperlink{classChipChipArray_1_1Block_aeecc05025c6c8e23ff6ca09a6fbd4b4b}{topLeft}.x + \hyperlink{classChipChipArray_1_1Block_ac3f815e8aa9060c4ad20d4e1b2649e35}{width}, \hyperlink{classChipChipArray_1_1Block_aeecc05025c6c8e23ff6ca09a6fbd4b4b}{topLeft}.y);
+00149         \hyperlink{classChipChipArray_1_1Block_a78304b597a8d8a74a4d9b4bb561a7224}{bottomLeft} = cv::Point(\hyperlink{classChipChipArray_1_1Block_aeecc05025c6c8e23ff6ca09a6fbd4b4b}{topLeft}.x, \hyperlink{classChipChipArray_1_1Block_aeecc05025c6c8e23ff6ca09a6fbd4b4b}{topLeft}.y + 
+      \hyperlink{classChipChipArray_1_1Block_aed94802c166c9b4553764eb637717a2a}{height});
+00150         \hyperlink{classChipChipArray_1_1Block_a42e2ca0775dc09b04049a2db1bc0bb4f}{offset} = (\hyperlink{definitions_8hpp_a74df79fde3c518e55b29ce6360a9c76e}{sint16})(\hyperlink{classChipChipArray_1_1Block_aeecc05025c6c8e23ff6ca09a6fbd4b4b}{topLeft}.x + \hyperlink{classChipChipArray_1_1Block_ac3f815e8aa9060c4ad20d4e1b2649e35}{width} / 2) - IMG\_WIDTH / 2;
+00151 
+00152         \textcolor{comment}{// calculating offsets (opencv low coordinates start top left)}
+00153         \hyperlink{classChipChipArray_1_1Block_aca89dc06d62feb9a6478a06976171b2b}{dLeft} = \hyperlink{classChipChipArray_1_1Block_aeecc05025c6c8e23ff6ca09a6fbd4b4b}{topLeft}.x;
+00154         \hyperlink{classChipChipArray_1_1Block_a6a4b0aa6aae7e41d836c8955e209c16e}{dRight} = IMG\_WIDTH - \hyperlink{classChipChipArray_1_1Block_aaa4ff82846e95a628800ebdfd3ceefb5}{topRight}.x;
+00155         \hyperlink{classChipChipArray_1_1Block_a4e792a05f677eafbeb9439a9e631c255}{dTop} = \hyperlink{classChipChipArray_1_1Block_aeecc05025c6c8e23ff6ca09a6fbd4b4b}{topLeft}.y;
+00156         \hyperlink{classChipChipArray_1_1Block_af3c4ecd0fd36763ac85c2dc0b57b8359}{dBottom} = IMG\_HEIGHT - \hyperlink{classChipChipArray_1_1Block_a82f831883d31e6d74be45b8851eefe96}{bottomRight}.y;
+00157         \hyperlink{classChipChipArray_1_1Block_a5b6e72665d0de840a123717e24ca5cf9}{dTopBottom} = \hyperlink{classChipChipArray_1_1Block_a4e792a05f677eafbeb9439a9e631c255}{dTop} - \hyperlink{classChipChipArray_1_1Block_af3c4ecd0fd36763ac85c2dc0b57b8359}{dBottom};
+00158         \hyperlink{classChipChipArray_1_1Block_a2d02c7b99ca656960fc9724587791999}{dRightLeft} = \hyperlink{classChipChipArray_1_1Block_a6a4b0aa6aae7e41d836c8955e209c16e}{dRight} - \hyperlink{classChipChipArray_1_1Block_aca89dc06d62feb9a6478a06976171b2b}{dLeft};
+00159 
+00160         \textcolor{comment}{// set color and size}
+00161         this->\hyperlink{classChipChipArray_1_1Block_a262210a9a04028f3f2670c9ae38ef3d7}{color} = \hyperlink{classChipChipArray_1_1Block_a262210a9a04028f3f2670c9ae38ef3d7}{color};
+00162         \hyperlink{classChipChipArray_1_1Block_aebd356d7fcfe7ff11db8195e6d7f8e42}{size} = \hyperlink{classChipChipArray_1_1Block_ab5f9a9c1cc11e949685f8ad3d52599b2}{area} > MIN\_WHOLE\_BLOCK\_SIZE ? \hyperlink{definitions_8hpp_a9809446fd16a744b6df9808293f14153a8394f0347c184cf156ac5924dccb773b}{Size::Long} : 
+      \hyperlink{definitions_8hpp_a9809446fd16a744b6df9808293f14153a30bb747c98bccdd11b3f89e644c4d0ad}{Size::Short};
+00163     \}
+\end{DoxyCode}
 
 
 \subsection{Member Data Documentation}
@@ -75,112 +105,112 @@ Definition at line 138 of file Block.\+hpp.
 \subsubsection[{area}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint32} Chip\+Chip\+Array\+::\+Block\+::area}}\label{classChipChipArray_1_1Block_ab5f9a9c1cc11e949685f8ad3d52599b2}
 The area of the block in pixels 
 
-Definition at line 24 of file Block.\+hpp.
+Definition at line \hyperlink{Block_8hpp_source_l00025}{25} of file \hyperlink{Block_8hpp_source}{Block.\+hpp}.
 
 \hypertarget{classChipChipArray_1_1Block_a78304b597a8d8a74a4d9b4bb561a7224}{\index{Chip\+Chip\+Array\+::\+Block@{Chip\+Chip\+Array\+::\+Block}!bottom\+Left@{bottom\+Left}}
 \index{bottom\+Left@{bottom\+Left}!Chip\+Chip\+Array\+::\+Block@{Chip\+Chip\+Array\+::\+Block}}
 \subsubsection[{bottom\+Left}]{\setlength{\rightskip}{0pt plus 5cm}cv\+::\+Point Chip\+Chip\+Array\+::\+Block\+::bottom\+Left}}\label{classChipChipArray_1_1Block_a78304b597a8d8a74a4d9b4bb561a7224}
 Point of the block's bottom-\/left corner 
 
-Definition at line 29 of file Block.\+hpp.
+Definition at line \hyperlink{Block_8hpp_source_l00030}{30} of file \hyperlink{Block_8hpp_source}{Block.\+hpp}.
 
 \hypertarget{classChipChipArray_1_1Block_a82f831883d31e6d74be45b8851eefe96}{\index{Chip\+Chip\+Array\+::\+Block@{Chip\+Chip\+Array\+::\+Block}!bottom\+Right@{bottom\+Right}}
 \index{bottom\+Right@{bottom\+Right}!Chip\+Chip\+Array\+::\+Block@{Chip\+Chip\+Array\+::\+Block}}
 \subsubsection[{bottom\+Right}]{\setlength{\rightskip}{0pt plus 5cm}cv\+::\+Point Chip\+Chip\+Array\+::\+Block\+::bottom\+Right}}\label{classChipChipArray_1_1Block_a82f831883d31e6d74be45b8851eefe96}
 Point of the block's bottom-\/right corner 
 
-Definition at line 34 of file Block.\+hpp.
+Definition at line \hyperlink{Block_8hpp_source_l00035}{35} of file \hyperlink{Block_8hpp_source}{Block.\+hpp}.
 
 \hypertarget{classChipChipArray_1_1Block_a262210a9a04028f3f2670c9ae38ef3d7}{\index{Chip\+Chip\+Array\+::\+Block@{Chip\+Chip\+Array\+::\+Block}!color@{color}}
 \index{color@{color}!Chip\+Chip\+Array\+::\+Block@{Chip\+Chip\+Array\+::\+Block}}
 \subsubsection[{color}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Color} Chip\+Chip\+Array\+::\+Block\+::color}}\label{classChipChipArray_1_1Block_a262210a9a04028f3f2670c9ae38ef3d7}
 The detected color of the block 
 
-Definition at line 106 of file Block.\+hpp.
+Definition at line \hyperlink{Block_8hpp_source_l00107}{107} of file \hyperlink{Block_8hpp_source}{Block.\+hpp}.
 
 \hypertarget{classChipChipArray_1_1Block_af3c4ecd0fd36763ac85c2dc0b57b8359}{\index{Chip\+Chip\+Array\+::\+Block@{Chip\+Chip\+Array\+::\+Block}!d\+Bottom@{d\+Bottom}}
 \index{d\+Bottom@{d\+Bottom}!Chip\+Chip\+Array\+::\+Block@{Chip\+Chip\+Array\+::\+Block}}
 \subsubsection[{d\+Bottom}]{\setlength{\rightskip}{0pt plus 5cm}{\bf sint16} Chip\+Chip\+Array\+::\+Block\+::d\+Bottom}}\label{classChipChipArray_1_1Block_af3c4ecd0fd36763ac85c2dc0b57b8359}
 Number of pixels from the block's bottom edge to the bottom edge of the image frame. 
 
-Definition at line 40 of file Block.\+hpp.
+Definition at line \hyperlink{Block_8hpp_source_l00041}{41} of file \hyperlink{Block_8hpp_source}{Block.\+hpp}.
 
 \hypertarget{classChipChipArray_1_1Block_aca89dc06d62feb9a6478a06976171b2b}{\index{Chip\+Chip\+Array\+::\+Block@{Chip\+Chip\+Array\+::\+Block}!d\+Left@{d\+Left}}
 \index{d\+Left@{d\+Left}!Chip\+Chip\+Array\+::\+Block@{Chip\+Chip\+Array\+::\+Block}}
 \subsubsection[{d\+Left}]{\setlength{\rightskip}{0pt plus 5cm}{\bf sint16} Chip\+Chip\+Array\+::\+Block\+::d\+Left}}\label{classChipChipArray_1_1Block_aca89dc06d62feb9a6478a06976171b2b}
 Number of pixels from the block's left edge to the left edge of the image frame. 
 
-Definition at line 46 of file Block.\+hpp.
+Definition at line \hyperlink{Block_8hpp_source_l00047}{47} of file \hyperlink{Block_8hpp_source}{Block.\+hpp}.
 
 \hypertarget{classChipChipArray_1_1Block_a6a4b0aa6aae7e41d836c8955e209c16e}{\index{Chip\+Chip\+Array\+::\+Block@{Chip\+Chip\+Array\+::\+Block}!d\+Right@{d\+Right}}
 \index{d\+Right@{d\+Right}!Chip\+Chip\+Array\+::\+Block@{Chip\+Chip\+Array\+::\+Block}}
 \subsubsection[{d\+Right}]{\setlength{\rightskip}{0pt plus 5cm}{\bf sint16} Chip\+Chip\+Array\+::\+Block\+::d\+Right}}\label{classChipChipArray_1_1Block_a6a4b0aa6aae7e41d836c8955e209c16e}
 Number of pixels from the block's right edge to the right edge of the image frame. 
 
-Definition at line 52 of file Block.\+hpp.
+Definition at line \hyperlink{Block_8hpp_source_l00053}{53} of file \hyperlink{Block_8hpp_source}{Block.\+hpp}.
 
 \hypertarget{classChipChipArray_1_1Block_a2d02c7b99ca656960fc9724587791999}{\index{Chip\+Chip\+Array\+::\+Block@{Chip\+Chip\+Array\+::\+Block}!d\+Right\+Left@{d\+Right\+Left}}
 \index{d\+Right\+Left@{d\+Right\+Left}!Chip\+Chip\+Array\+::\+Block@{Chip\+Chip\+Array\+::\+Block}}
 \subsubsection[{d\+Right\+Left}]{\setlength{\rightskip}{0pt plus 5cm}{\bf sint16} Chip\+Chip\+Array\+::\+Block\+::d\+Right\+Left}}\label{classChipChipArray_1_1Block_a2d02c7b99ca656960fc9724587791999}
 The difference between d\+Right and d\+Left. It indicates the relative vertical positioning of the block regardless of the block's area. A positive value indicates the block is off-\/center towards the left. 
 
-Definition at line 74 of file Block.\+hpp.
+Definition at line \hyperlink{Block_8hpp_source_l00075}{75} of file \hyperlink{Block_8hpp_source}{Block.\+hpp}.
 
 \hypertarget{classChipChipArray_1_1Block_a4e792a05f677eafbeb9439a9e631c255}{\index{Chip\+Chip\+Array\+::\+Block@{Chip\+Chip\+Array\+::\+Block}!d\+Top@{d\+Top}}
 \index{d\+Top@{d\+Top}!Chip\+Chip\+Array\+::\+Block@{Chip\+Chip\+Array\+::\+Block}}
 \subsubsection[{d\+Top}]{\setlength{\rightskip}{0pt plus 5cm}{\bf sint16} Chip\+Chip\+Array\+::\+Block\+::d\+Top}}\label{classChipChipArray_1_1Block_a4e792a05f677eafbeb9439a9e631c255}
 Number of pixels from the block's top edge to the top edge of the image frame. 
 
-Definition at line 58 of file Block.\+hpp.
+Definition at line \hyperlink{Block_8hpp_source_l00059}{59} of file \hyperlink{Block_8hpp_source}{Block.\+hpp}.
 
 \hypertarget{classChipChipArray_1_1Block_a5b6e72665d0de840a123717e24ca5cf9}{\index{Chip\+Chip\+Array\+::\+Block@{Chip\+Chip\+Array\+::\+Block}!d\+Top\+Bottom@{d\+Top\+Bottom}}
 \index{d\+Top\+Bottom@{d\+Top\+Bottom}!Chip\+Chip\+Array\+::\+Block@{Chip\+Chip\+Array\+::\+Block}}
 \subsubsection[{d\+Top\+Bottom}]{\setlength{\rightskip}{0pt plus 5cm}{\bf sint16} Chip\+Chip\+Array\+::\+Block\+::d\+Top\+Bottom}}\label{classChipChipArray_1_1Block_a5b6e72665d0de840a123717e24ca5cf9}
 The difference between d\+Top and d\+Bottom. It indicates the relative vertical positioning of the block regardless of the block's area. A positive value indicates the block is off-\/center towards the bottom. 
 
-Definition at line 66 of file Block.\+hpp.
+Definition at line \hyperlink{Block_8hpp_source_l00067}{67} of file \hyperlink{Block_8hpp_source}{Block.\+hpp}.
 
 \hypertarget{classChipChipArray_1_1Block_aed94802c166c9b4553764eb637717a2a}{\index{Chip\+Chip\+Array\+::\+Block@{Chip\+Chip\+Array\+::\+Block}!height@{height}}
 \index{height@{height}!Chip\+Chip\+Array\+::\+Block@{Chip\+Chip\+Array\+::\+Block}}
 \subsubsection[{height}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint16} Chip\+Chip\+Array\+::\+Block\+::height}}\label{classChipChipArray_1_1Block_aed94802c166c9b4553764eb637717a2a}
 The height of the block in pixels 
 
-Definition at line 86 of file Block.\+hpp.
+Definition at line \hyperlink{Block_8hpp_source_l00087}{87} of file \hyperlink{Block_8hpp_source}{Block.\+hpp}.
 
 \hypertarget{classChipChipArray_1_1Block_a42e2ca0775dc09b04049a2db1bc0bb4f}{\index{Chip\+Chip\+Array\+::\+Block@{Chip\+Chip\+Array\+::\+Block}!offset@{offset}}
 \index{offset@{offset}!Chip\+Chip\+Array\+::\+Block@{Chip\+Chip\+Array\+::\+Block}}
 \subsubsection[{offset}]{\setlength{\rightskip}{0pt plus 5cm}{\bf sint16} Chip\+Chip\+Array\+::\+Block\+::offset}}\label{classChipChipArray_1_1Block_a42e2ca0775dc09b04049a2db1bc0bb4f}
 The difference in pixels between the vertical center of the image and the vertical center of the block. Assumes image is 1280 pixels wide (like the Raspicam images). 
 
-Definition at line 81 of file Block.\+hpp.
+Definition at line \hyperlink{Block_8hpp_source_l00082}{82} of file \hyperlink{Block_8hpp_source}{Block.\+hpp}.
 
 \hypertarget{classChipChipArray_1_1Block_aebd356d7fcfe7ff11db8195e6d7f8e42}{\index{Chip\+Chip\+Array\+::\+Block@{Chip\+Chip\+Array\+::\+Block}!size@{size}}
 \index{size@{size}!Chip\+Chip\+Array\+::\+Block@{Chip\+Chip\+Array\+::\+Block}}
 \subsubsection[{size}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Size} Chip\+Chip\+Array\+::\+Block\+::size}}\label{classChipChipArray_1_1Block_aebd356d7fcfe7ff11db8195e6d7f8e42}
 The size of the block (half or whole) 
 
-Definition at line 111 of file Block.\+hpp.
+Definition at line \hyperlink{Block_8hpp_source_l00112}{112} of file \hyperlink{Block_8hpp_source}{Block.\+hpp}.
 
 \hypertarget{classChipChipArray_1_1Block_aeecc05025c6c8e23ff6ca09a6fbd4b4b}{\index{Chip\+Chip\+Array\+::\+Block@{Chip\+Chip\+Array\+::\+Block}!top\+Left@{top\+Left}}
 \index{top\+Left@{top\+Left}!Chip\+Chip\+Array\+::\+Block@{Chip\+Chip\+Array\+::\+Block}}
 \subsubsection[{top\+Left}]{\setlength{\rightskip}{0pt plus 5cm}cv\+::\+Point Chip\+Chip\+Array\+::\+Block\+::top\+Left}}\label{classChipChipArray_1_1Block_aeecc05025c6c8e23ff6ca09a6fbd4b4b}
 Point of the block's top-\/left corner 
 
-Definition at line 91 of file Block.\+hpp.
+Definition at line \hyperlink{Block_8hpp_source_l00092}{92} of file \hyperlink{Block_8hpp_source}{Block.\+hpp}.
 
 \hypertarget{classChipChipArray_1_1Block_aaa4ff82846e95a628800ebdfd3ceefb5}{\index{Chip\+Chip\+Array\+::\+Block@{Chip\+Chip\+Array\+::\+Block}!top\+Right@{top\+Right}}
 \index{top\+Right@{top\+Right}!Chip\+Chip\+Array\+::\+Block@{Chip\+Chip\+Array\+::\+Block}}
 \subsubsection[{top\+Right}]{\setlength{\rightskip}{0pt plus 5cm}cv\+::\+Point Chip\+Chip\+Array\+::\+Block\+::top\+Right}}\label{classChipChipArray_1_1Block_aaa4ff82846e95a628800ebdfd3ceefb5}
 Point of the block's top-\/right corner 
 
-Definition at line 96 of file Block.\+hpp.
+Definition at line \hyperlink{Block_8hpp_source_l00097}{97} of file \hyperlink{Block_8hpp_source}{Block.\+hpp}.
 
 \hypertarget{classChipChipArray_1_1Block_ac3f815e8aa9060c4ad20d4e1b2649e35}{\index{Chip\+Chip\+Array\+::\+Block@{Chip\+Chip\+Array\+::\+Block}!width@{width}}
 \index{width@{width}!Chip\+Chip\+Array\+::\+Block@{Chip\+Chip\+Array\+::\+Block}}
 \subsubsection[{width}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint16} Chip\+Chip\+Array\+::\+Block\+::width}}\label{classChipChipArray_1_1Block_ac3f815e8aa9060c4ad20d4e1b2649e35}
 The width of the block in pixels 
 
-Definition at line 101 of file Block.\+hpp.
+Definition at line \hyperlink{Block_8hpp_source_l00102}{102} of file \hyperlink{Block_8hpp_source}{Block.\+hpp}.
 
 
 

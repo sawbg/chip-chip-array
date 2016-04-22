@@ -1,0 +1,21 @@
+\hypertarget{loading__test_8cpp_source}{\section{loading\+\_\+test.\+cpp}
+\label{loading__test_8cpp_source}\index{src/loading\+\_\+test.\+cpp@{src/loading\+\_\+test.\+cpp}}
+}
+
+\begin{DoxyCode}
+00001 
+00007 \textcolor{preprocessor}{#include <iostream>}
+00008 
+00009 \textcolor{preprocessor}{#include "\hyperlink{definitions_8hpp}{definitions.hpp}"}
+00010 \textcolor{preprocessor}{#include "\hyperlink{Block_8hpp}{Block.hpp}"}
+00011 \textcolor{preprocessor}{#include "\hyperlink{Grabber_8hpp}{Grabber.hpp}"}
+00012 
+00013 \textcolor{keyword}{using namespace }\hyperlink{namespaceChipChipArray}{ChipChipArray};
+00014 
+\hypertarget{loading__test_8cpp_source_l00019}{}\hyperlink{loading__test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{00019} \textcolor{keywordtype}{int} \hyperlink{namespaceChipChipArray_a7fc3d1edffca11531cd09fdab7c8b88d}{main}() \{
+00020     \hyperlink{Servo__Position__Shell_8cpp_a4fc01d736fe50cf5b977f755b675f11d}{setup}();
+00021     \hyperlink{classChipChipArray_1_1Grabber}{Grabber} g(\hyperlink{definitions_8hpp_adbd1e7a33d3e1751c7b2aa2562d0ecb9a7fc56270e7a70fa81a5935b72eacbe29}{Zone::A}, \hyperlink{definitions_8hpp_a03325a8a9d4f105db5e37dd587128142a945d5e233cf7d6240f6b783b36a374ff}{Side::Left});
+00022     g.\hyperlink{classChipChipArray_1_1Grabber_a56639f8f9ba9468bce4b6d69ceb2eb54}{Load}();
+00023     g.\hyperlink{classChipChipArray_1_1Grabber_aacf089ceb4aa5b263c2cc702fb3daf74}{Close}();
+00024 \}
+\end{DoxyCode}

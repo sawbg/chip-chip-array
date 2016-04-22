@@ -1,0 +1,24 @@
+\hypertarget{dark__magic_8cpp_source}{\section{dark\+\_\+magic.\+cpp}
+\label{dark__magic_8cpp_source}\index{src/dark\+\_\+magic.\+cpp@{src/dark\+\_\+magic.\+cpp}}
+}
+
+\begin{DoxyCode}
+00001 
+00007 \textcolor{preprocessor}{#include <cstdlib>}
+00008 \textcolor{preprocessor}{#include <iostream>}
+00009 \textcolor{preprocessor}{#include <string>}
+00010 
+00011 \textcolor{preprocessor}{#include "\hyperlink{Servo__Position__Shell_8cpp}{Servo\_Position\_Shell.cpp}"}
+00012 
+00013 \textcolor{keyword}{using namespace }\hyperlink{namespacestd}{std};
+00014 
+\hypertarget{dark__magic_8cpp_source_l00021}{}\hyperlink{dark__magic_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{00021} \textcolor{keywordtype}{int} \hyperlink{dark__magic_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}(\textcolor{keywordtype}{int} argc, \textcolor{keywordtype}{char}** argv) \{
+00022     \hyperlink{Servo__Position__Shell_8cpp_a4fc01d736fe50cf5b977f755b675f11d}{setup}();
+00023     
+00024     \textcolor{keywordflow}{if}(argc != 3) \{
+00025         cout << \textcolor{stringliteral}{"Usage: arm [SERVO] [VALUE]"} << endl;
+00026     \} \textcolor{keywordflow}{else} \{
+00027         \hyperlink{Servo__Position__Shell_8cpp_abd2cd3c2e36d42a2178a6f2fd12af905}{setServoPosition}((\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2}{Servo})atoi(argv[1]), atoi(argv[2]));
+00028     \}
+00029 \}
+\end{DoxyCode}

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['uint16_5ft',['uint16_t',['../Adafruit__PWMServoDriver_8h.html#a395b3b2bf5cb4674ab41b6bda68c15bb',1,'Adafruit_PWMServoDriver.h']]],
-  ['uint8_5ft',['uint8_t',['../Adafruit__PWMServoDriver_8h.html#ab077fa1127453be2bd9d4c3c8a768fa7',1,'uint8_t():&#160;Adafruit_PWMServoDriver.h'],['../NavigationControl_8h.html#ab077fa1127453be2bd9d4c3c8a768fa7',1,'uint8_t():&#160;NavigationControl.h'],['../Servo__Position__Shell_8h.html#ab077fa1127453be2bd9d4c3c8a768fa7',1,'uint8_t():&#160;Servo_Position_Shell.h']]]
+  ['servomax',['SERVOMAX',['../Servo__Position__Shell_8cpp.html#a357a7e9fa4e4d8ed2f5ef82f37143836',1,'Servo_Position_Shell.cpp']]],
+  ['servomin',['SERVOMIN',['../Servo__Position__Shell_8cpp.html#a65ff49a6e78be84de6e478345b32b508',1,'Servo_Position_Shell.cpp']]]
 ];

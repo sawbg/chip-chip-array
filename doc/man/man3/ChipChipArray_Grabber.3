@@ -1,0 +1,523 @@
+.TH "ChipChipArray::Grabber" 3 "Fri Apr 22 2016" "The Automatic Vasospasm Detection Application" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ChipChipArray::Grabber \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Grabber\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBGrabber\fP (\fBZone\fP \fBzone\fP, \fBSide\fP \fBside\fP)"
+.br
+.ti -1c
+.RI "void \fBClose\fP ()"
+.br
+.ti -1c
+.RI "\fBResult\fP \fBLoad\fP ()"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBDeposit\fP (\fBColor\fP color=\fBColor::Blue\fP)"
+.br
+.ti -1c
+.RI "void \fBExtend\fP ()"
+.br
+.ti -1c
+.RI "\fBBlock\fP \fBLocateBlocks\fP (\fBColor\fP color=\fBColor::Perrywinkle\fP)"
+.br
+.ti -1c
+.RI "\fBBlock\fP \fBLocateBlueBlock\fP ()"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBPiCamera\fP \fBcam\fP"
+.br
+.ti -1c
+.RI "\fBSide\fP \fBside\fP"
+.br
+.ti -1c
+.RI "\fBZone\fP \fBzone\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class finds blocks, identifies them, and sorts them according to color, size, and zone\&. 
+.PP
+Definition at line 30 of file Grabber\&.hpp\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ChipChipArray::Grabber::Grabber (\fBZone\fPzone, \fBSide\fPside)"
+Initializes the class according to the side and zone and extends the robotic arm into position\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIzone\fP the zone (A, B, or C) for which to pick up blocks\&.
+.br
+\fIside\fP the side from which the robot is moving and the position of the blocks (right or left) in the view of the camera to pick up first 
+.RE
+.PP
+
+.PP
+Definition at line 143 of file Grabber\&.hpp\&.
+.PP
+.nf
+143                                          {
+144         log\&.Status("Opening Grabber");
+145         log\&.Verbose("Zone: " + std::to_string(zone));
+146         log\&.Verbose("Side: " + std::to_string(side));
+147 
+148         this->zone = zone;
+149         this->side = side;
+150 
+151         log\&.Verbose("Setting HSV threshold values");
+152 
+153         rangeVals[Color::Red] = { cv::Scalar(0, 20, 60),
+154             cv::Scalar(12, 255, 255) };
+155         rangeVals[Color::Green] = { cv::Scalar(49, 41, 17),
+156             cv::Scalar(63, 255, 255) };
+157         rangeVals[Color::Blue] = { cv::Scalar(70, 0, 0),
+158             cv::Scalar(100, 255, 255) };
+159 
+160         /* Remember, we're only pretending this color's image is in HSV space\&.
+161          * It's really in YUV, as required by Jacob yellow-detection algorithm\&. */
+162         rangeVals[Color::Yellow] = { cv::Scalar(0, 0, 0),
+163             cv::Scalar(255, 255, 20)};
+164     }
+.fi
+.SH "Member Function Documentation"
+.PP 
+.SS "void ChipChipArray::Grabber::Close ()"
+Closes the \fBGrabber\fP\&. Retracts the arm and closes the camera\&. 
+.PP
+Definition at line 166 of file Grabber\&.hpp\&.
+.PP
+.nf
+166                         {
+167         log\&.Status("Closing Grabber");
+168         cam\&.Close();
+169     }
+.fi
+.SS "void ChipChipArray::Grabber::Deposit (\fBColor\fPcolor = \fC\fBColor::Blue\fP\fP)\fC [protected]\fP"
+Deposits blocks in the storage/unloading unit\&. 
+.PP
+Definition at line 171 of file Grabber\&.hpp\&.
+.PP
+.nf
+171                                      {
+172         if(color == Color::Blue) {
+173             arm\&.ClawClose();
+174             sleep(1);
+175             arm\&.BaseTilt(160);
+176             sleep(1);
+177             arm\&.Elbow(130);
+178             sleep(1);
+179             arm\&.BaseTurn(47);
+180             sleep(1);
+181             arm\&.ClawOpen();
+182             sleep(1);
+183         } else {
+184             throw std::runtime_error("Du Idiot! Die Armbewegungen für diese "
+185                     "Farbe sind noch nicht implementiert\&. Vielleicht sollst "
+186                     "du die englische Phrase lernen 'Would you like fries "
+187                     "with that?");
+188         }
+189     }
+.fi
+.SS "void ChipChipArray::Grabber::Extend ()\fC [protected]\fP"
+Sets arm to generic position roughly right above a stack of blocks\&. 
+.PP
+Definition at line 191 of file Grabber\&.hpp\&.
+.PP
+.nf
+191                          {
+192         arm\&.Elbow(180);
+193         usleep(500000);
+194         arm\&.BaseTurn(132);
+195         arm\&.BaseTilt(125);
+196         arm\&.Elbow(150);
+197         arm\&.WristTwist(90);
+198         arm\&.ClawOpen();
+199         sleep(2);
+200     }
+.fi
+.SS "\fBResult\fP ChipChipArray::Grabber::Load ()"
+Loads a block(s) (if possible) at the robot's current position\&.
+.PP
+\fBReturns:\fP
+.RS 4
+the number of half and whole blocks loaded 
+.RE
+.PP
+
+.PP
+Definition at line 202 of file Grabber\&.hpp\&.
+.PP
+.nf
+202                          {
+203         for(uint8 i = 0; i < 2; i++) {
+204             Extend();
+205 
+206             try {
+207                 Block block = (zone == Zone::A)
+208                     ? LocateBlocks(Color::Blue) : LocateBlueBlock();
+209 
+210                 float32 baseKonstant = 0\&.5;
+211                 if(block\&.dRightLeft > 0) baseKonstant *= -1;
+212                 float32 degree = baseKonstant * std::sqrt(block\&.dRightLeft);
+213                 arm\&.dBaseTurn(degree);
+214                 arm\&.dWristTwist(-degree);
+215                 sleep(1);
+216                 arm\&.BaseTilt(140);
+217                 sleep(1);
+218 
+219                 uint8 bend = (i == 0 ? 100 : 90);
+220 
+221                 // lower claw over block
+222                 for(uint8 j = 140; j >= bend; j -= 10) {
+223                     arm\&.Elbow(j);
+224                     sleep(1);
+225                 }
+226 
+227                 // deposit in bin
+228                 sleep(1);
+229                 Deposit();
+230             } catch(std::exception ex) {
+231                 log\&.Error(std::string("An exception occured attempting "
+232                             "to load the blocks in function Grabber::Load(): ") 
+233                         + ex\&.what());
+234             }
+235 
+236 
+237             if(i == 0) {
+238                 arm\&.BaseTurn(132);
+239             } else {
+240                 arm\&.BaseTurn(135);
+241                 sleep(1);
+242                 arm\&.BaseTilt(180);
+243                 sleep(1);
+244                 arm\&.Elbow(90);
+245                 sleep(1);
+246                 arm\&.Elbow(45);
+247                 sleep(1);
+248                 arm\&.Elbow(0);
+249             }
+250         }
+251     }
+.fi
+.SS "\fBBlock\fP ChipChipArray::Grabber::LocateBlocks (\fBColor\fPcolor = \fC\fBColor::Perrywinkle\fP\fP)\fC [protected]\fP"
+Loads a stack of blocks for all zones\&. Does multiple colors and both sizes\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIcolor\fP the color block for which to search\&. Perrywinkle denotes searching for all colors (because who actually knows what color perrywinkle is?)\&.
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+\fBBlock\fP instance representing the block found 
+.RE
+.PP
+
+.PP
+Definition at line 254 of file Grabber\&.hpp\&.
+.PP
+.nf
+254                                            {
+255         invokeCount++;
+256         std::string logstr = "Locating blocks";
+257 
+258         if(color == Color::Perrywinkle) {
+259             logstr += " (" + std::to_string(color) + ")";
+260         }
+261 
+262         log\&.Verbose(logstr);
+263 
+264         cv::Mat imgOrig;
+265         cv::transpose(cam\&.Snap(), imgOrig);
+266 
+267         cv::Mat imgHSV;
+268         cv::Mat imgThresh;
+269         std::vector<cv::Rect> blocks;
+270         std::vector<Color> colors;
+271 
+272         uint8 loopNum = (color == Color::Perrywinkle ? rangeVals\&.size() : 1);
+273 
+274         for(int i = 0; i < loopNum; i++) {
+275             if(loopNum > 1) {
+276                 switch(i) {
+277                     case 0:
+278                         color = Color::Red;
+279                         break;
+280 
+281                     case 1:
+282                         color = Color::Green;
+283                         break;
+284 
+285                     case 2:
+286                         color = Color::Blue;
+287                         break;
+288 
+289                         /* Must be last, because it changes imgHSV from HSV space
+290                          * to YUV space\&. */
+291                     case 3: 
+292                         color = Color::Yellow;
+293                         break;
+294                 }
+295             }
+296 
+297             log\&.Verbose("Searching: " + std::to_string(color));
+298 
+299             if(color == Color::Yellow) {
+300                 cv::Mat temp;
+301                 imgOrig\&.copyTo(temp);
+302                 cv::cvtColor(imgOrig, imgHSV, CV_BGR2YUV);
+303                 cv::cvtColor(imgHSV, temp, CV_HSV2BGR);
+304                 cv::cvtColor(temp, imgHSV, cv::COLOR_BGR2HSV);
+305                 log\&.Image(temp, "yuv_yellow_" + std::to_string(color)
+306                         + "_" + std::to_string(zone)
+307                         + std::to_string(invokeCount)
+308                         + "\&.bmp");
+309             } else {
+310                 cv::cvtColor(imgOrig, imgHSV, cv::COLOR_BGR2HSV);
+311             }
+312 
+313             cv::inRange(imgHSV, rangeVals[color][0],
+314                     rangeVals[color][1], imgThresh);
+315 
+316             /* 
+317              * Not quite sure what all this does, but it seems to
+318              * relate to smoothing the image
+319              */
+320             cv::erode(imgThresh, imgThresh,
+321                     cv::getStructuringElement(
+322                         cv::MORPH_ELLIPSE,
+323                         cv::Size(5, 5)));
+324             cv::dilate(imgThresh, imgThresh,
+325                     cv::getStructuringElement(
+326                         cv::MORPH_ELLIPSE,
+327                         cv::Size(5, 5)));
+328             cv::dilate(imgThresh, imgThresh,
+329                     cv::getStructuringElement(
+330                         cv::MORPH_ELLIPSE,
+331                         cv::Size(5, 5)));
+332             cv::erode(imgThresh, imgThresh,
+333                     cv::getStructuringElement(
+334                         cv::MORPH_ELLIPSE,
+335                         cv::Size(5, 5)));
+336 
+337             log\&.Image(imgThresh, "thresh_" + std::to_string(color)
+338                     + "_" + std::to_string(zone)
+339                     + std::to_string(invokeCount)
+340                     + "\&.bmp");
+341 
+342             // calculate contours
+343             std::vector<std::vector<cv::Point>> contours;
+344             cv::findContours(imgThresh, contours, CV_RETR_TREE,
+345                     CV_CHAIN_APPROX_SIMPLE,
+346                     cv::Point(0, 0));
+347             std::vector<std::vector<cv::Point>>
+348                 contours_poly(contours\&.size());
+349             std::vector<cv::Rect> bounds(contours\&.size());
+350 
+351             // find rectangle around polygon-ish shapes
+352             for(int i = 0; i < contours\&.size(); i++) {
+353                 uint32 area = cv::contourArea(contours[i]);
+354 
+355                 // determine if block and add to blocks vector
+356                 if(area > MIN_HALF_BLOCK_SIZE) {
+357                     cv::approxPolyDP(cv::Mat(contours[i]),
+358                             contours_poly[i], 20,
+359                             false);
+360                     cv::Rect rect = cv::boundingRect(
+361                             cv::Mat(contours_poly[i]));
+362                     log\&.Debug(std::to_string(color)
+363                             + " block detected "
+364                             "with area "
+365                             + std::to_string(
+366                                 area));
+367                     blocks\&.push_back(rect);
+368                     colors\&.push_back(color);
+369                 }
+370             }
+371         }
+372 
+373         if(blocks\&.size() == 0) {
+374             log\&.Image(imgOrig, "original_" + std::to_string(zone)
+375                     + std::to_string(invokeCount)
+376                     + "_no_blocks\&.bmp");
+377             throw std::runtime_error("No blocks found!");
+378         } else {
+379             log\&.Status(std::to_string(blocks\&.size())
+380                     + " blocks found");
+381         }
+382 
+383         // coordinates start in top right
+384         Block block = Block(blocks[0], colors[0]);
+385 
+386         if(blocks\&.size() > 1) {
+387             for(int i = 1; i < blocks\&.size(); i++) { 
+388                 if((side == Side::Right && blocks[i]\&.x 
+389                             > block\&.topLeft\&.x)
+390                         || (side == Side::Left
+391                             && blocks[i]\&.x
+392                             < block\&.topLeft\&.x)) {
+393                     block = Block(blocks[i], colors[i]);
+394                 }
+395             }
+396         }
+397 
+398         log\&.Status(std::to_string(block\&.color) + " block is located");
+399 
+400         log\&.Debug("Block properties => area: " + std::to_string(block\&.area)
+401                 + ", height: " + std::to_string(block\&.height) + ", width: "
+402                 + std::to_string(block\&.width) + ", offset: "
+403                 + std::to_string(block\&.offset) + ", color: "
+404                 + std::to_string(block\&.color) + ", size: "
+405                 + std::to_string(block\&.size));
+406 
+407         /* 
+408          * Draw surrounding rectangles from above on original
+409          * image\&.
+410          */
+411         cv::rectangle(imgOrig, block\&.topLeft , block\&.bottomRight,
+412                 cv::Scalar(255, 0, 0), 4, 8);
+413         log\&.Image(imgOrig, "original_" + std::to_string(zone)
+414                 + std::to_string(invokeCount)
+415                 + "\&.bmp");
+416 
+417         return block;
+418     }
+.fi
+.SS "\fBBlock\fP ChipChipArray::Grabber::LocateBlueBlock ()\fC [protected]\fP"
+Finds whole, blue blocks\&.
+.PP
+\fBReturns:\fP
+.RS 4
+\fBBlock\fP instance representing the block found 
+.RE
+.PP
+
+.PP
+Definition at line 420 of file Grabber\&.hpp\&.
+.PP
+.nf
+420                                    {
+421         std::vector<cv::Mat> channels;
+422         std::vector<cv::Rect> blocks;   
+423 
+424         invokeCount++;
+425         log\&.Status("Locating blue blocks");
+426 
+427         cv::Mat img;
+428         cv::Mat imgThresh;
+429         cv::split(cam\&.Snap(), channels);
+430         cv::transpose(channels[0], img);
+431 
+432         log\&.Verbose("Searching: Blue block");
+433         cv::inRange(img, 30, 255, imgThresh);
+434         log\&.Image(imgThresh, "thresh_blue" + std::to_string(zone)
+435                 + std::to_string(invokeCount) + "\&.bmp");
+436 
+437         // calculate contours
+438         std::vector<std::vector<cv::Point>> contours;
+439         cv::findContours(imgThresh, contours, CV_RETR_TREE,
+440                 CV_CHAIN_APPROX_SIMPLE,
+441                 cv::Point(0, 0));
+442         std::vector<std::vector<cv::Point>>
+443             contours_poly(contours\&.size());
+444         std::vector<cv::Rect> bounds(contours\&.size());
+445 
+446         // find rectangle around polygon-ish shapes
+447         for(int i = 0; i < contours\&.size(); i++) {
+448             uint32 area = cv::contourArea(contours[i]);
+449 
+450             // determine if block and add to blocks vector
+451             if(area > MIN_HALF_BLOCK_SIZE) {
+452                 cv::approxPolyDP(cv::Mat(contours[i]),
+453                         contours_poly[i], 20,
+454                         false);
+455                 cv::Rect rect = cv::boundingRect(
+456                         cv::Mat(contours_poly[i]));
+457                 log\&.Debug("Blue block detected with area "
+458                         + std::to_string(area));
+459                 blocks\&.push_back(rect);
+460             }
+461         }
+462 
+463 
+464         if(blocks\&.size() == 0) {
+465             log\&.Image(img, "original_" + std::to_string(zone)
+466                     + std::to_string(invokeCount)
+467                     + "_no_blocks\&.bmp");
+468             throw std::runtime_error("No blocks found!");
+469         } else {
+470             log\&.Status(std::to_string(blocks\&.size())
+471                     + " blocks found");
+472         }
+473 
+474         // coordinates start in top right
+475         Block block = Block(blocks[0], Color::Blue);
+476 
+477         if(blocks\&.size() > 1) {
+478             for(int i = 1; i < blocks\&.size(); i++) { 
+479                 if((side == Side::Right && blocks[i]\&.x 
+480                             > block\&.topLeft\&.x)
+481                         || (side == Side::Left
+482                             && blocks[i]\&.x
+483                             < block\&.topLeft\&.x)) {
+484                     block = Block(blocks[i], Color::Blue);
+485                 }
+486             }
+487         }
+488 
+489         log\&.Status(std::to_string(block\&.color) + " block is located");
+490 
+491         log\&.Debug("Block properties => area: " + std::to_string(block\&.area)
+492                 + ", height: " + std::to_string(block\&.height) + ", width: "
+493                 + std::to_string(block\&.width) + ", offset: "
+494                 + std::to_string(block\&.offset) + ", color: "
+495                 + std::to_string(block\&.color) + ", size: "
+496                 + std::to_string(block\&.size));
+497 
+498         /* 
+499          * Draw surrounding rectangles from above on original
+500          * image\&.
+501          */
+502         cv::rectangle(img, block\&.topLeft , block\&.bottomRight,
+503                 cv::Scalar(255, 0, 0), 4, 8);
+504         log\&.Image(img, "original_" + std::to_string(zone)
+505                 + std::to_string(invokeCount)
+506                 + "\&.bmp");
+507 
+508         return block;
+509     }
+.fi
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBPiCamera\fP ChipChipArray::Grabber::cam\fC [protected]\fP"
+The Raspicam 
+.PP
+Definition at line 64 of file Grabber\&.hpp\&.
+.SS "\fBSide\fP ChipChipArray::Grabber::side\fC [protected]\fP"
+The side from which the robot is coming (i\&.e\&., the side where the higher priority blocks are to be picked up\&. 
+.PP
+Definition at line 71 of file Grabber\&.hpp\&.
+.SS "\fBZone\fP ChipChipArray::Grabber::zone\fC [protected]\fP"
+The zone in which blocks are being loaded\&. 
+.PP
+Definition at line 76 of file Grabber\&.hpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for The Automatic Vasospasm Detection Application from the source code\&.

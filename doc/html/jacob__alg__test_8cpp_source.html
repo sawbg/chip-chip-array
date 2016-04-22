@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.8"/>
-<title>My Project: src/jacob_alg_test.cpp Source File</title>
+<title>The Automatic Vasospasm Detection Application: src/jacob_alg_test.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,7 +29,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">My Project
+   <div id="projectname">The Automatic Vasospasm Detection Application
    </div>
   </td>
  </tr>
@@ -106,41 +106,41 @@ $(document).ready(function(){initNavTree('jacob__alg__test_8cpp_source.html','')
 </div><!--header-->
 <div class="contents">
 <a href="jacob__alg__test_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;opencv2/core/core.hpp&gt;</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;opencv2/imgproc/imgproc.hpp&gt;</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="PiCamera_8hpp.html">PiCamera.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacestd.html">std</a>;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacecv.html">cv</a>;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespaceChipChipArray.html">ChipChipArray</a>;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
-<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="jacob__alg__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">   20</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="jacob__alg__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>() {</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="classChipChipArray_1_1PiCamera.html">PiCamera</a> cam;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    namedWindow(<span class="stringliteral">&quot;window&quot;</span>, CV_WINDOW_NORMAL);</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    Mat orig = cam.<a class="code" href="classChipChipArray_1_1PiCamera.html#a58fb0de02570dce9a9cb60a1a04fb84f">Snap</a>();</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    Mat yuv;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    Mat fin;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    cvtColor(orig, yuv, CV_BGR2YUV);</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    cvtColor(yuv, fin, CV_HSV2BGR);</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    imshow(<span class="stringliteral">&quot;window&quot;</span>, fin);</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    waitKey(-1);</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}</div>
-<div class="ttc" id="PiCamera_8hpp_html"><div class="ttname"><a href="PiCamera_8hpp.html">PiCamera.hpp</a></div></div>
-<div class="ttc" id="namespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div><div class="ttdef"><b>Definition:</b> <a href="definitions_8hpp_source.html#l00102">definitions.hpp:102</a></div></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;opencv2/core/core.hpp&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;opencv2/imgproc/imgproc.hpp&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="PiCamera_8hpp.html">PiCamera.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacestd.html">std</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacecv.html">cv</a>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespaceChipChipArray.html">ChipChipArray</a>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="jacob__alg__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">   21</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="jacob__alg__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>() {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="classChipChipArray_1_1PiCamera.html">PiCamera</a> cam;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    namedWindow(<span class="stringliteral">&quot;window&quot;</span>, CV_WINDOW_NORMAL);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    Mat orig = cam.<a class="code" href="classChipChipArray_1_1PiCamera.html#a58fb0de02570dce9a9cb60a1a04fb84f">Snap</a>();</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    Mat yuv;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    Mat fin;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    cvtColor(orig, yuv, CV_BGR2YUV);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    cvtColor(yuv, fin, CV_HSV2BGR);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    imshow(<span class="stringliteral">&quot;window&quot;</span>, fin);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    waitKey(-1);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
+<div class="ttc" id="PiCamera_8hpp_html"><div class="ttname"><a href="PiCamera_8hpp.html">PiCamera.hpp</a></div><div class="ttdoc">Contains PiCamera class. </div></div>
+<div class="ttc" id="namespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div><div class="ttdef"><b>Definition:</b> <a href="definitions_8hpp_source.html#l00103">definitions.hpp:103</a></div></div>
 <div class="ttc" id="namespacecv_html"><div class="ttname"><a href="namespacecv.html">cv</a></div></div>
-<div class="ttc" id="namespaceChipChipArray_html"><div class="ttname"><a href="namespaceChipChipArray.html">ChipChipArray</a></div><div class="ttdoc">contains Block class </div><div class="ttdef"><b>Definition:</b> <a href="Arm_8hpp_source.html#l00016">Arm.hpp:16</a></div></div>
-<div class="ttc" id="jacob__alg__test_8cpp_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="jacob__alg__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdef"><b>Definition:</b> <a href="jacob__alg__test_8cpp_source.html#l00020">jacob_alg_test.cpp:20</a></div></div>
-<div class="ttc" id="classChipChipArray_1_1PiCamera_html"><div class="ttname"><a href="classChipChipArray_1_1PiCamera.html">ChipChipArray::PiCamera</a></div><div class="ttdef"><b>Definition:</b> <a href="PiCamera_8hpp_source.html#l00023">PiCamera.hpp:23</a></div></div>
-<div class="ttc" id="classChipChipArray_1_1PiCamera_html_a58fb0de02570dce9a9cb60a1a04fb84f"><div class="ttname"><a href="classChipChipArray_1_1PiCamera.html#a58fb0de02570dce9a9cb60a1a04fb84f">ChipChipArray::PiCamera::Snap</a></div><div class="ttdeci">cv::Mat Snap()</div><div class="ttdef"><b>Definition:</b> <a href="PiCamera_8hpp_source.html#l00068">PiCamera.hpp:68</a></div></div>
+<div class="ttc" id="namespaceChipChipArray_html"><div class="ttname"><a href="namespaceChipChipArray.html">ChipChipArray</a></div><div class="ttdef"><b>Definition:</b> <a href="Arm_8hpp_source.html#l00017">Arm.hpp:17</a></div></div>
+<div class="ttc" id="jacob__alg__test_8cpp_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="jacob__alg__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdef"><b>Definition:</b> <a href="jacob__alg__test_8cpp_source.html#l00021">jacob_alg_test.cpp:21</a></div></div>
+<div class="ttc" id="classChipChipArray_1_1PiCamera_html"><div class="ttname"><a href="classChipChipArray_1_1PiCamera.html">ChipChipArray::PiCamera</a></div><div class="ttdef"><b>Definition:</b> <a href="PiCamera_8hpp_source.html#l00024">PiCamera.hpp:24</a></div></div>
+<div class="ttc" id="classChipChipArray_1_1PiCamera_html_a58fb0de02570dce9a9cb60a1a04fb84f"><div class="ttname"><a href="classChipChipArray_1_1PiCamera.html#a58fb0de02570dce9a9cb60a1a04fb84f">ChipChipArray::PiCamera::Snap</a></div><div class="ttdeci">cv::Mat Snap()</div><div class="ttdef"><b>Definition:</b> <a href="PiCamera_8hpp_source.html#l00069">PiCamera.hpp:69</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="jacob__alg__test_8cpp.html">jacob_alg_test.cpp</a></li>
-    <li class="footer">Generated on Fri Mar 18 2016 20:38:58 for My Project by
+    <li class="footer">Generated on Fri Apr 22 2016 15:41:26 for The Automatic Vasospasm Detection Application by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

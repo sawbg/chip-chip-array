@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.8"/>
-<title>My Project: ChipChipArray::PiCamera Class Reference</title>
+<title>The Automatic Vasospasm Detection Application: ChipChipArray::PiCamera Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,7 +29,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">My Project
+   <div id="projectname">The Automatic Vasospasm Detection Application
    </div>
   </td>
  </tr>
@@ -126,7 +126,7 @@ Public Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This class is a basic wrapper to allow the Raspicam to interface with OpenCV. It uses another wrapper class, Raspicam, provided by Cédric Verstraeten (<a href="https://github.com/cedricve/raspicam">https://github.com/cedricve/raspicam</a>). </p>
 
-<p>Definition at line <a class="el" href="PiCamera_8hpp_source.html#l00023">23</a> of file <a class="el" href="PiCamera_8hpp_source.html">PiCamera.hpp</a>.</p>
+<p>Definition at line <a class="el" href="PiCamera_8hpp_source.html#l00024">24</a> of file <a class="el" href="PiCamera_8hpp_source.html">PiCamera.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a5910a3284877677decb6529d88e43487"></a>
 <div class="memitem">
@@ -150,8 +150,10 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Opens the camera and configures it for color images. </p>
 
-<p>Definition at line <a class="el" href="PiCamera_8hpp_source.html#l00028">28</a> of file <a class="el" href="PiCamera_8hpp_source.html">PiCamera.hpp</a>.</p>
-
+<p>Definition at line <a class="el" href="PiCamera_8hpp_source.html#l00029">29</a> of file <a class="el" href="PiCamera_8hpp_source.html">PiCamera.hpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;: <a class="code" href="classChipChipArray_1_1PiCamera.html#a5910a3284877677decb6529d88e43487">PiCamera</a>(<span class="keyword">true</span>) {};</div>
+<div class="ttc" id="classChipChipArray_1_1PiCamera_html_a5910a3284877677decb6529d88e43487"><div class="ttname"><a href="classChipChipArray_1_1PiCamera.html#a5910a3284877677decb6529d88e43487">ChipChipArray::PiCamera::PiCamera</a></div><div class="ttdeci">PiCamera()</div><div class="ttdef"><b>Definition:</b> <a href="PiCamera_8hpp_source.html#l00029">PiCamera.hpp:29</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a0a4480e9e7475ae7af9a7523239caf8d"></a>
@@ -175,8 +177,13 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="PiCamera_8hpp_source.html#l00058">58</a> of file <a class="el" href="PiCamera_8hpp_source.html">PiCamera.hpp</a>.</p>
-
+<p>Definition at line <a class="el" href="PiCamera_8hpp_source.html#l00059">59</a> of file <a class="el" href="PiCamera_8hpp_source.html">PiCamera.hpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                                    {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        cam.set(CV_CAP_PROP_FORMAT, (useColor ? CV_16UC3 : CV_16UC1));</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        cam.open();</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        usleep(500000);  <span class="comment">// required to allow camera time to adjust!</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -194,8 +201,11 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Closes connection to camera. </p>
 
-<p>Definition at line <a class="el" href="PiCamera_8hpp_source.html#l00064">64</a> of file <a class="el" href="PiCamera_8hpp_source.html">PiCamera.hpp</a>.</p>
-
+<p>Definition at line <a class="el" href="PiCamera_8hpp_source.html#l00065">65</a> of file <a class="el" href="PiCamera_8hpp_source.html">PiCamera.hpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                         {</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        cam.release();</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    }</div>
+</div><!-- fragment -->
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -222,14 +232,23 @@ Here is the caller graph for this function:</div>
 <p>Makes picture.</p>
 <dl class="section return"><dt>Returns</dt><dd>OpenCV Mat object (i.e., an image) from the camera </dd></dl>
 
-<p>Definition at line <a class="el" href="PiCamera_8hpp_source.html#l00068">68</a> of file <a class="el" href="PiCamera_8hpp_source.html">PiCamera.hpp</a>.</p>
-
+<p>Definition at line <a class="el" href="PiCamera_8hpp_source.html#l00069">69</a> of file <a class="el" href="PiCamera_8hpp_source.html">PiCamera.hpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                         {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordflow">if</span>(!cam.isOpened()) <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;Camera &quot;</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                <span class="stringliteral">&quot;is not open!&quot;</span>);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        cv::Mat image;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        cam.grab();</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        cam.retrieve(image);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keywordflow">return</span> image;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    }</div>
+</div><!-- fragment -->
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classChipChipArray_1_1PiCamera_a58fb0de02570dce9a9cb60a1a04fb84f_icgraph.png" border="0" usemap="#classChipChipArray_1_1PiCamera_a58fb0de02570dce9a9cb60a1a04fb84f_icgraph" alt=""/></div>
 <map name="classChipChipArray_1_1PiCamera_a58fb0de02570dce9a9cb60a1a04fb84f_icgraph" id="classChipChipArray_1_1PiCamera_a58fb0de02570dce9a9cb60a1a04fb84f_icgraph">
-<area shape="rect" id="node2" href="cv__channel__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="284,5,335,32"/><area shape="rect" id="node3" href="namespaceChipChipArray.html#a7fc3d1edffca11531cd09fdab7c8b88d" title="ChipChipArray::main" alt="" coords="238,56,381,83"/><area shape="rect" id="node4" href="classChipChipArray_1_1Grabber.html#af49248c957a1695dcde79c0f5f8df99b" title="ChipChipArray::Grabber\l::LocateBlocks" alt="" coords="229,107,390,149"/><area shape="rect" id="node7" href="classChipChipArray_1_1Grabber.html#ab9b0d6a64b2c94c0d0f810a5ebeef6ec" title="ChipChipArray::Grabber\l::LocateBlueBlock" alt="" coords="229,173,390,214"/><area shape="rect" id="node8" href="namespaceChipChipArray.html#a6c7465049b5d408e1a238b6d8ffa887d" title="ChipChipArray::ScanQR" alt="" coords="227,239,392,265"/><area shape="rect" id="node5" href="classChipChipArray_1_1Grabber.html#a56639f8f9ba9468bce4b6d69ceb2eb54" title="ChipChipArray::Grabber\l::Load" alt="" coords="440,141,601,182"/><area shape="rect" id="node6" href="loading__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="649,148,700,175"/><area shape="rect" id="node9" href="qr__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="495,239,546,265"/></map>
+<area shape="rect" id="node2" href="namespaceChipChipArray.html#a7fc3d1edffca11531cd09fdab7c8b88d" title="ChipChipArray::main" alt="" coords="238,5,381,32"/><area shape="rect" id="node3" href="cv__shape_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="284,56,335,83"/><area shape="rect" id="node4" href="classChipChipArray_1_1Grabber.html#af49248c957a1695dcde79c0f5f8df99b" title="ChipChipArray::Grabber\l::LocateBlocks" alt="" coords="229,107,390,149"/><area shape="rect" id="node7" href="classChipChipArray_1_1Grabber.html#ab9b0d6a64b2c94c0d0f810a5ebeef6ec" title="ChipChipArray::Grabber\l::LocateBlueBlock" alt="" coords="229,173,390,214"/><area shape="rect" id="node8" href="namespaceChipChipArray.html#a6c7465049b5d408e1a238b6d8ffa887d" title="ChipChipArray::ScanQR" alt="" coords="227,239,392,265"/><area shape="rect" id="node5" href="classChipChipArray_1_1Grabber.html#a56639f8f9ba9468bce4b6d69ceb2eb54" title="ChipChipArray::Grabber\l::Load" alt="" coords="440,141,601,182"/><area shape="rect" id="node6" href="loading__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="649,148,700,175"/><area shape="rect" id="node9" href="qr__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="495,239,546,265"/></map>
 </div>
 </p>
 
@@ -244,7 +263,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceChipChipArray.html">ChipChipArray</a></li><li class="navelem"><a class="el" href="classChipChipArray_1_1PiCamera.html">PiCamera</a></li>
-    <li class="footer">Generated on Fri Mar 18 2016 20:39:00 for My Project by
+    <li class="footer">Generated on Fri Apr 22 2016 15:41:29 for The Automatic Vasospasm Detection Application by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

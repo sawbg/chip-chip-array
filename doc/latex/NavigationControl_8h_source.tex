@@ -1,0 +1,41 @@
+\hypertarget{NavigationControl_8h_source}{\section{Navigation\+Control.\+h}
+\label{NavigationControl_8h_source}\index{src/\+Navigation\+Control.\+h@{src/\+Navigation\+Control.\+h}}
+}
+
+\begin{DoxyCode}
+00001 
+00008 \textcolor{comment}{/* }
+00009 \textcolor{comment}{ * File:   NavigationControl.h}
+00010 \textcolor{comment}{ * Author: Nick}
+00011 \textcolor{comment}{ *}
+00012 \textcolor{comment}{ * Created on February 22, 2016, 12:00 PM}
+00013 \textcolor{comment}{ */}
+00014 
+00015 
+00016 \textcolor{preprocessor}{#ifndef NAVIGATIONCONTROL\_H}
+00017 \textcolor{preprocessor}{#define NAVIGATIONCONTROL\_H}
+00018 \textcolor{preprocessor}{#include <iostream>}
+00019 \textcolor{preprocessor}{#include <wiringPi.h>}
+00020 \textcolor{preprocessor}{#include <wiringPiI2C.h>}
+00021 \textcolor{preprocessor}{#include <ctype.h>}
+00022 
+00023 \textcolor{preprocessor}{#ifndef uint8\_t}
+\hypertarget{NavigationControl_8h_source_l00024}{}\hyperlink{NavigationControl_8h_ab077fa1127453be2bd9d4c3c8a768fa7}{00024} \textcolor{preprocessor}{#define uint8\_t unsigned char}
+00025 \textcolor{preprocessor}{#endif}
+00026 
+00027 \textcolor{preprocessor}{#ifdef \_\_cplusplus}
+00028 \textcolor{keyword}{extern} \textcolor{stringliteral}{"C"}\{
+00029 \textcolor{preprocessor}{#endif}
+00030 
+00031 
+00032 \textcolor{keywordtype}{void} \hyperlink{NavigationControl_8h_acb338a668bf01ea34c27c56db0d23782}{navigationSetup}(\hyperlink{NavigationControl_8h_ab077fa1127453be2bd9d4c3c8a768fa7}{uint8\_t} navigation\_add);
+00033 
+00034 \textcolor{keywordtype}{void} \hyperlink{NavigationControl_8h_a7534ad4cfb2b6663c3a1d15bb41bd71d}{commandNavigation}(\hyperlink{NavigationControl_8h_ab077fa1127453be2bd9d4c3c8a768fa7}{uint8\_t} navigationcommand);
+00035 
+00036 \textcolor{preprocessor}{#ifdef \_\_cplusplus}
+00037 \}
+00038 \textcolor{preprocessor}{#endif }
+00039 
+00040 \textcolor{preprocessor}{#endif }\textcolor{comment}{/*NAVIGATIONCONTROL\_H*/}\textcolor{preprocessor}{}
+00041 
+\end{DoxyCode}

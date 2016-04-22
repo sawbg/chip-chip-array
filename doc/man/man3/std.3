@@ -1,0 +1,156 @@
+.TH "std" 3 "Fri Apr 22 2016" "The Automatic Vasospasm Detection Application" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+std \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "string \fBto_string\fP (\fBBlockPosition\fP pos)"
+.br
+.ti -1c
+.RI "string \fBto_string\fP (\fBColor\fP color)"
+.br
+.ti -1c
+.RI "string \fBto_string\fP (\fBLogMode\fP mode)"
+.br
+.ti -1c
+.RI "string \fBto_string\fP (\fBResult\fP res)"
+.br
+.ti -1c
+.RI "string \fBto_string\fP (\fBSide\fP side)"
+.br
+.ti -1c
+.RI "string \fBto_string\fP (\fBSize\fP size)"
+.br
+.ti -1c
+.RI "string \fBto_string\fP (\fBZone\fP zone)"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "string std::to_string (\fBBlockPosition\fPpos)"
+Converts a BlockPosition to a string\&. 
+.PP
+Definition at line 107 of file definitions\&.hpp\&.
+.PP
+.nf
+107                                         {
+108         if(pos == BlockPosition::Front) return string("Front");
+109         else return string("Back");
+110     }
+.fi
+.SS "string std::to_string (\fBColor\fPcolor)"
+Converts a Color to a string\&. 
+.PP
+Definition at line 115 of file definitions\&.hpp\&.
+.PP
+.nf
+115                                   {
+116         string ret;
+117 
+118         switch((ENUM)color) {
+119             case 0:
+120                 ret = "Red";
+121                 break;
+122 
+123             case 1:
+124                 ret = "Yellow";
+125                 break;
+126 
+127             case 2:
+128                 ret = "Green";
+129                 break;
+130 
+131             case 3:
+132                 ret = "Blue";
+133                 break;
+134 
+135             case 4:
+136                 ret = "All";
+137                 break;
+138         }
+139 
+140         return ret;
+141     }
+.fi
+.SS "string std::to_string (\fBLogMode\fPmode)"
+Converts a LogMode to a string\&. 
+.PP
+Definition at line 146 of file definitions\&.hpp\&.
+.PP
+.nf
+146                                    {
+147         if(mode == LogMode::Multi) return string("Text");
+148         else return string("Multi");
+149     }
+.fi
+.SS "string std::to_string (\fBResult\fPres)"
+Converts a Result to a string\&. 
+.PP
+Definition at line 154 of file definitions\&.hpp\&.
+.PP
+.nf
+154                                  {
+155         string ret;
+156 
+157         switch((ENUM)res) {
+158             case -1:
+159                 ret = "No Blocks";
+160                 break;
+161 
+162             case 0:
+163                 ret = "Two whole, no halves";
+164                 break;
+165 
+166             case 2:
+167                 ret = "Two whole, two halves";
+168                 break;
+169 
+170             case 4:
+171                 ret = "No whole, four halves";
+172                 break;
+173         }
+174 
+175         return ret;
+176     }
+.fi
+.SS "string std::to_string (\fBSide\fPside)"
+Converts a Side to a string\&. 
+.PP
+Definition at line 181 of file definitions\&.hpp\&.
+.PP
+.nf
+181                                 {
+182         if(side == Side::Left) return string("Left");
+183         else return string("Right");
+184     }
+.fi
+.SS "string std::to_string (\fBSize\fPsize)"
+Converts a Size to a string\&. 
+.PP
+Definition at line 189 of file definitions\&.hpp\&.
+.PP
+.nf
+189                                 {
+190         if(size == Size::Long) return string("Long");
+191         else return string("Short");
+192     }
+.fi
+.SS "string std::to_string (\fBZone\fPzone)"
+Converts a Zone to a string\&. 
+.PP
+Definition at line 197 of file definitions\&.hpp\&.
+.PP
+.nf
+197                                 {
+198         return string(1, (char)zone);
+199     }
+.fi
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for The Automatic Vasospasm Detection Application from the source code\&.

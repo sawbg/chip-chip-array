@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.8"/>
-<title>My Project: src/cv_shape.cpp File Reference</title>
+<title>The Automatic Vasospasm Detection Application: src/cv_shape.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,7 +29,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">My Project
+   <div id="projectname">The Automatic Vasospasm Detection Application
    </div>
   </td>
  </tr>
@@ -107,6 +107,9 @@ $(document).ready(function(){initNavTree('cv__shape_8cpp.html','');});
 <div class="title">cv_shape.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Contains a program to aid in determining HSV ranges.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;iostream&gt;</code><br />
 <code>#include &lt;opencv2/highgui/highgui.hpp&gt;</code><br />
 <code>#include &lt;opencv2/imgproc/imgproc.hpp&gt;</code><br />
@@ -118,7 +121,7 @@ Include dependency graph for cv_shape.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="cv__shape_8cpp__incl.png" border="0" usemap="#src_2cv__shape_8cpp" alt=""/></div>
 <map name="src_2cv__shape_8cpp" id="src_2cv__shape_8cpp">
-<area shape="rect" id="node6" href="definitions_8hpp.html" title="definitions.hpp" alt="" coords="216,155,323,181"/><area shape="rect" id="node8" href="PiCamera_8hpp.html" title="PiCamera.hpp" alt="" coords="307,80,413,107"/></map>
+<area shape="rect" id="node6" href="definitions_8hpp.html" title="Contains definitions for architecture&#45;independant numeric variables, enumerations and enumerated clas..." alt="" coords="216,155,323,181"/><area shape="rect" id="node8" href="PiCamera_8hpp.html" title="Contains PiCamera class. " alt="" coords="307,80,413,107"/></map>
 </div>
 </div>
 <p><a href="cv__shape_8cpp_source.html">Go to the source code of this file.</a></p>
@@ -128,7 +131,14 @@ Functions</h2></td></tr>
 <tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cv__shape_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
 <tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Contains a program to aid in determining HSV ranges. </p>
+<dl class="section author"><dt>Author</dt><dd>Shermal Fernando </dd>
+<dd>
+Samuel Andrew Wisner, <a href="#" onclick="location.href='mai'+'lto:'+'awi'+'sn'+'er9'+'4@'+'gma'+'il'+'.co'+'m'; return false;">awisn<span style="display: none;">.nosp@m.</span>er94<span style="display: none;">.nosp@m.</span>@gmai<span style="display: none;">.nosp@m.</span>l.co<span style="display: none;">.nosp@m.</span>m</a> </dd></dl>
+
+<p>Definition in file <a class="el" href="cv__shape_8cpp_source.html">cv_shape.cpp</a>.</p>
+</div><h2 class="groupheader">Function Documentation</h2>
 <a class="anchor" id="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
 <div class="memitem">
 <div class="memproto">
@@ -148,8 +158,109 @@ Functions</h2></td></tr>
 <li>"Creating Bounding boxes and circles for contours" in the OpenCV 2.4 Tutorials (<a href="http://opencv-srf.blogspot.com/2011/09/object-detection-tracking-using-contours.html">http://opencv-srf.blogspot.com/2011/09/object-detection-tracking-using-contours.html</a>) </li>
 </ul>
 
-<p>Definition at line <a class="el" href="cv__shape_8cpp_source.html#l00036">36</a> of file <a class="el" href="cv__shape_8cpp_source.html">cv_shape.cpp</a>.</p>
-
+<p>Definition at line <a class="el" href="cv__shape_8cpp_source.html#l00037">37</a> of file <a class="el" href="cv__shape_8cpp_source.html">cv_shape.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;           {</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="classChipChipArray_1_1PiCamera.html">PiCamera</a> cam;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="comment">// window names</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">string</span> control = <span class="stringliteral">&quot;Settings&quot;</span>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">string</span> winThresh = <span class="stringliteral">&quot;Image Threshold&quot;</span>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">string</span> winContours = <span class="stringliteral">&quot;Contours Detected&quot;</span>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="comment">// control (trackbar) variables</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">int</span> lowH = 0;  <span class="comment">// hue</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">int</span> highH = 255;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">int</span> lowS = 0;  <span class="comment">// saturation</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">int</span> highS = 255;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">int</span> lowV = 0;  <span class="comment">// value</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">int</span> highV = 255;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">int</span> polyEps = 3;  <span class="comment">// max dif b/t bin shape edge &amp; est poly edge</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="comment">// opening windows</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    namedWindow(control, CV_WINDOW_AUTOSIZE);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    namedWindow(winThresh, CV_WINDOW_AUTOSIZE);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    namedWindow(winContours, CV_WINDOW_AUTOSIZE);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="comment">// creating control trackbars</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    createTrackbar(<span class="stringliteral">&quot;Hue Min&quot;</span>, control, &amp;lowH, highH);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    createTrackbar(<span class="stringliteral">&quot;Hue Max&quot;</span>, control, &amp;highH, highH);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    createTrackbar(<span class="stringliteral">&quot;Sat Min&quot;</span>, control, &amp;lowS, highS);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    createTrackbar(<span class="stringliteral">&quot;Sat Max&quot;</span>, control, &amp;highS, highS);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    createTrackbar(<span class="stringliteral">&quot;Val Min&quot;</span>, control, &amp;lowV, highV);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    createTrackbar(<span class="stringliteral">&quot;Val Max&quot;</span>, control, &amp;highV, highV);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    createTrackbar(<span class="stringliteral">&quot;Polygon Epsilon&quot;</span>, control, &amp;polyEps, 20);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordflow">while</span>(<span class="keyword">true</span>) {</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        Mat imgOrig = cam.<a class="code" href="classChipChipArray_1_1PiCamera.html#a58fb0de02570dce9a9cb60a1a04fb84f">Snap</a>();  <span class="comment">// real iage</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        Mat imgHSV;  <span class="comment">// RGB image converted to HSV space</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        Mat imgThresh;  <span class="comment">// binary threshold image</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="comment">//cvtColor(imgOrig, imgHSV, CV_BGR2YUV);</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="comment">//cvtColor(imgHSV, imgOrig, CV_HSV2BGR);</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        cvtColor(imgOrig, imgHSV, COLOR_BGR2HSV);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="comment">// create binary image</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        inRange(imgHSV, Scalar(lowH, lowS, lowV), Scalar(highH, highS,</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                    highV), imgThresh);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="comment">/* </span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="comment">         * Not quite sure what all this does, but it seems to</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="comment">         * relate to smoothing the image</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="comment">         */</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        erode(imgThresh, imgThresh, getStructuringElement(</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                    MORPH_ELLIPSE, <a class="code" href="definitions_8hpp.html#a9809446fd16a744b6df9808293f14153">cv::Size</a>(5, 5)));</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        dilate(imgThresh, imgThresh, getStructuringElement(</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                    MORPH_ELLIPSE, <a class="code" href="definitions_8hpp.html#a9809446fd16a744b6df9808293f14153">cv::Size</a>(5, 5)));</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        dilate(imgThresh, imgThresh, getStructuringElement(</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                    MORPH_ELLIPSE, <a class="code" href="definitions_8hpp.html#a9809446fd16a744b6df9808293f14153">cv::Size</a>(5, 5)));</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        erode(imgThresh, imgThresh, getStructuringElement(</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                    MORPH_ELLIPSE, <a class="code" href="definitions_8hpp.html#a9809446fd16a744b6df9808293f14153">cv::Size</a>(5, 5)));</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="comment">// show binary image in threshold window</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        imshow(winThresh, imgThresh);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="comment">// calculate contours</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        vector&lt;vector&lt;Point&gt;&gt; contours;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        findContours(imgThresh, contours, CV_RETR_TREE,</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                CV_CHAIN_APPROX_SIMPLE, Point(0, 0));</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        vector&lt;vector&lt;Point&gt;&gt; contours_poly(contours.size());</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        vector&lt;Rect&gt; bounds(contours.size());</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <span class="keywordtype">int</span> maxArea = 0;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <span class="keywordtype">int</span> offset;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <span class="comment">// find rectangle around polygon-ish shapes</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; contours.size(); i++) {</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            approxPolyDP(Mat(contours[i]), contours_poly[i],</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                    polyEps, <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;            bounds[i] = boundingRect(Mat(contours_poly[i]));</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        }</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <span class="comment">/* </span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="comment">         * Draw surrounding rectangles from above on original</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="comment">         * image.</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="comment">         */</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; contours.size(); i++) {</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            rectangle(imgOrig, bounds[i].tl(), bounds[i].br(),</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;                    Scalar(255, 0, 0), 2, 8, 0);</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;            <span class="comment">//drawContours(imgOrig, contours_poly, i,</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;            <span class="comment">//      Scalar(255, 0, 0), 4, 8);</span></div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            <span class="keywordtype">int</span> area = bounds[i].width * bounds[i].height;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;            <span class="keywordflow">if</span>(area &gt; maxArea) {</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;                offset = abs(640 - (bounds[i].tl().x + bounds[i].width / 2));</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;                maxArea = area;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;            }</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        }</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;Block area: &quot;</span> &lt;&lt; maxArea &lt;&lt; <span class="stringliteral">&quot; pixels\t\t&quot;</span> </div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;            &lt;&lt; <span class="stringliteral">&quot;Center offset: &quot;</span> &lt;&lt; offset &lt;&lt; endl;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        imshow(winContours, imgOrig);  <span class="comment">// show original image with rectangles</span></div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        waitKey(50);  <span class="comment">// has to be here :(</span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    }</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;}</div>
+<div class="ttc" id="definitions_8hpp_html_a9809446fd16a744b6df9808293f14153"><div class="ttname"><a href="definitions_8hpp.html#a9809446fd16a744b6df9808293f14153">Size</a></div><div class="ttdeci">Size</div><div class="ttdef"><b>Definition:</b> <a href="definitions_8hpp_source.html#l00089">definitions.hpp:89</a></div></div>
+<div class="ttc" id="classChipChipArray_1_1PiCamera_html"><div class="ttname"><a href="classChipChipArray_1_1PiCamera.html">ChipChipArray::PiCamera</a></div><div class="ttdef"><b>Definition:</b> <a href="PiCamera_8hpp_source.html#l00024">PiCamera.hpp:24</a></div></div>
+<div class="ttc" id="classChipChipArray_1_1PiCamera_html_a58fb0de02570dce9a9cb60a1a04fb84f"><div class="ttname"><a href="classChipChipArray_1_1PiCamera.html#a58fb0de02570dce9a9cb60a1a04fb84f">ChipChipArray::PiCamera::Snap</a></div><div class="ttdeci">cv::Mat Snap()</div><div class="ttdef"><b>Definition:</b> <a href="PiCamera_8hpp_source.html#l00069">PiCamera.hpp:69</a></div></div>
+</div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -167,7 +278,7 @@ Here is the call graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="cv__shape_8cpp.html">cv_shape.cpp</a></li>
-    <li class="footer">Generated on Fri Mar 18 2016 20:38:59 for My Project by
+    <li class="footer">Generated on Fri Apr 22 2016 15:41:26 for The Automatic Vasospasm Detection Application by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

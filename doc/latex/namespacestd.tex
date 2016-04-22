@@ -30,8 +30,15 @@ string \hyperlink{namespacestd_ac50951e195256b4c2311f90189f64ba8}{to\+\_\+string
 )}}\label{namespacestd_aa5ddf582a1c96ffe258c997be9a294a3}
 Converts a Block\+Position to a string. 
 
-Definition at line 106 of file definitions.\+hpp.
+Definition at line \hyperlink{definitions_8hpp_source_l00107}{107} of file \hyperlink{definitions_8hpp_source}{definitions.\+hpp}.
 
+
+\begin{DoxyCode}
+00107                                         \{
+00108         \textcolor{keywordflow}{if}(pos == \hyperlink{definitions_8hpp_ac8e1b1f4bbac5914204c97f66f97d01fa5835bab1ade0060909e31a06af2e2cde}{BlockPosition::Front}) \textcolor{keywordflow}{return} string(\textcolor{stringliteral}{"Front"});
+00109         \textcolor{keywordflow}{else} \textcolor{keywordflow}{return} string(\textcolor{stringliteral}{"Back"});
+00110     \}
+\end{DoxyCode}
 
 
 Here is the caller graph for this function\+:
@@ -53,8 +60,38 @@ Here is the caller graph for this function\+:
 )}}\label{namespacestd_a6a0c3c323562edbd2f57da3d2bb74326}
 Converts a Color to a string. 
 
-Definition at line 114 of file definitions.\+hpp.
+Definition at line \hyperlink{definitions_8hpp_source_l00115}{115} of file \hyperlink{definitions_8hpp_source}{definitions.\+hpp}.
 
+
+\begin{DoxyCode}
+00115                                   \{
+00116         \textcolor{keywordtype}{string} ret;
+00117 
+00118         \textcolor{keywordflow}{switch}((\hyperlink{definitions_8hpp_a378181c29a641d58f55d647b5a9599f2}{ENUM})color) \{
+00119             \textcolor{keywordflow}{case} 0:
+00120                 ret = \textcolor{stringliteral}{"Red"};
+00121                 \textcolor{keywordflow}{break};
+00122 
+00123             \textcolor{keywordflow}{case} 1:
+00124                 ret = \textcolor{stringliteral}{"Yellow"};
+00125                 \textcolor{keywordflow}{break};
+00126 
+00127             \textcolor{keywordflow}{case} 2:
+00128                 ret = \textcolor{stringliteral}{"Green"};
+00129                 \textcolor{keywordflow}{break};
+00130 
+00131             \textcolor{keywordflow}{case} 3:
+00132                 ret = \textcolor{stringliteral}{"Blue"};
+00133                 \textcolor{keywordflow}{break};
+00134 
+00135             \textcolor{keywordflow}{case} 4:
+00136                 ret = \textcolor{stringliteral}{"All"};
+00137                 \textcolor{keywordflow}{break};
+00138         \}
+00139 
+00140         \textcolor{keywordflow}{return} ret;
+00141     \}
+\end{DoxyCode}
 \hypertarget{namespacestd_adb24d6df94a83c325573f7710df84953}{\index{std@{std}!to\+\_\+string@{to\+\_\+string}}
 \index{to\+\_\+string@{to\+\_\+string}!std@{std}}
 \subsubsection[{to\+\_\+string}]{\setlength{\rightskip}{0pt plus 5cm}string std\+::to\+\_\+string (
@@ -64,8 +101,15 @@ Definition at line 114 of file definitions.\+hpp.
 )}}\label{namespacestd_adb24d6df94a83c325573f7710df84953}
 Converts a Log\+Mode to a string. 
 
-Definition at line 145 of file definitions.\+hpp.
+Definition at line \hyperlink{definitions_8hpp_source_l00146}{146} of file \hyperlink{definitions_8hpp_source}{definitions.\+hpp}.
 
+
+\begin{DoxyCode}
+00146                                    \{
+00147         \textcolor{keywordflow}{if}(mode == \hyperlink{definitions_8hpp_aa7380b6d694cab49f07aed6a7af592d9ace7898536dd0e928d1640ee2ad531cc8}{LogMode::Multi}) \textcolor{keywordflow}{return} string(\textcolor{stringliteral}{"Text"});
+00148         \textcolor{keywordflow}{else} \textcolor{keywordflow}{return} string(\textcolor{stringliteral}{"Multi"});
+00149     \}
+\end{DoxyCode}
 \hypertarget{namespacestd_a7fb649b1361ca7d95cc74045c0dadcdd}{\index{std@{std}!to\+\_\+string@{to\+\_\+string}}
 \index{to\+\_\+string@{to\+\_\+string}!std@{std}}
 \subsubsection[{to\+\_\+string}]{\setlength{\rightskip}{0pt plus 5cm}string std\+::to\+\_\+string (
@@ -75,8 +119,34 @@ Definition at line 145 of file definitions.\+hpp.
 )}}\label{namespacestd_a7fb649b1361ca7d95cc74045c0dadcdd}
 Converts a Result to a string. 
 
-Definition at line 153 of file definitions.\+hpp.
+Definition at line \hyperlink{definitions_8hpp_source_l00154}{154} of file \hyperlink{definitions_8hpp_source}{definitions.\+hpp}.
 
+
+\begin{DoxyCode}
+00154                                  \{
+00155         \textcolor{keywordtype}{string} ret;
+00156 
+00157         \textcolor{keywordflow}{switch}((\hyperlink{definitions_8hpp_a378181c29a641d58f55d647b5a9599f2}{ENUM})res) \{
+00158             \textcolor{keywordflow}{case} -1:
+00159                 ret = \textcolor{stringliteral}{"No Blocks"};
+00160                 \textcolor{keywordflow}{break};
+00161 
+00162             \textcolor{keywordflow}{case} 0:
+00163                 ret = \textcolor{stringliteral}{"Two whole, no halves"};
+00164                 \textcolor{keywordflow}{break};
+00165 
+00166             \textcolor{keywordflow}{case} 2:
+00167                 ret = \textcolor{stringliteral}{"Two whole, two halves"};
+00168                 \textcolor{keywordflow}{break};
+00169 
+00170             \textcolor{keywordflow}{case} 4:
+00171                 ret = \textcolor{stringliteral}{"No whole, four halves"};
+00172                 \textcolor{keywordflow}{break};
+00173         \}
+00174 
+00175         \textcolor{keywordflow}{return} ret;
+00176     \}
+\end{DoxyCode}
 \hypertarget{namespacestd_aae21fd95009e4cc9fa25e1ad3830980b}{\index{std@{std}!to\+\_\+string@{to\+\_\+string}}
 \index{to\+\_\+string@{to\+\_\+string}!std@{std}}
 \subsubsection[{to\+\_\+string}]{\setlength{\rightskip}{0pt plus 5cm}string std\+::to\+\_\+string (
@@ -86,8 +156,15 @@ Definition at line 153 of file definitions.\+hpp.
 )}}\label{namespacestd_aae21fd95009e4cc9fa25e1ad3830980b}
 Converts a Side to a string. 
 
-Definition at line 180 of file definitions.\+hpp.
+Definition at line \hyperlink{definitions_8hpp_source_l00181}{181} of file \hyperlink{definitions_8hpp_source}{definitions.\+hpp}.
 
+
+\begin{DoxyCode}
+00181                                 \{
+00182         \textcolor{keywordflow}{if}(side == \hyperlink{definitions_8hpp_a03325a8a9d4f105db5e37dd587128142a945d5e233cf7d6240f6b783b36a374ff}{Side::Left}) \textcolor{keywordflow}{return} string(\textcolor{stringliteral}{"Left"});
+00183         \textcolor{keywordflow}{else} \textcolor{keywordflow}{return} string(\textcolor{stringliteral}{"Right"});
+00184     \}
+\end{DoxyCode}
 \hypertarget{namespacestd_a6bfcd2c3377165652c64085d7acb5c64}{\index{std@{std}!to\+\_\+string@{to\+\_\+string}}
 \index{to\+\_\+string@{to\+\_\+string}!std@{std}}
 \subsubsection[{to\+\_\+string}]{\setlength{\rightskip}{0pt plus 5cm}string std\+::to\+\_\+string (
@@ -97,8 +174,15 @@ Definition at line 180 of file definitions.\+hpp.
 )}}\label{namespacestd_a6bfcd2c3377165652c64085d7acb5c64}
 Converts a Size to a string. 
 
-Definition at line 188 of file definitions.\+hpp.
+Definition at line \hyperlink{definitions_8hpp_source_l00189}{189} of file \hyperlink{definitions_8hpp_source}{definitions.\+hpp}.
 
+
+\begin{DoxyCode}
+00189                                 \{
+00190         \textcolor{keywordflow}{if}(size == \hyperlink{definitions_8hpp_a9809446fd16a744b6df9808293f14153a8394f0347c184cf156ac5924dccb773b}{Size::Long}) \textcolor{keywordflow}{return} string(\textcolor{stringliteral}{"Long"});
+00191         \textcolor{keywordflow}{else} \textcolor{keywordflow}{return} string(\textcolor{stringliteral}{"Short"});
+00192     \}
+\end{DoxyCode}
 \hypertarget{namespacestd_ac50951e195256b4c2311f90189f64ba8}{\index{std@{std}!to\+\_\+string@{to\+\_\+string}}
 \index{to\+\_\+string@{to\+\_\+string}!std@{std}}
 \subsubsection[{to\+\_\+string}]{\setlength{\rightskip}{0pt plus 5cm}string std\+::to\+\_\+string (
@@ -108,5 +192,11 @@ Definition at line 188 of file definitions.\+hpp.
 )}}\label{namespacestd_ac50951e195256b4c2311f90189f64ba8}
 Converts a Zone to a string. 
 
-Definition at line 196 of file definitions.\+hpp.
+Definition at line \hyperlink{definitions_8hpp_source_l00197}{197} of file \hyperlink{definitions_8hpp_source}{definitions.\+hpp}.
 
+
+\begin{DoxyCode}
+00197                                 \{
+00198         \textcolor{keywordflow}{return} string(1, (\textcolor{keywordtype}{char})zone);
+00199     \}
+\end{DoxyCode}

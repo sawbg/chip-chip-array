@@ -1,6 +1,6 @@
 var NAVTREE =
 [
-  [ "My Project", "index.html", [
+  [ "The Automatic Vasospasm Detection Application", "index.html", [
     [ "Namespaces", null, [
       [ "Namespace List", "namespaces.html", "namespaces" ],
       [ "Namespace Members", "namespacemembers.html", [
@@ -36,7 +36,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "Adafruit__PWMServoDriver_8cpp.html",
-"log__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4"
+"main_8cpp.html#a15cb11104a65cfea0b2667271ff359c3"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

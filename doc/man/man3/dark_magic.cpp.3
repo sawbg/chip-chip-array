@@ -1,0 +1,64 @@
+.TH "src/dark_magic.cpp" 3 "Fri Apr 22 2016" "The Automatic Vasospasm Detection Application" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/dark_magic.cpp \- 
+.PP
+Contains test code for arm\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <cstdlib>\fP
+.br
+\fC#include <iostream>\fP
+.br
+\fC#include <string>\fP
+.br
+\fC#include 'Servo_Position_Shell\&.cpp'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBmain\fP (int argc, char **argv)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Contains test code for arm\&. 
+
+
+.PP
+\fBAuthor:\fP
+.RS 4
+Samuel Andrew Wisner, awisner94@gmail.com 
+.RE
+.PP
+
+.PP
+Definition in file \fBdark_magic\&.cpp\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "int main (intargc, char **argv)"
+Controls the positions of the arm servos\&. Will likely work for other servos on the robot, as well\&.
+.PP
+Usage: arm [SERVO NUMBER] [ANGULAR POSITION DEGREES] 
+.PP
+Definition at line 21 of file dark_magic\&.cpp\&.
+.PP
+.nf
+21                                 {
+22     setup();
+23     
+24     if(argc != 3) {
+25         cout << "Usage: arm [SERVO] [VALUE]" << endl;
+26     } else {
+27         setServoPosition((Servo)atoi(argv[1]), atoi(argv[2]));
+28     }
+29 }
+.fi
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for The Automatic Vasospasm Detection Application from the source code\&.

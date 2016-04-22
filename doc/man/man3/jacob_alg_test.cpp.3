@@ -1,0 +1,64 @@
+.TH "src/jacob_alg_test.cpp" 3 "Fri Apr 22 2016" "The Automatic Vasospasm Detection Application" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/jacob_alg_test.cpp \- 
+.PP
+Contains a program that tests Jacob's yellow-detection algorithm\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <iostream>\fP
+.br
+\fC#include <opencv2/core/core\&.hpp>\fP
+.br
+\fC#include <opencv2/imgproc/imgproc\&.hpp>\fP
+.br
+\fC#include 'PiCamera\&.hpp'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBmain\fP ()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Contains a program that tests Jacob's yellow-detection algorithm\&. 
+
+
+.PP
+\fBAuthor:\fP
+.RS 4
+Samuel Andrew Wisner, awisner94@gmail.com 
+.RE
+.PP
+
+.PP
+Definition in file \fBjacob_alg_test\&.cpp\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "int main ()"
+This program tests Jacob Laurel's algorithm for detecting yellow blocks (RGB=>YUV, HSV=>RGB)\&. 
+.PP
+Definition at line 21 of file jacob_alg_test\&.cpp\&.
+.PP
+.nf
+21            {
+22     PiCamera cam;
+23     namedWindow("window", CV_WINDOW_NORMAL);
+24     Mat orig = cam\&.Snap();
+25     Mat yuv;
+26     Mat fin;
+27     cvtColor(orig, yuv, CV_BGR2YUV);
+28     cvtColor(yuv, fin, CV_HSV2BGR);
+29     imshow("window", fin);
+30     waitKey(-1);
+31 }
+.fi
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for The Automatic Vasospasm Detection Application from the source code\&.

@@ -1,0 +1,463 @@
+.TH "src/Servo_Position_Shell.h" 3 "Fri Apr 22 2016" "The Automatic Vasospasm Detection Application" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/Servo_Position_Shell.h \- 
+.PP
+Contains the function prototypes for the servo position shell\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <wiringPi\&.h>\fP
+.br
+\fC#include 'Adafruit_PWMServoDriver\&.h'\fP
+.br
+\fC#include <iostream>\fP
+.br
+\fC#include <ctype\&.h>\fP
+.br
+\fC#include <cstdint>\fP
+.br
+
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBServo\fP { \fBBASE_TURN\fP = 0, \fBBASE_TILT\fP = 1, \fBELBOW\fP = 2, \fBWRIST_TILT\fP = 3, \fBWRIST_PAN\fP = 4, \fBGRIP_RIGHT\fP = 5, \fBGRIP_LEFT\fP = 6, \fBGATE_1\fP = 7, \fBGATE_2\fP = 8, \fBGATE_3\fP = 9, \fBLIFT_1\fP = 10, \fBLIFT_2\fP = 11, \fBLIFT_3\fP = 12, \fBLIFT_4\fP = 13, \fBGATE_4\fP = 14 }"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBsetServoPulse\fP (\fBuint8_t\fP n, double pulse)"
+.br
+.ti -1c
+.RI "void \fBsetup\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetServoPosition\fP (\fBServo\fP whichservo, int position)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Contains the function prototypes for the servo position shell\&. 
+
+
+.PP
+\fBAuthor:\fP
+.RS 4
+Nickolas Neely 
+.RE
+.PP
+\fBDate:\fP
+.RS 4
+8\&. February 2016, 12:05 PM 
+.RE
+.PP
+
+.PP
+Definition in file \fBServo_Position_Shell\&.h\fP\&.
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBServo\fP"
+Defines each of the servos on the robot\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIBASE_TURN \fP\fP
+.TP
+\fB\fIBASE_TILT \fP\fP
+.TP
+\fB\fIELBOW \fP\fP
+.TP
+\fB\fIWRIST_TILT \fP\fP
+.TP
+\fB\fIWRIST_PAN \fP\fP
+.TP
+\fB\fIGRIP_RIGHT \fP\fP
+.TP
+\fB\fIGRIP_LEFT \fP\fP
+.TP
+\fB\fIGATE_1 \fP\fP
+.TP
+\fB\fIGATE_2 \fP\fP
+.TP
+\fB\fIGATE_3 \fP\fP
+.TP
+\fB\fILIFT_1 \fP\fP
+.TP
+\fB\fILIFT_2 \fP\fP
+.TP
+\fB\fILIFT_3 \fP\fP
+.TP
+\fB\fILIFT_4 \fP\fP
+.TP
+\fB\fIGATE_4 \fP\fP
+.PP
+Definition at line 28 of file Servo_Position_Shell\&.h\&.
+.PP
+.nf
+28           {
+29     BASE_TURN = 0,
+30     BASE_TILT = 1,
+31     ELBOW = 2,
+32     WRIST_TILT = 3,
+33     WRIST_PAN = 4,
+34     GRIP_RIGHT = 5,
+35     GRIP_LEFT = 6,
+36     GATE_1 = 7,
+37     GATE_2 = 8,
+38     GATE_3 = 9,
+39     LIFT_1 = 10,
+40     LIFT_2 = 11,
+41     LIFT_3 = 12,
+42     LIFT_4 = 13,
+43     GATE_4 = 14
+44 };
+.fi
+.SH "Function Documentation"
+.PP 
+.SS "void setServoPosition (\fBServo\fPwhichservo, intposition)"
+Desc: This function sets which servo to use using whichservo and what position out of 180 degrees for each servo (with limits)\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIwhichservo\fP which servo would you like to use on the board 
+.br
+\fIposition\fP what position do you want to set the servo selected at 
+.RE
+.PP
+
+.PP
+Definition at line 71 of file Servo_Position_Shell\&.cpp\&.
+.PP
+.nf
+71                                                       {
+72     // works for servo 0, 3, 4
+73     double dividedconstant = 180\&.0;
+74     double highservo = 2\&.4;
+75     double lowservo = 0\&.6;
+76     // To fix the magical digital servo on LIFT 1
+77     double highservoweird = 1\&.9;
+78     double lowservoweird = 0\&.6;
+79     // To compensate for the bent servo spline on LIFT 2
+80     double highservospline = 2\&.25;
+81     double lowservospline = 0\&.6;
+82     // works for servo 1, 2
+83     double digitalservohigh = 2\&.45;
+84     double digitalservolow = 0\&.9;
+85     // left gripper servo 5
+86     double gripleftopen = 2\&.2;
+87     double gripleftclose = 1\&.3;
+88     // right gripper servo 6
+89     double griprightopen = 2\&.2;
+90     double griprightclose = 1\&.3;
+91     double pulse;
+92 
+93     switch (whichservo) {
+94 
+95             // BASE TURN
+96         case 0:
+97         {
+98             if (position == -1) {
+99                 pulse = 0\&.0;
+100             }else if (position < 0){
+101                 position = 20;
+102                 pulse = ((((highservo - lowservo) / dividedconstant)*((double) position)) + lowservo);
+103             }else if (position > 179){
+104                 position = 179;
+105                 pulse = ((((highservo - lowservo) / dividedconstant)*((double) position)) + lowservo);
+106             }else{
+107                 pulse = ((((highservo - lowservo) / dividedconstant)*((double) position)) + lowservo);
+108             }
+109             
+110         }
+111 
+112             break;
+113 
+114             // BASE TILT
+115         case 1:
+116         {
+117             
+118             
+119             if (position == -1) {
+120                 pulse = 0\&.0;
+121             } else if (position < 90){
+122                 position = 90;
+123                 pulse = ((((highservo - lowservo) / dividedconstant)*((double) position)) + lowservo);
+124             } else if (position > 172){
+125                 position = 172;
+126                 pulse = ((((highservo - lowservo) / dividedconstant)*((double) position)) + lowservo);
+127             } else {
+128                 pulse = ((((highservo - lowservo) / dividedconstant)*((double) position)) + lowservo);
+129             }
+130         }
+131             break;
+132 
+133             // ELBOW
+134         case 2:
+135         {
+136             if (position == -1) {
+137                 pulse = 0\&.0;
+138             } else if (position < 43){
+139                 position = 43;
+140                 pulse = ((((digitalservohigh - digitalservolow) / dividedconstant)*((double) position)) + digitalservolow);
+141             } else if (position > 179){
+142                 position = 179;
+143                 pulse = ((((digitalservohigh - digitalservolow) / dividedconstant)*((double) position)) + digitalservolow);
+144             } else {
+145                 pulse = ((((digitalservohigh - digitalservolow) / dividedconstant)*((double) position)) + digitalservolow);
+146             }
+147         }
+148             break;
+149 
+150             // WRIST TURN
+151         case 3:
+152         {
+153             if (position == -1) {
+154                 pulse = 0\&.0;
+155             } else {
+156                 pulse = ((((highservo - lowservo) / dividedconstant)*((double) position)) + lowservo);
+157             }
+158         }
+159             break;
+160 
+161             // WRIST PAN
+162         case 4:
+163         {
+164             if (position == -1) {
+165                 pulse = 0\&.0;
+166             } else if (position < 0){
+167                 position = 0;
+168                 pulse = ((((highservo - lowservo) / dividedconstant)*((double) position)) + lowservo);
+169             } else if (position > 180){
+170                 position = 180;
+171                 pulse = ((((highservo - lowservo) / dividedconstant)*((double) position)) + lowservo);
+172             } else {
+173                 pulse = ((((highservo - lowservo) / dividedconstant)*((double) position)) + lowservo);
+174             }
+175         }
+176             break;
+177 
+178             // GRIP LEFT
+179         case 5:
+180         {
+181             if (position == -1) {
+182                 pulse = 0\&.0;
+183             } else if(position < 0){
+184                 position = 0;
+185                 pulse = ((((griprightopen - griprightclose) / dividedconstant)*((double) position)) + griprightclose);
+186             }else if(position > 90){
+187                 position = 90;
+188                 pulse = ((((griprightopen - griprightclose) / dividedconstant)*((double) position)) + griprightclose);
+189             } else {
+190                 pulse = ((((gripleftopen - gripleftclose) / dividedconstant)*((double) position)) + gripleftclose);
+191             }
+192         }
+193             break;
+194 
+195             // GRIP RIGHT
+196         case 6:
+197         {
+198             if (position == -1) {
+199                 pulse = 0\&.0;
+200             } else if(position < 90){
+201                 position = 90;
+202                 pulse = ((((griprightopen - griprightclose) / dividedconstant)*((double) position)) + griprightclose);
+203             } else if(position > 180){
+204                 position = 180;
+205                 pulse = ((((griprightopen - griprightclose) / dividedconstant)*((double) position)) + griprightclose);
+206             }else{
+207                 pulse = ((((griprightopen - griprightclose) / dividedconstant)*((double) position)) + griprightclose);
+208             }
+209         }
+210             break;
+211 
+212             // Michael Yellow Gate
+213         case 7:
+214         {
+215             if (position == -1) {
+216                 pulse = 0\&.0;
+217             } else if(position < 0){
+218                 position = 0;
+219                 pulse = ((((highservo - lowservo) / dividedconstant)*((double) position)) + lowservo);
+220             } else if(position > 90){
+221                 position = 90;
+222                 pulse = ((((highservo - lowservo) / dividedconstant)*((double) position)) + lowservo);
+223             } else {
+224                 pulse = ((((highservo - lowservo) / dividedconstant)*((double) position)) + lowservo);
+225             }
+226         }
+227             break;
+228 
+229             // Michael Green Gate
+230         case 8:
+231         {
+232             if (position == -1) {
+233                 pulse = 0\&.0;
+234             } else if(position < 0){
+235                 position = 0;
+236                 pulse = ((((highservo - lowservo) / dividedconstant)*((double) position)) + lowservo);
+237             } else if(position > 90){
+238                 position = 90;
+239                 pulse = ((((highservo - lowservo) / dividedconstant)*((double) position)) + lowservo);
+240             } else {
+241                 pulse = ((((highservo - lowservo) / dividedconstant)*((double) position)) + lowservo);
+242             }
+243         }
+244             break;
+245 
+246             // Michael Blue Gate
+247         case 9:
+248         {
+249             if (position == -1) {
+250                 pulse = 0\&.0;
+251             } else if(position < 0){
+252                 position = 0;
+253                 pulse = ((((highservo - lowservo) / dividedconstant)*((double) position)) + lowservo);
+254             } else if(position > 90){
+255                 position = 90;
+256                 pulse = ((((highservo - lowservo) / dividedconstant)*((double) position)) + lowservo);
+257             } else {
+258                 pulse = ((((highservo - lowservo) / dividedconstant)*((double) position)) + lowservo);
+259             }
+260         }
+261             break;
+262 
+263             // Michael Lift 1
+264         case 10:
+265         {
+266             if (position == -1) {
+267                 pulse = 0\&.0;
+268             } else if(position < 0){
+269                 position = 0;
+270                 pulse = ((((highservoweird - lowservoweird) / dividedconstant)*((double) position)) + lowservoweird);
+271             } else if(position > 105){
+272                 position = 105;
+273                 pulse = ((((highservoweird - lowservoweird) / dividedconstant)*((double) position)) + lowservoweird);
+274             } else {
+275                 pulse = ((((highservoweird - lowservoweird) / dividedconstant)*((double) position)) + lowservoweird);
+276             }
+277         }
+278             break;
+279 
+280             //Michael Lift 2
+281         case 11:
+282         {
+283             if (position == -1) {
+284                 pulse = 0\&.0;
+285             } else if(position < 0){
+286                 position = 0;
+287                 pulse = ((((highservospline - lowservospline) / dividedconstant)*((double) position)) + lowservospline);
+288             } else if(position > 105){
+289                 position = 105;
+290                 pulse = ((((highservospline - lowservospline) / dividedconstant)*((double) position)) + lowservospline);
+291             } else {
+292                 pulse = ((((highservospline - lowservospline) / dividedconstant)*((double) position)) + lowservospline);
+293             }
+294         }
+295             break;
+296 
+297             //Michael lift 3
+298         case 12:
+299         {
+300             if (position == -1) {
+301                 pulse = 0\&.0;
+302             } else if(position < 0){
+303                 position = 0;
+304                 pulse = ((((highservo - lowservo) / dividedconstant)*((double) position)) + lowservo);
+305             } else if(position > 105){
+306                 position = 105;
+307                 pulse = ((((highservo - lowservo) / dividedconstant)*((double) position)) + lowservo);
+308             } else {
+309                 pulse = ((((highservo - lowservo) / dividedconstant)*((double) position)) + lowservo);
+310             }
+311         }
+312             break;
+313 
+314             // Michael lift 4
+315         case 13:
+316         {
+317             if (position == -1) {
+318                 pulse = 0\&.0;
+319             } else if(position < 0){
+320                 position = 0;
+321                 pulse = ((((highservo - lowservo) / dividedconstant)*((double) position)) + lowservo);
+322             } else if(position > 105){
+323                 position = 105;
+324                 pulse = ((((highservo - lowservo) / dividedconstant)*((double) position)) + lowservo);
+325             } else {
+326                 pulse = ((((highservo - lowservo) / dividedconstant)*((double) position)) + lowservo);
+327             }
+328         }
+329             break;
+330 
+331             // Michael RED GATE
+332         case 14:
+333         {
+334             if (position == -1) {
+335                 pulse = 0\&.0;
+336             } else if(position < 0){
+337                 position = 0;
+338                 pulse = ((((highservo - lowservo) / dividedconstant)*((double) position)) + lowservo);
+339             } else if(position > 105){
+340                 position = 105;
+341                 pulse = ((((highservo - lowservo) / dividedconstant)*((double) position)) + lowservo);
+342             } else {
+343                 pulse = ((((highservo - lowservo) / dividedconstant)*((double) position)) + lowservo);
+344             }
+345         }
+346             break;
+347     }
+348     setServoPulse(whichservo, pulse);
+349 
+350 }
+.fi
+.SS "void setServoPulse (\fBuint8_t\fPn, doublepulse)"
+Desc: This function sets which servo to use and what pulse to set that servos pwm to\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIn\fP which servo on the breakout board am I calling\&. Starting with 0\&. 
+.br
+\fIpulse\fP what is the pulse length (in micro seconds) the pwm of the servo is set to\&. 
+.RE
+.PP
+
+.PP
+Definition at line 50 of file Servo_Position_Shell\&.cpp\&.
+.PP
+.nf
+50                                                     {
+51     double pulselength;
+52 
+53     pulselength = 1000000; // 1,000,000 us per second
+54     pulselength /= 60; // 60 Hz
+55     //cout << pulselength << " us per period" << endl;
+56     pulselength /= 4096; // 12 bits of resolution
+57     //cout << pulselength << "us per bit" << endl;
+58     pulse *= 1000;
+59     pulse /= pulselength;
+60     //cout << (uint16_t) pulse << endl;
+61     pwm\&.setPWM(servo_num, 0, (uint16_t) pulse);
+62     //cout << endl;
+63 }
+.fi
+.SS "void setup ()"
+Desc: This function sets up the breakout board communication with I2C using Adafruits_PWMServoDriver\&.cpp and to set the frequency of the servos to 60Hz\&. 
+.PP
+Definition at line 41 of file Servo_Position_Shell\&.cpp\&.
+.PP
+.nf
+41              {
+42     //cout << "Testing Servos" << endl;
+43     pwm\&.begin();
+44     pwm\&.setPWMFreq(60\&.0); // Analog servos run at ~60 Hz updates
+45 }
+.fi
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for The Automatic Vasospasm Detection Application from the source code\&.

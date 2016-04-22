@@ -1,7 +1,7 @@
 <map id="src/Arm.hpp" name="src/Arm.hpp">
-<area shape="rect" id="node3" href="$definitions_8hpp.html" title="definitions.hpp" alt="" coords="606,80,713,107"/>
-<area shape="rect" id="node5" href="$Servo__Position__Shell_8cpp.html" title="Servo_Position_Shell.cpp" alt="" coords="367,80,538,107"/>
-<area shape="rect" id="node7" href="$Adafruit__PWMServoDriver_8cpp.html" title="Adafruit_PWMServoDriver.cpp" alt="" coords="331,155,532,181"/>
-<area shape="rect" id="node17" href="$Servo__Position__Shell_8h.html" title="Servo_Position_Shell.h" alt="" coords="147,229,305,256"/>
-<area shape="rect" id="node8" href="$Adafruit__PWMServoDriver_8h.html" title="Adafruit_PWMServoDriver.h" alt="" coords="338,229,525,256"/>
+<area shape="rect" id="node3" href="$definitions_8hpp.html" title="Contains definitions for architecture&#45;independant numeric variables, enumerations and enumerated clas..." alt="" coords="886,80,993,107"/>
+<area shape="rect" id="node5" href="$Servo__Position__Shell_8cpp.html" title="COntains the function definitions for the servo position shell. " alt="" coords="639,80,810,107"/>
+<area shape="rect" id="node7" href="$Adafruit__PWMServoDriver_8cpp.html" title="Contains the function and class definitions necessary for the PWM servo driver. " alt="" coords="392,155,593,181"/>
+<area shape="rect" id="node17" href="$Servo__Position__Shell_8h.html" title="Contains the function prototypes for the servo position shell. " alt="" coords="627,155,785,181"/>
+<area shape="rect" id="node8" href="$Adafruit__PWMServoDriver_8h.html" title="Adafruit_PWMServoDriver.h" alt="" coords="386,229,573,256"/>
 </map>

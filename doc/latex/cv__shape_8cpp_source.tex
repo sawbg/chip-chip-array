@@ -1,0 +1,117 @@
+\hypertarget{cv__shape_8cpp_source}{\section{cv\+\_\+shape.\+cpp}
+\label{cv__shape_8cpp_source}\index{src/cv\+\_\+shape.\+cpp@{src/cv\+\_\+shape.\+cpp}}
+}
+
+\begin{DoxyCode}
+00001 
+00008 \textcolor{preprocessor}{#include <iostream>}
+00009 \textcolor{preprocessor}{#include <opencv2/highgui/highgui.hpp>}
+00010 \textcolor{preprocessor}{#include <opencv2/imgproc/imgproc.hpp>}
+00011 \textcolor{preprocessor}{#include <string>}
+00012 
+00013 \textcolor{preprocessor}{#include "\hyperlink{definitions_8hpp}{definitions.hpp}"}
+00014 \textcolor{preprocessor}{#include "\hyperlink{PiCamera_8hpp}{PiCamera.hpp}"}
+00015 
+00016 \textcolor{keyword}{using namespace }\hyperlink{namespaceChipChipArray}{ChipChipArray};
+00017 \textcolor{keyword}{using namespace }\hyperlink{namespacecv}{cv};
+00018 \textcolor{keyword}{using namespace }\hyperlink{namespacestd}{std};
+00019 
+\hypertarget{cv__shape_8cpp_source_l00037}{}\hyperlink{cv__shape_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{00037} \textcolor{keywordtype}{int} \hyperlink{namespaceChipChipArray_a7fc3d1edffca11531cd09fdab7c8b88d}{main}() \{
+00038     \hyperlink{classChipChipArray_1_1PiCamera}{PiCamera} cam;
+00039 
+00040     \textcolor{comment}{// window names}
+00041     \textcolor{keywordtype}{string} control = \textcolor{stringliteral}{"Settings"};
+00042     \textcolor{keywordtype}{string} winThresh = \textcolor{stringliteral}{"Image Threshold"};
+00043     \textcolor{keywordtype}{string} winContours = \textcolor{stringliteral}{"Contours Detected"};
+00044 
+00045     \textcolor{comment}{// control (trackbar) variables}
+00046     \textcolor{keywordtype}{int} lowH = 0;  \textcolor{comment}{// hue}
+00047     \textcolor{keywordtype}{int} highH = 255;
+00048     \textcolor{keywordtype}{int} lowS = 0;  \textcolor{comment}{// saturation}
+00049     \textcolor{keywordtype}{int} highS = 255;
+00050     \textcolor{keywordtype}{int} lowV = 0;  \textcolor{comment}{// value}
+00051     \textcolor{keywordtype}{int} highV = 255;
+00052     \textcolor{keywordtype}{int} polyEps = 3;  \textcolor{comment}{// max dif b/t bin shape edge & est poly edge}
+00053 
+00054     \textcolor{comment}{// opening windows}
+00055     namedWindow(control, CV\_WINDOW\_AUTOSIZE);
+00056     namedWindow(winThresh, CV\_WINDOW\_AUTOSIZE);
+00057     namedWindow(winContours, CV\_WINDOW\_AUTOSIZE);
+00058 
+00059     \textcolor{comment}{// creating control trackbars}
+00060     createTrackbar(\textcolor{stringliteral}{"Hue Min"}, control, &lowH, highH);
+00061     createTrackbar(\textcolor{stringliteral}{"Hue Max"}, control, &highH, highH);
+00062     createTrackbar(\textcolor{stringliteral}{"Sat Min"}, control, &lowS, highS);
+00063     createTrackbar(\textcolor{stringliteral}{"Sat Max"}, control, &highS, highS);
+00064     createTrackbar(\textcolor{stringliteral}{"Val Min"}, control, &lowV, highV);
+00065     createTrackbar(\textcolor{stringliteral}{"Val Max"}, control, &highV, highV);
+00066     createTrackbar(\textcolor{stringliteral}{"Polygon Epsilon"}, control, &polyEps, 20);
+00067 
+00068     \textcolor{keywordflow}{while}(\textcolor{keyword}{true}) \{
+00069         Mat imgOrig = cam.\hyperlink{classChipChipArray_1_1PiCamera_a58fb0de02570dce9a9cb60a1a04fb84f}{Snap}();  \textcolor{comment}{// real iage}
+00070         Mat imgHSV;  \textcolor{comment}{// RGB image converted to HSV space}
+00071         Mat imgThresh;  \textcolor{comment}{// binary threshold image}
+00072         \textcolor{comment}{//cvtColor(imgOrig, imgHSV, CV\_BGR2YUV);}
+00073         \textcolor{comment}{//cvtColor(imgHSV, imgOrig, CV\_HSV2BGR);}
+00074         cvtColor(imgOrig, imgHSV, COLOR\_BGR2HSV);
+00075 
+00076         \textcolor{comment}{// create binary image}
+00077         inRange(imgHSV, Scalar(lowH, lowS, lowV), Scalar(highH, highS,
+00078                     highV), imgThresh);
+00079 
+00080         \textcolor{comment}{/* }
+00081 \textcolor{comment}{         * Not quite sure what all this does, but it seems to}
+00082 \textcolor{comment}{         * relate to smoothing the image}
+00083 \textcolor{comment}{         */}
+00084         erode(imgThresh, imgThresh, getStructuringElement(
+00085                     MORPH\_ELLIPSE, \hyperlink{definitions_8hpp_a9809446fd16a744b6df9808293f14153}{cv::Size}(5, 5)));
+00086         dilate(imgThresh, imgThresh, getStructuringElement(
+00087                     MORPH\_ELLIPSE, \hyperlink{definitions_8hpp_a9809446fd16a744b6df9808293f14153}{cv::Size}(5, 5)));
+00088         dilate(imgThresh, imgThresh, getStructuringElement(
+00089                     MORPH\_ELLIPSE, \hyperlink{definitions_8hpp_a9809446fd16a744b6df9808293f14153}{cv::Size}(5, 5)));
+00090         erode(imgThresh, imgThresh, getStructuringElement(
+00091                     MORPH\_ELLIPSE, \hyperlink{definitions_8hpp_a9809446fd16a744b6df9808293f14153}{cv::Size}(5, 5)));
+00092 
+00093         \textcolor{comment}{// show binary image in threshold window}
+00094         imshow(winThresh, imgThresh);
+00095 
+00096         \textcolor{comment}{// calculate contours}
+00097         vector<vector<Point>> contours;
+00098         findContours(imgThresh, contours, CV\_RETR\_TREE,
+00099                 CV\_CHAIN\_APPROX\_SIMPLE, Point(0, 0));
+00100         vector<vector<Point>> contours\_poly(contours.size());
+00101         vector<Rect> bounds(contours.size());
+00102         \textcolor{keywordtype}{int} maxArea = 0;
+00103         \textcolor{keywordtype}{int} offset;
+00104 
+00105         \textcolor{comment}{// find rectangle around polygon-ish shapes}
+00106         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < contours.size(); i++) \{
+00107             approxPolyDP(Mat(contours[i]), contours\_poly[i],
+00108                     polyEps, \textcolor{keyword}{false});
+00109             bounds[i] = boundingRect(Mat(contours\_poly[i]));
+00110         \}
+00111 
+00112         \textcolor{comment}{/* }
+00113 \textcolor{comment}{         * Draw surrounding rectangles from above on original}
+00114 \textcolor{comment}{         * image.}
+00115 \textcolor{comment}{         */}
+00116         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < contours.size(); i++) \{
+00117             rectangle(imgOrig, bounds[i].tl(), bounds[i].br(),
+00118                     Scalar(255, 0, 0), 2, 8, 0);
+00119             \textcolor{comment}{//drawContours(imgOrig, contours\_poly, i,}
+00120             \textcolor{comment}{//      Scalar(255, 0, 0), 4, 8);}
+00121             \textcolor{keywordtype}{int} area = bounds[i].width * bounds[i].height;
+00122 
+00123             \textcolor{keywordflow}{if}(area > maxArea) \{
+00124                 offset = abs(640 - (bounds[i].tl().x + bounds[i].width / 2));
+00125                 maxArea = area;
+00126             \}
+00127         \}
+00128 
+00129         cout << \textcolor{stringliteral}{"Block area: "} << maxArea << \textcolor{stringliteral}{" pixels\(\backslash\)t\(\backslash\)t"} 
+00130             << \textcolor{stringliteral}{"Center offset: "} << offset << endl;
+00131         imshow(winContours, imgOrig);  \textcolor{comment}{// show original image with rectangles}
+00132         waitKey(50);  \textcolor{comment}{// has to be here :(}
+00133     \}
+00134 \}
+\end{DoxyCode}

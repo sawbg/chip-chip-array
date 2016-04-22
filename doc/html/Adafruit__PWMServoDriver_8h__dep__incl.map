@@ -1,10 +1,11 @@
 <map id="src/Adafruit_PWMServoDriver.h" name="src/Adafruit_PWMServoDriver.h">
-<area shape="rect" id="node2" href="$Adafruit__PWMServoDriver_8cpp.html" title="src/Adafruit_PWMServoDriver.cpp" alt="" coords="94,80,317,107"/>
-<area shape="rect" id="node9" href="$main_8cpp.html" title="src/main.cpp" alt="" coords="341,80,438,107"/>
-<area shape="rect" id="node3" href="$Servo__Position__Shell_8cpp.html" title="src/Servo_Position\l_Shell.cpp" alt="" coords="139,155,271,196"/>
-<area shape="rect" id="node4" href="$Arm_8hpp.html" title="src/Arm.hpp" alt="" coords="89,244,183,271"/>
-<area shape="rect" id="node8" href="$dark__magic_8cpp.html" title="src/dark_magic.cpp" alt="" coords="207,244,343,271"/>
-<area shape="rect" id="node5" href="$Grabber_8hpp.html" title="src/Grabber.hpp" alt="" coords="79,319,193,345"/>
-<area shape="rect" id="node6" href="$cv__test_8cpp.html" title="src/cv_test.cpp" alt="" coords="5,393,117,420"/>
-<area shape="rect" id="node7" href="$loading__test_8cpp.html" title="src/loading_test.cpp" alt="" coords="141,393,280,420"/>
+<area shape="rect" id="node2" href="$Adafruit__PWMServoDriver_8cpp.html" title="Contains the function and class definitions necessary for the PWM servo driver. " alt="" coords="63,87,286,114"/>
+<area shape="rect" id="node9" href="$Servo__Position__Shell_8h.html" title="Contains the function prototypes for the servo position shell. " alt="" coords="310,80,442,121"/>
+<area shape="rect" id="node10" href="$main_8cpp.html" title="Contains the main() function to the whole project. " alt="" coords="379,177,477,203"/>
+<area shape="rect" id="node3" href="$Servo__Position__Shell_8cpp.html" title="COntains the function definitions for the servo position shell. " alt="" coords="139,169,271,211"/>
+<area shape="rect" id="node4" href="$Arm_8hpp.html" title="Contains the Arm class used to control the robotic arm. " alt="" coords="89,259,183,285"/>
+<area shape="rect" id="node8" href="$dark__magic_8cpp.html" title="Contains test code for arm. " alt="" coords="207,259,343,285"/>
+<area shape="rect" id="node5" href="$Grabber_8hpp.html" title="Contains the Grabber class. " alt="" coords="79,333,193,360"/>
+<area shape="rect" id="node6" href="$cv__test_8cpp.html" title="Contains program used to test PiCamera class. " alt="" coords="5,408,117,435"/>
+<area shape="rect" id="node7" href="$loading__test_8cpp.html" title="src/loading_test.cpp" alt="" coords="141,408,280,435"/>
 </map>

@@ -1,0 +1,181 @@
+.TH "Adafruit_PWMServoDriver" 3 "Fri Apr 22 2016" "The Automatic Vasospasm Detection Application" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Adafruit_PWMServoDriver \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Adafruit_PWMServoDriver\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBAdafruit_PWMServoDriver\fP (\fBuint8_t\fP addr=0x41)"
+.br
+.ti -1c
+.RI "void \fBbegin\fP (void)"
+.br
+.ti -1c
+.RI "void \fBreset\fP (void)"
+.br
+.ti -1c
+.RI "void \fBsetPWMFreq\fP (float freq)"
+.br
+.ti -1c
+.RI "void \fBsetPWM\fP (\fBuint8_t\fP num, \fBuint16_t\fP on, \fBuint16_t\fP off)"
+.br
+.ti -1c
+.RI "void \fBsetPin\fP (\fBuint8_t\fP num, \fBuint16_t\fP val, bool invert=false)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 73 of file Adafruit_PWMServoDriver\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Adafruit_PWMServoDriver::Adafruit_PWMServoDriver (\fBuint8_t\fPaddr = \fC0x41\fP)"
+
+.PP
+Definition at line 37 of file Adafruit_PWMServoDriver\&.cpp\&.
+.PP
+.nf
+37                                                              {
+38     _i2caddr = addr;
+39     _i2cFD = -1;
+40 }
+.fi
+.SH "Member Function Documentation"
+.PP 
+.SS "void Adafruit_PWMServoDriver::begin (void)"
+
+.PP
+Definition at line 42 of file Adafruit_PWMServoDriver\&.cpp\&.
+.PP
+.nf
+42                                         {
+43     _i2cFD = wiringPiI2CSetup(_i2caddr);
+44     if (_i2cFD < 0) {
+45         //FIXME: error occurred
+46     }
+47     reset();
+48 }
+.fi
+.SS "void Adafruit_PWMServoDriver::reset (void)"
+
+.PP
+Definition at line 50 of file Adafruit_PWMServoDriver\&.cpp\&.
+.PP
+.nf
+50                                         {
+51     write8(PCA9685_MODE1, 0x0);
+52 }
+.fi
+.SS "void Adafruit_PWMServoDriver::setPin (\fBuint8_t\fPnum, \fBuint16_t\fPval, boolinvert = \fCfalse\fP)"
+
+.PP
+Definition at line 116 of file Adafruit_PWMServoDriver\&.cpp\&.
+.PP
+.nf
+116                                                                            {
+117     // Clamp value between 0 and 4095 inclusive\&.
+118     val = min(val, (uint16_t)4095);
+119     if (invert) {
+120         if (val == 0) {
+121             // Special value for signal fully on\&.
+122             setPWM(num, 4096, 0);
+123         } else if (val == 4095) {
+124             // Special value for signal fully off\&.
+125             setPWM(num, 0, 4096);
+126         } else {
+127             setPWM(num, 0, 4095 - val);
+128         }
+129     } else {
+130         if (val == 4095) {
+131             // Special value for signal fully on\&.
+132             setPWM(num, 4096, 0);
+133         } else if (val == 0) {
+134             // Special value for signal fully off\&.
+135             setPWM(num, 0, 4096);
+136         } else {
+137             setPWM(num, 0, val);
+138         }
+139     }
+140 }
+.fi
+.SS "void Adafruit_PWMServoDriver::setPWM (\fBuint8_t\fPnum, \fBuint16_t\fPon, \fBuint16_t\fPoff)"
+
+.PP
+Definition at line 81 of file Adafruit_PWMServoDriver\&.cpp\&.
+.PP
+.nf
+81                                                                            {
+82     //Serial\&.print("Setting PWM "); Serial\&.print(num); Serial\&.print(": "); Serial\&.print(on); Serial\&.print("->"); Serial\&.println(off);
+83 
+84     int result = wiringPiI2CWriteReg16(_i2cFD, LED0_ON_L + 4 * num, on);
+85     if (result < 0) {
+86         string s(strerror(errno));
+87         cout << "setPWM error: " << s\&.c_str() << endl;
+88     }
+89 //    result = wiringPiI2CWrite(_i2cFD, on);
+90 //    if (result < 0) {
+91 //        string s(strerror(errno));
+92 //        cout << "setPWM error: " << s\&.c_str() << endl;
+93 //    }
+94 //    result = wiringPiI2CWrite(_i2cFD, on >> 8);
+95 //    if (result < 0) {
+96 //        string s(strerror(errno));
+97 //        cout << "setPWM error: " << s\&.c_str() << endl;
+98 //    }
+99     result = wiringPiI2CWriteReg16(_i2cFD, LED0_OFF_L + 4 * num, off);
+100 //    result = wiringPiI2CWrite(_i2cFD, off);
+101     if (result < 0) {
+102         string s(strerror(errno));
+103         cout << "setPWM error: " << s\&.c_str() << endl;
+104     }
+105 //    result = wiringPiI2CWrite(_i2cFD, off >> 8);
+106 //    if (result < 0) {
+107 //        string s(strerror(errno));
+108 //        cout << "setPWM error: " << s\&.c_str() << endl;
+109 //    }
+110 }
+.fi
+.SS "void Adafruit_PWMServoDriver::setPWMFreq (floatfreq)"
+
+.PP
+Definition at line 54 of file Adafruit_PWMServoDriver\&.cpp\&.
+.PP
+.nf
+54                                                    {
+55     //Serial\&.print("Attempting to set freq ");
+56     //Serial\&.println(freq);
+57     freq *= 0\&.9; // Correct for overshoot in the frequency setting (see issue #11)\&.
+58     float prescaleval = 25000000;
+59     prescaleval /= 4096;
+60     prescaleval /= freq;
+61     prescaleval -= 1;
+62     if (ENABLE_DEBUG_OUTPUT) {
+63         cout << "Estimated pre-scale: " << prescaleval << endl;
+64     }
+65     uint8_t prescale = floor(prescaleval + 0\&.5);
+66     if (ENABLE_DEBUG_OUTPUT) {
+67         cout << "Final pre-scale: " << prescale << endl;
+68     }
+69 
+70     uint8_t oldmode = read8(PCA9685_MODE1);
+71     uint8_t newmode = (oldmode & 0x7F) | 0x10; // sleep
+72     write8(PCA9685_MODE1, newmode); // go to sleep
+73     write8(PCA9685_PRESCALE, prescale); // set the prescaler
+74     write8(PCA9685_MODE1, oldmode);
+75     usleep(5000);
+76     write8(PCA9685_MODE1, oldmode | 0xa1); //  This sets the MODE1 register to turn on auto increment\&.
+77     // This is why the beginTransmission below was not working\&.
+78     //  Serial\&.print("Mode now 0x"); Serial\&.println(read8(PCA9685_MODE1), HEX);
+79 }
+.fi
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for The Automatic Vasospasm Detection Application from the source code\&.

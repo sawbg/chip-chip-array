@@ -1,6 +1,11 @@
 \hypertarget{qr__test_8cpp}{\section{src/qr\+\_\+test.cpp File Reference}
 \label{qr__test_8cpp}\index{src/qr\+\_\+test.\+cpp@{src/qr\+\_\+test.\+cpp}}
 }
+
+
+Contains test program for \hyperlink{namespaceChipChipArray_a6c7465049b5d408e1a238b6d8ffa887d}{Scan\+Q\+R()} function.  
+
+
 {\ttfamily \#include $<$iostream$>$}\\*
 {\ttfamily \#include $<$opencv2/core/core.\+hpp$>$}\\*
 {\ttfamily \#include $<$opencv2/highgui/highgui.\+hpp$>$}\\*
@@ -23,6 +28,18 @@ int \hyperlink{qr__test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
 \end{DoxyCompactItemize}
 
 
+\subsection{Detailed Description}
+Contains test program for \hyperlink{namespaceChipChipArray_a6c7465049b5d408e1a238b6d8ffa887d}{Scan\+Q\+R()} function. 
+
+\begin{DoxyAuthor}{Author}
+Samuel Andrew Wisner, \href{mailto:awisner94@gmail.com}{\tt awisner94@gmail.\+com} 
+\end{DoxyAuthor}
+
+
+Definition in file \hyperlink{qr__test_8cpp_source}{qr\+\_\+test.\+cpp}.
+
+
+
 \subsection{Function Documentation}
 \hypertarget{qr__test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{\index{qr\+\_\+test.\+cpp@{qr\+\_\+test.\+cpp}!main@{main}}
 \index{main@{main}!qr\+\_\+test.\+cpp@{qr\+\_\+test.\+cpp}}
@@ -33,8 +50,38 @@ int \hyperlink{qr__test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
 )}}\label{qr__test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
 This program tests the \hyperlink{namespaceChipChipArray_a6c7465049b5d408e1a238b6d8ffa887d}{Scan\+Q\+R()} function in terms of reading Q\+R codes (not moving the arm). 
 
-Definition at line 21 of file qr\+\_\+test.\+cpp.
+Definition at line \hyperlink{qr__test_8cpp_source_l00022}{22} of file \hyperlink{qr__test_8cpp_source}{qr\+\_\+test.\+cpp}.
 
+
+\begin{DoxyCode}
+00022            \{
+00023     \textcolor{keywordflow}{while}(\textcolor{keyword}{true}) \{
+00024         \hyperlink{definitions_8hpp_abc05a0f46084a3477cf5d5c939ff1436}{Color} color = \hyperlink{namespaceChipChipArray_a6c7465049b5d408e1a238b6d8ffa887d}{ScanQR}();
+00025         std::string colstr;
+00026 
+00027         \textcolor{keywordflow}{switch}(color) \{
+00028             \textcolor{keywordflow}{case} \hyperlink{definitions_8hpp_abc05a0f46084a3477cf5d5c939ff1436aee38e4d5dd68c4e440825018d549cb47}{Color::Red}:
+00029                 colstr = \textcolor{stringliteral}{"RED"};
+00030                 \textcolor{keywordflow}{break};
+00031 
+00032             \textcolor{keywordflow}{case} \hyperlink{definitions_8hpp_abc05a0f46084a3477cf5d5c939ff1436a51e6cd92b6c45f9affdc158ecca2b8b8}{Color::Yellow}:
+00033                 colstr = \textcolor{stringliteral}{"YELLOW"};
+00034                 \textcolor{keywordflow}{break};
+00035 
+00036             \textcolor{keywordflow}{case} \hyperlink{definitions_8hpp_abc05a0f46084a3477cf5d5c939ff1436ad382816a3cbeed082c9e216e7392eed1}{Color::Green}:
+00037                 colstr = \textcolor{stringliteral}{"GREEN"};
+00038                 \textcolor{keywordflow}{break};
+00039 
+00040             \textcolor{keywordflow}{case} \hyperlink{definitions_8hpp_abc05a0f46084a3477cf5d5c939ff1436a9594eec95be70e7b1710f730fdda33d9}{Color::Blue}:
+00041                 colstr = \textcolor{stringliteral}{"BLUE"};
+00042                 \textcolor{keywordflow}{break};
+00043 
+00044         \}
+00045 
+00046         std::cout << colstr << std::endl;
+00047     \}
+00048 \}
+\end{DoxyCode}
 
 
 Here is the call graph for this function\+:

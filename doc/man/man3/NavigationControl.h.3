@@ -1,0 +1,89 @@
+.TH "src/NavigationControl.h" 3 "Fri Apr 22 2016" "The Automatic Vasospasm Detection Application" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/NavigationControl.h \- 
+.PP
+Contains the function definitions for navigation control\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <iostream>\fP
+.br
+\fC#include <wiringPi\&.h>\fP
+.br
+\fC#include <wiringPiI2C\&.h>\fP
+.br
+\fC#include <ctype\&.h>\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBuint8_t\fP   unsigned char"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBnavigationSetup\fP (\fBuint8_t\fP navigation_add)"
+.br
+.ti -1c
+.RI "void \fBcommandNavigation\fP (\fBuint8_t\fP navigationcommand)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Contains the function definitions for navigation control\&. 
+
+
+.PP
+\fBAuthor:\fP
+.RS 4
+Nickolas Neely 
+.RE
+.PP
+\fBDate:\fP
+.RS 4
+22\&. Febrary 2016, 12:00 PM 
+.RE
+.PP
+
+.PP
+Definition in file \fBNavigationControl\&.h\fP\&.
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define uint8_t   unsigned char"
+
+.PP
+Definition at line 24 of file NavigationControl\&.h\&.
+.SH "Function Documentation"
+.PP 
+.SS "void commandNavigation (\fBuint8_t\fPnavigationcommand)"
+
+.PP
+Definition at line 19 of file NavigationControl\&.cpp\&.
+.PP
+.nf
+19                                                  {
+20     uint8_t data = navigationcommand;
+21     wiringPiI2CWrite(nav_fd, data);
+22 }
+.fi
+.SS "void navigationSetup (\fBuint8_t\fPnavigation_add)"
+
+.PP
+Definition at line 14 of file NavigationControl\&.cpp\&.
+.PP
+.nf
+14                                             {
+15     nav_fd=wiringPiI2CSetup(navigation_add);
+16     
+17 }
+.fi
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for The Automatic Vasospasm Detection Application from the source code\&.

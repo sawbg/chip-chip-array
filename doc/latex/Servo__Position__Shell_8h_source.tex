@@ -1,0 +1,57 @@
+\hypertarget{Servo__Position__Shell_8h_source}{\section{Servo\+\_\+\+Position\+\_\+\+Shell.\+h}
+\label{Servo__Position__Shell_8h_source}\index{src/\+Servo\+\_\+\+Position\+\_\+\+Shell.\+h@{src/\+Servo\+\_\+\+Position\+\_\+\+Shell.\+h}}
+}
+
+\begin{DoxyCode}
+00001 
+00008 \textcolor{comment}{/* }
+00009 \textcolor{comment}{ * File: Servo\_Position\_Shell.h}
+00010 \textcolor{comment}{ * Author: Nickolas Neely}
+00011 \textcolor{comment}{ *}
+00012 \textcolor{comment}{ * Created on February 8, 2016, 12:05 PM}
+00013 \textcolor{comment}{ */}
+00014 
+00015 \textcolor{preprocessor}{#ifndef SERVO\_POSITION\_SHELL\_H}
+00016 \textcolor{preprocessor}{#define SERVO\_POSITION\_SHELL\_H}
+00017 
+00018 
+00019 
+00020 \textcolor{preprocessor}{#include <wiringPi.h>}
+00021 \textcolor{preprocessor}{#include "\hyperlink{Adafruit__PWMServoDriver_8h}{Adafruit\_PWMServoDriver.h}"}
+00022 \textcolor{preprocessor}{#include <iostream>}
+00023 \textcolor{preprocessor}{#include <ctype.h>}
+00024 \textcolor{preprocessor}{#include <cstdint>}
+00025 
+\hypertarget{Servo__Position__Shell_8h_source_l00028}{}\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2}{00028} \textcolor{keyword}{enum} \hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2}{Servo}\{
+\hypertarget{Servo__Position__Shell_8h_source_l00029}{}\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2a87afce59ad3a309ba92f43778dde0edf}{00029}     \hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2a87afce59ad3a309ba92f43778dde0edf}{BASE\_TURN} = 0,
+\hypertarget{Servo__Position__Shell_8h_source_l00030}{}\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2a793d7330231df1a295a841e5b2bb9a8c}{00030}     \hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2a793d7330231df1a295a841e5b2bb9a8c}{BASE\_TILT} = 1,
+\hypertarget{Servo__Position__Shell_8h_source_l00031}{}\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2a9b1c0cf4eb53d13971a120133cf44232}{00031}     \hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2a9b1c0cf4eb53d13971a120133cf44232}{ELBOW} = 2,
+\hypertarget{Servo__Position__Shell_8h_source_l00032}{}\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2abb1046e4dfca68924f935e255b6fae54}{00032}     \hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2abb1046e4dfca68924f935e255b6fae54}{WRIST\_TILT} = 3,
+\hypertarget{Servo__Position__Shell_8h_source_l00033}{}\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2a6e375b725a2efd65c7221fd35055d1b6}{00033}     \hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2a6e375b725a2efd65c7221fd35055d1b6}{WRIST\_PAN} = 4,
+\hypertarget{Servo__Position__Shell_8h_source_l00034}{}\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2a084d4bf780fc2715f33c1f33387c3c76}{00034}     \hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2a084d4bf780fc2715f33c1f33387c3c76}{GRIP\_RIGHT} = 5,
+\hypertarget{Servo__Position__Shell_8h_source_l00035}{}\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2ab8d73f94c1a766d2715c193e847ec85e}{00035}     \hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2ab8d73f94c1a766d2715c193e847ec85e}{GRIP\_LEFT} = 6,
+\hypertarget{Servo__Position__Shell_8h_source_l00036}{}\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2aa4b1e397f96cc2c9b856feb7ae86db1b}{00036}     \hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2aa4b1e397f96cc2c9b856feb7ae86db1b}{GATE\_1} = 7,
+\hypertarget{Servo__Position__Shell_8h_source_l00037}{}\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2a2ba9e7fbd14701f6ab75a0d878f5bff5}{00037}     \hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2a2ba9e7fbd14701f6ab75a0d878f5bff5}{GATE\_2} = 8,
+\hypertarget{Servo__Position__Shell_8h_source_l00038}{}\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2a7efed7de31c7f8224914bfb243ab91cc}{00038}     \hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2a7efed7de31c7f8224914bfb243ab91cc}{GATE\_3} = 9,
+\hypertarget{Servo__Position__Shell_8h_source_l00039}{}\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2ac868392cdc707ca9d887c2cba8c44f5c}{00039}     \hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2ac868392cdc707ca9d887c2cba8c44f5c}{LIFT\_1} = 10,
+\hypertarget{Servo__Position__Shell_8h_source_l00040}{}\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2aa4a122e83188c31a3f0596383319748b}{00040}     \hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2aa4a122e83188c31a3f0596383319748b}{LIFT\_2} = 11,
+\hypertarget{Servo__Position__Shell_8h_source_l00041}{}\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2af49c3bfd424512cde18a587555e1baa9}{00041}     \hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2af49c3bfd424512cde18a587555e1baa9}{LIFT\_3} = 12,
+\hypertarget{Servo__Position__Shell_8h_source_l00042}{}\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2aa402faf24610ffd8a00ef62ec2b8b0ba}{00042}     \hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2aa402faf24610ffd8a00ef62ec2b8b0ba}{LIFT\_4} = 13,
+\hypertarget{Servo__Position__Shell_8h_source_l00043}{}\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2a6f3729bc3715716f8cf12f6dda6cbb89}{00043}     \hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2a6f3729bc3715716f8cf12f6dda6cbb89}{GATE\_4} = 14
+00044 \};
+00045 
+00046 \textcolor{preprocessor}{#ifdef \_\_cplusplus}
+00047 \textcolor{keyword}{extern} \textcolor{stringliteral}{"C"}\{
+00048 \textcolor{preprocessor}{#endif}
+00049 
+00057 \textcolor{keywordtype}{void} \hyperlink{Servo__Position__Shell_8h_a323a36dcf89ccad28f3ed2312e26ed8a}{setServoPulse}(\hyperlink{Adafruit__PWMServoDriver_8h_ab077fa1127453be2bd9d4c3c8a768fa7}{uint8\_t} n, \textcolor{keywordtype}{double} pulse);
+00063 \textcolor{keywordtype}{void} \hyperlink{Servo__Position__Shell_8h_a4fc01d736fe50cf5b977f755b675f11d}{setup}();
+00070 \textcolor{keywordtype}{void} \hyperlink{Servo__Position__Shell_8h_abd2cd3c2e36d42a2178a6f2fd12af905}{setServoPosition}(\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2}{Servo} whichservo, \textcolor{keywordtype}{int} position);
+00071 
+00072 \textcolor{preprocessor}{#ifdef \_\_cplusplus}
+00073 \}
+00074 \textcolor{preprocessor}{#endif }
+00075 
+00076 \textcolor{preprocessor}{#endif  }\textcolor{comment}{/* SERVO\_POSITION\_SHELL\_H */}\textcolor{preprocessor}{}
+00077 
+\end{DoxyCode}

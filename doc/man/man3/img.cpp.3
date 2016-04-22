@@ -1,0 +1,70 @@
+.TH "src/img.cpp" 3 "Fri Apr 22 2016" "The Automatic Vasospasm Detection Application" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/img.cpp \- 
+.PP
+Contains a program to display the current camera image\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <iostream>\fP
+.br
+\fC#include <opencv2/highgui/highgui\&.hpp>\fP
+.br
+\fC#include <opencv2/imgproc/imgproc\&.hpp>\fP
+.br
+\fC#include <string>\fP
+.br
+\fC#include 'definitions\&.hpp'\fP
+.br
+\fC#include 'PiCamera\&.hpp'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBmain\fP ()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Contains a program to display the current camera image\&. 
+
+
+.PP
+\fBAuthor:\fP
+.RS 4
+Samuel Andrew Wisner, awisner94@gmail.com 
+.RE
+.PP
+
+.PP
+Definition in file \fBimg\&.cpp\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "int main ()"
+This program displays the current camera image\&. 
+.PP
+Definition at line 22 of file img\&.cpp\&.
+.PP
+.nf
+22            {
+23     string window = "Current";
+24     PiCamera cam;
+25     
+26     namedWindow(window, CV_WINDOW_NORMAL | CV_WINDOW_KEEPRATIO);
+27 
+28     while(true) {
+29         Mat image;
+30         transpose(cam\&.Snap(), image);
+31         imshow(window, image);
+32         waitKey(10);  // has to be here :(
+33     }
+34 }
+.fi
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for The Automatic Vasospasm Detection Application from the source code\&.

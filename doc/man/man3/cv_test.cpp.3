@@ -1,0 +1,67 @@
+.TH "src/cv_test.cpp" 3 "Fri Apr 22 2016" "The Automatic Vasospasm Detection Application" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/cv_test.cpp \- 
+.PP
+Contains program used to test PiCamera class\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <iostream>\fP
+.br
+\fC#include 'definitions\&.hpp'\fP
+.br
+\fC#include 'Block\&.hpp'\fP
+.br
+\fC#include 'Grabber\&.hpp'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBmain\fP ()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Contains program used to test PiCamera class\&. 
+
+
+.PP
+\fBAuthor:\fP
+.RS 4
+Samuel Andrew Wisner, awisner94@gmail.com 
+.RE
+.PP
+
+.PP
+Definition in file \fBcv_test\&.cpp\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "int main ()"
+This program was used solely to test the PiCamera wrapper class and its compatibility with the raspicam wrapper and ultimately OpenCV\&. 
+.PP
+Definition at line 19 of file cv_test\&.cpp\&.
+.PP
+.nf
+19            {
+20     Grabber g(Zone::C, Side::Left);
+21     Block block = g\&.LocateBlock();
+22     g\&.Close();
+23     std::cout << std::to_string(block\&.color) << std::endl;
+24     std::cout << "Offset: " << block\&.offset << std::endl;
+25 
+26     Grabber g2(Zone::B, Side::Right);
+27     Block block2 = g2\&.LocateBlock();
+28     g2\&.Close();
+29     std::cout << std::to_string(block2\&.color) << std::endl;
+30     std::cout << "Offset: " << block2\&.offset << std::endl;
+31 
+32 }
+.fi
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for The Automatic Vasospasm Detection Application from the source code\&.

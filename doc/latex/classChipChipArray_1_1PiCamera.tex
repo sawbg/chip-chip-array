@@ -21,7 +21,7 @@ cv\+::\+Mat \hyperlink{classChipChipArray_1_1PiCamera_a58fb0de02570dce9a9cb60a1a
 \subsection{Detailed Description}
 This class is a basic wrapper to allow the Raspicam to interface with Open\+C\+V. It uses another wrapper class, Raspicam, provided by Cédric Verstraeten (\href{https://github.com/cedricve/raspicam}{\tt https\+://github.\+com/cedricve/raspicam}). 
 
-Definition at line 23 of file Pi\+Camera.\+hpp.
+Definition at line \hyperlink{PiCamera_8hpp_source_l00024}{24} of file \hyperlink{PiCamera_8hpp_source}{Pi\+Camera.\+hpp}.
 
 
 
@@ -35,8 +35,12 @@ Definition at line 23 of file Pi\+Camera.\+hpp.
 )\hspace{0.3cm}{\ttfamily [inline]}}}\label{classChipChipArray_1_1PiCamera_a5910a3284877677decb6529d88e43487}
 Opens the camera and configures it for color images. 
 
-Definition at line 28 of file Pi\+Camera.\+hpp.
+Definition at line \hyperlink{PiCamera_8hpp_source_l00029}{29} of file \hyperlink{PiCamera_8hpp_source}{Pi\+Camera.\+hpp}.
 
+
+\begin{DoxyCode}
+00029 : \hyperlink{classChipChipArray_1_1PiCamera_a5910a3284877677decb6529d88e43487}{PiCamera}(\textcolor{keyword}{true}) \{\};
+\end{DoxyCode}
 \hypertarget{classChipChipArray_1_1PiCamera_a0a4480e9e7475ae7af9a7523239caf8d}{\index{Chip\+Chip\+Array\+::\+Pi\+Camera@{Chip\+Chip\+Array\+::\+Pi\+Camera}!Pi\+Camera@{Pi\+Camera}}
 \index{Pi\+Camera@{Pi\+Camera}!Chip\+Chip\+Array\+::\+Pi\+Camera@{Chip\+Chip\+Array\+::\+Pi\+Camera}}
 \subsubsection[{Pi\+Camera}]{\setlength{\rightskip}{0pt plus 5cm}Chip\+Chip\+Array\+::\+Pi\+Camera\+::\+Pi\+Camera (
@@ -53,8 +57,16 @@ Opens the camera.
 \end{DoxyParams}
 
 
-Definition at line 58 of file Pi\+Camera.\+hpp.
+Definition at line \hyperlink{PiCamera_8hpp_source_l00059}{59} of file \hyperlink{PiCamera_8hpp_source}{Pi\+Camera.\+hpp}.
 
+
+\begin{DoxyCode}
+00059                                     \{
+00060         cam.set(CV\_CAP\_PROP\_FORMAT, (useColor ? CV\_16UC3 : CV\_16UC1));
+00061         cam.open();
+00062         usleep(500000);  \textcolor{comment}{// required to allow camera time to adjust!}
+00063     \}
+\end{DoxyCode}
 
 
 \subsection{Member Function Documentation}
@@ -67,8 +79,14 @@ Definition at line 58 of file Pi\+Camera.\+hpp.
 )}}\label{classChipChipArray_1_1PiCamera_a38f8205921d6deec5a2c360ea7d24cc5}
 Closes connection to camera. 
 
-Definition at line 64 of file Pi\+Camera.\+hpp.
+Definition at line \hyperlink{PiCamera_8hpp_source_l00065}{65} of file \hyperlink{PiCamera_8hpp_source}{Pi\+Camera.\+hpp}.
 
+
+\begin{DoxyCode}
+00065                          \{
+00066         cam.release();
+00067     \}
+\end{DoxyCode}
 
 
 Here is the caller graph for this function\+:
@@ -95,8 +113,20 @@ Open\+C\+V Mat object (i.\+e., an image) from the camera
 \end{DoxyReturn}
 
 
-Definition at line 68 of file Pi\+Camera.\+hpp.
+Definition at line \hyperlink{PiCamera_8hpp_source_l00069}{69} of file \hyperlink{PiCamera_8hpp_source}{Pi\+Camera.\+hpp}.
 
+
+\begin{DoxyCode}
+00069                          \{
+00070         \textcolor{keywordflow}{if}(!cam.isOpened()) \textcolor{keywordflow}{throw} std::runtime\_error(\textcolor{stringliteral}{"Camera "}
+00071                 \textcolor{stringliteral}{"is not open!"});
+00072 
+00073         cv::Mat image;
+00074         cam.grab();
+00075         cam.retrieve(image);
+00076         \textcolor{keywordflow}{return} image;
+00077     \}
+\end{DoxyCode}
 
 
 Here is the caller graph for this function\+:

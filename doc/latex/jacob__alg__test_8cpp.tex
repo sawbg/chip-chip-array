@@ -1,6 +1,11 @@
 \hypertarget{jacob__alg__test_8cpp}{\section{src/jacob\+\_\+alg\+\_\+test.cpp File Reference}
 \label{jacob__alg__test_8cpp}\index{src/jacob\+\_\+alg\+\_\+test.\+cpp@{src/jacob\+\_\+alg\+\_\+test.\+cpp}}
 }
+
+
+Contains a program that tests Jacob's yellow-\/detection algorithm.  
+
+
 {\ttfamily \#include $<$iostream$>$}\\*
 {\ttfamily \#include $<$opencv2/core/core.\+hpp$>$}\\*
 {\ttfamily \#include $<$opencv2/imgproc/imgproc.\+hpp$>$}\\*
@@ -20,6 +25,18 @@ int \hyperlink{jacob__alg__test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
 \end{DoxyCompactItemize}
 
 
+\subsection{Detailed Description}
+Contains a program that tests Jacob's yellow-\/detection algorithm. 
+
+\begin{DoxyAuthor}{Author}
+Samuel Andrew Wisner, \href{mailto:awisner94@gmail.com}{\tt awisner94@gmail.\+com} 
+\end{DoxyAuthor}
+
+
+Definition in file \hyperlink{jacob__alg__test_8cpp_source}{jacob\+\_\+alg\+\_\+test.\+cpp}.
+
+
+
 \subsection{Function Documentation}
 \hypertarget{jacob__alg__test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{\index{jacob\+\_\+alg\+\_\+test.\+cpp@{jacob\+\_\+alg\+\_\+test.\+cpp}!main@{main}}
 \index{main@{main}!jacob\+\_\+alg\+\_\+test.\+cpp@{jacob\+\_\+alg\+\_\+test.\+cpp}}
@@ -30,8 +47,22 @@ int \hyperlink{jacob__alg__test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
 )}}\label{jacob__alg__test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}
 This program tests Jacob Laurel's algorithm for detecting yellow blocks (R\+G\+B=$>$Y\+U\+V, H\+S\+V=$>$R\+G\+B). 
 
-Definition at line 20 of file jacob\+\_\+alg\+\_\+test.\+cpp.
+Definition at line \hyperlink{jacob__alg__test_8cpp_source_l00021}{21} of file \hyperlink{jacob__alg__test_8cpp_source}{jacob\+\_\+alg\+\_\+test.\+cpp}.
 
+
+\begin{DoxyCode}
+00021            \{
+00022     \hyperlink{classChipChipArray_1_1PiCamera}{PiCamera} cam;
+00023     namedWindow(\textcolor{stringliteral}{"window"}, CV\_WINDOW\_NORMAL);
+00024     Mat orig = cam.\hyperlink{classChipChipArray_1_1PiCamera_a58fb0de02570dce9a9cb60a1a04fb84f}{Snap}();
+00025     Mat yuv;
+00026     Mat fin;
+00027     cvtColor(orig, yuv, CV\_BGR2YUV);
+00028     cvtColor(yuv, fin, CV\_HSV2BGR);
+00029     imshow(\textcolor{stringliteral}{"window"}, fin);
+00030     waitKey(-1);
+00031 \}
+\end{DoxyCode}
 
 
 Here is the call graph for this function\+:

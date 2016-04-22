@@ -1,0 +1,86 @@
+.TH "src/qr_test.cpp" 3 "Fri Apr 22 2016" "The Automatic Vasospasm Detection Application" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/qr_test.cpp \- 
+.PP
+Contains test program for \fBScanQR()\fP function\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <iostream>\fP
+.br
+\fC#include <opencv2/core/core\&.hpp>\fP
+.br
+\fC#include <opencv2/highgui/highgui\&.hpp>\fP
+.br
+\fC#include <string>\fP
+.br
+\fC#include 'definitions\&.hpp'\fP
+.br
+\fC#include 'PiCamera\&.hpp'\fP
+.br
+\fC#include 'ScanQR\&.hpp'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBmain\fP ()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Contains test program for \fBScanQR()\fP function\&. 
+
+
+.PP
+\fBAuthor:\fP
+.RS 4
+Samuel Andrew Wisner, awisner94@gmail.com 
+.RE
+.PP
+
+.PP
+Definition in file \fBqr_test\&.cpp\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "int main ()"
+This program tests the \fBScanQR()\fP function in terms of reading QR codes (not moving the arm)\&. 
+.PP
+Definition at line 22 of file qr_test\&.cpp\&.
+.PP
+.nf
+22            {
+23     while(true) {
+24         Color color = ScanQR();
+25         std::string colstr;
+26 
+27         switch(color) {
+28             case Color::Red:
+29                 colstr = "RED";
+30                 break;
+31 
+32             case Color::Yellow:
+33                 colstr = "YELLOW";
+34                 break;
+35 
+36             case Color::Green:
+37                 colstr = "GREEN";
+38                 break;
+39 
+40             case Color::Blue:
+41                 colstr = "BLUE";
+42                 break;
+43 
+44         }
+45 
+46         std::cout << colstr << std::endl;
+47     }
+48 }
+.fi
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for The Automatic Vasospasm Detection Application from the source code\&.

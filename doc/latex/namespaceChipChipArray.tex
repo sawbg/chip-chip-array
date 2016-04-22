@@ -1,11 +1,6 @@
 \hypertarget{namespaceChipChipArray}{\section{Chip\+Chip\+Array Namespace Reference}
 \label{namespaceChipChipArray}\index{Chip\+Chip\+Array@{Chip\+Chip\+Array}}
 }
-
-
-contains \hyperlink{classChipChipArray_1_1Block}{Block} class  
-
-
 \subsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
@@ -35,22 +30,6 @@ int \hyperlink{namespaceChipChipArray_a7fc3d1edffca11531cd09fdab7c8b88d}{main} (
 \end{DoxyCompactItemize}
 
 
-\subsection{Detailed Description}
-contains \hyperlink{classChipChipArray_1_1Block}{Block} class 
-
-contains \hyperlink{namespaceChipChipArray_a6c7465049b5d408e1a238b6d8ffa887d}{Scan\+Q\+R()} function
-
-contains \hyperlink{classChipChipArray_1_1PiCamera}{Pi\+Camera} class
-
-contains \hyperlink{classChipChipArray_1_1Log}{Log} class
-
-contains the \hyperlink{classChipChipArray_1_1Grabber}{Grabber} class
-
-\begin{DoxyAuthor}{Author}
-Samuel Andrew Wisner, \href{mailto:awisner94@gmail.com}{\tt awisner94@gmail.\+com} 
-\end{DoxyAuthor}
-
-
 \subsection{Function Documentation}
 \hypertarget{namespaceChipChipArray_a7fc3d1edffca11531cd09fdab7c8b88d}{\index{Chip\+Chip\+Array@{Chip\+Chip\+Array}!main@{main}}
 \index{main@{main}!Chip\+Chip\+Array@{Chip\+Chip\+Array}}
@@ -62,8 +41,107 @@ Samuel Andrew Wisner, \href{mailto:awisner94@gmail.com}{\tt awisner94@gmail.\+co
 )}}\label{namespaceChipChipArray_a7fc3d1edffca11531cd09fdab7c8b88d}
 This program was used before \hyperlink{cv__shape_8cpp}{cv\+\_\+shape.\+cpp} was written to find H\+S\+V ranges for the different color blocks. This is a slightly modified version of some code written by Shermal Fernando in the blog post \char`\"{}\+Color Detection \& Object Tracking\char`\"{} at \href{http://opencv-srf.blogspot.com/2010/09/object-detection-using-color-seperation.html}{\tt http\+://opencv-\/srf.\+blogspot.\+com/2010/09/object-\/detection-\/using-\/color-\/seperation.\+html}". 
 
-Definition at line 26 of file cv\+\_\+hue.\+cpp.
+Definition at line \hyperlink{cv__hue_8cpp_source_l00027}{27} of file \hyperlink{cv__hue_8cpp_source}{cv\+\_\+hue.\+cpp}.
 
+
+\begin{DoxyCode}
+00027                                       \{
+00028         \hyperlink{classChipChipArray_1_1PiCamera}{PiCamera} cam;
+00029         namedWindow(\textcolor{stringliteral}{"Control"}, CV\_WINDOW\_AUTOSIZE); \textcolor{comment}{//create a window called "Control"}
+00030 
+00031         \textcolor{keywordtype}{int} iLowH = 170;
+00032         \textcolor{keywordtype}{int} iHighH = 179;
+00033 
+00034         \textcolor{keywordtype}{int} iLowS = 150; 
+00035         \textcolor{keywordtype}{int} iHighS = 255;
+00036 
+00037         \textcolor{keywordtype}{int} iLowV = 60;
+00038         \textcolor{keywordtype}{int} iHighV = 255;
+00039 
+00040         \textcolor{comment}{//Create trackbars in "Control" window}
+00041         createTrackbar(\textcolor{stringliteral}{"LowH"}, \textcolor{stringliteral}{"Control"}, &iLowH, 179); \textcolor{comment}{//Hue (0 - 179)}
+00042         createTrackbar(\textcolor{stringliteral}{"HighH"}, \textcolor{stringliteral}{"Control"}, &iHighH, 179);
+00043 
+00044         createTrackbar(\textcolor{stringliteral}{"LowS"}, \textcolor{stringliteral}{"Control"}, &iLowS, 255); \textcolor{comment}{//Saturation (0 - 255)}
+00045         createTrackbar(\textcolor{stringliteral}{"HighS"}, \textcolor{stringliteral}{"Control"}, &iHighS, 255);
+00046 
+00047         createTrackbar(\textcolor{stringliteral}{"LowV"}, \textcolor{stringliteral}{"Control"}, &iLowV, 255);\textcolor{comment}{//Value (0 - 255)}
+00048         createTrackbar(\textcolor{stringliteral}{"HighV"}, \textcolor{stringliteral}{"Control"}, &iHighV, 255);
+00049 
+00050         \textcolor{keywordtype}{int} iLastX = -1; 
+00051         \textcolor{keywordtype}{int} iLastY = -1;
+00052 
+00053         \textcolor{comment}{//Capture a temporary image from the camera}
+00054         Mat imgTmp = cam.\hyperlink{classChipChipArray_1_1PiCamera_a58fb0de02570dce9a9cb60a1a04fb84f}{Snap}();
+00055 
+00056         \textcolor{comment}{//Create a black image with the size as the camera output}
+00057         Mat imgLines = Mat::zeros( imgTmp.size(), CV\_8UC3 );;
+00058 
+00059 
+00060         \textcolor{keywordflow}{while} (\textcolor{keyword}{true})
+00061         \{
+00062             Mat imgOriginal = cam.\hyperlink{classChipChipArray_1_1PiCamera_a58fb0de02570dce9a9cb60a1a04fb84f}{Snap}(); \textcolor{comment}{// read a new frame from video}
+00063             Mat imgHSV;
+00064 
+00065             cvtColor(imgOriginal, imgHSV, COLOR\_BGR2HSV); \textcolor{comment}{//Convert the captured frame from BGR to HSV}
+00066 
+00067             Mat imgThresholded;
+00068 
+00069             inRange(imgHSV, Scalar(iLowH, iLowS, iLowV), Scalar(iHighH, iHighS, iHighV), imgThresholded); \textcolor{comment}{
+      //Threshold the image}
+00070 
+00071             \textcolor{comment}{//morphological opening (removes small objects from the foreground)}
+00072             erode(imgThresholded, imgThresholded, getStructuringElement(MORPH\_ELLIPSE, 
+      \hyperlink{definitions_8hpp_a9809446fd16a744b6df9808293f14153}{Size}(5, 5)) );
+00073             dilate( imgThresholded, imgThresholded, getStructuringElement(MORPH\_ELLIPSE, 
+      \hyperlink{definitions_8hpp_a9809446fd16a744b6df9808293f14153}{Size}(5, 5)) ); 
+00074 
+00075             \textcolor{comment}{//morphological closing (removes small holes from the foreground)}
+00076             dilate( imgThresholded, imgThresholded, getStructuringElement(MORPH\_ELLIPSE, 
+      \hyperlink{definitions_8hpp_a9809446fd16a744b6df9808293f14153}{Size}(5, 5)) ); 
+00077             erode(imgThresholded, imgThresholded, getStructuringElement(MORPH\_ELLIPSE, 
+      \hyperlink{definitions_8hpp_a9809446fd16a744b6df9808293f14153}{Size}(5, 5)) );
+00078 
+00079             \textcolor{comment}{//Calculate the moments of the thresholded image}
+00080             Moments oMoments = moments(imgThresholded);
+00081 
+00082             \textcolor{comment}{/*double dM01 = oMoments.m01;}
+00083 \textcolor{comment}{              double dM10 = oMoments.m10;}
+00084 \textcolor{comment}{              double dArea = oMoments.m00;}
+00085 \textcolor{comment}{}
+00086 \textcolor{comment}{            // if the area <= 10000, I consider that the there are no object in the image and it's because
+       of the noise, the area is not zero }
+00087 \textcolor{comment}{            if (dArea > 50000)}
+00088 \textcolor{comment}{            \{}
+00089 \textcolor{comment}{            //calculate the position of the ball}
+00090 \textcolor{comment}{            int posX = dM10 / dArea;}
+00091 \textcolor{comment}{            int posY = dM01 / dArea;        }
+00092 \textcolor{comment}{}
+00093 \textcolor{comment}{            if (iLastX >= 0 && iLastY >= 0 && posX >= 0 && posY >= 0)}
+00094 \textcolor{comment}{            \{}
+00095 \textcolor{comment}{            //Draw a red line from the previous point to the current point}
+00096 \textcolor{comment}{            line(imgLines, Point(posX, posY), Point(iLastX, iLastY), Scalar(0,0,255), 2);}
+00097 \textcolor{comment}{            \}}
+00098 \textcolor{comment}{}
+00099 \textcolor{comment}{            iLastX = posX;}
+00100 \textcolor{comment}{            iLastY = posY;}
+00101 \textcolor{comment}{            \}}
+00102 \textcolor{comment}{            */}
+00103             imshow(\textcolor{stringliteral}{"Thresholded Image"}, imgThresholded); \textcolor{comment}{//show the thresholded image}
+00104 
+00105             \textcolor{comment}{//      imgOriginal = imgOriginal + imgLines;}
+00106             imshow(\textcolor{stringliteral}{"Original"}, imgOriginal); \textcolor{comment}{//show the original image}
+00107 
+00108             \textcolor{keywordflow}{if} (waitKey(30) == 27) \textcolor{comment}{//wait for 'esc' key press for 30ms. If 'esc' key is pressed, break loop}
+00109             \{
+00110                 cout << \textcolor{stringliteral}{"esc key is pressed by user"} << endl;
+00111                 \textcolor{keywordflow}{break}; 
+00112             \}
+00113         \}
+00114 
+00115         \textcolor{keywordflow}{return} 0;
+00116     \}
+\end{DoxyCode}
 
 
 Here is the call graph for this function\+:
@@ -87,8 +165,71 @@ This function manuvers arm to look at the Q\+R code on a train car as the robot 
 
 This function is based on code written by Michael Young (\href{https://github.com/ayoungprogrammer/WebcamCodeScanner}{\tt https\+://github.\+com/ayoungprogrammer/\+Webcam\+Code\+Scanner}). 
 
-Definition at line 33 of file Scan\+Q\+R.\+hpp.
+Definition at line \hyperlink{ScanQR_8hpp_source_l00041}{41} of file \hyperlink{ScanQR_8hpp_source}{Scan\+Q\+R.\+hpp}.
 
+
+\begin{DoxyCode}
+00041                    \{
+00042         \textcolor{comment}{// 0. Initialize variables}
+00043         \hyperlink{definitions_8hpp_abc05a0f46084a3477cf5d5c939ff1436}{Color} color;
+00044         PiCamera cam(\textcolor{keyword}{false});
+00045 
+00046         \textcolor{comment}{// 1. Position arm}
+00047         \hyperlink{namespaceChipChipArray_ab5c6290951637c25a5422707020fb3a8}{scanQrLog}.\hyperlink{classChipChipArray_1_1Log_a154a5f38d9c7a767693b242684a3d4d9}{Verbose}(\textcolor{stringliteral}{"Positioning arm"});
+00048 
+00049         \textcolor{comment}{// 2. Scan images from camera}
+00050         \hyperlink{namespaceChipChipArray_ab5c6290951637c25a5422707020fb3a8}{scanQrLog}.\hyperlink{classChipChipArray_1_1Log_a154a5f38d9c7a767693b242684a3d4d9}{Verbose}(\textcolor{stringliteral}{"Scanning for QR code"});
+00051 
+00052         \textcolor{comment}{// Nick's supposed to make sure this isn't an endles loop}
+00053         \textcolor{keywordflow}{while}(\textcolor{keyword}{true}) \{           
+00054             \textcolor{comment}{// get image}
+00055             cv::Mat frame = cam.Snap();
+00056             cv::Mat canvas;
+00057             cv::cvtColor(frame, canvas, CV\_BGR2GRAY);
+00058             \hyperlink{namespaceChipChipArray_ab5c6290951637c25a5422707020fb3a8}{scanQrLog}.\hyperlink{classChipChipArray_1_1Log_a65bbab057c8b1453f9e4efcfee7522c4}{Image}(canvas, \hyperlink{namespacestd_aa5ddf582a1c96ffe258c997be9a294a3}{std::to\_string}(++
+      \hyperlink{namespaceChipChipArray_a3b2a3c0ffa9f53021293aeb4955d2fef}{qrInvokeCount})
+00059                     + \textcolor{stringliteral}{".bmp"});
+00060             
+00061             \hyperlink{definitions_8hpp_a1134b580f8da4de94ca6b1de4d37975e}{uint32} width = canvas.cols;
+00062             \hyperlink{definitions_8hpp_a1134b580f8da4de94ca6b1de4d37975e}{uint32} height = canvas.rows;
+00063             zbar::Image image(width, height, \textcolor{stringliteral}{"Y800"},
+00064                     (uchar*)canvas.data, width * height);
+00065 
+00066             zbar::ImageScanner scanner;
+00067             scanner.set\_config(zbar::ZBAR\_NONE, zbar::ZBAR\_CFG\_ENABLE, 1);
+00068             scanner.scan(image);
+00069             zbar::Image::SymbolIterator symbol = image.symbol\_begin();
+00070 
+00071             \textcolor{keywordflow}{if}(symbol != image.symbol\_end()) \{
+00072                 \textcolor{keywordflow}{switch}(symbol->get\_data()[0]) \{
+00073                     \textcolor{keywordflow}{case} \textcolor{charliteral}{'r'}:
+00074                         color = \hyperlink{definitions_8hpp_abc05a0f46084a3477cf5d5c939ff1436aee38e4d5dd68c4e440825018d549cb47}{Color::Red};
+00075                         \textcolor{keywordflow}{break};
+00076 
+00077                     \textcolor{keywordflow}{case} \textcolor{charliteral}{'y'}:
+00078                         color = \hyperlink{definitions_8hpp_abc05a0f46084a3477cf5d5c939ff1436a51e6cd92b6c45f9affdc158ecca2b8b8}{Color::Yellow};
+00079                         \textcolor{keywordflow}{break};
+00080 
+00081                     \textcolor{keywordflow}{case} \textcolor{charliteral}{'g'}:
+00082                         color = \hyperlink{definitions_8hpp_abc05a0f46084a3477cf5d5c939ff1436ad382816a3cbeed082c9e216e7392eed1}{Color::Green};
+00083                         \textcolor{keywordflow}{break};
+00084 
+00085                     \textcolor{keywordflow}{case} \textcolor{charliteral}{'b'}:
+00086                         color = \hyperlink{definitions_8hpp_abc05a0f46084a3477cf5d5c939ff1436a9594eec95be70e7b1710f730fdda33d9}{Color::Blue};
+00087                         \textcolor{keywordflow}{break};
+00088                 \}
+00089 
+00090                 \hyperlink{namespaceChipChipArray_ab5c6290951637c25a5422707020fb3a8}{scanQrLog}.\hyperlink{classChipChipArray_1_1Log_a66575b6e94c6112e4cefa5736cb996e0}{Status}(\textcolor{stringliteral}{"Detected "} + \hyperlink{namespacestd_aa5ddf582a1c96ffe258c997be9a294a3}{std::to\_string}(color)
+00091                         + \textcolor{stringliteral}{" train car"});
+00092                 \textcolor{keywordflow}{break};
+00093             \}
+00094         \}
+00095 
+00096         \textcolor{comment}{// 3. Retract arm}
+00097         \hyperlink{namespaceChipChipArray_ab5c6290951637c25a5422707020fb3a8}{scanQrLog}.\hyperlink{classChipChipArray_1_1Log_a154a5f38d9c7a767693b242684a3d4d9}{Verbose}(\textcolor{stringliteral}{"Retracting arm"});        
+00098         \textcolor{keywordflow}{return} color;
+00099     \}
+\end{DoxyCode}
 
 
 Here is the call graph for this function\+:
@@ -119,10 +260,11 @@ Here is the caller graph for this function\+:
 \hypertarget{namespaceChipChipArray_a3b2a3c0ffa9f53021293aeb4955d2fef}{\index{Chip\+Chip\+Array@{Chip\+Chip\+Array}!qr\+Invoke\+Count@{qr\+Invoke\+Count}}
 \index{qr\+Invoke\+Count@{qr\+Invoke\+Count}!Chip\+Chip\+Array@{Chip\+Chip\+Array}}
 \subsubsection[{qr\+Invoke\+Count}]{\setlength{\rightskip}{0pt plus 5cm}{\bf uint8} Chip\+Chip\+Array\+::qr\+Invoke\+Count = 0}}\label{namespaceChipChipArray_a3b2a3c0ffa9f53021293aeb4955d2fef}
+The number of times \hyperlink{namespaceChipChipArray_a6c7465049b5d408e1a238b6d8ffa887d}{Scan\+Q\+R()} has been called. Used for Scan\+Q\+R log. 
 
-
-Definition at line 20 of file Scan\+Q\+R.\+hpp.
+Definition at line \hyperlink{ScanQR_8hpp_source_l00024}{24} of file \hyperlink{ScanQR_8hpp_source}{Scan\+Q\+R.\+hpp}.
 
 \hypertarget{namespaceChipChipArray_ab5c6290951637c25a5422707020fb3a8}{\index{Chip\+Chip\+Array@{Chip\+Chip\+Array}!scan\+Qr\+Log@{scan\+Qr\+Log}}
 \index{scan\+Qr\+Log@{scan\+Qr\+Log}!Chip\+Chip\+Array@{Chip\+Chip\+Array}}
 \subsubsection[{scan\+Qr\+Log}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Log} Chip\+Chip\+Array\+::scan\+Qr\+Log(\char`\"{}logs/{\bf Scan\+Q\+R}\char`\"{}, Log\+Mode\+::\+Multi)}}\label{namespaceChipChipArray_ab5c6290951637c25a5422707020fb3a8}
+The \hyperlink{classChipChipArray_1_1Log}{Log} instance used by the \hyperlink{namespaceChipChipArray_a6c7465049b5d408e1a238b6d8ffa887d}{Scan\+Q\+R()} function. 

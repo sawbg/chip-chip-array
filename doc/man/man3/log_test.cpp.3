@@ -1,0 +1,43 @@
+.TH "src/log_test.cpp" 3 "Fri Apr 22 2016" "The Automatic Vasospasm Detection Application" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/log_test.cpp \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <iostream>\fP
+.br
+\fC#include <sstream>\fP
+.br
+\fC#include <string>\fP
+.br
+\fC#include 'definitions\&.hpp'\fP
+.br
+\fC#include 'Log\&.hpp'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBmain\fP ()"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "int main ()"
+This program partially tests the Log class\&. 
+.PP
+Definition at line 17 of file log_test\&.cpp\&.
+.PP
+.nf
+17            {
+18     Log log("logs", LogMode::Text);
+19     log\&.Debug("yolo!");
+20     log\&.Variable("mymom","toldme");
+21 }
+.fi
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for The Automatic Vasospasm Detection Application from the source code\&.

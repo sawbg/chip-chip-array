@@ -1,0 +1,73 @@
+\hypertarget{makefile_source}{\section{makefile}
+}
+
+\begin{DoxyCode}
+00001 GCC = g++-4.9
+00002 ARM = -L/usr/local/lib -lwiringPi
+00003 CPPFLAGS = -g -std=gnu++14
+00004 CVFLAGS = -lraspicam -lraspicam\_cv -lmmal -lmmal\_core -lmmal\_util -lzbar -lopencv\_core
+       -lopencv\_highgui -lopencv\_imgproc
+00005 LOG = -DLOG
+00006 
+00007 export LIBRARY\_PATH=/opt/vc/lib:/usr/lib/arm-linux-gnueabihf
+00008 
+00009 arm:
+00010    $(GCC) src/dark\_magic.cpp -o bin/arm $(ARM) $(CPPFLAGS)
+00011 
+00012 block-test:
+00013    $(GCC) src/cv\_shape.cpp -o bin/cvshape $(CVFLAGS) $(CPPFLAGS)
+00014 
+00015 channel-test:
+00016    $(GCC) src/cv\_channel\_test.cpp -o bin/channeltest $(CVFLAGS) $(CPPFLAGS)
+00017 
+00018 
+00019 comp:
+00020    $(GCC) src/main.cpp -o bin/main $(CVFLAGS) $(CPPFLAGS) $(ARM) -lpthread
+00021 
+00022 configure:
+00023    sudo apt-get install -y libopencv-dev libzbar-dev cmake doxygen libgl1-meda-dri
+00024    git clone https://github.com/cedricve/raspicam
+00025    cd raspicam; mkdir build; cd build; cmake ..; make; sudo make install; sudo ldconfig;
+00026    sudo rm -r raspicam
+00027    mkdir docs
+00028 
+00029 cv-test:
+00030    $(GCC) src/cv\_test.cpp -o bin/cvtest $(CVFLAGS) $(CPPFLAGS) $(LOG)
+00031 
+00032 img:
+00033    $(GCC) src/img.cpp -o bin/img $(CVFLAGS) $(CPPFLAGS)
+00034 
+00035 jacob-algorithm-test:
+00036    $(GCC) src/jacob\_alg\_test.cpp -o bin/jacobalgtest $(CVFLAGS) $(CPPFLAGS)
+00037 
+00038 loading-test:
+00039    $(GCC) src/loading\_test.cpp -o bin/loadingtest $(CPPFLAGS) $(LOG) $(ARM) $(CVFLAGS)
+00040 
+00041 log-test:
+00042    $(GCC) src/log\_test.cpp -o bin/logtest $(CPPFLAGS) $(LOG)
+00043 
+00044 net-cv-hue-test:
+00045    $(GCC) src/cv\_hue.cpp -o bin/cvhue $(CPPFLAGS) $(CVFLAGS)
+00046 
+00047 net-qr-test:
+00048    $(GCC) src/net\_qr\_test.cpp -o bin/netqrtest $(CPPFLAGS) $(CVFLAGS)
+00049 
+00050 qr-test:
+00051    $(GCC) src/qr\_test.cpp -o bin/qrtest $(CPPFLAGS) $(CVFLAGS) $(LOG)
+00052 
+00053 servotrip:
+00054    $(GCC) src/main.cpp -o bin/servotrip $(CPPFLAGS) $(ARM)
+00055 
+00056 docs:
+00057    rm -r doc/
+00058    doxygen etc/doxygen.config
+00059    cd doc/latex; make pdf;
+00060    git reset
+00061    git add doc/.
+00062    git commit -m "Updated documentation."
+00063    git push
+00064 
+00065 count:
+00066    grep -r "src/" -e "Samuel Andrew Wisner" -l | xargs wc -l  # works assuming there's no
+       subdirectories
+\end{DoxyCode}

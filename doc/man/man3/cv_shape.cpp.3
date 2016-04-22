@@ -1,0 +1,167 @@
+.TH "src/cv_shape.cpp" 3 "Fri Apr 22 2016" "The Automatic Vasospasm Detection Application" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/cv_shape.cpp \- 
+.PP
+Contains a program to aid in determining HSV ranges\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <iostream>\fP
+.br
+\fC#include <opencv2/highgui/highgui\&.hpp>\fP
+.br
+\fC#include <opencv2/imgproc/imgproc\&.hpp>\fP
+.br
+\fC#include <string>\fP
+.br
+\fC#include 'definitions\&.hpp'\fP
+.br
+\fC#include 'PiCamera\&.hpp'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBmain\fP ()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Contains a program to aid in determining HSV ranges\&. 
+
+
+.PP
+\fBAuthor:\fP
+.RS 4
+Shermal Fernando 
+.PP
+Samuel Andrew Wisner, awisner94@gmail.com 
+.RE
+.PP
+
+.PP
+Definition in file \fBcv_shape\&.cpp\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "int main ()"
+This program (a single function) is a test of the computer vision algorithms for loading the blocks\&. It will likely be in development for some time to come\&. The plan currently is to develop and test all CV algorithms for block loading here before moving it all into class functions and testing again\&.
+.PP
+This code is based on several online articles:
+.IP "\(bu" 2
+'Color Detectionn & Object Tracking' by Shermal Fernando (http://opencv-srf.blogspot.com/2010/09/object-detection-using-color-seperation.html)
+.IP "\(bu" 2
+'Shape Detection & Tracking using Contours' by Shermal Fernando (http://opencv-srf.blogspot.com/2011/09/object-detection-tracking-using-contours.html)
+.IP "\(bu" 2
+'Creating Bounding boxes and circles for contours' in the OpenCV 2\&.4 Tutorials (http://opencv-srf.blogspot.com/2011/09/object-detection-tracking-using-contours.html) 
+.PP
+
+.PP
+Definition at line 37 of file cv_shape\&.cpp\&.
+.PP
+.nf
+37            {
+38     PiCamera cam;
+39 
+40     // window names
+41     string control = "Settings";
+42     string winThresh = "Image Threshold";
+43     string winContours = "Contours Detected";
+44 
+45     // control (trackbar) variables
+46     int lowH = 0;  // hue
+47     int highH = 255;
+48     int lowS = 0;  // saturation
+49     int highS = 255;
+50     int lowV = 0;  // value
+51     int highV = 255;
+52     int polyEps = 3;  // max dif b/t bin shape edge & est poly edge
+53 
+54     // opening windows
+55     namedWindow(control, CV_WINDOW_AUTOSIZE);
+56     namedWindow(winThresh, CV_WINDOW_AUTOSIZE);
+57     namedWindow(winContours, CV_WINDOW_AUTOSIZE);
+58 
+59     // creating control trackbars
+60     createTrackbar("Hue Min", control, &lowH, highH);
+61     createTrackbar("Hue Max", control, &highH, highH);
+62     createTrackbar("Sat Min", control, &lowS, highS);
+63     createTrackbar("Sat Max", control, &highS, highS);
+64     createTrackbar("Val Min", control, &lowV, highV);
+65     createTrackbar("Val Max", control, &highV, highV);
+66     createTrackbar("Polygon Epsilon", control, &polyEps, 20);
+67 
+68     while(true) {
+69         Mat imgOrig = cam\&.Snap();  // real iage
+70         Mat imgHSV;  // RGB image converted to HSV space
+71         Mat imgThresh;  // binary threshold image
+72         //cvtColor(imgOrig, imgHSV, CV_BGR2YUV);
+73         //cvtColor(imgHSV, imgOrig, CV_HSV2BGR);
+74         cvtColor(imgOrig, imgHSV, COLOR_BGR2HSV);
+75 
+76         // create binary image
+77         inRange(imgHSV, Scalar(lowH, lowS, lowV), Scalar(highH, highS,
+78                     highV), imgThresh);
+79 
+80         /* 
+81          * Not quite sure what all this does, but it seems to
+82          * relate to smoothing the image
+83          */
+84         erode(imgThresh, imgThresh, getStructuringElement(
+85                     MORPH_ELLIPSE, cv::Size(5, 5)));
+86         dilate(imgThresh, imgThresh, getStructuringElement(
+87                     MORPH_ELLIPSE, cv::Size(5, 5)));
+88         dilate(imgThresh, imgThresh, getStructuringElement(
+89                     MORPH_ELLIPSE, cv::Size(5, 5)));
+90         erode(imgThresh, imgThresh, getStructuringElement(
+91                     MORPH_ELLIPSE, cv::Size(5, 5)));
+92 
+93         // show binary image in threshold window
+94         imshow(winThresh, imgThresh);
+95 
+96         // calculate contours
+97         vector<vector<Point>> contours;
+98         findContours(imgThresh, contours, CV_RETR_TREE,
+99                 CV_CHAIN_APPROX_SIMPLE, Point(0, 0));
+100         vector<vector<Point>> contours_poly(contours\&.size());
+101         vector<Rect> bounds(contours\&.size());
+102         int maxArea = 0;
+103         int offset;
+104 
+105         // find rectangle around polygon-ish shapes
+106         for(int i = 0; i < contours\&.size(); i++) {
+107             approxPolyDP(Mat(contours[i]), contours_poly[i],
+108                     polyEps, false);
+109             bounds[i] = boundingRect(Mat(contours_poly[i]));
+110         }
+111 
+112         /* 
+113          * Draw surrounding rectangles from above on original
+114          * image\&.
+115          */
+116         for(int i = 0; i < contours\&.size(); i++) {
+117             rectangle(imgOrig, bounds[i]\&.tl(), bounds[i]\&.br(),
+118                     Scalar(255, 0, 0), 2, 8, 0);
+119             //drawContours(imgOrig, contours_poly, i,
+120             //      Scalar(255, 0, 0), 4, 8);
+121             int area = bounds[i]\&.width * bounds[i]\&.height;
+122 
+123             if(area > maxArea) {
+124                 offset = abs(640 - (bounds[i]\&.tl()\&.x + bounds[i]\&.width / 2));
+125                 maxArea = area;
+126             }
+127         }
+128 
+129         cout << "Block area: " << maxArea << " pixels\t\t" 
+130             << "Center offset: " << offset << endl;
+131         imshow(winContours, imgOrig);  // show original image with rectangles
+132         waitKey(50);  // has to be here :(
+133     }
+134 }
+.fi
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for The Automatic Vasospasm Detection Application from the source code\&.

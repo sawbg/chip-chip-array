@@ -1,6 +1,11 @@
 \hypertarget{NavigationControl_8h}{\section{src/\+Navigation\+Control.h File Reference}
 \label{NavigationControl_8h}\index{src/\+Navigation\+Control.\+h@{src/\+Navigation\+Control.\+h}}
 }
+
+
+Contains the function definitions for navigation control.  
+
+
 {\ttfamily \#include $<$iostream$>$}\\*
 {\ttfamily \#include $<$wiring\+Pi.\+h$>$}\\*
 {\ttfamily \#include $<$wiring\+Pi\+I2\+C.\+h$>$}\\*
@@ -29,10 +34,25 @@ This graph shows which files directly or indirectly include this file\+:
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \hyperlink{NavigationControl_8h_acb338a668bf01ea34c27c56db0d23782}{navigation\+Setup} (\hyperlink{Servo__Position__Shell_8h_ab077fa1127453be2bd9d4c3c8a768fa7}{uint8\+\_\+t} navigation\+\_\+add)
+void \hyperlink{NavigationControl_8h_acb338a668bf01ea34c27c56db0d23782}{navigation\+Setup} (\hyperlink{NavigationControl_8h_ab077fa1127453be2bd9d4c3c8a768fa7}{uint8\+\_\+t} navigation\+\_\+add)
 \item 
-void \hyperlink{NavigationControl_8h_a7534ad4cfb2b6663c3a1d15bb41bd71d}{command\+Navigation} (\hyperlink{Servo__Position__Shell_8h_ab077fa1127453be2bd9d4c3c8a768fa7}{uint8\+\_\+t} navigationcommand)
+void \hyperlink{NavigationControl_8h_a7534ad4cfb2b6663c3a1d15bb41bd71d}{command\+Navigation} (\hyperlink{NavigationControl_8h_ab077fa1127453be2bd9d4c3c8a768fa7}{uint8\+\_\+t} navigationcommand)
 \end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Contains the function definitions for navigation control. 
+
+\begin{DoxyAuthor}{Author}
+Nickolas Neely 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+22. Febrary 2016, 12\+:00 P\+M 
+\end{DoxyDate}
+
+
+Definition in file \hyperlink{NavigationControl_8h_source}{Navigation\+Control.\+h}.
+
 
 
 \subsection{Macro Definition Documentation}
@@ -41,7 +61,7 @@ void \hyperlink{NavigationControl_8h_a7534ad4cfb2b6663c3a1d15bb41bd71d}{command\
 \subsubsection[{uint8\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}\#define uint8\+\_\+t~unsigned char}}\label{NavigationControl_8h_ab077fa1127453be2bd9d4c3c8a768fa7}
 
 
-Definition at line 23 of file Navigation\+Control.\+h.
+Definition at line \hyperlink{NavigationControl_8h_source_l00024}{24} of file \hyperlink{NavigationControl_8h_source}{Navigation\+Control.\+h}.
 
 
 
@@ -55,20 +75,15 @@ Definition at line 23 of file Navigation\+Control.\+h.
 )}}\label{NavigationControl_8h_a7534ad4cfb2b6663c3a1d15bb41bd71d}
 
 
-Definition at line 21 of file Navigation\+Control.\+cpp.
+Definition at line \hyperlink{NavigationControl_8cpp_source_l00019}{19} of file \hyperlink{NavigationControl_8cpp_source}{Navigation\+Control.\+cpp}.
 
 
-
-Here is the caller graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=260pt]{NavigationControl_8h_a7534ad4cfb2b6663c3a1d15bb41bd71d_icgraph}
-\end{center}
-\end{figure}
-
-
+\begin{DoxyCode}
+00019                                                  \{
+00020     \hyperlink{Adafruit__PWMServoDriver_8h_ab077fa1127453be2bd9d4c3c8a768fa7}{uint8\_t} data = navigationcommand;
+00021     wiringPiI2CWrite(\hyperlink{NavigationControl_8cpp_a7b644cec5c881e356faacfa0e618a605}{nav\_fd}, data);
+00022 \}
+\end{DoxyCode}
 \hypertarget{NavigationControl_8h_acb338a668bf01ea34c27c56db0d23782}{\index{Navigation\+Control.\+h@{Navigation\+Control.\+h}!navigation\+Setup@{navigation\+Setup}}
 \index{navigation\+Setup@{navigation\+Setup}!Navigation\+Control.\+h@{Navigation\+Control.\+h}}
 \subsubsection[{navigation\+Setup}]{\setlength{\rightskip}{0pt plus 5cm}void navigation\+Setup (
@@ -78,17 +93,12 @@ Here is the caller graph for this function\+:
 )}}\label{NavigationControl_8h_acb338a668bf01ea34c27c56db0d23782}
 
 
-Definition at line 16 of file Navigation\+Control.\+cpp.
+Definition at line \hyperlink{NavigationControl_8cpp_source_l00014}{14} of file \hyperlink{NavigationControl_8cpp_source}{Navigation\+Control.\+cpp}.
 
 
-
-Here is the caller graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=240pt]{NavigationControl_8h_acb338a668bf01ea34c27c56db0d23782_icgraph}
-\end{center}
-\end{figure}
-
-
+\begin{DoxyCode}
+00014                                             \{
+00015     \hyperlink{NavigationControl_8cpp_a7b644cec5c881e356faacfa0e618a605}{nav\_fd}=wiringPiI2CSetup(navigation\_add);
+00016     
+00017 \}
+\end{DoxyCode}

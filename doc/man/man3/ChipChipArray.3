@@ -1,0 +1,225 @@
+.TH "ChipChipArray" 3 "Fri Apr 22 2016" "The Automatic Vasospasm Detection Application" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ChipChipArray \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBArm\fP"
+.br
+.ti -1c
+.RI "class \fBBlock\fP"
+.br
+.ti -1c
+.RI "class \fBGrabber\fP"
+.br
+.ti -1c
+.RI "class \fBLog\fP"
+.br
+.ti -1c
+.RI "class \fBPiCamera\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBmain\fP (int argc, char **argv)"
+.br
+.ti -1c
+.RI "\fBColor\fP \fBScanQR\fP ()"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fBuint8\fP \fBqrInvokeCount\fP = 0"
+.br
+.ti -1c
+.RI "\fBLog\fP \fBscanQrLog\fP ('logs/\fBScanQR\fP', LogMode::Multi)"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "int ChipChipArray::main (intargc, char **argv)"
+This program was used before \fBcv_shape\&.cpp\fP was written to find HSV ranges for the different color blocks\&. This is a slightly modified version of some code written by Shermal Fernando in the blog post 'Color Detection & Object Tracking' at http://opencv-srf.blogspot.com/2010/09/object-detection-using-color-seperation.html"\&. 
+.PP
+Definition at line 27 of file cv_hue\&.cpp\&.
+.PP
+.nf
+27                                       {
+28         PiCamera cam;
+29         namedWindow("Control", CV_WINDOW_AUTOSIZE); //create a window called "Control"
+30 
+31         int iLowH = 170;
+32         int iHighH = 179;
+33 
+34         int iLowS = 150; 
+35         int iHighS = 255;
+36 
+37         int iLowV = 60;
+38         int iHighV = 255;
+39 
+40         //Create trackbars in "Control" window
+41         createTrackbar("LowH", "Control", &iLowH, 179); //Hue (0 - 179)
+42         createTrackbar("HighH", "Control", &iHighH, 179);
+43 
+44         createTrackbar("LowS", "Control", &iLowS, 255); //Saturation (0 - 255)
+45         createTrackbar("HighS", "Control", &iHighS, 255);
+46 
+47         createTrackbar("LowV", "Control", &iLowV, 255);//Value (0 - 255)
+48         createTrackbar("HighV", "Control", &iHighV, 255);
+49 
+50         int iLastX = -1; 
+51         int iLastY = -1;
+52 
+53         //Capture a temporary image from the camera
+54         Mat imgTmp = cam\&.Snap();
+55 
+56         //Create a black image with the size as the camera output
+57         Mat imgLines = Mat::zeros( imgTmp\&.size(), CV_8UC3 );;
+58 
+59 
+60         while (true)
+61         {
+62             Mat imgOriginal = cam\&.Snap(); // read a new frame from video
+63             Mat imgHSV;
+64 
+65             cvtColor(imgOriginal, imgHSV, COLOR_BGR2HSV); //Convert the captured frame from BGR to HSV
+66 
+67             Mat imgThresholded;
+68 
+69             inRange(imgHSV, Scalar(iLowH, iLowS, iLowV), Scalar(iHighH, iHighS, iHighV), imgThresholded); //Threshold the image
+70 
+71             //morphological opening (removes small objects from the foreground)
+72             erode(imgThresholded, imgThresholded, getStructuringElement(MORPH_ELLIPSE, Size(5, 5)) );
+73             dilate( imgThresholded, imgThresholded, getStructuringElement(MORPH_ELLIPSE, Size(5, 5)) ); 
+74 
+75             //morphological closing (removes small holes from the foreground)
+76             dilate( imgThresholded, imgThresholded, getStructuringElement(MORPH_ELLIPSE, Size(5, 5)) ); 
+77             erode(imgThresholded, imgThresholded, getStructuringElement(MORPH_ELLIPSE, Size(5, 5)) );
+78 
+79             //Calculate the moments of the thresholded image
+80             Moments oMoments = moments(imgThresholded);
+81 
+82             /*double dM01 = oMoments\&.m01;
+83               double dM10 = oMoments\&.m10;
+84               double dArea = oMoments\&.m00;
+85 
+86             // if the area <= 10000, I consider that the there are no object in the image and it's because of the noise, the area is not zero 
+87             if (dArea > 50000)
+88             {
+89             //calculate the position of the ball
+90             int posX = dM10 / dArea;
+91             int posY = dM01 / dArea;        
+92 
+93             if (iLastX >= 0 && iLastY >= 0 && posX >= 0 && posY >= 0)
+94             {
+95             //Draw a red line from the previous point to the current point
+96             line(imgLines, Point(posX, posY), Point(iLastX, iLastY), Scalar(0,0,255), 2);
+97             }
+98 
+99             iLastX = posX;
+100             iLastY = posY;
+101             }
+102             */
+103             imshow("Thresholded Image", imgThresholded); //show the thresholded image
+104 
+105             //      imgOriginal = imgOriginal + imgLines;
+106             imshow("Original", imgOriginal); //show the original image
+107 
+108             if (waitKey(30) == 27) //wait for 'esc' key press for 30ms\&. If 'esc' key is pressed, break loop
+109             {
+110                 cout << "esc key is pressed by user" << endl;
+111                 break; 
+112             }
+113         }
+114 
+115         return 0;
+116     }
+.fi
+.SS "\fBColor\fP ChipChipArray::ScanQR ()"
+This function manuvers arm to look at the QR code on a train car as the robot is backing up to the car\&. It attempts to find the code in multiple images before finally throwing an exeption if a code is not found\&. If multiple codes are found, it returns a single Color by (seemingly) arbitrary decision\&.
+.PP
+This function is based on code written by Michael Young (https://github.com/ayoungprogrammer/WebcamCodeScanner)\&. 
+.PP
+Definition at line 41 of file ScanQR\&.hpp\&.
+.PP
+.nf
+41                    {
+42         // 0\&. Initialize variables
+43         Color color;
+44         PiCamera cam(false);
+45 
+46         // 1\&. Position arm
+47         scanQrLog\&.Verbose("Positioning arm");
+48 
+49         // 2\&. Scan images from camera
+50         scanQrLog\&.Verbose("Scanning for QR code");
+51 
+52         // Nick's supposed to make sure this isn't an endles loop
+53         while(true) {           
+54             // get image
+55             cv::Mat frame = cam\&.Snap();
+56             cv::Mat canvas;
+57             cv::cvtColor(frame, canvas, CV_BGR2GRAY);
+58             scanQrLog\&.Image(canvas, std::to_string(++qrInvokeCount)
+59                     + "\&.bmp");
+60             
+61             uint32 width = canvas\&.cols;
+62             uint32 height = canvas\&.rows;
+63             zbar::Image image(width, height, "Y800",
+64                     (uchar*)canvas\&.data, width * height);
+65 
+66             zbar::ImageScanner scanner;
+67             scanner\&.set_config(zbar::ZBAR_NONE, zbar::ZBAR_CFG_ENABLE, 1);
+68             scanner\&.scan(image);
+69             zbar::Image::SymbolIterator symbol = image\&.symbol_begin();
+70 
+71             if(symbol != image\&.symbol_end()) {
+72                 switch(symbol->get_data()[0]) {
+73                     case 'r':
+74                         color = Color::Red;
+75                         break;
+76 
+77                     case 'y':
+78                         color = Color::Yellow;
+79                         break;
+80 
+81                     case 'g':
+82                         color = Color::Green;
+83                         break;
+84 
+85                     case 'b':
+86                         color = Color::Blue;
+87                         break;
+88                 }
+89 
+90                 scanQrLog\&.Status("Detected " + std::to_string(color)
+91                         + " train car");
+92                 break;
+93             }
+94         }
+95 
+96         // 3\&. Retract arm
+97         scanQrLog\&.Verbose("Retracting arm");     
+98         return color;
+99     }
+.fi
+.SH "Variable Documentation"
+.PP 
+.SS "\fBuint8\fP ChipChipArray::qrInvokeCount = 0"
+The number of times \fBScanQR()\fP has been called\&. Used for ScanQR log\&. 
+.PP
+Definition at line 24 of file ScanQR\&.hpp\&.
+.SS "\fBLog\fP ChipChipArray::scanQrLog('logs/\fBScanQR\fP', LogMode::Multi)"
+The \fBLog\fP instance used by the \fBScanQR()\fP function\&. 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for The Automatic Vasospasm Detection Application from the source code\&.

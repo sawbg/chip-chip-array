@@ -37,7 +37,7 @@ A \char`\"{}container\char`\"{} directory to which the class can write is passed
 
 This class D\+O\+E\+S N\+O\+T W\+O\+R\+K without compiling without a \char`\"{}\+L\+O\+G\char`\"{} definition (\#define L\+O\+G or -\/\+D\+L\+O\+G). 
 
-Definition at line 34 of file Log.\+hpp.
+Definition at line \hyperlink{Log_8hpp_source_l00035}{35} of file \hyperlink{Log_8hpp_source}{Log.\+hpp}.
 
 
 
@@ -51,8 +51,12 @@ Definition at line 34 of file Log.\+hpp.
 )\hspace{0.3cm}{\ttfamily [inline]}}}\label{classChipChipArray_1_1Log_a2bd48afdb832567e94545e6dc2f6f4d5}
 Initializes \hyperlink{classChipChipArray_1_1Log}{Log} object but does not open log. \hyperlink{classChipChipArray_1_1Log_ad27a06a4561f2f59159bd8a7fc2fed3b}{Open()} must be called. 
 
-Definition at line 40 of file Log.\+hpp.
+Definition at line \hyperlink{Log_8hpp_source_l00041}{41} of file \hyperlink{Log_8hpp_source}{Log.\+hpp}.
 
+
+\begin{DoxyCode}
+00041 \{\};
+\end{DoxyCode}
 \hypertarget{classChipChipArray_1_1Log_a4cd28a821789b39e936a6e346329d65b}{\index{Chip\+Chip\+Array\+::\+Log@{Chip\+Chip\+Array\+::\+Log}!Log@{Log}}
 \index{Log@{Log}!Chip\+Chip\+Array\+::\+Log@{Chip\+Chip\+Array\+::\+Log}}
 \subsubsection[{Log}]{\setlength{\rightskip}{0pt plus 5cm}Chip\+Chip\+Array\+::\+Log\+::\+Log (
@@ -74,8 +78,16 @@ A new log file is created in dir if \hyperlink{definitions_8hpp_aa7380b6d694cab4
 \end{DoxyParams}
 
 
-Definition at line 186 of file Log.\+hpp.
+Definition at line \hyperlink{Log_8hpp_source_l00187}{187} of file \hyperlink{Log_8hpp_source}{Log.\+hpp}.
 
+
+\begin{DoxyCode}
+00187                                    \{
+00188 \textcolor{preprocessor}{#ifdef LOG}
+00189         \hyperlink{classChipChipArray_1_1Log_ad27a06a4561f2f59159bd8a7fc2fed3b}{Open}(dir, mode);
+00190 \textcolor{preprocessor}{#endif}
+00191     \}
+\end{DoxyCode}
 
 
 Here is the call graph for this function\+:
@@ -97,8 +109,22 @@ Here is the call graph for this function\+:
 )}}\label{classChipChipArray_1_1Log_a647df4da22b29d9d5a5ea32af3a1ed83}
 Destroys the \hyperlink{classChipChipArray_1_1Log}{Log} and closes the logfile. 
 
-Definition at line 192 of file Log.\+hpp.
+Definition at line \hyperlink{Log_8hpp_source_l00193}{193} of file \hyperlink{Log_8hpp_source}{Log.\+hpp}.
 
+
+\begin{DoxyCode}
+00193               \{
+00194 \textcolor{preprocessor}{#ifdef LOG}
+00195         \textcolor{keywordflow}{try} \{
+00196             file.flush();
+00197             file.close();
+00198         \} \textcolor{keywordflow}{catch} (std::ofstream::failure f) \{
+00199             LogError(\textcolor{stringliteral}{"Gosh dang it! A fatal error has occured "} 
+00200                     \textcolor{stringliteral}{"closing the logfile."}, f);
+00201         \}
+00202 \textcolor{preprocessor}{#endif}
+00203     \}
+\end{DoxyCode}
 
 
 \subsection{Member Function Documentation}
@@ -118,8 +144,21 @@ Writes \char`\"{}\+D\+E\+B\+U\+G\+: \char`\"{} to the log file along with the me
 \end{DoxyParams}
 
 
-Definition at line 204 of file Log.\+hpp.
+Definition at line \hyperlink{Log_8hpp_source_l00205}{205} of file \hyperlink{Log_8hpp_source}{Log.\+hpp}.
 
+
+\begin{DoxyCode}
+00205                              \{
+00206 \textcolor{preprocessor}{#ifdef LOG}
+00207         \textcolor{keywordflow}{try} \{
+00208             file << \textcolor{stringliteral}{"DEBUG: "} << mesg << std::endl;
+00209             file.flush();
+00210         \} \textcolor{keywordflow}{catch}(std::ofstream::failure f) \{
+00211             LogError(\textcolor{stringliteral}{"Debug() write error"}, f);
+00212         \}
+00213 \textcolor{preprocessor}{#endif}
+00214     \}
+\end{DoxyCode}
 
 
 Here is the caller graph for this function\+:
@@ -148,8 +187,21 @@ Writes \char`\"{}\+E\+R\+R\+O\+R\+: \char`\"{} to the log file. Should only be u
 \end{DoxyParams}
 
 
-Definition at line 215 of file Log.\+hpp.
+Definition at line \hyperlink{Log_8hpp_source_l00216}{216} of file \hyperlink{Log_8hpp_source}{Log.\+hpp}.
 
+
+\begin{DoxyCode}
+00216                              \{
+00217 \textcolor{preprocessor}{#ifdef LOG}
+00218         \textcolor{keywordflow}{try} \{
+00219             file << \textcolor{stringliteral}{"ERROR: "} << mesg << std::endl;
+00220             file.flush();
+00221         \} \textcolor{keywordflow}{catch}(std::ofstream::failure f) \{
+00222             LogError(\textcolor{stringliteral}{"Error() write error"}, f);
+00223         \}
+00224 \textcolor{preprocessor}{#endif}
+00225     \}
+\end{DoxyCode}
 
 
 Here is the caller graph for this function\+:
@@ -181,8 +233,22 @@ Creates a bitmap image in the subdirectory created by the \hyperlink{classChipCh
 \end{DoxyParams}
 
 
-Definition at line 226 of file Log.\+hpp.
+Definition at line \hyperlink{Log_8hpp_source_l00227}{227} of file \hyperlink{Log_8hpp_source}{Log.\+hpp}.
 
+
+\begin{DoxyCode}
+00227                                               \{
+00228 \textcolor{preprocessor}{#ifdef LOG}
+00229         \textcolor{keywordflow}{try} \{
+00230             cv::imwrite(dir + std::string(filename), image);
+00231         \} \textcolor{keywordflow}{catch}(std::ofstream::failure f) \{
+00232             LogError(\textcolor{stringliteral}{"Image() write error"}, f);
+00233         \} \textcolor{keywordflow}{catch}(std::exception ex) \{
+00234             \hyperlink{classChipChipArray_1_1Log_aba7b7b0555f49f4dcf15f4b9fd3e6b34}{Error}(\textcolor{stringliteral}{"Error writing image "} + std::string(filename));
+00235         \}
+00236 \textcolor{preprocessor}{#endif}
+00237     \}
+\end{DoxyCode}
 
 
 Here is the call graph for this function\+:
@@ -217,8 +283,53 @@ Here is the caller graph for this function\+:
 )}}\label{classChipChipArray_1_1Log_ad27a06a4561f2f59159bd8a7fc2fed3b}
 
 
-Definition at line 246 of file Log.\+hpp.
+Definition at line \hyperlink{Log_8hpp_source_l00247}{247} of file \hyperlink{Log_8hpp_source}{Log.\+hpp}.
 
+
+\begin{DoxyCode}
+00247                                          \{
+00248 \textcolor{preprocessor}{#ifdef LOG}
+00249         \textcolor{comment}{// format date and time}
+00250         \textcolor{keywordtype}{char} date[32];
+00251         time\_t sec = time(\textcolor{keyword}{nullptr});
+00252         \textcolor{keyword}{struct }tm * loctime = localtime(&sec);
+00253         strftime(date, 32, \textcolor{stringliteral}{"%m-%d\_%H-%M-%S"}, loctime);
+00254 
+00255         \textcolor{comment}{// create temperary strings}
+00256         this->dir = std::string(dir);
+00257         std::string datestr = std::string(date);
+00258 
+00259         \textcolor{comment}{// add path separator if necessary}
+00260         \textcolor{keywordflow}{if}(this->dir[this->dir.length() - 1] != PATH\_SEP) \{
+00261             this->dir += PATH\_SEP;
+00262         \}
+00263 
+00264         \textcolor{comment}{// add directory for log and images if necessary}
+00265         \textcolor{keywordflow}{if}(mode == \hyperlink{definitions_8hpp_aa7380b6d694cab49f07aed6a7af592d9ace7898536dd0e928d1640ee2ad531cc8}{LogMode::Multi}) this->dir += datestr + PATH\_SEP;
+00266 
+00267         \textcolor{keywordtype}{int} ret = mkdir(this->dir.c\_str(), S\_IRUSR | S\_IWUSR | S\_IRGRP | S\_IWGRP
+00268                 | S\_IROTH | S\_IWOTH | S\_IXUSR | S\_IXGRP
+00269                 | S\_IXOTH);
+00270 
+00271         filename = this->dir + datestr + \textcolor{stringliteral}{".log"};
+00272 
+00273         \textcolor{comment}{// set class mode}
+00274         this->mode = mode;
+00275 
+00276         \textcolor{comment}{// Initializing file}
+00277         file.exceptions(std::ofstream::failbit
+00278                 | std::ofstream::badbit);
+00279 
+00280         \textcolor{keywordflow}{try} \{
+00281             file.open(filename, std::ofstream::out
+00282                     | std::ofstream::app);
+00283         \} \textcolor{keywordflow}{catch}(std::ofstream::failure ex) \{
+00284             LogError(\textcolor{stringliteral}{"Oh, no! An error has occurred opening the "}
+00285                     \textcolor{stringliteral}{"log file."}, ex);
+00286         \}
+00287 \textcolor{preprocessor}{#endif}
+00288     \}
+\end{DoxyCode}
 
 
 Here is the caller graph for this function\+:
@@ -247,8 +358,21 @@ Writes \char`\"{}\+S\+T\+A\+T\+U\+S\+: \char`\"{} to the log file. Should be use
 \end{DoxyParams}
 
 
-Definition at line 289 of file Log.\+hpp.
+Definition at line \hyperlink{Log_8hpp_source_l00290}{290} of file \hyperlink{Log_8hpp_source}{Log.\+hpp}.
 
+
+\begin{DoxyCode}
+00290                               \{
+00291 \textcolor{preprocessor}{#ifdef LOG}
+00292         \textcolor{keywordflow}{try} \{
+00293             file << \textcolor{stringliteral}{"STATUS: "} << mesg << std::endl;
+00294             file.flush();
+00295         \} \textcolor{keywordflow}{catch} (std::ofstream::failure f) \{
+00296             LogError(\textcolor{stringliteral}{"Status() write error"}, f);
+00297         \}
+00298 \textcolor{preprocessor}{#endif}
+00299     \}
+\end{DoxyCode}
 
 
 Here is the caller graph for this function\+:
@@ -280,8 +404,22 @@ Writes \char`\"{}\+V\+A\+R\+I\+A\+B\+L\+E\+: \char`\"{} to the log file. Should 
 \end{DoxyParams}
 
 
-Definition at line 300 of file Log.\+hpp.
+Definition at line \hyperlink{Log_8hpp_source_l00301}{301} of file \hyperlink{Log_8hpp_source}{Log.\+hpp}.
 
+
+\begin{DoxyCode}
+00301                                             \{
+00302 \textcolor{preprocessor}{#ifdef LOG}
+00303         \textcolor{keywordflow}{try} \{
+00304             file << \textcolor{stringliteral}{"VARIABLE: "} << name << \textcolor{stringliteral}{" = "} << value
+00305                 << std::endl;
+00306             file.flush();
+00307         \} \textcolor{keywordflow}{catch}(std::ofstream::failure f) \{
+00308             LogError(\textcolor{stringliteral}{"Variable() write error"}, f);
+00309         \}
+00310 \textcolor{preprocessor}{#endif}
+00311     \}
+\end{DoxyCode}
 
 
 Here is the caller graph for this function\+:
@@ -310,8 +448,21 @@ Writes \char`\"{}\+V\+E\+R\+B\+O\+S\+E\+: \char`\"{} to the log file. Should onl
 \end{DoxyParams}
 
 
-Definition at line 312 of file Log.\+hpp.
+Definition at line \hyperlink{Log_8hpp_source_l00313}{313} of file \hyperlink{Log_8hpp_source}{Log.\+hpp}.
 
+
+\begin{DoxyCode}
+00313                                \{
+00314 \textcolor{preprocessor}{#ifdef LOG}
+00315         \textcolor{keywordflow}{try} \{
+00316             file << \textcolor{stringliteral}{"VERBOSE: "} << mesg << std::endl;
+00317             file.flush();
+00318         \} \textcolor{keywordflow}{catch}(std::ofstream::failure f) \{
+00319             LogError(\textcolor{stringliteral}{"Verbose() write error"}, f);
+00320         \}
+00321 \textcolor{preprocessor}{#endif}
+00322     \}
+\end{DoxyCode}
 
 
 Here is the caller graph for this function\+:

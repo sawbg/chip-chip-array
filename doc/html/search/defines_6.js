@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['wrist_5ftwist',['WRIST_TWIST',['../Arm_8hpp.html#a02a3a5fbd2fb97badde7f301b7499e05',1,'Arm.hpp']]]
+  ['uint16_5ft',['uint16_t',['../Adafruit__PWMServoDriver_8h.html#a395b3b2bf5cb4674ab41b6bda68c15bb',1,'Adafruit_PWMServoDriver.h']]],
+  ['uint8_5ft',['uint8_t',['../Adafruit__PWMServoDriver_8h.html#ab077fa1127453be2bd9d4c3c8a768fa7',1,'uint8_t():&#160;Adafruit_PWMServoDriver.h'],['../NavigationControl_8h.html#ab077fa1127453be2bd9d4c3c8a768fa7',1,'uint8_t():&#160;NavigationControl.h']]]
 ];

@@ -1,0 +1,32 @@
+\hypertarget{old__cv__test_8cpp_source}{\section{old\+\_\+cv\+\_\+test.\+cpp}
+\label{old__cv__test_8cpp_source}\index{src/old\+\_\+cv\+\_\+test.\+cpp@{src/old\+\_\+cv\+\_\+test.\+cpp}}
+}
+
+\begin{DoxyCode}
+00001 
+00007 \textcolor{preprocessor}{#include <core/core.hpp>}
+00008 \textcolor{preprocessor}{#include <highgui/highgui.hpp>}
+00009 \textcolor{preprocessor}{#include <iostream>}
+00010 
+00011 \textcolor{preprocessor}{#include "raspicam\_cv.h"}
+00012 
+\hypertarget{old__cv__test_8cpp_source_l00017}{}\hyperlink{old__cv__test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{00017} \textcolor{keywordtype}{int} \hyperlink{old__cv__test_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}() \{
+00018     cv::namedWindow(\textcolor{stringliteral}{"Test"}, CV\_WINDOW\_AUTOSIZE);
+00019 
+00020     raspicam::RaspiCam\_Cv cam;
+00021     cv::Mat image;
+00022 
+00023     \textcolor{keywordtype}{bool} s = cam.set(CV\_CAP\_PROP\_FORMAT, CV\_16UC3);
+00024     \textcolor{keywordtype}{bool} o = cam.open();
+00025 
+00026     \textcolor{keywordflow}{while}(\textcolor{keyword}{true}) \{
+00027         cam.grab();
+00028         cam.retrieve(image);
+00029         cv::imshow(\textcolor{stringliteral}{"Test"}, image);
+00030         cv::waitKey(1000);
+00031 
+00032     \}
+00033 
+00034     cam.release();
+00035 \}
+\end{DoxyCode}

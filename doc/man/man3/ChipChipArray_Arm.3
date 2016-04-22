@@ -1,0 +1,401 @@
+.TH "ChipChipArray::Arm" 3 "Fri Apr 22 2016" "The Automatic Vasospasm Detection Application" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ChipChipArray::Arm \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Arm\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBArm\fP ()"
+.br
+.ti -1c
+.RI "void \fBBaseTilt\fP (\fBuint8\fP a)"
+.br
+.ti -1c
+.RI "void \fBBaseTurn\fP (\fBuint8\fP a)"
+.br
+.ti -1c
+.RI "void \fBClawOpen\fP ()"
+.br
+.ti -1c
+.RI "void \fBClawClose\fP ()"
+.br
+.ti -1c
+.RI "void \fBdBaseTilt\fP (\fBsint16\fP a)"
+.br
+.ti -1c
+.RI "void \fBdBaseTurn\fP (\fBsint16\fP a)"
+.br
+.ti -1c
+.RI "void \fBdElbow\fP (\fBsint16\fP a)"
+.br
+.ti -1c
+.RI "void \fBdWristTilt\fP (\fBsint16\fP a)"
+.br
+.ti -1c
+.RI "void \fBdWristTwist\fP (\fBsint16\fP a)"
+.br
+.ti -1c
+.RI "void \fBElbow\fP (\fBuint8\fP a)"
+.br
+.ti -1c
+.RI "void \fBHover\fP (\fBZone\fP zone)"
+.br
+.ti -1c
+.RI "void \fBWristTilt\fP (\fBuint8\fP a)"
+.br
+.ti -1c
+.RI "void \fBWristTwist\fP (\fBuint8\fP a)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBuint8\fP \fBservoPos\fP [7] = { 0, 0, 0, 0, 0, 0, 0 }"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBdLeftGripper\fP (\fBsint16\fP a)"
+.br
+.ti -1c
+.RI "void \fBdRightGripper\fP (\fBsint16\fP a)"
+.br
+.ti -1c
+.RI "void \fBLeftGripper\fP (\fBuint8\fP a)"
+.br
+.ti -1c
+.RI "void \fBRightGripper\fP (\fBuint8\fP a)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class provides a layer of abstraction from the existing servo interface\&. It is designed to make more sense programmatically and to be easier to use\&. 
+.PP
+Definition at line 23 of file Arm\&.hpp\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ChipChipArray::Arm::Arm ()"
+Initializes the I2C interface for the arm if another instance of the \fBArm\fP class has not already\&. 
+.PP
+Definition at line 173 of file Arm\&.hpp\&.
+.PP
+.nf
+173              {
+174         if(!init) {
+175             setup();
+176             init = true;
+177         }
+178     }
+.fi
+.SH "Member Function Documentation"
+.PP 
+.SS "void ChipChipArray::Arm::BaseTilt (\fBuint8\fPa)"
+Tilts the base of the arm\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa\fP desired servo position in degrees 
+.RE
+.PP
+
+.PP
+Definition at line 180 of file Arm\&.hpp\&.
+.PP
+.nf
+180                               {
+181         setServoPosition(BASE_TILT, a);
+182         servoPos[BASE_TILT] = a;
+183     }
+.fi
+.SS "void ChipChipArray::Arm::BaseTurn (\fBuint8\fPa)"
+Twists the entire arm\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa\fP desired servo position in degrees 
+.RE
+.PP
+
+.PP
+Definition at line 185 of file Arm\&.hpp\&.
+.PP
+.nf
+185                               {
+186         setServoPosition(BASE_TURN, a);
+187         servoPos[BASE_TURN] = a;
+188     }
+.fi
+.SS "void ChipChipArray::Arm::ClawClose ()"
+Closes the claw enough to hold a block in place during movement but does not attempt to completely close the claw in order ot prevent unnecessary strain on the servos\&. 
+.PP
+Definition at line 195 of file Arm\&.hpp\&.
+.PP
+.nf
+195                         {
+196         LeftGripper(180);
+197         RightGripper(0);
+198     }
+.fi
+.SS "void ChipChipArray::Arm::ClawOpen ()"
+Opens the claw completely (within safe limits)\&. 
+.PP
+Definition at line 190 of file Arm\&.hpp\&.
+.PP
+.nf
+190                        {
+191         LeftGripper(0);
+192         RightGripper(180);
+193     }
+.fi
+.SS "void ChipChipArray::Arm::dBaseTilt (\fBsint16\fPa)"
+Tilts the base a certain number of degrees\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdegrees\fP to move servo\&. Positive values add to the servo angle, and negative values subtract from the servo angle\&. 
+.RE
+.PP
+
+.PP
+Definition at line 200 of file Arm\&.hpp\&.
+.PP
+.nf
+200                                 {
+201         a += servoPos[BASE_TILT];
+202         setServoPosition(BASE_TILT, a);
+203         servoPos[BASE_TILT] = a;
+204     }
+.fi
+.SS "void ChipChipArray::Arm::dBaseTurn (\fBsint16\fPa)"
+Turn the base a certain number of degrees\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdegrees\fP to move servo\&. Positive values add to the servo angle, and negative values subtract from the servo angle\&. 
+.RE
+.PP
+
+.PP
+Definition at line 206 of file Arm\&.hpp\&.
+.PP
+.nf
+206                                 {
+207         a += servoPos[BASE_TURN];
+208         setServoPosition(BASE_TURN, a);
+209         servoPos[BASE_TURN] = a;
+210     }
+.fi
+.SS "void ChipChipArray::Arm::dElbow (\fBsint16\fPa)"
+Bend the elbow a certain number of degrees\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdegrees\fP to move servo\&. Positive values add to the servo angle, and negative values subtract from the servo angle\&. 
+.RE
+.PP
+
+.PP
+Definition at line 212 of file Arm\&.hpp\&.
+.PP
+.nf
+212                              {
+213         a += servoPos[ELBOW];
+214         setServoPosition(ELBOW, a);
+215         servoPos[ELBOW] = a;
+216     }
+.fi
+.SS "void ChipChipArray::Arm::dLeftGripper (\fBsint16\fPa)\fC [protected]\fP"
+Moves the left gripper servo a certain number of degrees\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdegrees\fP to move servo\&. Positive values add to the servo angle, and negative values subtract from the servo angle\&. 
+.RE
+.PP
+
+.PP
+Definition at line 218 of file Arm\&.hpp\&.
+.PP
+.nf
+218                                    {
+219         a += servoPos[GRIP_LEFT];
+220         setServoPosition(GRIP_LEFT, a);
+221         servoPos[GRIP_LEFT] = a;
+222     }
+.fi
+.SS "void ChipChipArray::Arm::dRightGripper (\fBsint16\fPa)\fC [protected]\fP"
+Moves the right gripper servo a certain number of degrees\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdegrees\fP to move servo\&. Positive values add to the servo angle, and negative values subtract from the servo angle\&. 
+.RE
+.PP
+
+.PP
+Definition at line 224 of file Arm\&.hpp\&.
+.PP
+.nf
+224                                     {
+225         a += servoPos[GRIP_RIGHT];
+226         setServoPosition(GRIP_RIGHT, a);
+227         servoPos[GRIP_RIGHT] = a;
+228     }
+.fi
+.SS "void ChipChipArray::Arm::dWristTilt (\fBsint16\fPa)"
+Tilt the wrist a certain number of degrees\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdegrees\fP to move servo\&. Positive values add to the servo angle, and negative values subtract from the servo angle\&. 
+.RE
+.PP
+
+.PP
+Definition at line 230 of file Arm\&.hpp\&.
+.PP
+.nf
+230                                  {
+231         a += servoPos[WRIST_TILT];
+232         setServoPosition(WRIST_TILT, a);
+233         servoPos[WRIST_TILT] = a;
+234     }
+.fi
+.SS "void ChipChipArray::Arm::dWristTwist (\fBsint16\fPa)"
+Twist the wrist a certain number of degrees\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdegrees\fP to move servo\&. Positive values add to the servo angle, and negative values subtract from the servo angle\&. 
+.RE
+.PP
+
+.PP
+Definition at line 236 of file Arm\&.hpp\&.
+.PP
+.nf
+236                                   {
+237         a += servoPos[WRIST_TWIST];
+238         setServoPosition(WRIST_TWIST, a);
+239         servoPos[WRIST_TWIST] = a;
+240     }
+.fi
+.SS "void ChipChipArray::Arm::Elbow (\fBuint8\fPa)"
+Bend the elbow to a specific position\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa\fP desired servo position in degrees 
+.RE
+.PP
+
+.PP
+Definition at line 242 of file Arm\&.hpp\&.
+.PP
+.nf
+242                            {
+243         setServoPosition(ELBOW, a);
+244         servoPos[ELBOW] = a;
+245     }
+.fi
+.SS "void ChipChipArray::Arm::Hover (\fBZone\fPzone)"
+Moves arm into its 'hovering' position over the blocks\&. The position changes with the zone\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIzone\fP the zone for which the arm should position itself 
+.RE
+.PP
+
+.SS "void ChipChipArray::Arm::LeftGripper (\fBuint8\fPa)\fC [protected]\fP"
+Moves the left gripper to a specific position\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa\fP desired servo position in degrees 
+.RE
+.PP
+
+.PP
+Definition at line 247 of file Arm\&.hpp\&.
+.PP
+.nf
+247                                  {
+248         setServoPosition(GRIP_LEFT, a);
+249         servoPos[GRIP_LEFT] = a;
+250     }
+.fi
+.SS "void ChipChipArray::Arm::RightGripper (\fBuint8\fPa)\fC [protected]\fP"
+Moves the right gripper to a specific position\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa\fP desired servo position in degrees 
+.RE
+.PP
+
+.PP
+Definition at line 252 of file Arm\&.hpp\&.
+.PP
+.nf
+252                                   {
+253         setServoPosition(GRIP_RIGHT, a);
+254         servoPos[GRIP_RIGHT] = a;
+255     }
+.fi
+.SS "void ChipChipArray::Arm::WristTilt (\fBuint8\fPa)"
+Tilt the wrist to a specific position\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa\fP desired servo position in degrees 
+.RE
+.PP
+
+.PP
+Definition at line 257 of file Arm\&.hpp\&.
+.PP
+.nf
+257                                {
+258         setServoPosition(WRIST_TILT, a);
+259         servoPos[WRIST_TILT] = a;
+260     }
+.fi
+.SS "void ChipChipArray::Arm::WristTwist (\fBuint8\fPa)"
+Twist the wrist to a specific position\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa\fP desired servo position in degrees 
+.RE
+.PP
+
+.PP
+Definition at line 262 of file Arm\&.hpp\&.
+.PP
+.nf
+262                                 {
+263         setServoPosition(WRIST_TWIST, a);
+264         servoPos[WRIST_TWIST] = a;
+265     }
+.fi
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBuint8\fP ChipChipArray::Arm::servoPos[7] = { 0, 0, 0, 0, 0, 0, 0 }"
+The instantaneous position of each arm servo\&. 
+.PP
+Definition at line 34 of file Arm\&.hpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for The Automatic Vasospasm Detection Application from the source code\&.

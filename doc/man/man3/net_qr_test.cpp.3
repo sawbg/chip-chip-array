@@ -1,0 +1,107 @@
+.TH "src/net_qr_test.cpp" 3 "Fri Apr 22 2016" "The Automatic Vasospasm Detection Application" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/net_qr_test.cpp \- 
+.PP
+Contains test program for reading QR codes\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <opencv2/highgui/highgui\&.hpp>\fP
+.br
+\fC#include <opencv2/imgproc/imgproc\&.hpp>\fP
+.br
+\fC#include <zbar\&.h>\fP
+.br
+\fC#include <iostream>\fP
+.br
+\fC#include 'PiCamera\&.hpp'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBmain\fP (int argc, char *argv[])"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Contains test program for reading QR codes\&. 
+
+
+.PP
+\fBAuthor:\fP
+.RS 4
+Michael Young 
+.PP
+Samuel Andrew Wisner, awisner94@gmail.com 
+.RE
+.PP
+
+.PP
+Definition in file \fBnet_qr_test\&.cpp\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "int main (intargc, char *argv[])"
+This is a (modified) test program written by Michael Young (https://github.com/ayoungprogrammer/WebcamCodeScanner)\&. It was modified to work with the Raspicam\&. 
+.PP
+Definition at line 25 of file net_qr_test\&.cpp\&.
+.PP
+.nf
+26 {
+27     PiCamera cam; // open the video camera no\&. 0
+28     ImageScanner scanner;  
+29     scanner\&.set_config(ZBAR_NONE, ZBAR_CFG_ENABLE, 1);  
+30 
+31     namedWindow("MyVideo",CV_WINDOW_AUTOSIZE); //create a window called "MyVideo"
+32 
+33     while (1)
+34     {
+35         Mat frame = cam\&.Snap();
+36         Mat grey;
+37         cvtColor(frame,grey,CV_BGR2GRAY);
+38 
+39         int width = frame\&.cols;  
+40         int height = frame\&.rows;  
+41         uchar *raw = (uchar *)grey\&.data;  
+42         // wrap image data  
+43         zbar::Image image(width, height, "Y800", raw, width * height);  
+44         // scan the image for barcodes  
+45         int n = scanner\&.scan(image);  
+46         // extract results  
+47         for(Image::SymbolIterator symbol = image\&.symbol_begin();  
+48                 symbol != image\&.symbol_end();  
+49                 ++symbol) {  
+50             vector<Point> vp;  
+51             // do something useful with results  
+52             cout << "decoded " << symbol->get_type_name()  << " symbol \"" << symbol->get_data() << '"' <<" "<< endl;  
+53             int n = symbol->get_location_size();  
+54             for(int i=0;i<n;i++){  
+55                 vp\&.push_back(Point(symbol->get_location_x(i),symbol->get_location_y(i))); 
+56             }  
+57             RotatedRect r = minAreaRect(vp);  
+58             Point2f pts[4];  
+59             r\&.points(pts);  
+60             for(int i=0;i<4;i++){  
+61                 line(frame,pts[i],pts[(i+1)%4],Scalar(255,0,0),3);  
+62             }  
+63         }  
+64 
+65         imshow("MyVideo", frame); //show the frame in "MyVideo" window
+66 
+67         if (waitKey(30) == 27) //wait for 'esc' key press for 30ms\&. If 'esc' key is pressed, break loop
+68         {
+69             cout << "esc key is pressed by user" << endl;
+70             break; 
+71         }
+72     }
+73     return 0;
+74 
+75 }
+.fi
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for The Automatic Vasospasm Detection Application from the source code\&.

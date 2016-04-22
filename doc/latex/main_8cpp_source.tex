@@ -1,0 +1,310 @@
+\hypertarget{main_8cpp_source}{\section{main.\+cpp}
+\label{main_8cpp_source}\index{src/main.\+cpp@{src/main.\+cpp}}
+}
+
+\begin{DoxyCode}
+00001 
+00008 \textcolor{comment}{/* }
+00009 \textcolor{comment}{ * File:   main.cpp}
+00010 \textcolor{comment}{ * Author: Nick}
+00011 \textcolor{comment}{ *}
+00012 \textcolor{comment}{ * Created on February 1, 2016, 8:20 AM}
+00013 \textcolor{comment}{ */}
+00014 
+00015 \textcolor{preprocessor}{#include <cstdlib>}
+00016 \textcolor{preprocessor}{#include <unistd.h>}
+00017 \textcolor{preprocessor}{#include "\hyperlink{Servo__Position__Shell_8h}{Servo\_Position\_Shell.h}"}
+00018 \textcolor{preprocessor}{#include "\hyperlink{Adafruit__PWMServoDriver_8h}{Adafruit\_PWMServoDriver.h}"}
+00019 \textcolor{preprocessor}{#include <iostream>}
+00020 \textcolor{preprocessor}{#include "\hyperlink{NavigationControl_8h}{NavigationControl.h}"}
+00021 \textcolor{preprocessor}{#include "Initialization.cpp"}
+00022 
+00023 \textcolor{comment}{//#define UNLOADTEST}
+00024 \textcolor{comment}{//#define ARMTEST}
+00025 \textcolor{comment}{//#define NAVTEST}
+00026 \textcolor{comment}{//#define SWITCHTEST}
+\hypertarget{main_8cpp_source_l00027}{}\hyperlink{main_8cpp_ae6bb55c67a61b71415a4915beb236539}{00027} \textcolor{preprocessor}{#define READTHINKDO}
+00028 
+00029 \textcolor{keyword}{using namespace }\hyperlink{namespacestd}{std};
+00030 
+\hypertarget{main_8cpp_source_l00031}{}\hyperlink{main_8cpp_a86ef28eff7b2064f6e9f34bb8371d523}{00031} \textcolor{keywordtype}{int} \hyperlink{main_8cpp_a86ef28eff7b2064f6e9f34bb8371d523}{startstatus};
+\hypertarget{main_8cpp_source_l00032}{}\hyperlink{main_8cpp_ad9b6ac21900fa682d910b2c72a6d1a7f}{00032} \textcolor{keywordtype}{int} \hyperlink{main_8cpp_ad9b6ac21900fa682d910b2c72a6d1a7f}{startroboth};
+\hypertarget{main_8cpp_source_l00033}{}\hyperlink{main_8cpp_ac941dfef463fc77cd96e79758d7d8a57}{00033} \textcolor{keywordtype}{int} \hyperlink{main_8cpp_ac941dfef463fc77cd96e79758d7d8a57}{stoproboth};
+\hypertarget{main_8cpp_source_l00034}{}\hyperlink{main_8cpp_addcde177bac7b0d7c1250ce907df0b70}{00034} \textcolor{keywordtype}{int} \hyperlink{main_8cpp_addcde177bac7b0d7c1250ce907df0b70}{track};
+\hypertarget{main_8cpp_source_l00035}{}\hyperlink{main_8cpp_ad384b7375208fa5ff0275908ffbfaeab}{00035} \textcolor{keywordtype}{int} \hyperlink{main_8cpp_ad384b7375208fa5ff0275908ffbfaeab}{navigationbusy};
+\hypertarget{main_8cpp_source_l00036}{}\hyperlink{main_8cpp_ac21c59d8afa80307c35596e0a9a579f7}{00036} \textcolor{keywordtype}{int} \hyperlink{main_8cpp_ac21c59d8afa80307c35596e0a9a579f7}{cleartonavigate};
+\hypertarget{main_8cpp_source_l00037}{}\hyperlink{main_8cpp_a01a9037c5f3ab62063c4c2575609e631}{00037} \textcolor{keywordtype}{int} \hyperlink{main_8cpp_a01a9037c5f3ab62063c4c2575609e631}{cleartoload};
+\hypertarget{main_8cpp_source_l00038}{}\hyperlink{main_8cpp_a805838def3ffb9fb88e0cbeeeb359ce0}{00038} \textcolor{keywordtype}{int} \hyperlink{main_8cpp_a805838def3ffb9fb88e0cbeeeb359ce0}{cleartounload};
+\hypertarget{main_8cpp_source_l00039}{}\hyperlink{main_8cpp_a0f3f0f77d23894eee9ecc276cbb69df7}{00039} \textcolor{keywordtype}{int} \hyperlink{main_8cpp_a0f3f0f77d23894eee9ecc276cbb69df7}{robotismoving};
+\hypertarget{main_8cpp_source_l00040}{}\hyperlink{main_8cpp_a0828d39c90a21231f2bde12fcb178a6d}{00040} \textcolor{keywordtype}{int} \hyperlink{main_8cpp_a0828d39c90a21231f2bde12fcb178a6d}{whereistherobot};
+\hypertarget{main_8cpp_source_l00041}{}\hyperlink{main_8cpp_adb3c9a66078375eab7d969ccd413edcd}{00041} \textcolor{keywordtype}{int} \hyperlink{main_8cpp_adb3c9a66078375eab7d969ccd413edcd}{loadcounter};
+\hypertarget{main_8cpp_source_l00042}{}\hyperlink{main_8cpp_afeb7a138c760ad09c80a38a2ab94a351}{00042} \textcolor{keywordtype}{int} \hyperlink{main_8cpp_afeb7a138c760ad09c80a38a2ab94a351}{unloadcounter};
+\hypertarget{main_8cpp_source_l00043}{}\hyperlink{main_8cpp_a15cb11104a65cfea0b2667271ff359c3}{00043} \textcolor{keywordtype}{int} \hyperlink{main_8cpp_a15cb11104a65cfea0b2667271ff359c3}{loadtheblocks};
+\hypertarget{main_8cpp_source_l00044}{}\hyperlink{main_8cpp_af13d79ef80e4c7f0f8106512776ed80f}{00044} \textcolor{keywordtype}{int} \hyperlink{main_8cpp_af13d79ef80e4c7f0f8106512776ed80f}{unloadtheblocks};
+\hypertarget{main_8cpp_source_l00045}{}\hyperlink{main_8cpp_a7dd2d7a0998a66b7c3053f255f175382}{00045} \textcolor{keywordtype}{int} \hyperlink{main_8cpp_a7dd2d7a0998a66b7c3053f255f175382}{giveitasec};
+\hypertarget{main_8cpp_source_l00046}{}\hyperlink{main_8cpp_a0275a007a43d3231e63e3a706cd8f38a}{00046} \textcolor{keywordtype}{int} \hyperlink{main_8cpp_a0275a007a43d3231e63e3a706cd8f38a}{startloadingthread};
+00047 
+\hypertarget{main_8cpp_source_l00051}{}\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{00051} \textcolor{keywordtype}{int} \hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}() \{
+00052 
+00053 initialization();
+00054 \textcolor{preprocessor}{#ifdef READTHINKDO}
+00055 \textcolor{comment}{/*Track selection initialization will allow track select until start condition is true*/}
+00056 \textcolor{keywordflow}{while}(1)\{
+00057     \textcolor{keywordflow}{while}(\hyperlink{main_8cpp_addcde177bac7b0d7c1250ce907df0b70}{track} == 1 && \hyperlink{main_8cpp_ad9b6ac21900fa682d910b2c72a6d1a7f}{startroboth} == 0)\{
+00058         \hyperlink{main_8cpp_a86ef28eff7b2064f6e9f34bb8371d523}{startstatus} = digitalRead(0);
+00059         \hyperlink{main_8cpp_addcde177bac7b0d7c1250ce907df0b70}{track} = digitalRead(1);
+00060         cout<<endl<<\textcolor{stringliteral}{"I am in left track mode"};
+00061         \textcolor{keywordflow}{if}(\hyperlink{main_8cpp_a86ef28eff7b2064f6e9f34bb8371d523}{startstatus} == 1)\{
+00062             \hyperlink{main_8cpp_ad9b6ac21900fa682d910b2c72a6d1a7f}{startroboth} = 1;
+00063         \}
+00064         
+00065         \textcolor{comment}{/* RUN MODE FOR LEFT TRACK GAME START!*/}
+00066         \textcolor{keywordflow}{while}(\hyperlink{main_8cpp_ad9b6ac21900fa682d910b2c72a6d1a7f}{startroboth} == 1 && \hyperlink{main_8cpp_ac941dfef463fc77cd96e79758d7d8a57}{stoproboth} == 0)\{
+00067  \textcolor{comment}{//READ for left track}
+00068             
+00069             \hyperlink{main_8cpp_a86ef28eff7b2064f6e9f34bb8371d523}{startstatus} = digitalRead(0);
+00070             \hyperlink{main_8cpp_ad384b7375208fa5ff0275908ffbfaeab}{navigationbusy} = digitalRead(2);
+00071             
+00072 \textcolor{comment}{//THINK for left track}
+00073             
+00074             \textcolor{comment}{//clearance to do an action;}
+00075             \textcolor{keywordflow}{if}(\hyperlink{main_8cpp_a01a9037c5f3ab62063c4c2575609e631}{cleartoload} == 1 || \hyperlink{main_8cpp_a805838def3ffb9fb88e0cbeeeb359ce0}{cleartounload} == 1)\{
+00076                 \hyperlink{main_8cpp_ac21c59d8afa80307c35596e0a9a579f7}{cleartonavigate} = 0;
+00077             \}
+00078             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\hyperlink{main_8cpp_ac21c59d8afa80307c35596e0a9a579f7}{cleartonavigate} == 1 || \hyperlink{main_8cpp_a805838def3ffb9fb88e0cbeeeb359ce0}{cleartounload} == 1)\{
+00079                 \hyperlink{main_8cpp_a01a9037c5f3ab62063c4c2575609e631}{cleartoload} = 0;
+00080             \}
+00081             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\hyperlink{main_8cpp_ac21c59d8afa80307c35596e0a9a579f7}{cleartonavigate} == 1 || \hyperlink{main_8cpp_a01a9037c5f3ab62063c4c2575609e631}{cleartoload} == 1)\{
+00082                 \hyperlink{main_8cpp_a805838def3ffb9fb88e0cbeeeb359ce0}{cleartounload} = 0;
+00083             \}
+00084 
+00085             
+00086             \textcolor{comment}{// latch to figure out robot position in sequence}
+00087             \textcolor{keywordflow}{if}(\hyperlink{main_8cpp_ad384b7375208fa5ff0275908ffbfaeab}{navigationbusy} == 1 && \hyperlink{main_8cpp_a0f3f0f77d23894eee9ecc276cbb69df7}{robotismoving} == 0)\{
+00088                 \hyperlink{main_8cpp_a0f3f0f77d23894eee9ecc276cbb69df7}{robotismoving} = 1;
+00089                 \hyperlink{main_8cpp_a0828d39c90a21231f2bde12fcb178a6d}{whereistherobot}++;
+00090             \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\hyperlink{main_8cpp_ad384b7375208fa5ff0275908ffbfaeab}{navigationbusy} == 0 && \hyperlink{main_8cpp_a0f3f0f77d23894eee9ecc276cbb69df7}{robotismoving} == 1)\{
+00091                 \hyperlink{main_8cpp_a0f3f0f77d23894eee9ecc276cbb69df7}{robotismoving} = 0;
+00092             \}
+00093             
+00094             \textcolor{comment}{//working actions }
+00095             \textcolor{keywordflow}{if}(\hyperlink{main_8cpp_a0828d39c90a21231f2bde12fcb178a6d}{whereistherobot} > 0 && \hyperlink{main_8cpp_a0828d39c90a21231f2bde12fcb178a6d}{whereistherobot} <=4 && 
+      \hyperlink{main_8cpp_ad384b7375208fa5ff0275908ffbfaeab}{navigationbusy} == 0)\{
+00096                 \hyperlink{main_8cpp_a01a9037c5f3ab62063c4c2575609e631}{cleartoload} = 1;
+00097             \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\hyperlink{main_8cpp_a0828d39c90a21231f2bde12fcb178a6d}{whereistherobot} > 0 && \hyperlink{main_8cpp_a0828d39c90a21231f2bde12fcb178a6d}{whereistherobot} <=4 && 
+      \hyperlink{main_8cpp_ad384b7375208fa5ff0275908ffbfaeab}{navigationbusy} == 1)\{
+00098                 \hyperlink{main_8cpp_a01a9037c5f3ab62063c4c2575609e631}{cleartoload} = 0;
+00099             \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\hyperlink{main_8cpp_a0828d39c90a21231f2bde12fcb178a6d}{whereistherobot} == 5 && \hyperlink{main_8cpp_ad384b7375208fa5ff0275908ffbfaeab}{navigationbusy} == 0)\{
+00100                 \hyperlink{main_8cpp_a805838def3ffb9fb88e0cbeeeb359ce0}{cleartounload} = 1;
+00101             \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\hyperlink{main_8cpp_a0828d39c90a21231f2bde12fcb178a6d}{whereistherobot} == 5 && \hyperlink{main_8cpp_ad384b7375208fa5ff0275908ffbfaeab}{navigationbusy} == 1)\{
+00102                 \hyperlink{main_8cpp_a805838def3ffb9fb88e0cbeeeb359ce0}{cleartounload} = 0;
+00103             \}
+00104             
+00105 
+00106             \textcolor{comment}{//controls load action timing}
+00107             \textcolor{keywordflow}{if}(\hyperlink{main_8cpp_a01a9037c5f3ab62063c4c2575609e631}{cleartoload} == 1 && \hyperlink{main_8cpp_adb3c9a66078375eab7d969ccd413edcd}{loadcounter} < 2000)\{
+00108                 \hyperlink{main_8cpp_a15cb11104a65cfea0b2667271ff359c3}{loadtheblocks} = 1;
+00109                 \hyperlink{main_8cpp_adb3c9a66078375eab7d969ccd413edcd}{loadcounter} ++;
+00110                 \hyperlink{main_8cpp_a0275a007a43d3231e63e3a706cd8f38a}{startloadingthread} = 1;
+00111                 
+00112             \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\hyperlink{main_8cpp_adb3c9a66078375eab7d969ccd413edcd}{loadcounter} >= 2000)\{
+00113                 \hyperlink{main_8cpp_a01a9037c5f3ab62063c4c2575609e631}{cleartoload} = 0;
+00114                 \hyperlink{main_8cpp_adb3c9a66078375eab7d969ccd413edcd}{loadcounter} = 1;
+00115             \}
+00116             
+00117             \textcolor{comment}{//controls the unload action timing}
+00118             \textcolor{keywordflow}{if}(\hyperlink{main_8cpp_a805838def3ffb9fb88e0cbeeeb359ce0}{cleartounload} ==1 && \hyperlink{main_8cpp_afeb7a138c760ad09c80a38a2ab94a351}{unloadcounter} < 150)\{
+00119                 \hyperlink{main_8cpp_afeb7a138c760ad09c80a38a2ab94a351}{unloadcounter}++;
+00120                 \hyperlink{main_8cpp_af13d79ef80e4c7f0f8106512776ed80f}{unloadtheblocks} = 1;
+00121             \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\hyperlink{main_8cpp_adb3c9a66078375eab7d969ccd413edcd}{loadcounter} >= 150)\{
+00122                 \hyperlink{main_8cpp_a805838def3ffb9fb88e0cbeeeb359ce0}{cleartounload} = 0;
+00123                 \hyperlink{main_8cpp_afeb7a138c760ad09c80a38a2ab94a351}{unloadcounter} = 1;
+00124                 \hyperlink{main_8cpp_af13d79ef80e4c7f0f8106512776ed80f}{unloadtheblocks} = 0;
+00125             \}
+00126             
+00127 \textcolor{comment}{//DO for the left track}
+00128             
+00129             \textcolor{comment}{//Navigate to next position in sequence}
+00130             \textcolor{keywordflow}{if}(\hyperlink{main_8cpp_a805838def3ffb9fb88e0cbeeeb359ce0}{cleartounload} == 0 && \hyperlink{main_8cpp_a01a9037c5f3ab62063c4c2575609e631}{cleartoload} == 0 && 
+      \hyperlink{main_8cpp_a0f3f0f77d23894eee9ecc276cbb69df7}{robotismoving} == 0)\{
+00131                 digitalWrite(3,HIGH);  
+00132             \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\hyperlink{main_8cpp_a0f3f0f77d23894eee9ecc276cbb69df7}{robotismoving} == 1)\{
+00133                 digitalWrite(3,LOW);
+00134             \}
+00135             
+00136             \textcolor{comment}{//load blocks }
+00137             \textcolor{keywordflow}{if}(\hyperlink{main_8cpp_a15cb11104a65cfea0b2667271ff359c3}{loadtheblocks} ==1)\{
+00138                 pthread\_t andrewthread;
+00139                 pthread\_create(&andrewthread,NULL,grabCall,NULL);
+00140                 
+00141                 \hyperlink{main_8cpp_a15cb11104a65cfea0b2667271ff359c3}{loadtheblocks} =0;
+00142                 
+00143             \}
+00144             
+00145             \textcolor{comment}{// unload the blocks}
+00146             \textcolor{keywordflow}{if}(\hyperlink{main_8cpp_af13d79ef80e4c7f0f8106512776ed80f}{unloadtheblocks} ==1 && \hyperlink{main_8cpp_afeb7a138c760ad09c80a38a2ab94a351}{unloadcounter} < 100)\{
+00147                 \hyperlink{Servo__Position__Shell_8cpp_abd2cd3c2e36d42a2178a6f2fd12af905}{setServoPosition}(\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2}{Servo}(10),90);
+00148                 \hyperlink{Servo__Position__Shell_8cpp_abd2cd3c2e36d42a2178a6f2fd12af905}{setServoPosition}(\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2}{Servo}(11),90);
+00149                 \hyperlink{Servo__Position__Shell_8cpp_abd2cd3c2e36d42a2178a6f2fd12af905}{setServoPosition}(\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2}{Servo}(12),90);
+00150                 \hyperlink{Servo__Position__Shell_8cpp_abd2cd3c2e36d42a2178a6f2fd12af905}{setServoPosition}(\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2}{Servo}(13),90);
+00151             \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\hyperlink{main_8cpp_af13d79ef80e4c7f0f8106512776ed80f}{unloadtheblocks} == 1 && \hyperlink{main_8cpp_afeb7a138c760ad09c80a38a2ab94a351}{unloadcounter} >= 100 && 
+      \hyperlink{main_8cpp_afeb7a138c760ad09c80a38a2ab94a351}{unloadcounter} <140)\{
+00152                 \hyperlink{Servo__Position__Shell_8cpp_abd2cd3c2e36d42a2178a6f2fd12af905}{setServoPosition}(\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2}{Servo}(10),0);
+00153                 \hyperlink{Servo__Position__Shell_8cpp_abd2cd3c2e36d42a2178a6f2fd12af905}{setServoPosition}(\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2}{Servo}(11),0);
+00154                 \hyperlink{Servo__Position__Shell_8cpp_abd2cd3c2e36d42a2178a6f2fd12af905}{setServoPosition}(\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2}{Servo}(12),0);
+00155                 \hyperlink{Servo__Position__Shell_8cpp_abd2cd3c2e36d42a2178a6f2fd12af905}{setServoPosition}(\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2}{Servo}(13),0);
+00156             \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\hyperlink{main_8cpp_af13d79ef80e4c7f0f8106512776ed80f}{unloadtheblocks} == 1 && \hyperlink{main_8cpp_afeb7a138c760ad09c80a38a2ab94a351}{unloadcounter} >= 140)\{
+00157                 \hyperlink{Servo__Position__Shell_8cpp_abd2cd3c2e36d42a2178a6f2fd12af905}{setServoPosition}(\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2}{Servo}(10),-1);
+00158                 \hyperlink{Servo__Position__Shell_8cpp_abd2cd3c2e36d42a2178a6f2fd12af905}{setServoPosition}(\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2}{Servo}(11),-1);
+00159                 \hyperlink{Servo__Position__Shell_8cpp_abd2cd3c2e36d42a2178a6f2fd12af905}{setServoPosition}(\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2}{Servo}(12),-1);
+00160                 \hyperlink{Servo__Position__Shell_8cpp_abd2cd3c2e36d42a2178a6f2fd12af905}{setServoPosition}(\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2}{Servo}(13),-1);
+00161             \}
+00162             
+00163             cout<<endl<<\textcolor{stringliteral}{"I am in run mode of left track"};
+00164             
+00165             \textcolor{comment}{/* stops Robot if ever hit on a RTD loop*/}
+00166             \textcolor{keywordflow}{if}(\hyperlink{main_8cpp_a86ef28eff7b2064f6e9f34bb8371d523}{startstatus} == 0)\{
+00167                 digitalWrite(3,LOW);
+00168                 cout<<endl<<\textcolor{stringliteral}{"Halting all function stop engaged after a start"};
+00169                 \hyperlink{main_8cpp_a7dd2d7a0998a66b7c3053f255f175382}{giveitasec}++;
+00170                 \textcolor{keywordflow}{if}(\hyperlink{main_8cpp_a7dd2d7a0998a66b7c3053f255f175382}{giveitasec} >= 50)\{
+00171                     \hyperlink{main_8cpp_ac941dfef463fc77cd96e79758d7d8a57}{stoproboth} = 1;
+00172                     \hyperlink{main_8cpp_a7dd2d7a0998a66b7c3053f255f175382}{giveitasec} = 0;
+00173                 \}
+00174             \}
+00175             cout<<endl<<\textcolor{stringliteral}{"The current position of robot is:"}<<\hyperlink{main_8cpp_a0828d39c90a21231f2bde12fcb178a6d}{whereistherobot}<<endl;
+00176             
+00177             \textcolor{comment}{// delay for 20 milliseconds per loop}
+00178             usleep(20000);
+00179 
+00180 
+00181         \}
+00182     \}
+00183     \textcolor{comment}{/*Track selection initialization will allow track select until start condition is true*/}
+00184     \textcolor{keywordflow}{while}(\hyperlink{main_8cpp_addcde177bac7b0d7c1250ce907df0b70}{track} == 0 && \hyperlink{main_8cpp_ad9b6ac21900fa682d910b2c72a6d1a7f}{startroboth} ==0)\{
+00185         \hyperlink{main_8cpp_a86ef28eff7b2064f6e9f34bb8371d523}{startstatus} = digitalRead(0);
+00186         \hyperlink{main_8cpp_addcde177bac7b0d7c1250ce907df0b70}{track} = digitalRead(1);
+00187         \textcolor{keywordflow}{if}(\hyperlink{main_8cpp_a86ef28eff7b2064f6e9f34bb8371d523}{startstatus} == 1)\{
+00188             \hyperlink{main_8cpp_ad9b6ac21900fa682d910b2c72a6d1a7f}{startroboth} = 1;
+00189         \}
+00190         cout<<endl<<\textcolor{stringliteral}{"I am in right track mode."};
+00191         cout<<\textcolor{stringliteral}{"Not yet implemented. Danger. Danger. Danger."};
+00192     \}
+00193 \}
+00194 \textcolor{preprocessor}{#endif}
+00195 \textcolor{preprocessor}{#ifdef SWITCHTEST}
+00196     \textcolor{keywordtype}{int} cat;
+00197     \textcolor{keywordtype}{int} dog;
+00198     wiringPiSetup();
+00199     \textcolor{keywordflow}{while}(1)\{
+00200         
+00201         \textcolor{comment}{//test each pin if needed for setup and checking}
+00202         \textcolor{comment}{/*}
+00203 \textcolor{comment}{        cout<<endl;}
+00204 \textcolor{comment}{        cout<<"Input a pin to check:"<<endl;}
+00205 \textcolor{comment}{        cin>>dog;}
+00206 \textcolor{comment}{        cat =digitalRead(dog);}
+00207 \textcolor{comment}{        cout<<"I am reading:"<<cat<<endl;}
+00208 \textcolor{comment}{        */}
+00209         
+00210         \textcolor{keywordflow}{if}(digitalRead(0)==1)\{
+00211             cout<<\textcolor{stringliteral}{"Heavy is in stop or idle mode."}<<endl;
+00212            
+00213         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(digitalRead(0)==0)\{
+00214             cout<<\textcolor{stringliteral}{"Heavy is in run mode!"}<<endl;
+00215         \}
+00216         \textcolor{keywordflow}{if}(digitalRead(1)==1)\{
+00217             cout<<\textcolor{stringliteral}{"Heavy is set for left track."}<<endl;
+00218         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(digitalRead(1)==0)\{
+00219             cout<<\textcolor{stringliteral}{"Heavy is set for right track."}<<endl;
+00220         \}
+00221         
+00222         cout<<endl<<\textcolor{stringliteral}{"Press enter to continue"};
+00223         cin.ignore();
+00224     \}
+00225 \textcolor{preprocessor}{#endif}
+00226     
+00227 \textcolor{preprocessor}{#ifdef ARMTEST}
+00228     
+00229     \hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2}{Servo} whichservo;
+00230     \textcolor{keywordtype}{int} tmpServo = -1;
+00231     \textcolor{keywordtype}{int} position;
+00232     \hyperlink{Servo__Position__Shell_8cpp_a4fc01d736fe50cf5b977f755b675f11d}{setup}();
+00233     \textcolor{keywordflow}{while}(1)\{
+00234         cout<<endl;
+00235         cout<<\textcolor{stringliteral}{"Pick a servo to use: BASE\_TURN = 0, BASE\_TILT = 1, ELBOW = 2, WRIST\_TILT = 3,"};
+00236         cout<<endl<<\textcolor{stringliteral}{"WRIST\_PAN = 4, GRIP\_LEFT = 5, GRIP\_RIGHT = 6"};
+00237         cout<<endl;
+00238         cin>>tmpServo;
+00239         \textcolor{keywordflow}{if}(tmpServo > 6 || tmpServo < 0)\{
+00240             cout<<\textcolor{stringliteral}{"Please choose again:"}<<endl;
+00241             \textcolor{keywordflow}{continue};
+00242         \}
+00243         whichservo = (\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2}{Servo})tmpServo;
+00244         cout<<endl;
+00245         cout<<\textcolor{stringliteral}{"Pick a position (set position to -1 to disengage servo and set pwm to 0):"};
+00246         cin>>position;
+00247         cout<<endl;
+00248         \hyperlink{Servo__Position__Shell_8cpp_abd2cd3c2e36d42a2178a6f2fd12af905}{setServoPosition}(whichservo,position);
+00249         
+00250     \}
+00251 \textcolor{preprocessor}{#endif     }
+00252 
+00253 \textcolor{preprocessor}{#ifdef NAVTEST}
+00254 
+00255     \textcolor{keywordtype}{int} cat = 0;
+00256     pinMode(2,INPUT);
+00257     \textcolor{keywordflow}{while}(1)\{
+00258         cout<<\textcolor{stringliteral}{"High or Low?:"}<<endl;
+00259         cin>>cat;
+00260         digitalWrite(3,cat);
+00261         cout<<endl;
+00262         \textcolor{keywordflow}{if}(digitalRead(2)==1)\{
+00263             cout<<\textcolor{stringliteral}{"I am getting a high from Micah"}<<endl;
+00264            
+00265         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(digitalRead(2)==0)\{
+00266             cout<<\textcolor{stringliteral}{"I am getting a low from Micah"}<<endl;
+00267         \}
+00268     \} 
+00269     cin.ignore();
+00270 
+00271     
+00272     
+00273 \textcolor{preprocessor}{#endif}
+00274 
+00275 \textcolor{preprocessor}{#ifdef UNLOADTEST}
+00276     
+00277     \hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2}{Servo} whichservo;
+00278     \textcolor{keywordtype}{int} tmpServo = -1;
+00279     \textcolor{keywordtype}{int} position;
+00280 
+00281     \hyperlink{Servo__Position__Shell_8cpp_a4fc01d736fe50cf5b977f755b675f11d}{setup}();
+00282     \textcolor{keywordflow}{while}(1)\{
+00283         \textcolor{comment}{/*}
+00284 \textcolor{comment}{        cout<<endl;}
+00285 \textcolor{comment}{        cout<<"Pick a servo to use: ";}
+00286 \textcolor{comment}{        cout<<endl<<"UNLOAD\_1= 10, UNLOAD\_2 = 11, UNLOAD\_3 = 12, UNLOAD\_4 = 13";}
+00287 \textcolor{comment}{        cout<<endl;}
+00288 \textcolor{comment}{        cin>>tmpServo;}
+00289 \textcolor{comment}{        if(tmpServo < 10 || tmpServo > 14)\{}
+00290 \textcolor{comment}{            cout<<"Please choose again:"<<endl;}
+00291 \textcolor{comment}{            continue;}
+00292 \textcolor{comment}{        \}}
+00293 \textcolor{comment}{        whichservo = (Servo)tmpServo;}
+00294 \textcolor{comment}{        */} 
+00295         cout<<endl;
+00296         cout<<\textcolor{stringliteral}{"Pick a position (set position to -1 to disengage servo and set pwm to 0):"};
+00297         cin>>position;
+00298         cout<<endl;
+00299         \textcolor{comment}{//setServoPosition((Servo)tmpServo,position); }
+00300         \hyperlink{Servo__Position__Shell_8cpp_abd2cd3c2e36d42a2178a6f2fd12af905}{setServoPosition}((\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2}{Servo})10,position);
+00301         \hyperlink{Servo__Position__Shell_8cpp_abd2cd3c2e36d42a2178a6f2fd12af905}{setServoPosition}((\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2}{Servo})11,position);
+00302         \hyperlink{Servo__Position__Shell_8cpp_abd2cd3c2e36d42a2178a6f2fd12af905}{setServoPosition}((\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2}{Servo})12,position);
+00303         \hyperlink{Servo__Position__Shell_8cpp_abd2cd3c2e36d42a2178a6f2fd12af905}{setServoPosition}((\hyperlink{Servo__Position__Shell_8h_af629c4ae98db77091b130c7fbc31cab2}{Servo})13,position);
+00304         
+00305     \}
+00306     
+00307 \textcolor{preprocessor}{#endif}
+00308     \textcolor{keywordflow}{return} 0;
+00309 \}
+\end{DoxyCode}

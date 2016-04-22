@@ -1,0 +1,370 @@
+.TH "src/definitions.hpp" 3 "Fri Apr 22 2016" "The Automatic Vasospasm Detection Application" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/definitions.hpp \- 
+.PP
+Contains definitions for architecture-independant numeric variables, enumerations and enumerated classes, and #define'd constants, and to_sting() overloads for the enumerated classes\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <map>\fP
+.br
+
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI " \fBstd\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBENUM\fP   signed char"
+.br
+.ti -1c
+.RI "#define \fBERROR\fP   -1"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef unsigned char \fBbyte\fP"
+.br
+.ti -1c
+.RI "typedef unsigned char \fBuint8\fP"
+.br
+.ti -1c
+.RI "typedef signed char \fBsint8\fP"
+.br
+.ti -1c
+.RI "typedef unsigned short \fBuint16\fP"
+.br
+.ti -1c
+.RI "typedef signed short \fBsint16\fP"
+.br
+.ti -1c
+.RI "typedef unsigned int \fBuint32\fP"
+.br
+.ti -1c
+.RI "typedef signed int \fBsint32\fP"
+.br
+.ti -1c
+.RI "typedef unsigned long long \fBuint64\fP"
+.br
+.ti -1c
+.RI "typedef signed long long \fBsint64\fP"
+.br
+.ti -1c
+.RI "typedef float \fBfloat32\fP"
+.br
+.ti -1c
+.RI "typedef double \fBfloat64\fP"
+.br
+.ti -1c
+.RI "typedef std::map< \fBZone\fP, 
+.br
+std::map< \fBBlockPosition\fP, \fBuint8\fP > > \fBPosMap\fP"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBBlockPosition\fP : ENUM { \fBBlockPosition::Front\fP, \fBBlockPosition::Back\fP, \fBBlockPosition::Middle\fP }"
+.br
+.ti -1c
+.RI "enum \fBColor\fP : ENUM { \fBColor::Red\fP, \fBColor::Yellow\fP, \fBColor::Green\fP, \fBColor::Blue\fP, \fBColor::Perrywinkle\fP }"
+.br
+.ti -1c
+.RI "enum \fBLayer\fP : ENUM { \fBLayer::Top\fP, \fBLayer::Bottom\fP }"
+.br
+.ti -1c
+.RI "enum \fBLogMode\fP : ENUM { \fBLogMode::Text\fP, \fBLogMode::Multi\fP }"
+.br
+.ti -1c
+.RI "enum \fBResult\fP : ENUM { \fBResult::NoBlocks\fP = -1, \fBResult::NoHalves\fP = 0, \fBResult::TwoHalves\fP = 2, \fBResult::FourHalves\fP = 4 }"
+.br
+.ti -1c
+.RI "enum \fBSide\fP : ENUM { \fBSide::Left\fP, \fBSide::Right\fP }"
+.br
+.ti -1c
+.RI "enum \fBSize\fP : ENUM { \fBSize::Short\fP, \fBSize::Long\fP }"
+.br
+.ti -1c
+.RI "enum \fBZone\fP : ENUM { \fBZone::A\fP = 'A', \fBZone::B\fP = 'B', \fBZone::C\fP = 'C' }"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "string \fBstd::to_string\fP (\fBBlockPosition\fP pos)"
+.br
+.ti -1c
+.RI "string \fBstd::to_string\fP (\fBColor\fP color)"
+.br
+.ti -1c
+.RI "string \fBstd::to_string\fP (\fBLogMode\fP mode)"
+.br
+.ti -1c
+.RI "string \fBstd::to_string\fP (\fBResult\fP res)"
+.br
+.ti -1c
+.RI "string \fBstd::to_string\fP (\fBSide\fP side)"
+.br
+.ti -1c
+.RI "string \fBstd::to_string\fP (\fBSize\fP size)"
+.br
+.ti -1c
+.RI "string \fBstd::to_string\fP (\fBZone\fP zone)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Contains definitions for architecture-independant numeric variables, enumerations and enumerated classes, and #define'd constants, and to_sting() overloads for the enumerated classes\&. 
+
+
+.PP
+\fBAuthor:\fP
+.RS 4
+Samuel Andrew Wisner, awisner94@gmail.com 
+.RE
+.PP
+
+.PP
+Definition in file \fBdefinitions\&.hpp\fP\&.
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define ENUM   signed char"
+
+.PP
+Definition at line 12 of file definitions\&.hpp\&.
+.SS "#define ERROR   -1"
+
+.PP
+Definition at line 13 of file definitions\&.hpp\&.
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef unsigned char \fBbyte\fP"
+
+.PP
+Definition at line 17 of file definitions\&.hpp\&.
+.SS "typedef float \fBfloat32\fP"
+
+.PP
+Definition at line 30 of file definitions\&.hpp\&.
+.SS "typedef double \fBfloat64\fP"
+
+.PP
+Definition at line 31 of file definitions\&.hpp\&.
+.SS "typedef std::map<\fBZone\fP, std::map<\fBBlockPosition\fP, \fBuint8\fP> > \fBPosMap\fP"
+
+.PP
+Definition at line 101 of file definitions\&.hpp\&.
+.SS "typedef signed short \fBsint16\fP"
+
+.PP
+Definition at line 22 of file definitions\&.hpp\&.
+.SS "typedef signed int \fBsint32\fP"
+
+.PP
+Definition at line 25 of file definitions\&.hpp\&.
+.SS "typedef signed long long \fBsint64\fP"
+
+.PP
+Definition at line 28 of file definitions\&.hpp\&.
+.SS "typedef signed char \fBsint8\fP"
+
+.PP
+Definition at line 19 of file definitions\&.hpp\&.
+.SS "typedef unsigned short \fBuint16\fP"
+
+.PP
+Definition at line 21 of file definitions\&.hpp\&.
+.SS "typedef unsigned int \fBuint32\fP"
+
+.PP
+Definition at line 24 of file definitions\&.hpp\&.
+.SS "typedef unsigned long long \fBuint64\fP"
+
+.PP
+Definition at line 27 of file definitions\&.hpp\&.
+.SS "typedef unsigned char \fBuint8\fP"
+
+.PP
+Definition at line 18 of file definitions\&.hpp\&.
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBBlockPosition\fP : \fBENUM\fP\fC [strong]\fP"
+The position of the block relative to the arm\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIFront \fP\fP
+.TP
+\fB\fIBack \fP\fP
+.TP
+\fB\fIMiddle \fP\fP
+.PP
+Definition at line 37 of file definitions\&.hpp\&.
+.PP
+.nf
+37                          : ENUM {
+38     Front,
+39     Back,
+40     Middle
+41 };
+.fi
+.SS "enum \fBColor\fP : \fBENUM\fP\fC [strong]\fP"
+The color of a block or train car\&. Perrywinkle represents all colors\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIRed \fP\fP
+.TP
+\fB\fIYellow \fP\fP
+.TP
+\fB\fIGreen \fP\fP
+.TP
+\fB\fIBlue \fP\fP
+.TP
+\fB\fIPerrywinkle \fP\fP
+.PP
+Definition at line 46 of file definitions\&.hpp\&.
+.PP
+.nf
+46                  : ENUM {
+47     Red,
+48     Yellow,
+49     Green,
+50     Blue,
+51     Perrywinkle  // essentially, no color
+52 };
+.fi
+.SS "enum \fBLayer\fP : \fBENUM\fP\fC [strong]\fP"
+Defines the location of a block in its stack\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fITop \fP\fP
+.TP
+\fB\fIBottom \fP\fP
+.PP
+Definition at line 57 of file definitions\&.hpp\&.
+.PP
+.nf
+57                  : ENUM {
+58     Top,
+59     Bottom
+60 };
+.fi
+.SS "enum \fBLogMode\fP : \fBENUM\fP\fC [strong]\fP"
+The mode in which the Log should prepare (i\&.e\&., text only or text and images)\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIText \fP\fP
+.TP
+\fB\fIMulti \fP\fP
+.PP
+Definition at line 66 of file definitions\&.hpp\&.
+.PP
+.nf
+66                    : ENUM {
+67     Text,
+68     Multi
+69 };
+.fi
+.SS "enum \fBResult\fP : \fBENUM\fP\fC [strong]\fP"
+The number of half blocks picked up in a stack\&. The integer value of the 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fINoBlocks \fP\fP
+.TP
+\fB\fINoHalves \fP\fP
+.TP
+\fB\fITwoHalves \fP\fP
+.TP
+\fB\fIFourHalves \fP\fP
+.PP
+Definition at line 75 of file definitions\&.hpp\&.
+.PP
+.nf
+75                   : ENUM {
+76     NoBlocks = -1,
+77     NoHalves = 0,
+78     TwoHalves = 2,
+79     FourHalves = 4
+80 };
+.fi
+.SS "enum \fBSide\fP : \fBENUM\fP\fC [strong]\fP"
+Represents which block to pick up when multiple blocks are visible\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fILeft \fP\fP
+.TP
+\fB\fIRight \fP\fP
+.PP
+Definition at line 83 of file definitions\&.hpp\&.
+.PP
+.nf
+83                 : ENUM {
+84     Left,
+85     Right
+86 };
+.fi
+.SS "enum \fBSize\fP : \fBENUM\fP\fC [strong]\fP"
+The block size, either 2\&.5' or 5'\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIShort \fP\fP
+.TP
+\fB\fILong \fP\fP
+.PP
+Definition at line 89 of file definitions\&.hpp\&.
+.PP
+.nf
+89                 : ENUM {
+90     Short,
+91     Long
+92 };
+.fi
+.SS "enum \fBZone\fP : \fBENUM\fP\fC [strong]\fP"
+Zone A, B, or C 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIA \fP\fP
+.TP
+\fB\fIB \fP\fP
+.TP
+\fB\fIC \fP\fP
+.PP
+Definition at line 95 of file definitions\&.hpp\&.
+.PP
+.nf
+95                 : ENUM {
+96     A = 'A',
+97     B = 'B',
+98     C = 'C'
+99 };
+.fi
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for The Automatic Vasospasm Detection Application from the source code\&.

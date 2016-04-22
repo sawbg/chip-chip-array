@@ -6,7 +6,6 @@ var dir_68267d1309a1af8e8297ef4c3efbcdba =
     [ "Block.hpp", "Block_8hpp.html", [
       [ "Block", "classChipChipArray_1_1Block.html", "classChipChipArray_1_1Block" ]
     ] ],
-    [ "cv_channel_test.cpp", "cv__channel__test_8cpp.html", "cv__channel__test_8cpp" ],
     [ "cv_hue.cpp", "cv__hue_8cpp.html", "cv__hue_8cpp" ],
     [ "cv_shape.cpp", "cv__shape_8cpp.html", "cv__shape_8cpp" ],
     [ "cv_test.cpp", "cv__test_8cpp.html", "cv__test_8cpp" ],

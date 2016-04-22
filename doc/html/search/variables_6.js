@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['offset',['offset',['../classChipChipArray_1_1Block.html#a42e2ca0775dc09b04049a2db1bc0bb4f',1,'ChipChipArray::Block']]]
+  ['loadcounter',['loadcounter',['../main_8cpp.html#adb3c9a66078375eab7d969ccd413edcd',1,'main.cpp']]],
+  ['loadtheblocks',['loadtheblocks',['../main_8cpp.html#a15cb11104a65cfea0b2667271ff359c3',1,'main.cpp']]]
 ];

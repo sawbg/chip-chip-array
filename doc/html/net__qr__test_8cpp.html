@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.8"/>
-<title>My Project: src/net_qr_test.cpp File Reference</title>
+<title>The Automatic Vasospasm Detection Application: src/net_qr_test.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,7 +29,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">My Project
+   <div id="projectname">The Automatic Vasospasm Detection Application
    </div>
   </td>
  </tr>
@@ -107,6 +107,9 @@ $(document).ready(function(){initNavTree('net__qr__test_8cpp.html','');});
 <div class="title">net_qr_test.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Contains test program for reading QR codes.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;opencv2/highgui/highgui.hpp&gt;</code><br />
 <code>#include &lt;opencv2/imgproc/imgproc.hpp&gt;</code><br />
 <code>#include &lt;zbar.h&gt;</code><br />
@@ -117,7 +120,7 @@ Include dependency graph for net_qr_test.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="net__qr__test_8cpp__incl.png" border="0" usemap="#src_2net__qr__test_8cpp" alt=""/></div>
 <map name="src_2net__qr__test_8cpp" id="src_2net__qr__test_8cpp">
-<area shape="rect" id="node6" href="PiCamera_8hpp.html" title="PiCamera.hpp" alt="" coords="509,80,614,107"/><area shape="rect" id="node10" href="definitions_8hpp.html" title="definitions.hpp" alt="" coords="732,155,839,181"/></map>
+<area shape="rect" id="node6" href="PiCamera_8hpp.html" title="Contains PiCamera class. " alt="" coords="509,80,614,107"/><area shape="rect" id="node10" href="definitions_8hpp.html" title="Contains definitions for architecture&#45;independant numeric variables, enumerations and enumerated clas..." alt="" coords="732,155,839,181"/></map>
 </div>
 </div>
 <p><a href="net__qr__test_8cpp_source.html">Go to the source code of this file.</a></p>
@@ -127,7 +130,14 @@ Functions</h2></td></tr>
 <tr class="memitem:a0ddf1224851353fc92bfbff6f499fa97"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="net__qr__test_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a> (int argc, char *argv[])</td></tr>
 <tr class="separator:a0ddf1224851353fc92bfbff6f499fa97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Contains test program for reading QR codes. </p>
+<dl class="section author"><dt>Author</dt><dd>Michael Young </dd>
+<dd>
+Samuel Andrew Wisner, <a href="#" onclick="location.href='mai'+'lto:'+'awi'+'sn'+'er9'+'4@'+'gma'+'il'+'.co'+'m'; return false;">awisn<span style="display: none;">.nosp@m.</span>er94<span style="display: none;">.nosp@m.</span>@gmai<span style="display: none;">.nosp@m.</span>l.co<span style="display: none;">.nosp@m.</span>m</a> </dd></dl>
+
+<p>Definition in file <a class="el" href="net__qr__test_8cpp_source.html">net_qr_test.cpp</a>.</p>
+</div><h2 class="groupheader">Function Documentation</h2>
 <a class="anchor" id="a0ddf1224851353fc92bfbff6f499fa97"></a>
 <div class="memitem">
 <div class="memproto">
@@ -153,8 +163,60 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>This is a (modified) test program written by Michael Young (<a href="https://github.com/ayoungprogrammer/WebcamCodeScanner">https://github.com/ayoungprogrammer/WebcamCodeScanner</a>). It was modified to work with the Raspicam. </p>
 
-<p>Definition at line <a class="el" href="net__qr__test_8cpp_source.html#l00024">24</a> of file <a class="el" href="net__qr__test_8cpp_source.html">net_qr_test.cpp</a>.</p>
-
+<p>Definition at line <a class="el" href="net__qr__test_8cpp_source.html#l00025">25</a> of file <a class="el" href="net__qr__test_8cpp_source.html">net_qr_test.cpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="classChipChipArray_1_1PiCamera.html">PiCamera</a> cam; <span class="comment">// open the video camera no. 0</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    ImageScanner scanner;  </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    scanner.set_config(ZBAR_NONE, ZBAR_CFG_ENABLE, 1);  </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    namedWindow(<span class="stringliteral">&quot;MyVideo&quot;</span>,CV_WINDOW_AUTOSIZE); <span class="comment">//create a window called &quot;MyVideo&quot;</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordflow">while</span> (1)</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        Mat frame = cam.<a class="code" href="classChipChipArray_1_1PiCamera.html#a58fb0de02570dce9a9cb60a1a04fb84f">Snap</a>();</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        Mat grey;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        cvtColor(frame,grey,CV_BGR2GRAY);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keywordtype">int</span> width = frame.cols;  </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordtype">int</span> height = frame.rows;  </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        uchar *raw = (uchar *)grey.data;  </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="comment">// wrap image data  </span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        zbar::Image image(width, height, <span class="stringliteral">&quot;Y800&quot;</span>, raw, width * height);  </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="comment">// scan the image for barcodes  </span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keywordtype">int</span> n = scanner.scan(image);  </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="comment">// extract results  </span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordflow">for</span>(Image::SymbolIterator symbol = image.symbol_begin();  </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                symbol != image.symbol_end();  </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                ++symbol) {  </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            vector&lt;Point&gt; vp;  </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            <span class="comment">// do something useful with results  </span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            cout &lt;&lt; <span class="stringliteral">&quot;decoded &quot;</span> &lt;&lt; symbol-&gt;get_type_name()  &lt;&lt; <span class="stringliteral">&quot; symbol \&quot;&quot;</span> &lt;&lt; symbol-&gt;get_data() &lt;&lt; <span class="charliteral">&#39;&quot;&#39;</span> &lt;&lt;<span class="stringliteral">&quot; &quot;</span>&lt;&lt; endl;  </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            <span class="keywordtype">int</span> n = symbol-&gt;get_location_size();  </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;n;i++){  </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                vp.push_back(Point(symbol-&gt;get_location_x(i),symbol-&gt;get_location_y(i))); </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            }  </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            RotatedRect r = minAreaRect(vp);  </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            Point2f pts[4];  </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            r.points(pts);  </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0;i&lt;4;i++){  </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                line(frame,pts[i],pts[(i+1)%4],Scalar(255,0,0),3);  </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            }  </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        }  </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        imshow(<span class="stringliteral">&quot;MyVideo&quot;</span>, frame); <span class="comment">//show the frame in &quot;MyVideo&quot; window</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keywordflow">if</span> (waitKey(30) == 27) <span class="comment">//wait for &#39;esc&#39; key press for 30ms. If &#39;esc&#39; key is pressed, break loop</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        {</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            cout &lt;&lt; <span class="stringliteral">&quot;esc key is pressed by user&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            <span class="keywordflow">break</span>; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        }</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    }</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;}</div>
+<div class="ttc" id="classChipChipArray_1_1PiCamera_html"><div class="ttname"><a href="classChipChipArray_1_1PiCamera.html">ChipChipArray::PiCamera</a></div><div class="ttdef"><b>Definition:</b> <a href="PiCamera_8hpp_source.html#l00024">PiCamera.hpp:24</a></div></div>
+<div class="ttc" id="classChipChipArray_1_1PiCamera_html_a58fb0de02570dce9a9cb60a1a04fb84f"><div class="ttname"><a href="classChipChipArray_1_1PiCamera.html#a58fb0de02570dce9a9cb60a1a04fb84f">ChipChipArray::PiCamera::Snap</a></div><div class="ttdeci">cv::Mat Snap()</div><div class="ttdef"><b>Definition:</b> <a href="PiCamera_8hpp_source.html#l00069">PiCamera.hpp:69</a></div></div>
+</div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -172,7 +234,7 @@ Here is the call graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="net__qr__test_8cpp.html">net_qr_test.cpp</a></li>
-    <li class="footer">Generated on Fri Mar 18 2016 20:38:59 for My Project by
+    <li class="footer">Generated on Fri Apr 22 2016 15:41:28 for The Automatic Vasospasm Detection Application by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

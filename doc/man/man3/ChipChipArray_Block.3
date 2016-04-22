@@ -1,0 +1,178 @@
+.TH "ChipChipArray::Block" 3 "Fri Apr 22 2016" "The Automatic Vasospasm Detection Application" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ChipChipArray::Block \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Block\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBBlock\fP (cv::Rect rect, \fBColor\fP \fBcolor\fP)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBuint32\fP \fBarea\fP"
+.br
+.ti -1c
+.RI "cv::Point \fBbottomLeft\fP"
+.br
+.ti -1c
+.RI "cv::Point \fBbottomRight\fP"
+.br
+.ti -1c
+.RI "\fBsint16\fP \fBdBottom\fP"
+.br
+.ti -1c
+.RI "\fBsint16\fP \fBdLeft\fP"
+.br
+.ti -1c
+.RI "\fBsint16\fP \fBdRight\fP"
+.br
+.ti -1c
+.RI "\fBsint16\fP \fBdTop\fP"
+.br
+.ti -1c
+.RI "\fBsint16\fP \fBdTopBottom\fP"
+.br
+.ti -1c
+.RI "\fBsint16\fP \fBdRightLeft\fP"
+.br
+.ti -1c
+.RI "\fBsint16\fP \fBoffset\fP"
+.br
+.ti -1c
+.RI "\fBuint16\fP \fBheight\fP"
+.br
+.ti -1c
+.RI "cv::Point \fBtopLeft\fP"
+.br
+.ti -1c
+.RI "cv::Point \fBtopRight\fP"
+.br
+.ti -1c
+.RI "\fBuint16\fP \fBwidth\fP"
+.br
+.ti -1c
+.RI "\fBColor\fP \fBcolor\fP"
+.br
+.ti -1c
+.RI "\fBSize\fP \fBsize\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+This class represents a block\&. It only works for blocks found with the 'boundingRect' algorithm (i\&.e\&., it doesn't work for blocks that are skewed on the image)\&. 
+.PP
+Definition at line 20 of file Block\&.hpp\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ChipChipArray::Block::Block (cv::Rectrect, \fBColor\fPcolor)"
+Creates a new \fBBlock\fP using the Points in the cv::Rect and the color\&. Also determines the size based on the area of the \fBBlock\fP\&. 
+.PP
+Definition at line 139 of file Block\&.hpp\&.
+.PP
+.nf
+139                                          {
+140         // basic geometric properties
+141         area = rect\&.area();
+142         height = rect\&.height;
+143         width = rect\&.width;
+144 
+145         // assigning corners
+146         topLeft = rect\&.tl();
+147         bottomRight = rect\&.br();
+148         topRight = cv::Point(topLeft\&.x + width, topLeft\&.y);
+149         bottomLeft = cv::Point(topLeft\&.x, topLeft\&.y + height);
+150         offset = (sint16)(topLeft\&.x + width / 2) - IMG_WIDTH / 2;
+151 
+152         // calculating offsets (opencv low coordinates start top left)
+153         dLeft = topLeft\&.x;
+154         dRight = IMG_WIDTH - topRight\&.x;
+155         dTop = topLeft\&.y;
+156         dBottom = IMG_HEIGHT - bottomRight\&.y;
+157         dTopBottom = dTop - dBottom;
+158         dRightLeft = dRight - dLeft;
+159 
+160         // set color and size
+161         this->color = color;
+162         size = area > MIN_WHOLE_BLOCK_SIZE ? Size::Long : Size::Short;
+163     }
+.fi
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBuint32\fP ChipChipArray::Block::area"
+The area of the block in pixels 
+.PP
+Definition at line 25 of file Block\&.hpp\&.
+.SS "cv::Point ChipChipArray::Block::bottomLeft"
+Point of the block's bottom-left corner 
+.PP
+Definition at line 30 of file Block\&.hpp\&.
+.SS "cv::Point ChipChipArray::Block::bottomRight"
+Point of the block's bottom-right corner 
+.PP
+Definition at line 35 of file Block\&.hpp\&.
+.SS "\fBColor\fP ChipChipArray::Block::color"
+The detected color of the block 
+.PP
+Definition at line 107 of file Block\&.hpp\&.
+.SS "\fBsint16\fP ChipChipArray::Block::dBottom"
+Number of pixels from the block's bottom edge to the bottom edge of the image frame\&. 
+.PP
+Definition at line 41 of file Block\&.hpp\&.
+.SS "\fBsint16\fP ChipChipArray::Block::dLeft"
+Number of pixels from the block's left edge to the left edge of the image frame\&. 
+.PP
+Definition at line 47 of file Block\&.hpp\&.
+.SS "\fBsint16\fP ChipChipArray::Block::dRight"
+Number of pixels from the block's right edge to the right edge of the image frame\&. 
+.PP
+Definition at line 53 of file Block\&.hpp\&.
+.SS "\fBsint16\fP ChipChipArray::Block::dRightLeft"
+The difference between dRight and dLeft\&. It indicates the relative vertical positioning of the block regardless of the block's area\&. A positive value indicates the block is off-center towards the left\&. 
+.PP
+Definition at line 75 of file Block\&.hpp\&.
+.SS "\fBsint16\fP ChipChipArray::Block::dTop"
+Number of pixels from the block's top edge to the top edge of the image frame\&. 
+.PP
+Definition at line 59 of file Block\&.hpp\&.
+.SS "\fBsint16\fP ChipChipArray::Block::dTopBottom"
+The difference between dTop and dBottom\&. It indicates the relative vertical positioning of the block regardless of the block's area\&. A positive value indicates the block is off-center towards the bottom\&. 
+.PP
+Definition at line 67 of file Block\&.hpp\&.
+.SS "\fBuint16\fP ChipChipArray::Block::height"
+The height of the block in pixels 
+.PP
+Definition at line 87 of file Block\&.hpp\&.
+.SS "\fBsint16\fP ChipChipArray::Block::offset"
+The difference in pixels between the vertical center of the image and the vertical center of the block\&. Assumes image is 1280 pixels wide (like the Raspicam images)\&. 
+.PP
+Definition at line 82 of file Block\&.hpp\&.
+.SS "\fBSize\fP ChipChipArray::Block::size"
+The size of the block (half or whole) 
+.PP
+Definition at line 112 of file Block\&.hpp\&.
+.SS "cv::Point ChipChipArray::Block::topLeft"
+Point of the block's top-left corner 
+.PP
+Definition at line 92 of file Block\&.hpp\&.
+.SS "cv::Point ChipChipArray::Block::topRight"
+Point of the block's top-right corner 
+.PP
+Definition at line 97 of file Block\&.hpp\&.
+.SS "\fBuint16\fP ChipChipArray::Block::width"
+The width of the block in pixels 
+.PP
+Definition at line 102 of file Block\&.hpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for The Automatic Vasospasm Detection Application from the source code\&.
