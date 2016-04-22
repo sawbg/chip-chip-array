@@ -1,5 +1,5 @@
 /**
- * @File
+ * @file
  * @author Samuel Andrew Wisner, awisner94@gmail.com
  * @brief Contains a program to test Grabber class.
  */
